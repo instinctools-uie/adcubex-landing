@@ -1,3 +1,20 @@
-section {
-    color: blue;
+.dynamic-section {
+    height: 50em;
+    background-color: white;
+}
+.advantage-section {
+    height: 50em;
+    background-color: lightgray;
+}
+.expertise-section {
+    height: 50em;
+    background-color: red;
+}
+.investments-section {
+    height: 50em;
+    background-color: blue;
+}
+.effectiveness-section {
+    height: 50em;
+    background-color: purple;
 }
