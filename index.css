@@ -1,20 +1,71 @@
-.dynamic-section {
+.dynamic-section,
+.advantage-section,
+.expertise-section,
+.investments-section,
+.effectiveness-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 50em;
+}
+
+.dynamic-section div,
+.advantage-section div,
+.expertise-section div,
+.investments-section div,
+.effectiveness-section div {
+    z-index: 1;
+    width: 40em;
+}
+
+.dynamic-section {
     background-color: white;
 }
 .advantage-section {
-    height: 50em;
     background-color: lightgray;
 }
 .expertise-section {
-    height: 50em;
     background-color: red;
 }
 .investments-section {
-    height: 50em;
     background-color: blue;
 }
 .effectiveness-section {
-    height: 50em;
     background-color: purple;
+}
+
+.dynamic-section div h1 > span,
+.advantage-section  div h1 > span {
+    color: #ef3e3e;
+}
+
+.images {
+    position: fixed;
+    right: 0;
+    width: 518px;
+    height: 100%;
+}
+.image {
+    width: 100%;
+    max-height: 915px;
+    min-height: 544px;
+}
+
+.image {
+    -webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+    pointer-events: all;
+}
+.image {
+    -webkit-animation: mover 1.5s infinite  alternate;
+    animation: mover 1.5s infinite  alternate;
+    pointer-events: all;
+}
+@-webkit-keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
+}
+@keyframes mover {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); }
 }
