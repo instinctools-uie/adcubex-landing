@@ -1,12 +1,14 @@
-const items = document.querySelectorAll('.menu-container > span');
+const menuContainer = document.querySelector('.menu-container');
 
-items.forEach((item) => {
-    item.addEventListener('click', function (e) {
-        items.forEach(item => {
-            if (item.style.color === 'red') {
-                item.style.color = 'black';
-            }
-        });
-        e.target.style.color = 'red';
-    })
+menuContainer.addEventListener('click', function (e) {
+    const items = document.querySelectorAll('.menu-container > span');
+
+    for (let i = 0; i < items.length; i++) {
+        const isActiveLink = items[i].classList.contains('link--active');
+        if (isActiveLink) {
+            items[i].classList.remove('link--active');
+        }
+    }
+
+    e.target.classList.add('link--active');
 });
