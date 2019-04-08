@@ -15,11 +15,11 @@ function showOrHideTextOfSection() {
         const position = sections[i].offsetTop;
         const positionBeforeScrollOnSection = position - 600;
         const isScrollOnSection = scrolled > positionBeforeScrollOnSection && scrolled < position + 350;
-        const isActiveSection = sections[i].classList.contains('active');
+        const isActiveSection = sections[i].classList.contains('section-container--active');
         if (isScrollOnSection && !isActiveSection) {
-            sections[i].classList.add('active');
+            sections[i].classList.add('section-container--active');
         } else if (!isScrollOnSection && isActiveSection) {
-            sections[i].classList.remove('active');
+            sections[i].classList.remove('section-container--active');
         }
     }
 }
