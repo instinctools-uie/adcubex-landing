@@ -7,7 +7,7 @@ function stretchSquare() {
     image.style.maxHeight = maxHeight + 'px';
 }
 
-function showOrHideText() {
+function showOrHideTextOfSection() {
     const scrolled = document.scrollingElement.scrollTop;
     const sections = window.document.querySelectorAll('.section-container');
 
@@ -26,5 +26,5 @@ function showOrHideText() {
 
 window.addEventListener('scroll', function () {
     stretchSquare();
-    showOrHideText();
+    showOrHideTextOfSection();
 });
