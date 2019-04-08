@@ -33,7 +33,7 @@ body {
 }
 
 .menu-container > span:hover {
-    color: red;
+    color: rgb(239,62,62);
     cursor: pointer;
 }
 
