@@ -65,11 +65,13 @@ body {
     z-index: 1;
     width: 65em;
     opacity: 0;
-    transition: opacity .5s;
+    transform: translateX(-100px);
+    transition: opacity .5s, transform .5s;
 }
 
 .section-container.active {
     opacity: 1;
+    transform: translateX(0);
 }
 
 .section-container {
