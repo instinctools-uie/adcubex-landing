@@ -5,8 +5,6 @@ body {
 .main {
     display: flex;
     flex-direction: column;
-
-    background-color: aqua;
 }
 
 .header-container {
@@ -18,7 +16,7 @@ body {
     height: 10.125rem;
     width: 100%;
 
-    background-color: #f5f5f5;
+    background-color: transparent;
 }
 
 .logo-container {
