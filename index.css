@@ -86,53 +86,53 @@ body {
 }
 
 .dynamic-section {
-    background-color: white;
+    /*background-color: white;*/
 }
 .advantage-section {
-    background-color: lightgray;
+/*background-color: lightgray;*/
 }
 .expertise-section {
-    background-color: red;
+/*background-color: red;*/
 }
 .investments-section {
-    background-color: blue;
+/*background-color: blue;*/
 }
 .effectiveness-section {
-    background-color: purple;
+/*background-color: purple;*/
 }
 
 .dynamic-section div h1 > span,
 .advantage-section  div h1 > span {
-    color: #ef3e3e;
+color: #ef3e3e;
 }
 
 .images {
-    position: fixed;
-    right: 0;
-    width: 518px;
-    height: 100%;
+position: fixed;
+right: 0;
+width: 518px;
+height: 100%;
 }
 .image {
-    width: 100%;
-    max-height: 915px;
-    min-height: 544px;
+width: 100%;
+max-height: 915px;
+min-height: 544px;
 }
 
 .image {
-    -webkit-animation: image-animation 1.5s infinite  alternate;
-    animation: image-animation 1.5s infinite  alternate;
-    pointer-events: all;
+-webkit-animation: image-animation 1.5s infinite  alternate;
+animation: image-animation 1.5s infinite  alternate;
+pointer-events: all;
 }
 .image {
-    -webkit-animation: image-animation 1.5s infinite  alternate;
-    animation: image-animation 1.5s infinite  alternate;
-    pointer-events: all;
+-webkit-animation: image-animation 1.5s infinite  alternate;
+animation: image-animation 1.5s infinite  alternate;
+pointer-events: all;
 }
 @-webkit-keyframes image-animation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+0% { transform: translateY(0); }
+100% { transform: translateY(-20px); }
 }
 @keyframes image-animation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+0% { transform: translateY(0); }
+100% { transform: translateY(-20px); }
 }
