@@ -1,8 +1,10 @@
 function stretchSquare() {
     const minHeght = 544;
-    const firstSection = window.document.querySelector('.image');
-    firstSection.style.height = `${window.scrollY + minHeght}px`;
-    firstSection.style.minHeight = minHeght + 'px';
+    const maxHeight = 915;
+    const image = window.document.querySelector('.image');
+    image.style.height = `${window.scrollY + minHeght}px`;
+    image.style.minHeight = minHeght + 'px';
+    image.style.maxHeight = maxHeight + 'px';
 }
 
 function showOrHideText() {
