@@ -52,20 +52,20 @@
 }
 
 .image {
-    -webkit-animation: mover 1.5s infinite  alternate;
-    animation: mover 1.5s infinite  alternate;
+    -webkit-animation: image-animation 1.5s infinite  alternate;
+    animation: image-animation 1.5s infinite  alternate;
     pointer-events: all;
 }
 .image {
-    -webkit-animation: mover 1.5s infinite  alternate;
-    animation: mover 1.5s infinite  alternate;
+    -webkit-animation: image-animation 1.5s infinite  alternate;
+    animation: image-animation 1.5s infinite  alternate;
     pointer-events: all;
 }
-@-webkit-keyframes mover {
+@-webkit-keyframes image-animation {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
-@keyframes mover {
+@keyframes image-animation {
     0% { transform: translateY(0); }
     100% { transform: translateY(-20px); }
 }
