@@ -1,5 +1,4 @@
 const items = document.querySelectorAll('.menu-container > span');
-console.log(items);
 
 items.forEach((item) => {
     item.addEventListener('click', function (e) {
