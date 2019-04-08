@@ -43,6 +43,7 @@ body {
 
 .menu-button {
     width: 1.7rem;
+    cursor: pointer;
 }
 
 .content {
