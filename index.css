@@ -58,12 +58,34 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 50em;
+    height: 60em;
 }
 
 .section-container {
     z-index: 1;
     width: 65em;
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity .5s, transform .5s;
+}
+
+.section-container--active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.section-container {
+    color: #303030;
+}
+
+.expertise-section .section-container,
+.investments-section .section-container,
+.effectiveness-section .section-container {
+    color: white;
+}
+
+.section-container > a {
+    color: inherit;
 }
 
 .section-container > h1 {
@@ -75,20 +97,19 @@ body {
     text-align: left;
     text-decoration: none;
     text-transform: none;
-    color: rgb(48,48,48);
 }
 
 .section-container > p {
     line-height: 40px;
     font-size: 1.5em;
     font-style: normal;
-    color: #303030;
 }
 
 .dynamic-section {
     /*background-color: white;*/
 }
 .advantage-section {
+
 /*background-color: lightgray;*/
 }
 .expertise-section {
@@ -116,6 +137,7 @@ height: 100%;
 width: 100%;
 max-height: 915px;
 min-height: 544px;
+    width: 100%;
 }
 
 .image {
