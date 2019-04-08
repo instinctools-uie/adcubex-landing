@@ -63,14 +63,14 @@ body {
 
 .section-container {
     z-index: 1;
-    width: 40em;
+    width: 65em;
 }
 
 .section-container > h1 {
     font-style: normal;
     font-weight: 800;
-    font-size: 105px;
-    letter-spacing: 0px;
+    font-size: 6.5em;
+    letter-spacing: 0;
     line-height: 115px;
     text-align: left;
     text-decoration: none;
@@ -80,7 +80,7 @@ body {
 
 .section-container > p {
     line-height: 40px;
-    font-size: 24px;
+    font-size: 1.5em;
     font-style: normal;
     color: #303030;
 }
