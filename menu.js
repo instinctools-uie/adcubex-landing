@@ -1,14 +1,19 @@
 const menuContainer = document.querySelector('.menu-container');
 
-menuContainer.addEventListener('click', function (e) {
-    const items = document.querySelectorAll('.menu-container > span');
+menuContainer.addEventListener('click', function(e) {
+  const items = document.querySelectorAll('.menu-container > span');
+  const isClickOnLink = e.target.classList.contains('link');
 
-    for (let i = 0; i < items.length; i++) {
-        const isActiveLink = items[i].classList.contains('link--active');
-        if (isActiveLink) {
-            items[i].classList.remove('link--active');
-        }
+  if (!isClickOnLink) {
+    return;
+  }
+
+  for (let i = 0; i < items.length; i++) {
+    const isActiveLink = items[i].classList.contains('link--active');
+    if (isActiveLink) {
+      items[i].classList.remove('link--active');
     }
+  }
 
-    e.target.classList.add('link--active');
+  e.target.classList.add('link--active');
 });

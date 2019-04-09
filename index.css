@@ -1,5 +1,5 @@
 body {
-    margin: 0;
+  margin: 0;
 }
 
 .arrow {
@@ -9,56 +9,59 @@ body {
 }
 
 .header-container {
-    position: fixed;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    padding: 0 4rem 0 4rem;
-    height: 10.125rem;
-    width: 100%;
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 4rem 0 4rem;
+  height: 10.125rem;
+  width: 100%;
 
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .logo-container {
-    display: block;
-    width: 1.7rem;
+  display: block;
+  width: 1.7rem;
+}
+
+.logo-container > svg {
+  fill: #ed1c24;
 }
 
 .menu-container {
-    display: flex;
-    justify-content: space-between;
-    flex-grow: 1;
-    padding: 0 25% 0 17%;
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 25% 0 17%;
 }
 
 .menu-container > .link {
-    color: black;
-    font-weight: 700;
-    font-size: 0.875rem;
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
 .menu-container > .link--active {
-    color: rgb(239,62,62);
+  color: rgb(239, 62, 62);
 }
 
 .menu-container > .link:hover {
-    color: rgb(239,62,62);
-    cursor: pointer;
+  color: rgb(239, 62, 62);
+  cursor: pointer;
 }
 
 .button-container {
-    display: flex;
+  display: flex;
 }
 
 .menu-button {
-    width: 1.7rem;
-    cursor: pointer;
+  width: 1.7rem;
+  cursor: pointer;
 }
 
 .content {
-    margin-top: 10.125rem;
+  margin-top: 10.125rem;
 }
 
 .dynamic-section,
@@ -66,33 +69,33 @@ body {
 .expertise-section,
 .investments-section,
 .effectiveness-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60em;
 }
 
 .section-container {
-    z-index: 1;
-    width: 65em;
-    opacity: 0;
-    transform: translateX(-100px);
-    transition: opacity .5s, transform .5s;
+  z-index: 1;
+  width: 65em;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
 .section-container--active {
-    opacity: 1;
-    transform: translateX(0);
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .section-container {
-    color: #303030;
+  color: #303030;
 }
 
 .expertise-section .section-container,
 .investments-section .section-container,
 .effectiveness-section .section-container {
-    color: white;
+  color: white;
 }
 
 .section-container > a {
@@ -104,68 +107,63 @@ body {
 }
 
 .section-container > h1 {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 6.5em;
-    letter-spacing: 0;
-    line-height: 115px;
-    text-align: left;
-    text-decoration: none;
-    text-transform: none;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 6.5em;
+  letter-spacing: 0;
+  line-height: 115px;
+  text-align: left;
+  text-decoration: none;
+  text-transform: none;
 }
 
 .section-container > p {
-    line-height: 40px;
-    font-size: 1.5em;
-    font-style: normal;
+  line-height: 40px;
+  font-size: 1.5em;
+  font-style: normal;
 }
 
 .dynamic-section {
-    background-color: white;
-}
-.advantage-section {
-    background-color: white;
-}
-.expertise-section {
-    background-color: red;
-}
-.investments-section {
-    background-color: blue;
-}
-.effectiveness-section {
-    background-color: purple;
+  background-color: white;
 }
 
 .dynamic-section div h1 > span,
-.advantage-section  div h1 > span {
-    color: #ef3e3e;
+.advantage-section div h1 > span {
+  color: #ef3e3e;
 }
 
 .images {
-    position: fixed;
-    right: 0;
-    width: 518px;
-    height: 100%;
+  position: fixed;
+  right: 0;
+  width: 518px;
 }
 .image {
-    width: 100%;
+  width: 100%;
 }
 
 .image {
-    -webkit-animation: image-animation 1.5s infinite  alternate;
-    animation: image-animation 1.5s infinite  alternate;
-    pointer-events: all;
+  -webkit-animation: image-animation 1.5s infinite alternate;
+  animation: image-animation 1.5s infinite alternate;
+  pointer-events: all;
 }
 .image {
-    -webkit-animation: image-animation 1.5s infinite  alternate;
-    animation: image-animation 1.5s infinite  alternate;
-    pointer-events: all;
+  -webkit-animation: image-animation 1.5s infinite alternate;
+  animation: image-animation 1.5s infinite alternate;
+  pointer-events: all;
 }
 @-webkit-keyframes image-animation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 @keyframes image-animation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
