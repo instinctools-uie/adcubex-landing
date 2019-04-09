@@ -99,7 +99,6 @@ body {
 }
 
 .section-container > a {
-		position: relative;
 		display: inline-flex;
 		align-items: center;
     color: inherit;
