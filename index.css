@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,800,800i,900,900i');
-
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .header-container {
@@ -32,6 +29,8 @@ body {
   justify-content: space-between;
   flex-grow: 1;
   padding: 0 25% 0 17%;
+  font-family: 'montserratbold', sans-serif;
+  letter-spacing: 0.088em;
 }
 
 .menu-container > .link {
@@ -72,6 +71,14 @@ body {
   height: 60em;
 }
 
+h1 {
+  font-family: 'montserrat_extraboldregular', sans-serif;
+}
+
+p {
+  font-family: 'montserrat_lightregular', sans-serif;
+}
+
 .section-container {
   z-index: 1;
   width: 65em;
@@ -87,6 +94,7 @@ body {
 
 .section-container {
   color: #303030;
+  padding-right: 5%;
 }
 
 .expertise-section .section-container,
@@ -111,7 +119,8 @@ body {
 }
 
 .section-container > p {
-  line-height: 40px;
+  width: 43rem;
+  line-height: 1.5em;
   font-size: 1.5em;
   font-style: normal;
 }
