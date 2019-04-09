@@ -113,6 +113,33 @@ body {
     font-style: normal;
 }
 
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.chat-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #303030;
+    border-radius: 50%;
+    margin: 0 45px 38px 0;
+}
+
+.chat-container > svg {
+    top: 2px;
+    width: 23px;
+    height: 23px;
+}
+
 .dynamic-section {
     background-color: white;
 }
