@@ -31,12 +31,16 @@ body {
     padding: 0 25% 0 17%;
 }
 
-.menu-container > span {
+.menu-container > .link {
     font-weight: 700;
     font-size: 0.875rem;
 }
 
-.menu-container > span:hover {
+.menu-container > .link--active {
+    color: rgb(239,62,62);
+}
+
+.menu-container > .link:hover {
     color: rgb(239,62,62);
     cursor: pointer;
 }

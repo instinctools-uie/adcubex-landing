@@ -1,15 +1,20 @@
-const items = document.querySelectorAll('.menu-container > span');
+const menuContainer = document.querySelector('.menu-container');
+menuContainer.addEventListener('click', function (e) {
+    const items = document.querySelectorAll('.menu-container > span');
 
-items.forEach((item) => {
-    item.addEventListener('click', function (e) {
-        items.forEach((item, index, arr) => {
-            if (item.style.color === 'red') {
-                if (index === 0) {
-                    item.style.color = arr[index+1].style.color;
-                }
-                item.style.color = arr[index-1].style.color;
-            }
-        });
-        e.target.style.color = 'red';
-    })
-});
+    for (let i = 0; i < items.length; i++) {
+        const isActiveLink = items[i].classList.contains('link--active');
+        if (isActiveLink && i !== 0) {
+            items[i].classList.remove('link--active');
+            items[i].style.color = items[i-1].style.color;
+        }
+
+        if (isActiveLink && i === 0){
+            items[i].classList.remove('link--active');
+            items[i].style.color = items[i+1].style.color;
+        }
+    }
+        e.target.classList.add('link--active');
+
+    }
+);
