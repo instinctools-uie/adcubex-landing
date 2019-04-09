@@ -1,58 +1,51 @@
-const sections = [];
-const sectionsYStart = [];
-let activeSection = 0;
-
-const pageInit = function(){
-    $("section").each(function(i,v){
-        //console.log(123, i, v)
-        sections[i] = v;
-        sectionsYStart[i] = $(v).offset().top;
-    });
-};
-
-const ChangeColorOnScroll = function(){
-    let scroll = $(window).scrollTop();
-    scrollColors(scroll, $("body"), ["#FF006B", "#36DBFF", "#8000D2", "#00FFA7", "rgba(0,0,0,0)"]);
-};
-
-const scrollColors = function(scroll, el, colors){
-    // which of all the sections, are we in between?
-    let z = 0;
-    let secLen = sections.length;
-    for(let i = 0; i < secLen; i ++){
-        if (scroll > sectionsYStart[i]){
-            z = i;
-        }
+window.onscroll = function() {
+    if (window.pageYOffset >= 960 && window.pageYOffset <= 1920) {
+        fromWhiteToRed();
+        fromBlackToWhiteMenu();
+        fromRedToWhiteLogo();
     }
-    activeSection = z;
 
-    scroll_pos = scroll;
-    const animation_begin_pos = sectionsYStart[z]; //where you want the animation to begin
-    const animation_end_pos = sectionsYStart[z+1]; //where you want the animation to stop
-    let beginning_color = $.Color(colors[z]);
-    let ending_color = $.Color(colors[z+1]);
+    if(window.pageYOffset > 1920 && window.pageYOffset <= 2880) {
+        fromRedToBlue();
+    }
 
-    if(scroll_pos >= animation_begin_pos && scroll_pos <= animation_end_pos ){
-        let percentScrolled = scroll_pos / ( animation_end_pos - animation_begin_pos );
-        if(percentScrolled>1){ percentScrolled = percentScrolled - z; }
-        let newRed = beginning_color.red() + ( ( ending_color.red() - beginning_color.red() ) * percentScrolled );
-        let newGreen = beginning_color.green() + ( ( ending_color.green() - beginning_color.green() ) * percentScrolled );
-        let newBlue = beginning_color.blue() + ( ( ending_color.blue() - beginning_color.blue() ) * percentScrolled );
-
-        let newAlpha = beginning_color.alpha() + ( ( ending_color.alpha() - beginning_color.alpha() ) * percentScrolled );
-
-        let newColor = new $.Color( newRed, newGreen, newBlue, newAlpha );
-        el.animate({ backgroundColor: newColor }, 0);
-    } else if ( scroll_pos > animation_end_pos ) {
-        el.animate({ backgroundColor: ending_color }, 0);
-    } else if ( scroll_pos < animation_begin_pos ) {
-        el.animate({ backgroundColor: beginning_color }, 0);
+    if(window.pageYOffset > 2880) {
+        fromBlueToPurple();
     }
 };
 
-$(function(){
-    pageInit();
-    $(document).scroll(ChangeColorOnScroll);
-    $(window).resize(pageInit);
-});
+function fromRedToWhiteLogo(){
+    const sourceColor = {red: 237, green: 28, blue: 36};
+    const perChange = (window.pageYOffset - 960) / 960;
+    const currentColor = {red: Math.round(sourceColor.red + (18 * perChange)), green: Math.round(sourceColor.green + (227 * perChange)), blue: Math.round(sourceColor.blue + (219 * perChange))};
+    document.querySelector('.logo-container > svg').style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`
+}
+
+function fromBlackToWhiteMenu(){
+    const perChange = (window.pageYOffset - 960) / 960;
+    const currentColor = {red: Math.round(255 * perChange), green: Math.round(255 * perChange), blue: Math.round(255 * perChange)};
+    document.querySelector('.menu-container').style.color = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`
+    document.querySelector('.menu-button > svg').style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`
+}
+
+function fromWhiteToRed(){
+    const sourceColor = {red: 255, green: 255, blue: 255};
+    const perChange = 1 - ((window.pageYOffset - 960) / 960);
+    const currentColor = {red: sourceColor.red, green: Math.round(sourceColor.green * perChange), blue: Math.round(sourceColor.blue * perChange)};
+        document.querySelector('body').style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`
+}
+
+function fromRedToBlue(){
+    const sourceColor = {red: 255, green: 0, blue: 0};
+    const perChange = (window.pageYOffset - 1920) / 960;
+    const currentColor = {red: Math.round(sourceColor.red * (1 - perChange)), green: 0, blue: Math.round(255 * perChange)};
+        document.querySelector('body').style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`
+}
+
+function fromBlueToPurple(){
+    const sourceColor = {red: 0, green: 0, blue: 255};
+    const perChange = (window.pageYOffset - 2880) / 960;
+    const currentColor = {red: Math.round(157 * perChange), green: Math.round(55 * perChange), blue: Math.round(sourceColor.blue - (28 * perChange))};
+        document.querySelector('body').style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`
+}
 
