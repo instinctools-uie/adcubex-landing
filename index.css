@@ -3,9 +3,9 @@ body {
 }
 
 .arrow {
-	width: 1.4em;
-	margin-left: 1.5em;
-	fill: #FFF;
+  width: 1.4em;
+  margin-left: 1.5em;
+  fill: #fff;
 }
 
 .header-container {
@@ -99,10 +99,10 @@ body {
 }
 
 .section-container > a {
-		display: inline-flex;
-		align-items: center;
-    color: inherit;
-		text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
 }
 
 .section-container > h1 {
