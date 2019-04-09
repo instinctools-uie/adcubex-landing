@@ -1,31 +1,11 @@
 const bodyElement = document.querySelector('body');
 const cubeElement = window.document.querySelector('.image');
-const advantageSection = window.document.querySelector('.advantage-section');
-const expertiseSection = window.document.querySelector('.expertise-section');
-const investmentsSection = window.document.querySelector('.investments-section');
-const advantageSectionScrollPosition = advantageSection.offsetTop;
-const expertiseSectionScrollPosition = expertiseSection.offsetTop;
-const investmentsSectionScrollPosition = investmentsSection.offsetTop;
-
-window.addEventListener('scroll', changeBackgroundColor);
-
-function changeBackgroundColor() {
-  const scrollPosition = window.pageYOffset;
-
-  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-    fromWhiteToRed();
-    fromBlackToWhiteMenu();
-    fromRedToWhiteLogo();
-  }
-
-  if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-    fromRedToBlue();
-  }
-
-  if (scrollPosition > investmentsSectionScrollPosition) {
-    fromBlueToPurple();
-  }
-}
+var advantageSection = window.document.querySelector('.advantage-section');
+var expertiseSection = window.document.querySelector('.expertise-section');
+var investmentsSection = window.document.querySelector('.investments-section');
+var advantageSectionScrollPosition = advantageSection.offsetTop;
+var expertiseSectionScrollPosition = expertiseSection.offsetTop;
+var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
 function fromRedToWhiteLogo() {
   const sourceColor = { red: 237, green: 28, blue: 36 };
