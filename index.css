@@ -127,20 +127,16 @@ body {
   left: 50%;
 }
 .image {
+  position: absolute;
   width: 100%;
 }
 
 .image {
-  position: absolute;
   -webkit-animation: image-animation 1.5s infinite alternate;
   animation: image-animation 1.5s infinite alternate;
   pointer-events: all;
 }
-.image {
-  -webkit-animation: image-animation 1.5s infinite alternate;
-  animation: image-animation 1.5s infinite alternate;
-  pointer-events: all;
-}
+
 @-webkit-keyframes image-animation {
   0% {
     transform: translateY(0);
