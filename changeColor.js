@@ -1,18 +1,22 @@
 window.onscroll = function() {
-    if (window.pageYOffset >= 960 && window.pageYOffset <= 1920) {
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition >= 960 && scrollPosition <= 1920) {
         fromWhiteToRed();
         fromBlackToWhiteMenu();
         fromRedToWhiteLogo();
     }
 
-    if(window.pageYOffset > 1920 && window.pageYOffset <= 2880) {
+    if(scrollPosition > 1920 && scrollPosition <= 2880) {
         fromRedToBlue();
     }
 
-    if(window.pageYOffset > 2880) {
+    if(scrollPosition > 2880) {
         fromBlueToPurple();
     }
 };
+
+
 
 function fromRedToWhiteLogo(){
     const sourceColor = {red: 237, green: 28, blue: 36};
