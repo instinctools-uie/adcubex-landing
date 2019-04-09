@@ -1,4 +1,14 @@
-function stretchSquare() {
+function initCubix() {
+  const images = window.document.querySelectorAll('.image');
+  images.forEach(function(image, i) {
+    image.style.width = cubesPosition[i].width + 'px';
+    image.style.top = cubesPosition[i].top + 'px';
+    image.style.left = cubesPosition[i].left + 'px';
+    image.style.zIndex = cubesPosition[i].zIndex;
+  });
+}
+
+function stretchCube() {
   const image = window.document.querySelector('.image');
   const minHeght = 544;
   const maxHeight = 915;
@@ -28,6 +38,8 @@ function showOrHideTextOfSection() {
 }
 
 window.addEventListener('scroll', function() {
-  stretchSquare();
+  // stretchCube();
   showOrHideTextOfSection();
 });
+
+initCubix();

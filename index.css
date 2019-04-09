@@ -166,16 +166,16 @@ footer {
   color: #ef3e3e;
 }
 
-.images {
+.images-container {
   position: fixed;
-  right: 0;
-  width: 518px;
+  left: 50%;
 }
 .image {
   width: 100%;
 }
 
 .image {
+  position: absolute;
   -webkit-animation: image-animation 1.5s infinite alternate;
   animation: image-animation 1.5s infinite alternate;
   pointer-events: all;
