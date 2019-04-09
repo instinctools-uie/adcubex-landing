@@ -123,34 +123,30 @@ body {
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .chat-container {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 3.125em;
-    height: 3.125em;
-    background-color: #303030;
-    border-radius: 50%;
-    margin: 0 2.813em 2.375em 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.125em;
+  height: 3.125em;
+  background-color: #303030;
+  border-radius: 50%;
+  margin: 0 2.813em 2.375em 0;
 }
 
 .chat-container > svg {
-    top: 0.125em;
-    width: 1.438em;
-    height: 1.438em;
-}
-
-.dynamic-section {
-  background-color: white;
+  top: 0.125em;
+  width: 1.438em;
+  height: 1.438em;
 }
 
 .dynamic-section div h1 > span,
