@@ -1,0 +1,23 @@
+{
+  "name": "adcubex",
+  "version": "1.0.0",
+  "description": "",
+  "main": "menu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "./node_modules/.bin/prettier --single-quote --write '*.{js,jsx,json,css}'"
+  },
+  "pre-commit": [
+    "format"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.instinctools.com/oxy/adcubex.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettier": "1.16.4"
+  }
+}
