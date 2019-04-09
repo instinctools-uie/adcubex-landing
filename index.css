@@ -2,6 +2,14 @@ body {
     margin: 0;
 }
 
+.arrow {
+	position: absolute;
+	width: 1.4em;
+	right: -3em;
+	bottom: -0.25em;
+	fill: #FFF;
+}
+
 .header-container {
     position: fixed;
     z-index: 2;
@@ -90,7 +98,9 @@ body {
 }
 
 .section-container > a {
+		position: relative;
     color: inherit;
+		text-decoration: none;
 }
 
 .section-container > h1 {
