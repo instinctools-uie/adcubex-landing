@@ -16,12 +16,8 @@ function showOrHideTextOfSection() {
     const position = sections[i].offsetTop;
     const positionOfScrollBeforeSection = position - 600;
     const positionOfScrollAfterSection = position + 350;
-    const isScrollOnSection =
-      scrolled > positionOfScrollBeforeSection &&
-      scrolled < positionOfScrollAfterSection;
-    const isActiveSection = sections[i].classList.contains(
-      'section-container--active'
-    );
+    const isScrollOnSection = scrolled > positionOfScrollBeforeSection && scrolled < positionOfScrollAfterSection;
+    const isActiveSection = sections[i].classList.contains('section-container--active');
 
     if (isScrollOnSection && !isActiveSection) {
       sections[i].classList.add('section-container--active');

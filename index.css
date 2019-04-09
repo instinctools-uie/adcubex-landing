@@ -20,6 +20,10 @@ body {
   width: 1.7rem;
 }
 
+.logo-container > svg {
+  fill: #ed1c24;
+}
+
 .menu-container {
   display: flex;
   justify-content: space-between;
@@ -28,7 +32,6 @@ body {
 }
 
 .menu-container > .link {
-  color: black;
   font-weight: 700;
   font-size: 0.875rem;
 }
@@ -112,18 +115,6 @@ body {
 
 .dynamic-section {
   background-color: white;
-}
-.advantage-section {
-  background-color: white;
-}
-.expertise-section {
-  background-color: red;
-}
-.investments-section {
-  background-color: blue;
-}
-.effectiveness-section {
-  background-color: purple;
 }
 
 .dynamic-section div h1 > span,
