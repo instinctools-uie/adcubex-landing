@@ -3,10 +3,8 @@ body {
 }
 
 .arrow {
-	position: absolute;
 	width: 1.4em;
-	right: -3em;
-	bottom: -0.25em;
+	margin-left: 1.5em;
 	fill: #FFF;
 }
 
@@ -99,6 +97,8 @@ body {
 
 .section-container > a {
 		position: relative;
+		display: inline-flex;
+		align-items: center;
     color: inherit;
 		text-decoration: none;
 }
