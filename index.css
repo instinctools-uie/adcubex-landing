@@ -20,6 +20,10 @@ body {
     width: 1.7rem;
 }
 
+.logo-container > svg {
+    fill: #ED1C24;
+}
+
 .menu-container {
     display: flex;
     justify-content: space-between;
@@ -28,7 +32,6 @@ body {
 }
 
 .menu-container > .link {
-    color: black;
     font-weight: 700;
     font-size: 0.875rem;
 }
@@ -113,49 +116,40 @@ body {
 .dynamic-section {
     background-color: white;
 }
-.advantage-section {
-    background-color: white;
-}
-.expertise-section {
-    background-color: red;
-}
-.investments-section {
-    background-color: blue;
-}
-.effectiveness-section {
-    background-color: purple;
-}
 
 .dynamic-section div h1 > span,
 .advantage-section  div h1 > span {
-    color: #ef3e3e;
+color: #ef3e3e;
 }
 
 .images {
-    position: fixed;
-    right: 0;
-    width: 518px;
-    height: 100%;
+position: fixed;
+right: 0;
+width: 518px;
+height: 100%;
 }
 .image {
+width: 100%;
+max-height: 915px;
+min-height: 544px;
     width: 100%;
 }
 
 .image {
-    -webkit-animation: image-animation 1.5s infinite  alternate;
-    animation: image-animation 1.5s infinite  alternate;
-    pointer-events: all;
+-webkit-animation: image-animation 1.5s infinite  alternate;
+animation: image-animation 1.5s infinite  alternate;
+pointer-events: all;
 }
 .image {
-    -webkit-animation: image-animation 1.5s infinite  alternate;
-    animation: image-animation 1.5s infinite  alternate;
-    pointer-events: all;
+-webkit-animation: image-animation 1.5s infinite  alternate;
+animation: image-animation 1.5s infinite  alternate;
+pointer-events: all;
 }
 @-webkit-keyframes image-animation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+0% { transform: translateY(0); }
+100% { transform: translateY(-20px); }
 }
 @keyframes image-animation {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-20px); }
+0% { transform: translateY(0); }
+100% { transform: translateY(-20px); }
 }
