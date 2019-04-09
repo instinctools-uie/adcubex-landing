@@ -2,6 +2,12 @@ body {
   margin: 0;
 }
 
+.arrow {
+  width: 1.4em;
+  margin-left: 1.5em;
+  fill: #fff;
+}
+
 .header-container {
   position: fixed;
   z-index: 2;
@@ -93,7 +99,10 @@ body {
 }
 
 .section-container > a {
+  display: inline-flex;
+  align-items: center;
   color: inherit;
+  text-decoration: none;
 }
 
 .section-container > h1 {
