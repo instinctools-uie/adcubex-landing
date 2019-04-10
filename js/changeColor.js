@@ -5,11 +5,7 @@ var expertiseSection = window.document.querySelector('.expertise-section');
 var investmentsSection = window.document.querySelector('.investments-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
-var investmentsSectionScrollPosition = investmentsSection.offsetTofunction
-
-function changeColor() {
-
-}
+var investmentsSectionScrollPosition = investmentsSection.offsetTofunction;
 
 function fromRedToWhiteLogo() {
   const sourceColor = { red: 237, green: 28, blue: 36 };
