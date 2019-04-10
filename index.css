@@ -40,16 +40,18 @@ body {
 }
 
 .menu-container > .link {
+  color: #303030;
   font-weight: 700;
   font-size: 0.875rem;
+  text-decoration: none;
 }
 
 .menu-container > .link--active {
-  color: rgb(239, 62, 62);
+  color: rgb(239, 221, 60) !important;
 }
 
 .menu-container > .link:hover {
-  color: rgb(239, 62, 62);
+  color: rgb(239, 221, 60);
   cursor: pointer;
 }
 
