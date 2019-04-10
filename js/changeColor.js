@@ -1,5 +1,5 @@
 const bodyElement = document.querySelector('body');
-const cubeElement = window.document.querySelector('.image');
+const cubeElement = window.document.querySelector('.cube');
 var advantageSection = window.document.querySelector('.advantage-section');
 var expertiseSection = window.document.querySelector('.expertise-section');
 var investmentsSection = window.document.querySelector('.investments-section');

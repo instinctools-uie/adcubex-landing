@@ -1,7 +1,7 @@
-const images = window.document.querySelectorAll('.image');
-images.forEach(function(image, i) {
-  image.style.width = cubesPosition[i].width + 'px';
-  image.style.top = cubesPosition[i].top + 'px';
-  image.style.left = cubesPosition[i].left + 'px';
-  image.style.zIndex = cubesPosition[i].zIndex;
+const cubes = window.document.querySelectorAll('.cube');
+cubes.forEach(function(cube, i) {
+  cube.style.width = cubesPosition[i].width + 'px';
+  cube.style.top = cubesPosition[i].top + 'px';
+  cube.style.left = cubesPosition[i].left + 'px';
+  cube.style.zIndex = cubesPosition[i].zIndex;
 });

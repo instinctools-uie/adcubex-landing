@@ -166,26 +166,19 @@ footer {
   color: #ef3e3e;
 }
 
-.images-container {
+.cubes-container {
   position: fixed;
   left: 50%;
 }
-.image {
+
+.cube {
+  position: absolute;
+  -webkit-animation: cube-animation 1.5s infinite alternate;
+  animation: cube-animation 1.5s infinite alternate;
+  pointer-events: all;
   width: 100%;
 }
-
-.image {
-  position: absolute;
-  -webkit-animation: image-animation 1.5s infinite alternate;
-  animation: image-animation 1.5s infinite alternate;
-  pointer-events: all;
-}
-.image {
-  -webkit-animation: image-animation 1.5s infinite alternate;
-  animation: image-animation 1.5s infinite alternate;
-  pointer-events: all;
-}
-@-webkit-keyframes image-animation {
+@-webkit-keyframes cube-animation {
   0% {
     transform: translateY(0);
   }
@@ -193,7 +186,7 @@ footer {
     transform: translateY(-20px);
   }
 }
-@keyframes image-animation {
+@keyframes cube-animation {
   0% {
     transform: translateY(0);
   }

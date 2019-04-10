@@ -1,4 +1,4 @@
-const cubesContainer = window.document.querySelector('.images-container');
+const cubesContainer = window.document.querySelector('.cubes-container');
 var advantageSection = window.document.querySelector('.advantage-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 
