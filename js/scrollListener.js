@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
     fromWhiteToRed();
     fromBlackToWhiteMenu();
     fromRedToWhiteLogo();
-    toggleCubesOpacity();
+    toggleCube();
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {

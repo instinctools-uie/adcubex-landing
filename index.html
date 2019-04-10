@@ -209,10 +209,52 @@
     </footer>
 
     <svg
+      class="main-cube"
+      width="800px"
+      height="496px"
+      viewBox="0 0 1496 800"
+      version="1.1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+      <defs>
+        <filter x="-7.7%" y="-7.3%" width="115.4%" height="114.7%" filterUnits="objectBoundingBox" id="filter-29">
+          <feOffset dx="4" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+          <feGaussianBlur stdDeviation="10.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+          <feColorMatrix
+            values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.08 0"
+            type="matrix"
+            in="shadowBlurOuter1"
+            result="shadowMatrixOuter1"
+          ></feColorMatrix>
+          <feMerge>
+            <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+            <feMergeNode in="SourceGraphic"></feMergeNode>
+          </feMerge>
+        </filter>
+      </defs>
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-57.000000, -36.000000)">
+          <g id="cubes" transform="translate(74.000000, 56.000000)">
+            <g id="cube-21" filter="url(#filter-29)" transform="translate(858.000000, 0.000000)">
+              <polygon id="Fill-1" fill="#F6F6F7" points="293 0 0 126.358592 0 535 293 422.360894"></polygon>
+              <polygon id="Fill-2" fill="#E7E7E7" points="293 0 293 422.506011 628 562 627.880072 139.81702"></polygon>
+              <polygon
+                id="Fill-3"
+                fill="#EFF0F1"
+                points="0 534.624973 345.599588 661 628 561.428582 292.84362 422"
+              ></polygon>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+
+    <svg
       class="cubes-container"
-      width="2346px"
-      height="2496px"
-      viewBox="0 0 2346 2496"
+      width="800px"
+      height="2000px"
+      viewBox="0 0 2000 800"
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -513,9 +555,9 @@
           </feMerge>
         </filter>
       </defs>
-      <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="кубы" transform="translate(-57.000000, -36.000000)">
-          <g id="Cubes" transform="translate(74.000000, 56.000000)">
+      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-57.000000, -36.000000)">
+          <g id="cubes" transform="translate(74.000000, 56.000000)">
             <g id="cube-1" filter="url(#filter-1)" transform="translate(102.000000, 1736.000000)">
               <polygon
                 id="Fill-1"

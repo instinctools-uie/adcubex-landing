@@ -2,12 +2,20 @@
   position: fixed;
   width: 800px;
   right: 0;
-  bottom: -600px;
+  bottom: -200px;
+}
+
+.main-cube {
+  position: fixed;
+  top: 0;
+}
+
+#cubes > g {
+  will-change: transform, animation;
 }
 
 #cube-1 {
   animation: cube-1 2s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-1 {
@@ -21,7 +29,6 @@
 
 #cube-2 {
   animation: cube-2 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-2 {
@@ -35,7 +42,6 @@
 
 #cube-3 {
   animation: cube-3 1.7s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-3 {
@@ -49,7 +55,6 @@
 
 #cube-4 {
   animation: cube-4 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-4 {
@@ -63,7 +68,6 @@
 
 #cube-5 {
   animation: cube-5 1.4s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-5 {
@@ -77,7 +81,6 @@
 
 #cube-6 {
   animation: cube-6 1.3s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-6 {
@@ -91,7 +94,6 @@
 
 #cube-7 {
   animation: cube-7 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-7 {
@@ -105,7 +107,6 @@
 
 #cube-8 {
   animation: cube-8 1.6s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-8 {
@@ -119,7 +120,6 @@
 
 #cube-9 {
   animation: cube-9 1.6s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-9 {
@@ -133,7 +133,6 @@
 
 #cube-10 {
   animation: cube-10 2.1s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-10 {
@@ -147,7 +146,6 @@
 
 #cube-11 {
   animation: cube-11 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-11 {
@@ -161,7 +159,6 @@
 
 #cube-12 {
   animation: cube-12 1.4s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-12 {
@@ -175,7 +172,6 @@
 
 #cube-13 {
   animation: cube-13 1.6s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-13 {
@@ -189,7 +185,6 @@
 
 #cube-14 {
   animation: cube-14 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-14 {
@@ -203,7 +198,6 @@
 
 #cube-15 {
   animation: cube-15 1.3s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-15 {
@@ -217,7 +211,6 @@
 
 #cube-16 {
   animation: cube-16 1.4s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-16 {
@@ -231,7 +224,6 @@
 
 #cube-17 {
   animation: cube-17 1.6s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-17 {
@@ -245,7 +237,6 @@
 
 #cube-18 {
   animation: cube-18 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-18 {
@@ -259,7 +250,6 @@
 
 #cube-19 {
   animation: cube-19 1.5s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-19 {
@@ -273,7 +263,6 @@
 
 #cube-20 {
   animation: cube-20 1.2s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-20 {
@@ -287,7 +276,6 @@
 
 #cube-21 {
   animation: cube-21 1.4s infinite alternate;
-  will-change: transform;
 }
 
 @keyframes cube-21 {
