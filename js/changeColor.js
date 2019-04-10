@@ -5,7 +5,11 @@ var expertiseSection = window.document.querySelector('.expertise-section');
 var investmentsSection = window.document.querySelector('.investments-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
-var investmentsSectionScrollPosition = investmentsSection.offsetTop;
+var investmentsSectionScrollPosition = investmentsSection.offsetTofunction
+
+function changeColor() {
+
+}
 
 function fromRedToWhiteLogo() {
   const sourceColor = { red: 237, green: 28, blue: 36 };
@@ -30,6 +34,10 @@ function fromBlackToWhiteMenu() {
   menu.style.color = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
   const menButton = document.querySelector('.menu-button > svg');
   menButton.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+}
+
+function toWhiteColor() {
+    bodyElement.style.backgroundColor = `rgb(255, 255, 255)`;
 }
 
 function fromWhiteToRed() {
