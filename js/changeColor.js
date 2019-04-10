@@ -34,7 +34,7 @@ function fromBlackToWhiteMenu() {
 
 function fromWhiteToRed() {
   const sourceColor = { red: 255, green: 255, blue: 255 };
-  const perChange = 1 - (window.pageYOffset - advantageSectionScrollPosition) / 960;
+  const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
   const currentColor = {
     red: Math.round(sourceColor.red - 15 * perChange),
     green: Math.round(sourceColor.green - 193 * perChange),
