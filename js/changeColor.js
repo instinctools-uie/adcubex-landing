@@ -1,5 +1,8 @@
 const bodyElement = document.querySelector('body');
 const cubeElement = window.document.querySelector('.cubes-container');
+var firstCube = document.querySelector('#cube-1');
+var cubeSides = firstCube.querySelectorAll('polygon');
+var cubeMask = firstCube.querySelector('mask');
 var advantageSection = window.document.querySelector('.advantage-section');
 var expertiseSection = window.document.querySelector('.expertise-section');
 var investmentsSection = window.document.querySelector('.investments-section');
@@ -41,7 +44,10 @@ function fromWhiteToRed() {
     blue: Math.round(sourceColor.blue - 193 * perChange)
   };
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
-  cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+  cubeSides.forEach(side => {
+    side.style.fill = `rgb(${currentColor.red + 20}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
+  });
+  cubeMask.style.fill = `rgb(${currentColor.red - 50}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
 }
 
 function fromRedToBlue() {
@@ -53,7 +59,10 @@ function fromRedToBlue() {
     blue: Math.round(sourceColor.blue + 180 * perChange)
   };
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
-  cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+  cubeSides.forEach(side => {
+    side.style.fill = `rgb(${currentColor.red + 20}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
+  });
+  cubeMask.style.fill = `rgb(${currentColor.red - 50}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
 }
 
 function fromBlueToPurple() {
@@ -65,5 +74,8 @@ function fromBlueToPurple() {
     blue: Math.round(sourceColor.blue - 15 * perChange)
   };
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
-  cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+  cubeSides.forEach(side => {
+    side.style.fill = `rgb(${currentColor.red + 20}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
+  });
+  cubeMask.style.fill = `rgb(${currentColor.red - 50}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
 }

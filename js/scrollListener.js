@@ -15,10 +15,6 @@ window.addEventListener('scroll', function() {
     toggleCubesOpacity();
   }
 
-  if (scrollPosition > expertiseSectionScrollPosition) {
-    hideCubes();
-  }
-
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
     fromRedToBlue();
   }
