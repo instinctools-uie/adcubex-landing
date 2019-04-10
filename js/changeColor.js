@@ -45,7 +45,7 @@ function fromWhiteToRed() {
 }
 
 function fromRedToBlue() {
-  const sourceColor = { red: 255, green: 0, blue: 0 };
+  const sourceColor = { red: 240, green: 62, blue: 62 };
   const perChange = (window.pageYOffset - expertiseSectionScrollPosition) / 960;
   const currentColor = {
     red: Math.round(sourceColor.red - 165 * perChange),
@@ -57,7 +57,7 @@ function fromRedToBlue() {
 }
 
 function fromBlueToPurple() {
-  const sourceColor = { red: 0, green: 0, blue: 255 };
+  const sourceColor = { red: 75, green: 84, blue: 242 };
   const perChange = (window.pageYOffset - investmentsSectionScrollPosition) / 960;
   const currentColor = {
     red: Math.round(sourceColor.red + 82 * perChange),
