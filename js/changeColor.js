@@ -7,7 +7,21 @@ var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
 var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-function changeColor(sourceColor, targetColor, )
+function changeColor(sourceColor, targetColor, selectorsArr) {
+  const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
+  const currentColor = {red: 0, green: 0, blue: 0};
+
+  for (key in currentColor) {
+    currentColor[key] = sourceColor.red > targetColor.red ?
+        Math.round(sourceColor[key] - (sourceColor[key] - targetColor[key]) * perChange) :
+        Math.round(sourceColor[key] + (targetColor[key] - sourceColor[key]) * perChange)
+  }
+
+  for(let i = 0; i < selectorsArr.length; i++) {
+    const el = document.querySelector(selectorsArr[i].selector);
+    el.style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+  }
+}
 
 function fromRedToWhiteLogo() {
   const sourceColor = { red: 237, green: 28, blue: 36 };
