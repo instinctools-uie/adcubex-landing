@@ -36,9 +36,9 @@ function fromWhiteToRed() {
   const sourceColor = { red: 255, green: 255, blue: 255 };
   const perChange = 1 - (window.pageYOffset - advantageSectionScrollPosition) / 960;
   const currentColor = {
-    red: sourceColor.red,
-    green: Math.round(sourceColor.green * perChange),
-    blue: Math.round(sourceColor.blue * perChange)
+    red: Math.round(sourceColor.red - 15 * perChange),
+    green: Math.round(sourceColor.green - 193 * perChange),
+    blue: Math.round(sourceColor.blue - 193 * perChange)
   };
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
   cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
@@ -48,9 +48,9 @@ function fromRedToBlue() {
   const sourceColor = { red: 255, green: 0, blue: 0 };
   const perChange = (window.pageYOffset - expertiseSectionScrollPosition) / 960;
   const currentColor = {
-    red: Math.round(sourceColor.red * (1 - perChange)),
-    green: 0,
-    blue: Math.round(255 * perChange)
+    red: Math.round(sourceColor.red - 165 * perChange),
+    green: Math.round(sourceColor.green + 22 * perChange),
+    blue: Math.round(sourceColor.blue + 180 * perChange)
   };
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
   cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
@@ -60,9 +60,9 @@ function fromBlueToPurple() {
   const sourceColor = { red: 0, green: 0, blue: 255 };
   const perChange = (window.pageYOffset - investmentsSectionScrollPosition) / 960;
   const currentColor = {
-    red: Math.round(157 * perChange),
-    green: Math.round(55 * perChange),
-    blue: Math.round(sourceColor.blue - 28 * perChange)
+    red: Math.round(sourceColor.red + 82 * perChange),
+    green: Math.round(sourceColor.green - 29 * perChange),
+    blue: Math.round(sourceColor.blue - 15 * perChange)
   };
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
   cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
