@@ -1,14 +1,4 @@
-function stretchSquare() {
-  const image = window.document.querySelector('.image');
-  const minHeght = 544;
-  const maxHeight = 915;
-  const heightIncreaseByScroll = window.scrollY / 5;
-  image.style.height = `${heightIncreaseByScroll + minHeght}px`;
-  image.style.minHeight = minHeght + 'px';
-  image.style.maxHeight = maxHeight + 'px';
-}
-
-function showOrHideTextOfSection() {
+function toggleTextOfSection() {
   const scrolled = document.scrollingElement.scrollTop;
   const sections = window.document.querySelectorAll('.section-container');
 
@@ -26,8 +16,3 @@ function showOrHideTextOfSection() {
     }
   }
 }
-
-window.addEventListener('scroll', function() {
-  stretchSquare();
-  showOrHideTextOfSection();
-});
