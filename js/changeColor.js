@@ -7,6 +7,8 @@ var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
 var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
+function changeColor(sourceColor, targetColor, )
+
 function fromRedToWhiteLogo() {
   const sourceColor = { red: 237, green: 28, blue: 36 };
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
