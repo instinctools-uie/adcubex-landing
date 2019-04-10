@@ -165,32 +165,3 @@ footer {
 .advantage-section div h1 > span {
   color: #ef3e3e;
 }
-
-.cubes-container {
-  position: fixed;
-  left: 50%;
-}
-
-.cube {
-  position: absolute;
-  -webkit-animation: cube-animation 1.5s infinite alternate;
-  animation: cube-animation 1.5s infinite alternate;
-  pointer-events: all;
-  width: 100%;
-}
-@-webkit-keyframes cube-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
-@keyframes cube-animation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-}
