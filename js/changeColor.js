@@ -19,13 +19,17 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   }
 
   for (let i = 0; i < selectorsArr.length; i++) {
-    const el = document.querySelectorAll(selectorsArr[i].selector);
-    if (el.length > 1) {
-      for (let j = 0; j < el.length; j++) {
-        el[j].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+    const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
+    if (selectorElements.length > 1) {
+      for (let j = 0; j < selectorElements.length; j++) {
+        selectorElements[j].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
+          currentColor.blue
+        })`;
       }
     } else {
-      el[0].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+      selectorElements[0].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
+        currentColor.blue
+      })`;
     }
   }
 }
