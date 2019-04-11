@@ -28,7 +28,7 @@ window.addEventListener('scroll', function() {
 
   if (scrollPosition > investmentsSectionScrollPosition) {
     changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+  }
 
     toggleTextOfSection();
-  }
 });
