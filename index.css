@@ -1,5 +1,10 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  font-family: 'montserrat_lightregular', sans-serif;
 }
 
 .arrow {
@@ -40,16 +45,18 @@ body {
 }
 
 .menu-container > .link {
+  color: #303030;
   font-weight: 700;
   font-size: 0.875rem;
+  text-decoration: none;
 }
 
 .menu-container > .link--active {
-  color: rgb(239, 62, 62);
+  color: rgb(239, 221, 60) !important;
 }
 
 .menu-container > .link:hover {
-  color: rgb(239, 62, 62);
+  color: rgb(239, 221, 60) !important;
   cursor: pointer;
 }
 
@@ -81,10 +88,6 @@ h1 {
   font-family: 'montserrat_extraboldregular', sans-serif;
 }
 
-p {
-  font-family: 'montserrat_lightregular', sans-serif;
-}
-
 .section-container {
   z-index: 1;
   width: 65em;
@@ -112,7 +115,9 @@ p {
 .section-container > a {
   display: inline-flex;
   align-items: center;
+  margin: 3em 0 0 4.5em;
   color: inherit;
+  font-size: 0.8em;
   text-decoration: none;
 }
 
