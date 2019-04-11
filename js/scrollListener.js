@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
   }
 
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-    changeColorForAdvantageSection();
+    changeColorForAdvantageSection(advantageSectionScrollPosition);
 
     toggleCubesOpacity();
   }
@@ -23,11 +23,11 @@ window.addEventListener('scroll', function() {
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-    changeColorForExpertiseSection();
+    changeColorForExpertiseSection(expertiseSectionScrollPosition);
   }
 
   if (scrollPosition > investmentsSectionScrollPosition) {
-    changeColorForInvestmentsSection();
+    changeColorForInvestmentsSection(investmentsSectionScrollPosition);
 
     toggleTextOfSection();
   }
