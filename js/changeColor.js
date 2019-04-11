@@ -32,6 +32,10 @@ function fromBlackToWhiteMenu() {
   menButton.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
 }
 
+function toWhiteColor() {
+    bodyElement.style.backgroundColor = `rgb(255, 255, 255)`;
+}
+
 function fromWhiteToRed() {
   const sourceColor = { red: 255, green: 255, blue: 255 };
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
