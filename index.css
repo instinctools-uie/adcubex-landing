@@ -42,11 +42,10 @@ body {
   padding: 0 25% 0 17%;
   font-family: 'montserratbold', sans-serif;
   letter-spacing: 0.088em;
-  color: transparent;
 }
 
 .menu-container > .link {
-  color: #303030;
+  color: transparent;
   font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;

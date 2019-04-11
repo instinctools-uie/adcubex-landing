@@ -76,7 +76,7 @@ function fromBlueToPurple() {
 
 window.onload = function() {
   const logo = document.querySelector('.logo-container > svg');
-  const menu = document.querySelector('.menu-container');
+  const menuItems = document.querySelectorAll('.menu-container > .link');
   const menButton = document.querySelector('.menu-button > svg');
   const currentPosition = window.pageYOffset;
 
@@ -85,14 +85,18 @@ window.onload = function() {
     const black = 'rgb(0, 0, 0)';
 
     logo.style.fill = redLogoColor;
-    menu.style.color = black;
+    menuItems.forEach(function(item) {
+      item.style.color = black;
+    });
     menButton.style.fill = black;
   }
 
   if (currentPosition > 1943) {
     const white = 'rgb(255, 255, 255)';
     logo.style.fill = white;
-    menu.style.color = white;
+    menuItems.forEach(function(item) {
+      item.style.color = white;
+    });
     menButton.style.fill = white;
   }
 };
