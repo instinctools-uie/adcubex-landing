@@ -31,5 +31,7 @@ window.addEventListener('scroll', function() {
     fromBlueToPurple();
   }
 
+  menuItemActiveScroll();
+
   toggleTextOfSection();
 });
