@@ -51,12 +51,21 @@ body {
   text-decoration: none;
 }
 
-.menu-container > .link--active {
-  color: rgb(239, 221, 60) !important;
+.menu-container > .link_red--active {
+  color: rgb(229, 62, 56) !important;
 }
 
-.menu-container > .link:hover {
-  color: rgb(239, 221, 60) !important;
+.menu-container > .link_red:hover {
+  color: rgb(229, 62, 56) !important;
+  cursor: pointer;
+}
+
+.menu-container > .link_black--active {
+  color: rgb(48, 48, 48) !important;
+}
+
+.menu-container > .link_black:hover {
+  color: rgb(48, 48, 48) !important;
   cursor: pointer;
 }
 

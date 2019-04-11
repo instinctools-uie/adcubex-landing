@@ -9,11 +9,15 @@ menuContainer.addEventListener('click', function(e) {
   }
 
   for (let i = 0; i < items.length; i++) {
-    const isActiveLink = items[i].classList.contains('link--active');
+    const isActiveLink = items[i].classList.contains('link_red--active');
     if (isActiveLink) {
-      items[i].classList.remove('link--active');
+      items[i].classList.remove('link_red--active');
     }
   }
 
-  e.target.classList.add('link--active');
+  e.target.classList.add('link_red--active');
 });
+
+function menuItemActiveScroll() {
+
+}
