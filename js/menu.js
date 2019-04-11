@@ -18,4 +18,12 @@ menuContainer.addEventListener('click', function(e) {
   e.target.classList.add('link_red--active');
 });
 
-function menuItemActiveScroll() {}
+function menuItemActiveScroll() {
+  const currentPosition = window.pageYOffset;
+
+  if (currentPosition > 1920) {
+    for (let i = 0; i < items.length; i++) {
+      items[0].classList.toggle('link_red--active', false);
+    }
+  }
+}
