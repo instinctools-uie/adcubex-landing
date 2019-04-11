@@ -23,7 +23,7 @@ function menuItemActiveScroll() {
 
   if (currentPosition > 1920) {
     for (let i = 0; i < items.length; i++) {
-      items[0].classList.toggle('link_red--active', false);
+      items[i].classList.toggle('link_red--active', false).add();
     }
   }
 }
