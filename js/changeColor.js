@@ -29,8 +29,10 @@ function fromBlackToWhiteMenu() {
     green: Math.round(255 * perChange),
     blue: Math.round(255 * perChange)
   };
-  const menu = document.querySelector('.menu-container');
-  menu.style.color = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+  const menuItems = document.querySelectorAll('.menu-container > a');
+  menuItems.forEach(function(menuItem) {
+    menuItem.style.color = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
+  });
   const menButton = document.querySelector('.menu-button > svg');
   menButton.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
 }
