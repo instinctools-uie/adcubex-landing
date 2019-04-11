@@ -1,5 +1,5 @@
-const redBackground = { red: 240, green: 62, blue: 62 };
-const blueBackground = { red: 75, green: 84, blue: 242 };
+const redBackgroundColor = { red: 240, green: 62, blue: 62 };
+const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
 const bodyElement = { selector: 'body', property: 'backgroundColor' };
 const cubeElement = { selector: '.cube', property: 'fill' };
 
@@ -31,29 +31,29 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
 }
 
 function changeColorForAdvantageSection(advantageSectionScrollPosition) {
-  const white = { red: 255, green: 255, blue: 255 };
-  const black = { red: 0, green: 0, blue: 0 };
-  const redLogo = { red: 237, green: 28, blue: 36 };
+  const whiteColor = { red: 255, green: 255, blue: 255 };
+  const blackColor = { red: 0, green: 0, blue: 0 };
+  const redLogoColor = { red: 237, green: 28, blue: 36 };
 
   const menuItem = { selector: '.menu-container > .link', property: 'color' };
-  changeColor(black, white, [menuItem], advantageSectionScrollPosition);
+  changeColor(blackColor, whiteColor, [menuItem], advantageSectionScrollPosition);
 
   const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
   const logoElement = { selector: '.logo-container > svg', property: 'fill' };
 
-  changeColor(white, redBackground, [bodyElement, cubeElement], advantageSectionScrollPosition);
+  changeColor(whiteColor, redBackgroundColor, [bodyElement, cubeElement], advantageSectionScrollPosition);
 
-  changeColor(black, white, [menuButtonElement], advantageSectionScrollPosition);
+  changeColor(blackColor, whiteColor, [menuButtonElement], advantageSectionScrollPosition);
 
-  changeColor(redLogo, white, [logoElement], advantageSectionScrollPosition);
+  changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
 }
 
 function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
-  changeColor(redBackground, blueBackground, [bodyElement, cubeElement], expertiseSectionScrollPosition);
+  changeColor(redBackgroundColor, blueBackgroundColor, [bodyElement, cubeElement], expertiseSectionScrollPosition);
 }
 
 function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
-  const purpleBackground = { red: 157, green: 55, blue: 227 };
+  const purpleBackgroundColor = { red: 157, green: 55, blue: 227 };
 
-  changeColor(blueBackground, purpleBackground, [bodyElement, cubeElement], investmentsSectionScrollPosition);
+  changeColor(blueBackgroundColor, purpleBackgroundColor, [bodyElement, cubeElement], investmentsSectionScrollPosition);
 }

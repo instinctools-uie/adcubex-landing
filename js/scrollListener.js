@@ -30,5 +30,5 @@ window.addEventListener('scroll', function() {
     changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
-    toggleTextOfSection();
+  toggleTextOfSection();
 });
