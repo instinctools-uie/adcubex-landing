@@ -55,7 +55,7 @@ body {
 }
 
 .menu-container > .link:hover {
-  color: rgb(239, 221, 60);
+  color: rgb(239, 221, 60) !important;
   cursor: pointer;
 }
 
