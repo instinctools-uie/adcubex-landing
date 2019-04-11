@@ -10,10 +10,11 @@ const cubesTranslateElements = document.querySelectorAll('.cube-translate-animat
 function toggleCube() {
   mainCube.style.animation = 'none';
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
-  const cubeScalePerChange = perChange * 19 > 1 ? perChange * 19 : 1;
-  const maxCubeScale = cubeScalePerChange > 19 ? 19 : cubeScalePerChange;
-  const transletXPosition = perChange > 0 ? perChange * 2200 : 0;
-  const transletYPosition = perChange > 0 ? perChange * 400 : 0;
+  const scaleRange = 9;
+  const cubeScalePerChange = perChange * scaleRange > 1 ? perChange * scaleRange : 1;
+  const maxCubeScale = cubeScalePerChange > scaleRange ? scaleRange : cubeScalePerChange;
+  const transletXPosition = perChange > 0 ? perChange * 1500 : 0;
+  const transletYPosition = perChange > 0 ? perChange * 2500 : 0;
 
   // if (transletXPosition > 1900 || transletYPosition > 385) {
   //     cubesContainer.style.display = 'none';
@@ -21,16 +22,25 @@ function toggleCube() {
   //     cubesContainer.style.display = 'block';
   // }
   firstCube.style.transform =
-    'translate(-' + transletYPosition + 'px, -' + transletXPosition + 'px)' + 'scale(' + maxCubeScale + ')';
+    'translate(-' + transletXPosition + 'px, -' + transletYPosition + 'px)' + 'scale(' + maxCubeScale + ')';
 }
 
 toggleCube();
 
 function toggleCubes() {
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
-  const transletYPosition = perChange > 0 ? perChange * 5000 : 0;
+  const range = 5000;
+  const transletYPosition = perChange > 0 ? perChange * range : 0;
 
   for (let i = 0; i < cubesTranslateElements.length; i++) {
-    cubesTranslateElements[i].style.transform = 'translate(0px, -' + transletYPosition + 'px)';
+    const isHideElements = transletYPosition > range - 300;
+
+    //TODO: Check for already contain "block" and "none"
+    if (isHideElements) {
+      cubesTranslateElements[i].style.display = 'none';
+    } else {
+      cubesTranslateElements[i].style.display = 'block';
+      cubesTranslateElements[i].style.transform = 'translate(0px, -' + transletYPosition + 'px)';
+    }
   }
 }
