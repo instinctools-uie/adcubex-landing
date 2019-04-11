@@ -59,3 +59,9 @@ function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
 
   changeColor(blueBackgroundColor, purpleBackgroundColor, [bodyElement, cubeElement], investmentsSectionScrollPosition);
 }
+
+function changeMenuItemsColorToWhite() {
+  document.querySelectorAll('.menu-container > .link').forEach(function(item) {
+    item.style.color = 'white';
+  });
+}
