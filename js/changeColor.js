@@ -4,7 +4,7 @@ const bodyElement = { selector: 'body', property: 'backgroundColor' };
 const cubeElement = { selector: '.cube', property: 'fill' };
 
 function toWhiteColor() {
-    document.querySelector(bodyElement.selector).style.backgroundColor = `rgb(255, 255, 255)`;
+  document.querySelector(bodyElement.selector).style.backgroundColor = `rgb(255, 255, 255)`;
 }
 
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
@@ -13,7 +13,7 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
 
   for (let key in currentColor) {
     currentColor[key] =
-        fromColor[key] > toColor[key]
+      fromColor[key] > toColor[key]
         ? Math.round(fromColor[key] - (fromColor[key] - toColor[key]) * perChange)
         : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
   }
@@ -25,19 +25,19 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
 }
 
 function changeColorForAdvantageSection() {
-    const white = {red: 255, green: 255, blue: 255};
-    const black = {red: 0, green: 0, blue: 0};
-    const redLogo = {red: 237, green: 28, blue: 36};
+  const white = { red: 255, green: 255, blue: 255 };
+  const black = { red: 0, green: 0, blue: 0 };
+  const redLogo = { red: 237, green: 28, blue: 36 };
 
-    const menuElement = {selector: '.menu-container', property: 'color'};
-    const menuButtonElement = {selector: '.menu-button > svg', property: 'fill'};
-    const logoElement = {selector: '.logo-container > svg', property: 'fill'};
+  const menuElement = { selector: '.menu-container', property: 'color' };
+  const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
+  const logoElement = { selector: '.logo-container > svg', property: 'fill' };
 
-    changeColor(white, redBackground, [bodyElement, cubeElement], advantageSectionScrollPosition);
+  changeColor(white, redBackground, [bodyElement, cubeElement], advantageSectionScrollPosition);
 
-    changeColor(black, white, [menuElement, menuButtonElement], advantageSectionScrollPosition);
+  changeColor(black, white, [menuElement, menuButtonElement], advantageSectionScrollPosition);
 
-    changeColor(redLogo, white, [logoElement], advantageSectionScrollPosition);
+  changeColor(redLogo, white, [logoElement], advantageSectionScrollPosition);
 }
 
 function changeColorForExpertiseSection() {
