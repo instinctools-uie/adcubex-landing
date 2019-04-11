@@ -13,9 +13,8 @@ window.addEventListener('scroll', function() {
   }
 
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-    fromWhiteToRed();
-    fromBlackToWhiteMenu();
-    fromRedToWhiteLogo();
+    changeColorForAdvantageSection(advantageSectionScrollPosition);
+
     toggleCubesOpacity();
   }
 
@@ -24,11 +23,11 @@ window.addEventListener('scroll', function() {
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-    fromRedToBlue();
+    changeColorForExpertiseSection(expertiseSectionScrollPosition);
   }
 
   if (scrollPosition > investmentsSectionScrollPosition) {
-    fromBlueToPurple();
+    changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
   menuItemActiveScroll();
