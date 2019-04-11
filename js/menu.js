@@ -1,7 +1,7 @@
 const menuContainer = document.querySelector('.menu-container');
 
 menuContainer.addEventListener('click', function(e) {
-  const items = document.querySelectorAll('.menu-container > span');
+  const items = document.querySelectorAll('.menu-container > a');
   const isClickOnLink = e.target.classList.contains('link');
 
   if (!isClickOnLink) {
