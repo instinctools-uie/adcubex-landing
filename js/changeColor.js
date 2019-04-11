@@ -33,7 +33,7 @@ function fromBlackToWhiteMenu() {
 }
 
 function toWhiteColor() {
-    bodyElement.style.backgroundColor = `rgb(255, 255, 255)`;
+  bodyElement.style.backgroundColor = `rgb(255, 255, 255)`;
 }
 
 function fromWhiteToRed() {
