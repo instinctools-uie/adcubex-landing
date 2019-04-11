@@ -8,8 +8,8 @@ var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 window.addEventListener('scroll', function() {
   const scrollPosition = window.pageYOffset;
 
-  if(scrollPosition < advantageSectionScrollPosition) {
-      toWhiteColor();
+  if (scrollPosition < advantageSectionScrollPosition) {
+    toWhiteColor();
   }
 
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
