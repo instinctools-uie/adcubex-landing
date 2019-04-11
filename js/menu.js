@@ -18,6 +18,4 @@ menuContainer.addEventListener('click', function(e) {
   e.target.classList.add('link_red--active');
 });
 
-function menuItemActiveScroll() {
-
-}
+function menuItemActiveScroll() {}
