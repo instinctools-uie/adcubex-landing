@@ -11,7 +11,7 @@
 }
 
 #cubes > g {
-  will-change: transform, animation;
+  will-change: transform, animation, color;
 }
 
 #cube-1 {

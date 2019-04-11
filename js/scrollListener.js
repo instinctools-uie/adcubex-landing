@@ -5,6 +5,9 @@ var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
 var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
+console.log('advantageSectionScrollPosition', advantageSectionScrollPosition);
+console.log('expertiseSectionScrollPosition', expertiseSectionScrollPosition);
+
 window.addEventListener('scroll', function() {
   const scrollPosition = window.pageYOffset;
 
@@ -17,6 +20,7 @@ window.addEventListener('scroll', function() {
     fromBlackToWhiteMenu();
     fromRedToWhiteLogo();
     toggleCube();
+    toggleCubes();
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {

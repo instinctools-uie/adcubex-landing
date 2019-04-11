@@ -2,7 +2,6 @@ const bodyElement = document.querySelector('body');
 const cubeElement = window.document.querySelector('.cubes-container');
 var firstCube = document.querySelector('#cube-1');
 var cubeSides = firstCube.querySelectorAll('polygon');
-var cubeMask = firstCube.querySelector('mask');
 var advantageSection = window.document.querySelector('.advantage-section');
 var expertiseSection = window.document.querySelector('.expertise-section');
 var investmentsSection = window.document.querySelector('.investments-section');
@@ -53,7 +52,6 @@ function fromWhiteToRed() {
   cubeSides.forEach(side => {
     side.style.fill = `rgb(${currentColor.red + 20}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
   });
-  cubeMask.style.fill = `rgb(${currentColor.red - 50}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
 }
 
 function fromRedToBlue() {
@@ -68,7 +66,6 @@ function fromRedToBlue() {
   cubeSides.forEach(side => {
     side.style.fill = `rgb(${currentColor.red + 20}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
   });
-  cubeMask.style.fill = `rgb(${currentColor.red - 50}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
 }
 
 function fromBlueToPurple() {
@@ -83,5 +80,4 @@ function fromBlueToPurple() {
   cubeSides.forEach(side => {
     side.style.fill = `rgb(${currentColor.red + 20}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
   });
-  cubeMask.style.fill = `rgb(${currentColor.red - 50}, ${currentColor.green + 20}, ${currentColor.blue + 20})`;
 }
