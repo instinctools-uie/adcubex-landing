@@ -67,3 +67,15 @@ function fromBlueToPurple() {
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
   cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
 }
+
+window.onload = function() {
+    if(window.pageYOffset > 1943) {
+      const white = 'rgb(255, 255, 255)';
+      const logo = document.querySelector('.logo-container > svg');
+      logo.style.fill = white;
+      const menu = document.querySelector('.menu-container');
+      menu.style.color = white;
+      const menButton = document.querySelector('.menu-button > svg');
+      menButton.style.fill = white;
+    }
+};
