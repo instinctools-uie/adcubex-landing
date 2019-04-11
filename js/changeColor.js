@@ -33,7 +33,7 @@ function fromBlackToWhiteMenu() {
 }
 
 function toWhiteColor() {
-    bodyElement.style.backgroundColor = `rgb(255, 255, 255)`;
+  bodyElement.style.backgroundColor = `rgb(255, 255, 255)`;
 }
 
 function fromWhiteToRed() {
@@ -73,10 +73,10 @@ function fromBlueToPurple() {
 }
 
 window.onload = function() {
-    const logo = document.querySelector('.logo-container > svg');
-    const menu = document.querySelector('.menu-container');
-    const menButton = document.querySelector('.menu-button > svg');
-    const currentPosition = window.pageYOffset;
+  const logo = document.querySelector('.logo-container > svg');
+  const menu = document.querySelector('.menu-container');
+  const menButton = document.querySelector('.menu-button > svg');
+  const currentPosition = window.pageYOffset;
 
   if (currentPosition >= 0 && currentPosition < 960) {
     const redLogoColor = 'rgb(237, 28, 36)';
