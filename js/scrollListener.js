@@ -12,6 +12,10 @@ window.addEventListener('scroll', function() {
     toWhiteColor();
   }
 
+  if(scrollPosition > expertiseSectionScrollPosition) {
+      whiteMenuItems ();
+  }
+
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
     fromWhiteToRed();
     fromBlackToWhiteMenu();

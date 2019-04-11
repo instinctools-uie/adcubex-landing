@@ -73,3 +73,9 @@ function fromBlueToPurple() {
   bodyElement.style.backgroundColor = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
   cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
 }
+
+function whiteMenuItems () {
+    document.querySelectorAll('.menu-container > .link').forEach(function (item) {
+      item.style.color = 'white';
+    });
+}
