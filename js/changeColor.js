@@ -21,34 +21,27 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
 }
 
 function changeColorForAdvantageSection() {
-    const white = { red: 255, green: 255, blue: 255 };
-    const black = { red: 0, green: 0, blue: 0 };
-    const redLogo = { red: 237, green: 28, blue: 36 };
+  const white = { red: 255, green: 255, blue: 255 };
+  const black = { red: 0, green: 0, blue: 0 };
+  const redLogo = { red: 237, green: 28, blue: 36 };
 
-    const menuElement = { selector: '.menu-container', property: 'color' };
-    const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
-    const logoElement = { selector: '.logo-container > svg', property: 'fill' };
+  const menuElement = { selector: '.menu-container', property: 'color' };
+  const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
+  const logoElement = { selector: '.logo-container > svg', property: 'fill' };
 
-    changeColor(white, redBackground, [bodyElement, cubeElement], advantageSectionScrollPosition);
+  changeColor(white, redBackground, [bodyElement, cubeElement], advantageSectionScrollPosition);
 
-    changeColor(black, white, [menuElement, menuButtonElement], advantageSectionScrollPosition);
+  changeColor(black, white, [menuElement, menuButtonElement], advantageSectionScrollPosition);
 
-    changeColor(redLogo, white, [logoElement], advantageSectionScrollPosition);
+  changeColor(redLogo, white, [logoElement], advantageSectionScrollPosition);
 }
 
 function changeColorForExpertiseSection() {
-    changeColor(redBackground, blueBackground, [bodyElement, cubeElement], expertiseSectionScrollPosition);
+  changeColor(redBackground, blueBackground, [bodyElement, cubeElement], expertiseSectionScrollPosition);
 }
 
 function changeColorForInvestmentsSection() {
-    const purpleBackground = { red: 157, green: 55, blue: 227 };
+  const purpleBackground = { red: 157, green: 55, blue: 227 };
 
-    changeColor(blueBackground, purpleBackground, [bodyElement, cubeElement], investmentsSectionScrollPosition);
+  changeColor(blueBackground, purpleBackground, [bodyElement, cubeElement], investmentsSectionScrollPosition);
 }
-
-
-
-
-
-
-

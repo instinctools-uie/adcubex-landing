@@ -19,13 +19,12 @@ window.addEventListener('scroll', function() {
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-      changeColorForExpertiseSection();
+    changeColorForExpertiseSection();
   }
 
-
   if (scrollPosition > investmentsSectionScrollPosition) {
-      changeColorForInvestmentsSection();
+    changeColorForInvestmentsSection();
 
-      toggleTextOfSection();
+    toggleTextOfSection();
   }
 });
