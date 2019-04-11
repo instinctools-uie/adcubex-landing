@@ -1,5 +1,6 @@
 body {
   margin: 0;
+	font-family: 'montserrat_lightregular', sans-serif;
 }
 
 .arrow {
@@ -81,10 +82,6 @@ h1 {
   font-family: 'montserrat_extraboldregular', sans-serif;
 }
 
-p {
-  font-family: 'montserrat_lightregular', sans-serif;
-}
-
 .section-container {
   z-index: 1;
   width: 65em;
@@ -114,7 +111,6 @@ p {
   align-items: center;
   margin: 3em 0 0 4.5em;
   color: inherit;
-  font-family: 'montserrat_lightregular', sans-serif;
   font-size: 0.8em;
   text-decoration: none;
 }
