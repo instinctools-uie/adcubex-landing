@@ -13,7 +13,7 @@ window.addEventListener('scroll', function() {
   }
 
   if (scrollPosition > expertiseSectionScrollPosition) {
-    whiteMenuItems();
+    changeMenuItemsColorToWhite();
   }
 
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
