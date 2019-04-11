@@ -74,8 +74,8 @@ function fromBlueToPurple() {
   cubeElement.style.fill = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
 }
 
-function whiteMenuItems () {
-    document.querySelectorAll('.menu-container > .link').forEach(function (item) {
-      item.style.color = 'white';
-    });
+function whiteMenuItems() {
+  document.querySelectorAll('.menu-container > .link').forEach(function(item) {
+    item.style.color = 'white';
+  });
 }
