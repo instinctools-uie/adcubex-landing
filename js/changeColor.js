@@ -73,13 +73,24 @@ function fromBlueToPurple() {
 }
 
 window.onload = function() {
-  if (window.pageYOffset > 1943) {
-    const white = 'rgb(255, 255, 255)';
     const logo = document.querySelector('.logo-container > svg');
-    logo.style.fill = white;
     const menu = document.querySelector('.menu-container');
-    menu.style.color = white;
     const menButton = document.querySelector('.menu-button > svg');
+    const currentPosition = window.pageYOffset;
+
+  if (currentPosition >= 0 && currentPosition < 960) {
+    const redLogoColor = 'rgb(237, 28, 36)';
+    const black = 'rgb(0, 0, 0)';
+
+    logo.style.fill = redLogoColor;
+    menu.style.color = black;
+    menButton.style.fill = black;
+  }
+
+  if (currentPosition > 1943) {
+    const white = 'rgb(255, 255, 255)';
+    logo.style.fill = white;
+    menu.style.color = white;
     menButton.style.fill = white;
   }
 };

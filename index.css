@@ -27,7 +27,7 @@ body {
 }
 
 .logo-container > svg {
-  fill: #ed1c24;
+  fill: transparent;
 }
 
 .menu-container {
@@ -37,6 +37,7 @@ body {
   padding: 0 25% 0 17%;
   font-family: 'montserratbold', sans-serif;
   letter-spacing: 0.088em;
+  color: transparent;
 }
 
 .menu-container > .link {
@@ -60,6 +61,10 @@ body {
 .menu-button {
   width: 1.7rem;
   cursor: pointer;
+}
+
+.menu-button > svg {
+  fill: transparent;
 }
 
 .content {
