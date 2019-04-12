@@ -37,15 +37,13 @@ function changeColorForAdvantageSection(advantageSectionScrollPosition) {
   const blackColor = { red: 0, green: 0, blue: 0 };
   const redLogoColor = { red: 237, green: 28, blue: 36 };
 
-  const menuItem = { selector: '.menu-container > .link', property: 'color' };
-  changeColor(blackColor, whiteColor, [menuItem], advantageSectionScrollPosition);
-
+  const menu = { selector: '.menu-container', property: 'color' };
   const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
   const logoElement = { selector: '.logo-container > svg', property: 'fill' };
 
   changeColor(whiteColor, redBackgroundColor, [bodyElement, cubeElement], advantageSectionScrollPosition);
 
-  changeColor(blackColor, whiteColor, [menuButtonElement], advantageSectionScrollPosition);
+  changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
 
   changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
 }
@@ -61,9 +59,7 @@ function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
 }
 
 function changeMenuItemsColorToWhite() {
-  document.querySelectorAll('.menu-container > .link').forEach(function(item) {
-    item.style.color = 'white';
-  });
+  document.querySelector('.menu-container').style.color = 'white';
   document.querySelector('.logo-container > svg').style.fill = 'white';
   document.querySelector('.menu-button > svg').style.fill = 'white';
 }

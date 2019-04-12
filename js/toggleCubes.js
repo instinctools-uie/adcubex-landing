@@ -1,5 +1,3 @@
-const cubesElements = document.querySelectorAll('#cubes > g');
-const cubesContainer = document.querySelector('.cubes-container');
 var mainCube = document.querySelector('#cube-8');
 var firstCube = document.querySelector('#cube-8-scale-animation');
 var advantageSection = window.document.querySelector('.advantage-section');
@@ -10,37 +8,41 @@ const cubesTranslateElements = document.querySelectorAll('.cube-translate-animat
 function toggleCube() {
   const minScaleValue = 1;
   const maxScaleValue = 9;
-  const minTransleteXPosition = 0;
-  const maxTransleteXPosition = 1500;
-  const minTransleteYPosition = 0;
-  const maxTransleteYPosition = 2500;
+  const minTranslateXPosition = 0;
+  const maxTranslateXPosition = 1500;
+  const minTranslateYPosition = 0;
+  const maxTranslateYPosition = 2500;
 
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
 
   const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
 
-  const transleteXPosition = getValueBetweenRange(perChange, minTransleteXPosition, maxTransleteXPosition);
-  const transleteYPosition = getValueBetweenRange(perChange, minTransleteYPosition, maxTransleteYPosition);
+  const translateXPosition = getValueBetweenRange(perChange, minTranslateXPosition, maxTranslateXPosition);
+  const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
 
   mainCube.style.animation = 'none';
   firstCube.style.transform =
-    'translate(-' + transleteXPosition + 'px, -' + transleteYPosition + 'px)' + 'scale(' + cubeScale + ')';
+    'translate(-' + translateXPosition + 'px, -' + translateYPosition + 'px)' + 'scale(' + cubeScale + ')';
 }
 
 function toggleCubes() {
+  const minTranslateYPosition = 0;
+  const maxTranslateYPosition = 5000;
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
-  const range = 5000;
-  const transletYPosition = perChange > 0 ? perChange * range : 0;
+
+  const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
 
   for (let i = 0; i < cubesTranslateElements.length; i++) {
-    const isHideElements = transletYPosition > range - 300;
+    const isElementsCloseToMaxValue = translateYPosition > maxTranslateYPosition - 300;
+    const cubesElementsDisplayValue =
+      cubesTranslateElements[i].style.display || getComputedStyle(cubesTranslateElements[i], null).display;
+    const isCubeVisible = cubesElementsDisplayValue === 'block';
 
-    //TODO: Check for already contain "block" and "none"
-    if (isHideElements) {
+    if (isElementsCloseToMaxValue && isCubeVisible) {
       cubesTranslateElements[i].style.display = 'none';
     } else {
       cubesTranslateElements[i].style.display = 'block';
-      cubesTranslateElements[i].style.transform = 'translate(0px, -' + transletYPosition + 'px)';
+      cubesTranslateElements[i].style.transform = 'translate(0px, -' + translateYPosition + 'px)';
     }
   }
 }
