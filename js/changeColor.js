@@ -59,3 +59,11 @@ function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
 
   changeColor(blueBackgroundColor, purpleBackgroundColor, [bodyElement, cubeElement], investmentsSectionScrollPosition);
 }
+
+function changeMenuItemsColorToWhite() {
+  document.querySelectorAll('.menu-container > .link').forEach(function(item) {
+    item.style.color = 'white';
+  });
+  document.querySelector('.logo-container > svg').style.fill = 'white';
+  document.querySelector('.menu-button > svg').style.fill = 'white';
+}
