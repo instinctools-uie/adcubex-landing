@@ -1,7 +1,29 @@
-const redBackgroundColor = { red: 240, green: 62, blue: 62 };
-const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
 const bodyElement = { selector: 'body', property: 'backgroundColor' };
 const cubeElement = { selector: '.cube', property: 'fill' };
+const cubeLeftSideElementOptions = {
+  selector: '#cube-8-scale-animation :nth-child(1)',
+  property: 'fill',
+  currentColor: { red: 246, green: 246, blue: 247 },
+  redColor: { red: 240, green: 62, blue: 62 },
+  blueColor: { red: 75, green: 84, blue: 242 },
+  purpleColor: { red: 157, green: 55, blue: 227 }
+};
+const cubeRightSideElementOptions = {
+  selector: '#cube-8-scale-animation :nth-child(2)',
+  property: 'fill',
+  currentColor: { red: 232, green: 232, blue: 232 },
+  redColor: { red: 191, green: 49, blue: 48 },
+  blueColor: { red: 67, green: 74, blue: 190 },
+  purpleColor: { red: 147, green: 45, blue: 191 }
+};
+const cubeBottomSideSideElementOptions = {
+  selector: '#cube-8-scale-animation :nth-child(3)',
+  property: 'fill',
+  currentColor: { red: 218, green: 220, blue: 220 },
+  redColor: { red: 219, green: 56, blue: 57 },
+  blueColor: { red: 72, green: 80, blue: 223 },
+  purpleColor: { red: 150, green: 49, blue: 213 }
+};
 
 function toWhiteColor() {
   document.querySelector(bodyElement.selector).style.backgroundColor = `rgb(255, 255, 255)`;
@@ -33,6 +55,7 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
 }
 
 function changeColorForAdvantageSection(advantageSectionScrollPosition) {
+  const redBackgroundColor = { red: 240, green: 62, blue: 62 };
   const whiteColor = { red: 255, green: 255, blue: 255 };
   const blackColor = { red: 0, green: 0, blue: 0 };
   const redLogoColor = { red: 237, green: 28, blue: 36 };
@@ -46,16 +69,82 @@ function changeColorForAdvantageSection(advantageSectionScrollPosition) {
   changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
 
   changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
+
+  changeColor(
+    cubeLeftSideElementOptions.currentColor,
+    cubeLeftSideElementOptions.redColor,
+    [cubeLeftSideElementOptions],
+    advantageSectionScrollPosition
+  );
+  changeColor(
+    cubeRightSideElementOptions.currentColor,
+    cubeRightSideElementOptions.redColor,
+    [cubeRightSideElementOptions],
+    advantageSectionScrollPosition
+  );
+
+  changeColor(
+    cubeBottomSideSideElementOptions.currentColor,
+    cubeBottomSideSideElementOptions.redColor,
+    [cubeBottomSideSideElementOptions],
+    advantageSectionScrollPosition
+  );
 }
 
 function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
+  const redBackgroundColor = { red: 240, green: 62, blue: 62 };
+  const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
+
   changeColor(redBackgroundColor, blueBackgroundColor, [bodyElement, cubeElement], expertiseSectionScrollPosition);
+
+  changeColor(
+    cubeLeftSideElementOptions.redColor,
+    cubeLeftSideElementOptions.blueColor,
+    [cubeLeftSideElementOptions],
+    expertiseSectionScrollPosition
+  );
+
+  changeColor(
+    cubeRightSideElementOptions.redColor,
+    cubeRightSideElementOptions.blueColor,
+    [cubeRightSideElementOptions],
+    expertiseSectionScrollPosition
+  );
+
+  changeColor(
+    cubeBottomSideSideElementOptions.redColor,
+    cubeBottomSideSideElementOptions.blueColor,
+    [cubeBottomSideSideElementOptions],
+    expertiseSectionScrollPosition
+  );
 }
 
 function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
+  const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
   const purpleBackgroundColor = { red: 157, green: 55, blue: 227 };
 
   changeColor(blueBackgroundColor, purpleBackgroundColor, [bodyElement, cubeElement], investmentsSectionScrollPosition);
+
+  changeColor(
+    cubeLeftSideElementOptions.blueColor,
+    cubeLeftSideElementOptions.purpleColor,
+    [cubeLeftSideElementOptions],
+    investmentsSectionScrollPosition
+  );
+
+  changeColor(
+    cubeRightSideElementOptions.blueColor,
+    cubeRightSideElementOptions.purpleColor,
+    [cubeRightSideElementOptions],
+    investmentsSectionScrollPosition
+  );
+
+  changeColor(
+    cubeBottomSideSideElementOptions.blueColor,
+    cubeBottomSideSideElementOptions.purpleColor,
+    [cubeBottomSideSideElementOptions],
+    investmentsSectionScrollPosition
+  );
 }
 
 function changeMenuItemsColorToWhite() {
