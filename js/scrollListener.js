@@ -34,5 +34,13 @@ window.addEventListener('scroll', function() {
     changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
+  if (scrollPosition > expertiseSectionScrollPosition - 20) {
+    changeActiveMenuItemToBlack();
+  }
+
+  if (scrollPosition < expertiseSectionScrollPosition - 20) {
+    changeActiveMenuItemToRed();
+  }
+
   toggleTextOfSection();
 });
