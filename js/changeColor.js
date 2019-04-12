@@ -7,17 +7,6 @@ function toWhiteColor() {
   document.querySelector(bodyElement.selector).style.backgroundColor = `rgb(255, 255, 255)`;
 }
 
-function changeSelectorElementsProperty(selectorsArr, currentColor) {
-  for (let i = 0; i < selectorsArr.length; i++) {
-    const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
-    for (let j = 0; j < selectorElements.length; j++) {
-      selectorElements[j].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
-        currentColor.blue
-      })`;
-    }
-  }
-}
-
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   const perChange = (window.pageYOffset - startPosition) / 960;
   const currentColor = { red: 0, green: 0, blue: 0 };
@@ -29,7 +18,12 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
         : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
   }
 
-  changeSelectorElementsProperty(selectorsArr, currentColor);
+  for (let i = 0; i < selectorsArr.length; i++) {
+    const selectorElement = document.querySelector(selectorsArr[i].selector);
+    selectorElement.style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
+      currentColor.blue
+    })`;
+  }
 }
 
 function changeColorForAdvantageSection(advantageSectionScrollPosition) {
@@ -37,15 +31,13 @@ function changeColorForAdvantageSection(advantageSectionScrollPosition) {
   const blackColor = { red: 0, green: 0, blue: 0 };
   const redLogoColor = { red: 237, green: 28, blue: 36 };
 
-  const menuItem = { selector: '.menu-container > .link', property: 'color' };
-  changeColor(blackColor, whiteColor, [menuItem], advantageSectionScrollPosition);
-
+  const menu = { selector: '.menu-container', property: 'color' };
   const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
   const logoElement = { selector: '.logo-container > svg', property: 'fill' };
 
   changeColor(whiteColor, redBackgroundColor, [bodyElement, cubeElement], advantageSectionScrollPosition);
 
-  changeColor(blackColor, whiteColor, [menuButtonElement], advantageSectionScrollPosition);
+  changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
 
   changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
 }
@@ -61,9 +53,7 @@ function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
 }
 
 function changeMenuItemsColorToWhite() {
-  document.querySelectorAll('.menu-container > .link').forEach(function(item) {
-    item.style.color = 'white';
-  });
+  document.querySelector('.menu-container').style.color = 'white';
   document.querySelector('.logo-container > svg').style.fill = 'white';
   document.querySelector('.menu-button > svg').style.fill = 'white';
 }

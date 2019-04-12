@@ -40,12 +40,13 @@ body {
   justify-content: space-between;
   flex-grow: 1;
   padding: 0 25% 0 17%;
+  color: #303030;
   font-family: 'montserratbold', sans-serif;
   letter-spacing: 0.088em;
 }
 
 .menu-container > .link {
-  color: #303030;
+  color: inherit;
   font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
