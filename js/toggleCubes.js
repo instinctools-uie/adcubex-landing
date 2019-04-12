@@ -1,5 +1,5 @@
 var mainCube = document.querySelector('#cube-8');
-var firstCube = document.querySelector('#cube-8-scale-animation');
+var mainCubeAnimationElement = document.querySelector('#cube-8-scale-animation');
 var advantageSection = window.document.querySelector('.advantage-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 
@@ -21,7 +21,7 @@ function toggleCube() {
   const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
 
   mainCube.style.animation = 'none';
-  firstCube.style.transform =
+  mainCubeAnimationElement.style.transform =
     'translate(-' + translateXPosition + 'px, -' + translateYPosition + 'px)' + 'scale(' + cubeScale + ')';
 }
 
