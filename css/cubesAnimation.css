@@ -2,12 +2,7 @@
   position: fixed;
   width: 800px;
   right: 0;
-  bottom: -200px;
-}
-
-.main-cube {
-  position: fixed;
-  top: 0;
+  top: -850px;
 }
 
 #cubes > g {

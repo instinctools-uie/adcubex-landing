@@ -1,31 +1,31 @@
 const cubesElements = document.querySelectorAll('#cubes > g');
 const cubesContainer = document.querySelector('.cubes-container');
-var mainCube = document.querySelector('#cube-1');
-var firstCube = document.querySelector('#cube-1-scale-animation');
+var mainCube = document.querySelector('#cube-8');
+var firstCube = document.querySelector('#cube-8-scale-animation');
 var advantageSection = window.document.querySelector('.advantage-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 
 const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
 
 function toggleCube() {
-  mainCube.style.animation = 'none';
+  const minScaleValue = 1;
+  const maxScaleValue = 9;
+  const minTransleteXPosition = 0;
+  const maxTransleteXPosition = 1500;
+  const minTransleteYPosition = 0;
+  const maxTransleteYPosition = 2500;
+
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
-  const scaleRange = 9;
-  const cubeScalePerChange = perChange * scaleRange > 1 ? perChange * scaleRange : 1;
-  const maxCubeScale = cubeScalePerChange > scaleRange ? scaleRange : cubeScalePerChange;
-  const transletXPosition = perChange > 0 ? perChange * 1500 : 0;
-  const transletYPosition = perChange > 0 ? perChange * 2500 : 0;
 
-  // if (transletXPosition > 1900 || transletYPosition > 385) {
-  //     cubesContainer.style.display = 'none';
-  // } else {
-  //     cubesContainer.style.display = 'block';
-  // }
+  const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
+
+  const transleteXPosition = getValueBetweenRange(perChange, minTransleteXPosition, maxTransleteXPosition);
+  const transleteYPosition = getValueBetweenRange(perChange, minTransleteYPosition, maxTransleteYPosition);
+
+  mainCube.style.animation = 'none';
   firstCube.style.transform =
-    'translate(-' + transletXPosition + 'px, -' + transletYPosition + 'px)' + 'scale(' + maxCubeScale + ')';
+    'translate(-' + transleteXPosition + 'px, -' + transleteYPosition + 'px)' + 'scale(' + cubeScale + ')';
 }
-
-toggleCube();
 
 function toggleCubes() {
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
@@ -42,5 +42,17 @@ function toggleCubes() {
       cubesTranslateElements[i].style.display = 'block';
       cubesTranslateElements[i].style.transform = 'translate(0px, -' + transletYPosition + 'px)';
     }
+  }
+}
+
+function getValueBetweenRange(perChange, minValue, maxValue) {
+  const value = perChange * maxValue;
+
+  if (value < minValue) {
+    return minValue;
+  } else if (value > maxValue) {
+    return maxValue;
+  } else {
+    return value;
   }
 }

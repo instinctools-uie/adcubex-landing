@@ -5,7 +5,11 @@ var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
 var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', startProject);
+
+window.addEventListener('load', startProject);
+
+function startProject() {
   const scrollPosition = window.pageYOffset;
 
   if (scrollPosition < advantageSectionScrollPosition) {
@@ -18,12 +22,6 @@ window.addEventListener('scroll', function() {
 
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
     changeColorForAdvantageSection(advantageSectionScrollPosition);
-    toggleCube();
-    toggleCubes();
-  }
-
-  if (scrollPosition > expertiseSectionScrollPosition) {
-    hideCubes();
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
@@ -34,5 +32,7 @@ window.addEventListener('scroll', function() {
     changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
+  toggleCube();
+  toggleCubes();
   toggleTextOfSection();
-});
+}
