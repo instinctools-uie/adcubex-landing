@@ -7,6 +7,17 @@ function toWhiteColor() {
   document.querySelector(bodyElement.selector).style.backgroundColor = `rgb(255, 255, 255)`;
 }
 
+function changeSelectorElementsProperty(selectorsArr, currentColor) {
+  for (let i = 0; i < selectorsArr.length; i++) {
+    const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
+    for (let j = 0; j < selectorElements.length; j++) {
+      selectorElements[j].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
+        currentColor.blue
+      })`;
+    }
+  }
+}
+
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   const perChange = (window.pageYOffset - startPosition) / 960;
   const currentColor = { red: 0, green: 0, blue: 0 };
@@ -18,12 +29,7 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
         : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
   }
 
-  for (let i = 0; i < selectorsArr.length; i++) {
-    const selectorElement = document.querySelector(selectorsArr[i].selector);
-    selectorElement.style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
-      currentColor.blue
-    })`;
-  }
+  changeSelectorElementsProperty(selectorsArr, currentColor);
 }
 
 function changeColorForAdvantageSection(advantageSectionScrollPosition) {
