@@ -1,179 +1,164 @@
-const bodyElement = { selector: 'body', property: 'backgroundColor' };
-const cubeElement = { selector: '.cube', property: 'fill' };
-const cubeLeftSideElementOptions = {
-  selector: '#main-cube-scale-animation :nth-child(1)',
-  property: 'fill',
-  currentColor: { red: 246, green: 246, blue: 247 },
-  redColor: { red: 240, green: 62, blue: 62 },
-  blueColor: { red: 75, green: 84, blue: 242 },
-  purpleColor: { red: 157, green: 55, blue: 227 }
-};
-const cubeRightSideElementOptions = {
-  selector: '#main-cube-scale-animation :nth-child(2)',
-  property: 'fill',
-  currentColor: { red: 232, green: 232, blue: 232 },
-  redColor: { red: 191, green: 49, blue: 48 },
-  blueColor: { red: 67, green: 74, blue: 190 },
-  purpleColor: { red: 147, green: 45, blue: 191 }
-};
-const cubeBottomSideSideElementOptions = {
-  selector: '#main-cube-scale-animation :nth-child(3)',
-  property: 'fill',
-  currentColor: { red: 218, green: 220, blue: 220 },
-  redColor: { red: 219, green: 56, blue: 57 },
-  blueColor: { red: 72, green: 80, blue: 223 },
-  purpleColor: { red: 150, green: 49, blue: 213 }
-};
+(function(AdCubex) {
+  AdCubex.changeColorForAdvantageSection = function(advantageSectionScrollPosition) {
+    const whiteColor = { red: 255, green: 255, blue: 255 };
+    const blackColor = { red: 0, green: 0, blue: 0 };
+    const redLogoColor = { red: 237, green: 28, blue: 36 };
 
-const redBackgroundColor = { red: 240, green: 62, blue: 62 };
-const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
+    const menu = { selector: '.menu-container', property: 'color' };
+    const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
+    const logoElement = { selector: '.logo-container > svg', property: 'fill' };
 
-function changeSelectorElementsProperty(selectorsArr, currentColor) {
-  for (let i = 0; i < selectorsArr.length; i++) {
-    const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
-    for (let j = 0; j < selectorElements.length; j++) {
-      selectorElements[j].style[selectorsArr[i].property] =
-        'rgb(' + currentColor.red + ', ' + currentColor.green + ', ' + currentColor.blue + ')';
+    changeColor(
+      whiteColor,
+      Constants.redBackgroundColor,
+      [Constants.bodyElement, Constants.cubeElement],
+      advantageSectionScrollPosition
+    );
+
+    changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
+
+    changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
+
+    changeColor(
+      Constants.cubeLeftSideElementOptions.currentColor,
+      Constants.cubeLeftSideElementOptions.redColor,
+      [Constants.cubeLeftSideElementOptions],
+      advantageSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeRightSideElementOptions.currentColor,
+      Constants.cubeRightSideElementOptions.redColor,
+      [Constants.cubeRightSideElementOptions],
+      advantageSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeBottomSideSideElementOptions.currentColor,
+      Constants.cubeBottomSideSideElementOptions.redColor,
+      [Constants.cubeBottomSideSideElementOptions],
+      advantageSectionScrollPosition
+    );
+  };
+
+  AdCubex.changeColorForExpertiseSection = function(expertiseSectionScrollPosition) {
+    changeColor(
+      Constants.redBackgroundColor,
+      Constants.blueBackgroundColor,
+      [Constants.bodyElement, Constants.cubeElement],
+      expertiseSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeLeftSideElementOptions.redColor,
+      Constants.cubeLeftSideElementOptions.blueColor,
+      [Constants.cubeLeftSideElementOptions],
+      expertiseSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeRightSideElementOptions.redColor,
+      Constants.cubeRightSideElementOptions.blueColor,
+      [Constants.cubeRightSideElementOptions],
+      expertiseSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeBottomSideSideElementOptions.redColor,
+      Constants.cubeBottomSideSideElementOptions.blueColor,
+      [Constants.cubeBottomSideSideElementOptions],
+      expertiseSectionScrollPosition
+    );
+  };
+
+  AdCubex.changeColorForInvestmentsSection = function(investmentsSectionScrollPosition) {
+    changeColor(
+      Constants.blueBackgroundColor,
+      Constants.purpleBackgroundColor,
+      [Constants.bodyElement, Constants.cubeElement],
+      investmentsSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeLeftSideElementOptions.blueColor,
+      Constants.cubeLeftSideElementOptions.purpleColor,
+      [Constants.cubeLeftSideElementOptions],
+      investmentsSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeRightSideElementOptions.blueColor,
+      Constants.cubeRightSideElementOptions.purpleColor,
+      [Constants.cubeRightSideElementOptions],
+      investmentsSectionScrollPosition
+    );
+
+    changeColor(
+      Constants.cubeBottomSideSideElementOptions.blueColor,
+      Constants.cubeBottomSideSideElementOptions.purpleColor,
+      [Constants.cubeBottomSideSideElementOptions],
+      investmentsSectionScrollPosition
+    );
+  };
+
+  AdCubex.changeMenuItemsColorToWhite = function() {
+    document.querySelector('.menu-container').style.color = 'white';
+    document.querySelector('.logo-container > svg').style.fill = 'white';
+    document.querySelector('.menu-button > svg').style.fill = 'white';
+  };
+
+  AdCubex.changeBackgroundColorToWhite = function() {
+    document.querySelector(Constants.bodyElement.selector).style.backgroundColor = 'rgb(255, 255, 255)';
+  };
+
+  AdCubex.changeCubeColorToDefault = function() {
+    document.querySelector(Constants.cubeLeftSideElementOptions.selector).style.fill =
+      'rgb(' +
+      Constants.cubeLeftSideElementOptions.currentColor.red +
+      ', ' +
+      Constants.cubeLeftSideElementOptions.currentColor.green +
+      ', ' +
+      Constants.cubeLeftSideElementOptions.currentColor.blue +
+      ')';
+    document.querySelector(Constants.cubeRightSideElementOptions.selector).style.fill =
+      'rgb(' +
+      Constants.cubeRightSideElementOptions.currentColor.red +
+      ', ' +
+      Constants.cubeRightSideElementOptions.currentColor.green +
+      ', ' +
+      Constants.cubeRightSideElementOptions.currentColor.blue +
+      ')';
+    document.querySelector(Constants.cubeBottomSideSideElementOptions.selector).style.fill =
+      'rgb(' +
+      Constants.cubeBottomSideSideElementOptions.currentColor.red +
+      ', ' +
+      Constants.cubeBottomSideSideElementOptions.currentColor.green +
+      ', ' +
+      Constants.cubeBottomSideSideElementOptions.currentColor.blue +
+      ')';
+  };
+
+  function changeSelectorElementsProperty(selectorsArr, currentColor) {
+    for (let i = 0; i < selectorsArr.length; i++) {
+      const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
+      for (let j = 0; j < selectorElements.length; j++) {
+        selectorElements[j].style[selectorsArr[i].property] =
+          'rgb(' + currentColor.red + ', ' + currentColor.green + ', ' + currentColor.blue + ')';
+      }
     }
   }
-}
 
-function changeColor(fromColor, toColor, selectorsArr, startPosition) {
-  const perChange = (window.pageYOffset - startPosition) / 960;
-  const currentColor = { red: 0, green: 0, blue: 0 };
+  function changeColor(fromColor, toColor, selectorsArr, startPosition) {
+    const perChange = (window.pageYOffset - startPosition) / 960;
+    const currentColor = { red: 0, green: 0, blue: 0 };
 
-  for (let key in currentColor) {
-    currentColor[key] =
-      fromColor[key] > toColor[key]
-        ? Math.round(fromColor[key] - (fromColor[key] - toColor[key]) * perChange)
-        : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
+    for (let key in currentColor) {
+      currentColor[key] =
+        fromColor[key] > toColor[key]
+          ? Math.round(fromColor[key] - (fromColor[key] - toColor[key]) * perChange)
+          : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
+    }
+
+    changeSelectorElementsProperty(selectorsArr, currentColor);
   }
-
-  changeSelectorElementsProperty(selectorsArr, currentColor);
-}
-
-function changeColorForAdvantageSection(advantageSectionScrollPosition) {
-  const whiteColor = { red: 255, green: 255, blue: 255 };
-  const blackColor = { red: 0, green: 0, blue: 0 };
-  const redLogoColor = { red: 237, green: 28, blue: 36 };
-
-  const menu = { selector: '.menu-container', property: 'color' };
-  const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
-  const logoElement = { selector: '.logo-container > svg', property: 'fill' };
-
-  changeColor(whiteColor, redBackgroundColor, [bodyElement, cubeElement], advantageSectionScrollPosition);
-
-  changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
-
-  changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
-
-  changeColor(
-    cubeLeftSideElementOptions.currentColor,
-    cubeLeftSideElementOptions.redColor,
-    [cubeLeftSideElementOptions],
-    advantageSectionScrollPosition
-  );
-
-  changeColor(
-    cubeRightSideElementOptions.currentColor,
-    cubeRightSideElementOptions.redColor,
-    [cubeRightSideElementOptions],
-    advantageSectionScrollPosition
-  );
-
-  changeColor(
-    cubeBottomSideSideElementOptions.currentColor,
-    cubeBottomSideSideElementOptions.redColor,
-    [cubeBottomSideSideElementOptions],
-    advantageSectionScrollPosition
-  );
-}
-
-function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
-  changeColor(redBackgroundColor, blueBackgroundColor, [bodyElement, cubeElement], expertiseSectionScrollPosition);
-
-  changeColor(
-    cubeLeftSideElementOptions.redColor,
-    cubeLeftSideElementOptions.blueColor,
-    [cubeLeftSideElementOptions],
-    expertiseSectionScrollPosition
-  );
-
-  changeColor(
-    cubeRightSideElementOptions.redColor,
-    cubeRightSideElementOptions.blueColor,
-    [cubeRightSideElementOptions],
-    expertiseSectionScrollPosition
-  );
-
-  changeColor(
-    cubeBottomSideSideElementOptions.redColor,
-    cubeBottomSideSideElementOptions.blueColor,
-    [cubeBottomSideSideElementOptions],
-    expertiseSectionScrollPosition
-  );
-}
-
-function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
-  const purpleBackgroundColor = { red: 157, green: 55, blue: 227 };
-
-  changeColor(blueBackgroundColor, purpleBackgroundColor, [bodyElement, cubeElement], investmentsSectionScrollPosition);
-
-  changeColor(
-    cubeLeftSideElementOptions.blueColor,
-    cubeLeftSideElementOptions.purpleColor,
-    [cubeLeftSideElementOptions],
-    investmentsSectionScrollPosition
-  );
-
-  changeColor(
-    cubeRightSideElementOptions.blueColor,
-    cubeRightSideElementOptions.purpleColor,
-    [cubeRightSideElementOptions],
-    investmentsSectionScrollPosition
-  );
-
-  changeColor(
-    cubeBottomSideSideElementOptions.blueColor,
-    cubeBottomSideSideElementOptions.purpleColor,
-    [cubeBottomSideSideElementOptions],
-    investmentsSectionScrollPosition
-  );
-}
-
-function changeMenuItemsColorToWhite() {
-  document.querySelector('.menu-container').style.color = 'white';
-  document.querySelector('.logo-container > svg').style.fill = 'white';
-  document.querySelector('.menu-button > svg').style.fill = 'white';
-}
-
-function changeBackgroundColorToWhite() {
-  document.querySelector(bodyElement.selector).style.backgroundColor = 'rgb(255, 255, 255)';
-}
-
-function changeCubeColorToDefault() {
-  document.querySelector(cubeLeftSideElementOptions.selector).style.fill =
-    'rgb(' +
-    cubeLeftSideElementOptions.currentColor.red +
-    ', ' +
-    cubeLeftSideElementOptions.currentColor.green +
-    ', ' +
-    cubeLeftSideElementOptions.currentColor.blue +
-    ')';
-  document.querySelector(cubeRightSideElementOptions.selector).style.fill =
-    'rgb(' +
-    cubeRightSideElementOptions.currentColor.red +
-    ', ' +
-    cubeRightSideElementOptions.currentColor.green +
-    ', ' +
-    cubeRightSideElementOptions.currentColor.blue +
-    ')';
-  document.querySelector(cubeBottomSideSideElementOptions.selector).style.fill =
-    'rgb(' +
-    cubeBottomSideSideElementOptions.currentColor.red +
-    ', ' +
-    cubeBottomSideSideElementOptions.currentColor.green +
-    ', ' +
-    cubeBottomSideSideElementOptions.currentColor.blue +
-    ')';
-}
+})(AdCubex);
