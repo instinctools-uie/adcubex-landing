@@ -123,8 +123,7 @@ h1 {
   color: white;
 }
 
-.section-container > a,
-.section-content > a {
+.section-container > a {
   display: inline-flex;
   align-items: center;
   margin: 3em 0 0 4.5em;
@@ -133,8 +132,7 @@ h1 {
   text-decoration: none;
 }
 
-.section-container > h1,
-.section-content > h1 {
+.section-container > h1 {
   font-style: normal;
   font-weight: 800;
   font-size: 6.5em;
@@ -145,8 +143,7 @@ h1 {
   text-transform: none;
 }
 
-.section-container > p,
-.section-content > p {
+.section-container > p {
   width: 43rem;
   line-height: 1.5em;
   font-size: 1.5em;
@@ -154,27 +151,27 @@ h1 {
 }
 
 .section-bg::before {
-	position: absolute;
-	top: -87rem;
-	left: 20rem;
-	width: 0;
-	height: 0;
-	content: attr(data-bg-text);
-	color: #303030;
-	font-size: 155rem;
-	font-family: 'montserrat_extraboldregular', sans-serif;
-	z-index: -1;
-	transform: rotate(90deg);
+  position: absolute;
+  top: -87rem;
+  left: 20rem;
+  width: 0;
+  height: 0;
+  content: attr(data-bg-text);
+  color: #303030;
+  font-size: 155rem;
+  font-family: 'montserrat_extraboldregular', sans-serif;
+  z-index: -1;
+  transform: rotate(90deg);
 }
 
 .section-bg {
-	position: relative;
-	opacity: 0;
+  position: relative;
+  opacity: 0;
 }
 
 .section-container--active + .section-bg {
-	opacity: 1;
-	transition: opacity 1.5s;
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 .expertise-section > .section-container > p.expertise-section-background-inscription {
