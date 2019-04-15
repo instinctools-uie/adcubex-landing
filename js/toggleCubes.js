@@ -1,8 +1,8 @@
-var mainCube = document.querySelector('#main-cube');
-var mainCubeAnimationElement = document.querySelector('#main-cube-scale-animation');
 var advantageSection = window.document.querySelector('.advantage-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 
+const mainCube = document.querySelector('#main-cube');
+const mainCubeAnimationElement = document.querySelector('#main-cube-scale-animation');
 const cubes = document.querySelectorAll('#cubes > g');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
 
@@ -20,9 +20,15 @@ function toggleCube() {
 
   const translateXPosition = getValueBetweenRange(perChange, minTranslateXPosition, maxTranslateXPosition);
   const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
-  const translateXPositionAfterScale = cubeScale > 1 ? translateXPosition : 0;
+  const isCubeScaled = cubeScale > minScaleValue;
+  const translateXPositionAfterScale = isCubeScaled ? translateXPosition : 0;
 
-  mainCube.style.animation = 'none';
+  if (isCubeScaled) {
+    mainCube.style.animation = 'none';
+  } else {
+    mainCube.style.animation = 'main-cube 1.6s infinite alternate';
+  }
+
   mainCubeAnimationElement.style.transform =
     'translate(-' + translateXPositionAfterScale + 'px, -' + translateYPosition + 'px)' + 'scale(' + cubeScale + ')';
 }
