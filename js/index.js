@@ -43,5 +43,5 @@ function initProject() {
 
   toggleCube();
   toggleCubes();
-  toggleTextOfSection();
+  //toggleTextOfSection();
 }
