@@ -5,11 +5,11 @@ var advantageSectionScrollPosition = advantageSection.offsetTop;
 var expertiseSectionScrollPosition = expertiseSection.offsetTop;
 var investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-window.addEventListener('scroll', startProject);
+window.addEventListener('scroll', initProject);
 
-window.addEventListener('load', startProject);
+window.addEventListener('load', initProject);
 
-function startProject() {
+function initProject() {
   const scrollPosition = window.pageYOffset;
 
   if (scrollPosition < advantageSectionScrollPosition) {
