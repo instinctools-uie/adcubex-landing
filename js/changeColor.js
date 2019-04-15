@@ -1,5 +1,5 @@
-(function(AdCubex) {
-  AdCubex.changeColorForAdvantageSection = function(advantageSectionScrollPosition) {
+(function(window) {
+  window.AdCubex.changeColorForAdvantageSection = function(advantageSectionScrollPosition) {
     const whiteColor = { red: 255, green: 255, blue: 255 };
     const blackColor = { red: 0, green: 0, blue: 0 };
     const redLogoColor = { red: 237, green: 28, blue: 36 };
@@ -10,8 +10,8 @@
 
     changeColor(
       whiteColor,
-      AdCubex.constants.redBackgroundColor,
-      [AdCubex.constants.bodyElement, AdCubex.constants.cubeElement],
+      window.AdCubex.constants.RED_BACKGROUND_COLOR,
+      [window.AdCubex.constants.BODY_ELEMENT_OPTIONS, window.AdCubex.constants.CUBE_ELEMENT_OPTIONS],
       advantageSectionScrollPosition
     );
 
@@ -20,121 +20,121 @@
     changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
 
     changeColor(
-      AdCubex.constants.cubeLeftSideElementOptions.currentColor,
-      AdCubex.constants.cubeLeftSideElementOptions.redColor,
-      [AdCubex.constants.cubeLeftSideElementOptions],
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor,
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
+      [window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
       advantageSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeRightSideElementOptions.currentColor,
-      AdCubex.constants.cubeRightSideElementOptions.redColor,
-      [AdCubex.constants.cubeRightSideElementOptions],
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor,
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
+      [window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
       advantageSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeBottomSideSideElementOptions.currentColor,
-      AdCubex.constants.cubeBottomSideSideElementOptions.redColor,
-      [AdCubex.constants.cubeBottomSideSideElementOptions],
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor,
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
+      [window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
       advantageSectionScrollPosition
     );
   };
 
-  AdCubex.changeColorForExpertiseSection = function(expertiseSectionScrollPosition) {
+  window.AdCubex.changeColorForExpertiseSection = function(expertiseSectionScrollPosition) {
     changeColor(
-      AdCubex.constants.redBackgroundColor,
-      AdCubex.constants.blueBackgroundColor,
-      [AdCubex.constants.bodyElement, AdCubex.constants.cubeElement],
+      window.AdCubex.constants.RED_BACKGROUND_COLOR,
+      window.AdCubex.constants.BLUE_BACKGROUND_COLOR,
+      [window.AdCubex.constants.BODY_ELEMENT_OPTIONS, window.AdCubex.constants.CUBE_ELEMENT_OPTIONS],
       expertiseSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeLeftSideElementOptions.redColor,
-      AdCubex.constants.cubeLeftSideElementOptions.blueColor,
-      [AdCubex.constants.cubeLeftSideElementOptions],
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
+      [window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
       expertiseSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeRightSideElementOptions.redColor,
-      AdCubex.constants.cubeRightSideElementOptions.blueColor,
-      [AdCubex.constants.cubeRightSideElementOptions],
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.blueColor,
+      [window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
       expertiseSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeBottomSideSideElementOptions.redColor,
-      AdCubex.constants.cubeBottomSideSideElementOptions.blueColor,
-      [AdCubex.constants.cubeBottomSideSideElementOptions],
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.blueColor,
+      [window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
       expertiseSectionScrollPosition
     );
   };
 
-  AdCubex.changeColorForInvestmentsSection = function(investmentsSectionScrollPosition) {
+  window.AdCubex.changeColorForInvestmentsSection = function(investmentsSectionScrollPosition) {
     changeColor(
-      AdCubex.constants.blueBackgroundColor,
-      AdCubex.constants.purpleBackgroundColor,
-      [AdCubex.constants.bodyElement, AdCubex.constants.cubeElement],
+      window.AdCubex.constants.BLUE_BACKGROUND_COLOR,
+      window.AdCubex.constants.PURPLE_BACKGROUND_COLOR,
+      [window.AdCubex.constants.BODY_ELEMENT_OPTIONS, window.AdCubex.constants.CUBE_ELEMENT_OPTIONS],
       investmentsSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeLeftSideElementOptions.blueColor,
-      AdCubex.constants.cubeLeftSideElementOptions.purpleColor,
-      [AdCubex.constants.cubeLeftSideElementOptions],
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
+      [window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
       investmentsSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeRightSideElementOptions.blueColor,
-      AdCubex.constants.cubeRightSideElementOptions.purpleColor,
-      [AdCubex.constants.cubeRightSideElementOptions],
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.blueColor,
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.purpleColor,
+      [window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
       investmentsSectionScrollPosition
     );
 
     changeColor(
-      AdCubex.constants.cubeBottomSideSideElementOptions.blueColor,
-      AdCubex.constants.cubeBottomSideSideElementOptions.purpleColor,
-      [AdCubex.constants.cubeBottomSideSideElementOptions],
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.blueColor,
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.purpleColor,
+      [window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
       investmentsSectionScrollPosition
     );
   };
 
-  AdCubex.changeMenuItemsColorToWhite = function() {
+  window.AdCubex.changeMenuItemsColorToWhite = function() {
     document.querySelector('.menu-container').style.color = 'white';
     document.querySelector('.logo-container > svg').style.fill = 'white';
     document.querySelector('.menu-button > svg').style.fill = 'white';
   };
 
-  AdCubex.changeBackgroundColorToWhite = function() {
-    document.querySelector(AdCubex.constants.bodyElement.selector).style.backgroundColor = 'rgb(255, 255, 255)';
+  window.AdCubex.changeBackgroundColorToWhite = function() {
+    document.querySelector(window.AdCubex.constants.BODY_ELEMENT_OPTIONS.selector).style.backgroundColor = 'white';
   };
 
-  AdCubex.changeCubeColorToDefault = function() {
-    document.querySelector(AdCubex.constants.cubeLeftSideElementOptions.selector).style.fill =
+  window.AdCubex.changeCubeColorToDefault = function() {
+    document.querySelector(window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.selector).style.fill =
       'rgb(' +
-      AdCubex.constants.cubeLeftSideElementOptions.currentColor.red +
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor.red +
       ', ' +
-      AdCubex.constants.cubeLeftSideElementOptions.currentColor.green +
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor.green +
       ', ' +
-      AdCubex.constants.cubeLeftSideElementOptions.currentColor.blue +
+      window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor.blue +
       ')';
-    document.querySelector(AdCubex.constants.cubeRightSideElementOptions.selector).style.fill =
+    document.querySelector(window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.selector).style.fill =
       'rgb(' +
-      AdCubex.constants.cubeRightSideElementOptions.currentColor.red +
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor.red +
       ', ' +
-      AdCubex.constants.cubeRightSideElementOptions.currentColor.green +
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor.green +
       ', ' +
-      AdCubex.constants.cubeRightSideElementOptions.currentColor.blue +
+      window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor.blue +
       ')';
-    document.querySelector(AdCubex.constants.cubeBottomSideSideElementOptions.selector).style.fill =
+    document.querySelector(window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.selector).style.fill =
       'rgb(' +
-      AdCubex.constants.cubeBottomSideSideElementOptions.currentColor.red +
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor.red +
       ', ' +
-      AdCubex.constants.cubeBottomSideSideElementOptions.currentColor.green +
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor.green +
       ', ' +
-      AdCubex.constants.cubeBottomSideSideElementOptions.currentColor.blue +
+      window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor.blue +
       ')';
   };
 
@@ -149,7 +149,7 @@
   }
 
   function changeColor(fromColor, toColor, selectorsArr, startPosition) {
-    const perChange = (window.pageYOffset - startPosition) / 960;
+    const perChange = (window.pageYOffset - startPosition) / window.AdCubex.constants.RATE_CHANGE_SCROLL;
     const currentColor = { red: 0, green: 0, blue: 0 };
 
     for (let key in currentColor) {
@@ -161,4 +161,4 @@
 
     changeSelectorElementsProperty(selectorsArr, currentColor);
   }
-})(AdCubex);
+})(window);

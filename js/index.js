@@ -1,4 +1,4 @@
-(function(AdCubex) {
+(function(window) {
   const advantageSection = window.document.querySelector('.advantage-section');
   const expertiseSection = window.document.querySelector('.expertise-section');
   const investmentsSection = window.document.querySelector('.investments-section');
@@ -14,36 +14,38 @@
     const scrollPosition = window.pageYOffset;
 
     if (scrollPosition < advantageSectionScrollPosition) {
-      AdCubex.changeBackgroundColorToWhite();
-      AdCubex.changeCubeColorToDefault();
+      window.AdCubex.changeBackgroundColorToWhite();
+      window.AdCubex.changeCubeColorToDefault();
     }
 
     if (scrollPosition > expertiseSectionScrollPosition) {
-      AdCubex.changeMenuItemsColorToWhite();
+      window.AdCubex.changeMenuItemsColorToWhite();
     }
 
     if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-      AdCubex.changeColorForAdvantageSection(advantageSectionScrollPosition);
+      window.AdCubex.changeColorForAdvantageSection(advantageSectionScrollPosition);
     }
 
     if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-      AdCubex.changeColorForExpertiseSection(expertiseSectionScrollPosition);
+      window.AdCubex.changeColorForExpertiseSection(expertiseSectionScrollPosition);
     }
 
     if (scrollPosition > investmentsSectionScrollPosition) {
-      AdCubex.changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+      window.AdCubex.changeColorForInvestmentsSection(investmentsSectionScrollPosition);
     }
 
+    //TODO: Find solution for remove "20"
     if (scrollPosition > expertiseSectionScrollPosition - 20) {
-      AdCubex.changeActiveMenuItemToBlack();
+      window.AdCubex.changeActiveMenuItemToBlack();
     }
 
+    //TODO: Find solution for remove "20"
     if (scrollPosition < expertiseSectionScrollPosition - 20) {
-      AdCubex.changeActiveMenuItemToRed();
+      window.AdCubex.changeActiveMenuItemToRed();
     }
 
-    AdCubex.toggleCube();
-    AdCubex.toggleCubes();
-    AdCubex.toggleTextOfSection();
+    window.AdCubex.toggleCube();
+    window.AdCubex.toggleCubes();
+    window.AdCubex.toggleTextOfSection();
   }
-})(AdCubex);
+})(window);

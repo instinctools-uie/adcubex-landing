@@ -1,5 +1,3 @@
-const AdCubex = (function() {
-  const variables = {};
-
-  return variables;
-})();
+(function(window) {
+  window.AdCubex = {};
+})(window);

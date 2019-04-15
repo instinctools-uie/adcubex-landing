@@ -1,4 +1,4 @@
-(function(AdCubex) {
+(function(window) {
   const menuContainer = document.querySelector('.menu-container');
   const items = document.querySelectorAll('.menu-container > a');
 
@@ -34,7 +34,7 @@
     }
   });
 
-  AdCubex.changeActiveMenuItemToBlack = function() {
+  window.AdCubex.changeActiveMenuItemToBlack = function() {
     for (let i = 0; i < items.length; i++) {
       const isActiveRedLink = items[i].classList.contains('link_red--active');
       if (isActiveRedLink) {
@@ -46,7 +46,7 @@
     }
   };
 
-  AdCubex.changeActiveMenuItemToRed = function() {
+  window.AdCubex.changeActiveMenuItemToRed = function() {
     for (let i = 0; i < items.length; i++) {
       const isActiveBlackLink = items[i].classList.contains('link_black--active');
       if (isActiveBlackLink) {
@@ -57,4 +57,4 @@
       items[i].classList.add('link_red');
     }
   };
-})(AdCubex);
+})(window);

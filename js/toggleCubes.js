@@ -1,4 +1,4 @@
-(function(AdCubex) {
+(function(window) {
   const advantageSection = window.document.querySelector('.advantage-section');
   const advantageSectionScrollPosition = advantageSection.offsetTop;
   const mainCube = document.querySelector('#main-cube');
@@ -6,7 +6,7 @@
   const cubes = document.querySelectorAll('#cubes > g');
   const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
 
-  AdCubex.toggleCube = function() {
+  window.AdCubex.toggleCube = function() {
     const minScaleValue = 1;
     const maxScaleValue = 8;
     const minTranslateXPosition = 0;
@@ -14,14 +14,15 @@
     const minTranslateYPosition = 0;
     const maxTranslateYPosition = 2500;
 
-    const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
+    const perChange =
+      (window.pageYOffset - advantageSectionScrollPosition) / window.AdCubex.constants.RATE_CHANGE_SCROLL;
 
     const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
 
     const translateXPosition = getValueBetweenRange(perChange, minTranslateXPosition, maxTranslateXPosition);
     const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
     const isCubeScaled = cubeScale > minScaleValue;
-    const translateXPositionAfterScale = isCubeScaled ? translateXPosition : 0;
+    const translateXPositionAfterScale = isCubeScaled ? translateXPosition : minTranslateXPosition;
 
     if (isCubeScaled) {
       mainCube.style.animation = 'none';
@@ -33,10 +34,11 @@
       'translate(-' + translateXPositionAfterScale + 'px, -' + translateYPosition + 'px)' + 'scale(' + cubeScale + ')';
   };
 
-  AdCubex.toggleCubes = function() {
+  window.AdCubex.toggleCubes = function() {
     const minTranslateYPosition = 0;
     const maxTranslateYPosition = 5000;
-    const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
+    const perChange =
+      (window.pageYOffset - advantageSectionScrollPosition) / window.AdCubex.constants.RATE_CHANGE_SCROLL;
 
     const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
     const isCubesYPositionMoreThanMaxValue = translateYPosition >= maxTranslateYPosition;
@@ -73,4 +75,4 @@
       return value;
     }
   }
-})(AdCubex);
+})(window);
