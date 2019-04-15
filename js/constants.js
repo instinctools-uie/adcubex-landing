@@ -1,5 +1,5 @@
-const Constants = (function() {
-  const constants = {
+(function(AdCubex) {
+  AdCubex.constants = {
     bodyElement: { selector: 'body', property: 'backgroundColor' },
     cubeElement: { selector: '.cube', property: 'fill' },
     cubeLeftSideElementOptions: {
@@ -31,6 +31,4 @@ const Constants = (function() {
     blueBackgroundColor: { red: 75, green: 84, blue: 242 },
     purpleBackgroundColor: { red: 157, green: 55, blue: 227 }
   };
-
-  return constants;
-})();
+})(AdCubex);
