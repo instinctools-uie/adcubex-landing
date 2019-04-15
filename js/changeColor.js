@@ -25,6 +25,9 @@ const cubeBottomSideSideElementOptions = {
   purpleColor: { red: 150, green: 49, blue: 213 }
 };
 
+const redBackgroundColor = { red: 240, green: 62, blue: 62 };
+const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
+
 function changeSelectorElementsProperty(selectorsArr, currentColor) {
   for (let i = 0; i < selectorsArr.length; i++) {
     const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
@@ -50,7 +53,6 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
 }
 
 function changeColorForAdvantageSection(advantageSectionScrollPosition) {
-  const redBackgroundColor = { red: 240, green: 62, blue: 62 };
   const whiteColor = { red: 255, green: 255, blue: 255 };
   const blackColor = { red: 0, green: 0, blue: 0 };
   const redLogoColor = { red: 237, green: 28, blue: 36 };
@@ -88,9 +90,6 @@ function changeColorForAdvantageSection(advantageSectionScrollPosition) {
 }
 
 function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
-  const redBackgroundColor = { red: 240, green: 62, blue: 62 };
-  const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
-
   changeColor(redBackgroundColor, blueBackgroundColor, [bodyElement, cubeElement], expertiseSectionScrollPosition);
 
   changeColor(
@@ -116,7 +115,6 @@ function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
 }
 
 function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
-  const blueBackgroundColor = { red: 75, green: 84, blue: 242 };
   const purpleBackgroundColor = { red: 157, green: 55, blue: 227 };
 
   changeColor(blueBackgroundColor, purpleBackgroundColor, [bodyElement, cubeElement], investmentsSectionScrollPosition);
