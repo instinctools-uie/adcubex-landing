@@ -78,11 +78,11 @@ body {
 .expertise-section,
 .investments-section,
 .effectiveness-section {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60em;
+  overflow: hidden;
 }
 
 h1 {
@@ -90,16 +90,14 @@ h1 {
 }
 
 .section-container {
-  position: relative;
+  z-index: 1;
+  width: 65em;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: opacity 0.5s, transform 0.5s;
 }
 
-.section-content {
-  /*opacity: 0;*/
-  transition: opacity 0.5s;
-}
-
-/*.section-container--active,*/
-.section-container--active > div {
+.section-container--active {
   opacity: 1;
   transform: translateX(0);
 }
@@ -145,19 +143,28 @@ h1 {
   font-style: normal;
 }
 
-.section-content::after {
+.section-bg::before {
   position: absolute;
-  top: -55rem;
-  left: 116rem;
+  top: -87rem;
+  left: 20rem;
   width: 0;
   height: 0;
   content: attr(data-bg-text);
   color: #303030;
-  font-size: 150rem;
+  font-size: 155rem;
   font-family: 'montserrat_extraboldregular', sans-serif;
   z-index: -1;
   transform: rotate(90deg);
-  transition: opacity 0.5s;
+}
+
+.section-bg {
+  position: relative;
+  opacity: 0;
+}
+
+.section-container--active + .section-bg {
+  opacity: 1;
+  transition: opacity 1.5s;
 }
 
 footer {
