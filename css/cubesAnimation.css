@@ -1,5 +1,6 @@
 .cubes-container {
   position: fixed;
+  z-index: -1;
   width: 800px;
   right: 0;
   top: -850px;

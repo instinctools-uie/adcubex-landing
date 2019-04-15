@@ -19,10 +19,11 @@ function toggleCube() {
 
   const translateXPosition = getValueBetweenRange(perChange, minTranslateXPosition, maxTranslateXPosition);
   const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
+  const translateXPositionAfterScale = cubeScale > 1 ? translateXPosition : 0;
 
   mainCube.style.animation = 'none';
   mainCubeAnimationElement.style.transform =
-    'translate(-' + translateXPosition + 'px, -' + translateYPosition + 'px)' + 'scale(' + cubeScale + ')';
+    'translate(-' + translateXPositionAfterScale + 'px, -' + translateYPosition + 'px)' + 'scale(' + cubeScale + ')';
 }
 
 function toggleCubes() {
