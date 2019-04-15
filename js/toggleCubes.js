@@ -1,8 +1,9 @@
-var mainCube = document.querySelector('#cube-8');
-var mainCubeAnimationElement = document.querySelector('#cube-8-scale-animation');
+var mainCube = document.querySelector('#main-cube');
+var mainCubeAnimationElement = document.querySelector('#main-cube-scale-animation');
 var advantageSection = window.document.querySelector('.advantage-section');
 var advantageSectionScrollPosition = advantageSection.offsetTop;
 
+const cubes = document.querySelectorAll('#cubes > g');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
 
 function toggleCube() {
@@ -32,19 +33,26 @@ function toggleCubes() {
   const perChange = (window.pageYOffset - advantageSectionScrollPosition) / 960;
 
   const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
+  const isCubesYPositionMoreThanMaxValue = translateYPosition >= maxTranslateYPosition;
 
-  for (let i = 0; i < cubesTranslateElements.length; i++) {
-    const isElementsCloseToMaxValue = translateYPosition > maxTranslateYPosition - 300;
-    const cubesElementsDisplayValue =
-      cubesTranslateElements[i].style.display || getComputedStyle(cubesTranslateElements[i], null).display;
-    const isCubeVisible = cubesElementsDisplayValue === 'block';
+  for (let i = 0; i < cubes.length; i++) {
+    const isMainCube = cubes[i].id === 'main-cube';
 
-    if (isElementsCloseToMaxValue && isCubeVisible) {
-      cubesTranslateElements[i].style.display = 'none';
+    if (isCubesYPositionMoreThanMaxValue && !isMainCube) {
+      cubes[i].style.display = 'none';
     } else {
-      cubesTranslateElements[i].style.display = 'block';
-      cubesTranslateElements[i].style.transform = 'translate(0px, -' + translateYPosition + 'px)';
+      cubes[i].style.display = 'block';
     }
+  }
+
+  if (!isCubesYPositionMoreThanMaxValue) {
+    translateCubesAnimation(translateYPosition);
+  }
+}
+
+function translateCubesAnimation(translateYPosition) {
+  for (let i = 0; i < cubesTranslateElements.length; i++) {
+    cubesTranslateElements[i].style.transform = 'translate(0px, -' + translateYPosition + 'px)';
   }
 }
 

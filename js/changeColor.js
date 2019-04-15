@@ -1,7 +1,7 @@
 const bodyElement = { selector: 'body', property: 'backgroundColor' };
 const cubeElement = { selector: '.cube', property: 'fill' };
 const cubeLeftSideElementOptions = {
-  selector: '#cube-8-scale-animation :nth-child(1)',
+  selector: '#main-cube-scale-animation :nth-child(1)',
   property: 'fill',
   currentColor: { red: 246, green: 246, blue: 247 },
   redColor: { red: 240, green: 62, blue: 62 },
@@ -9,7 +9,7 @@ const cubeLeftSideElementOptions = {
   purpleColor: { red: 157, green: 55, blue: 227 }
 };
 const cubeRightSideElementOptions = {
-  selector: '#cube-8-scale-animation :nth-child(2)',
+  selector: '#main-cube-scale-animation :nth-child(2)',
   property: 'fill',
   currentColor: { red: 232, green: 232, blue: 232 },
   redColor: { red: 191, green: 49, blue: 48 },
@@ -17,7 +17,7 @@ const cubeRightSideElementOptions = {
   purpleColor: { red: 147, green: 45, blue: 191 }
 };
 const cubeBottomSideSideElementOptions = {
-  selector: '#cube-8-scale-animation :nth-child(3)',
+  selector: '#main-cube-scale-animation :nth-child(3)',
   property: 'fill',
   currentColor: { red: 218, green: 220, blue: 220 },
   redColor: { red: 219, green: 56, blue: 57 },

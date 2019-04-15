@@ -101,11 +101,11 @@
   }
 }
 
-#cube-8 {
-  animation: cube-8 1.6s infinite alternate;
+#main-cube {
+  animation: main-cube 1.6s infinite alternate;
 }
 
-@keyframes cube-8 {
+@keyframes main-cube {
   0% {
     transform: translate(924px, 1357px);
   }
