@@ -7,9 +7,9 @@ const cubesTranslateElements = document.querySelectorAll('.cube-translate-animat
 
 function toggleCube() {
   const minScaleValue = 1;
-  const maxScaleValue = 9;
+  const maxScaleValue = 8;
   const minTranslateXPosition = 0;
-  const maxTranslateXPosition = 1500;
+  const maxTranslateXPosition = 1200;
   const minTranslateYPosition = 0;
   const maxTranslateYPosition = 2500;
 

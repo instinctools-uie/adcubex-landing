@@ -13,7 +13,8 @@ function startProject() {
   const scrollPosition = window.pageYOffset;
 
   if (scrollPosition < advantageSectionScrollPosition) {
-    toWhiteColor();
+    changeBackgroundColorToWhite();
+    changeCubeColorToDefault();
   }
 
   if (scrollPosition > expertiseSectionScrollPosition) {

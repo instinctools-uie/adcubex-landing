@@ -25,17 +25,12 @@ const cubeBottomSideSideElementOptions = {
   purpleColor: { red: 150, green: 49, blue: 213 }
 };
 
-function toWhiteColor() {
-  document.querySelector(bodyElement.selector).style.backgroundColor = `rgb(255, 255, 255)`;
-}
-
 function changeSelectorElementsProperty(selectorsArr, currentColor) {
   for (let i = 0; i < selectorsArr.length; i++) {
     const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
     for (let j = 0; j < selectorElements.length; j++) {
-      selectorElements[j].style[selectorsArr[i].property] = `rgb(${currentColor.red}, ${currentColor.green}, ${
-        currentColor.blue
-      })`;
+      selectorElements[j].style[selectorsArr[i].property] =
+        'rgb(' + currentColor.red + ', ' + currentColor.green + ', ' + currentColor.blue + ')';
     }
   }
 }
@@ -76,6 +71,7 @@ function changeColorForAdvantageSection(advantageSectionScrollPosition) {
     [cubeLeftSideElementOptions],
     advantageSectionScrollPosition
   );
+
   changeColor(
     cubeRightSideElementOptions.currentColor,
     cubeRightSideElementOptions.redColor,
@@ -151,4 +147,35 @@ function changeMenuItemsColorToWhite() {
   document.querySelector('.menu-container').style.color = 'white';
   document.querySelector('.logo-container > svg').style.fill = 'white';
   document.querySelector('.menu-button > svg').style.fill = 'white';
+}
+
+function changeBackgroundColorToWhite() {
+  document.querySelector(bodyElement.selector).style.backgroundColor = 'rgb(255, 255, 255)';
+}
+
+function changeCubeColorToDefault() {
+  document.querySelector(cubeLeftSideElementOptions.selector).style.fill =
+    'rgb(' +
+    cubeLeftSideElementOptions.currentColor.red +
+    ', ' +
+    cubeLeftSideElementOptions.currentColor.green +
+    ', ' +
+    cubeLeftSideElementOptions.currentColor.blue +
+    ')';
+  document.querySelector(cubeRightSideElementOptions.selector).style.fill =
+    'rgb(' +
+    cubeRightSideElementOptions.currentColor.red +
+    ', ' +
+    cubeRightSideElementOptions.currentColor.green +
+    ', ' +
+    cubeRightSideElementOptions.currentColor.blue +
+    ')';
+  document.querySelector(cubeBottomSideSideElementOptions.selector).style.fill =
+    'rgb(' +
+    cubeBottomSideSideElementOptions.currentColor.red +
+    ', ' +
+    cubeBottomSideSideElementOptions.currentColor.green +
+    ', ' +
+    cubeBottomSideSideElementOptions.currentColor.blue +
+    ')';
 }
