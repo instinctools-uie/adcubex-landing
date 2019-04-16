@@ -10,7 +10,7 @@ body {
 .arrow {
   width: 1.4em;
   margin-left: 1.5em;
-  fill: #fff;
+  fill: white;
 }
 
 .header-container {
@@ -97,6 +97,11 @@ body {
   padding-top: 14rem;
 }
 
+h1,
+h2 {
+  font-family: 'montserrat_extraboldregular', sans-serif;
+}
+
 .section-container {
   padding-right: 2%;
   color: #303030;
@@ -131,7 +136,8 @@ body {
   font-size: 2.188rem;
 }
 
-.section-container > h1 {
+.section-container > h1,
+.section-container > h2 {
   padding-top: 5rem;
   color: #353535;
   font-family: 'montserrat_mediumregular', sans-serif;
@@ -239,7 +245,7 @@ footer {
 }
 
 .supervise-section div h1 > span,
-.advantage-section div h1 > span,
-.expertise-section div h1 > span {
+.advantage-section div h2 > span,
+.expertise-section div h2 > span {
   color: #ef3e3e;
 }
