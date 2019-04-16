@@ -78,10 +78,6 @@ body {
   cursor: pointer;
 }
 
-.content-container {
-  padding-top: 15%;
-}
-
 .dynamic-section,
 .advantage-section,
 .expertise-section,
@@ -90,10 +86,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60em;
 }
 
 .section-container {
+  padding-right: 2%;
+  color: #303030;
   z-index: 1;
   width: 68em;
   opacity: 0;
@@ -104,12 +101,6 @@ body {
 .section-container--active {
   opacity: 1;
   transform: translateX(0);
-}
-
-.section-container {
-  position: relative;
-  color: #303030;
-  padding-right: 2%;
 }
 
 .expertise-section .section-container,
@@ -127,6 +118,17 @@ body {
   text-decoration: none;
 }
 
+.dynamic-section > .section-container > h1 {
+  padding-top: 35rem;
+}
+.advantage-section > .section-container > h1 {
+  padding-top: 71.063rem;
+}
+
+.advantage-section > .section-container > div > .inner-section-text > p > span {
+  font-size: 2.188rem;
+}
+
 .section-container > h1 {
   color: #353535;
   font-family: 'montserrat_mediumregular', sans-serif;
@@ -141,20 +143,17 @@ body {
 }
 
 .text-container {
-  position: relative;
   display: flex;
-  /*justify-content: space-around;*/
+  margin-top: 8.5rem;
 }
 
 .inner-section-image {
-  position: absolute;
-  left: -3.125rem;
   min-width: 16.063rem;
+  margin-left: -2.5rem;
 }
 
 .inner-section-text {
-  position: absolute;
-  left: 15.5rem;
+  margin-left: -2.5rem;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
