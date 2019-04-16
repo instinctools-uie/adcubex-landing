@@ -6,9 +6,9 @@
   const expertiseSectionScrollPosition = expertiseSection.offsetTop;
   const investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-  window.addEventListener('scroll', initProject);
+  initProject();
 
-  window.addEventListener('load', initProject);
+  window.addEventListener('scroll', initProject);
 
   function initProject() {
     const scrollPosition = window.pageYOffset;
