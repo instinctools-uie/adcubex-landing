@@ -199,6 +199,9 @@ body {
 }
 
 .advantage-section > .section-container > p {
+  font-size: 2.25rem;
+  font-weight: 500;
+  line-height: 3.25rem;
 }
 
 .budget-section > .section-container > p.expertise-section-background-inscription {
