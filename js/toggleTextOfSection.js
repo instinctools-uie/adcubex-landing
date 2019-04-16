@@ -1,21 +1,24 @@
+//TODO: Need find solution for correctly toggle text when zoom
 (function(window) {
   window.AdCubex.toggleTextOfSection = function() {
-    const scrolled = document.scrollingElement.scrollTop;
+    const scrolled = window.pageYOffset;
     const sections = window.document.querySelectorAll('.section-container');
-    const ratePositionBeforeSection = 600;
-    const ratePositionAfterSection = 350;
 
     for (let i = 0; i < sections.length; i++) {
-      const position = sections[i].offsetTop;
-      const positionOfScrollBeforeSection = position - ratePositionBeforeSection;
-      const positionOfScrollAfterSection = position + ratePositionAfterSection;
-      const isScrollOnSection = scrolled > positionOfScrollBeforeSection && scrolled < positionOfScrollAfterSection;
-      const isActiveSection = sections[i].classList.contains('section-container--active');
+      const currentSection = sections[i];
+      const nextSection = sections[i + 1];
+      const scrollPositionOfCurrentSection = currentSection.offsetTop;
+      const scrollPositionOfNextSection = nextSection ? nextSection.offsetTop : document.documentElement.scrollHeight;
+      const scrollDifferenceBetweenSections = scrollPositionOfNextSection - scrollPositionOfCurrentSection;
+      const scrollHalfOfDifferenceBetweenSections = scrollDifferenceBetweenSections / 2;
+      const scrollPositionWhenShouldToggleText = scrollHalfOfDifferenceBetweenSections + scrollPositionOfCurrentSection;
 
-      if (isScrollOnSection && !isActiveSection) {
-        sections[i].classList.add('section-container--active');
-      } else if (!isScrollOnSection && isActiveSection) {
-        sections[i].classList.remove('section-container--active');
+      if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
+        nextSection.classList.add('section-container--active');
+        currentSection.classList.remove('section-container--active');
+      } else if (scrolled < scrollPositionWhenShouldToggleText && scrolled > scrollPositionOfCurrentSection) {
+        currentSection.classList.add('section-container--active');
+        nextSection.classList.remove('section-container--active');
       }
     }
   };
