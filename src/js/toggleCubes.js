@@ -1,4 +1,4 @@
-import { RATE_CHANGE_SCROLL } from 'constants';
+import { RATE_CHANGE_SCROLL } from './constants';
 
 const advantageSection = window.document.querySelector('.advantage-section');
 const advantageSectionScrollPosition = advantageSection.offsetTop;
@@ -50,10 +50,6 @@ export function toggleCube() {
     mainCube.style.animation = 'main-cube 1.6s infinite alternate';
   }
 
-  console.log(
-    11111111111,
-    `translate(-${translateXPositionAfterScale}px, -${translateYPosition}px) scale(${cubeScale})`
-  );
   mainCubeAnimationElement.style.transform = `translate(-${translateXPositionAfterScale}px, -${translateYPosition}px) scale(${cubeScale})`;
 }
 
