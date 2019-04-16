@@ -120,7 +120,7 @@ h2 {
 .budget-section .section-container,
 .investments-section .section-container,
 .effectiveness-section .section-container {
-  color: white;
+  /*color: white;*/
 }
 
 .section-container > a {
@@ -130,6 +130,12 @@ h2 {
   color: inherit;
   font-size: 0.8em;
   text-decoration: none;
+}
+
+.section-container > p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.375rem;
 }
 
 .expertise-section > .section-container > div > .inner-section-text > p > span {
@@ -204,9 +210,14 @@ h2 {
   margin-top: 17rem;
 }
 
+.advantage-section > .section-container > h2 > span {
+  color: #ef3e3e;
+}
+
 .advantage-section > .section-container > p {
+  padding-top: 2rem;
+  font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 2.25rem;
-  font-weight: 600;
   line-height: 3.25rem;
 }
 
