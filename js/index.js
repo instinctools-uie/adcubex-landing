@@ -18,32 +18,32 @@ function initProject() {
   const scrollPosition = window.pageYOffset;
 
   if (scrollPosition < advantageSectionScrollPosition) {
-    changeBackgroundColorToWhite();
+    // changeBackgroundColorToWhite();
     changeCubeColorToDefault();
   }
 
   if (scrollPosition > expertiseSectionScrollPosition) {
-    changeMenuItemsColorToWhite();
+    // changeMenuItemsColorToWhite();
   }
 
   if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-    changeColorForAdvantageSection(advantageSectionScrollPosition);
+    // changeColorForAdvantageSection(advantageSectionScrollPosition);
   }
 
   if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-    changeColorForExpertiseSection(expertiseSectionScrollPosition);
+    // changeColorForExpertiseSection(expertiseSectionScrollPosition);
   }
 
   if (scrollPosition > investmentsSectionScrollPosition) {
-    changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+    // changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
   if (scrollPosition > expertiseSectionScrollPosition - 20) {
-    changeActiveMenuItemToBlack();
+    // changeActiveMenuItemToBlack();
   }
 
   if (scrollPosition < expertiseSectionScrollPosition - 20) {
-    changeActiveMenuItemToRed();
+    // changeActiveMenuItemToRed();
   }
 
   toggleCube();

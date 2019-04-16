@@ -78,14 +78,23 @@ body {
   cursor: pointer;
 }
 
-.dynamic-section,
-.advantage-section,
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.supervise-section,
 .expertise-section,
+.budget-section,
 .investments-section,
 .effectiveness-section {
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+
+.supervise-section {
+  padding-top: 14rem;
 }
 
 .section-container {
@@ -103,7 +112,7 @@ body {
   transform: translateX(0);
 }
 
-.expertise-section .section-container,
+.budget-section .section-container,
 .investments-section .section-container,
 .effectiveness-section .section-container {
   color: white;
@@ -118,18 +127,12 @@ body {
   text-decoration: none;
 }
 
-.dynamic-section > .section-container > h1 {
-  padding-top: 35rem;
-}
-.advantage-section > .section-container > h1 {
-  padding-top: 71.063rem;
-}
-
-.advantage-section > .section-container > div > .inner-section-text > p > span {
+.expertise-section > .section-container > div > .inner-section-text > p > span {
   font-size: 2.188rem;
 }
 
 .section-container > h1 {
+  padding-top: 5rem;
   color: #353535;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
@@ -144,12 +147,20 @@ body {
 
 .text-container {
   display: flex;
-  margin-top: 8.5rem;
+  margin-top: 8rem;
+}
+
+.expertise-section > .section-container > .text-container {
+  margin-top: -2.5rem;
 }
 
 .inner-section-image {
   min-width: 16.063rem;
-  margin-left: -2.5rem;
+  margin: 2.5rem 0 0 -2.5rem;
+}
+
+.expertise-section > .section-container > .text-container > .inner-section-image {
+  margin-top: 5rem;
 }
 
 .inner-section-text {
@@ -160,7 +171,37 @@ body {
   line-height: 2.375rem;
 }
 
-.expertise-section > .section-container > p.expertise-section-background-inscription {
+.expertise-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  width: 15.625rem;
+  padding-left: 0.9rem;
+  border: none;
+  margin-top: 4.875rem;
+  background-color: #ef3e3e;
+  color: #ffffff;
+  font-family: 'montserrat_lightregular', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.social-section {
+  display: flex;
+  justify-content: space-between;
+  width: 68em;
+  margin-top: 14.625rem;
+}
+
+.advantage-section > .section-container {
+  margin-top: 17rem;
+}
+
+.advantage-section > .section-container > p {
+}
+
+.budget-section > .section-container > p.expertise-section-background-inscription {
   position: absolute;
   bottom: -3.938rem;
   left: 63.125rem;
@@ -197,7 +238,8 @@ footer {
   height: 1.438em;
 }
 
-.dynamic-section div h1 > span,
-.advantage-section div h1 > span {
+.supervise-section div h1 > span,
+.advantage-section div h1 > span,
+.expertise-section div h1 > span {
   color: #ef3e3e;
 }
