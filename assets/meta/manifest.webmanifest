@@ -4,12 +4,12 @@
     "start_url": "TBD",
     "icons": [
         {
-            "src": "https://lition.de/static/meta/android-chrome-192x192.png",
+            "src": "https://TBD/assets/meta/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "https://lition.de/static/meta/android-chrome-256x256.png",
+            "src": "https://TBD/assets/meta/android-chrome-256x256.png",
             "sizes": "256x256",
             "type": "image/png"
         }
