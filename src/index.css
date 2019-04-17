@@ -291,6 +291,13 @@ h2 {
   line-height: 0;
 }
 
+div.power-image > .image-content > p.image-content_large {
+  margin-top: 2rem;
+  font-family: 'montserrat_extraboldregular', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
 footer {
   position: fixed;
   left: 0;

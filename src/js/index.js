@@ -52,7 +52,7 @@
     if (scrollPosition > budgetSectionScrollPosition - 20) {
       window.AdCubex.changeActiveMenuItemToBlack();
     }
-    //
+
     //TODO: Find solution for remove "20"
     if (scrollPosition < budgetSectionScrollPosition - 20) {
       window.AdCubex.changeActiveMenuItemToRed();
