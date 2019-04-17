@@ -1,5 +1,5 @@
 (function(window) {
-  window.AdCubex.changeColorForAdvantageSection = function(advantageSectionScrollPosition) {
+  window.AdCubex.changeColorForBudgetSection = function(budgetSectionScrollPosition) {
     const whiteColor = { red: 255, green: 255, blue: 255 };
     const blackColor = { red: 0, green: 0, blue: 0 };
     const redLogoColor = { red: 237, green: 28, blue: 36 };
@@ -12,32 +12,32 @@
       whiteColor,
       window.AdCubex.constants.RED_BACKGROUND_COLOR,
       [window.AdCubex.constants.BODY_ELEMENT_OPTIONS, window.AdCubex.constants.CUBE_ELEMENT_OPTIONS],
-      advantageSectionScrollPosition
+      budgetSectionScrollPosition
     );
 
-    changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
+    changeColor(blackColor, whiteColor, [menu, menuButtonElement], budgetSectionScrollPosition);
 
-    changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
+    changeColor(redLogoColor, whiteColor, [logoElement], budgetSectionScrollPosition);
 
     changeColor(
       window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor,
       window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
       [window.AdCubex.constants.CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-      advantageSectionScrollPosition
+      budgetSectionScrollPosition
     );
 
     changeColor(
       window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor,
       window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
       [window.AdCubex.constants.CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-      advantageSectionScrollPosition
+      budgetSectionScrollPosition
     );
 
     changeColor(
       window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor,
       window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
       [window.AdCubex.constants.CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-      advantageSectionScrollPosition
+      budgetSectionScrollPosition
     );
   };
 
@@ -105,6 +105,13 @@
     document.querySelector('.menu-container').style.color = 'white';
     document.querySelector('.logo-container > svg').style.fill = 'white';
     document.querySelector('.menu-button > svg').style.fill = 'white';
+  };
+
+  window.AdCubex.changeMenuItemsColorToBlack = function() {
+    document.querySelector('.menu-container').style.color = 'black';
+    //ToDo: Fix to correct logo color
+    document.querySelector('.logo-container > svg').style.fill = 'red';
+    document.querySelector('.menu-button > svg').style.fill = 'black';
   };
 
   window.AdCubex.changeBackgroundColorToWhite = function() {

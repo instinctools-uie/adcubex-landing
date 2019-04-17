@@ -1,10 +1,12 @@
 (function(window) {
   const advantageSection = window.document.querySelector('.advantage-section');
-  const expertiseSection = window.document.querySelector('.expertise-section');
-  const investmentsSection = window.document.querySelector('.control-section');
+  const budgetSection = window.document.querySelector('.budget-section');
+  const controlSection = window.document.querySelector('.control-section');
+  const toolsetSection = window.document.querySelector('.toolset-section');
   const advantageSectionScrollPosition = advantageSection.offsetTop;
-  const expertiseSectionScrollPosition = expertiseSection.offsetTop;
-  const investmentsSectionScrollPosition = investmentsSection.offsetTop;
+  const budgetSectionScrollPosition = budgetSection.offsetTop;
+  const controlSectionScrollPosition = controlSection.offsetTop;
+  const toolsetSectionScrollPosition = toolsetSection.offsetTop;
 
   initProject();
 
@@ -24,29 +26,35 @@
       window.AdCubex.changeCubeColorToDefault();
     }
 
-    if (scrollPosition > expertiseSectionScrollPosition) {
+    if (scrollPosition > budgetSectionScrollPosition && scrollPosition < toolsetSectionScrollPosition) {
       window.AdCubex.changeMenuItemsColorToWhite();
     }
 
-    if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-      window.AdCubex.changeColorForAdvantageSection(advantageSectionScrollPosition);
+    if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= budgetSectionScrollPosition) {
+      window.AdCubex.changeColorForBudgetSection(advantageSectionScrollPosition);
     }
 
-    if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-      window.AdCubex.changeColorForExpertiseSection(expertiseSectionScrollPosition);
+    if (scrollPosition > budgetSectionScrollPosition && scrollPosition <= controlSectionScrollPosition) {
+      window.AdCubex.changeColorForExpertiseSection(budgetSectionScrollPosition);
     }
 
-    if (scrollPosition > investmentsSectionScrollPosition) {
-      window.AdCubex.changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+    if (scrollPosition > controlSectionScrollPosition && scrollPosition <= toolsetSectionScrollPosition) {
+      window.AdCubex.changeColorForInvestmentsSection(controlSectionScrollPosition);
+    }
+
+    if (scrollPosition > toolsetSectionScrollPosition) {
+      window.AdCubex.changeBackgroundColorToWhite();
+      window.AdCubex.changeMenuItemsColorToBlack();
+      window.AdCubex.changeCubeColorToDefault();
     }
 
     //TODO: Find solution for remove "20"
-    if (scrollPosition > expertiseSectionScrollPosition - 20) {
+    if (scrollPosition > budgetSectionScrollPosition - 20) {
       window.AdCubex.changeActiveMenuItemToBlack();
     }
-
+    //
     //TODO: Find solution for remove "20"
-    if (scrollPosition < expertiseSectionScrollPosition - 20) {
+    if (scrollPosition < budgetSectionScrollPosition - 20) {
       window.AdCubex.changeActiveMenuItemToRed();
     }
 
