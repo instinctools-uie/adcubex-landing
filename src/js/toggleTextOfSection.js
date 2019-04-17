@@ -14,11 +14,11 @@ export function toggleTextOfSection() {
     const scrollPositionWhenShouldToggleText = scrollHalfOfDifferenceBetweenSections + scrollPositionOfCurrentSection;
 
     if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
-      nextSection.classList.add('section-container--active');
+      nextSection && nextSection.classList.add('section-container--active');
       currentSection.classList.remove('section-container--active');
     } else if (scrolled < scrollPositionWhenShouldToggleText && scrolled > scrollPositionOfCurrentSection) {
       currentSection.classList.add('section-container--active');
-      nextSection.classList.remove('section-container--active');
+      nextSection && nextSection.classList.remove('section-container--active');
     }
   }
 }
