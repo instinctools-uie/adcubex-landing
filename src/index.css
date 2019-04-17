@@ -118,7 +118,8 @@ h2 {
   transform: translateX(0);
 }
 
-.budget-section > .section-container > h2 .control-section > .section-container > h2,
+.budget-section > .section-container > h2,
+.control-section > .section-container > h2,
 .power-section > .section-container > h2 {
   color: white;
 }
@@ -138,7 +139,8 @@ h2 {
   line-height: 2.375rem;
 }
 
-.expertise-section > .section-container > div > .inner-section-text > p > span {
+.expertise-section > .section-container > div > .inner-section-text > p > span,
+.power-section > .section-container > div > div > p > span {
   font-size: 2.188rem;
 }
 
@@ -231,7 +233,8 @@ h2 {
 }
 
 .budget-text-container,
-.control-text-container {
+.control-text-container,
+.power-text-container {
   display: flex;
   justify-content: space-between;
   margin: 0 0 0 18.775rem;
@@ -246,7 +249,8 @@ h2 {
 }
 
 .budget-section > .section-container > .budget-text-container > .budget-text > .expertise-button,
-.control-section > .section-container > .control-text-container > .control-text > .expertise-button {
+.control-section > .section-container > .control-text-container > .control-text > .expertise-button,
+.power-section > .section-container > .power-text-container > div > .expertise-button {
   border: 1px solid #bcbcbc;
   background-color: transparent;
 }
@@ -255,7 +259,8 @@ h2 {
   border: 1px solid #ffffff;
 }
 
-.budget-image {
+.budget-image,
+.power-image {
   display: flex;
   justify-content: center;
   height: 43.688rem;
@@ -264,22 +269,22 @@ h2 {
   background-image: url(../assets/images/rectangle.svg);
 }
 
-.budget-image-content {
+.image-content {
   width: 14.5rem;
   margin-top: 10.25rem;
 }
 
-.budget-image-content_middle {
+.image-content_middle {
   font-family: 'montserratbold', sans-serif;
   font-size: 2.25rem;
   line-height: 2.625rem;
 }
 
-.budget-image-content_small {
+.image-content_small {
   margin-top: 0.938rem;
 }
 
-.budget-image-content_large {
+.image-content_large {
   margin-top: 3rem;
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
