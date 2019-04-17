@@ -82,6 +82,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #353535;
 }
 
 .supervise-section,
@@ -117,10 +118,9 @@ h2 {
   transform: translateX(0);
 }
 
-.budget-section .section-container,
-.investments-section .section-container,
-.effectiveness-section .section-container {
-  /*color: white;*/
+.budget-section > .section-container > h2 .control-section > .section-container > h2,
+.power-section > .section-container > h2 {
+  color: white;
 }
 
 .section-container > a {
@@ -145,11 +145,10 @@ h2 {
 .section-container > h1,
 .section-container > h2 {
   padding-top: 5rem;
-  color: #353535;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 7.5em;
+  font-size: 7.5rem;
   letter-spacing: 0;
   line-height: 130px;
   text-align: left;
@@ -229,6 +228,62 @@ h2 {
   transform: rotate(90deg);
   color: rgb(248, 176, 177);
   font-size: 0.8em;
+}
+
+.budget-text-container,
+.control-text-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 0 18.775rem;
+  color: #ffffff;
+}
+
+.budget-section > .section-container > .budget-text-container > .budget-text > p,
+.control-section > .section-container > .control-text-container > .control-text > p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+}
+
+.budget-section > .section-container > .budget-text-container > .budget-text > .expertise-button,
+.control-section > .section-container > .control-text-container > .control-text > .expertise-button {
+  border: 1px solid #bcbcbc;
+  background-color: transparent;
+}
+
+.budget-section > .section-container > .expertise-button:hover {
+  border: 1px solid #ffffff;
+}
+
+.budget-image {
+  display: flex;
+  justify-content: center;
+  height: 43.688rem;
+  width: 18.875rem;
+  margin: 2rem -4.063rem 0 0;
+  background-image: url(../assets/images/rectangle.svg);
+}
+
+.budget-image-content {
+  width: 14.5rem;
+  margin-top: 10.25rem;
+}
+
+.budget-image-content_middle {
+  font-family: 'montserratbold', sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+}
+
+.budget-image-content_small {
+  margin-top: 0.938rem;
+}
+
+.budget-image-content_large {
+  margin-top: 3rem;
+  font-family: 'montserratbold', sans-serif;
+  font-size: 4.5rem;
+  line-height: 0;
 }
 
 footer {

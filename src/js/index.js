@@ -20,38 +20,38 @@
     const scrollPosition = window.pageYOffset;
 
     if (scrollPosition < advantageSectionScrollPosition) {
-      // window.AdCubex.changeBackgroundColorToWhite();
+      window.AdCubex.changeBackgroundColorToWhite();
       window.AdCubex.changeCubeColorToDefault();
     }
 
     if (scrollPosition > expertiseSectionScrollPosition) {
-      // window.AdCubex.changeMenuItemsColorToWhite();
+      window.AdCubex.changeMenuItemsColorToWhite();
     }
 
     if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-      // window.AdCubex.changeColorForAdvantageSection(advantageSectionScrollPosition);
+      window.AdCubex.changeColorForAdvantageSection(advantageSectionScrollPosition);
     }
 
     if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-      // window.AdCubex.changeColorForExpertiseSection(expertiseSectionScrollPosition);
+      window.AdCubex.changeColorForExpertiseSection(expertiseSectionScrollPosition);
     }
 
     if (scrollPosition > investmentsSectionScrollPosition) {
-      // window.AdCubex.changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+      window.AdCubex.changeColorForInvestmentsSection(investmentsSectionScrollPosition);
     }
 
     //TODO: Find solution for remove "20"
     if (scrollPosition > expertiseSectionScrollPosition - 20) {
-      // window.AdCubex.changeActiveMenuItemToBlack();
+      window.AdCubex.changeActiveMenuItemToBlack();
     }
 
     //TODO: Find solution for remove "20"
     if (scrollPosition < expertiseSectionScrollPosition - 20) {
-      // window.AdCubex.changeActiveMenuItemToRed();
+      window.AdCubex.changeActiveMenuItemToRed();
     }
 
     window.AdCubex.toggleCube();
     window.AdCubex.toggleCubes();
-    // window.AdCubex.toggleTextOfSection();
+    window.AdCubex.toggleTextOfSection();
   }
 })(window);

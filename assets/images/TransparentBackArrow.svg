@@ -24,7 +24,7 @@
                             <mask id="mask-3" fill="white">
                                 <use xlink:href="#path-2"></use>
                             </mask>
-                            <use fill="#EF3E3E" transform="translate(9.000000, 8.999654) rotate(-90.000000) translate(-9.000000, -8.999654) " xlink:href="#path-2"></use>
+                            <use fill="transparent" transform="translate(9.000000, 8.999654) rotate(-90.000000) translate(-9.000000, -8.999654) " xlink:href="#path-2"></use>
                             <g id="Color-/-#000000" mask="url(#mask-3)" fill="#FFFFFF">
                                 <rect id="Rectangle" x="0" y="0" width="18" height="18"></rect>
                             </g>
