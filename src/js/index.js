@@ -1,7 +1,7 @@
 (function(window) {
   const advantageSection = window.document.querySelector('.advantage-section');
   const expertiseSection = window.document.querySelector('.expertise-section');
-  const investmentsSection = window.document.querySelector('.investments-section');
+  const investmentsSection = window.document.querySelector('.control-section');
   const advantageSectionScrollPosition = advantageSection.offsetTop;
   const expertiseSectionScrollPosition = expertiseSection.offsetTop;
   const investmentsSectionScrollPosition = investmentsSection.offsetTop;
