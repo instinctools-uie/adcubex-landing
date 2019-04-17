@@ -58,4 +58,4 @@ function initProject() {
 
 window.addEventListener('scroll', initProject);
 
-initProject();
+window.addEventListener('load', initProject);
