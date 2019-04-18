@@ -61,10 +61,12 @@ gulp.task('meta', function () {
     .pipe(gulp.dest('./build/assets/meta'));
 });
 
-gulp.task('watch', function() {
+gulp.task('listen', function() {
   gulp.watch('./src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'watch']);
+gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+
+gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);
