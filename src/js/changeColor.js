@@ -10,31 +10,6 @@ import {
   RATE_CHANGE_SCROLL
 } from './constants';
 
-function changeSelectorElementsProperty(selectorsArr, currentColor) {
-  for (let i = 0; i < selectorsArr.length; i++) {
-    const selectorElements = document.querySelectorAll(selectorsArr[i].selector);
-    for (let j = 0; j < selectorElements.length; j++) {
-      selectorElements[j].style[
-        selectorsArr[i].property
-      ] = `rgb(${currentColor.red}, ${currentColor.green}, ${currentColor.blue})`;
-    }
-  }
-}
-
-function changeColor(fromColor, toColor, selectorsArr, startPosition) {
-  const perChange = (window.pageYOffset - startPosition) / RATE_CHANGE_SCROLL;
-  const currentColor = { red: 0, green: 0, blue: 0 };
-
-  Object.keys(currentColor).forEach(key => {
-    currentColor[key] =
-      fromColor[key] > toColor[key]
-        ? Math.round(fromColor[key] - (fromColor[key] - toColor[key]) * perChange)
-        : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
-  });
-
-  changeSelectorElementsProperty(selectorsArr, currentColor);
-}
-
 export function changeColorForBudgetSection(budgetSectionScrollPosition) {
   const whiteColor = { red: 255, green: 255, blue: 255 };
   const blackColor = { red: 0, green: 0, blue: 0 };
@@ -56,21 +31,21 @@ export function changeColorForBudgetSection(budgetSectionScrollPosition) {
   changeColor(redLogoColor, whiteColor, [logoElement], budgetSectionScrollPosition);
 
   changeColor(
-    CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor,
+    CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
     budgetSectionScrollPosition
   );
 
   changeColor(
-    CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor,
+    CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
     budgetSectionScrollPosition
   );
 
   changeColor(
-    CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor,
+    CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
     budgetSectionScrollPosition
@@ -155,17 +130,47 @@ export function changeBackgroundColorToWhite() {
 }
 
 export function changeCubeColorToDefault() {
+  const { defaultColor: cubeLeftSideDefaultColor } = CUBE_LEFT_SIDE_ELEMENT_OPTIONS;
+  const { defaultColor: cubeRightSideDefaultColor } = CUBE_RIGHT_SIDE_ELEMENT_OPTIONS;
+  const { defaultColor: cubeBottomSideDefaultColor } = CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS;
   document.querySelector(CUBE_LEFT_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor.red},
-   ${CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor.green},
-    ${CUBE_LEFT_SIDE_ELEMENT_OPTIONS.currentColor.blue}
+  ${cubeLeftSideDefaultColor.red},
+   ${cubeLeftSideDefaultColor.green},
+    ${cubeLeftSideDefaultColor.blue}
     )`;
   document.querySelector(CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor.red},
-   ${CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor.green},
-    ${CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.currentColor.blue})`;
+  ${cubeRightSideDefaultColor.red},
+   ${cubeRightSideDefaultColor.green},
+    ${cubeRightSideDefaultColor.blue})`;
   document.querySelector(CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor.red},
-   ${CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor.green},
-    ${CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.currentColor.blue})`;
+  ${cubeBottomSideDefaultColor.red},
+   ${cubeBottomSideDefaultColor.green},
+    ${cubeBottomSideDefaultColor.blue})`;
+}
+
+function changeColor(fromColor, toColor, selectorsArr, startPosition) {
+  const scrolled = window.pageYOffset;
+  const perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
+  const currentColor = { red: 0, green: 0, blue: 0 };
+
+  Object.keys(currentColor).forEach(key => {
+    currentColor[key] =
+      fromColor[key] > toColor[key]
+        ? Math.round(fromColor[key] - (fromColor[key] - toColor[key]) * perChange)
+        : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
+  });
+
+  selectorsArr.forEach(selectorOptions => {
+    changeSelectorElementsProperty(selectorOptions, currentColor);
+  });
+}
+
+function changeSelectorElementsProperty(selectorOptions, currentColor) {
+  const selectorElements = document.querySelectorAll(selectorOptions.selector);
+  const { property } = selectorOptions;
+  const { red, green, blue } = currentColor;
+
+  selectorElements.forEach(selectorElement => {
+    selectorElement.style[property] = `rgb(${red}, ${green}, ${blue})`;
+  });
 }

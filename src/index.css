@@ -1,5 +1,6 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
+@import './css/onLoadAnimation.css';
 
 html {
   scroll-behavior: smooth;
@@ -57,19 +58,19 @@ body {
 }
 
 .menu-container > .link_red--active {
-  color: rgb(229, 62, 56) !important;
+  color: rgb(229, 62, 56);
 }
 
 .menu-container > .link_red:hover {
-  color: rgb(229, 62, 56) !important;
+  color: rgb(229, 62, 56);
 }
 
 .menu-container > .link_black--active {
-  color: rgb(48, 48, 48) !important;
+  color: rgb(48, 48, 48);
 }
 
 .menu-container > .link_black:hover {
-  color: rgb(48, 48, 48) !important;
+  color: rgb(48, 48, 48);
 }
 
 .button-container {

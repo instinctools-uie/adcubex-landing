@@ -9,7 +9,7 @@ import {
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
 import { toggleTextOfSection } from './toggleTextOfSection';
-import { changeActiveMenuItemToBlack, changeActiveMenuItemToRed } from './menu';
+import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 
 const advantageSection = window.document.querySelector('.advantage-section');
 const budgetSection = window.document.querySelector('.budget-section');
@@ -20,44 +20,48 @@ const budgetSectionScrollPosition = budgetSection.offsetTop;
 const controlSectionScrollPosition = controlSection.offsetTop;
 const toolsetSectionScrollPosition = toolsetSection.offsetTop;
 
-function initProject() {
-  const scrollPosition = window.pageYOffset;
+window.addEventListener('scroll', initProject);
 
-  if (scrollPosition < advantageSectionScrollPosition) {
+window.addEventListener('load', initProject);
+
+function initProject() {
+  const scrolled = window.pageYOffset;
+
+  if (scrolled < advantageSectionScrollPosition) {
     changeBackgroundColorToWhite();
     changeCubeColorToDefault();
   }
 
-  if (scrollPosition > budgetSectionScrollPosition && scrollPosition < toolsetSectionScrollPosition) {
+  if (scrolled > budgetSectionScrollPosition && scrolled < toolsetSectionScrollPosition) {
     changeMenuItemsColorToWhite();
   }
 
-  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= budgetSectionScrollPosition) {
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
     changeColorForBudgetSection(advantageSectionScrollPosition);
   }
 
-  if (scrollPosition > budgetSectionScrollPosition && scrollPosition <= controlSectionScrollPosition) {
+  if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
     changeColorForExpertiseSection(budgetSectionScrollPosition);
   }
 
-  if (scrollPosition > controlSectionScrollPosition && scrollPosition <= toolsetSectionScrollPosition) {
+  if (scrolled > controlSectionScrollPosition && scrolled <= toolsetSectionScrollPosition) {
     changeColorForInvestmentsSection(controlSectionScrollPosition);
   }
 
-  if (scrollPosition > toolsetSectionScrollPosition) {
+  if (scrolled > toolsetSectionScrollPosition) {
     changeBackgroundColorToWhite();
     changeMenuItemsColorToBlack();
     changeCubeColorToDefault();
   }
 
   // TODO: Find solution for remove "20"
-  if (scrollPosition > budgetSectionScrollPosition - 20) {
-    changeActiveMenuItemToBlack();
+  if (scrolled > budgetSectionScrollPosition - 20) {
+    changeActiveMenuLinkToBlack();
   }
 
   // TODO: Find solution for remove "20"
-  if (scrollPosition < budgetSectionScrollPosition - 20) {
-    changeActiveMenuItemToRed();
+  if (scrolled < budgetSectionScrollPosition - 20) {
+    changeActiveMenuLinkToRed();
   }
 
   toggleCube();
