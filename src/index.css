@@ -1,5 +1,6 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
+@import './css/onLoadAnimation.css';
 
 html {
   scroll-behavior: smooth;
@@ -111,14 +112,25 @@ h2 {
   color: #303030;
   z-index: 1;
   width: 69em;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 0.5s, transform 0.5s;
 }
 
-.section-container--active {
+.section-container h1,
+.section-container h2,
+.section-container p,
+.section-container img,
+.section-container button {
+  opacity: 0;
+  transform: translateY(100px);
+  transition: opacity 1s, transform 1s;
+}
+
+.section-container--active h1,
+.section-container--active h2,
+.section-container--active p,
+.section-container--active img,
+.section-container--active button {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .budget-section > .section-container > h2,

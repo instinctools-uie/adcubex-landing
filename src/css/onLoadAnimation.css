@@ -26,9 +26,9 @@
   animation: header_animation_menu6 1.4s ease-out alternate;
 }
 
-.content-container {
-  animation: content_animation 1.2s ease-out alternate;
-}
+/*.section-container h1, h2 {*/
+/*  animation: content_animation 1.2s ease-out alternate;*/
+/*}*/
 
 @keyframes header_animation {
   0% {
@@ -114,8 +114,7 @@
 }
 
 @keyframes content_animation {
-  0%,
-  50% {
+  0% {
     transform: translate(0px, 2rem);
     opacity: 0;
   }
