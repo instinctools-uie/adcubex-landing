@@ -51,7 +51,7 @@ body {
 .menu-container > .link {
   color: inherit;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   text-decoration: none;
   cursor: pointer;
 }
@@ -98,7 +98,7 @@ body {
 }
 
 .supervise-section {
-  padding-top: 14rem;
+  padding-top: 14em;
 }
 
 h1,
@@ -149,13 +149,13 @@ h2 {
 
 .section-container > h1,
 .section-container > h2 {
-  padding-top: 5rem;
+  padding-top: 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 7.5rem;
+  font-size: 7.5em;
   letter-spacing: 0;
-  line-height: 130px;
+  line-height: 1.125em;
   text-align: left;
   text-decoration: none;
   text-transform: none;
@@ -163,43 +163,43 @@ h2 {
 
 .text-container {
   display: flex;
-  margin-top: 8rem;
+  margin-top: 8em;
 }
 
 .expertise-section > .section-container > .text-container {
-  margin-top: -2.5rem;
+  margin-top: -2.5em;
 }
 
 .inner-section-image {
-  min-width: 16.063rem;
-  margin: 2.5rem 0 0 -2.5rem;
+  min-width: 16.063em;
+  margin: 2.5em 0 0 -2.5em;
 }
 
 .expertise-section > .section-container > .text-container > .inner-section-image {
-  margin-top: 5rem;
+  margin-top: 5em;
 }
 
 .inner-section-text {
-  margin-left: -2.5rem;
-  font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 1.5rem;
+  margin-left: -1.5em;
+  font-family: montserrat_mediumregular, sans-serif;
+  font-size: 1.5em;
   font-weight: 500;
-  line-height: 2.375rem;
+  line-height: 1.7em;
 }
 
 .expertise-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.75rem;
-  width: 15.625rem;
-  padding-left: 0.9rem;
+  height: 3.6em;
+  width: 15.625em;
+  padding-left: 0.9em;
   border: none;
-  margin-top: 7.5rem;
+  margin-top: 7em;
   background-color: #ef3e3e;
-  color: #ffffff;
-  font-family: 'montserrat_lightregular', sans-serif;
-  font-size: 1.125rem;
+  color: #fff;
+  font-family: montserrat_lightregular, sans-serif;
+  font-size: 0.6em;
   font-weight: 600;
 }
 
@@ -207,11 +207,11 @@ h2 {
   display: flex;
   justify-content: space-between;
   width: 68em;
-  margin-top: 14.625rem;
+  margin-top: 14.625em;
 }
 
 .advantage-section > .section-container {
-  margin-top: 17rem;
+  margin-top: 17em;
 }
 
 .advantage-section > .section-container > h2 > span,
@@ -242,22 +242,30 @@ h2 {
 .toolset-text-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 0 18.775rem;
+  margin: 0 0 0 18.775em;
   color: #ffffff;
 }
 
 .budget-section > .section-container > .budget-text-container > .budget-text > p,
 .control-section > .section-container > .control-text-container > .control-text > p {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   font-weight: 600;
-  line-height: 2.375rem;
+  line-height: 1.6em;
 }
 
 .budget-section > .section-container > .budget-text-container > .budget-text > .expertise-button,
 .control-section > .section-container > .control-text-container > .control-text > .expertise-button,
 .power-section > .section-container > .power-text-container > div > .expertise-button {
-  border: 1px solid #bcbcbc;
+  border: 0.01em solid #bcbcbc;
   background-color: transparent;
+  height: 3.5em;
+  width: 15.5em;
+  margin-top: 4.6em;
+  font-size: 0.9em;
+}
+
+.power-section > .section-container > .power-text-container > div > .expertise-button {
+  font-size: 0.6em;
 }
 
 .budget-section > .section-container > .expertise-button:hover {
@@ -319,28 +327,28 @@ div.power-image > .image-content > p.image-content_large {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 6rem;
-  width: 22.76rem;
-  margin-top: 5.938rem;
+  height: 4em;
+  width: 16.76em;
+  margin-top: 2.938em;
 }
 
 .advertising-check {
   display: flex;
   justify-content: space-between;
-  width: 28rem;
-  margin-top: 4.063rem;
+  width: 36em;
+  margin-top: 5.063em;
   color: #ababab;
-  font-size: 0.75rem;
-  line-height: 1.125rem;
+  font-size: 0.5em;
+  line-height: 1.5em;
 }
 
 .advertising-check > input {
-  margin-top: 1rem;
+  margin-top: 1.1em;
 }
 
 .advertising-section > div > div > button.expertise-button {
-  margin-top: 3rem;
-  width: 14.063rem;
+  margin-top: 3.2em;
+  width: 14.5em;
 }
 
 .advertising-section > div > .inner-section-text {
@@ -348,7 +356,7 @@ div.power-image > .image-content > p.image-content_large {
 }
 
 .advertising-section > div > div > p {
-  margin-top: -13rem;
+  margin-top: -2em;
 }
 
 footer {
