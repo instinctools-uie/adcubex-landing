@@ -55,10 +55,16 @@ gulp.task('image', function () {
     .pipe(gulp.dest('./build/assets/images'));
 });
 
+gulp.task('meta', function () {
+  gulp.src('./assets/meta/*')
+    .pipe(image())
+    .pipe(gulp.dest('./build/assets/meta'));
+});
+
 gulp.task('watch', function() {
   gulp.watch('./src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'connect', 'watch']);
+gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'watch']);
