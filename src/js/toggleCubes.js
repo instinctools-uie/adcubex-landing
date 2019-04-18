@@ -7,27 +7,8 @@ const mainCubeAnimationElement = document.querySelector('#main-cube-scale-animat
 const cubes = document.querySelectorAll('#cubes > g');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
 
-function translateCubesAnimation(translateYPosition) {
-  for (let i = 0; i < cubesTranslateElements.length; i++) {
-    cubesTranslateElements[i].style.transform = `translate(0px, -${translateYPosition}px)`;
-  }
-}
-
-function getValueBetweenRange(perChange, minValue, maxValue) {
-  const value = perChange * maxValue;
-
-  if (value < minValue) {
-    return minValue;
-  }
-
-  if (value > maxValue) {
-    return maxValue;
-  }
-
-  return value;
-}
-
 export function toggleCube() {
+  const scrolled = window.pageYOffset;
   const minScaleValue = 1;
   const maxScaleValue = 8;
   const minTranslateXPosition = 0;
@@ -35,7 +16,7 @@ export function toggleCube() {
   const minTranslateYPosition = 0;
   const maxTranslateYPosition = 2500;
 
-  const perChange = (window.pageYOffset - advantageSectionScrollPosition) / RATE_CHANGE_SCROLL;
+  const perChange = (scrolled - advantageSectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
 
@@ -54,24 +35,45 @@ export function toggleCube() {
 }
 
 export function toggleCubes() {
+  const scrolled = window.pageYOffset;
   const minTranslateYPosition = 0;
   const maxTranslateYPosition = 5000;
-  const perChange = (window.pageYOffset - advantageSectionScrollPosition) / RATE_CHANGE_SCROLL;
+  const perChange = (scrolled - advantageSectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
   const isCubesYPositionMoreThanMaxValue = translateYPosition >= maxTranslateYPosition;
 
-  for (let i = 0; i < cubes.length; i++) {
-    const isMainCube = cubes[i].id === 'main-cube';
+  cubes.forEach(cube => {
+    const isMainCube = cube.id === 'main-cube';
 
     if (isCubesYPositionMoreThanMaxValue && !isMainCube) {
-      cubes[i].style.display = 'none';
+      cube.style.display = 'none';
     } else {
-      cubes[i].style.display = 'block';
+      cube.style.display = 'block';
     }
-  }
+  });
 
   if (!isCubesYPositionMoreThanMaxValue) {
     translateCubesAnimation(translateYPosition);
   }
+}
+
+function translateCubesAnimation(translateYPosition) {
+  cubesTranslateElements.forEach(cubeTranslateElement => {
+    cubeTranslateElement.style.transform = `translate(0px, -${translateYPosition}px)`;
+  });
+}
+
+function getValueBetweenRange(perChange, minValue, maxValue) {
+  const value = perChange * maxValue;
+
+  if (value < minValue) {
+    return minValue;
+  }
+
+  if (value > maxValue) {
+    return maxValue;
+  }
+
+  return value;
 }

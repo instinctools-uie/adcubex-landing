@@ -1,5 +1,5 @@
 const menuContainer = document.querySelector('.menu-container');
-const items = document.querySelectorAll('.menu-container > a');
+const links = document.querySelectorAll('.menu-container > a');
 
 menuContainer.addEventListener('click', e => {
   const linkElement = e.target;
@@ -11,48 +11,50 @@ menuContainer.addEventListener('click', e => {
 
   const isRedLink = linkElement.classList.contains('link_red');
   if (isRedLink) {
-    for (let i = 0; i < items.length; i++) {
-      const isActiveLink = items[i].classList.contains('link_red--active');
+    links.forEach(link => {
+      const isActiveLink = link.classList.contains('link_red--active');
       if (isActiveLink) {
-        items[i].classList.remove('link_red--active');
+        link.classList.remove('link_red--active');
       }
-    }
+    });
+
     linkElement.classList.add('link_red--active');
   }
 
   const isBlackLink = linkElement.classList.contains('link_black');
 
   if (isBlackLink) {
-    for (let i = 0; i < items.length; i++) {
-      const isActiveLink = items[i].classList.contains('link_black--active');
+    links.forEach(link => {
+      const isActiveLink = link.classList.contains('link_black--active');
       if (isActiveLink) {
-        items[i].classList.remove('link_black--active');
+        link.classList.remove('link_black--active');
       }
-    }
+    });
+
     linkElement.classList.add('link_black--active');
   }
 });
 
-export function changeActiveMenuItemToBlack() {
-  for (let i = 0; i < items.length; i++) {
-    const isActiveRedLink = items[i].classList.contains('link_red--active');
+export function changeActiveMenuLinkToBlack() {
+  links.forEach(link => {
+    const isActiveRedLink = link.classList.contains('link_red--active');
     if (isActiveRedLink) {
-      items[i].classList.remove('link_red--active');
-      items[i].classList.add('link_black--active');
+      link.classList.remove('link_red--active');
+      link.classList.add('link_black--active');
     }
-    items[i].classList.remove('link_red');
-    items[i].classList.add('link_black');
-  }
+    link.classList.remove('link_red');
+    link.classList.add('link_black');
+  });
 }
 
-export function changeActiveMenuItemToRed() {
-  for (let i = 0; i < items.length; i++) {
-    const isActiveBlackLink = items[i].classList.contains('link_black--active');
+export function changeActiveMenuLinkToRed() {
+  links.forEach(link => {
+    const isActiveBlackLink = link.classList.contains('link_black--active');
     if (isActiveBlackLink) {
-      items[i].classList.remove('link_black--active');
-      items[i].classList.add('link_red--active');
+      link.classList.remove('link_black--active');
+      link.classList.add('link_red--active');
     }
-    items[i].classList.remove('link_black');
-    items[i].classList.add('link_red');
-  }
+    link.classList.remove('link_black');
+    link.classList.add('link_red');
+  });
 }

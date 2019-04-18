@@ -4,10 +4,9 @@ export function toggleTextOfSection() {
   const scrolled = window.pageYOffset;
   const sections = window.document.querySelectorAll('.section-container');
 
-  for (let i = 0; i < sections.length; i++) {
-    const currentSection = sections[i];
-    const nextSection = sections[i + 1];
-    const scrollPositionOfCurrentSection = currentSection.offsetTop;
+  sections.forEach((section, index) => {
+    const nextSection = sections[index + 1];
+    const scrollPositionOfCurrentSection = section.offsetTop;
     const scrollPositionOfNextSection = nextSection ? nextSection.offsetTop : document.documentElement.scrollHeight;
     const scrollDifferenceBetweenSections = scrollPositionOfNextSection - scrollPositionOfCurrentSection;
     const scrollHalfOfDifferenceBetweenSections = scrollDifferenceBetweenSections / 2;
@@ -15,10 +14,10 @@ export function toggleTextOfSection() {
 
     if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
       nextSection && nextSection.classList.add('section-container--active');
-      currentSection.classList.remove('section-container--active');
+      section.classList.remove('section-container--active');
     } else if (scrolled < scrollPositionWhenShouldToggleText && scrolled > scrollPositionOfCurrentSection) {
-      currentSection.classList.add('section-container--active');
+      section.classList.add('section-container--active');
       nextSection && nextSection.classList.remove('section-container--active');
     }
-  }
+  });
 }

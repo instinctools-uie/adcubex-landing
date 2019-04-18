@@ -8,7 +8,7 @@ import {
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
 import { toggleTextOfSection } from './toggleTextOfSection';
-import { changeActiveMenuItemToBlack, changeActiveMenuItemToRed } from './menu';
+import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 
 const advantageSection = window.document.querySelector('.advantage-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -17,45 +17,45 @@ const advantageSectionScrollPosition = advantageSection.offsetTop;
 const expertiseSectionScrollPosition = expertiseSection.offsetTop;
 const investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-function initProject() {
-  const scrollPosition = window.pageYOffset;
+window.addEventListener('scroll', initProject);
 
-  if (scrollPosition < advantageSectionScrollPosition) {
+window.addEventListener('load', initProject);
+
+function initProject() {
+  const scrolled = window.pageYOffset;
+
+  if (scrolled < advantageSectionScrollPosition) {
     changeBackgroundColorToWhite();
     changeCubeColorToDefault();
   }
 
-  if (scrollPosition > expertiseSectionScrollPosition) {
+  if (scrolled > expertiseSectionScrollPosition) {
     changeMenuItemsColorToWhite();
   }
 
-  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= expertiseSectionScrollPosition) {
     changeColorForAdvantageSection(advantageSectionScrollPosition);
   }
 
-  if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
+  if (scrolled > expertiseSectionScrollPosition && scrolled <= investmentsSectionScrollPosition) {
     changeColorForExpertiseSection(expertiseSectionScrollPosition);
   }
 
-  if (scrollPosition > investmentsSectionScrollPosition) {
+  if (scrolled > investmentsSectionScrollPosition) {
     changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
   //  TODO: Find solution for remove "20"
-  if (scrollPosition > expertiseSectionScrollPosition - 20) {
-    changeActiveMenuItemToBlack();
+  if (scrolled > expertiseSectionScrollPosition - 20) {
+    changeActiveMenuLinkToBlack();
   }
 
   //  TODO: Find solution for remove "20"
-  if (scrollPosition < expertiseSectionScrollPosition - 20) {
-    changeActiveMenuItemToRed();
+  if (scrolled < expertiseSectionScrollPosition - 20) {
+    changeActiveMenuLinkToRed();
   }
 
   toggleCube();
   toggleCubes();
   toggleTextOfSection();
 }
-
-window.addEventListener('scroll', initProject);
-
-window.addEventListener('load', initProject);
