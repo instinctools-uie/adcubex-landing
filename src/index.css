@@ -192,7 +192,7 @@ h2 {
   width: 15.625rem;
   padding-left: 0.9rem;
   border: none;
-  margin-top: 4.875rem;
+  margin-top: 7.5rem;
   background-color: #ef3e3e;
   color: #ffffff;
   font-family: 'montserrat_lightregular', sans-serif;
@@ -211,7 +211,8 @@ h2 {
   margin-top: 17rem;
 }
 
-.advantage-section > .section-container > h2 > span {
+.advantage-section > .section-container > h2 > span,
+.toolset-section > div > h2 > span {
   color: #ef3e3e;
 }
 
@@ -234,7 +235,8 @@ h2 {
 
 .budget-text-container,
 .control-text-container,
-.power-text-container {
+.power-text-container,
+.toolset-text-container {
   display: flex;
   justify-content: space-between;
   margin: 0 0 0 18.775rem;
@@ -298,31 +300,78 @@ div.power-image > .image-content > p.image-content_large {
   font-weight: 900;
 }
 
+.toolset-text-container > .text-container > .inner-section-text {
+  margin-top: -7em;
+}
+
+.toolset-section > div > div > div > div > p {
+  color: #484848;
+}
+
+.advertising-section > .section-container > h2 > span {
+  color: #ef3e3e;
+}
+
+.advertising-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 6rem;
+  width: 22.76rem;
+  margin-top: 5.938rem;
+}
+
+.advertising-check {
+  display: flex;
+  justify-content: space-between;
+  width: 28rem;
+  margin-top: 4.063rem;
+  color: #ababab;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+}
+
+.advertising-check > input {
+  margin-top: 1rem;
+}
+
+.advertising-section > div > div > button.expertise-button {
+  margin-top: 3rem;
+  width: 14.063rem;
+}
+
+.advertising-section > div > .inner-section-text {
+  margin-left: 0;
+}
+
+.advertising-section > div > div > p {
+  margin-top: -13rem;
+}
+
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
-}
-
-.chat-container {
-  position: relative;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  width: 3.125em;
-  height: 3.125em;
-  background-color: #303030;
-  border-radius: 50%;
-  margin: 0 2.813em 2.375em 0;
+  margin: 16.25rem 0 2.5rem 0;
+  color: #ababab;
+  font-size: 0.875rem;
 }
 
-.chat-container > svg {
-  top: 0.125em;
-  width: 1.438em;
-  height: 1.438em;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 68.625rem;
+}
+
+.footer-container:first-child {
+  flex-grow: 1;
+}
+
+.footer-container > p > sup {
+  color: red;
+}
+
+.footer-container > p > span {
+  color: black;
 }
 
 .supervise-section div h1 > span,
