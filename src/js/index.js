@@ -17,37 +17,41 @@ const advantageSectionScrollPosition = advantageSection.offsetTop;
 const expertiseSectionScrollPosition = expertiseSection.offsetTop;
 const investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-function initProject() {
-  const scrollPosition = window.pageYOffset;
+window.addEventListener('scroll', initProject);
 
-  if (scrollPosition < advantageSectionScrollPosition) {
+window.addEventListener('load', initProject);
+
+function initProject() {
+  const scrolled = window.pageYOffset;
+
+  if (scrolled < advantageSectionScrollPosition) {
     changeBackgroundColorToWhite();
     changeCubeColorToDefault();
   }
 
-  if (scrollPosition > expertiseSectionScrollPosition) {
+  if (scrolled > expertiseSectionScrollPosition) {
     changeMenuItemsColorToWhite();
   }
 
-  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= expertiseSectionScrollPosition) {
     changeColorForAdvantageSection(advantageSectionScrollPosition);
   }
 
-  if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
+  if (scrolled > expertiseSectionScrollPosition && scrolled <= investmentsSectionScrollPosition) {
     changeColorForExpertiseSection(expertiseSectionScrollPosition);
   }
 
-  if (scrollPosition > investmentsSectionScrollPosition) {
+  if (scrolled > investmentsSectionScrollPosition) {
     changeColorForInvestmentsSection(investmentsSectionScrollPosition);
   }
 
   //  TODO: Find solution for remove "20"
-  if (scrollPosition > expertiseSectionScrollPosition - 20) {
+  if (scrolled > expertiseSectionScrollPosition - 20) {
     changeActiveMenuItemToBlack();
   }
 
   //  TODO: Find solution for remove "20"
-  if (scrollPosition < expertiseSectionScrollPosition - 20) {
+  if (scrolled < expertiseSectionScrollPosition - 20) {
     changeActiveMenuItemToRed();
   }
 
@@ -55,7 +59,3 @@ function initProject() {
   toggleCubes();
   toggleTextOfSection();
 }
-
-window.addEventListener('scroll', initProject);
-
-window.addEventListener('load', initProject);
