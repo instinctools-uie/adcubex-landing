@@ -1,24 +1,73 @@
 {
   "name": "adcubex",
   "version": "1.0.0",
-  "description": "",
-  "main": "menu.js",
+  "description": "adcubex",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "./node_modules/.bin/prettier --single-quote --write '**/**.{js,jsx,json,css,html}'"
+    "build": "gulp",
+    "start": "gulp",
+    "format": "prettier --single-quote --write 'src/**/*.{js,css}'",
+    "lint": "eslint src",
+    "test": "jest --coverage"
   },
   "pre-commit": [
-    "format"
+    "test",
+    "format",
+    "lint"
   ],
   "repository": {
     "type": "git",
     "url": "https://gitlab.instinctools.com/oxy/adcubex.git"
   },
-  "keywords": [],
-  "author": "",
+  "jest": {
+    "verbose": true,
+    "coverageDirectory": "./__coverage__"
+  },
+  "keywords": [
+    "SEM",
+    "search engine marketing",
+    "advertising",
+    "digital advertising",
+    "digital marketing",
+    "adwords",
+    "google adwords",
+    "google ads",
+    "advertising in social networks",
+    "worldwide advertising",
+    "massive ads",
+    "big budget advertising",
+    "bing",
+    "google adwords",
+    "yahoo"
+  ],
+  "author": "Archik team",
   "license": "ISC",
-  "dependencies": {
-    "pre-commit": "^1.2.2",
-    "prettier": "1.16.4"
+  "devDependencies": {
+    "@babel/core": "7.4.3",
+    "@babel/preset-env": "7.4.3",
+    "babel-eslint": "10.0.1",
+    "babel-jest": "24.7.1",
+    "babelify": "6.4.0",
+    "browserify": "11.2.0",
+    "eslint": "5.9.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-prettier": "3.3.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.2",
+    "eslint-plugin-prettier": "2.3.1",
+    "eslint-plugin-react": "7.11.1",
+    "gulp": "3.9.0",
+    "gulp-babel": "5.2.1",
+    "gulp-clean-css": "4.0.0",
+    "gulp-concat": "2.6.0",
+    "gulp-connect": "2.2.0",
+    "gulp-uglify": "3.0.2",
+    "jest": "24.7.1",
+    "main-bower-files": "2.13.1",
+    "pre-commit": "1.2.2",
+    "prettier": "1.7.4",
+    "vinyl-buffer": "1.0.1",
+    "vinyl-source-stream": "1.1.0"
   }
 }

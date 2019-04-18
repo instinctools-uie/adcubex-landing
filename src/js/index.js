@@ -1,51 +1,61 @@
-(function(window) {
-  const advantageSection = window.document.querySelector('.advantage-section');
-  const expertiseSection = window.document.querySelector('.expertise-section');
-  const investmentsSection = window.document.querySelector('.investments-section');
-  const advantageSectionScrollPosition = advantageSection.offsetTop;
-  const expertiseSectionScrollPosition = expertiseSection.offsetTop;
-  const investmentsSectionScrollPosition = investmentsSection.offsetTop;
+import {
+  changeColorForAdvantageSection,
+  changeColorForExpertiseSection,
+  changeColorForInvestmentsSection,
+  changeMenuItemsColorToWhite,
+  changeBackgroundColorToWhite,
+  changeCubeColorToDefault
+} from './changeColor';
+import { toggleCube, toggleCubes } from './toggleCubes';
+import { toggleTextOfSection } from './toggleTextOfSection';
+import { changeActiveMenuItemToBlack, changeActiveMenuItemToRed } from './menu';
 
-  initProject();
+const advantageSection = window.document.querySelector('.advantage-section');
+const expertiseSection = window.document.querySelector('.expertise-section');
+const investmentsSection = window.document.querySelector('.investments-section');
+const advantageSectionScrollPosition = advantageSection.offsetTop;
+const expertiseSectionScrollPosition = expertiseSection.offsetTop;
+const investmentsSectionScrollPosition = investmentsSection.offsetTop;
 
-  window.addEventListener('scroll', initProject);
+function initProject() {
+  const scrollPosition = window.pageYOffset;
 
-  function initProject() {
-    const scrollPosition = window.pageYOffset;
-
-    if (scrollPosition < advantageSectionScrollPosition) {
-      window.AdCubex.changeBackgroundColorToWhite();
-      window.AdCubex.changeCubeColorToDefault();
-    }
-
-    if (scrollPosition > expertiseSectionScrollPosition) {
-      window.AdCubex.changeMenuItemsColorToWhite();
-    }
-
-    if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
-      window.AdCubex.changeColorForAdvantageSection(advantageSectionScrollPosition);
-    }
-
-    if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
-      window.AdCubex.changeColorForExpertiseSection(expertiseSectionScrollPosition);
-    }
-
-    if (scrollPosition > investmentsSectionScrollPosition) {
-      window.AdCubex.changeColorForInvestmentsSection(investmentsSectionScrollPosition);
-    }
-
-    //TODO: Find solution for remove "20"
-    if (scrollPosition > expertiseSectionScrollPosition - 20) {
-      window.AdCubex.changeActiveMenuItemToBlack();
-    }
-
-    //TODO: Find solution for remove "20"
-    if (scrollPosition < expertiseSectionScrollPosition - 20) {
-      window.AdCubex.changeActiveMenuItemToRed();
-    }
-
-    window.AdCubex.toggleCube();
-    window.AdCubex.toggleCubes();
-    window.AdCubex.toggleTextOfSection();
+  if (scrollPosition < advantageSectionScrollPosition) {
+    changeBackgroundColorToWhite();
+    changeCubeColorToDefault();
   }
-})(window);
+
+  if (scrollPosition > expertiseSectionScrollPosition) {
+    changeMenuItemsColorToWhite();
+  }
+
+  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= expertiseSectionScrollPosition) {
+    changeColorForAdvantageSection(advantageSectionScrollPosition);
+  }
+
+  if (scrollPosition > expertiseSectionScrollPosition && scrollPosition <= investmentsSectionScrollPosition) {
+    changeColorForExpertiseSection(expertiseSectionScrollPosition);
+  }
+
+  if (scrollPosition > investmentsSectionScrollPosition) {
+    changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+  }
+
+  //  TODO: Find solution for remove "20"
+  if (scrollPosition > expertiseSectionScrollPosition - 20) {
+    changeActiveMenuItemToBlack();
+  }
+
+  //  TODO: Find solution for remove "20"
+  if (scrollPosition < expertiseSectionScrollPosition - 20) {
+    changeActiveMenuItemToRed();
+  }
+
+  toggleCube();
+  toggleCubes();
+  toggleTextOfSection();
+}
+
+window.addEventListener('scroll', initProject);
+
+window.addEventListener('load', initProject);
