@@ -123,22 +123,22 @@ export function changeBackgroundColorToWhite() {
 }
 
 export function changeCubeColorToDefault() {
-  const { defaultColor: cubeLeftSideDefaultColors } = CUBE_LEFT_SIDE_ELEMENT_OPTIONS;
-  const { defaultColor: cubeRightSideDefaultColors } = CUBE_RIGHT_SIDE_ELEMENT_OPTIONS;
-  const { defaultColor: cubeBottomSideDefaultColors } = CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS;
+  const { defaultColor: cubeLeftSideDefaultColor } = CUBE_LEFT_SIDE_ELEMENT_OPTIONS;
+  const { defaultColor: cubeRightSideDefaultColor } = CUBE_RIGHT_SIDE_ELEMENT_OPTIONS;
+  const { defaultColor: cubeBottomSideDefaultColor } = CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS;
   document.querySelector(CUBE_LEFT_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${cubeLeftSideDefaultColors.red},
-   ${cubeLeftSideDefaultColors.green},
-    ${cubeLeftSideDefaultColors.blue}
+  ${cubeLeftSideDefaultColor.red},
+   ${cubeLeftSideDefaultColor.green},
+    ${cubeLeftSideDefaultColor.blue}
     )`;
   document.querySelector(CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${cubeRightSideDefaultColors.red},
-   ${cubeRightSideDefaultColors.green},
-    ${cubeRightSideDefaultColors.blue})`;
+  ${cubeRightSideDefaultColor.red},
+   ${cubeRightSideDefaultColor.green},
+    ${cubeRightSideDefaultColor.blue})`;
   document.querySelector(CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${cubeBottomSideDefaultColors.red},
-   ${cubeBottomSideDefaultColors.green},
-    ${cubeBottomSideDefaultColors.blue})`;
+  ${cubeBottomSideDefaultColor.red},
+   ${cubeBottomSideDefaultColor.green},
+    ${cubeBottomSideDefaultColor.blue})`;
 }
 
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
