@@ -43,15 +43,15 @@ export function toggleCubes() {
   const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
   const isCubesYPositionMoreThanMaxValue = translateYPosition >= maxTranslateYPosition;
 
-  for (let i = 0; i < cubes.length; i++) {
-    const isMainCube = cubes[i].id === 'main-cube';
+  cubes.forEach(cube => {
+    const isMainCube = cube.id === 'main-cube';
 
     if (isCubesYPositionMoreThanMaxValue && !isMainCube) {
-      cubes[i].style.display = 'none';
+      cube.style.display = 'none';
     } else {
-      cubes[i].style.display = 'block';
+      cube.style.display = 'block';
     }
-  }
+  });
 
   if (!isCubesYPositionMoreThanMaxValue) {
     translateCubesAnimation(translateYPosition);
@@ -59,9 +59,9 @@ export function toggleCubes() {
 }
 
 function translateCubesAnimation(translateYPosition) {
-  for (let i = 0; i < cubesTranslateElements.length; i++) {
-    cubesTranslateElements[i].style.transform = `translate(0px, -${translateYPosition}px)`;
-  }
+  cubesTranslateElements.forEach(cubeTranslateElement => {
+    cubeTranslateElement.style.transform = `translate(0px, -${translateYPosition}px)`;
+  });
 }
 
 function getValueBetweenRange(perChange, minValue, maxValue) {

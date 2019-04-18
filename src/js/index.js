@@ -8,7 +8,7 @@ import {
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
 import { toggleTextOfSection } from './toggleTextOfSection';
-import { changeActiveMenuItemToBlack, changeActiveMenuItemToRed } from './menu';
+import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 
 const advantageSection = window.document.querySelector('.advantage-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -47,12 +47,12 @@ function initProject() {
 
   //  TODO: Find solution for remove "20"
   if (scrolled > expertiseSectionScrollPosition - 20) {
-    changeActiveMenuItemToBlack();
+    changeActiveMenuLinkToBlack();
   }
 
   //  TODO: Find solution for remove "20"
   if (scrolled < expertiseSectionScrollPosition - 20) {
-    changeActiveMenuItemToRed();
+    changeActiveMenuLinkToRed();
   }
 
   toggleCube();
