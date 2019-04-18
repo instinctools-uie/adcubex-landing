@@ -1,3 +1,6 @@
+@import './css/cubesAnimation.css';
+@import './css/normalize.css';
+
 html {
   scroll-behavior: smooth;
 }
