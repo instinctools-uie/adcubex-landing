@@ -4,7 +4,7 @@
   "description": "adcubex",
   "main": "index.js",
   "scripts": {
-    "build": "gulp",
+    "build": "gulp build",
     "start": "gulp",
     "format": "prettier --single-quote --write 'src/**/*.{js,css}'",
     "lint": "eslint src",
