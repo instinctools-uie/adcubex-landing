@@ -20,9 +20,9 @@ const budgetSectionScrollPosition = budgetSection.offsetTop;
 const controlSectionScrollPosition = controlSection.offsetTop;
 const toolsetSectionScrollPosition = toolsetSection.offsetTop;
 
-window.addEventListener('scroll', initProject);
+initProject();
 
-window.addEventListener('load', initProject);
+window.addEventListener('scroll', initProject);
 
 function initProject() {
   const scrolled = window.pageYOffset;
@@ -68,7 +68,3 @@ function initProject() {
   toggleCubes();
   toggleTextOfSection();
 }
-
-window.addEventListener('scroll', initProject);
-
-window.addEventListener('load', initProject);
