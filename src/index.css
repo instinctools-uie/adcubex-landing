@@ -96,10 +96,11 @@ body {
 .effectiveness-section {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .supervise-section {
-  padding-top: 14em;
+  margin-top: 14em;
 }
 
 h1,
@@ -108,13 +109,12 @@ h2 {
 }
 
 .section-container {
-  padding-right: 2%;
-  color: #303030;
   z-index: 1;
   width: 69em;
   opacity: 0;
   transform: translateX(-100px);
   transition: opacity 0.5s, transform 0.5s;
+  color: #303030;
 }
 
 .section-container--active {
@@ -122,9 +122,9 @@ h2 {
   transform: translateX(0);
 }
 
-.budget-section > .section-container > h2,
-.control-section > .section-container > h2,
-.power-section > .section-container > h2 {
+.budget-section > h2,
+.control-section > h2,
+.power-section > h2 {
   color: white;
 }
 
@@ -143,14 +143,14 @@ h2 {
   line-height: 2.375rem;
 }
 
-.expertise-section > .section-container > div > .inner-section-text > p > span,
-.power-section > .section-container > div > div > p > span {
+.expertise-section .inner-section-text > p > span,
+.power-section div > p > span {
   font-size: 2.188rem;
 }
 
 .section-container > h1,
 .section-container > h2 {
-  padding-top: 1em;
+  margin-top: 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -164,7 +164,7 @@ h2 {
 
 .text-container {
   display: flex;
-  margin-top: 8em;
+  margin-top: 3em;
 }
 
 .expertise-section > .section-container > .text-container {
@@ -216,7 +216,7 @@ h2 {
 }
 
 .advantage-section > .section-container > h2 > span,
-.toolset-section > div > h2 > span {
+.toolset-section > h2 > span {
   color: #ef3e3e;
 }
 
@@ -227,7 +227,7 @@ h2 {
   line-height: 3.25rem;
 }
 
-.budget-section > .section-container > p.expertise-section-background-inscription {
+.budget-section > p.expertise-section-background-inscription {
   position: absolute;
   bottom: -3.938rem;
   left: 63.125rem;
@@ -247,16 +247,16 @@ h2 {
   color: #ffffff;
 }
 
-.budget-section > .section-container > .budget-text-container > .budget-text > p,
-.control-section > .section-container > .control-text-container > .control-text > p {
+.budget-section > .budget-text-container > .budget-text > p,
+.control-section > .control-text-container > .control-text > p {
   font-size: 1.5em;
   font-weight: 600;
   line-height: 1.6em;
 }
 
-.budget-section > .section-container > .budget-text-container > .budget-text > .expertise-button,
-.control-section > .section-container > .control-text-container > .control-text > .expertise-button,
-.power-section > .section-container > .power-text-container > div > .expertise-button {
+.budget-section > .budget-text-container > .budget-text > .expertise-button,
+.control-section > .control-text-container > .control-text > .expertise-button,
+.power-section > .power-text-container > div > .expertise-button {
   border: 0.01em solid #bcbcbc;
   background-color: transparent;
   height: 3.5em;
@@ -265,11 +265,11 @@ h2 {
   font-size: 0.9em;
 }
 
-.power-section > .section-container > .power-text-container > div > .expertise-button {
+.power-section > .power-text-container > div > .expertise-button {
   font-size: 0.6em;
 }
 
-.budget-section > .section-container > .expertise-button:hover {
+.budget-section > .expertise-button:hover {
   border: 1px solid #ffffff;
 }
 
@@ -316,11 +316,11 @@ div.power-image > .image-content > p.image-content_large {
   margin-top: -7em;
 }
 
-.toolset-section > div > div > div > div > p {
+.toolset-section div > p {
   color: #484848;
 }
 
-.advertising-section > .section-container > h2 > span {
+.advertising-section > h2 > span {
   color: #ef3e3e;
 }
 
@@ -336,6 +336,7 @@ div.power-image > .image-content > p.image-content_large {
 .advertising-check {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
   width: 36em;
   margin-top: 5.063em;
   color: #ababab;
@@ -343,20 +344,16 @@ div.power-image > .image-content > p.image-content_large {
   line-height: 1.5em;
 }
 
-.advertising-check > input {
-  margin-top: 1.1em;
-}
-
-.advertising-section > div > div > button.expertise-button {
+.advertising-section div > button.expertise-button {
   margin-top: 3.2em;
   width: 14.5em;
 }
 
-.advertising-section > div > .inner-section-text {
+.advertising-section .inner-section-text {
   margin-left: 0;
 }
 
-.advertising-section > div > div > p {
+.advertising-section div > p {
   margin-top: -2em;
 }
 
@@ -386,8 +383,8 @@ footer {
   color: black;
 }
 
-.supervise-section div h1 > span,
-.advantage-section div h2 > span,
-.expertise-section div h2 > span {
+.supervise-section h1 > span,
+.advantage-section h2 > span,
+.expertise-section h2 > span {
   color: #ef3e3e;
 }
