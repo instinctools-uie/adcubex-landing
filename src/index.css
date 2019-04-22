@@ -238,6 +238,19 @@ h2 {
   font-size: 0.8em;
 }
 
+.budget-section > svg,
+.control-section > svg,
+.power-section > svg {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 11em;
+}
+
+.power-section > svg {
+  top: 7em;
+}
+
 .budget-text-container,
 .control-text-container,
 .power-text-container,
