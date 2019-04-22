@@ -24,7 +24,23 @@ export const CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS = {
   blueColor: { red: 72, green: 80, blue: 223 },
   purpleColor: { red: 150, green: 49, blue: 213 }
 };
+export const WHITE_COLOR = { red: 255, green: 255, blue: 255 };
+export const BLACK_COLOR = { red: 0, green: 0, blue: 0 };
 export const RED_BACKGROUND_COLOR = { red: 240, green: 62, blue: 62 };
 export const BLUE_BACKGROUND_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_BACKGROUND_COLOR = { red: 157, green: 55, blue: 227 };
 export const RATE_CHANGE_SCROLL = 960;
+export const MENU_ELEMENT = {
+  selector: '.menu-container',
+  property: 'color'
+};
+
+export const MENU_BUTTON_ELEMENT = {
+  selector: '.menu-button > svg',
+  property: 'fill'
+};
+export const LOGO_ELEMENT = {
+  selector: '.logo-container > svg',
+  property: 'fill',
+  redColor: { red: 237, green: 28, blue: 36 }
+};

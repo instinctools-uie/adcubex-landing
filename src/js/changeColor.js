@@ -7,28 +7,25 @@ import {
   RED_BACKGROUND_COLOR,
   BLUE_BACKGROUND_COLOR,
   PURPLE_BACKGROUND_COLOR,
-  RATE_CHANGE_SCROLL
+  RATE_CHANGE_SCROLL,
+  WHITE_COLOR,
+  BLACK_COLOR,
+  MENU_ELEMENT,
+  MENU_BUTTON_ELEMENT,
+  LOGO_ELEMENT
 } from './constants';
 
 export function changeColorForBudgetSection(budgetSectionScrollPosition) {
-  const whiteColor = { red: 255, green: 255, blue: 255 };
-  const blackColor = { red: 0, green: 0, blue: 0 };
-  const redLogoColor = { red: 237, green: 28, blue: 36 };
-
-  const menu = { selector: '.menu-container', property: 'color' };
-  const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
-  const logoElement = { selector: '.logo-container > svg', property: 'fill' };
-
   changeColor(
-    whiteColor,
+    WHITE_COLOR,
     RED_BACKGROUND_COLOR,
     [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
     budgetSectionScrollPosition
   );
 
-  changeColor(blackColor, whiteColor, [menu, menuButtonElement], budgetSectionScrollPosition);
+  changeColor(BLACK_COLOR, WHITE_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], budgetSectionScrollPosition);
 
-  changeColor(redLogoColor, whiteColor, [logoElement], budgetSectionScrollPosition);
+  changeColor(LOGO_ELEMENT.redColor, WHITE_COLOR, [LOGO_ELEMENT], budgetSectionScrollPosition);
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
@@ -52,7 +49,7 @@ export function changeColorForBudgetSection(budgetSectionScrollPosition) {
   );
 }
 
-export function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
+export function changeColorForControlSection(expertiseSectionScrollPosition) {
   changeColor(
     RED_BACKGROUND_COLOR,
     BLUE_BACKGROUND_COLOR,
@@ -82,7 +79,7 @@ export function changeColorForExpertiseSection(expertiseSectionScrollPosition) {
   );
 }
 
-export function changeColorForInvestmentsSection(investmentsSectionScrollPosition) {
+export function changeColorForPowerSection(investmentsSectionScrollPosition) {
   changeColor(
     BLUE_BACKGROUND_COLOR,
     PURPLE_BACKGROUND_COLOR,
@@ -109,6 +106,40 @@ export function changeColorForInvestmentsSection(investmentsSectionScrollPositio
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.purpleColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
     investmentsSectionScrollPosition
+  );
+}
+
+export function changeColorForToolsetSection(powerSectionScrollPosition) {
+  changeColor(
+    PURPLE_BACKGROUND_COLOR,
+    WHITE_COLOR,
+    [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
+    powerSectionScrollPosition
+  );
+
+  changeColor(WHITE_COLOR, BLACK_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], powerSectionScrollPosition);
+
+  changeColor(WHITE_COLOR, LOGO_ELEMENT.redColor, [LOGO_ELEMENT], powerSectionScrollPosition);
+
+  changeColor(
+    CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
+    CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
+    [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
+    powerSectionScrollPosition
+  );
+
+  changeColor(
+    CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.purpleColor,
+    CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor,
+    [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
+    powerSectionScrollPosition
+  );
+
+  changeColor(
+    CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.purpleColor,
+    CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor,
+    [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
+    powerSectionScrollPosition
   );
 }
 
