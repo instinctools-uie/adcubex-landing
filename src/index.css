@@ -129,6 +129,19 @@ h2 {
   color: white;
 }
 
+.budget-section > svg,
+.control-section > svg,
+.power-section > svg {
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  top: 11em;
+}
+
+.power-section > svg {
+  top: 7em;
+}
+
 .section-container > a {
   display: inline-flex;
   align-items: center;
@@ -236,19 +249,6 @@ h2 {
   transform: rotate(90deg);
   color: rgb(248, 176, 177);
   font-size: 0.8em;
-}
-
-.budget-section > svg,
-.control-section > svg,
-.power-section > svg {
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 11em;
-}
-
-.power-section > svg {
-  top: 7em;
 }
 
 .budget-text-container,
