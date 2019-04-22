@@ -7,28 +7,25 @@ import {
   RED_BACKGROUND_COLOR,
   BLUE_BACKGROUND_COLOR,
   PURPLE_BACKGROUND_COLOR,
-  RATE_CHANGE_SCROLL
+  RATE_CHANGE_SCROLL,
+  WHITE_COLOR,
+  BLACK_COLOR,
+  MENU_ELEMENT,
+  MENU_BUTTON_ELEMENT,
+  LOGO_ELEMENT
 } from './constants';
 
 export function changeColorForBudgetSection(budgetSectionScrollPosition) {
-  const whiteColor = { red: 255, green: 255, blue: 255 };
-  const blackColor = { red: 0, green: 0, blue: 0 };
-  const redLogoColor = { red: 237, green: 28, blue: 36 };
-
-  const menu = { selector: '.menu-container', property: 'color' };
-  const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
-  const logoElement = { selector: '.logo-container > svg', property: 'fill' };
-
   changeColor(
-    whiteColor,
+    WHITE_COLOR,
     RED_BACKGROUND_COLOR,
     [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
     budgetSectionScrollPosition
   );
 
-  changeColor(blackColor, whiteColor, [menu, menuButtonElement], budgetSectionScrollPosition);
+  changeColor(BLACK_COLOR, WHITE_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], budgetSectionScrollPosition);
 
-  changeColor(redLogoColor, whiteColor, [logoElement], budgetSectionScrollPosition);
+  changeColor(LOGO_ELEMENT.redColor, WHITE_COLOR, [LOGO_ELEMENT], budgetSectionScrollPosition);
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
@@ -113,24 +110,16 @@ export function changeColorForPowerSection(investmentsSectionScrollPosition) {
 }
 
 export function changeColorForToolsetSection(powerSectionScrollPosition) {
-  const whiteColor = { red: 255, green: 255, blue: 255 };
-  const blackColor = { red: 0, green: 0, blue: 0 };
-  const redLogoColor = { red: 237, green: 28, blue: 36 };
-
-  const menu = { selector: '.menu-container', property: 'color' };
-  const menuButtonElement = { selector: '.menu-button > svg', property: 'fill' };
-  const logoElement = { selector: '.logo-container > svg', property: 'fill' };
-
   changeColor(
     PURPLE_BACKGROUND_COLOR,
-    whiteColor,
+    WHITE_COLOR,
     [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
     powerSectionScrollPosition
   );
 
-  changeColor(whiteColor, blackColor, [menu, menuButtonElement], powerSectionScrollPosition);
+  changeColor(WHITE_COLOR, BLACK_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], powerSectionScrollPosition);
 
-  changeColor(whiteColor, redLogoColor, [logoElement], powerSectionScrollPosition);
+  changeColor(WHITE_COLOR, LOGO_ELEMENT.redColor, [LOGO_ELEMENT], powerSectionScrollPosition);
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
