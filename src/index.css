@@ -240,6 +240,7 @@ h2 {
 
 .budget-text-container,
 .control-text-container,
+.advantage-text-container,
 .power-text-container,
 .toolset-text-container,
 .improvement-text-container {
@@ -319,7 +320,8 @@ div.power-image > .image-content > p.image-content_large {
 }
 
 .toolset-section div > p,
-.improvement-section div > p {
+.improvement-section div > p,
+.advantage-section div > p {
   color: #484848;
 }
 
@@ -356,6 +358,12 @@ footer {
 
 .footer-container:first-child {
   flex-grow: 1;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }
 
 .footer-left > p > sup {
