@@ -358,12 +358,22 @@ footer {
   flex-grow: 1;
 }
 
-.footer-container > p > sup {
+.footer-left > p > sup {
   color: red;
 }
 
-.footer-container > p > span {
+.footer-left > p > span {
   color: black;
+}
+
+.footer-left > a,
+.footer-right > a {
+  color: #ababab;
+  text-decoration: none;
+}
+
+.footer-right > a {
+  padding: 0 0.8em;
 }
 
 .supervise-section h1 > span,
