@@ -41,10 +41,12 @@ function initProject() {
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
+    //  TODO: I think there is change color for "control" section. Not for "expertise" section.
     changeColorForExpertiseSection(budgetSectionScrollPosition);
   }
 
   if (scrolled > controlSectionScrollPosition && scrolled <= toolsetSectionScrollPosition) {
+    //  TODO: I think there is change color for "toolset" section. Not for "investments" section. And i didn`t find that section.
     changeColorForInvestmentsSection(controlSectionScrollPosition);
   }
 

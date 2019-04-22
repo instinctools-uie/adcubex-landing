@@ -1,6 +1,7 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
 @import './css/onLoadAnimation.css';
+/*TODO: Use "em" instead of "rem" where it make sense*/
 
 html {
   scroll-behavior: smooth;
