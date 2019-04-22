@@ -1,5 +1,7 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
+@import './css/onLoadAnimation.css';
+/*TODO: Use "em" instead of "rem" where it make sense*/
 
 html {
   scroll-behavior: smooth;
@@ -31,7 +33,7 @@ body {
 
 .logo-container {
   display: block;
-  width: 1.7rem;
+  width: 1.7em;
 }
 
 .logo-container > svg {
@@ -51,7 +53,7 @@ body {
 .menu-container > .link {
   color: inherit;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 0.875em;
   text-decoration: none;
   cursor: pointer;
 }
@@ -81,19 +83,25 @@ body {
   cursor: pointer;
 }
 
-.content {
-  margin-top: 10.125rem;
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #353535;
 }
 
-.dynamic-section,
-.advantage-section,
+.supervise-section,
 .expertise-section,
+.budget-section,
 .investments-section,
 .effectiveness-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 60em;
+  flex-direction: column;
+}
+
+.supervise-section {
+  margin-top: 14em;
 }
 
 h1,
@@ -103,10 +111,11 @@ h2 {
 
 .section-container {
   z-index: 1;
-  width: 65em;
+  width: 69em;
   opacity: 0;
   transform: translateX(-100px);
   transition: opacity 0.5s, transform 0.5s;
+  color: #303030;
 }
 
 .section-container--active {
@@ -114,15 +123,9 @@ h2 {
   transform: translateX(0);
 }
 
-.section-container {
-  position: relative;
-  color: #303030;
-  padding-right: 5%;
-}
-
-.expertise-section .section-container,
-.investments-section .section-container,
-.effectiveness-section .section-container {
+.budget-section > h2,
+.control-section > h2,
+.power-section > h2 {
   color: white;
 }
 
@@ -135,26 +138,97 @@ h2 {
   text-decoration: none;
 }
 
+.section-container > p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 2.375rem;
+}
+
+.expertise-section .inner-section-text > p > span,
+.power-section div > p > span {
+  font-size: 2.188rem;
+}
+
 .section-container > h1,
 .section-container > h2 {
+  margin-top: 1em;
+  font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
-  font-weight: 800;
-  font-size: 6.5em;
+  font-weight: normal;
+  font-size: 7.5em;
   letter-spacing: 0;
-  line-height: 115px;
+  line-height: 1.125em;
   text-align: left;
   text-decoration: none;
   text-transform: none;
 }
 
-.section-container > p {
-  width: 43rem;
-  line-height: 1.5em;
-  font-size: 1.5em;
-  font-style: normal;
+.text-container {
+  display: flex;
+  margin-top: 3em;
 }
 
-.expertise-section > .section-container > p.expertise-section-background-inscription {
+.expertise-section > .section-container > .text-container {
+  margin-top: -2.5em;
+}
+
+.inner-section-image {
+  min-width: 16.063em;
+  margin: 2.5em 0 0 -2.5em;
+}
+
+.expertise-section > .section-container > .text-container > .inner-section-image {
+  margin-top: 5em;
+}
+
+.inner-section-text {
+  margin-left: -1.5em;
+  font-family: montserrat_mediumregular, sans-serif;
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.7em;
+}
+
+.expertise-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.6em;
+  width: 15.625em;
+  padding-left: 0.9em;
+  border: none;
+  margin-top: 7em;
+  background-color: #ef3e3e;
+  color: #fff;
+  font-family: montserrat_lightregular, sans-serif;
+  font-size: 0.6em;
+  font-weight: 600;
+}
+
+.social-section {
+  display: flex;
+  justify-content: space-between;
+  width: 68em;
+  margin-top: 14.625em;
+}
+
+.advantage-section > .section-container {
+  margin-top: 17em;
+}
+
+.advantage-section > .section-container > h2 > span,
+.toolset-section > h2 > span {
+  color: #ef3e3e;
+}
+
+.advantage-section > .section-container > p {
+  padding-top: 2rem;
+  font-family: 'montserrat_extralightregular', sans-serif;
+  font-size: 2.25rem;
+  line-height: 3.25rem;
+}
+
+.budget-section > p.expertise-section-background-inscription {
   position: absolute;
   bottom: -3.938rem;
   left: 63.125rem;
@@ -164,34 +238,154 @@ h2 {
   font-size: 0.8em;
 }
 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
+.budget-text-container,
+.control-text-container,
+.power-text-container,
+.toolset-text-container {
   display: flex;
-  justify-content: flex-end;
-  width: 100%;
+  justify-content: space-between;
+  margin: 0 0 0 18.775em;
+  color: #ffffff;
 }
 
-.chat-container {
-  position: relative;
+.budget-section > .budget-text-container > .budget-text > p,
+.control-section > .control-text-container > .control-text > p {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+
+.budget-section > .budget-text-container > .budget-text > .expertise-button,
+.control-section > .control-text-container > .control-text > .expertise-button,
+.power-section > .power-text-container > div > .expertise-button {
+  border: 0.01em solid #bcbcbc;
+  background-color: transparent;
+  height: 3.5em;
+  width: 15.5em;
+  margin-top: 4.6em;
+  font-size: 0.9em;
+}
+
+.power-section > .power-text-container > div > .expertise-button {
+  font-size: 0.6em;
+}
+
+.budget-section > .expertise-button:hover {
+  border: 1px solid #ffffff;
+}
+
+.budget-image,
+.power-image {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 3.125em;
-  height: 3.125em;
-  background-color: #303030;
-  border-radius: 50%;
-  margin: 0 2.813em 2.375em 0;
+  height: 43.688rem;
+  width: 18.875rem;
+  margin: 2rem -4.063rem 0 0;
+  background-image: url(../assets/images/rectangle.svg);
 }
 
-.chat-container > svg {
-  top: 0.125em;
-  width: 1.438em;
-  height: 1.438em;
+.image-content {
+  width: 14.5rem;
+  margin-top: 10.25rem;
 }
 
-.dynamic-section div h1 > span,
-.advantage-section div h2 > span {
+.image-content_middle {
+  font-family: 'montserratbold', sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.625rem;
+}
+
+.image-content_small {
+  margin-top: 0.938rem;
+}
+
+.image-content_large {
+  margin-top: 3rem;
+  font-family: 'montserratbold', sans-serif;
+  font-size: 4.5rem;
+  line-height: 0;
+}
+
+div.power-image > .image-content > p.image-content_large {
+  margin-top: 2rem;
+  font-family: 'montserrat_extraboldregular', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.toolset-text-container > .text-container > .inner-section-text {
+  margin-top: -7em;
+}
+
+.toolset-section div > p {
+  color: #484848;
+}
+
+.advertising-section > h2 > span {
+  color: #ef3e3e;
+}
+
+.advertising-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 4em;
+  width: 16.76em;
+  margin-top: 2.938em;
+}
+
+.advertising-check {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 36em;
+  margin-top: 5.063em;
+  color: #ababab;
+  font-size: 0.5em;
+  line-height: 1.5em;
+}
+
+.advertising-section div > button.expertise-button {
+  margin-top: 3.2em;
+  width: 14.5em;
+}
+
+.advertising-section .inner-section-text {
+  margin-left: 0;
+}
+
+.advertising-section div > p {
+  margin-top: -2em;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin: 16.25rem 0 2.5rem 0;
+  color: #ababab;
+  font-size: 0.875rem;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 68.625rem;
+}
+
+.footer-container:first-child {
+  flex-grow: 1;
+}
+
+.footer-container > p > sup {
+  color: red;
+}
+
+.footer-container > p > span {
+  color: black;
+}
+
+.supervise-section h1 > span,
+.advantage-section h2 > span,
+.expertise-section h2 > span {
   color: #ef3e3e;
 }

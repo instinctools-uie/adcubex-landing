@@ -1,5 +1,6 @@
 import {
-  changeColorForAdvantageSection,
+  changeMenuItemsColorToBlack,
+  changeColorForBudgetSection,
   changeColorForExpertiseSection,
   changeColorForInvestmentsSection,
   changeMenuItemsColorToWhite,
@@ -11,15 +12,17 @@ import { toggleTextOfSection } from './toggleTextOfSection';
 import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 
 const advantageSection = window.document.querySelector('.advantage-section');
-const expertiseSection = window.document.querySelector('.expertise-section');
-const investmentsSection = window.document.querySelector('.investments-section');
+const budgetSection = window.document.querySelector('.budget-section');
+const controlSection = window.document.querySelector('.control-section');
+const toolsetSection = window.document.querySelector('.toolset-section');
 const advantageSectionScrollPosition = advantageSection.offsetTop;
-const expertiseSectionScrollPosition = expertiseSection.offsetTop;
-const investmentsSectionScrollPosition = investmentsSection.offsetTop;
+const budgetSectionScrollPosition = budgetSection.offsetTop;
+const controlSectionScrollPosition = controlSection.offsetTop;
+const toolsetSectionScrollPosition = toolsetSection.offsetTop;
+
+initProject();
 
 window.addEventListener('scroll', initProject);
-
-window.addEventListener('load', initProject);
 
 function initProject() {
   const scrolled = window.pageYOffset;
@@ -29,29 +32,37 @@ function initProject() {
     changeCubeColorToDefault();
   }
 
-  if (scrolled > expertiseSectionScrollPosition) {
+  if (scrolled > budgetSectionScrollPosition && scrolled < toolsetSectionScrollPosition) {
     changeMenuItemsColorToWhite();
   }
 
-  if (scrolled >= advantageSectionScrollPosition && scrolled <= expertiseSectionScrollPosition) {
-    changeColorForAdvantageSection(advantageSectionScrollPosition);
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
+    changeColorForBudgetSection(advantageSectionScrollPosition);
   }
 
-  if (scrolled > expertiseSectionScrollPosition && scrolled <= investmentsSectionScrollPosition) {
-    changeColorForExpertiseSection(expertiseSectionScrollPosition);
+  if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
+    //  TODO: I think there is change color for "control" section. Not for "expertise" section.
+    changeColorForExpertiseSection(budgetSectionScrollPosition);
   }
 
-  if (scrolled > investmentsSectionScrollPosition) {
-    changeColorForInvestmentsSection(investmentsSectionScrollPosition);
+  if (scrolled > controlSectionScrollPosition && scrolled <= toolsetSectionScrollPosition) {
+    //  TODO: I think there is change color for "toolset" section. Not for "investments" section. And i didn`t find that section.
+    changeColorForInvestmentsSection(controlSectionScrollPosition);
   }
 
-  //  TODO: Find solution for remove "20"
-  if (scrolled > expertiseSectionScrollPosition - 20) {
+  if (scrolled > toolsetSectionScrollPosition) {
+    changeBackgroundColorToWhite();
+    changeMenuItemsColorToBlack();
+    changeCubeColorToDefault();
+  }
+
+  // TODO: Find solution for remove "20"
+  if (scrolled > budgetSectionScrollPosition - 20) {
     changeActiveMenuLinkToBlack();
   }
 
-  //  TODO: Find solution for remove "20"
-  if (scrolled < expertiseSectionScrollPosition - 20) {
+  // TODO: Find solution for remove "20"
+  if (scrolled < budgetSectionScrollPosition - 20) {
     changeActiveMenuLinkToRed();
   }
 

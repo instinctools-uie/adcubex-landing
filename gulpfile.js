@@ -8,6 +8,7 @@ const uglify = require('gulp-uglify');
 const cleanCSS = require('gulp-clean-css');
 const buffer = require('vinyl-buffer');
 const mainBowerFiles = require('main-bower-files');
+const image = require('gulp-image');
 
 gulp.task('connect', function() {
   connect.server({
@@ -48,10 +49,24 @@ gulp.task('fonts', () => {
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
-gulp.task('watch', function() {
+gulp.task('image', function () {
+  gulp.src('./assets/images/*')
+    .pipe(image())
+    .pipe(gulp.dest('./build/assets/images'));
+});
+
+gulp.task('meta', function () {
+  gulp.src('./assets/meta/*')
+    .pipe(image())
+    .pipe(gulp.dest('./build/assets/meta'));
+});
+
+gulp.task('listen', function() {
   gulp.watch('./src/**/*.js', ['js']);
   gulp.watch('./src/**/*.css', ['css']);
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['js', 'css', 'html', 'fonts', 'connect', 'watch']);
+gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+
+gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);

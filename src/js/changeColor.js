@@ -10,7 +10,7 @@ import {
   RATE_CHANGE_SCROLL
 } from './constants';
 
-export function changeColorForAdvantageSection(advantageSectionScrollPosition) {
+export function changeColorForBudgetSection(budgetSectionScrollPosition) {
   const whiteColor = { red: 255, green: 255, blue: 255 };
   const blackColor = { red: 0, green: 0, blue: 0 };
   const redLogoColor = { red: 237, green: 28, blue: 36 };
@@ -23,32 +23,32 @@ export function changeColorForAdvantageSection(advantageSectionScrollPosition) {
     whiteColor,
     RED_BACKGROUND_COLOR,
     [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
-    advantageSectionScrollPosition
+    budgetSectionScrollPosition
   );
 
-  changeColor(blackColor, whiteColor, [menu, menuButtonElement], advantageSectionScrollPosition);
+  changeColor(blackColor, whiteColor, [menu, menuButtonElement], budgetSectionScrollPosition);
 
-  changeColor(redLogoColor, whiteColor, [logoElement], advantageSectionScrollPosition);
+  changeColor(redLogoColor, whiteColor, [logoElement], budgetSectionScrollPosition);
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-    advantageSectionScrollPosition
+    budgetSectionScrollPosition
   );
 
   changeColor(
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-    advantageSectionScrollPosition
+    budgetSectionScrollPosition
   );
 
   changeColor(
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-    advantageSectionScrollPosition
+    budgetSectionScrollPosition
   );
 }
 
@@ -116,6 +116,13 @@ export function changeMenuItemsColorToWhite() {
   document.querySelector('.menu-container').style.color = 'white';
   document.querySelector('.logo-container > svg').style.fill = 'white';
   document.querySelector('.menu-button > svg').style.fill = 'white';
+}
+
+export function changeMenuItemsColorToBlack() {
+  document.querySelector('.menu-container').style.color = 'black';
+  // ToDo: Fix to correct logo color
+  document.querySelector('.logo-container > svg').style.fill = 'red';
+  document.querySelector('.menu-button > svg').style.fill = 'black';
 }
 
 export function changeBackgroundColorToWhite() {
