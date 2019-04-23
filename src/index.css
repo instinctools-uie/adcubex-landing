@@ -27,8 +27,62 @@ body {
   padding: 0 4rem 0 4rem;
   height: 10.125rem;
   width: 100%;
-
   background-color: transparent;
+}
+
+.header-container .logo,
+.header-container .button-container {
+  z-index: 3;
+}
+
+#logo-AdCubex tspan,
+#when-ad-go-huge tspan {
+  fill: white !important;
+}
+
+.header-navigation {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  display: flex;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2f4eef;
+  will-change: opacity;
+}
+
+.header-navigation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 4rem 0 4rem;
+  margin-top: 15em;
+}
+
+.header-links-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.header-links-container a {
+  color: #ffffff;
+  font-family: 'montserratbold', sans-serif;
+  font-size: 90px;
+  font-weight: 500;
+  line-height: 95px;
+  text-decoration: none;
+}
+
+.header-links-container a:hover {
+  color: #353535;
+}
+
+.header-links-container a + a {
+  margin-top: 0.2em;
 }
 
 .menu-container {
