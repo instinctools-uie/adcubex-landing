@@ -123,6 +123,43 @@ h2 {
   transform: translateX(0);
 }
 
+.vertical-inscription {
+  display: flex;
+  justify-content: space-between;
+  min-width: 25em;
+  margin-top: 2em;
+  transform: rotate(90deg);
+}
+
+.wrap-image {
+  transform: rotate(-90deg);
+  height: 3em;
+  width: 3em;
+}
+
+.wrap-image > img {
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.wrap-image > img:hover {
+  -o-transform: translateY(1.33em);
+  -ms-transform: translateY(1.33em);
+  -moz-transform: translateY(1.33em);
+  -webkit-transform: translateY(1.33em);
+  transform: translateY(1.33em);
+}
+
+.vertical-inscription > p {
+  margin: 0.1em 1em 0 0;
+  color: #353535;
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+
 .budget-section > h2,
 .control-section > h2,
 .power-section > h2 {
