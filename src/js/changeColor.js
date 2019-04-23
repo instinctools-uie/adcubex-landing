@@ -1,6 +1,5 @@
 import {
   BODY_ELEMENT_OPTIONS,
-  CUBE_ELEMENT_OPTIONS,
   CUBE_LEFT_SIDE_ELEMENT_OPTIONS,
   CUBE_RIGHT_SIDE_ELEMENT_OPTIONS,
   CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS,
@@ -10,22 +9,22 @@ import {
   RATE_CHANGE_SCROLL,
   WHITE_COLOR,
   BLACK_COLOR,
-  MENU_ELEMENT,
-  MENU_BUTTON_ELEMENT,
+  MENU_ELEMENT_OPTIONS,
+  MENU_BUTTON_ELEMENT_OPTIONS,
   LOGO_AD_WORD_OPTIONS,
   LOGO_CUBEX_WORD_OPTIONS,
   LOGO_GO_HUGE_WORD_OPTIONS
 } from './constants';
 
 export function changeColorForBudgetSection(budgetSectionScrollPosition) {
+  changeColor(WHITE_COLOR, RED_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], budgetSectionScrollPosition);
+
   changeColor(
+    BLACK_COLOR,
     WHITE_COLOR,
-    RED_BACKGROUND_COLOR,
-    [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
+    [MENU_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS],
     budgetSectionScrollPosition
   );
-
-  changeColor(BLACK_COLOR, WHITE_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], budgetSectionScrollPosition);
 
   changeColor(
     LOGO_AD_WORD_OPTIONS.defaultColor,
@@ -63,12 +62,7 @@ export function changeColorForBudgetSection(budgetSectionScrollPosition) {
 }
 
 export function changeColorForControlSection(expertiseSectionScrollPosition) {
-  changeColor(
-    RED_BACKGROUND_COLOR,
-    BLUE_BACKGROUND_COLOR,
-    [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
-    expertiseSectionScrollPosition
-  );
+  changeColor(RED_BACKGROUND_COLOR, BLUE_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], expertiseSectionScrollPosition);
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
@@ -93,12 +87,7 @@ export function changeColorForControlSection(expertiseSectionScrollPosition) {
 }
 
 export function changeColorForPowerSection(investmentsSectionScrollPosition) {
-  changeColor(
-    BLUE_BACKGROUND_COLOR,
-    PURPLE_BACKGROUND_COLOR,
-    [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
-    investmentsSectionScrollPosition
-  );
+  changeColor(BLUE_BACKGROUND_COLOR, PURPLE_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], investmentsSectionScrollPosition);
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
@@ -123,14 +112,14 @@ export function changeColorForPowerSection(investmentsSectionScrollPosition) {
 }
 
 export function changeColorForToolsetSection(powerSectionScrollPosition) {
+  changeColor(PURPLE_BACKGROUND_COLOR, WHITE_COLOR, [BODY_ELEMENT_OPTIONS], powerSectionScrollPosition);
+
   changeColor(
-    PURPLE_BACKGROUND_COLOR,
     WHITE_COLOR,
-    [BODY_ELEMENT_OPTIONS, CUBE_ELEMENT_OPTIONS],
+    BLACK_COLOR,
+    [MENU_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS],
     powerSectionScrollPosition
   );
-
-  changeColor(WHITE_COLOR, BLACK_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], powerSectionScrollPosition);
 
   changeColor(
     LOGO_AD_WORD_OPTIONS.whiteColor,
@@ -168,23 +157,23 @@ export function changeColorForToolsetSection(powerSectionScrollPosition) {
 }
 
 export function changeMenuItemsColorToWhite() {
-  changeSelectorElementsProperty(MENU_ELEMENT, WHITE_COLOR);
+  changeSelectorElementsProperty(MENU_ELEMENT_OPTIONS, WHITE_COLOR);
   changeSelectorElementsProperty(LOGO_AD_WORD_OPTIONS, WHITE_COLOR);
   changeSelectorElementsProperty(LOGO_CUBEX_WORD_OPTIONS, WHITE_COLOR);
   changeSelectorElementsProperty(LOGO_GO_HUGE_WORD_OPTIONS, WHITE_COLOR);
-  changeSelectorElementsProperty(MENU_BUTTON_ELEMENT, WHITE_COLOR);
+  changeSelectorElementsProperty(MENU_BUTTON_ELEMENT_OPTIONS, WHITE_COLOR);
 }
 
-export function changeMenuItemsColorToBlack() {
-  changeSelectorElementsProperty(MENU_ELEMENT, BLACK_COLOR);
+export function changeMenuItemsColorToDefault() {
+  changeSelectorElementsProperty(MENU_ELEMENT_OPTIONS, MENU_ELEMENT_OPTIONS.defaultColor);
   changeSelectorElementsProperty(LOGO_AD_WORD_OPTIONS, LOGO_AD_WORD_OPTIONS.defaultColor);
   changeSelectorElementsProperty(LOGO_CUBEX_WORD_OPTIONS, LOGO_CUBEX_WORD_OPTIONS.defaultColor);
   changeSelectorElementsProperty(LOGO_GO_HUGE_WORD_OPTIONS, LOGO_GO_HUGE_WORD_OPTIONS.defaultColor);
-  changeSelectorElementsProperty(MENU_BUTTON_ELEMENT, BLACK_COLOR);
+  changeSelectorElementsProperty(MENU_BUTTON_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS.defaultColor);
 }
 
-export function changeBackgroundColorToWhite() {
-  changeSelectorElementsProperty(BODY_ELEMENT_OPTIONS, WHITE_COLOR);
+export function changeBackgroundColorToDefault() {
+  changeSelectorElementsProperty(BODY_ELEMENT_OPTIONS, BODY_ELEMENT_OPTIONS.defaultColor);
 }
 
 export function changeCubeColorToDefault() {

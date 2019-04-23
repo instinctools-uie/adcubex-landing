@@ -4,8 +4,8 @@ import {
   changeColorForControlSection,
   changeColorForPowerSection,
   changeMenuItemsColorToWhite,
-  changeBackgroundColorToWhite,
-  changeMenuItemsColorToBlack,
+  changeBackgroundColorToDefault,
+  changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
@@ -31,7 +31,7 @@ function initProject() {
   const scrolled = window.pageYOffset;
 
   if (scrolled < advantageSectionScrollPosition || scrolled > toolsetSectionScrollPosition) {
-    changeBackgroundColorToWhite();
+    changeBackgroundColorToDefault();
     changeCubeColorToDefault();
   }
 
@@ -40,7 +40,7 @@ function initProject() {
   }
 
   if (scrolled < budgetSectionScrollPosition || scrolled > toolsetSectionScrollPosition) {
-    changeMenuItemsColorToBlack();
+    changeMenuItemsColorToDefault();
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
@@ -59,13 +59,11 @@ function initProject() {
     changeColorForToolsetSection(powerSectionScrollPosition);
   }
 
-  // TODO: Find solution for remove "20"
-  if (scrolled > budgetSectionScrollPosition - 20) {
+  if (scrolled > budgetSectionScrollPosition) {
     changeActiveMenuLinkToBlack();
   }
 
-  // TODO: Find solution for remove "20"
-  if (scrolled < budgetSectionScrollPosition - 20) {
+  if (scrolled < budgetSectionScrollPosition) {
     changeActiveMenuLinkToRed();
   }
 
