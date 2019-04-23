@@ -243,8 +243,10 @@ h2 {
 .power-text-container,
 .improvement-text-container {
   display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
-  margin: 0 0 0 18.775em;
+  /*margin: 0 0 0 18.775em;*/
   color: #ffffff;
 }
 
@@ -274,22 +276,33 @@ h2 {
   border: 1px solid #ffffff;
 }
 
+.budget-text {
+  width: 100%;
+}
+
 .budget-image,
 .power-image {
   display: flex;
   justify-content: center;
-  height: 43.688rem;
-  width: 18.875rem;
-  margin: 2rem -4.063rem 0 0;
-  background-image: url(../assets/images/rectangle.svg);
+  padding: 5em 0;
+  min-width: 56.3125em;
+  background-image: url(../assets/images/rectangle2.svg);
 }
 
-.image-content {
-  width: 14.5rem;
-  margin-top: 10.25rem;
+.budget-image {
+  margin-top: 14.6875rem;
+}
+
+.power-image {
+  margin-left: 7.9375em;
+}
+
+.image-content-section {
+  margin-left: 3.75em;
 }
 
 .image-content_middle {
+  height: 100%;
   font-family: 'montserratbold', sans-serif;
   font-size: 2.25rem;
   line-height: 2.625rem;
@@ -297,10 +310,11 @@ h2 {
 
 .image-content_small {
   margin-top: 0.938rem;
+  line-height: 1.1875rem;
 }
 
 .image-content_large {
-  margin-top: 3rem;
+  margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
   line-height: 0;
