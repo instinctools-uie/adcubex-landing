@@ -12,6 +12,11 @@ body {
   font-family: 'montserrat_lightregular', sans-serif;
 }
 
+h1,
+h2 {
+  font-family: 'montserrat_extraboldregular', sans-serif;
+}
+
 .arrow {
   width: 1.4em;
   margin-left: 1.5em;
@@ -92,9 +97,12 @@ body {
 
 .supervise-section,
 .expertise-section,
+.toolset-section,
+.advantage-section,
 .budget-section,
-.investments-section,
-.effectiveness-section {
+.control-section,
+.power-section,
+.improvement-section {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -102,11 +110,6 @@ body {
 
 .supervise-section {
   margin-top: 14em;
-}
-
-h1,
-h2 {
-  font-family: 'montserrat_extraboldregular', sans-serif;
 }
 
 .section-container {
@@ -202,12 +205,12 @@ h2 {
   line-height: 1.7em;
 }
 
-.expertise-button {
+.custom-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.6em;
-  width: 15.625em;
+  width: 23.625em;
+  height: 5em;
   padding-left: 0.9em;
   border: none;
   margin-top: 7em;
@@ -216,13 +219,19 @@ h2 {
   font-family: montserrat_lightregular, sans-serif;
   font-size: 0.6em;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .social-section {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 68em;
   margin-top: 14.625em;
+}
+
+.social-section > img {
+  height: 100%;
 }
 
 .advantage-section > .section-container {
@@ -241,16 +250,6 @@ h2 {
   line-height: 3.25rem;
 }
 
-.budget-section > p.expertise-section-background-inscription {
-  position: absolute;
-  bottom: -3.938rem;
-  left: 63.125rem;
-  max-width: 13.125rem;
-  transform: rotate(90deg);
-  color: rgb(248, 176, 177);
-  font-size: 0.8em;
-}
-
 .budget-text-container,
 .control-text-container,
 .power-text-container {
@@ -258,7 +257,6 @@ h2 {
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
-  /*margin: 0 0 0 18.775em;*/
   color: #ffffff;
 }
 
@@ -270,9 +268,9 @@ h2 {
   line-height: 1.6em;
 }
 
-.budget-section > .budget-text-container > .budget-text > .expertise-button,
-.control-section > .control-text-container > .control-text > .expertise-button,
-.power-section > .power-text-container > .power-image-container > .expertise-button {
+.budget-section > .budget-text-container > .budget-text > button,
+.control-section > .control-text-container > .control-text > button,
+.power-section > .power-text-container > .power-image-container > button {
   border: 0.01em solid #bcbcbc;
   background-color: transparent;
   height: 3.5em;
@@ -281,11 +279,11 @@ h2 {
   font-size: 0.9em;
 }
 
-.power-section > .power-text-container > div > .expertise-button {
+.power-section > .power-text-container > div > button {
   font-size: 0.6em;
 }
 
-.budget-section > .expertise-button:hover {
+.budget-section > button:hover {
   border: 1px solid #ffffff;
 }
 
@@ -352,23 +350,6 @@ div.power-image > .image-content > p.image-content_large {
   color: #484848;
 }
 
-.improvement-section > h2 > span {
-  color: #ef3e3e;
-}
-
-.improvement-section div > button.expertise-button {
-  margin-top: 3.2em;
-  width: 14.5em;
-}
-
-.improvement-section .inner-section-text {
-  margin-left: 0;
-}
-
-.improvement-section div > p {
-  margin-top: -2em;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -391,6 +372,10 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+}
+
+.footer-left {
+  font-style: normal;
 }
 
 .footer-left > p > sup {
