@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
     <title>5E7B27E7-D89C-4003-A9B9-1E060DE65BA2</title>
     <desc>Created with sketchtool.</desc>
@@ -17,7 +17,7 @@
                             </mask>
                             <use fill="#000000" xlink:href="#path-1"></use>
                             <g id="Color" mask="url(#mask-2)" fill="#353535">
-                                <rect id="Rectangle" x="0" y="0" width="46" height="46"></rect>
+                                <rect id="Rectangle" x="0" y="0" width="45" height="45"></rect>
                             </g>
                         </g>
                     </g>
