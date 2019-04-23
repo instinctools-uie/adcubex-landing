@@ -251,7 +251,8 @@ h2 {
 }
 
 .budget-section > .budget-text-container > .budget-text > p,
-.control-section > .control-text-container > .control-text > p {
+.control-section > .control-text-container > .control-text > p,
+.power-section > .power-text-container > .power-text > p {
   font-size: 1.5em;
   font-weight: 600;
   line-height: 1.6em;
@@ -259,7 +260,7 @@ h2 {
 
 .budget-section > .budget-text-container > .budget-text > .expertise-button,
 .control-section > .control-text-container > .control-text > .expertise-button,
-.power-section > .power-text-container > div > .expertise-button {
+.power-section > .power-text-container > .power-image-container > .expertise-button {
   border: 0.01em solid #bcbcbc;
   background-color: transparent;
   height: 3.5em;
@@ -276,7 +277,9 @@ h2 {
   border: 1px solid #ffffff;
 }
 
-.budget-text {
+.budget-text,
+.control-text,
+.power-text {
   width: 100%;
 }
 
@@ -293,7 +296,7 @@ h2 {
   margin-top: 14.6875rem;
 }
 
-.power-image {
+.power-image-container {
   margin-left: 7.9375em;
 }
 
