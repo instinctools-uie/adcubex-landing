@@ -128,16 +128,14 @@ h2 {
 
 .vertical-inscription {
   display: flex;
-  justify-content: space-between;
-  min-width: 25em;
-  margin-top: 2em;
-  transform: rotate(90deg);
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 2rem 0 0 11rem;
 }
 
 .wrap-image {
-  transform: rotate(-90deg);
-  height: 3em;
-  width: 3em;
+  height: 3rem;
+  width: 3rem;
 }
 
 .wrap-image > img {
@@ -150,19 +148,20 @@ h2 {
 }
 
 .wrap-image > img:hover {
-  -o-transform: translateY(1.33em);
-  -ms-transform: translateY(1.33em);
-  -moz-transform: translateY(1.33em);
-  -webkit-transform: translateY(1.33em);
-  transform: translateY(1.33em);
+  -o-transform: translateY(1.33rem);
+  -ms-transform: translateY(1.33rem);
+  -moz-transform: translateY(1.33rem);
+  -webkit-transform: translateY(1.33rem);
+  transform: translateY(1.33rem);
 }
 
-.vertical-inscription > p {
-  margin: 0.1em 1em 0 0;
+.vertical-inscription > span {
+  margin: 12rem 0 0 -5.6rem;
   color: #353535;
   font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
+  transform: rotate(90deg);
 }
 
 .budget-section > h2,
@@ -286,10 +285,8 @@ h2 {
   display: flex;
 }
 
-.advantage-content-wrapper > .vertical-inscription {
-	margin-bottom: -24em;
-	margin-left: -15em;
-  min-width: 30em;
+.advantage-content-wrapper > .vertical-inscription > span {
+  margin: 14rem 0 0 -7.4rem;
 }
 
 .advantage-section > .advantage-content-wrapper > p {
@@ -304,23 +301,28 @@ h2 {
 .power-text-container {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   color: #ffffff;
 }
 
-.budget-section > .budget-text-container > .budget-text > p,
+.budget-text-container > .first-line,
+.power-text-container > .first-line {
+  display: flex;
+}
+
+.budget-text-container > .first-line > .budget-text > p,
 .control-section > .control-text-container > .control-text > p,
-.power-section > .power-text-container > .power-text > p {
-	width: 18.375em;
-	font-size: 1.5em;
+.power-text-container > .first-line > .power-text > p {
+  width: 18.375em;
+  font-size: 1.5em;
   font-weight: 600;
   line-height: 1.6em;
 }
 
-.budget-section > .budget-text-container > .budget-text > button,
+.budget-text-container > .first-line > .budget-text > button,
 .control-section > .control-text-container > .control-text > button,
-.power-section > .power-text-container > .power-image-container > button {
+.power-text-container > .first-line > .power-image-container > button {
   border: 0.01em solid #bcbcbc;
   background-color: transparent;
   height: 3.5em;
@@ -329,22 +331,29 @@ h2 {
   font-size: 0.9em;
 }
 
-.budget-section > .budget-text-container > .vertical-inscription {
-	min-width: 14em;
-	margin: -27em 0 0 -70em;
+.budget-text-container .first-line > .vertical-inscription {
+	margin-left: 32rem;
 }
 
-.budget-section > .budget-text-container > .vertical-inscription > p,
-.power-section > .power-text-container > .vertical-inscription > p {
-	color: #ffffff;
+.budget-text-container > .first-line > .vertical-inscription > span,
+.power-text-container > .first-line > .vertical-inscription > span {
+  color: #ffffff;
 }
 
-.power-section > .power-text-container > div > button {
+.budget-text-container > .first-line > .vertical-inscription > span {
+  margin: 3.5em 0 0 -0.3em;
+}
+
+.power-text-container > .first-line > .vertical-inscription > span {
+  margin: 5.1em 0 0 -1.6em;
+}
+
+.power-text-container > .first-line > div > button {
   font-size: 0.6em;
 }
 
-.power-section > .power-text-container > .vertical-inscription {
-	margin: -16em 0 0 -60em;
+.power-text-container > .first-line > .vertical-inscription {
+  margin: 2em 0 0 34em;
 }
 
 .budget-section > button:hover {
@@ -367,11 +376,11 @@ h2 {
 }
 
 .budget-image {
-  margin-top: 14.6875rem;
+  margin: 10rem 0 0 16.25rem;
 }
 
 .power-image-container {
-  margin-left: 7.9375em;
+  margin: 8.75em 0 0 16.25em;
 }
 
 .image-content-section {
@@ -412,10 +421,6 @@ div.power-image > .image-content > p.image-content_large {
 .improvement-section div > p,
 .advantage-section div > p {
   color: #484848;
-}
-
-.advantage-section .inner-section-text > p {
-	min-width: 33.3125em;
 }
 
 footer {
