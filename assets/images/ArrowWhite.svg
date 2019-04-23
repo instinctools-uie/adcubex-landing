@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="46px" height="46px" viewBox="0 0 46 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>6DE8CE05-F80E-41F2-BCF6-BEDB7FE43504</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="20.125 0 20.125 35.0748873 4.02511275 18.975 0 22.9998873 23.0001127 46 46 22.9998873 41.9751127 18.975 25.875 35.0748873 25.875 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-page_1920-90_Final-(I-hope)" transform="translate(-1471.000000, -5631.000000)">
+            <g id="Red-section" transform="translate(-10.000000, 5017.000000)">
+                <g id="Anchor" transform="translate(1481.000000, 614.000000)">
+                    <g id="Icons-/-Arrow">
+                        <g id="Arrow">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill="#000000" xlink:href="#path-1"></use>
+                            <g id="Color" mask="url(#mask-2)" fill="#FFFFFF">
+                                <rect id="Rectangle" x="0" y="0" width="46" height="46"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
