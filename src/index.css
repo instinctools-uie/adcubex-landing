@@ -240,9 +240,7 @@ h2 {
 
 .budget-text-container,
 .control-text-container,
-.advantage-text-container,
 .power-text-container,
-.toolset-text-container,
 .improvement-text-container {
   display: flex;
   justify-content: space-between;
