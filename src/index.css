@@ -436,12 +436,9 @@ div.power-image > .image-content > p.image-content_large {
 
 .mailIcon-container {
   position: fixed;
-  display: block;
-}
-
-.mailIcon-section {
-  display: flex;
-  justify-content: flex-end;
+  right: 0.063em;
+  bottom: 1.25em;
+  z-index: 10;
 }
 
 .mailImg {
