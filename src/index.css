@@ -253,8 +253,7 @@ h2 {
 
 .budget-text-container,
 .control-text-container,
-.power-text-container,
-.improvement-text-container {
+.power-text-container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
