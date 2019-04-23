@@ -434,6 +434,27 @@ div.power-image > .image-content > p.image-content_large {
   margin-top: -2em;
 }
 
+.mailIcon-container {
+  position: fixed;
+  display: block;
+}
+
+.mailIcon-section {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mailImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.25em;
+  height: 3.25em;
+  margin: 0 4em 0 0;
+  border-radius: 50%;
+  background-color: #353535;
+}
+
 footer {
   display: flex;
   justify-content: center;
