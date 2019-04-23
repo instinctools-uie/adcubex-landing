@@ -123,6 +123,45 @@ h2 {
   transform: translateX(0);
 }
 
+.vertical-inscription {
+  display: flex;
+  justify-content: space-between;
+  min-width: 25em;
+  margin-top: 2em;
+  transform: rotate(90deg);
+}
+
+.wrap-image {
+  transform: rotate(-90deg);
+  height: 3em;
+  width: 3em;
+}
+
+.wrap-image > img {
+  -o-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.wrap-image > img:hover {
+  -o-transform: translateY(1.33em);
+  -ms-transform: translateY(1.33em);
+  -moz-transform: translateY(1.33em);
+  -webkit-transform: translateY(1.33em);
+  transform: translateY(1.33em);
+}
+
+.vertical-inscription > p {
+  margin: 0.1em 1em 0 0;
+  color: #353535;
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 2em;
+  font-weight: 600;
+}
+
 .budget-section > h2,
 .control-section > h2,
 .power-section > h2 {
@@ -234,7 +273,17 @@ h2 {
   color: #ef3e3e;
 }
 
-.advantage-section > .section-container > p {
+.advantage-content-wrapper {
+  display: flex;
+}
+
+.advantage-content-wrapper > .vertical-inscription {
+  margin-bottom: -22em;
+  margin-left: -10em;
+  min-width: 30em;
+}
+
+.advantage-section > .advantage-content-wrapper > p {
   padding-top: 2rem;
   font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 2.25rem;
@@ -257,15 +306,25 @@ h2 {
 .toolset-text-container {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 0 18.775em;
   color: #ffffff;
 }
 
 .budget-section > .budget-text-container > .budget-text > p,
 .control-section > .control-text-container > .control-text > p {
+  width: 18.375em;
   font-size: 1.5em;
   font-weight: 600;
   line-height: 1.6em;
+}
+
+.budget-section > .budget-text-container > .vertical-inscription {
+  min-width: 14em;
+  margin: -27em 0 0 -70em;
+}
+
+.budget-section > .budget-text-container > .vertical-inscription > p,
+.power-section > .power-text-container > .vertical-inscription > p {
+  color: #ffffff;
 }
 
 .budget-section > .budget-text-container > .budget-text > .expertise-button,
@@ -285,6 +344,10 @@ h2 {
 
 .budget-section > .expertise-button:hover {
   border: 1px solid #ffffff;
+}
+
+.power-section > .power-text-container > .vertical-inscription {
+  margin: -16em 0 0 -60em;
 }
 
 .budget-image,
