@@ -1,6 +1,6 @@
-.logo-container {
-  animation: header_animation 0.8s ease-out alternate;
-}
+/*.logo-container {*/
+/*animation: header_animation 0.8s ease-out alternate;*/
+/*}*/
 
 #link-home {
   animation: header_animation_menu1 0.9s ease-out alternate;

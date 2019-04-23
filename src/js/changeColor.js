@@ -12,7 +12,9 @@ import {
   BLACK_COLOR,
   MENU_ELEMENT,
   MENU_BUTTON_ELEMENT,
-  LOGO_ELEMENT
+  LOGO_AD_WORD_OPTIONS,
+  LOGO_CUBEX_WORD_OPTIONS,
+  LOGO_GO_HUGE_WORD_OPTIONS
 } from './constants';
 
 export function changeColorForBudgetSection(budgetSectionScrollPosition) {
@@ -25,7 +27,18 @@ export function changeColorForBudgetSection(budgetSectionScrollPosition) {
 
   changeColor(BLACK_COLOR, WHITE_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], budgetSectionScrollPosition);
 
-  changeColor(LOGO_ELEMENT.redColor, WHITE_COLOR, [LOGO_ELEMENT], budgetSectionScrollPosition);
+  changeColor(
+    LOGO_AD_WORD_OPTIONS.defaultColor,
+    LOGO_AD_WORD_OPTIONS.whiteColor,
+    [LOGO_AD_WORD_OPTIONS, LOGO_GO_HUGE_WORD_OPTIONS],
+    budgetSectionScrollPosition
+  );
+  changeColor(
+    LOGO_CUBEX_WORD_OPTIONS.defaultColor,
+    LOGO_CUBEX_WORD_OPTIONS.whiteColor,
+    [LOGO_CUBEX_WORD_OPTIONS],
+    budgetSectionScrollPosition
+  );
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
@@ -119,7 +132,18 @@ export function changeColorForToolsetSection(powerSectionScrollPosition) {
 
   changeColor(WHITE_COLOR, BLACK_COLOR, [MENU_ELEMENT, MENU_BUTTON_ELEMENT], powerSectionScrollPosition);
 
-  changeColor(WHITE_COLOR, LOGO_ELEMENT.redColor, [LOGO_ELEMENT], powerSectionScrollPosition);
+  changeColor(
+    LOGO_AD_WORD_OPTIONS.whiteColor,
+    LOGO_AD_WORD_OPTIONS.defaultColor,
+    [LOGO_AD_WORD_OPTIONS, LOGO_GO_HUGE_WORD_OPTIONS],
+    powerSectionScrollPosition
+  );
+  changeColor(
+    LOGO_CUBEX_WORD_OPTIONS.whiteColor,
+    LOGO_CUBEX_WORD_OPTIONS.defaultColor,
+    [LOGO_CUBEX_WORD_OPTIONS],
+    powerSectionScrollPosition
+  );
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
@@ -144,45 +168,37 @@ export function changeColorForToolsetSection(powerSectionScrollPosition) {
 }
 
 export function changeMenuItemsColorToWhite() {
-  document.querySelector('.menu-container').style.color = 'white';
-  document.querySelector('.logo-container > svg').style.fill = 'white';
-  document.querySelector('.menu-button > svg').style.fill = 'white';
+  changeSelectorElementsProperty(MENU_ELEMENT, WHITE_COLOR);
+  changeSelectorElementsProperty(LOGO_AD_WORD_OPTIONS, WHITE_COLOR);
+  changeSelectorElementsProperty(LOGO_CUBEX_WORD_OPTIONS, WHITE_COLOR);
+  changeSelectorElementsProperty(LOGO_GO_HUGE_WORD_OPTIONS, WHITE_COLOR);
+  changeSelectorElementsProperty(MENU_BUTTON_ELEMENT, WHITE_COLOR);
 }
 
 export function changeMenuItemsColorToBlack() {
-  document.querySelector('.menu-container').style.color = 'black';
-  // ToDo: Fix to correct logo color
-  document.querySelector('.logo-container > svg').style.fill = 'red';
-  document.querySelector('.menu-button > svg').style.fill = 'black';
+  changeSelectorElementsProperty(MENU_ELEMENT, BLACK_COLOR);
+  changeSelectorElementsProperty(LOGO_AD_WORD_OPTIONS, LOGO_AD_WORD_OPTIONS.defaultColor);
+  changeSelectorElementsProperty(LOGO_CUBEX_WORD_OPTIONS, LOGO_CUBEX_WORD_OPTIONS.defaultColor);
+  changeSelectorElementsProperty(LOGO_GO_HUGE_WORD_OPTIONS, LOGO_GO_HUGE_WORD_OPTIONS.defaultColor);
+  changeSelectorElementsProperty(MENU_BUTTON_ELEMENT, BLACK_COLOR);
 }
 
 export function changeBackgroundColorToWhite() {
-  document.querySelector(BODY_ELEMENT_OPTIONS.selector).style.backgroundColor = 'white';
+  changeSelectorElementsProperty(BODY_ELEMENT_OPTIONS, WHITE_COLOR);
 }
 
 export function changeCubeColorToDefault() {
-  const { defaultColor: cubeLeftSideDefaultColor } = CUBE_LEFT_SIDE_ELEMENT_OPTIONS;
-  const { defaultColor: cubeRightSideDefaultColor } = CUBE_RIGHT_SIDE_ELEMENT_OPTIONS;
-  const { defaultColor: cubeBottomSideDefaultColor } = CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS;
-  document.querySelector(CUBE_LEFT_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${cubeLeftSideDefaultColor.red},
-   ${cubeLeftSideDefaultColor.green},
-    ${cubeLeftSideDefaultColor.blue}
-    )`;
-  document.querySelector(CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${cubeRightSideDefaultColor.red},
-   ${cubeRightSideDefaultColor.green},
-    ${cubeRightSideDefaultColor.blue})`;
-  document.querySelector(CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.selector).style.fill = `rgb(
-  ${cubeBottomSideDefaultColor.red},
-   ${cubeBottomSideDefaultColor.green},
-    ${cubeBottomSideDefaultColor.blue})`;
+  changeSelectorElementsProperty(CUBE_LEFT_SIDE_ELEMENT_OPTIONS, CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor);
+  changeSelectorElementsProperty(CUBE_RIGHT_SIDE_ELEMENT_OPTIONS, CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor);
+  changeSelectorElementsProperty(CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS, CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor);
 }
 
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
-  const scrolled = window.pageYOffset;
-  const perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
+  const maxPerChangeValue = 1;
   const currentColor = { red: 0, green: 0, blue: 0 };
+  const scrolled = window.pageYOffset;
+  let perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
+  perChange = perChange > maxPerChangeValue ? maxPerChangeValue : perChange;
 
   Object.keys(currentColor).forEach(key => {
     currentColor[key] =

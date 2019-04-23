@@ -30,8 +30,7 @@ window.addEventListener('scroll', initProject);
 function initProject() {
   const scrolled = window.pageYOffset;
 
-  // ToDo: Find solution for remove "300"
-  if (scrolled < advantageSectionScrollPosition || scrolled > toolsetSectionScrollPosition - 300) {
+  if (scrolled < advantageSectionScrollPosition || scrolled > toolsetSectionScrollPosition) {
     changeBackgroundColorToWhite();
     changeCubeColorToDefault();
   }
@@ -56,8 +55,7 @@ function initProject() {
     changeColorForPowerSection(controlSectionScrollPosition);
   }
 
-  // ToDo: Find solution for remove "300"
-  if (scrolled > powerSectionScrollPosition && scrolled <= toolsetSectionScrollPosition - 300) {
+  if (scrolled > powerSectionScrollPosition && scrolled <= toolsetSectionScrollPosition) {
     changeColorForToolsetSection(powerSectionScrollPosition);
   }
 

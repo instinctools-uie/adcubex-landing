@@ -39,8 +39,24 @@ export const MENU_BUTTON_ELEMENT = {
   selector: '.menu-button > svg',
   property: 'fill'
 };
-export const LOGO_ELEMENT = {
-  selector: '.logo-container > svg',
+
+export const LOGO_AD_WORD_OPTIONS = {
+  selector: '#logo-AdCubex :nth-child(1)',
   property: 'fill',
-  redColor: { red: 237, green: 28, blue: 36 }
+  defaultColor: { red: 48, green: 48, blue: 48 },
+  whiteColor: WHITE_COLOR
+};
+
+export const LOGO_CUBEX_WORD_OPTIONS = {
+  selector: '#logo-AdCubex :nth-child(2)',
+  property: 'fill',
+  defaultColor: { red: 239, green: 62, blue: 62 },
+  whiteColor: WHITE_COLOR
+};
+
+export const LOGO_GO_HUGE_WORD_OPTIONS = {
+  selector: '#when-ad-go-huge',
+  property: 'fill',
+  defaultColor: { red: 48, green: 48, blue: 48 },
+  whiteColor: WHITE_COLOR
 };
