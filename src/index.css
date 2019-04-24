@@ -130,7 +130,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin: 2em 0 0 11em;
+  margin: 2rem 0 0 11rem;
 }
 
 .wrap-image {
@@ -227,8 +227,14 @@ h2 {
 }
 
 .inner-section-image {
-  min-width: 16.063em;
   margin: 2.5em 0 0 -2.5em;
+  min-width: 16.063em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .expertise-section > .section-container > .text-container > .inner-section-image {
@@ -280,15 +286,16 @@ h2 {
   color: #ef3e3e;
 }
 
-.advantage-content-wrapper {
+.supervise-section > .text-container > .inner-section-text,
+.advantage-section > .text-container > .inner-section-text {
   display: flex;
 }
 
-.advantage-content-wrapper > .vertical-inscription > span {
+.advantage-section > .text-container > .inner-section-text > .vertical-inscription > span {
   margin: 14rem 0 0 -7.4rem;
 }
 
-.advantage-section > .advantage-content-wrapper > p {
+.advantage-section > .text-container > .inner-section-text > .vertical-inscription > p {
   padding-top: 2rem;
   font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 2.25rem;
