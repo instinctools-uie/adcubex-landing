@@ -25,9 +25,10 @@ h2 {
 
 .header-container {
   position: fixed;
-  z-index: 2;
+  z-index: 4;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   box-sizing: border-box;
   padding: 0 4rem 0 4rem;
   height: 10.125rem;
@@ -36,26 +37,41 @@ h2 {
 }
 
 .header-container .logo,
-.header-container .button-container {
+.header-container .toggle-menu-icons {
   z-index: 3;
-}
-
-#logo-AdCubex tspan,
-#when-ad-go-huge tspan {
-  fill: white !important;
 }
 
 .header-navigation {
   position: fixed;
-  z-index: 2;
   top: 0;
   left: 0;
   display: flex;
-  opacity: 1;
+  opacity: 0;
   width: 100vw;
+  height: 0;
+  background-color: #0000d4;
+  transition-property: background-color, height, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  will-change: opacity, background-color, height;
+}
+
+.header-navigation--active {
+  opacity: 0.75;
   height: 100vh;
-  background-color: #2f4eef;
-  will-change: opacity;
+}
+
+.logo--active #logo-AdCubex tspan,
+.logo--active #when-ad-go-huge tspan {
+  fill: white !important;
+}
+
+.header-navigation--red {
+  background-color: #cd2626;
+}
+
+.header-navigation--purple {
+  background-color: #8300d9;
 }
 
 .header-navigation-container {
@@ -73,24 +89,76 @@ h2 {
   margin: 0;
 }
 
-.header-links-container a {
-  color: #ffffff;
+.header-links-container a,
+.header-links-container p {
   font-family: 'montserratbold', sans-serif;
+}
+
+.header-links-container a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
   font-size: 90px;
   font-weight: 500;
   line-height: 95px;
   text-decoration: none;
 }
 
+.header-links-container a > img {
+  margin-left: 0.7em;
+}
+
 .header-links-container a:hover {
-  color: #353535;
+  color: #252525;
 }
 
 .header-links-container a + a {
   margin-top: 0.2em;
 }
 
-.menu-container {
+.header-navigation-footer-text {
+  margin-bottom: 3em;
+  color: white;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 18px;
+}
+
+.header-navigation-footer-text span {
+  color: #000000;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  content: '';
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  transition: opacity 0.3s ease-in;
+  will-change: opacity;
+}
+
+.backdropElement--active {
+  z-index: 2;
+  opacity: 1;
+}
+
+.header-link-arrow-icon {
+  display: none;
+}
+
+.header-link-arrow-icon--active {
+  display: block;
+}
+
+/*TODO: Remove after removed menu-container from html*/
+/*.menu-container {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
@@ -122,15 +190,21 @@ h2 {
 
 .menu-container > .link_black:hover {
   color: rgb(48, 48, 48);
-}
+}*/
 
-.button-container {
+.toggle-menu-icons {
   display: flex;
+  cursor: pointer;
 }
 
-.menu-button {
-  width: 1.7rem;
-  cursor: pointer;
+.header-open-menu-icon,
+.header-close-menu-icon {
+  display: none;
+}
+
+.header-open-menu-icon--active,
+.header-close-menu-icon--active {
+  display: block;
 }
 
 .content-container {
@@ -189,10 +263,10 @@ h2 {
 }
 
 .vertical-inscription img {
-  -o-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   will-change: transform;
   cursor: pointer;
 }
