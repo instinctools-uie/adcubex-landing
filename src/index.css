@@ -36,15 +36,6 @@ h2 {
   background-color: transparent;
 }
 
-.logo-container {
-  display: block;
-  width: 1.7em;
-}
-
-.logo-container > svg {
-  fill: #ed1c24;
-}
-
 .menu-container {
   display: flex;
   justify-content: space-between;

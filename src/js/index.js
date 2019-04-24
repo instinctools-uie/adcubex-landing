@@ -4,8 +4,8 @@ import {
   changeColorForControlSection,
   changeColorForPowerSection,
   changeMenuItemsColorToWhite,
-  changeBackgroundColorToWhite,
-  changeMenuItemsColorToBlack,
+  changeBackgroundColorToDefault,
+  changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
@@ -30,9 +30,8 @@ window.addEventListener('scroll', initProject);
 function initProject() {
   const scrolled = window.pageYOffset;
 
-  // ToDo: Find solution for remove "300"
-  if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition - 300) {
-    changeBackgroundColorToWhite();
+  if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
+    changeBackgroundColorToDefault();
     changeCubeColorToDefault();
   }
 
@@ -41,7 +40,7 @@ function initProject() {
   }
 
   if (scrolled < budgetSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
-    changeMenuItemsColorToBlack();
+    changeMenuItemsColorToDefault();
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
@@ -56,18 +55,15 @@ function initProject() {
     changeColorForPowerSection(controlSectionScrollPosition);
   }
 
-  // ToDo: Find solution for remove "300"
-  if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition - 300) {
+  if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     changeColorForImprovementSection(powerSectionScrollPosition);
   }
 
-  // TODO: Find solution for remove "20"
-  if (scrolled > budgetSectionScrollPosition - 20) {
+  if (scrolled > budgetSectionScrollPosition) {
     changeActiveMenuLinkToBlack();
   }
 
-  // TODO: Find solution for remove "20"
-  if (scrolled < budgetSectionScrollPosition - 20) {
+  if (scrolled < budgetSectionScrollPosition) {
     changeActiveMenuLinkToRed();
   }
 
