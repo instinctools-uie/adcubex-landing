@@ -247,15 +247,14 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 23.625em;
-  height: 5em;
+  width: 23.625rem;
+  height: 5rem;
   padding-left: 0.9em;
   border: none;
   margin-top: 7em;
   background-color: #ef3e3e;
   color: #fff;
   font-family: montserrat_lightregular, sans-serif;
-  font-size: 0.6em;
   font-weight: 600;
   cursor: pointer;
 }
@@ -320,19 +319,15 @@ h2 {
   line-height: 1.6em;
 }
 
-.budget-text-container > .first-line > .budget-text > button,
-.control-section > .control-text-container > .control-text > button,
-.power-text-container > .first-line > .power-image-container > button {
+.power-text-container > .power-image-container > button {
+  margin-top: 4.6em;
   border: 0.01em solid #bcbcbc;
   background-color: transparent;
-  height: 3.5em;
-  width: 15.5em;
-  margin-top: 4.6em;
-  font-size: 0.9em;
+  font-size: 1.5em;
 }
 
 .budget-text-container .first-line > .vertical-inscription {
-	margin-left: 32rem;
+  margin-left: 32rem;
 }
 
 .budget-text-container > .first-line > .vertical-inscription > span,
