@@ -209,7 +209,7 @@ h2 {
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 7.5em;
+  font-size: 5.625em;
   letter-spacing: 0;
   line-height: 1.125em;
   text-align: left;
@@ -238,7 +238,7 @@ h2 {
 .inner-section-text {
   margin-left: -1.5em;
   font-family: montserrat_mediumregular, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 500;
   line-height: 1.7em;
 }
@@ -314,14 +314,14 @@ h2 {
 .control-section > .control-text-container > .control-text > p,
 .power-text-container > .first-line > .power-text > p {
   width: 18.375em;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 600;
   line-height: 1.6em;
 }
 
 .power-text-container > .power-image-container > button {
   margin-top: 4.6em;
-  border: 0.01em solid #bcbcbc;
+  border: 0.01em solid #fff;
   background-color: transparent;
   font-size: 1.5em;
 }
