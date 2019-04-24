@@ -365,47 +365,10 @@ div.power-image > .image-content > p.image-content_large {
 }
 
 .toolset-section div > p,
-.improvement-section div > p,
-.advantage-section div > p {
+.improvement-section div > p {
   color: #484848;
 }
 
-.advertising-section > h2 > span {
-  color: #ef3e3e;
-}
-
-.advertising-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 4em;
-  width: 16.76em;
-  margin-top: 2.938em;
-}
-
-.advertising-check {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 36em;
-  margin-top: 5.063em;
-  color: #ababab;
-  font-size: 0.5em;
-  line-height: 1.5em;
-}
-
-.advertising-section div > button.expertise-button {
-  margin-top: 3.2em;
-  width: 14.5em;
-}
-
-.advertising-section .inner-section-text {
-  margin-left: 0;
-}
-
-.advertising-section div > p {
-  margin-top: -2em;
-}
 
 .mailIcon-container {
   position: fixed;
