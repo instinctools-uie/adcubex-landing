@@ -452,6 +452,7 @@ div.power-image > .image-content > p.image-content_large {
   transition-duration: 0.5s;
   transition-timing-function: ease-in;
   will-change: transform;
+  cursor: pointer;
 }
 
 .mailIcon-background:hover {
