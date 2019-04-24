@@ -12,6 +12,11 @@ body {
   font-family: 'montserrat_lightregular', sans-serif;
 }
 
+h1,
+h2 {
+  font-family: 'montserrat_extraboldregular', sans-serif;
+}
+
 .arrow {
   width: 1.4em;
   margin-left: 1.5em;
@@ -137,9 +142,12 @@ body {
 
 .supervise-section,
 .expertise-section,
+.toolset-section,
+.advantage-section,
 .budget-section,
-.investments-section,
-.effectiveness-section {
+.control-section,
+.power-section,
+.improvement-section {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -147,11 +155,6 @@ body {
 
 .supervise-section {
   margin-top: 14em;
-}
-
-h1,
-h2 {
-  font-family: 'montserrat_extraboldregular', sans-serif;
 }
 
 .section-container {
@@ -169,20 +172,23 @@ h2 {
 }
 
 .vertical-inscription {
+  position: absolute;
+  top: 7.5em;
+  right: -4.5em;
   display: flex;
-  justify-content: space-between;
-  min-width: 25em;
-  margin-top: 2em;
+  flex-direction: row;
+  justify-content: flex-start;
   transform: rotate(90deg);
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.wrap-image {
+.vertical-inscription-img-container {
+  margin-right: 3.25em;
   transform: rotate(-90deg);
-  height: 3em;
-  width: 3em;
 }
 
-.wrap-image > img {
+.vertical-inscription img {
   -o-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
@@ -191,20 +197,37 @@ h2 {
   cursor: pointer;
 }
 
-.wrap-image > img:hover {
-  -o-transform: translateY(1.33em);
-  -ms-transform: translateY(1.33em);
-  -moz-transform: translateY(1.33em);
-  -webkit-transform: translateY(1.33em);
-  transform: translateY(1.33em);
+.vertical-inscription:hover img {
+  -o-transform: translateY(1.33rem);
+  -ms-transform: translateY(1.33rem);
+  -moz-transform: translateY(1.33rem);
+  -webkit-transform: translateY(1.33rem);
+  transform: translateY(1.33rem);
 }
 
-.vertical-inscription > p {
-  margin: 0.1em 1em 0 0;
+.vertical-inscription > span {
+  display: flex;
+  align-items: center;
   color: #353535;
   font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
+}
+
+.budget-text-container > .inner-section-text,
+.power-text-container > .inner-section-text {
+  position: relative;
+  margin-left: 0;
+  width: 100%;
+}
+
+.budget-text-container > .inner-section-text > .vertical-inscription {
+  top: 4.5em;
+}
+
+.budget-text-container > .inner-section-text > .vertical-inscription > span,
+.power-text-container > .inner-section-text > .vertical-inscription > span {
+  color: #fff;
 }
 
 .budget-section > h2,
@@ -226,21 +249,6 @@ h2 {
   top: 7em;
 }
 
-.section-container > a {
-  display: inline-flex;
-  align-items: center;
-  margin: 3em 0 0 4.5em;
-  color: inherit;
-  font-size: 0.8em;
-  text-decoration: none;
-}
-
-.section-container > p {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 2.375rem;
-}
-
 .expertise-section .inner-section-text > p > span,
 .power-section div > p > span {
   font-size: 2.188rem;
@@ -252,7 +260,7 @@ h2 {
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 7.5em;
+  font-size: 5.625em;
   letter-spacing: 0;
   line-height: 1.125em;
   text-align: left;
@@ -265,152 +273,123 @@ h2 {
   margin-top: 3em;
 }
 
-.expertise-section > .section-container > .text-container {
+.expertise-section > .text-container {
   margin-top: -2.5em;
 }
 
-.inner-section-image {
-  min-width: 16.063em;
-  margin: 2.5em 0 0 -2.5em;
+.expertise-section > .text-container > .inner-section-image {
+  margin-top: 5em;
 }
 
-.expertise-section > .section-container > .text-container > .inner-section-image {
-  margin-top: 5em;
+.inner-section-image {
+  margin: 2.5em 0 0 -2.5em;
+  min-width: 16.063em;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .inner-section-text {
   margin-left: -1.5em;
   font-family: montserrat_mediumregular, sans-serif;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 500;
   line-height: 1.7em;
 }
 
-.expertise-button {
+.custom-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 3.6em;
-  width: 15.625em;
+  width: 23.625rem;
+  height: 5rem;
   padding-left: 0.9em;
   border: none;
   margin-top: 7em;
   background-color: #ef3e3e;
   color: #fff;
   font-family: montserrat_lightregular, sans-serif;
-  font-size: 0.6em;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .social-section {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 68em;
   margin-top: 14.625em;
 }
 
-.advantage-section > .section-container {
+.social-section > img {
+  height: 100%;
+}
+
+.advantage-section {
   margin-top: 17em;
 }
 
-.advantage-section > .section-container > h2 > span,
-.toolset-section > h2 > span {
-  color: #ef3e3e;
-}
-
-.advantage-content-wrapper {
+.supervise-section > .text-container > .inner-section-text,
+.advantage-section > .text-container > .inner-section-text {
+  position: relative;
   display: flex;
-}
-
-.advantage-content-wrapper > .vertical-inscription {
-  margin-bottom: -22em;
-  margin-left: -10em;
-  min-width: 30em;
-}
-
-.advantage-section > .advantage-content-wrapper > p {
-  padding-top: 2rem;
-  font-family: 'montserrat_extralightregular', sans-serif;
-  font-size: 2.25rem;
-  line-height: 3.25rem;
-}
-
-.budget-section > p.expertise-section-background-inscription {
-  position: absolute;
-  bottom: -3.938rem;
-  left: 63.125rem;
-  max-width: 13.125rem;
-  transform: rotate(90deg);
-  color: rgb(248, 176, 177);
-  font-size: 0.8em;
+  width: 100%;
 }
 
 .budget-text-container,
 .control-text-container,
-.power-text-container,
-.toolset-text-container {
+.power-text-container {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
   color: #ffffff;
 }
 
-.budget-section > .budget-text-container > .budget-text > p,
 .control-section > .control-text-container > .control-text > p {
   width: 18.375em;
-  font-size: 1.5em;
+  font-size: 1.75em;
   font-weight: 600;
   line-height: 1.6em;
 }
 
-.budget-section > .budget-text-container > .vertical-inscription {
-  min-width: 14em;
-  margin: -27em 0 0 -70em;
+.control-text {
+  width: 100%;
 }
 
-.budget-section > .budget-text-container > .vertical-inscription > p,
-.power-section > .power-text-container > .vertical-inscription > p {
-  color: #ffffff;
+.power-image-container {
+  margin: 8.75em 0 0 16.25em;
 }
 
-.budget-section > .budget-text-container > .budget-text > .expertise-button,
-.control-section > .control-text-container > .control-text > .expertise-button,
-.power-section > .power-text-container > div > .expertise-button {
-  border: 0.01em solid #bcbcbc;
-  background-color: transparent;
-  height: 3.5em;
-  width: 15.5em;
+.power-image-container > button {
   margin-top: 4.6em;
-  font-size: 0.9em;
-}
-
-.power-section > .power-text-container > div > .expertise-button {
-  font-size: 0.6em;
-}
-
-.budget-section > .expertise-button:hover {
-  border: 1px solid #ffffff;
-}
-
-.power-section > .power-text-container > .vertical-inscription {
-  margin: -16em 0 0 -60em;
+  border: 0.01em solid #fff;
+  background-color: transparent;
+  font-size: 1.5em;
 }
 
 .budget-image,
 .power-image {
   display: flex;
   justify-content: center;
-  height: 43.688rem;
-  width: 18.875rem;
-  margin: 2rem -4.063rem 0 0;
-  background-image: url(../assets/images/rectangle.svg);
+  padding: 5em 0;
+  min-width: 56.3125em;
+  background-image: url(../assets/images/rectangle2.svg);
 }
 
-.image-content {
-  width: 14.5rem;
-  margin-top: 10.25rem;
+.budget-image {
+  margin: 10rem 0 0 16.25rem;
+}
+
+.image-content-section {
+  margin-left: 3.75em;
 }
 
 .image-content_middle {
+  height: 100%;
   font-family: 'montserratbold', sans-serif;
   font-size: 2.25rem;
   line-height: 2.625rem;
@@ -418,10 +397,11 @@ h2 {
 
 .image-content_small {
   margin-top: 0.938rem;
+  line-height: 1.1875rem;
 }
 
 .image-content_large {
-  margin-top: 3rem;
+  margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
   line-height: 0;
@@ -438,45 +418,10 @@ div.power-image > .image-content > p.image-content_large {
   margin-top: -7em;
 }
 
-.toolset-section div > p {
+.toolset-section div > p,
+.improvement-section div > p,
+.advantage-section div > p {
   color: #484848;
-}
-
-.advertising-section > h2 > span {
-  color: #ef3e3e;
-}
-
-.advertising-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 4em;
-  width: 16.76em;
-  margin-top: 2.938em;
-}
-
-.advertising-check {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  width: 36em;
-  margin-top: 5.063em;
-  color: #ababab;
-  font-size: 0.5em;
-  line-height: 1.5em;
-}
-
-.advertising-section div > button.expertise-button {
-  margin-top: 3.2em;
-  width: 14.5em;
-}
-
-.advertising-section .inner-section-text {
-  margin-left: 0;
-}
-
-.advertising-section div > p {
-  margin-top: -2em;
 }
 
 footer {
@@ -497,12 +442,32 @@ footer {
   flex-grow: 1;
 }
 
-.footer-container > p > sup {
+.footer-right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.footer-left {
+  font-style: normal;
+}
+
+.footer-left > p > sup {
   color: red;
 }
 
-.footer-container > p > span {
+.footer-left > p > span {
   color: black;
+}
+
+.footer-left > a,
+.footer-right > a {
+  color: #ababab;
+  text-decoration: none;
+}
+
+.footer-right > a {
+  padding: 0 0.8em;
 }
 
 .supervise-section h1 > span,
