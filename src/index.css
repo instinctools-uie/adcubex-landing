@@ -409,7 +409,7 @@ div.power-image > .image-content > p.image-content_large {
 
 .mailIcon-container {
   position: fixed;
-  right: 0.063em;
+  right: 0;
   bottom: 1.25em;
   z-index: 10;
 }
@@ -419,10 +419,10 @@ div.power-image > .image-content > p.image-content_large {
   justify-content: space-between;
   overflow: hidden;
   width: 3.25em;
-  margin: 0 4em 0 0;
+  margin-right: 4em;
   background-color: transparent;
   transition-property: width, overflow;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in;
   will-change: transform;
   cursor: pointer;
@@ -452,7 +452,7 @@ div.power-image > .image-content > p.image-content_large {
   margin-right: -1.8em;
   border-radius: 50%;
   background-color: #353535;
-  transition: background-color 0.5s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 .mid-el {
@@ -462,7 +462,7 @@ div.power-image > .image-content > p.image-content_large {
   color: #ffffff;
   background-color: #353535;
   transition-property: background-color, width;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in;
 }
 
@@ -482,7 +482,7 @@ div.power-image > .image-content > p.image-content_large {
   margin-left: -1.5em;
   border-radius: 50%;
   background-color: #353535;
-  transition: background-color 0.5s ease-in;
+  transition: background-color 0.3s ease-in;
 }
 
 footer {
