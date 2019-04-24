@@ -1,11 +1,11 @@
 import {
-  changeColorForToolsetSection,
+  changeColorForImprovementSection,
   changeColorForBudgetSection,
   changeColorForControlSection,
   changeColorForPowerSection,
   changeMenuItemsColorToWhite,
-  changeBackgroundColorToWhite,
-  changeMenuItemsColorToBlack,
+  changeBackgroundColorToDefault,
+  changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
@@ -16,12 +16,12 @@ const advantageSection = window.document.querySelector('.advantage-section');
 const budgetSection = window.document.querySelector('.budget-section');
 const controlSection = window.document.querySelector('.control-section');
 const powerSection = window.document.querySelector('.power-section');
-const toolsetSection = window.document.querySelector('.toolset-section');
+const improvementSection = window.document.querySelector('.improvement-section');
 const advantageSectionScrollPosition = advantageSection.offsetTop;
 const budgetSectionScrollPosition = budgetSection.offsetTop;
 const controlSectionScrollPosition = controlSection.offsetTop;
 const powerSectionScrollPosition = powerSection.offsetTop;
-const toolsetSectionScrollPosition = toolsetSection.offsetTop;
+const improvementSectionScrollPosition = improvementSection.offsetTop;
 
 initProject();
 
@@ -30,9 +30,8 @@ window.addEventListener('scroll', initProject);
 function initProject() {
   const scrolled = window.pageYOffset;
 
-  // ToDo: Find solution for remove "300"
-  if (scrolled < advantageSectionScrollPosition || scrolled > toolsetSectionScrollPosition - 300) {
-    changeBackgroundColorToWhite();
+  if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
+    changeBackgroundColorToDefault();
     changeCubeColorToDefault();
   }
 
@@ -40,8 +39,8 @@ function initProject() {
     changeMenuItemsColorToWhite();
   }
 
-  if (scrolled < budgetSectionScrollPosition || scrolled > toolsetSectionScrollPosition) {
-    changeMenuItemsColorToBlack();
+  if (scrolled < budgetSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
+    changeMenuItemsColorToDefault();
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
@@ -56,18 +55,15 @@ function initProject() {
     changeColorForPowerSection(controlSectionScrollPosition);
   }
 
-  // ToDo: Find solution for remove "300"
-  if (scrolled > powerSectionScrollPosition && scrolled <= toolsetSectionScrollPosition - 300) {
-    changeColorForToolsetSection(powerSectionScrollPosition);
+  if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
+    changeColorForImprovementSection(powerSectionScrollPosition);
   }
 
-  // TODO: Find solution for remove "20"
-  if (scrolled > budgetSectionScrollPosition - 20) {
+  if (scrolled > budgetSectionScrollPosition) {
     changeActiveMenuLinkToBlack();
   }
 
-  // TODO: Find solution for remove "20"
-  if (scrolled < budgetSectionScrollPosition - 20) {
+  if (scrolled < budgetSectionScrollPosition) {
     changeActiveMenuLinkToRed();
   }
 

@@ -1,5 +1,15 @@
-export const BODY_ELEMENT_OPTIONS = { selector: 'body', property: 'backgroundColor' };
-export const CUBE_ELEMENT_OPTIONS = { selector: '.cube', property: 'fill' };
+export const WHITE_COLOR = { red: 255, green: 255, blue: 255 };
+export const BLACK_COLOR = { red: 0, green: 0, blue: 0 };
+export const RED_BACKGROUND_COLOR = { red: 240, green: 62, blue: 62 };
+export const BLUE_BACKGROUND_COLOR = { red: 75, green: 84, blue: 242 };
+export const PURPLE_BACKGROUND_COLOR = { red: 157, green: 55, blue: 227 };
+export const RATE_CHANGE_SCROLL = 960;
+
+export const BODY_ELEMENT_OPTIONS = {
+  selector: 'body',
+  property: 'backgroundColor',
+  defaultColor: WHITE_COLOR
+};
 export const CUBE_LEFT_SIDE_ELEMENT_OPTIONS = {
   selector: '#main-cube-scale-animation :nth-child(1)',
   property: 'fill',
@@ -24,23 +34,35 @@ export const CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS = {
   blueColor: { red: 72, green: 80, blue: 223 },
   purpleColor: { red: 150, green: 49, blue: 213 }
 };
-export const WHITE_COLOR = { red: 255, green: 255, blue: 255 };
-export const BLACK_COLOR = { red: 0, green: 0, blue: 0 };
-export const RED_BACKGROUND_COLOR = { red: 240, green: 62, blue: 62 };
-export const BLUE_BACKGROUND_COLOR = { red: 75, green: 84, blue: 242 };
-export const PURPLE_BACKGROUND_COLOR = { red: 157, green: 55, blue: 227 };
-export const RATE_CHANGE_SCROLL = 960;
-export const MENU_ELEMENT = {
+export const MENU_ELEMENT_OPTIONS = {
   selector: '.menu-container',
-  property: 'color'
+  property: 'color',
+  defaultColor: BLACK_COLOR
 };
 
-export const MENU_BUTTON_ELEMENT = {
+export const MENU_BUTTON_ELEMENT_OPTIONS = {
   selector: '.menu-button > svg',
-  property: 'fill'
-};
-export const LOGO_ELEMENT = {
-  selector: '.logo-container > svg',
   property: 'fill',
-  redColor: { red: 237, green: 28, blue: 36 }
+  defaultColor: BLACK_COLOR
+};
+
+export const LOGO_AD_WORD_OPTIONS = {
+  selector: '#logo-AdCubex :nth-child(1)',
+  property: 'fill',
+  defaultColor: { red: 48, green: 48, blue: 48 },
+  whiteColor: WHITE_COLOR
+};
+
+export const LOGO_CUBEX_WORD_OPTIONS = {
+  selector: '#logo-AdCubex :nth-child(2)',
+  property: 'fill',
+  defaultColor: { red: 239, green: 62, blue: 62 },
+  whiteColor: WHITE_COLOR
+};
+
+export const LOGO_GO_HUGE_WORD_OPTIONS = {
+  selector: '#when-ad-go-huge',
+  property: 'fill',
+  defaultColor: { red: 48, green: 48, blue: 48 },
+  whiteColor: WHITE_COLOR
 };
