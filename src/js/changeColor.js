@@ -109,7 +109,7 @@ export function changeColorForPowerSection(investmentsSectionScrollPosition) {
   );
 }
 
-export function changeColorForToolsetSection(powerSectionScrollPosition) {
+export function changeColorForImprovementSection(powerSectionScrollPosition) {
   changeColor(
     PURPLE_BACKGROUND_COLOR,
     WHITE_COLOR,
