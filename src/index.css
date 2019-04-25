@@ -52,7 +52,7 @@ h2 {
   height: 0;
   background-color: #0000d4;
   transition-property: background-color, height, opacity;
-  transition-duration: 0.3s;
+  transition-duration: 0.2s;
   transition-timing-function: ease-in;
   will-change: opacity, background-color, height;
 }
@@ -140,7 +140,7 @@ h2 {
   width: 100vw;
   height: 100vh;
   background-color: white;
-  transition: opacity 0.3s ease-in;
+  transition: opacity 0.2s ease-in;
   will-change: opacity;
 }
 

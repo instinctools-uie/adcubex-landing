@@ -1,4 +1,3 @@
-// const menuContainer = document.querySelector('.menu-container');
 const links = document.querySelectorAll('.menu-container > a');
 const logoElement = document.querySelector('.logo');
 const openMenuIcon = document.querySelector('.header-open-menu-icon');
@@ -7,8 +6,6 @@ const backdropElement = document.querySelector('.backdrop');
 const headerNavigation = document.querySelector('.header-navigation');
 const linksContainerInOpenedMenu = document.querySelector('.header-links-container');
 const cubesContainer = document.querySelector('.cubes-container');
-
-// menuContainer.addEventListener('click', clickOnLinksInMenu);
 
 openMenuIcon.addEventListener('click', openMenu);
 closeMenuIcon.addEventListener('click', closeMenu);
@@ -97,6 +94,11 @@ function closeMenu() {
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
   cubesContainer.style.zIndex = -1;
 }
+
+//  TODO: Remove that code after remove header links from html
+// const menuContainer = document.querySelector('.menu-container');
+
+// menuContainer.addEventListener('click', clickOnLinksInMenu);
 
 // function clickOnLinksInMenu(e) {
 //   const linkElement = e.target;

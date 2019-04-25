@@ -1,5 +1,3 @@
-//  TODO: Need find solution for correctly toggle text when zoom
-
 export function toggleTextOfSection() {
   const scrolled = window.pageYOffset;
   const sections = document.querySelectorAll('.section-container');
