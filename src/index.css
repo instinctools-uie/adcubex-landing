@@ -257,13 +257,13 @@ h2 {
   background-color: #ef3e3e;
   color: #fff;
   font-family: montserrat_lightregular, sans-serif;
-  font-size: 0.75em;
+  font-size: 0.71em;
   font-weight: 600;
   cursor: pointer;
 }
 
 .button-image {
-  padding-left: 7em;
+  padding-left: 8.5em;
   transition: all 0.3s ease-in;
 }
 
@@ -285,6 +285,10 @@ h2 {
 
 .social-section > img {
   height: 100%;
+}
+
+.toolset-section > .text-container > .inner-section-text > button > .button-image {
+  padding-left: 5.5em;
 }
 
 .advantage-section {
