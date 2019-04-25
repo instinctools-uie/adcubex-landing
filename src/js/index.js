@@ -11,6 +11,7 @@ import {
 import { toggleCube, toggleCubes } from './toggleCubes';
 import { toggleTextOfSection } from './toggleTextOfSection';
 import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
+import { scrollParallax } from './scrollParallax';
 
 const advantageSection = window.document.querySelector('.advantage-section');
 const budgetSection = window.document.querySelector('.budget-section');
@@ -69,6 +70,30 @@ function initProject() {
   // TODO: Find solution for remove "20"
   if (scrolled < budgetSectionScrollPosition - 20) {
     changeActiveMenuLinkToRed();
+  }
+
+  if (
+    scrolled >= advantageSectionScrollPosition + (budgetSectionScrollPosition - advantageSectionScrollPosition) / 2 &&
+    scrolled <= budgetSectionScrollPosition + (controlSectionScrollPosition - budgetSectionScrollPosition) / 2
+  ) {
+    const budgetBgLetter = window.document.querySelector('#budget > svg');
+    scrollParallax(budgetSectionScrollPosition, budgetBgLetter, advantageSectionScrollPosition);
+  }
+
+  if (
+    scrolled >= budgetSectionScrollPosition + (controlSectionScrollPosition - budgetSectionScrollPosition) / 2 &&
+    scrolled <= controlSectionScrollPosition + (powerSectionScrollPosition - controlSectionScrollPosition) / 2
+  ) {
+    const controlBgLetter = window.document.querySelector('#control > svg');
+    scrollParallax(controlSectionScrollPosition, controlBgLetter, budgetSectionScrollPosition);
+  }
+
+  if (
+    scrolled >= controlSectionScrollPosition + (powerSectionScrollPosition - controlSectionScrollPosition) / 2 &&
+    scrolled <= powerSectionScrollPosition + (improvementSectionScrollPosition - powerSectionScrollPosition) / 2
+  ) {
+    const powerBgLetter = window.document.querySelector('#power > svg');
+    scrollParallax(powerSectionScrollPosition, powerBgLetter, controlSectionScrollPosition);
   }
 
   toggleCube();
