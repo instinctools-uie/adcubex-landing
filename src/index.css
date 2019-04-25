@@ -262,12 +262,17 @@ h2 {
   cursor: pointer;
 }
 
-.custom-button > div {
+.button-image {
   padding-left: 7em;
+  transition: all 0.3s ease-in;
 }
 
 .custom-button:hover {
   background-color: #fd311e;
+}
+
+.custom-button:hover .button-image {
+  transform: translateX(0.25em);
 }
 
 .social-section {
