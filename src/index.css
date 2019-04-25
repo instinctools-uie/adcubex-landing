@@ -30,8 +30,8 @@ h2 {
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 0 4rem 0 4rem;
-  height: 10.125rem;
+  padding: 0 4em 0 4em;
+  height: 10.125em;
   width: 100%;
   background-color: transparent;
 }
@@ -47,6 +47,7 @@ h2 {
   left: 0;
   display: flex;
   opacity: 0;
+  overflow: hidden;
   width: 100vw;
   height: 0;
   background-color: #0000d4;
@@ -61,8 +62,7 @@ h2 {
   height: 100vh;
 }
 
-.logo--active #logo-AdCubex tspan,
-.logo--active #when-ad-go-huge tspan {
+.logo--active tspan {
   fill: white !important;
 }
 
@@ -78,7 +78,7 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 4rem 0 4rem;
+  padding: 0 4em 0 4em;
   margin-top: 15em;
 }
 
@@ -99,9 +99,9 @@ h2 {
   justify-content: space-between;
   align-items: baseline;
   color: white;
-  font-size: 90px;
+  font-size: 5.75em;
   font-weight: 500;
-  line-height: 95px;
+  line-height: 1;
   text-decoration: none;
 }
 
@@ -120,9 +120,9 @@ h2 {
 .header-navigation-footer-text {
   margin-bottom: 3em;
   color: white;
-  font-size: 14px;
+  font-size: 1em;
   font-style: italic;
-  line-height: 18px;
+  line-height: 1.5;
 }
 
 .header-navigation-footer-text span {
@@ -237,6 +237,7 @@ h2 {
   opacity: 0;
   transform: translateX(-100px);
   transition: opacity 0.5s, transform 0.5s;
+  will-change: opacity;
   color: #303030;
 }
 
@@ -272,11 +273,11 @@ h2 {
 }
 
 .vertical-inscription:hover img {
-  -o-transform: translateY(1.33rem);
-  -ms-transform: translateY(1.33rem);
-  -moz-transform: translateY(1.33rem);
-  -webkit-transform: translateY(1.33rem);
-  transform: translateY(1.33rem);
+  -o-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
 }
 
 .vertical-inscription > span {
@@ -497,12 +498,11 @@ div.power-image > .image-content > p.image-content_large {
   color: #484848;
 }
 
-
 .mailIcon-container {
   position: fixed;
   right: 0;
   bottom: 1.25em;
-  z-index: 10;
+  z-index: 3;
 }
 
 .mailIcon-background {
@@ -515,7 +515,7 @@ div.power-image > .image-content > p.image-content_large {
   transition-property: width, overflow;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
-  will-change: transform;
+  will-change: width, overflow;
   cursor: pointer;
 }
 
@@ -544,6 +544,7 @@ div.power-image > .image-content > p.image-content_large {
   border-radius: 50%;
   background-color: #353535;
   transition: background-color 0.3s ease-in;
+  will-change: background-color;
 }
 
 .mid-el {
@@ -555,12 +556,14 @@ div.power-image > .image-content > p.image-content_large {
   transition-property: background-color, width;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
+  will-change: background-color;
 }
 
 .mid-el > span {
   white-space: nowrap;
   opacity: 0;
   transition: opacity 0s ease-in 0.4s;
+  will-change: opacity;
 }
 
 .mail-el {
@@ -574,6 +577,7 @@ div.power-image > .image-content > p.image-content_large {
   border-radius: 50%;
   background-color: #353535;
   transition: background-color 0.3s ease-in;
+  will-change: background-color;
 }
 
 footer {

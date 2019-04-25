@@ -41,7 +41,7 @@ export const MENU_ELEMENT_OPTIONS = {
 };
 
 export const MENU_BUTTON_ELEMENT_OPTIONS = {
-  selector: '.menu-button > svg',
+  selector: '.header-open-menu-icon',
   property: 'fill',
   defaultColor: BLACK_COLOR
 };
