@@ -172,7 +172,6 @@ h2 {
 .budget-text-container > .inner-section-text,
 .power-text-container > .inner-section-text {
   position: relative;
-  margin-left: 0;
   width: 100%;
 }
 
@@ -236,8 +235,9 @@ h2 {
 }
 
 .inner-section-image {
-  margin: 2.5em 0 0 -2.5em;
-  min-width: 16.063em;
+  position: absolute;
+  width: 20em;
+  height: 20em;
 
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -246,12 +246,24 @@ h2 {
   pointer-events: none;
 }
 
+.inner-section-image > img {
+  width: 20em;
+  height: 20em;
+}
+
 .inner-section-text {
-  margin-left: -1.5em;
   font-family: montserrat_mediumregular, sans-serif;
   font-size: 1.75em;
   font-weight: 500;
   line-height: 1.7em;
+}
+
+.supervise-section .inner-section-text,
+.expertise-section .inner-section-text,
+.toolset-section .inner-section-text,
+.advantage-section .inner-section-text,
+.improvement-section .inner-section-text {
+  margin-left: 8em;
 }
 
 .custom-button {
