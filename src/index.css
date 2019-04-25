@@ -131,13 +131,13 @@ h2 {
 
 .backdrop {
   position: fixed;
-  z-index: -1;
+  z-index: 2;
   top: 0;
   left: 0;
   display: block;
   content: '';
   opacity: 0;
-  width: 100vw;
+  width: 0;
   height: 100vh;
   background-color: white;
   transition: opacity 0.2s ease-in;
@@ -145,7 +145,7 @@ h2 {
 }
 
 .backdropElement--active {
-  z-index: 2;
+  width: 100vw;
   opacity: 1;
 }
 
