@@ -222,6 +222,7 @@ h2 {
 }
 
 .text-container {
+  position: relative;
   display: flex;
   margin-top: 3em;
 }
@@ -230,12 +231,9 @@ h2 {
   margin-top: -2.5em;
 }
 
-.expertise-section > .text-container > .inner-section-image {
-  margin-top: 5em;
-}
-
 .inner-section-image {
   position: absolute;
+  top: 30em;
   width: 20em;
   height: 20em;
 

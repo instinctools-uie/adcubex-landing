@@ -13,17 +13,17 @@ import { toggleTextOfSection } from './toggleTextOfSection';
 import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from './scrollParallax';
 
-// const superviseSection = window.document.querySelector('.supervise-section');
+const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
-// const toolsetSection = window.document.querySelector('.toolset-section');
+const toolsetSection = window.document.querySelector('.toolset-section');
 const advantageSection = window.document.querySelector('.advantage-section');
 const budgetSection = window.document.querySelector('.budget-section');
 const controlSection = window.document.querySelector('.control-section');
 const powerSection = window.document.querySelector('.power-section');
 const improvementSection = window.document.querySelector('.improvement-section');
-// const superviseSectionScrollPosition = superviseSection.offsetTop;
+const superviseSectionScrollPosition = superviseSection.offsetTop;
 const expertiseSectionScrollPosition = expertiseSection.offsetTop;
-// const toolsetSectionScrollPosition = toolsetSection.offsetTop;
+const toolsetSectionScrollPosition = toolsetSection.offsetTop;
 const advantageSectionScrollPosition = advantageSection.offsetTop;
 const budgetSectionScrollPosition = budgetSection.offsetTop;
 const controlSectionScrollPosition = controlSection.offsetTop;
@@ -103,8 +103,28 @@ function initProject() {
   }
 
   if (scrolled < expertiseSectionScrollPosition) {
-    const supervisePattern = window.document.querySelector('#supervise .inner-section-image');
-    scrollParallaxPattern(supervisePattern);
+    const superviseElement = window.document.querySelector('#supervise .inner-section-image');
+    scrollParallaxPattern(superviseElement, superviseSectionScrollPosition);
+  }
+
+  if (scrolled > expertiseSectionScrollPosition && scrolled < toolsetSectionScrollPosition) {
+    const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
+    scrollParallaxPattern(expertiseElement, expertiseSectionScrollPosition);
+  }
+
+  if (scrolled > toolsetSectionScrollPosition && scrolled < advantageSectionScrollPosition) {
+    const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
+    scrollParallaxPattern(toolsetPattern, toolsetSectionScrollPosition);
+  }
+
+  if (scrolled > advantageSectionScrollPosition && scrolled < budgetSectionScrollPosition) {
+    const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
+    scrollParallaxPattern(advantagePattern, advantageSectionScrollPosition);
+  }
+
+  if (scrolled > improvementSectionScrollPosition) {
+    const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
+    scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
   }
 
   toggleCube();
