@@ -493,9 +493,87 @@ div.power-image > .image-content > p.image-content_large {
 }
 
 .toolset-section div > p,
-.improvement-section div > p,
-.advantage-section div > p {
+.improvement-section div > p {
   color: #484848;
+}
+
+
+.mailIcon-container {
+  position: fixed;
+  right: 0;
+  bottom: 1.25em;
+  z-index: 10;
+}
+
+.mailIcon-background {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 3.25em;
+  margin-right: 4em;
+  background-color: transparent;
+  transition-property: width, overflow;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.mailIcon-background:hover {
+  width: 11em;
+  overflow: visible;
+}
+.mailIcon-background:hover .start-el,
+.mailIcon-background:hover .mid-el,
+.mailIcon-background:hover .mail-el {
+  background-color: rgb(239, 62, 62);
+}
+
+.mailIcon-background:hover .mid-el {
+  width: 7.5em;
+}
+
+.mailIcon-background:hover .mid-el > span {
+  opacity: 1;
+}
+
+.start-el {
+  width: 3.25em;
+  height: 3.25em;
+  margin-right: -1.8em;
+  border-radius: 50%;
+  background-color: #353535;
+  transition: background-color 0.3s ease-in;
+}
+
+.mid-el {
+  display: flex;
+  align-items: center;
+  width: 0;
+  color: #ffffff;
+  background-color: #353535;
+  transition-property: background-color, width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+
+.mid-el > span {
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0s ease-in 0.4s;
+}
+
+.mail-el {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.25em;
+  height: 3.25em;
+  margin-left: -1.5em;
+  border-radius: 50%;
+  background-color: #353535;
+  transition: background-color 0.3s ease-in;
 }
 
 footer {
