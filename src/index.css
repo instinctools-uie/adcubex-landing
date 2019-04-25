@@ -248,18 +248,26 @@ h2 {
 
 .custom-button {
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 23.625rem;
   height: 5rem;
-  padding-left: 0.9em;
+  padding-left: 1.5em;
   border: none;
   margin-top: 7em;
   background-color: #ef3e3e;
   color: #fff;
   font-family: montserrat_lightregular, sans-serif;
+  font-size: 0.75em;
   font-weight: 600;
   cursor: pointer;
+}
+
+.custom-button > div {
+  padding-left: 7em;
+}
+
+.custom-button:hover {
+  background-color: #fd311e;
 }
 
 .social-section {
@@ -368,7 +376,6 @@ div.power-image > .image-content > p.image-content_large {
 .improvement-section div > p {
   color: #484848;
 }
-
 
 .mailIcon-container {
   position: fixed;
