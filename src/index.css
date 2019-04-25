@@ -270,8 +270,68 @@ h2 {
   margin-top: 14.625em;
 }
 
-.social-section > img {
-  height: 100%;
+.social-substrate {
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+}
+
+.social-grey {
+  position: absolute;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.social-section > div:hover .social-substrate {
+  opacity: 1;
+}
+
+.social-grey:hover {
+  opacity: 0;
+}
+
+.social-grey_google {
+  bottom: 0.58em;
+}
+
+.social-grey_twitter {
+  bottom: 0.29em;
+}
+
+.social-grey_bing {
+  bottom: 0.51em;
+}
+
+.social-grey_facebook {
+  bottom: 0.43em;
+}
+
+.social-grey_baidu {
+  bottom: 0.23em;
+}
+
+.social-grey_yahoo {
+  bottom: 0.69em;
+}
+
+.social-grey_daimler {
+  bottom: 1.55em;
+}
+
+.social-grey_burda {
+  bottom: 1.55em;
+}
+
+.social-grey_fujitsu {
+  bottom: 0.5em;
+}
+
+.social-grey_thyssenkrupp {
+  bottom: 0.2em;
+}
+
+.social-grey_evonik {
+  bottom: 1.1em;
 }
 
 .advantage-section {
