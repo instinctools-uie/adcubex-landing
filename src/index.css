@@ -37,7 +37,7 @@ h2 {
 }
 
 .header-container .logo,
-.header-container .toggle-menu-icons {
+.header-container .toggle-menu-button {
   z-index: 3;
 }
 
@@ -192,9 +192,16 @@ h2 {
   color: rgb(48, 48, 48);
 }*/
 
-.toggle-menu-icons {
-  display: flex;
+.toggle-menu-button {
+  padding: 0;
+  margin: 0;
   cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.toggle-menu-button:focus {
+  outline: 1px dotted rgb(197, 197, 197);
 }
 
 .header-open-menu-icon,

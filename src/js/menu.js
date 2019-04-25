@@ -1,5 +1,6 @@
 const links = document.querySelectorAll('.menu-container > a');
 const logoElement = document.querySelector('.logo');
+const toggleMenuButton = document.querySelector('.toggle-menu-button');
 const openMenuIcon = document.querySelector('.header-open-menu-icon');
 const closeMenuIcon = document.querySelector('.header-close-menu-icon');
 const backdropElement = document.querySelector('.backdrop');
@@ -7,8 +8,7 @@ const headerNavigation = document.querySelector('.header-navigation');
 const linksContainerInOpenedMenu = document.querySelector('.header-links-container');
 const cubesContainer = document.querySelector('.cubes-container');
 
-openMenuIcon.addEventListener('click', openMenu);
-closeMenuIcon.addEventListener('click', closeMenu);
+toggleMenuButton.addEventListener('click', toggleMenu);
 
 linksContainerInOpenedMenu.addEventListener('mouseover', mouseOnNavigationContainer);
 linksContainerInOpenedMenu.addEventListener('mouseout', mouseOutNavigationContainer);
@@ -77,22 +77,32 @@ function mouseOutNavigationContainer(e) {
   }
 }
 
+function toggleMenu() {
+  const isMenuOpened = Boolean(toggleMenuButton.querySelector('.header-close-menu-icon--active'));
+
+  if (isMenuOpened) {
+    closeMenu();
+  } else {
+    openMenu();
+  }
+}
+
 function openMenu() {
+  cubesContainer.style.zIndex = 3;
   closeMenuIcon.classList.add('header-close-menu-icon--active');
   headerNavigation.classList.add('header-navigation--active');
   logoElement.classList.add('logo--active');
   backdropElement.classList.add('backdropElement--active');
   openMenuIcon.classList.remove('header-open-menu-icon--active');
-  cubesContainer.style.zIndex = 3;
 }
 
 function closeMenu() {
+  cubesContainer.style.zIndex = -1;
   openMenuIcon.classList.add('header-open-menu-icon--active');
   headerNavigation.classList.remove('header-navigation--active');
   logoElement.classList.remove('logo--active');
   backdropElement.classList.remove('backdropElement--active');
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
-  cubesContainer.style.zIndex = -1;
 }
 
 //  TODO: Remove that code after remove header links from html
