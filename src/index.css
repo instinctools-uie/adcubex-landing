@@ -126,14 +126,15 @@ h2 {
 
 .header-navigation-footer-text {
   margin-bottom: 3em;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 1em;
-  font-style: italic;
   line-height: 1.5;
 }
 
-.header-navigation-footer-text span {
-  color: #000000;
+.header-navigation-footer-text a {
+  color: white;
+  font-style: italic;
+  text-decoration: none;
 }
 
 .header-link-arrow-icon {
