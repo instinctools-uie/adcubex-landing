@@ -348,6 +348,11 @@ h2 {
   margin: 10rem 0 0 16.25rem;
 }
 
+.improvement-section > .text-container > .inner-section-text > .custom-button {
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 1em;
+}
+
 .image-content-section {
   margin-left: 3.75em;
 }
