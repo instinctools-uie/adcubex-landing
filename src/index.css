@@ -50,7 +50,7 @@ h2 {
   overflow: hidden;
   width: 100vw;
   height: 0;
-  background-color: #0000d4;
+  background-color: #d60046;
   transition-property: background-color, height, opacity;
   transition-duration: 0.2s;
   transition-timing-function: ease-in;
@@ -66,12 +66,20 @@ h2 {
   fill: white !important;
 }
 
+.header-navigation--blue {
+  background-color: #0000d4;
+}
+
 .header-navigation--red {
-  background-color: #cd2626;
+  background-color: #db0000;
 }
 
 .header-navigation--purple {
-  background-color: #8300d9;
+  background-color: #7900cb;
+}
+
+.header-navigation--dark-blue {
+  background-color: #3608be;
 }
 
 .header-navigation-container {

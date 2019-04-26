@@ -40,12 +40,18 @@ export function changeActiveMenuLinkToRed() {
 function mouseOnNavigationContainer(e) {
   const { target } = e;
   const isHeaderLink = target.classList.contains('header-link');
+  const isSynergyLink = target.classList.contains('link-synergy');
   const isStrategyLink = target.classList.contains('link-strategy');
   const isSolutionsLink = target.classList.contains('link-solutions');
+  const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
   if (isHeaderLink) {
     const linkArrowIcon = target.querySelector('.header-link-arrow-icon');
     linkArrowIcon.classList.add('header-link-arrow-icon--active');
+  }
+
+  if (isSynergyLink) {
+    headerNavigation.classList.add('header-navigation--blue');
   }
 
   if (isStrategyLink) {
@@ -55,17 +61,27 @@ function mouseOnNavigationContainer(e) {
   if (isSolutionsLink) {
     headerNavigation.classList.add('header-navigation--purple');
   }
+
+  if (isLetsTalkLink) {
+    headerNavigation.classList.add('header-navigation--dark-blue');
+  }
 }
 
 function mouseOutNavigationContainer(e) {
   const { target } = e;
   const isHeaderLink = target.classList.contains('header-link');
+  const isSynergyLink = target.classList.contains('link-synergy');
   const isStrategyLink = target.classList.contains('link-strategy');
   const isSolutionsLink = target.classList.contains('link-solutions');
+  const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
   if (isHeaderLink) {
     const linkArrowIcon = target.querySelector('.header-link-arrow-icon');
     linkArrowIcon.classList.remove('header-link-arrow-icon--active');
+  }
+
+  if (isSynergyLink) {
+    headerNavigation.classList.remove('header-navigation--blue');
   }
 
   if (isStrategyLink) {
@@ -74,6 +90,10 @@ function mouseOutNavigationContainer(e) {
 
   if (isSolutionsLink) {
     headerNavigation.classList.remove('header-navigation--purple');
+  }
+
+  if (isLetsTalkLink) {
+    headerNavigation.classList.remove('header-navigation--dark-blue');
   }
 }
 
