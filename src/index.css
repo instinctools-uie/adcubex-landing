@@ -34,10 +34,6 @@ body {
   width: 80em;
 }
 
-.menu-button > svg {
-  fill: #ffffff;
-}
-
 .button-container {
   display: flex;
 }
@@ -65,20 +61,25 @@ body {
   width: 80em;
 }
 
-.title-section-content {
+.title-section > .section-content {
   margin: -2.7em 0 0 -18.5em;
 }
 
-.section-container > .title-section-content > h1 {
+.section-content > h1,
+.section-content > h2 {
   font-family: montserrat_mediumregular, sans-serif;
-  font-size: 5.625em;
+  font-size: 5.2em;
   font-weight: 600;
 }
 
-.section-container > .title-section-content > p {
-  font-size: 2.25em;
+.section-container > .section-content > p {
+  font-size: 1.9em;
   font-weight: 600;
   line-height: 1.5em;
+}
+
+.content-section {
+  background-color: #ffffff;
 }
 
 footer {
