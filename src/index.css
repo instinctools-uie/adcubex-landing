@@ -103,22 +103,23 @@ h2 {
 .control-section,
 .power-section,
 .improvement-section {
+  position: relative;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.supervise-section {
-  margin-top: 14em;
-}
-
 .section-container {
   z-index: 1;
+  margin-top: 5em;
+  margin-bottom: 15em;
   width: 69em;
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: opacity 0.5s, transform 0.5s;
+  height: 100vh;
   color: #303030;
+}
+
+.budget-section {
+  margin-bottom: 5em;
 }
 
 .section-container--active {
@@ -196,6 +197,7 @@ h2 {
   position: absolute;
   z-index: -1;
   right: 0;
+  display: none;
 }
 
 .power-section > svg {
@@ -234,6 +236,7 @@ h2 {
 .inner-section-image {
   position: absolute;
   top: 30em;
+  display: none;
   width: 20em;
   height: 20em;
 
@@ -290,10 +293,6 @@ h2 {
 
 .social-section > img {
   height: 100%;
-}
-
-.advantage-section {
-  margin-top: 17em;
 }
 
 .supervise-section > .text-container > .inner-section-text,

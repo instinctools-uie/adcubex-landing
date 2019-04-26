@@ -9,6 +9,7 @@ export function scrollParallaxBgLetters(section, element, prevSection) {
   const perChange = (scrolled - startScrolling) / RATE_CHANGE_SCROLL;
 
   const topValue = start - (start - finish) * perChange;
+  element.style.display = 'block';
   element.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${topValue}, 0, 1)`;
 }
 
@@ -21,5 +22,6 @@ export function scrollParallaxPattern(element, section) {
 
   const topValue = start - (start - finish) * perChange;
 
+  element.style.display = 'block';
   element.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${topValue}, 0, 1)`;
 }

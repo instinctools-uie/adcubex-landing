@@ -9,7 +9,6 @@ import {
   changeCubeColorToDefault
 } from './changeColor';
 import { toggleCube, toggleCubes } from './toggleCubes';
-import { toggleTextOfSection } from './toggleTextOfSection';
 import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from './scrollParallax';
 
@@ -129,5 +128,4 @@ function initProject() {
 
   toggleCube();
   toggleCubes();
-  toggleTextOfSection();
 }
