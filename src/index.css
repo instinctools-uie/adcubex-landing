@@ -354,7 +354,7 @@ h2 {
 
 .social-section {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   width: 68em;
   margin-top: 14.625em;
