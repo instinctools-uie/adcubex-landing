@@ -206,8 +206,8 @@ h2 {
   margin-top: 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 5.625em;
+  font-weight: 600;
+  font-size: 5em;
   letter-spacing: 0;
   line-height: 1.125em;
   text-align: left;
@@ -241,10 +241,9 @@ h2 {
 
 .inner-section-text {
   margin-left: -1.5em;
-  font-family: montserrat_mediumregular, sans-serif;
+  font-family: 'montserrat_lightregular', sans-serif;
   font-size: 1.75em;
-  font-weight: 500;
-  line-height: 1.7em;
+  line-height: 1.6em;
 }
 
 .custom-button {
