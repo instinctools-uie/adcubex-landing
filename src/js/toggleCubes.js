@@ -1,6 +1,6 @@
 import { RATE_CHANGE_SCROLL } from './constants';
 
-const advantageSection = window.document.querySelector('.advantage-section');
+const advantageSection = document.querySelector('.advantage-section');
 const advantageSectionScrollPosition = advantageSection.offsetTop;
 const mainCube = document.querySelector('#main-cube');
 const mainCubeAnimationElement = document.querySelector('#main-cube-scale-animation');
