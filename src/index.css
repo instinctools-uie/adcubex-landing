@@ -114,7 +114,7 @@ h2 {
   margin-top: 5em;
   margin-bottom: 15em;
   width: 69em;
-  height: 100vh;
+  min-height: 100vh;
   color: #303030;
 }
 

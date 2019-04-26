@@ -11,7 +11,7 @@ export function scrollParallaxBgLetters(element, section, prevSection) {
   const transformValue = start - (start - finish) * perChange;
 
   element.style.display = 'block';
-  element.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${transformValue}, 0, 1)`;
+  element.style.transform = `matrix(1, 0, 0, 1, 0, ${transformValue})`;
 }
 
 export function scrollParallaxPattern(element, section) {
@@ -24,5 +24,5 @@ export function scrollParallaxPattern(element, section) {
   const transformValue = start - (start - finish) * perChange;
 
   element.style.display = 'block';
-  element.style.transform = `matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, ${transformValue}, 0, 1)`;
+  element.style.transform = `matrix(1, 0, 0, 1, 0, ${transformValue})`;
 }
