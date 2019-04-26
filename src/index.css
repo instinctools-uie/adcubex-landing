@@ -62,6 +62,15 @@ h2 {
   height: 100vh;
 }
 
+.header-navigation-bg-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -320px;
+  opacity: 0.3;
+  height: 100%;
+}
+
 .logo--active tspan {
   fill: white !important;
 }
