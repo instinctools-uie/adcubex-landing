@@ -34,6 +34,10 @@ body {
   width: 80em;
 }
 
+.menu-button > svg {
+  fill: #ffffff;
+}
+
 .button-container {
   display: flex;
 }
