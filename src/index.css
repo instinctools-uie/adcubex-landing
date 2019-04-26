@@ -1,6 +1,7 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
 @import './css/onLoadAnimation.css';
+@import './css/socialsAnimation.css';
 
 html {
   scroll-behavior: smooth;
@@ -357,10 +358,6 @@ h2 {
   justify-content: space-between;
   width: 68em;
   margin-top: 14.625em;
-}
-
-.social-section > img {
-  height: 100%;
 }
 
 .advantage-section {
