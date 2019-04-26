@@ -1,7 +1,7 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
 @import './css/onLoadAnimation.css';
-@import './css/socialsAnimation.css';
+@import './css/externalLinksHoverColor.css';
 
 html {
   scroll-behavior: smooth;
@@ -352,7 +352,7 @@ h2 {
   cursor: pointer;
 }
 
-.social-section {
+.external-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -360,7 +360,7 @@ h2 {
   margin-top: 14.625em;
 }
 
-.expertise-section .social-section {
+.expertise-section .external-links {
   align-items: baseline;
 }
 
