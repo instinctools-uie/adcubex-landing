@@ -248,10 +248,11 @@ h2 {
 
 .custom-button {
   display: flex;
+  justify-content: space-between;
   align-items: center;
   width: 23.625rem;
   height: 5rem;
-  padding-left: 1.5em;
+  padding: 0 1em 0 1.5em;
   border: none;
   margin-top: 7em;
   background-color: #ef3e3e;
@@ -263,7 +264,6 @@ h2 {
 }
 
 .button-image {
-  padding-left: 8.5em;
   transition: all 0.3s ease-in;
 }
 
@@ -285,10 +285,6 @@ h2 {
 
 .social-section > img {
   height: 100%;
-}
-
-.toolset-section > .text-container > .inner-section-text > button > .button-image {
-  padding-left: 5.5em;
 }
 
 .advantage-section {
@@ -329,9 +325,14 @@ h2 {
 
 .power-image-container > button {
   margin-top: 4.6em;
-  border: 0.01em solid #fff;
+  border: 0.01em solid #b8b8b8;
   background-color: transparent;
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+
+.power-image-container > .custom-button:hover {
+  border-color: #ffffff;
+  background-color: transparent;
 }
 
 .budget-image,
