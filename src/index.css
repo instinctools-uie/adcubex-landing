@@ -413,6 +413,7 @@ h2 {
   justify-content: center;
   padding: 5em 0;
   min-width: 56.3125em;
+  height: 7em;
   background-image: url(../assets/images/rectangle2.svg);
 }
 
