@@ -354,10 +354,14 @@ h2 {
 
 .social-section {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   width: 68em;
   margin-top: 14.625em;
+}
+
+.expertise-section .social-section {
+  align-items: baseline;
 }
 
 .advantage-section {
