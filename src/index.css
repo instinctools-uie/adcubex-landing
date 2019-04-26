@@ -1,7 +1,6 @@
 @import './css/cubesAnimation.css';
 @import './css/normalize.css';
 @import './css/onLoadAnimation.css';
-/*TODO: Use "em" instead of "rem" where it make sense*/
 
 html {
   scroll-behavior: smooth;
@@ -50,15 +49,15 @@ h2 {
   overflow: hidden;
   width: 100vw;
   height: 0;
-  background-color: #d60046;
+  background-color: #ec3865;
   transition-property: background-color, height, opacity;
-  transition-duration: 0.2s;
+  transition-duration: 0.3s;
   transition-timing-function: ease-in;
   will-change: opacity, background-color, height;
 }
 
 .header-navigation--active {
-  opacity: 0.75;
+  opacity: 1;
   height: 100vh;
 }
 
@@ -67,19 +66,19 @@ h2 {
 }
 
 .header-navigation--blue {
-  background-color: #0000d4;
+  background-color: #3655f4;
 }
 
 .header-navigation--red {
-  background-color: #db0000;
+  background-color: #fc4848;
 }
 
 .header-navigation--purple {
-  background-color: #7900cb;
+  background-color: #9b2edf;
 }
 
-.header-navigation--dark-blue {
-  background-color: #3608be;
+.header-navigation--dark-purple {
+  background-color: #6c3ce6;
 }
 
 .header-navigation-container {
@@ -137,26 +136,6 @@ h2 {
   color: #000000;
 }
 
-.backdrop {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  display: block;
-  content: '';
-  opacity: 0;
-  width: 0;
-  height: 100vh;
-  background-color: white;
-  transition: opacity 0.2s ease-in;
-  will-change: opacity;
-}
-
-.backdropElement--active {
-  width: 100vw;
-  opacity: 1;
-}
-
 .header-link-arrow-icon {
   display: none;
 }
@@ -164,41 +143,6 @@ h2 {
 .header-link-arrow-icon--active {
   display: block;
 }
-
-/*TODO: Remove after removed menu-container from html*/
-/*.menu-container {
-  display: flex;
-  justify-content: space-between;
-  flex-grow: 1;
-  padding: 0 25% 0 17%;
-  color: #303030;
-  font-family: 'montserratbold', sans-serif;
-  letter-spacing: 0.088em;
-}
-
-.menu-container > .link {
-  color: inherit;
-  font-weight: 700;
-  font-size: 0.875em;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.menu-container > .link_red--active {
-  color: rgb(229, 62, 56);
-}
-
-.menu-container > .link_red:hover {
-  color: rgb(229, 62, 56);
-}
-
-.menu-container > .link_black--active {
-  color: rgb(48, 48, 48);
-}
-
-.menu-container > .link_black:hover {
-  color: rgb(48, 48, 48);
-}*/
 
 .toggle-menu-button {
   padding: 0;
@@ -517,7 +461,7 @@ div.power-image > .image-content > p.image-content_large {
   position: fixed;
   right: 0;
   bottom: 1.25em;
-  z-index: 3;
+  z-index: 2;
 }
 
 .mailIcon-background {

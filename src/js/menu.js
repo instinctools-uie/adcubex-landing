@@ -3,10 +3,8 @@ const logoElement = document.querySelector('.logo');
 const toggleMenuButton = document.querySelector('.toggle-menu-button');
 const openMenuIcon = document.querySelector('.header-open-menu-icon');
 const closeMenuIcon = document.querySelector('.header-close-menu-icon');
-const backdropElement = document.querySelector('.backdrop');
 const headerNavigation = document.querySelector('.header-navigation');
 const linksContainerInOpenedMenu = document.querySelector('.header-links-container');
-const cubesContainer = document.querySelector('.cubes-container');
 
 toggleMenuButton.addEventListener('click', toggleMenu);
 
@@ -63,7 +61,7 @@ function mouseOnNavigationContainer(e) {
   }
 
   if (isLetsTalkLink) {
-    headerNavigation.classList.add('header-navigation--dark-blue');
+    headerNavigation.classList.add('header-navigation--dark-purple');
   }
 }
 
@@ -93,7 +91,7 @@ function mouseOutNavigationContainer(e) {
   }
 
   if (isLetsTalkLink) {
-    headerNavigation.classList.remove('header-navigation--dark-blue');
+    headerNavigation.classList.remove('header-navigation--dark-purple');
   }
 }
 
@@ -108,58 +106,15 @@ function toggleMenu() {
 }
 
 function openMenu() {
-  cubesContainer.style.zIndex = 3;
   closeMenuIcon.classList.add('header-close-menu-icon--active');
   headerNavigation.classList.add('header-navigation--active');
   logoElement.classList.add('logo--active');
-  backdropElement.classList.add('backdropElement--active');
   openMenuIcon.classList.remove('header-open-menu-icon--active');
 }
 
 function closeMenu() {
-  cubesContainer.style.zIndex = -1;
   openMenuIcon.classList.add('header-open-menu-icon--active');
   headerNavigation.classList.remove('header-navigation--active');
   logoElement.classList.remove('logo--active');
-  backdropElement.classList.remove('backdropElement--active');
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
 }
-
-//  TODO: Remove that code after remove header links from html
-// const menuContainer = document.querySelector('.menu-container');
-
-// menuContainer.addEventListener('click', clickOnLinksInMenu);
-
-// function clickOnLinksInMenu(e) {
-//   const linkElement = e.target;
-//   const isClickOnLink = linkElement.classList.contains('link');
-//
-//   if (!isClickOnLink) {
-//     return;
-//   }
-//
-//   const isRedLink = linkElement.classList.contains('link_red');
-//   if (isRedLink) {
-//     links.forEach(link => {
-//       const isActiveLink = link.classList.contains('link_red--active');
-//       if (isActiveLink) {
-//         link.classList.remove('link_red--active');
-//       }
-//     });
-//
-//     linkElement.classList.add('link_red--active');
-//   }
-//
-//   const isBlackLink = linkElement.classList.contains('link_black');
-//
-//   if (isBlackLink) {
-//     links.forEach(link => {
-//       const isActiveLink = link.classList.contains('link_black--active');
-//       if (isActiveLink) {
-//         link.classList.remove('link_black--active');
-//       }
-//     });
-//
-//     linkElement.classList.add('link_black--active');
-//   }
-// }
