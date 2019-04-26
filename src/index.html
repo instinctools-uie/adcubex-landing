@@ -39,30 +39,31 @@
   <body>
   <!--TODO: Use one "div" instead of  when div nested another div where it possible -->
     <header class="header-container">
-      <svg
-        class="logo"
-        width="150px"
-        height="41px"
-        viewBox="0 0 140 41"
-        version="1.1"
-      >
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Main-page_1920-90_Final-(I-hope)" transform="translate(-59.000000, -58.000000)">
-            <g id="Components-/-Header_black" transform="translate(50.000000, 50.000000)">
-              <g id="Header_black" transform="translate(10.000000, 2.000000)">
-                <text id="logo-AdCubex" font-family="montserrat_extraboldregular" font-size="29" font-weight="700" letter-spacing="0.1318182">
-                  <tspan x="0" y="28" fill="#303030">AD</tspan>
-                  <tspan x="44.5466364" y="28" fill="#EF3E3E">Cubex</tspan>
-                </text>
-                <text id="when-ad-go-huge" font-family="montserrat_mediumregular" font-size="11" font-weight="normal" letter-spacing="1.21000004" fill="#303030">
-                  <tspan x="0" y="46">WHEN AD'S GO HUGE</tspan>
-                </text>
+      <div class="header-content">
+        <svg
+          class="logo"
+          width="150px"
+          height="41px"
+          viewBox="0 0 140 41"
+          version="1.1"
+        >
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Main-page_1920-90_Final-(I-hope)" transform="translate(-59.000000, -58.000000)">
+              <g id="Components-/-Header_black" transform="translate(50.000000, 50.000000)">
+                <g id="Header_black" transform="translate(10.000000, 2.000000)">
+                  <text id="logo-AdCubex" font-family="montserrat_extraboldregular" font-size="29" font-weight="700" letter-spacing="0.1318182">
+                    <tspan x="0" y="28" fill="#303030">AD</tspan>
+                    <tspan x="44.5466364" y="28" fill="#EF3E3E">Cubex</tspan>
+                  </text>
+                  <text id="when-ad-go-huge" font-family="montserrat_mediumregular" font-size="11" font-weight="normal" letter-spacing="1.21000004" fill="#303030">
+                    <tspan x="0" y="46">WHEN AD'S GO HUGE</tspan>
+                  </text>
+                </g>
               </g>
             </g>
           </g>
-        </g>
-      </svg>
-      <div class="button-container">
+        </svg>
+        <div class="button-container">
         <div class="menu-button">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -83,10 +84,17 @@
           </svg>
         </div>
       </div>
+      </div>
     </header>
     <main class="content-container">
-        <section class="title-section">
+        <section class="title-section section-container">
           <img src="../assets/images/rectangle.svg">
+          <div class="title-section-content">
+            <h1>Synergy</h1>
+            <p>We are walking side-by-side<br/>
+              with you on the whole way<br/>
+              to benefits.</p>
+          </div>
         </section>
         <section class="content-section"></section>
         <section class="contact-section"></section>

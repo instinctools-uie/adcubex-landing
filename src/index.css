@@ -18,14 +18,20 @@ body {
   position: fixed;
   z-index: 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding: 0 4rem 0 4rem;
   height: 10.125rem;
   width: 100%;
-
   background-color: transparent;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80em;
 }
 
 .button-container {
@@ -45,7 +51,30 @@ body {
 }
 
 .title-section {
+  display: flex;
+  justify-content: flex-start;
   margin-top: 17em;
+  color: #ffffff;
+}
+
+.section-container {
+  width: 80em;
+}
+
+.title-section-content {
+  margin: -2.7em 0 0 -18.5em;
+}
+
+.section-container > .title-section-content > h1 {
+  font-family: montserrat_mediumregular, sans-serif;
+  font-size: 5.625em;
+  font-weight: 600;
+}
+
+.section-container > .title-section-content > p {
+  font-size: 2.25em;
+  font-weight: 600;
+  line-height: 1.5em;
 }
 
 footer {
