@@ -77,30 +77,32 @@ function initProject() {
     changeActiveMenuLinkToRed();
   }
 
-  if (
-    scrolled >= advantageSectionScrollPosition + (budgetSectionScrollPosition - advantageSectionScrollPosition) / 2 &&
-    scrolled <= budgetSectionScrollPosition + (controlSectionScrollPosition - budgetSectionScrollPosition) / 2
-  ) {
+  // For Parallax Scroll of Big Background letters
+  const middlePositionOfAdvancedSection =
+    advantageSectionScrollPosition + (budgetSectionScrollPosition - advantageSectionScrollPosition) / 2;
+  const middlePositionOfBudgetSection =
+    budgetSectionScrollPosition + (controlSectionScrollPosition - budgetSectionScrollPosition) / 2;
+  const middlePositionOfControlSection =
+    controlSectionScrollPosition + (powerSectionScrollPosition - controlSectionScrollPosition) / 2;
+  const middlePositionOfPowerSection =
+    powerSectionScrollPosition + (improvementSectionScrollPosition - powerSectionScrollPosition) / 2;
+
+  if (scrolled >= middlePositionOfAdvancedSection && scrolled <= middlePositionOfBudgetSection) {
     const budgetBgLetter = window.document.querySelector('#budget > svg');
-    scrollParallaxBgLetters(budgetSectionScrollPosition, budgetBgLetter, advantageSectionScrollPosition);
+    scrollParallaxBgLetters(budgetBgLetter, budgetSectionScrollPosition, advantageSectionScrollPosition);
   }
 
-  if (
-    scrolled >= budgetSectionScrollPosition + (controlSectionScrollPosition - budgetSectionScrollPosition) / 2 &&
-    scrolled <= controlSectionScrollPosition + (powerSectionScrollPosition - controlSectionScrollPosition) / 2
-  ) {
+  if (scrolled >= middlePositionOfBudgetSection && scrolled <= middlePositionOfControlSection) {
     const controlBgLetter = window.document.querySelector('#control > svg');
-    scrollParallaxBgLetters(controlSectionScrollPosition, controlBgLetter, budgetSectionScrollPosition);
+    scrollParallaxBgLetters(controlBgLetter, controlSectionScrollPosition, budgetSectionScrollPosition);
   }
 
-  if (
-    scrolled >= controlSectionScrollPosition + (powerSectionScrollPosition - controlSectionScrollPosition) / 2 &&
-    scrolled <= powerSectionScrollPosition + (improvementSectionScrollPosition - powerSectionScrollPosition) / 2
-  ) {
+  if (scrolled >= middlePositionOfControlSection && scrolled <= middlePositionOfPowerSection) {
     const powerBgLetter = window.document.querySelector('#power > svg');
-    scrollParallaxBgLetters(powerSectionScrollPosition, powerBgLetter, controlSectionScrollPosition);
+    scrollParallaxBgLetters(powerBgLetter, powerSectionScrollPosition, controlSectionScrollPosition);
   }
 
+  // For Parallax Scroll of patterns/squares
   if (scrolled < expertiseSectionScrollPosition) {
     const superviseElement = window.document.querySelector('#supervise .inner-section-image');
     scrollParallaxPattern(superviseElement, superviseSectionScrollPosition);
