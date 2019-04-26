@@ -198,7 +198,9 @@ h2 {
 
 .expertise-section .inner-section-text > p > span,
 .power-section div > p > span {
+  font-family: montserrat_mediumregular, sans-serif;
   font-size: 2.188rem;
+  font-weight: 600;
 }
 
 .section-container > h1,
@@ -346,6 +348,14 @@ h2 {
   margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
+  line-height: 0;
+}
+
+.power-image > .image-content-section > .image-content_large {
+  margin: 3rem 0;
+  font-family: montserratbold, sans-serif;
+  font-size: 6.5rem;
+  font-weight: 600;
   line-height: 0;
 }
 
