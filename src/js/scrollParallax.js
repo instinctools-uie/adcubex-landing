@@ -8,10 +8,10 @@ export function scrollParallaxBgLetters(element, section, prevSection) {
   const startScrolling = prevSection + (section - prevSection) / 2;
   const perChange = (scrolled - startScrolling) / RATE_CHANGE_SCROLL;
 
-  const transformValue = start - (start - finish) * perChange;
+  const translateYValue = start - (start - finish) * perChange;
 
   element.style.display = 'block';
-  element.style.transform = `matrix(1, 0, 0, 1, 0, ${transformValue})`;
+  element.style.transform = `translate(0px, ${translateYValue}px)`;
 }
 
 export function scrollParallaxPattern(element, section) {
@@ -20,8 +20,8 @@ export function scrollParallaxPattern(element, section) {
 
   const scrolled = window.pageYOffset;
   const perChange = (scrolled - section) / RATE_CHANGE_SCROLL;
-  const transformValue = start - (start - finish) * perChange;
+  const translateYValue = start - (start - finish) * perChange;
 
   element.style.display = 'block';
-  element.style.transform = `matrix(1, 0, 0, 1, 0, ${transformValue})`;
+  element.style.transform = `translate(0px, ${translateYValue}px)`;
 }
