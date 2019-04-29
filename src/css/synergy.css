@@ -1,4 +1,5 @@
 @import './externalLinksHoverColor.css';
+@import './headerAndFooterInnerPages.css';
 /*TODO: Use "em" instead of "rem" where it make sense*/
 
 html {
@@ -9,35 +10,6 @@ body {
   margin: 0;
   font-family: 'montserrat_lightregular', sans-serif;
   background-color: #3655f4;
-}
-
-.header-container {
-  position: fixed;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 4rem 0 4rem;
-  height: 10.125rem;
-  width: 100%;
-  background-color: transparent;
-}
-
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80em;
-}
-
-.button-container {
-  display: flex;
-}
-
-.menu-button {
-  width: 1.7rem;
-  cursor: pointer;
 }
 
 .content-container {
@@ -205,51 +177,4 @@ h4 + p {
 
 .custom-button:hover .button-img {
   transform: translateX(0.3em);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  margin: 16.25rem 0 2.5rem 0;
-  color: #ababab;
-  font-size: 0.875rem;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 68.625rem;
-}
-
-.footer-container:first-child {
-  flex-grow: 1;
-}
-
-.footer-right {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-}
-
-.footer-left {
-  font-style: normal;
-}
-
-.footer-left > p > sup {
-  color: red;
-}
-
-.footer-left > p > span {
-  color: #ffffff;
-  font-style: italic;
-}
-
-.footer-left > a,
-.footer-right > a {
-  color: #ababab;
-  text-decoration: none;
-}
-
-.footer-right > a {
-  padding: 0 0.8em;
 }
