@@ -201,7 +201,11 @@ h4 + p {
 }
 
 .custom-button > img {
-  transition: ;
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover .button-img {
+  transform: translateX(0.5em);
 }
 
 footer {
