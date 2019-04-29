@@ -8,6 +8,7 @@ import {
   changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from './changeColor';
+import { cubesAnimation } from './cubesAnimation';
 import { toggleCube, toggleCubes } from './toggleCubes';
 import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from './scrollParallax';
@@ -30,6 +31,7 @@ const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
 initProject();
+cubesAnimation();
 
 window.addEventListener('scroll', initProject);
 

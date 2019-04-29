@@ -5,7 +5,7 @@ const advantageSectionScrollPosition = advantageSection.offsetTop;
 const mainCube = document.querySelector('#main-cube');
 const mainCubeAnimationElement = document.querySelector('#main-cube-scale-animation');
 const cubes = document.querySelectorAll('#cubes > g');
-const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
+const cubesTranslateElements = document.querySelectorAll('.cube-translate');
 
 export function toggleCube() {
   const scrolled = window.pageYOffset;
@@ -60,7 +60,7 @@ export function toggleCubes() {
 
 function translateCubesAnimation(translateYPosition) {
   cubesTranslateElements.forEach(cubeTranslateElement => {
-    cubeTranslateElement.style.transform = `translate(0px, -${translateYPosition}px)`;
+    cubeTranslateElement.style.transform = `translate(0px, ${translateYPosition}px)`;
   });
 }
 
