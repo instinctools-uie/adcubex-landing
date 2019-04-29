@@ -240,7 +240,8 @@ footer {
 }
 
 .footer-left > p > span {
-  color: black;
+  color: #ffffff;
+  font-style: italic;
 }
 
 .footer-left > a,
