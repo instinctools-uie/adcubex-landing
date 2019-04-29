@@ -87,7 +87,8 @@ body {
   line-height: 1.5em;
 }
 
-article {
+article,
+.external-links {
   display: flex;
   justify-content: space-between;
   margin: 0 4em 0 4em;
@@ -142,6 +143,14 @@ article.we-article {
   font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2rem;
   font-weight: 600;
+}
+
+.external-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 8.625em;
 }
 
 footer {
