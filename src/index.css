@@ -53,8 +53,13 @@ body {
 .title-section {
   display: flex;
   justify-content: flex-start;
-  margin-top: 17em;
+  margin: 17em 0 0 8em;
   color: #ffffff;
+}
+
+.content-section {
+  margin-top: -16.063em;
+  background-color: #ffffff;
 }
 
 .section-container {
@@ -72,14 +77,23 @@ body {
   font-weight: 600;
 }
 
+.section-content > h2 {
+  margin-bottom: 0;
+}
+
 .section-container > .section-content > p {
   font-size: 1.9em;
   font-weight: 600;
   line-height: 1.5em;
 }
 
-.content-section {
-  background-color: #ffffff;
+article {
+  margin-left: 4em;
+}
+
+.section-container > article > .section-content > p {
+  font-size: 1.625em;
+  line-height: 1.5em;
 }
 
 footer {
