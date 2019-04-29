@@ -98,9 +98,22 @@ article.we-article {
   justify-content: flex-end;
 }
 
+article.together {
+  margin-top: 9.3em;
+  margin-bottom: 15.8em;
+}
+
 .section-container > article > .section-content > p {
   font-size: 1.625em;
   line-height: 1.5em;
+}
+
+h2 + p {
+  margin-top: 1.8em;
+}
+
+article.together > .vertical-inscription {
+  margin: 17em -6.5em 0 0;
 }
 
 .vertical-inscription {
