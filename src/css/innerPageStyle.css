@@ -1,5 +1,4 @@
 @import './headerAndFooterInnerPages.css';
-/*TODO: Use "em" instead of "rem" where it make sense*/
 
 html {
   scroll-behavior: smooth;

@@ -19,22 +19,40 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('js', function() {
-  browserify('./src/js/index.js')
+gulp.task('mainPageJs', function() {
+  browserify('./src/js/mainPage/index.js')
     .transform(babelify)
     .bundle()
     .pipe(source('index.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js'))
+    .pipe(gulp.dest('./build/js/mainPage'))
     .pipe(connect.reload());
 });
 
-gulp.task('css', function() {
-  gulp.src('./src/index.css')
+gulp.task('synergyPageJs', function() {
+  browserify('./src/js/synergyPage/index.js')
+    .transform(babelify)
+    .bundle()
+    .pipe(source('index.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('./build/js/synergyPage'))
+    .pipe(connect.reload());
+});
+
+gulp.task('mainPageCss', function() {
+  gulp.src('./src/css/mainPage/index.css')
     .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(concat('index.css'))
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build/css/mainPage'))
+});
+
+gulp.task('synergyPageCss', function() {
+  gulp.src('./src/css/synergyPage/index.css')
+    .pipe(cleanCSS({compatibility: 'ie10'}))
+    .pipe(concat('index.css'))
+    .pipe(gulp.dest('build/css/synergyPage'))
 });
 
 gulp.task('html', function() {
@@ -45,18 +63,18 @@ gulp.task('html', function() {
 
 gulp.task('fonts', () => {
   return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('assets/fonts/**/*'))
+    .concat('./src/assets/fonts/**/*'))
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
 gulp.task('image', function () {
-  gulp.src('./assets/images/*')
+  gulp.src('./src/assets/images/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/images'));
 });
 
 gulp.task('meta', function () {
-  gulp.src('./assets/meta/*')
+  gulp.src('./src/assets/meta/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/meta'));
 });
@@ -67,6 +85,6 @@ gulp.task('listen', function() {
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+gulp.task('default', ['mainPageJs', 'synergyPageJs', 'mainPageCss', 'synergyPageCss', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
 
-gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);
+gulp.task('build', ['mainPageJs', 'synergyPageJs', 'mainPageCss', 'synergyPageCss', 'html', 'fonts', 'image', 'meta']);

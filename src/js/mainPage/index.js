@@ -1,3 +1,5 @@
+/*  eslint no-unused-vars: "off"  */
+
 import {
   changeColorForImprovementSection,
   changeColorForBudgetSection,
@@ -7,10 +9,11 @@ import {
   changeBackgroundColorToDefault,
   changeMenuItemsColorToDefault,
   changeCubeColorToDefault
-} from './changeColor';
-import { toggleCube, toggleCubes } from './toggleCubes';
-import { changeActiveMenuLinkToBlack, changeActiveMenuLinkToRed } from './menu';
-import { scrollParallaxBgLetters, scrollParallaxPattern } from './scrollParallax';
+} from '../changeColor';
+import { toggleCube, toggleCubes } from '../toggleCubes';
+import toggleMenu from '../toggleMenu';
+import hoverLinkInMenu from '../hoverLinkInMenu';
+import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -63,14 +66,6 @@ function initProject() {
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     changeColorForImprovementSection(powerSectionScrollPosition);
-  }
-
-  if (scrolled > budgetSectionScrollPosition) {
-    changeActiveMenuLinkToBlack();
-  }
-
-  if (scrolled < budgetSectionScrollPosition) {
-    changeActiveMenuLinkToRed();
   }
 
   // For Parallax Scroll of Big Background letters
