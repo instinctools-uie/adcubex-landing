@@ -1,4 +1,3 @@
-@import './externalLinksHoverColor.css';
 @import './headerAndFooterInnerPages.css';
 /*TODO: Use "em" instead of "rem" where it make sense*/
 
@@ -9,7 +8,6 @@ html {
 body {
   margin: 0;
   font-family: 'montserrat_lightregular', sans-serif;
-  background-color: #3655f4;
 }
 
 .content-container {
@@ -57,20 +55,14 @@ body {
   line-height: 1.5em;
 }
 
-article,
-.external-links {
+article {
   display: flex;
   justify-content: space-between;
   margin: 0 4em 0 4em;
 }
 
-article.we-article {
+article.article-right {
   justify-content: flex-end;
-}
-
-article.together {
-  margin-top: 9.3em;
-  margin-bottom: 15.8em;
 }
 
 .section-container > article > .section-content > p {
@@ -80,10 +72,6 @@ article.together {
 
 h2 + p {
   margin-top: 1.8em;
-}
-
-article.together > .vertical-inscription {
-  margin: 17em -6.5em 0 0;
 }
 
 .vertical-inscription {
@@ -126,14 +114,6 @@ article.together > .vertical-inscription {
   font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2rem;
   font-weight: 600;
-}
-
-.external-links {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin-top: 8.625em;
 }
 
 .contact-section {

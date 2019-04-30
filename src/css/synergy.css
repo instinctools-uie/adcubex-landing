@@ -1,0 +1,24 @@
+@import './externalLinksHoverColor.css';
+@import './innerPageStyle.css';
+
+body {
+    background-color: #3655f4;
+}
+
+.external-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 8.625em 0 0 4em;
+}
+
+article.together {
+    margin-top: 9.3em;
+    margin-bottom: 15.8em;
+}
+
+article.together > .vertical-inscription {
+    margin: 17em -6.5em 0 0;
+}
+
