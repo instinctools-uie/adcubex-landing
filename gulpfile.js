@@ -62,6 +62,13 @@ gulp.task('strategyPageCss', function() {
     .pipe(gulp.dest('build/css/strategyPage'))
 });
 
+gulp.task('solutionsPageCss', function() {
+    gulp.src('./src/css/solutionsPage/index.css')
+        .pipe(cleanCSS({compatibility: 'ie10'}))
+        .pipe(concat('index.css'))
+        .pipe(gulp.dest('build/css/solutionsPage'))
+});
+
 gulp.task('html', function() {
   gulp.src('./src/*.html')
     .pipe(gulp.dest('./build'))
@@ -92,6 +99,6 @@ gulp.task('listen', function() {
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+gulp.task('default', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'solutionsPageCss', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
 
-gulp.task('build', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'html', 'fonts', 'image', 'meta']);
+gulp.task('build', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'solutionsPageCss', 'html', 'fonts', 'image', 'meta']);
