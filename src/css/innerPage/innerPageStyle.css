@@ -1,4 +1,4 @@
-@import './headerAndFooterInnerPages.css';
+@import 'headerAndFooterInnerPages.css';
 
 html {
   scroll-behavior: smooth;

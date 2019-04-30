@@ -30,14 +30,14 @@ gulp.task('mainPageJs', function() {
     .pipe(connect.reload());
 });
 
-gulp.task('synergyPageJs', function() {
-  browserify('./src/js/synergyPage/index.js')
+gulp.task('innerPageJs', function() {
+  browserify('./src/js/innerPage/index.js')
     .transform(babelify)
     .bundle()
     .pipe(source('index.js'))
     .pipe(buffer())
     .pipe(uglify())
-    .pipe(gulp.dest('./build/js/synergyPage'))
+    .pipe(gulp.dest('./build/js/innerPage'))
     .pipe(connect.reload());
 });
 
@@ -53,6 +53,13 @@ gulp.task('synergyPageCss', function() {
     .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(concat('index.css'))
     .pipe(gulp.dest('build/css/synergyPage'))
+});
+
+gulp.task('strategyPageCss', function() {
+  gulp.src('./src/css/strategyPage/index.css')
+    .pipe(cleanCSS({compatibility: 'ie10'}))
+    .pipe(concat('index.css'))
+    .pipe(gulp.dest('build/css/strategyPage'))
 });
 
 gulp.task('html', function() {
@@ -85,6 +92,6 @@ gulp.task('listen', function() {
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['mainPageJs', 'synergyPageJs', 'mainPageCss', 'synergyPageCss', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+gulp.task('default', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
 
-gulp.task('build', ['mainPageJs', 'synergyPageJs', 'mainPageCss', 'synergyPageCss', 'html', 'fonts', 'image', 'meta']);
+gulp.task('build', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'html', 'fonts', 'image', 'meta']);
