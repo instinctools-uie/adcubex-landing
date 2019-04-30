@@ -76,4 +76,4 @@ gulp.task('listen', function() {
 
 gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
 
-gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect']);
+gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);
