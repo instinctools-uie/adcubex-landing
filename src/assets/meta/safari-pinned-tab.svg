@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="107px" height="33px" viewBox="0 0 107 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-page_1920" transform="translate(-59.000000, -69.000000)">
+            <g id="Components-/-Header_black" transform="translate(50.000000, 65.000000)">
+                <g id="Header_black" transform="translate(10.000000, 0.000000)">
+                    <g id="Logotype">
+                        <g>
+                            <text id="ADCubex" font-family="Montserrat-Bold, Montserrat" font-size="22" font-weight="bold" letter-spacing="0.100000001">
+                                <tspan x="0" y="21" fill="#303030">AD</tspan>
+                                <tspan x="33.794" y="21" fill="#EF3E3E">Cube</tspan>
+                                <tspan x="92.384" y="21" fill="#EF3E3E">x</tspan>
+                            </text>
+                            <text id="WHEN-AD'S-GO-HUGE" font-family="Montserrat-Regular, Montserrat" font-size="9" font-weight="normal" letter-spacing="0.5" fill="#303030">
+                                <tspan x="0" y="36">WHEN AD'S GO HUG</tspan>
+                                <tspan x="100.331" y="36">E</tspan>
+                            </text>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

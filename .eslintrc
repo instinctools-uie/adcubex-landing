@@ -1,0 +1,16 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "import/prefer-default-export": "off",
+    "no-plusplus": "off",
+    "import/no-unresolved": "off",
+    "no-unused-expressions": "off",
+    "no-param-reassign": "off",
+    "no-use-before-define": ["error", { "functions": false }]
+  }
+}

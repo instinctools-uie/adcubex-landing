@@ -1,0 +1,30 @@
+@import '../normalize.css';
+@import '../commonStyles/innerPageStyle.css';
+
+body {
+  background-color: #9b2edf;
+}
+
+.expertise-article > .vertical-inscription {
+  margin-top: 12.5em;
+}
+
+.investments-article,
+.increase-article,
+.control-article,
+.customization-article,
+.scaling-article,
+.security-article {
+  margin-top: 4.25em;
+}
+
+.security-article {
+  margin-bottom: 7.5em;
+}
+
+.increase-article > .vertical-inscription,
+.customization-article > .vertical-inscription,
+.security-article > .vertical-inscription {
+  margin-top: 10em;
+  margin-right: -6em;
+}
