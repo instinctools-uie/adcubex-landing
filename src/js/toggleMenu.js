@@ -29,5 +29,5 @@ function closeMenu() {
   headerNavigation.classList.remove('header-navigation--active');
   logoElement.classList.remove('logo--active');
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
-  headerNavigation.setAttribute('aria-hidden', "true");
+  headerNavigation.setAttribute('aria-hidden', 'true');
 }
