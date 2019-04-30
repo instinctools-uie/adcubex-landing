@@ -60,7 +60,7 @@ export function toggleCubes() {
 
 function translateCubesAnimation(translateYPosition) {
   cubesTranslateElements.forEach(cubeTranslateElement => {
-    cubeTranslateElement.style.transform = `translate(0px, ${translateYPosition}px)`;
+    cubeTranslateElement.style.transform = `translate(0px, -${translateYPosition}px)`;
   });
 }
 
