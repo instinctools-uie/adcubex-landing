@@ -13,3 +13,12 @@ article.clear-article {
 article.consulting {
   margin-top: 15.5em;
 }
+
+article.together > a.consulting-inscription {
+  margin-top: 11.5em;
+}
+
+article.implementation-article {
+  margin-top: 26.5em;
+  margin-bottom: 22em;
+}
