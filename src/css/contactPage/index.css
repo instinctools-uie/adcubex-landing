@@ -1,1 +1,5 @@
-@import '../innerPageStyle.css';
+@import '../innerPage/innerPageStyle.css';
+
+body {
+  background-color: #6131db;
+}
