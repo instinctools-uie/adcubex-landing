@@ -21,6 +21,7 @@ function openMenu() {
   headerNavigation.classList.add('header-navigation--active');
   logoElement.classList.add('logo--active');
   openMenuIcon.classList.remove('header-open-menu-icon--active');
+  headerNavigation.removeAttribute('aria-hidden');
 }
 
 function closeMenu() {
@@ -28,4 +29,5 @@ function closeMenu() {
   headerNavigation.classList.remove('header-navigation--active');
   logoElement.classList.remove('logo--active');
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
+  headerNavigation.setAttribute('aria-hidden', "true");
 }

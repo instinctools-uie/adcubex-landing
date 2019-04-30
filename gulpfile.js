@@ -94,8 +94,8 @@ gulp.task('meta', function () {
 });
 
 gulp.task('listen', function() {
-  gulp.watch('./src/**/*.js', ['js']);
-  gulp.watch('./src/**/*.css', ['css']);
+  gulp.watch('./src/**/**/*.js', ['mainPageJs', 'innerPageJs']);
+  gulp.watch('./src/**/**/*.css', ['mainPageCss', 'synergyPageCss', 'strategyPageCss', 'solutionsPageCss']);
   gulp.watch('./src/*.html', ['html']);
 });
 
