@@ -68,3 +68,48 @@
 .external-links > .evonik-icon:hover #evonik {
   fill: #991a81;
 }
+
+.clutch-color,
+.tm-color,
+.goodFirms-color,
+.topDevs-color {
+  opacity: 0;
+  transition: opacity 0.2s linear;
+}
+
+.clutch-icon:hover .clutch-color,
+.tm-icon:hover .tm-color,
+.goodFirms-icon:hover .goodFirms-color,
+.topDevs-icon:hover .topDevs-color {
+  opacity: 1;
+}
+
+.clutch-grey,
+.tm-grey,
+.goodFirms-grey,
+.topDevs-grey {
+  transition: opacity 0.2s linear;
+}
+
+.clutch-grey {
+  margin: -10em 0 0.85em -1.15em;
+}
+
+.tm-grey {
+  margin: -9em 0 0.9em -0.05em;
+}
+
+.goodFirms-grey {
+  margin: -10em 0 0.9em -0.125em;
+}
+
+.topDevs-grey {
+  margin: -11em 0 1em -1.05em;
+}
+
+.clutch-icon:hover .clutch-grey,
+.tm-icon:hover .tm-grey,
+.goodFirms-icon:hover .goodFirms-grey,
+.topDevs-icon:hover .topDevs-grey {
+  opacity: 0;
+}
