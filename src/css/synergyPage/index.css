@@ -21,3 +21,159 @@ article.together {
 article.together > .vertical-inscription {
   margin: 17em -6.5em 0 0;
 }
+
+/******************/
+
+.header-container {
+  position: fixed;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 0 4em 0 4em;
+  height: 10.125em;
+  width: 100%;
+  background-color: transparent;
+}
+
+.header-container .logo,
+.header-container .toggle-menu-button {
+  z-index: 3;
+}
+
+.header-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  opacity: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 0;
+  background-color: #ec3865;
+  transition-property: background-color, height, opacity;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  will-change: opacity, background-color, height;
+}
+
+.header-navigation--active {
+  opacity: 1;
+  height: 100vh;
+}
+
+.header-navigation-bg-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: -320px;
+  opacity: 0.3;
+  height: 100%;
+}
+
+.logo--active tspan {
+  fill: white !important;
+}
+
+.header-navigation--blue {
+  background-color: #3655f4;
+}
+
+.header-navigation--red {
+  background-color: #fc4848;
+}
+
+.header-navigation--purple {
+  background-color: #9b2edf;
+}
+
+.header-navigation--dark-purple {
+  background-color: #6c3ce6;
+}
+
+.header-navigation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 4em 0 4em;
+  margin-top: 15em;
+}
+
+.header-links-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+}
+
+.header-links-container a,
+.header-links-container p {
+  font-family: 'montserratbold', sans-serif;
+}
+
+.header-links-container a {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  color: white;
+  font-size: 5.75em;
+  font-weight: 500;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.header-links-container a > img {
+  margin-left: 0.7em;
+}
+
+.header-links-container a:hover {
+  color: #252525;
+}
+
+.header-links-container a + a {
+  margin-top: 0.2em;
+}
+
+.header-navigation-footer-text {
+  margin-bottom: 3em;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+.header-navigation-footer-text a {
+  color: white;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.header-link-arrow-icon {
+  display: none;
+}
+
+.header-link-arrow-icon--active {
+  display: block;
+}
+
+.toggle-menu-button {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.toggle-menu-button:focus {
+  outline: 1px dotted rgb(197, 197, 197);
+}
+
+.header-open-menu-icon,
+.header-close-menu-icon {
+  display: none;
+}
+
+.header-open-menu-icon--active,
+.header-close-menu-icon--active {
+  display: block;
+}
