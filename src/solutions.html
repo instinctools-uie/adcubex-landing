@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <meta name="application-name" content="AdCubex - Web site" />
+    <!--TODO: Change color. Depend on bg color of page-->
     <meta name="theme-color" content="#ffffff" />
     <meta name="apple-mobile-web-app-title" content="AdCubex" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff" />
     <!--TODO: Need to get final logo of the site and get "150x150" size. Change "src"-->
-    <meta name="msapplication-config" content="../assets/meta/browserconfig.xml" />
+    <meta name="msapplication-config" content="./assets/meta/browserconfig.xml" />
 
     <meta name="description" content="AdCubex description" />
     <meta name="keywords" content="SEM, search engine marketing, advertising, digital advertising, digital marketing, adwords, google adwords, google ads, advertising in social networks, worldwide advertising, massive ads, big budget advertising, bing, google adwords, yahoo" />
@@ -24,7 +25,7 @@
     <meta property="og:locale" content="en_US" />
 
     <!--TODO: Need to get final logo of the site and get "16x16" and "32x32" sizes. Change "start_url" and "src" in manifest-->
-    <!--<link rel="manifest" href="../assets/meta/manifest.webmanifest" />-->
+    <!--<link rel="manifest" href="./assets/meta/manifest.webmanifest" />-->
     <link rel="shortcut icon" href="./assets/meta/favicon.ico" />
     <link rel="icon" sizes="16x16" href="./assets/meta/favicon-16x16.png" />
     <link rel="icon" sizes="32x32" href="./assets/meta/favicon-32x32.png" />
@@ -37,7 +38,6 @@
     <script src="js/innerPage/index.js" defer></script>
 </head>
 <body>
-<!--TODO: Use one "div" instead of  when div nested another div where it possible -->
 <header class="header-container">
     <svg
             class="logo"
@@ -134,7 +134,7 @@
         <img class="header-navigation-bg-image" src="./assets/images/cubes.svg" alt="menu background image" />
     </nav>
 </header>
-<main class="content-container">
+<div class="content-container" role="main">
     <section class="title-section section-container">
         <img src="./assets/images/rectangle.svg">
         <div class="section-content">
@@ -266,7 +266,7 @@
             </div>
         </button>
     </section>
-</main>
+</div>
 <footer>
     <div class="footer-container">
         <address class="footer-left">

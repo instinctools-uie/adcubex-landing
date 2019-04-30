@@ -1,5 +1,28 @@
-@import '../innerPage/innerPageStyle.css';
+@import '../commonStyles/innerPageStyle.css';
 
 body {
   background-color: #6131db;
+}
+
+.contact-us-container {
+  width: 47.875em;
+  margin: 4.75em 4em 0 4em;
+}
+
+.contact-us-container > p {
+  font-size: 1.625em;
+  line-height: 1.5em;
+}
+
+.contact-us-container > input,
+.contact-us-container > textarea {
+  width: 100%;
+}
+
+.contacts-inputs > input {
+  width: 22.5em;
+}
+
+input {
+  height: 5em;
 }

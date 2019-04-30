@@ -1,4 +1,5 @@
-@import '../innerPage/innerPageStyle.css';
+@import '../normalize.css';
+@import '../commonStyles/innerPageStyle.css';
 
 body {
   background-color: #9b2edf;

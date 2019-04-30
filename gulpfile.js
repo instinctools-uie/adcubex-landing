@@ -10,6 +10,9 @@ const buffer = require('vinyl-buffer');
 const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
+const jsFolders = ['mainPage', 'innerPage'];
+const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage'];
+
 gulp.task('connect', function() {
   connect.server({
     base: 'http://localhost',
@@ -19,40 +22,26 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('mainPageJs', function() {
-  browserify('./src/js/mainPage/index.js')
-    .transform(babelify)
-    .bundle()
-    .pipe(source('index.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/js/mainPage'))
-    .pipe(connect.reload());
+gulp.task('js', function() {
+  jsFolders.forEach(folderName => {
+    browserify(`./src/js/${folderName}/index.js`)
+      .transform(babelify)
+      .bundle()
+      .pipe(source('index.js'))
+      .pipe(buffer())
+      .pipe(uglify())
+      .pipe(gulp.dest(`./build/js/${folderName}`))
+      .pipe(connect.reload());
+  });
 });
 
-gulp.task('innerPageJs', function() {
-  browserify('./src/js/innerPage/index.js')
-    .transform(babelify)
-    .bundle()
-    .pipe(source('index.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/js/innerPage'))
-    .pipe(connect.reload());
-});
-
-gulp.task('mainPageCss', function() {
-  gulp.src('./src/css/mainPage/index.css')
-    .pipe(cleanCSS({compatibility: 'ie10'}))
-    .pipe(concat('index.css'))
-    .pipe(gulp.dest('build/css/mainPage'))
-});
-
-gulp.task('synergyPageCss', function() {
-  gulp.src('./src/css/synergyPage/index.css')
-    .pipe(cleanCSS({compatibility: 'ie10'}))
-    .pipe(concat('index.css'))
-    .pipe(gulp.dest('build/css/synergyPage'))
+gulp.task('css', function() {
+  cssFolders.forEach(folderName => {
+    gulp.src(`./src/css/${folderName}/index.css`)
+      .pipe(cleanCSS({compatibility: 'ie10'}))
+      .pipe(concat('index.css'))
+      .pipe(gulp.dest(`build/css/${folderName}`))
+  });
 });
 
 gulp.task('strategyPageCss', function() {
@@ -60,13 +49,6 @@ gulp.task('strategyPageCss', function() {
     .pipe(cleanCSS({compatibility: 'ie10'}))
     .pipe(concat('index.css'))
     .pipe(gulp.dest('build/css/strategyPage'))
-});
-
-gulp.task('solutionsPageCss', function() {
-    gulp.src('./src/css/solutionsPage/index.css')
-        .pipe(cleanCSS({compatibility: 'ie10'}))
-        .pipe(concat('index.css'))
-        .pipe(gulp.dest('build/css/solutionsPage'))
 });
 
 gulp.task('html', function() {
@@ -94,11 +76,11 @@ gulp.task('meta', function () {
 });
 
 gulp.task('listen', function() {
-  gulp.watch('./src/**/*.js', ['js']);
-  gulp.watch('./src/**/*.css', ['css']);
+  gulp.watch('./src/**/**/*.js', ['js']);
+  gulp.watch('./src/**/**/*.css', ['css']);
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'solutionsPageCss', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
 
-gulp.task('build', ['mainPageJs', 'innerPageJs', 'mainPageCss', 'synergyPageCss', 'strategyPageCss', 'solutionsPageCss', 'html', 'fonts', 'image', 'meta']);
+gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);
