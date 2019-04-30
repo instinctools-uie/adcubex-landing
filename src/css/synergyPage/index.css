@@ -1,5 +1,6 @@
-@import '../externalLinksHoverColor.css';
-@import '../innerPageStyles/innerPageStyle.css';
+@import '../normalize.css';
+@import './externalLinksHoverColor.css';
+@import '../commonStyles/innerPageStyle.css';
 
 body {
   background-color: #3655f4;

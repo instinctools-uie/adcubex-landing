@@ -1,6 +1,6 @@
-@import '../cubesAnimation.css';
 @import '../normalize.css';
-@import '../externalLinksHoverColor.css';
+@import './cubesAnimation.css';
+@import './externalLinksHoverColor.css';
 
 html {
   scroll-behavior: smooth;
