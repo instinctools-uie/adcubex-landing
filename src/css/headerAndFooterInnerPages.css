@@ -31,7 +31,7 @@ footer {
   display: flex;
   justify-content: center;
   margin: 16.25rem 0 2.5rem 0;
-  color: #ababab;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 
@@ -55,18 +55,14 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > sup {
-  color: red;
-}
-
 .footer-left > p > span {
-  color: #ffffff;
+  font-weight: 600;
   font-style: italic;
 }
 
 .footer-left > a,
 .footer-right > a {
-  color: #ababab;
+  color: #ffffff;
   text-decoration: none;
 }
 
