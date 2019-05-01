@@ -16,17 +16,16 @@ body {
 
 .contact-us-container > input,
 .contact-us-container > textarea {
-  width: 100%;
+  width: 93%;
 }
 
 .contacts-inputs {
   display: flex;
   justify-content: space-between;
-  margin-right: -3.45em;
 }
 
 .contacts-inputs > input {
-  width: 15.5em;
+  width: 14.25em;
 }
 
 input {
@@ -74,10 +73,7 @@ textarea:focus {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-
-input[type='checkbox'] {
-  height: 1em;
+  margin-top: 1em;
 }
 
 input[type='checkbox']:not(:checked),
@@ -136,12 +132,17 @@ label {
   background-color: #ef3e3e;
   font-weight: 500;
   font-size: 1.5em;
+  transition: background-color 0.3s ease-in;
 }
 
-.button-img {
-  transition: transform 0.5s ease-in;
+.button-image {
+  transition: transform 0.3s ease-in;
 }
 
-.custom-button:hover .button-img {
-  transform: translateX(0.5em);
+.custom-button:hover {
+  background-color: #fd311e;
+}
+
+.custom-button:hover .button-image {
+  transform: translateX(0.3em);
 }
