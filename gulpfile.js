@@ -11,7 +11,7 @@ const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
 const jsFolders = ['mainPage', 'innerPage'];
-const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage'];
+const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage', 'privacyPolicyPage'];
 
 gulp.task('connect', function() {
   connect.server({
