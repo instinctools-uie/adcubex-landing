@@ -1,9 +1,14 @@
 .cubes-container {
   position: fixed;
   z-index: -1;
-  width: 700px;
+  top: 0;
   right: 0;
-  top: -1825px;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cubes-container > g {
+  transform: translate(0, -1000px);
 }
 
 #cubes .cube-translate-animation {

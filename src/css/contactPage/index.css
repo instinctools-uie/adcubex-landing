@@ -1,0 +1,149 @@
+@import '../commonStyles/innerPageStyle.css';
+
+body {
+  background-color: #6131db;
+}
+
+.contact-us-container {
+  width: 47.875em;
+  margin: 4.75em 4em 0 4em;
+}
+
+.contact-us-container > p {
+  font-size: 1.625em;
+  line-height: 1.5em;
+}
+
+.contact-us-container > input,
+.contact-us-container > textarea {
+  width: 93%;
+}
+
+.contacts-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contacts-inputs > input {
+  width: 14.25em;
+}
+
+input {
+  height: 3.5em;
+}
+
+input,
+textarea {
+  margin-bottom: 1.8em;
+  padding: 0 1.25em 0 1.25em;
+  border: 1px solid #b6b6b6;
+  color: #353535;
+  font-family: 'montserrat_lightregular', sans-serif;
+  font-weight: 600;
+  font-size: 1.35em;
+  outline: none;
+}
+
+textarea {
+  height: 5.8em;
+  padding-top: 1.5em;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #353535;
+}
+
+::-webkit-input-placeholder {
+  color: #b6b6b6;
+}
+::-moz-placeholder {
+  color: #b6b6b6;
+}
+:-ms-input-placeholder {
+  color: #b6b6b6;
+}
+:-moz-placeholder {
+  color: #b6b6b6;
+}
+
+.contact-checkbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1em;
+}
+
+input[type='checkbox']:not(:checked),
+input[type='checkbox']:checked {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+.fake-checkbox {
+  width: 1em;
+  height: 1em;
+  border: 0.125em solid #353535;
+}
+
+.fake-checkbox_unchecked {
+  background: #ffffff;
+}
+
+.fake-checkbox_checked {
+  background: #353535;
+}
+
+.contact-checkbox > div > img {
+  position: absolute;
+  top: 0.58em;
+  left: 0.15em;
+  width: 1em;
+}
+
+.img_hide {
+  display: none;
+}
+
+.img_show {
+  display: block;
+}
+
+label {
+  margin-left: 1em;
+  color: #ababab;
+  font-size: 0.75em;
+  line-height: 1.5em;
+}
+
+.checkbox-wrapper,
+label {
+  cursor: pointer;
+}
+
+.custom-button {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  padding: 0 0.8em 0 1.42em;
+  border: none;
+  background-color: #ef3e3e;
+  font-weight: 500;
+  font-size: 1.5em;
+  transition: background-color 0.3s ease-in;
+}
+
+.button-image {
+  transition: transform 0.3s ease-in;
+}
+
+.custom-button:hover {
+  background-color: #fd311e;
+}
+
+.custom-button:hover .button-image {
+  transform: translateX(0.3em);
+}
