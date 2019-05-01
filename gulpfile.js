@@ -44,13 +44,6 @@ gulp.task('css', function() {
   });
 });
 
-gulp.task('strategyPageCss', function() {
-  gulp.src('./src/css/strategyPage/index.css')
-    .pipe(cleanCSS({compatibility: 'ie10'}))
-    .pipe(concat('index.css'))
-    .pipe(gulp.dest('build/css/strategyPage'))
-});
-
 gulp.task('html', function() {
   gulp.src('./src/*.html')
     .pipe(gulp.dest('./build'))
