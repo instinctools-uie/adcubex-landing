@@ -19,10 +19,104 @@ body {
   width: 100%;
 }
 
+.contacts-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-right: -3.45em;
+}
+
 .contacts-inputs > input {
-  width: 22.5em;
+  width: 15.5em;
 }
 
 input {
-  height: 5em;
+  height: 3.5em;
+}
+
+input,
+textarea {
+  margin-bottom: 1.8em;
+  padding: 0 1.25em 0 1.25em;
+  border: 1px solid #b6b6b6;
+  color: #353535;
+  font-family: 'montserrat_lightregular', sans-serif;
+  font-weight: 600;
+  font-size: 1.35em;
+  outline: none;
+}
+
+textarea {
+  height: 5.8em;
+  padding-top: 1.5em;
+  resize: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #353535;
+}
+
+::-webkit-input-placeholder {
+  color: #b6b6b6;
+}
+::-moz-placeholder {
+  color: #b6b6b6;
+}
+:-ms-input-placeholder {
+  color: #b6b6b6;
+}
+:-moz-placeholder {
+  color: #b6b6b6;
+}
+
+.contact-checkbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input[type='checkbox'] {
+  height: 1em;
+}
+
+input[type='checkbox']:not(:checked),
+input[type='checkbox']:checked {
+  position: absolute;
+  left: -9999px;
+}
+
+.fake-checkbox {
+  width: 1em;
+  height: 1em;
+  border: 0.125em solid #353535;
+}
+
+.fake-checkbox_unchecked {
+  background: #ffffff;
+}
+
+.fake-checkbox_checked {
+  background: #353535;
+}
+
+img {
+  position: absolute;
+  left: 0.15em;
+  width: 1em;
+}
+
+.img_hide {
+  display: none;
+}
+
+.img_show {
+  display: block;
+}
+
+label {
+  margin-left: 1em;
+  color: #ababab;
+  font-size: 0.75em;
+  line-height: 1.5em;
 }
