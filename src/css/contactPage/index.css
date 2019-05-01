@@ -100,8 +100,9 @@ input[type='checkbox']:checked {
   background: #353535;
 }
 
-img {
+.contact-checkbox > div > img {
   position: absolute;
+  top: 0.58em;
   left: 0.15em;
   width: 1em;
 }
@@ -119,4 +120,28 @@ label {
   color: #ababab;
   font-size: 0.75em;
   line-height: 1.5em;
+}
+
+.checkbox-wrapper,
+label {
+  cursor: pointer;
+}
+
+.custom-button {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 0;
+  padding: 0 0.8em 0 1.42em;
+  border: none;
+  background-color: #ef3e3e;
+  font-weight: 500;
+  font-size: 1.5em;
+}
+
+.button-img {
+  transition: transform 0.5s ease-in;
+}
+
+.custom-button:hover .button-img {
+  transform: translateX(0.5em);
 }

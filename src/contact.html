@@ -144,7 +144,7 @@
         </div>
     </section>
     <section class="content-section section-container">
-        <div class="contact-us-container">
+        <form class="contact-us-container">
         <p>Leave us a note that you are interested and our cooperation<br />will start!</p>
         <input type="text" placeholder="Name*"/>
         <div class="contacts-inputs">
@@ -154,8 +154,10 @@
             <textarea placeholder="Describe your request"></textarea>
         <div class="contact-checkbox">
             <input type="checkbox" id="checkbox-id" />
-            <div class="fake-checkbox fake-checkbox_unchecked"></div>
-            <img class="img_hide" src="assets/images/Check.png"/>
+            <div class="checkbox-wrapper">
+                <div class="fake-checkbox fake-checkbox_unchecked"></div>
+                <img class="img_hide" src="assets/images/Check.png"/>
+            </div>
             <label for="checkbox-id">I consent to the   collection, storage and processing of the data which I provided in the contact form.<br />
          This data should be deleted after processing of my request is complete.</label>
         </div>
@@ -165,7 +167,7 @@
                 <img src="./assets/images/RedBackArrow.svg" style="transform: rotate(-90deg)" />
             </div>
         </button>
-        </div>
+        </form>
     </section>
 </main>
 <footer>

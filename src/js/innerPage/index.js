@@ -2,4 +2,4 @@
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import toggleCheckbox from '../contactPage/checkbox';
+import toggleCheckbox from '../checkbox';

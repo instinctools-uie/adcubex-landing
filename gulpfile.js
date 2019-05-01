@@ -10,7 +10,7 @@ const buffer = require('vinyl-buffer');
 const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
-const jsFolders = ['mainPage', 'innerPage', 'contactPage'];
+const jsFolders = ['mainPage', 'innerPage'];
 const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage', 'contactPage'];
 
 gulp.task('connect', function() {
