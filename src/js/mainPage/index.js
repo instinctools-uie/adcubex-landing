@@ -67,6 +67,11 @@ function initProject() {
     moveToTopCubes(advantageSectionScrollPosition);
   }
 
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
+    makeMainCubeBigger(advantageSectionScrollPosition);
+    moveToTopCubes(advantageSectionScrollPosition);
+  }
+
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
     changeColorForControlSection(budgetSectionScrollPosition);
   }
