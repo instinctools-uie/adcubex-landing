@@ -4,3 +4,37 @@
 body {
   background-color: #3655f4;
 }
+
+.title-section > .section-content > h1 {
+  margin: 1em 0 0 -0.12em;
+}
+
+.content-section {
+  margin-top: -26.8em;
+}
+
+.dataProtection-article {
+  margin-top: 2.5em;
+}
+
+.dataCollection-article {
+  margin-top: 5em;
+}
+
+article {
+  margin-bottom: 1em;
+}
+
+h3,
+.section-container > article > .section-content > h2 {
+  font-size: 2.25em;
+}
+
+.section-container > article > .section-content > p {
+  font-size: 1em;
+  line-height: 1.75em;
+}
+
+.section-container > article > .section-content > h2 {
+  margin-bottom: 2em;
+}
