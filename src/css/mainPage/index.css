@@ -439,8 +439,7 @@ h2 {
   transition-timing-function: ease-in;
 }
 
-.power-image-container > button > div > svg {
-  transform: rotate(-90deg);
+#but_arrow {
   transition: fill 0.4s ease-in;
 }
 
