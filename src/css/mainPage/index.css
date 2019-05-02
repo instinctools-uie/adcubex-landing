@@ -198,6 +198,7 @@ h2 {
 }
 
 .section-container {
+  position: static;
   z-index: 1;
   margin-top: 5em;
   margin-bottom: 15em;
@@ -208,11 +209,6 @@ h2 {
 
 .budget-section {
   margin-bottom: 5em;
-}
-
-.section-container--active {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .vertical-inscription {
@@ -284,12 +280,8 @@ h2 {
 .power-section > svg {
   position: absolute;
   z-index: -1;
-  right: 0;
+  left: 0;
   display: none;
-}
-
-.power-section > svg {
-  top: 7em;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -315,10 +307,6 @@ h2 {
   position: relative;
   display: flex;
   margin-top: 3em;
-}
-
-.expertise-section > .text-container {
-  margin-top: -2.5em;
 }
 
 .inner-section-image {
@@ -434,7 +422,7 @@ h2 {
   padding: 5em 0;
   min-width: 56.3125em;
   height: 7em;
-  background-image: url(../assets/images/rectangle2.svg);
+  background-image: url(../../assets/images/rectangle2.svg);
 }
 
 .budget-image {
@@ -485,6 +473,14 @@ div.power-image > .image-content > p.image-content_large {
   right: 0;
   bottom: 1.25em;
   z-index: 2;
+  margin-right: 4em;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.mailIcon-container:focus {
+  outline: 1px dotted rgb(197, 197, 197);
 }
 
 .mailIcon-background {
@@ -492,9 +488,8 @@ div.power-image > .image-content > p.image-content_large {
   justify-content: space-between;
   overflow: hidden;
   width: 3.25em;
-  margin-right: 4em;
   background-color: transparent;
-  transition-property: width, overflow;
+  transition-property: width;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
   will-change: width, overflow;
@@ -515,10 +510,6 @@ div.power-image > .image-content > p.image-content_large {
   width: 7.5em;
 }
 
-.mailIcon-background:hover .mid-el > span {
-  opacity: 1;
-}
-
 .start-el {
   width: 3.25em;
   height: 3.25em;
@@ -526,26 +517,22 @@ div.power-image > .image-content > p.image-content_large {
   border-radius: 50%;
   background-color: #353535;
   transition: background-color 0.3s ease-in;
-  will-change: background-color;
 }
 
 .mid-el {
   display: flex;
   align-items: center;
+  overflow: hidden;
   width: 0;
   color: #ffffff;
   background-color: #353535;
   transition-property: background-color, width;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
-  will-change: background-color;
 }
 
 .mid-el > span {
   white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0s ease-in 0.4s;
-  will-change: opacity;
 }
 
 .mail-el {
@@ -559,7 +546,6 @@ div.power-image > .image-content > p.image-content_large {
   border-radius: 50%;
   background-color: #353535;
   transition: background-color 0.3s ease-in;
-  will-change: background-color;
 }
 
 footer {
