@@ -10,7 +10,14 @@ import {
   changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
-import { toggleCube, toggleCubes } from '../toggleCubes';
+import {
+  makeMainCubeBigger,
+  makeMainCubeSmaller,
+  makeMainCubeTransformToDefault,
+  moveToTopCubes,
+  moveToBottomCubes,
+  moveCubesToDefaultPosition
+} from '../cubesAnimation';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
@@ -42,6 +49,8 @@ function initProject() {
   if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
     changeBackgroundColorToDefault();
     changeCubeColorToDefault();
+    makeMainCubeTransformToDefault();
+    moveCubesToDefaultPosition();
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
@@ -54,6 +63,8 @@ function initProject() {
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
     changeColorForBudgetSection(advantageSectionScrollPosition);
+    makeMainCubeBigger(advantageSectionScrollPosition);
+    moveToTopCubes(advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
@@ -66,6 +77,8 @@ function initProject() {
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     changeColorForImprovementSection(powerSectionScrollPosition);
+    makeMainCubeSmaller(powerSectionScrollPosition);
+    moveToBottomCubes(powerSectionScrollPosition);
   }
 
   // For Parallax Scroll of Big Background letters
@@ -118,7 +131,4 @@ function initProject() {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
     scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
   }
-
-  toggleCube();
-  toggleCubes();
 }
