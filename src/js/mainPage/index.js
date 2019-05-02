@@ -10,7 +10,14 @@ import {
   changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
-import { toggleCube, toggleCubes } from '../toggleCubes';
+import {
+  makeMainCubeBigger,
+  transformMainCubeToDefaultSize,
+  mainCubeToDefaultSize,
+  moveCubesToTop,
+  moveCubesToDefaultPosition,
+  cubesToDefaultPosition
+} from '../cubesAnimation';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
@@ -42,6 +49,8 @@ function initProject() {
   if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
     changeBackgroundColorToDefault();
     changeCubeColorToDefault();
+    mainCubeToDefaultSize();
+    cubesToDefaultPosition();
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
@@ -56,6 +65,11 @@ function initProject() {
     changeColorForBudgetSection(advantageSectionScrollPosition);
   }
 
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
+    makeMainCubeBigger(advantageSectionScrollPosition);
+    moveCubesToTop(advantageSectionScrollPosition);
+  }
+
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
     changeColorForControlSection(budgetSectionScrollPosition);
   }
@@ -66,6 +80,8 @@ function initProject() {
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     changeColorForImprovementSection(powerSectionScrollPosition);
+    transformMainCubeToDefaultSize(powerSectionScrollPosition);
+    moveCubesToDefaultPosition(powerSectionScrollPosition);
   }
 
   // For Parallax Scroll of Big Background letters
@@ -118,7 +134,4 @@ function initProject() {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
     scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
   }
-
-  toggleCube();
-  toggleCubes();
 }
