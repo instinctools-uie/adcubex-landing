@@ -12,7 +12,7 @@ export function makeMainCubeBigger(sectionScrollPosition) {
   mainCubeAnimation(perChange);
 }
 
-export function makeMainCubeToDefaultSize(sectionScrollPosition) {
+export function transformMainCubeToDefaultSize(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const highRatio = 1;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;

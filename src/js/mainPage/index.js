@@ -12,7 +12,7 @@ import {
 } from '../changeColor';
 import {
   makeMainCubeBigger,
-  makeMainCubeToDefaultSize,
+  transformMainCubeToDefaultSize,
   mainCubeToDefaultSize,
   moveCubesToTop,
   moveCubesToDefaultPosition,
@@ -80,7 +80,7 @@ function initProject() {
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     changeColorForImprovementSection(powerSectionScrollPosition);
-    makeMainCubeToDefaultSize(powerSectionScrollPosition);
+    transformMainCubeToDefaultSize(powerSectionScrollPosition);
     moveCubesToDefaultPosition(powerSectionScrollPosition);
   }
 
