@@ -5,8 +5,8 @@ body {
   background-color: #3655f4;
 }
 
-.title-section > .section-content > h1 {
-  margin: 1em 0 0 -0.12em;
+.title-section > h1 {
+  margin: 0.45em 0 0 -3.68em;
 }
 
 .content-section {
@@ -22,19 +22,31 @@ body {
 }
 
 article {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1em;
 }
 
 h3,
-.section-container > article > .section-content > h2 {
+.section-container > article > h2 {
   font-size: 2.25em;
 }
 
-.section-container > article > .section-content > p {
+.section-container > article > p {
   font-size: 1em;
   line-height: 1.75em;
 }
 
-.section-container > article > .section-content > h2 {
-  margin-bottom: 2em;
+.section-container > article > h2 {
+  margin-bottom: 1em;
+  font-family: montserrat_mediumregular, sans-serif;
+  font-weight: 600;
+}
+
+article.youtube-article > h2 {
+  margin-top: 2.6em;
+}
+
+.forensics-article {
+  margin-bottom: 6.5em;
 }
