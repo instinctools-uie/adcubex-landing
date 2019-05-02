@@ -12,7 +12,7 @@ export function makeMainCubeBigger(sectionScrollPosition) {
   mainCubeAnimation(perChange);
 }
 
-export function makeMainCubeSmaller(sectionScrollPosition) {
+export function makeMainCubeToDefaultSize(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const highRatio = 1;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
@@ -20,7 +20,7 @@ export function makeMainCubeSmaller(sectionScrollPosition) {
   mainCubeAnimation(perChange);
 }
 
-export function makeMainCubeTransformToDefault() {
+export function mainCubeToDefaultSize() {
   mainCubeAnimationElement.style.transform = `translate(0px, 0px) scale(1)`;
   mainCube.style.animation = 'main-cube 1.6s infinite alternate';
 }
@@ -50,14 +50,14 @@ function mainCubeAnimation(perChange) {
   mainCubeAnimationElement.style.transform = `translate(-${translateXPositionAfterScale}px, -${translateYPosition}px) scale(${cubeScale})`;
 }
 
-export function moveToTopCubes(sectionScrollPosition) {
+export function moveCubesToTop(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const perChange = (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   cubesAnimation(perChange);
 }
 
-export function moveToBottomCubes(sectionScrollPosition) {
+export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const highRatio = 1;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
@@ -65,7 +65,7 @@ export function moveToBottomCubes(sectionScrollPosition) {
   cubesAnimation(perChange);
 }
 
-export function moveCubesToDefaultPosition() {
+export function cubesToDefaultPosition() {
   const cubesDefaultPosition = 0;
   translateCubesAnimation(cubesDefaultPosition);
 }

@@ -12,11 +12,11 @@ import {
 } from '../changeColor';
 import {
   makeMainCubeBigger,
-  makeMainCubeSmaller,
-  makeMainCubeTransformToDefault,
-  moveToTopCubes,
-  moveToBottomCubes,
-  moveCubesToDefaultPosition
+  makeMainCubeToDefaultSize,
+  mainCubeToDefaultSize,
+  moveCubesToTop,
+  moveCubesToDefaultPosition,
+  cubesToDefaultPosition
 } from '../cubesAnimation';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
@@ -49,8 +49,8 @@ function initProject() {
   if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
     changeBackgroundColorToDefault();
     changeCubeColorToDefault();
-    makeMainCubeTransformToDefault();
-    moveCubesToDefaultPosition();
+    mainCubeToDefaultSize();
+    cubesToDefaultPosition();
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
@@ -63,13 +63,11 @@ function initProject() {
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
     changeColorForBudgetSection(advantageSectionScrollPosition);
-    makeMainCubeBigger(advantageSectionScrollPosition);
-    moveToTopCubes(advantageSectionScrollPosition);
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
     makeMainCubeBigger(advantageSectionScrollPosition);
-    moveToTopCubes(advantageSectionScrollPosition);
+    moveCubesToTop(advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
@@ -82,8 +80,8 @@ function initProject() {
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     changeColorForImprovementSection(powerSectionScrollPosition);
-    makeMainCubeSmaller(powerSectionScrollPosition);
-    moveToBottomCubes(powerSectionScrollPosition);
+    makeMainCubeToDefaultSize(powerSectionScrollPosition);
+    moveCubesToDefaultPosition(powerSectionScrollPosition);
   }
 
   // For Parallax Scroll of Big Background letters
