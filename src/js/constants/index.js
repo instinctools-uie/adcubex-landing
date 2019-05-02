@@ -66,3 +66,20 @@ export const LOGO_GO_HUGE_WORD_OPTIONS = {
   defaultColor: { red: 48, green: 48, blue: 48 },
   whiteColor: WHITE_COLOR
 };
+
+export const MAIN_CUBE_OPTIONS = {
+  minScaleValue: 1,
+  maxScaleValue: 10,
+  minTranslateXPosition: 0,
+  maxTranslateXPosition: 4600,
+  minTranslateYPosition: 0,
+  maxTranslateYPosition: 6600,
+  animationDuration: 6,
+  animationDelay: 1,
+  translateAnimationId: 'main-cube-translate-animation'
+};
+
+export const CUBES_OPTIONS = {
+  minTranslateYPosition: 0,
+  maxTranslateYPosition: 5000
+};

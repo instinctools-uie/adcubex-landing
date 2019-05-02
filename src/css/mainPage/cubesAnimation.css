@@ -7,8 +7,12 @@
   height: 100vh;
 }
 
-.cubes-container > g {
-  transform: translate(0, -1000px);
+.cubes-container > .cubes-translate-container {
+  transform: translate(1000px, -1000px);
+}
+
+.cubes-container > #main-cube {
+  transform: translate(2000px, 0px);
 }
 
 #cubes .cube-translate-animation {
