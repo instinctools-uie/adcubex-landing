@@ -2,7 +2,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -22,8 +21,8 @@ body {
 .title-section {
   display: flex;
   justify-content: flex-start;
-  width: 100%;
-  margin: 17em 0 0 7em;
+  width: auto;
+  margin: 17em auto 0 4em;
   color: #ffffff;
 }
 
