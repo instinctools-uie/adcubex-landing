@@ -39,6 +39,12 @@ h3,
 
 .section-container > article > h2 {
   margin-bottom: 1em;
+  font-family: montserrat_mediumregular, sans-serif;
+  font-weight: 600;
+}
+
+article.youtube-article > h2 {
+  margin-top: 2.6em;
 }
 
 .forensics-article {
