@@ -1,0 +1,70 @@
+.external-links > .google-icon:hover #google-path-1 {
+  fill: #4286f5;
+}
+
+.external-links > .google-icon:hover #google-path-3,
+.external-links > .google-icon:hover #google-path-5 {
+  fill: #ea4235;
+}
+
+.external-links > .google-icon:hover #google-path-7 {
+  fill: #4185f4;
+}
+
+.external-links > .google-icon:hover #google-path-10 {
+  fill: #fabc05;
+}
+
+.external-links > .google-icon:hover #google-path-12 {
+  fill: #34a853;
+}
+
+.external-links > .twitter-icon:hover #twitter {
+  fill: #1da1f2;
+}
+
+.external-links > .bing-icon:hover #Bing {
+  fill: #00877d;
+}
+
+.external-links > .facebook-icon:hover #facebook_1 {
+  fill: #3b5998;
+}
+
+.external-links > .baidu-icon:hover path {
+  fill: #ec1c24;
+}
+
+.external-links > .baidu-icon:hover #Baidu-2,
+.external-links > .baidu-icon:hover #Baidu-3 {
+  fill: white;
+}
+
+.external-links > .baidu-icon:hover #Baidu-1 {
+  fill: #2932e1;
+}
+
+.external-links > .yahoo-icon:hover path {
+  fill: #410093;
+}
+
+.external-links > .daimler-icon:hover path {
+  fill: #003461;
+}
+
+.external-links > .huberd-burda-icon:hover path,
+.external-links > .huberd-burda-icon:hover polygon {
+  fill: #4e3b43;
+}
+
+.external-links > .fujitsu-icon:hover #Fujitsu {
+  fill: #ee3e33;
+}
+
+.external-links > .thyssenkrupp-icon:hover #thyssenkrupp {
+  fill: #039ef2;
+}
+
+.external-links > .evonik-icon:hover #evonik {
+  fill: #991a81;
+}
