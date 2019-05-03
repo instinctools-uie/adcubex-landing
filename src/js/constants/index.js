@@ -76,8 +76,7 @@ export const MAIN_CUBE_OPTIONS = {
 };
 
 export const CUBES_OPTIONS = {
-  minTranslateYPosition: 0,
   maxTranslateYPosition: 5000,
-  minTranslateYPositionBeforeColorSection: 0,
-  maxTranslateYPositionBeforeColorSection: 500
+  minTranslateYWhenScrollOnWhiteSections: 0,
+  maxTranslateYWhenScrollOnWhiteSections: 500
 };

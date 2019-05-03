@@ -58,12 +58,12 @@ function mainCubeAnimation(perChange) {
 
 export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChangeScroll) {
   const scrolled = window.pageYOffset;
-  const { minTranslateYPositionBeforeColorSection, maxTranslateYPositionBeforeColorSection } = CUBES_OPTIONS;
+  const { minTranslateYWhenScrollOnWhiteSections, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const perChange = (scrolled - sectionScrollPosition) / rateChangeScroll;
   const translateYPosition = getValueBetweenRange(
     perChange,
-    minTranslateYPositionBeforeColorSection,
-    maxTranslateYPositionBeforeColorSection
+    minTranslateYWhenScrollOnWhiteSections,
+    maxTranslateYWhenScrollOnWhiteSections
   );
 
   translateCubesAnimation(translateYPosition);
@@ -71,8 +71,8 @@ export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChange
 
 export function moveCubesToTop(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const { maxTranslateYPosition, maxTranslateYPositionBeforeColorSection } = CUBES_OPTIONS;
-  const minTranslateYPosition = maxTranslateYPositionBeforeColorSection;
+  const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
+  const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const perChange = (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
@@ -80,8 +80,8 @@ export function moveCubesToTop(sectionScrollPosition) {
 
 export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const { maxTranslateYPosition, maxTranslateYPositionBeforeColorSection } = CUBES_OPTIONS;
-  const minTranslateYPosition = maxTranslateYPositionBeforeColorSection;
+  const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
+  const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const highRatio = 1;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
