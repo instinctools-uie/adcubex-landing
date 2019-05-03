@@ -152,7 +152,7 @@ h4 + p {
 
 .custom-button:hover {
   color: #353535;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .custom-button > .button-img {
