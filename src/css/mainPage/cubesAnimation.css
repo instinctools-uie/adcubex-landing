@@ -11,6 +11,10 @@
   transform: translate(1000px, -1000px);
 }
 
+#main-cube-scale-animation {
+  transform-origin: 17% 45%;
+}
+
 .cubes-container > #main-cube {
   transform: translate(2000px, 0px);
 }

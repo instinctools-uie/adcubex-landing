@@ -17,7 +17,7 @@ import {
   mainCubeToDefaultSize,
   moveCubesToTop,
   moveCubesToDefaultPosition,
-  cubesToDefaultPosition
+  moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
@@ -52,7 +52,7 @@ function initProject() {
     changeBackgroundColorToDefault();
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
-    cubesToDefaultPosition();
+    moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
@@ -81,9 +81,10 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    changeColorForImprovementSection(powerSectionScrollPosition);
-    transformMainCubeToDefaultSize(powerSectionScrollPosition);
-    moveCubesToDefaultPosition(powerSectionScrollPosition);
+    const scrollDelayForAnimation = 800;
+    changeColorForImprovementSection(powerSectionScrollPosition + scrollDelayForAnimation);
+    transformMainCubeToDefaultSize(powerSectionScrollPosition + scrollDelayForAnimation);
+    moveCubesToDefaultPosition(powerSectionScrollPosition + scrollDelayForAnimation);
   }
 
   // For Parallax Scroll of Big Background letters

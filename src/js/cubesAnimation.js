@@ -1,7 +1,6 @@
 import { RATE_CHANGE_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
 
 const mainCubeScaleAnimationElement = document.querySelector('#main-cube-scale-animation');
-const cubes = document.querySelectorAll('#cubes > g');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate');
 const mainCubeForTranslateAnimation = window.document.querySelector('#main-cube-translate-animation');
 
@@ -12,12 +11,13 @@ export function cubesRandomLevitation() {
   const delayRange = 2;
 
   cubesForTranslateAnimation.forEach(cube => {
-    const isMainCube = cube.id === MAIN_CUBE_OPTIONS.translateAnimationId;
+    const { translateAnimationId, animationDuration, animationDelay } = MAIN_CUBE_OPTIONS;
+    const isMainCube = cube.id === translateAnimationId;
     const durationValue = Math.floor(Math.random() * durationRange + minDurationValue);
     const delayValue = Math.floor(Math.random() * delayRange);
 
-    cube.style.animationDuration = isMainCube ? `${MAIN_CUBE_OPTIONS.animationDuration}s` : `${durationValue}s`;
-    cube.style.animationDelay = isMainCube ? `${MAIN_CUBE_OPTIONS.animationDelay}s` : `${delayValue}s`;
+    cube.style.animationDuration = isMainCube ? `${animationDuration}s` : `${durationValue}s`;
+    cube.style.animationDelay = isMainCube ? `${animationDelay}s` : `${delayValue}s`;
   });
 }
 
@@ -42,68 +42,55 @@ export function mainCubeToDefaultSize() {
 }
 
 function mainCubeAnimation(perChange) {
-  const cubeScale = getValueBetweenRange(perChange, MAIN_CUBE_OPTIONS.minScaleValue, MAIN_CUBE_OPTIONS.maxScaleValue);
+  const { maxScaleValue, minScaleValue, animationDuration } = MAIN_CUBE_OPTIONS;
+  const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
 
-  const translateXPosition = getValueBetweenRange(
-    perChange,
-    MAIN_CUBE_OPTIONS.minTranslateXPosition,
-    MAIN_CUBE_OPTIONS.maxTranslateXPosition
-  );
-  const translateYPosition = getValueBetweenRange(
-    perChange,
-    MAIN_CUBE_OPTIONS.minTranslateYPosition,
-    MAIN_CUBE_OPTIONS.maxTranslateYPosition
-  );
-  const isCubeScaled = cubeScale > MAIN_CUBE_OPTIONS.minScaleValue;
-  // const translateXPositionAfterScale = isCubeScaled ? translateXPosition : MAIN_CUBE_OPTIONS.minTranslateXPosition;
-  const translateXPositionAfterScale = translateXPosition;
+  const isCubeScaled = cubeScale > minScaleValue;
 
   if (isCubeScaled) {
     mainCubeForTranslateAnimation.style.animationDuration = '0s';
   } else {
-    mainCubeForTranslateAnimation.style.animationDuration = `${MAIN_CUBE_OPTIONS.animationDuration}s`;
+    mainCubeForTranslateAnimation.style.animationDuration = `${animationDuration}s`;
   }
 
-  mainCubeScaleAnimationElement.style.transform = `translate(-${translateXPositionAfterScale}px, -${translateYPosition}px) scale(${cubeScale})`;
+  mainCubeScaleAnimationElement.style.transform = `scale(${cubeScale})`;
+}
+
+export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChangeScroll) {
+  const scrolled = window.pageYOffset;
+  const { minTranslateYPositionBeforeColorSection, maxTranslateYPositionBeforeColorSection } = CUBES_OPTIONS;
+  const perChange = (scrolled - sectionScrollPosition) / rateChangeScroll;
+  const translateYPosition = getValueBetweenRange(
+    perChange,
+    minTranslateYPositionBeforeColorSection,
+    maxTranslateYPositionBeforeColorSection
+  );
+
+  translateCubesAnimation(translateYPosition);
 }
 
 export function moveCubesToTop(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
+  const { maxTranslateYPosition, maxTranslateYPositionBeforeColorSection } = CUBES_OPTIONS;
+  const minTranslateYPosition = maxTranslateYPositionBeforeColorSection;
   const perChange = (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
-  cubesAnimation(perChange);
+  cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
 
 export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
+  const { maxTranslateYPosition, maxTranslateYPositionBeforeColorSection } = CUBES_OPTIONS;
+  const minTranslateYPosition = maxTranslateYPositionBeforeColorSection;
   const highRatio = 1;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
-  cubesAnimation(perChange);
+  cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
 
-export function cubesToDefaultPosition() {
-  const cubesDefaultPosition = 0;
-  translateCubesAnimation(cubesDefaultPosition);
-}
-
-function cubesAnimation(perChange) {
-  const translateYPosition = getValueBetweenRange(
-    perChange,
-    CUBES_OPTIONS.minTranslateYPosition,
-    CUBES_OPTIONS.maxTranslateYPosition
-  );
-  const isCubesYPositionMoreThanMaxValue = translateYPosition >= CUBES_OPTIONS.maxTranslateYPosition;
-
-  cubes.forEach(cube => {
-    const isMainCube = cube.id === 'main-cube';
-
-    if (isCubesYPositionMoreThanMaxValue && !isMainCube) {
-      cube.style.display = 'none';
-    } else {
-      cube.style.display = 'block';
-    }
-  });
+function cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition) {
+  const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
+  const isCubesYPositionMoreThanMaxValue = translateYPosition >= maxTranslateYPosition;
 
   if (!isCubesYPositionMoreThanMaxValue) {
     translateCubesAnimation(translateYPosition);

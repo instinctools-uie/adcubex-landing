@@ -3,9 +3,6 @@ import {
   CUBE_LEFT_SIDE_ELEMENT_OPTIONS,
   CUBE_RIGHT_SIDE_ELEMENT_OPTIONS,
   CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS,
-  RED_BACKGROUND_COLOR,
-  BLUE_BACKGROUND_COLOR,
-  PURPLE_BACKGROUND_COLOR,
   RATE_CHANGE_SCROLL,
   WHITE_COLOR,
   BLACK_COLOR,
@@ -17,7 +14,8 @@ import {
 } from './constants';
 
 export function changeColorForBudgetSection(budgetSectionScrollPosition) {
-  changeColor(WHITE_COLOR, RED_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], budgetSectionScrollPosition);
+  const rateForMakeChangeCubeColorFaster = 800;
+  const sectionScrollPositionForMainCube = budgetSectionScrollPosition - rateForMakeChangeCubeColorFaster;
 
   changeColor(
     BLACK_COLOR,
@@ -43,27 +41,25 @@ export function changeColorForBudgetSection(budgetSectionScrollPosition) {
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPositionForMainCube
   );
 
   changeColor(
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPositionForMainCube
   );
 
   changeColor(
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPositionForMainCube
   );
 }
 
 export function changeColorForControlSection(expertiseSectionScrollPosition) {
-  changeColor(RED_BACKGROUND_COLOR, BLUE_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], expertiseSectionScrollPosition);
-
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
@@ -87,8 +83,6 @@ export function changeColorForControlSection(expertiseSectionScrollPosition) {
 }
 
 export function changeColorForPowerSection(investmentsSectionScrollPosition) {
-  changeColor(BLUE_BACKGROUND_COLOR, PURPLE_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], investmentsSectionScrollPosition);
-
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
@@ -112,8 +106,6 @@ export function changeColorForPowerSection(investmentsSectionScrollPosition) {
 }
 
 export function changeColorForImprovementSection(powerSectionScrollPosition) {
-  changeColor(PURPLE_BACKGROUND_COLOR, WHITE_COLOR, [BODY_ELEMENT_OPTIONS], powerSectionScrollPosition);
-
   changeColor(
     WHITE_COLOR,
     BLACK_COLOR,
@@ -184,10 +176,18 @@ export function changeCubeColorToDefault() {
 
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   const maxPerChangeValue = 1;
+  const minPerChangeValue = 0;
   const currentColor = { red: 0, green: 0, blue: 0 };
   const scrolled = window.pageYOffset;
   let perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
-  perChange = perChange > maxPerChangeValue ? maxPerChangeValue : perChange;
+
+  if (perChange < minPerChangeValue) {
+    perChange = minPerChangeValue;
+  }
+
+  if (perChange > maxPerChangeValue) {
+    perChange = maxPerChangeValue;
+  }
 
   Object.keys(currentColor).forEach(key => {
     currentColor[key] =

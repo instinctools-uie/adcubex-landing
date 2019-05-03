@@ -1,8 +1,8 @@
 export const WHITE_COLOR = { red: 255, green: 255, blue: 255 };
 export const BLACK_COLOR = { red: 0, green: 0, blue: 0 };
-export const RED_BACKGROUND_COLOR = { red: 240, green: 62, blue: 62 };
-export const BLUE_BACKGROUND_COLOR = { red: 75, green: 84, blue: 242 };
-export const PURPLE_BACKGROUND_COLOR = { red: 157, green: 55, blue: 227 };
+export const RED_COLOR = { red: 240, green: 62, blue: 62 };
+export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
+export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
 export const RATE_CHANGE_SCROLL = 960;
 
 export const BODY_ELEMENT_OPTIONS = {
@@ -14,9 +14,9 @@ export const CUBE_LEFT_SIDE_ELEMENT_OPTIONS = {
   selector: '#main-cube-scale-animation :nth-child(1)',
   property: 'fill',
   defaultColor: { red: 246, green: 246, blue: 247 },
-  redColor: { red: 240, green: 62, blue: 62 },
-  blueColor: { red: 75, green: 84, blue: 242 },
-  purpleColor: { red: 157, green: 55, blue: 227 }
+  redColor: RED_COLOR,
+  blueColor: BLUE_COLOR,
+  purpleColor: PURPLE_COLOR
 };
 export const CUBE_RIGHT_SIDE_ELEMENT_OPTIONS = {
   selector: '#main-cube-scale-animation :nth-child(2)',
@@ -69,11 +69,7 @@ export const LOGO_GO_HUGE_WORD_OPTIONS = {
 
 export const MAIN_CUBE_OPTIONS = {
   minScaleValue: 1,
-  maxScaleValue: 10,
-  minTranslateXPosition: 0,
-  maxTranslateXPosition: 4600,
-  minTranslateYPosition: 0,
-  maxTranslateYPosition: 6600,
+  maxScaleValue: 7,
   animationDuration: 6,
   animationDelay: 1,
   translateAnimationId: 'main-cube-translate-animation'
@@ -81,5 +77,7 @@ export const MAIN_CUBE_OPTIONS = {
 
 export const CUBES_OPTIONS = {
   minTranslateYPosition: 0,
-  maxTranslateYPosition: 5000
+  maxTranslateYPosition: 5000,
+  minTranslateYPositionBeforeColorSection: 0,
+  maxTranslateYPositionBeforeColorSection: 500
 };
