@@ -1,0 +1,173 @@
+@import 'headerAndFooterInnerPages.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'montserrat_lightregular', sans-serif;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80em;
+  margin: 0 auto -14em auto;
+  color: #353535;
+}
+
+.title-section {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  margin: 17em auto 0 4em;
+  color: #ffffff;
+}
+
+.content-section {
+  width: 100%;
+  margin-top: -16.063em;
+  background-color: #ffffff;
+}
+
+.title-section > .section-content {
+  margin: -2.7em 0 0 -18.5em;
+}
+
+h1,
+.section-content > h2 {
+  font-family: montserrat_mediumregular, sans-serif;
+  font-size: 5.2em;
+  font-weight: 600;
+}
+
+.section-content > h2 {
+  margin-bottom: 0;
+}
+
+.section-container > .section-content > p {
+  font-size: 1.9em;
+  font-weight: 600;
+  line-height: 1.5em;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4em 0 4em;
+}
+
+article.article-right {
+  justify-content: flex-end;
+}
+
+.section-container > article > .section-content > p {
+  font-size: 1.625em;
+  line-height: 1.5em;
+}
+
+h2 + p {
+  margin-top: 1.8em;
+}
+
+.vertical-inscription {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  height: 9.5em;
+  margin: 14.5em -9em 0 0;
+  transform: rotate(90deg);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.vertical-inscription-img-container {
+  margin-right: 3.25em;
+  transform: rotate(-90deg);
+}
+
+.vertical-inscription img {
+  -o-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.vertical-inscription:hover img {
+  -o-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+.vertical-inscription > span {
+  display: flex;
+  align-items: center;
+  color: #353535;
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.contact-section {
+  width: 100%;
+  margin-top: 2.5em;
+  color: #ffffff;
+  background-color: #353535;
+}
+
+.contact-section > h4 {
+  margin: 3.3em 0 0 1.65em;
+  font-family: montserrat_mediumregular, sans-serif;
+  font-size: 2.25em;
+}
+
+h4 + p {
+  margin: 1.6em 0 0 2.2em;
+  font-size: 1.75em;
+}
+
+.custom-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 23.625rem;
+  height: 5rem;
+  padding: 0 1em 0 1em;
+  border: #ffffff solid 0.01em;
+  margin: 2.4em 0 3.3em 1.7em;
+  background-color: transparent;
+  color: #fff;
+  font-family: montserrat_mediumregular, sans-serif;
+  font-size: 2.25em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.6s ease-in-out, color 0.6s ease-in-out;
+}
+
+.custom-button:hover {
+  color: #353535;
+  background-color: white;
+}
+
+.custom-button > .button-img {
+  margin-left: 1em;
+  transition: transform 0.6s ease-in-out;
+}
+
+.custom-button:hover .button-img {
+  transform: translateX(0.3em);
+}
+
+#but_arrow {
+  transition: fill 0.6s ease-in;
+}
+
+.custom-button:hover #but_arrow {
+  fill: #353535;
+}

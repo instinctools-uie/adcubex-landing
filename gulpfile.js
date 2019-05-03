@@ -10,6 +10,9 @@ const buffer = require('vinyl-buffer');
 const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
+const jsFolders = ['mainPage', 'innerPage', 'contactPage'];
+const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage', 'contactPage', 'privacyPolicyPage'];
+
 gulp.task('connect', function() {
   connect.server({
     base: 'http://localhost',
@@ -20,21 +23,25 @@ gulp.task('connect', function() {
 });
 
 gulp.task('js', function() {
-  browserify('./src/js/index.js')
-    .transform(babelify)
-    .bundle()
-    .pipe(source('index.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(gulp.dest('./build/js'))
-    .pipe(connect.reload());
+  jsFolders.forEach(folderName => {
+    browserify(`./src/js/${folderName}/index.js`)
+      .transform(babelify)
+      .bundle()
+      .pipe(source('index.js'))
+      .pipe(buffer())
+      .pipe(uglify())
+      .pipe(gulp.dest(`./build/js/${folderName}`))
+      .pipe(connect.reload());
+  });
 });
 
 gulp.task('css', function() {
-  gulp.src('./src/index.css')
-    .pipe(cleanCSS({compatibility: 'ie10'}))
-    .pipe(concat('index.css'))
-    .pipe(gulp.dest('build/'))
+  cssFolders.forEach(folderName => {
+    gulp.src(`./src/css/${folderName}/index.css`)
+      .pipe(cleanCSS({compatibility: 'ie10'}))
+      .pipe(concat('index.css'))
+      .pipe(gulp.dest(`build/css/${folderName}`))
+  });
 });
 
 gulp.task('html', function() {
@@ -45,25 +52,25 @@ gulp.task('html', function() {
 
 gulp.task('fonts', () => {
   return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
-    .concat('assets/fonts/**/*'))
+    .concat('./src/assets/fonts/**/*'))
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
 gulp.task('image', function () {
-  gulp.src('./assets/images/*')
+  gulp.src('./src/assets/images/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/images'));
 });
 
 gulp.task('meta', function () {
-  gulp.src('./assets/meta/*')
+  gulp.src('./src/assets/meta/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/meta'));
 });
 
 gulp.task('listen', function() {
-  gulp.watch('./src/**/*.js', ['js']);
-  gulp.watch('./src/**/*.css', ['css']);
+  gulp.watch('./src/**/**/*.js', ['js']);
+  gulp.watch('./src/**/**/*.css', ['css']);
   gulp.watch('./src/*.html', ['html']);
 });
 
