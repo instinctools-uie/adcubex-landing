@@ -141,6 +141,7 @@ label {
 }
 
 .custom-button:hover {
+  color: white;
   background-color: #fd311e;
 }
 
