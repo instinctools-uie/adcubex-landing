@@ -346,21 +346,42 @@ h2 {
 
 .custom-button {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 23.625rem;
   height: 5rem;
-  padding-left: 0.9em;
+  padding: 0 1em 0 1.5em;
   border: none;
   margin-top: 7em;
   background-color: #ef3e3e;
   color: #fff;
   font-family: montserrat_lightregular, sans-serif;
+  font-size: 0.71em;
   font-weight: 600;
   cursor: pointer;
 }
 
 .external-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 68em;
+  margin-top: 14.625em;
+}
+
+.button-image {
+  transition: transform 0.3s ease-in;
+}
+
+.custom-button:hover {
+  background-color: #fd311e;
+}
+
+.custom-button:hover .button-image {
+  transform: translateX(0.25em);
+}
+
+.social-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -410,9 +431,29 @@ h2 {
 
 .power-image-container > button {
   margin-top: 4.6em;
-  border: 0.01em solid #fff;
+  border: 0.01em solid white;
   background-color: transparent;
-  font-size: 1.5em;
+  font-size: 1.2em;
+  transition-property: color, background-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in;
+}
+
+.power-image-container > .custom-button > .button-image {
+  margin-right: 1.2em;
+}
+
+#but_arrow {
+  transition: fill 0.4s ease-in;
+}
+
+.power-image-container > .custom-button:hover #but_arrow {
+  fill: #353535;
+}
+
+.power-image-container > .custom-button:hover {
+  color: #353535;
+  background-color: #ffffff;
 }
 
 .budget-image,
@@ -427,6 +468,11 @@ h2 {
 
 .budget-image {
   margin: 10rem 0 0 16.25rem;
+}
+
+.improvement-section > .text-container > .inner-section-text > .custom-button {
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 1em;
 }
 
 .image-content-section {
@@ -503,7 +549,7 @@ div.power-image > .image-content > p.image-content_large {
 .mailIcon-background:hover .start-el,
 .mailIcon-background:hover .mid-el,
 .mailIcon-background:hover .mail-el {
-  background-color: rgb(239, 62, 62);
+  background-color: #fd311e;
 }
 
 .mailIcon-background:hover .mid-el {
