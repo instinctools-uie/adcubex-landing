@@ -15,7 +15,7 @@ import {
   makeMainCubeBigger,
   transformMainCubeToDefaultSize,
   mainCubeToDefaultSize,
-  moveCubesToTop,
+  moveCubesToTopForColorSections,
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
@@ -69,7 +69,7 @@ function initProject() {
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
     makeMainCubeBigger(advantageSectionScrollPosition);
-    moveCubesToTop(advantageSectionScrollPosition);
+    moveCubesToTopForColorSections(advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {

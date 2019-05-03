@@ -69,7 +69,7 @@ export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChange
   translateCubesAnimation(translateYPosition);
 }
 
-export function moveCubesToTop(sectionScrollPosition) {
+export function moveCubesToTopForColorSections(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
