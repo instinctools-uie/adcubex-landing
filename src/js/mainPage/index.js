@@ -10,7 +10,15 @@ import {
   changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
-import { toggleCube, toggleCubes } from '../toggleCubes';
+import {
+  cubesRandomLevitation,
+  makeMainCubeBigger,
+  transformMainCubeToDefaultSize,
+  mainCubeToDefaultSize,
+  moveCubesToTopForColorSections,
+  moveCubesToDefaultPosition,
+  moveCubesToTopForWhiteSections
+} from '../cubesAnimation';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
@@ -33,6 +41,7 @@ const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
 initProject();
+cubesRandomLevitation();
 
 window.addEventListener('scroll', initProject);
 
@@ -42,6 +51,8 @@ function initProject() {
   if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
     changeBackgroundColorToDefault();
     changeCubeColorToDefault();
+    mainCubeToDefaultSize();
+    moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
@@ -56,6 +67,11 @@ function initProject() {
     changeColorForBudgetSection(advantageSectionScrollPosition);
   }
 
+  if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
+    makeMainCubeBigger(advantageSectionScrollPosition);
+    moveCubesToTopForColorSections(advantageSectionScrollPosition);
+  }
+
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
     changeColorForControlSection(budgetSectionScrollPosition);
   }
@@ -65,7 +81,11 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    changeColorForImprovementSection(powerSectionScrollPosition);
+    const scrollDelayForAnimation = 800;
+    const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
+    changeColorForImprovementSection(sectionScrollPosition);
+    transformMainCubeToDefaultSize(sectionScrollPosition);
+    moveCubesToDefaultPosition(sectionScrollPosition);
   }
 
   // For Parallax Scroll of Big Background letters
@@ -118,7 +138,4 @@ function initProject() {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
     scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
   }
-
-  toggleCube();
-  toggleCubes();
 }
