@@ -82,9 +82,10 @@ function initProject() {
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
     const scrollDelayForAnimation = 800;
-    changeColorForImprovementSection(powerSectionScrollPosition + scrollDelayForAnimation);
-    transformMainCubeToDefaultSize(powerSectionScrollPosition + scrollDelayForAnimation);
-    moveCubesToDefaultPosition(powerSectionScrollPosition + scrollDelayForAnimation);
+    const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
+    changeColorForImprovementSection(sectionScrollPosition);
+    transformMainCubeToDefaultSize(sectionScrollPosition);
+    moveCubesToDefaultPosition(sectionScrollPosition);
   }
 
   // For Parallax Scroll of Big Background letters
