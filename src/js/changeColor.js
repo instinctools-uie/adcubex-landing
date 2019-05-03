@@ -3,9 +3,6 @@ import {
   CUBE_LEFT_SIDE_ELEMENT_OPTIONS,
   CUBE_RIGHT_SIDE_ELEMENT_OPTIONS,
   CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS,
-  RED_BACKGROUND_COLOR,
-  BLUE_BACKGROUND_COLOR,
-  PURPLE_BACKGROUND_COLOR,
   RATE_CHANGE_SCROLL,
   WHITE_COLOR,
   BLACK_COLOR,
@@ -16,143 +13,128 @@ import {
   LOGO_GO_HUGE_WORD_OPTIONS
 } from './constants';
 
-export function changeColorForBudgetSection(budgetSectionScrollPosition) {
-  changeColor(WHITE_COLOR, RED_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], budgetSectionScrollPosition);
+export function changeColorForBudgetSection(sectionScrollPosition) {
+  const rateForMakeChangeCubeColorFaster = 800;
+  const sectionScrollPositionForMainCube = sectionScrollPosition - rateForMakeChangeCubeColorFaster;
 
-  changeColor(
-    BLACK_COLOR,
-    WHITE_COLOR,
-    [MENU_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
-  );
+  changeColor(BLACK_COLOR, WHITE_COLOR, [MENU_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS], sectionScrollPosition);
 
   changeColor(
     LOGO_AD_WORD_OPTIONS.defaultColor,
     LOGO_AD_WORD_OPTIONS.whiteColor,
     [LOGO_AD_WORD_OPTIONS, LOGO_GO_HUGE_WORD_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPosition
   );
   changeColor(
     LOGO_CUBEX_WORD_OPTIONS.defaultColor,
     LOGO_CUBEX_WORD_OPTIONS.whiteColor,
     [LOGO_CUBEX_WORD_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPositionForMainCube
   );
 
   changeColor(
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPositionForMainCube
   );
 
   changeColor(
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-    budgetSectionScrollPosition
+    sectionScrollPositionForMainCube
   );
 }
 
-export function changeColorForControlSection(expertiseSectionScrollPosition) {
-  changeColor(RED_BACKGROUND_COLOR, BLUE_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], expertiseSectionScrollPosition);
-
+export function changeColorForControlSection(sectionScrollPosition) {
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.redColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-    expertiseSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.redColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.blueColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-    expertiseSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.redColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.blueColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-    expertiseSectionScrollPosition
+    sectionScrollPosition
   );
 }
 
-export function changeColorForPowerSection(investmentsSectionScrollPosition) {
-  changeColor(BLUE_BACKGROUND_COLOR, PURPLE_BACKGROUND_COLOR, [BODY_ELEMENT_OPTIONS], investmentsSectionScrollPosition);
-
+export function changeColorForPowerSection(sectionScrollPosition) {
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.blueColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-    investmentsSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.blueColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.purpleColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-    investmentsSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.blueColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.purpleColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-    investmentsSectionScrollPosition
+    sectionScrollPosition
   );
 }
 
-export function changeColorForImprovementSection(powerSectionScrollPosition) {
-  changeColor(PURPLE_BACKGROUND_COLOR, WHITE_COLOR, [BODY_ELEMENT_OPTIONS], powerSectionScrollPosition);
-
-  changeColor(
-    WHITE_COLOR,
-    BLACK_COLOR,
-    [MENU_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS],
-    powerSectionScrollPosition
-  );
+export function changeColorForImprovementSection(sectionScrollPosition) {
+  changeColor(WHITE_COLOR, BLACK_COLOR, [MENU_ELEMENT_OPTIONS, MENU_BUTTON_ELEMENT_OPTIONS], sectionScrollPosition);
 
   changeColor(
     LOGO_AD_WORD_OPTIONS.whiteColor,
     LOGO_AD_WORD_OPTIONS.defaultColor,
     [LOGO_AD_WORD_OPTIONS, LOGO_GO_HUGE_WORD_OPTIONS],
-    powerSectionScrollPosition
+    sectionScrollPosition
   );
   changeColor(
     LOGO_CUBEX_WORD_OPTIONS.whiteColor,
     LOGO_CUBEX_WORD_OPTIONS.defaultColor,
     [LOGO_CUBEX_WORD_OPTIONS],
-    powerSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.purpleColor,
     CUBE_LEFT_SIDE_ELEMENT_OPTIONS.defaultColor,
     [CUBE_LEFT_SIDE_ELEMENT_OPTIONS],
-    powerSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.purpleColor,
     CUBE_RIGHT_SIDE_ELEMENT_OPTIONS.defaultColor,
     [CUBE_RIGHT_SIDE_ELEMENT_OPTIONS],
-    powerSectionScrollPosition
+    sectionScrollPosition
   );
 
   changeColor(
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.purpleColor,
     CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS.defaultColor,
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
-    powerSectionScrollPosition
+    sectionScrollPosition
   );
 }
 
@@ -184,10 +166,18 @@ export function changeCubeColorToDefault() {
 
 function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   const maxPerChangeValue = 1;
+  const minPerChangeValue = 0;
   const currentColor = { red: 0, green: 0, blue: 0 };
   const scrolled = window.pageYOffset;
   let perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
-  perChange = perChange > maxPerChangeValue ? maxPerChangeValue : perChange;
+
+  if (perChange < minPerChangeValue) {
+    perChange = minPerChangeValue;
+  }
+
+  if (perChange > maxPerChangeValue) {
+    perChange = maxPerChangeValue;
+  }
 
   Object.keys(currentColor).forEach(key => {
     currentColor[key] =
