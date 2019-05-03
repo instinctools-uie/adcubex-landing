@@ -115,17 +115,17 @@ function initProject() {
     scrollParallaxPattern(superviseElement, superviseSectionScrollPosition);
   }
 
-  if (scrolled > expertiseSectionScrollPosition && scrolled < toolsetSectionScrollPosition) {
+  if (scrolled > expertiseSectionScrollPosition - 960 / 2 && scrolled < toolsetSectionScrollPosition - 960 / 2) {
     const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
     scrollParallaxPattern(expertiseElement, expertiseSectionScrollPosition);
   }
 
-  if (scrolled > toolsetSectionScrollPosition && scrolled < advantageSectionScrollPosition) {
+  if (scrolled > toolsetSectionScrollPosition - 960 / 2 && scrolled < advantageSectionScrollPosition - 960 / 2) {
     const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
     scrollParallaxPattern(toolsetPattern, toolsetSectionScrollPosition);
   }
 
-  if (scrolled > advantageSectionScrollPosition && scrolled < budgetSectionScrollPosition) {
+  if (scrolled > advantageSectionScrollPosition - 960 / 2 && scrolled < budgetSectionScrollPosition - 960 / 2) {
     const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
     scrollParallaxPattern(advantagePattern, advantageSectionScrollPosition);
   }
