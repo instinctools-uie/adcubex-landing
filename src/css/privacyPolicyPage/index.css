@@ -32,6 +32,10 @@ h3,
   font-size: 2.25em;
 }
 
+h3 {
+  margin-bottom: 0.25em;
+}
+
 .section-container > article > p {
   font-size: 1em;
   line-height: 1.75em;
