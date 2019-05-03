@@ -20,7 +20,7 @@
 }
 
 #cubes .cube-translate-animation {
-  will-change: transform, animation, color;
+  will-change: transform, animation;
 }
 
 .cube-translate-animation {
