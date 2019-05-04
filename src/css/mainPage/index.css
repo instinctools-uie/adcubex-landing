@@ -180,6 +180,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 72.188em;
+  margin: 0 auto;
   color: #353535;
 }
 
@@ -202,9 +204,13 @@ h2 {
   z-index: 1;
   margin-top: 5em;
   margin-bottom: 15em;
-  width: 69em;
+  width: 100%;
   min-height: 100vh;
   color: #303030;
+}
+
+.supervise-section.section-container {
+  margin-top: 8.1em;
 }
 
 .budget-section {
@@ -213,8 +219,8 @@ h2 {
 
 .vertical-inscription {
   position: absolute;
-  top: 7.5em;
-  right: -4.5em;
+  top: 7em;
+  right: -6em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -297,9 +303,9 @@ h2 {
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 5em;
-  letter-spacing: 0;
-  line-height: 1.125em;
+  font-size: 5.3em;
+  letter-spacing: 0.02em;
+  line-height: 1.12em;
   text-align: left;
   text-decoration: none;
   text-transform: none;
@@ -308,7 +314,6 @@ h2 {
 .text-container {
   position: relative;
   display: flex;
-  margin-top: 3em;
 }
 
 .inner-section-image {
@@ -332,9 +337,10 @@ h2 {
 }
 
 .inner-section-text {
-  margin-left: -1.5em;
+  margin-top: -1.53em;
   font-family: 'montserrat_lightregular', sans-serif;
   font-size: 1.75em;
+  font-weight: 600;
   line-height: 1.6em;
 }
 
@@ -343,7 +349,7 @@ h2 {
 .toolset-section .inner-section-text,
 .advantage-section .inner-section-text,
 .improvement-section .inner-section-text {
-  margin-left: 8em;
+  margin-left: 9.3em;
 }
 
 .custom-button {
@@ -367,7 +373,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 68em;
+  width: 100%;
   margin-top: 14.625em;
 }
 
@@ -381,14 +387,6 @@ h2 {
 
 .custom-button:hover .button-image {
   transform: translateX(0.25em);
-}
-
-.social-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 68em;
-  margin-top: 14.625em;
 }
 
 .expertise-section .external-links {
