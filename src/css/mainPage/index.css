@@ -212,6 +212,10 @@ h2 {
   margin-top: 8em;
 }
 
+.toolset-section.section-container {
+  margin-top: 10.4em;
+}
+
 .budget-section {
   margin-bottom: 5em;
 }
@@ -347,14 +351,12 @@ h2 {
   line-height: 1.6em;
 }
 
-.expertise-section > .text-container
-> .inner-section-text > p + p{
+.inner-section-text > p + p{
   margin-top: 1.5em;
 }
 
-.expertise-section > .text-container
-> .inner-section-text > p + button {
-  margin-top: 5.5em;
+.inner-section-text > button {
+  margin-top: 5.4em;
 }
 
 .supervise-section .inner-section-text,
@@ -380,6 +382,7 @@ h2 {
   font-size: 0.71em;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease-in;
 }
 
 .external-links {
@@ -387,7 +390,11 @@ h2 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-top: 14.625em;
+  margin-top: 14em;
+}
+
+.toolset-section > .external-links {
+  margin-top: 12.7em;
 }
 
 .button-image {
