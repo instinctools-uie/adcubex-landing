@@ -202,15 +202,14 @@ h2 {
 .section-container {
   position: static;
   z-index: 1;
-  margin-top: 5em;
-  margin-bottom: 15em;
+  margin-top: 8em;
   width: 100%;
   min-height: 100vh;
   color: #303030;
 }
 
 .supervise-section.section-container {
-  margin-top: 8.1em;
+  margin-top: 8em;
 }
 
 .budget-section {
@@ -314,6 +313,11 @@ h2 {
 .text-container {
   position: relative;
   display: flex;
+  margin-top: -0.5em;
+}
+
+.supervise-section > .text-container {
+  margin-top: 0.2em;
 }
 
 .inner-section-image {
@@ -337,11 +341,20 @@ h2 {
 }
 
 .inner-section-text {
-  margin-top: -1.53em;
   font-family: 'montserrat_lightregular', sans-serif;
   font-size: 1.75em;
   font-weight: 600;
   line-height: 1.6em;
+}
+
+.expertise-section > .text-container
+> .inner-section-text > p + p{
+  margin-top: 1.5em;
+}
+
+.expertise-section > .text-container
+> .inner-section-text > p + button {
+  margin-top: 5.5em;
 }
 
 .supervise-section .inner-section-text,
