@@ -507,9 +507,14 @@ h2 {
   margin: 12.8rem 0 0 15.8rem;
 }
 
-.improvement-section > .text-container > .inner-section-text > .custom-button {
+.improvement-section > .text-container
+> .inner-section-text > .custom-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.1em;
+  padding: 0 1em 0 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .image-content-section {
