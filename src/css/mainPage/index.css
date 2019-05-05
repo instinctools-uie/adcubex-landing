@@ -414,7 +414,12 @@ h2 {
 }
 
 .advantage-section {
-  margin-top: 17em;
+  margin-top: -1.4em;
+}
+
+.advantage-section > .text-container
+> .inner-section-text > .vertical-inscription {
+  top: 8.2em;
 }
 
 .supervise-section > .text-container > .inner-section-text,
