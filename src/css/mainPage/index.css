@@ -8,7 +8,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'montserrat_lightregular', sans-serif;
+  font-family: 'montserrat_extralightregular', sans-serif;
 }
 
 h1,
@@ -463,11 +463,11 @@ h2 {
 }
 
 .power-image-container {
-  margin: 8.75em 0 0 16.25em;
+  margin: 6.2em 0 0 16.25em;
 }
 
 .power-image-container > button {
-  margin-top: 4.6em;
+  margin-top: 7.4em;
   border: 0.01em solid white;
   background-color: transparent;
   font-size: 1.2em;
@@ -504,7 +504,7 @@ h2 {
 }
 
 .budget-image {
-  margin: 13.4rem 0 0 15.8rem;
+  margin: 12.8rem 0 0 15.8rem;
 }
 
 .improvement-section > .text-container > .inner-section-text > .custom-button {
@@ -521,7 +521,7 @@ h2 {
 
 .image-content_middle {
   height: 100%;
-  font-family: 'montserratbold', sans-serif;
+  font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2.25rem;
   line-height: 2.625rem;
 }
@@ -536,6 +536,12 @@ h2 {
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
   line-height: 0;
+}
+
+.power-image {
+  min-width: 51.2em;
+  height: 5.3em;
+  margin-left: 5.7em;
 }
 
 .control-text-container,
@@ -557,10 +563,10 @@ h2 {
   line-height: 0;
 }
 
-div.power-image > .image-content > p.image-content_large {
+div.power-image > .image-content-section > p.image-content_large {
   margin-top: 2rem;
   font-family: 'montserrat_extraboldregular', sans-serif;
-  font-size: 5rem;
+  font-size: 8rem;
   font-weight: 900;
 }
 
