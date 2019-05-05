@@ -345,7 +345,7 @@ h2 {
 }
 
 .inner-section-text {
-  font-family: 'montserrat_lightregular', sans-serif;
+  font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 1.75em;
   font-weight: 600;
   line-height: 1.6em;
@@ -420,6 +420,7 @@ h2 {
 .advantage-section > .text-container
 > .inner-section-text > .vertical-inscription {
   top: 8.2em;
+  right: -6.5em;
 }
 
 .supervise-section > .text-container > .inner-section-text,
@@ -439,6 +440,16 @@ h2 {
   color: #ffffff;
 }
 
+.budget-section > .budget-text-container {
+  margin-top: -0.3em;
+}
+
+.budget-section > .budget-text-container
+> .inner-section-text > a {
+  right: -2.6em;
+  top: 3.6em;
+}
+
 .control-section > .control-text-container > .control-text > p {
   width: 18.375em;
   font-size: 1.75em;
@@ -447,6 +458,7 @@ h2 {
 }
 
 .control-text {
+  font-family: 'montserrat_extralightregular', sans-serif;
   width: 100%;
 }
 
@@ -492,7 +504,7 @@ h2 {
 }
 
 .budget-image {
-  margin: 10rem 0 0 16.25rem;
+  margin: 13.4rem 0 0 15.8rem;
 }
 
 .improvement-section > .text-container > .inner-section-text > .custom-button {
@@ -501,6 +513,9 @@ h2 {
 }
 
 .image-content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 3.75em;
 }
 
@@ -521,6 +536,17 @@ h2 {
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
   line-height: 0;
+}
+
+.control-text-container,
+.power-text-container {
+  margin-top: -0.5em;
+}
+
+.power-text-container > .inner-section-text
+> a {
+  top: 6.2em;
+  right: -4.5em;
 }
 
 .power-image > .image-content-section > .image-content_large {
