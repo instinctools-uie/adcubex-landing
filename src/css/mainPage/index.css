@@ -507,6 +507,10 @@ h2 {
   margin: 12.8rem 0 0 15.8rem;
 }
 
+.improvement-section {
+  margin-bottom: -9em;
+}
+
 .improvement-section > .text-container
 > .inner-section-text > .custom-button {
   display: flex;
@@ -692,11 +696,11 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > sup {
+.footer-left > p > i > sup {
   color: red;
 }
 
-.footer-left > p > span {
+.footer-left > p > i > span {
   color: black;
 }
 
