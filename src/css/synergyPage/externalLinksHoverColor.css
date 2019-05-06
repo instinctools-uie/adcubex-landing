@@ -21,19 +21,19 @@
 }
 
 .clutch-grey {
-  margin: -10em 0 0.85em -1.15em;
+  margin: -10em 0 1em -1.15em;
 }
 
 .tm-grey {
-  margin: -9em 0 0.9em -0.05em;
+  margin: -10em 0 1em -0.05em;
 }
 
 .goodFirms-grey {
-  margin: -10em 0 0.9em -0.125em;
+  margin: -10em 0 1em -0.125em;
 }
 
 .topDevs-grey {
-  margin: -11em 0 1em -1.05em;
+  margin: -11em 0 1.1em -1.05em;
 }
 
 .clutch-icon:hover .clutch-grey,
