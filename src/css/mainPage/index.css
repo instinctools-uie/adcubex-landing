@@ -22,21 +22,20 @@ h2 {
   fill: white;
 }
 
-.header-container {
+.logo {
   position: fixed;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0 4em 0 4em;
-  height: 10.125em;
-  width: 100%;
-  background-color: transparent;
+  top: 4.4em;
+  left: 3.3em;
 }
 
-.header-container .logo,
-.header-container .toggle-menu-button {
+.toggle-menu-button {
+  position: fixed;
+  top: 4.4em;
+  right: 3.3em;
+}
+
+.logo,
+.toggle-menu-button {
   z-index: 3;
 }
 
@@ -59,6 +58,7 @@ h2 {
 .header-navigation--active {
   opacity: 1;
   height: 100vh;
+  z-index: 2;
 }
 
 .header-navigation-bg-image {
