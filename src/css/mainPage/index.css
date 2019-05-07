@@ -696,11 +696,15 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > i > sup {
+.footer-left > p > a {
+  text-decoration: none;
+}
+
+.footer-left > p > a > i > sup {
   color: red;
 }
 
-.footer-left > p > i > span {
+.footer-left > p > a > i > span {
   color: black;
 }
 
