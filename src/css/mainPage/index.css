@@ -1,7 +1,7 @@
-@import '../normalize.css';
+@import '../index.css';
 @import './cubesAnimation.css';
 @import './externalLinksHoverColor.css';
-@import '../mailIcon.css';
+@import '../commonStyles/mailIcon.css';
 
 html {
   scroll-behavior: smooth;
