@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>6110A5E4-D29B-4A04-B7E5-EEE02DEE21AF</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <polygon id="path-1" points="11.375 0 11.375 19.8249363 2.27506373 10.725 0 12.9999363 13.0000637 26 26 12.9999363 23.7250637 10.725 14.625 19.8249363 14.625 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Page-Strategy" transform="translate(-450.000000, -3639.000000)">
+            <g id="Контакты" transform="translate(80.000000, 3295.000000)">
+                <g id="Btn" transform="translate(60.000000, 317.000000)">
+                    <g id="Icons-/-Arrow" transform="translate(323.000000, 40.000000) rotate(-90.000000) translate(-323.000000, -40.000000) translate(310.000000, 27.000000)">
+                        <g id="Arrow">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill="#FFFFFF" xlink:href="#path-1"></use>
+                            <g id="Color" mask="url(#mask-2)" fill="#FFFFFF">
+                                <rect id="Rectangle" x="0" y="0" width="26" height="26"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
