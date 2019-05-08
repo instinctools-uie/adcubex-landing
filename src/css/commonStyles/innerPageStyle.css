@@ -1,4 +1,5 @@
 @import 'headerAndFooterInnerPages.css';
+@import '../mailIcon.css';
 
 html {
   scroll-behavior: smooth;
