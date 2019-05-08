@@ -30,7 +30,7 @@ export function makeMainCubeBigger(sectionScrollPosition) {
 
 export function transformMainCubeToDefaultSize(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const highRatio = 1;
+  const highRatio = 0.8;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   mainCubeAnimation(perChange);
@@ -82,7 +82,7 @@ export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
-  const highRatio = 1;
+  const highRatio = 0.8;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);

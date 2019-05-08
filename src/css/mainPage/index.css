@@ -352,7 +352,7 @@ h2 {
   line-height: 1.6em;
 }
 
-.inner-section-text > p + p{
+.inner-section-text > p + p {
   margin-top: 1.5em;
 }
 
@@ -418,8 +418,7 @@ h2 {
   margin-top: -1.4em;
 }
 
-.advantage-section > .text-container
-> .inner-section-text > .vertical-inscription {
+.advantage-section > .text-container > .inner-section-text > .vertical-inscription {
   top: 8.2em;
   right: -6.5em;
 }
@@ -445,8 +444,7 @@ h2 {
   margin-top: -0.3em;
 }
 
-.budget-section > .budget-text-container
-> .inner-section-text > a {
+.budget-section > .budget-text-container > .inner-section-text > a {
   right: -2.6em;
   top: 3.6em;
 }
@@ -512,8 +510,7 @@ h2 {
   margin-bottom: -9em;
 }
 
-.improvement-section > .text-container
-> .inner-section-text > .custom-button {
+.improvement-section > .text-container > .inner-section-text > .custom-button {
   display: flex;
   justify-content: space-between;
   margin-top: 3.1em;
@@ -559,8 +556,7 @@ h2 {
   margin-top: -0.5em;
 }
 
-.power-text-container > .inner-section-text
-> a {
+.power-text-container > .inner-section-text > a {
   top: 6.2em;
   right: -4.5em;
 }
