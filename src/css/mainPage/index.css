@@ -303,16 +303,32 @@ h2 {
 
 .section-container > h1,
 .section-container > h2 {
+  height: 3.5em;
   margin-top: 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 5.3em;
   letter-spacing: 0.02em;
-  line-height: 1.12em;
+  line-height: 10em;
+  overflow: hidden;
+  transition: line-height 1s ease-in-out;
   text-align: left;
   text-decoration: none;
   text-transform: none;
+}
+
+.expertise-section > h2,
+.toolset-section > h2,
+.budget-section > h2,
+.control-section > h2,
+.power-section > h2 {
+  margin-bottom: 0;
+}
+
+.section-container--active > h1,
+.section-container--active > h2 {
+  line-height: 1.12em;
 }
 
 .text-container {

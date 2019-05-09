@@ -21,6 +21,7 @@ import {
 } from '../cubesAnimation';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
+import toggleTextOfSection from '../toggleTextOfSection';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
@@ -138,4 +139,6 @@ function initProject() {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
     scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
   }
+
+  toggleTextOfSection();
 }
