@@ -1,7 +1,16 @@
+@import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
 
-body {
-  background-color: #6131db;
+.cube-animation :nth-child(1) {
+  fill: var(--cube-left-side-dark-blue-color);
+}
+
+.cube-animation :nth-child(2) {
+  fill: var(--cube-right-side-dark-blue-color);
+}
+
+.cube-animation :nth-child(3) {
+  fill: var(--cube-bottom-side-dark-blue-color);
 }
 
 .contact-us-container {

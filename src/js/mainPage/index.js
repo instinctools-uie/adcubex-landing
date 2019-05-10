@@ -11,12 +11,13 @@ import {
   changeCubeColorToDefault
 } from '../changeColor';
 import {
+  cubesRandomLevitation,
   makeMainCubeBigger,
   transformMainCubeToDefaultSize,
   mainCubeToDefaultSize,
-  moveCubesToTop,
+  moveCubesToTopForColorSections,
   moveCubesToDefaultPosition,
-  cubesToDefaultPosition
+  moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
 import { RATE_CHANGE_SCROLL } from '../constants';
 
@@ -42,6 +43,7 @@ const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
 initProject();
+cubesRandomLevitation();
 
 window.addEventListener('scroll', initProject);
 
@@ -52,7 +54,7 @@ function initProject() {
     changeBackgroundColorToDefault();
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
-    cubesToDefaultPosition();
+    moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
@@ -69,7 +71,7 @@ function initProject() {
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
     makeMainCubeBigger(advantageSectionScrollPosition);
-    moveCubesToTop(advantageSectionScrollPosition);
+    moveCubesToTopForColorSections(advantageSectionScrollPosition);
   }
 
   if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
@@ -81,9 +83,11 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    changeColorForImprovementSection(powerSectionScrollPosition);
-    transformMainCubeToDefaultSize(powerSectionScrollPosition);
-    moveCubesToDefaultPosition(powerSectionScrollPosition);
+    const scrollDelayForAnimation = 800;
+    const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
+    changeColorForImprovementSection(sectionScrollPosition);
+    transformMainCubeToDefaultSize(sectionScrollPosition);
+    moveCubesToDefaultPosition(sectionScrollPosition);
   }
 
   // For Parallax Scroll of Big Background letters

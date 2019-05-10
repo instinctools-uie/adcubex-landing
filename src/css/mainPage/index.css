@@ -1,6 +1,7 @@
-@import '../normalize.css';
+@import '../index.css';
 @import './cubesAnimation.css';
 @import './externalLinksHoverColor.css';
+@import '../commonStyles/mailIcon.css';
 
 html {
   scroll-behavior: smooth;
@@ -8,7 +9,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'montserrat_lightregular', sans-serif;
+  font-family: 'montserrat_extralightregular', sans-serif;
 }
 
 h1,
@@ -22,21 +23,20 @@ h2 {
   fill: white;
 }
 
-.header-container {
+.logo {
   position: fixed;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0 4em 0 4em;
-  height: 10.125em;
-  width: 100%;
-  background-color: transparent;
+  top: 4.4em;
+  left: 3.3em;
 }
 
-.header-container .logo,
-.header-container .toggle-menu-button {
+.toggle-menu-button {
+  position: fixed;
+  top: 4.4em;
+  right: 3.3em;
+}
+
+.logo,
+.toggle-menu-button {
   z-index: 3;
 }
 
@@ -59,6 +59,7 @@ h2 {
 .header-navigation--active {
   opacity: 1;
   height: 100vh;
+  z-index: 2;
 }
 
 .header-navigation-bg-image {
@@ -180,6 +181,8 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 72.188em;
+  margin: 0 auto;
   color: #353535;
 }
 
@@ -200,11 +203,18 @@ h2 {
 .section-container {
   position: static;
   z-index: 1;
-  margin-top: 5em;
-  margin-bottom: 15em;
-  width: 69em;
+  margin-top: 8em;
+  width: 100%;
   min-height: 100vh;
   color: #303030;
+}
+
+.supervise-section.section-container {
+  margin-top: 8em;
+}
+
+.toolset-section.section-container {
+  margin-top: 10.4em;
 }
 
 .budget-section {
@@ -213,8 +223,8 @@ h2 {
 
 .vertical-inscription {
   position: absolute;
-  top: 7.5em;
-  right: -4.5em;
+  top: 7em;
+  right: -6em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -286,7 +296,9 @@ h2 {
 
 .expertise-section .inner-section-text > p > span,
 .power-section div > p > span {
+  font-family: montserrat_mediumregular, sans-serif;
   font-size: 2.188rem;
+  font-weight: 600;
 }
 
 .section-container > h1,
@@ -294,10 +306,10 @@ h2 {
   margin-top: 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
-  font-weight: normal;
-  font-size: 5.625em;
-  letter-spacing: 0;
-  line-height: 1.125em;
+  font-weight: 600;
+  font-size: 5.3em;
+  letter-spacing: 0.02em;
+  line-height: 1.12em;
   text-align: left;
   text-decoration: none;
   text-transform: none;
@@ -306,7 +318,11 @@ h2 {
 .text-container {
   position: relative;
   display: flex;
-  margin-top: 3em;
+  margin-top: -0.5em;
+}
+
+.supervise-section > .text-container {
+  margin-top: 0.2em;
 }
 
 .inner-section-image {
@@ -330,10 +346,18 @@ h2 {
 }
 
 .inner-section-text {
-  font-family: montserrat_mediumregular, sans-serif;
+  font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 1.75em;
-  font-weight: 500;
-  line-height: 1.7em;
+  font-weight: 600;
+  line-height: 1.6em;
+}
+
+.inner-section-text > p + p {
+  margin-top: 1.5em;
+}
+
+.inner-section-text > button {
+  margin-top: 5.4em;
 }
 
 .supervise-section .inner-section-text,
@@ -341,7 +365,7 @@ h2 {
 .toolset-section .inner-section-text,
 .advantage-section .inner-section-text,
 .improvement-section .inner-section-text {
-  margin-left: 8em;
+  margin-left: 9.3em;
 }
 
 .custom-button {
@@ -359,14 +383,19 @@ h2 {
   font-size: 0.71em;
   font-weight: 600;
   cursor: pointer;
+  transition: background-color 0.3s ease-in;
 }
 
 .external-links {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 68em;
-  margin-top: 14.625em;
+  width: 100%;
+  margin-top: 14em;
+}
+
+.toolset-section > .external-links {
+  margin-top: 12.7em;
 }
 
 .button-image {
@@ -381,20 +410,17 @@ h2 {
   transform: translateX(0.25em);
 }
 
-.social-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 68em;
-  margin-top: 14.625em;
-}
-
 .expertise-section .external-links {
   align-items: baseline;
 }
 
 .advantage-section {
-  margin-top: 17em;
+  margin-top: -1.4em;
+}
+
+.advantage-section > .text-container > .inner-section-text > .vertical-inscription {
+  top: 8.2em;
+  right: -6.5em;
 }
 
 .supervise-section > .text-container > .inner-section-text,
@@ -414,6 +440,15 @@ h2 {
   color: #ffffff;
 }
 
+.budget-section > .budget-text-container {
+  margin-top: -0.3em;
+}
+
+.budget-section > .budget-text-container > .inner-section-text > a {
+  right: -2.6em;
+  top: 3.6em;
+}
+
 .control-section > .control-text-container > .control-text > p {
   width: 18.375em;
   font-size: 1.75em;
@@ -422,15 +457,16 @@ h2 {
 }
 
 .control-text {
+  font-family: 'montserrat_extralightregular', sans-serif;
   width: 100%;
 }
 
 .power-image-container {
-  margin: 8.75em 0 0 16.25em;
+  margin: 6.2em 0 0 16.25em;
 }
 
 .power-image-container > button {
-  margin-top: 4.6em;
+  margin-top: 7.4em;
   border: 0.01em solid white;
   background-color: transparent;
   font-size: 1.2em;
@@ -467,21 +503,32 @@ h2 {
 }
 
 .budget-image {
-  margin: 10rem 0 0 16.25rem;
+  margin: 12.8rem 0 0 15.8rem;
+}
+
+.improvement-section {
+  margin-bottom: -9em;
 }
 
 .improvement-section > .text-container > .inner-section-text > .custom-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.1em;
+  padding: 0 1em 0 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .image-content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin-left: 3.75em;
 }
 
 .image-content_middle {
   height: 100%;
-  font-family: 'montserratbold', sans-serif;
+  font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2.25rem;
   line-height: 2.625rem;
 }
@@ -498,10 +545,34 @@ h2 {
   line-height: 0;
 }
 
-div.power-image > .image-content > p.image-content_large {
+.power-image {
+  min-width: 51.2em;
+  height: 5.3em;
+  margin-left: 5.7em;
+}
+
+.control-text-container,
+.power-text-container {
+  margin-top: -0.5em;
+}
+
+.power-text-container > .inner-section-text > a {
+  top: 6.2em;
+  right: -4.5em;
+}
+
+.power-image > .image-content-section > .image-content_large {
+  margin: 3rem 0;
+  font-family: montserratbold, sans-serif;
+  font-size: 6.5rem;
+  font-weight: 600;
+  line-height: 0;
+}
+
+div.power-image > .image-content-section > p.image-content_large {
   margin-top: 2rem;
   font-family: 'montserrat_extraboldregular', sans-serif;
-  font-size: 5rem;
+  font-size: 8rem;
   font-weight: 900;
 }
 
@@ -512,86 +583,6 @@ div.power-image > .image-content > p.image-content_large {
 .toolset-section div > p,
 .improvement-section div > p {
   color: #484848;
-}
-
-.mailIcon-container {
-  position: fixed;
-  right: 0;
-  bottom: 1.25em;
-  z-index: 2;
-  margin-right: 4em;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-.mailIcon-container:focus {
-  outline: 1px dotted rgb(197, 197, 197);
-}
-
-.mailIcon-background {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
-  width: 3.25em;
-  background-color: transparent;
-  transition-property: width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-  will-change: width, overflow;
-  cursor: pointer;
-}
-
-.mailIcon-background:hover {
-  width: 11em;
-  overflow: visible;
-}
-.mailIcon-background:hover .start-el,
-.mailIcon-background:hover .mid-el,
-.mailIcon-background:hover .mail-el {
-  background-color: #fd311e;
-}
-
-.mailIcon-background:hover .mid-el {
-  width: 7.7em;
-}
-
-.start-el {
-  width: 3.25em;
-  height: 3.25em;
-  margin-right: -1.8em;
-  border-radius: 50%;
-  background-color: #353535;
-  transition: background-color 0.3s ease-in;
-}
-
-.mid-el {
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  width: 0;
-  color: #ffffff;
-  background-color: #353535;
-  transition-property: background-color, width;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in;
-}
-
-.mid-el > span {
-  white-space: nowrap;
-}
-
-.mail-el {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 3.25em;
-  height: 3.25em;
-  margin-left: -1.5em;
-  border-radius: 50%;
-  background-color: #353535;
-  transition: background-color 0.3s ease-in;
 }
 
 footer {
@@ -622,11 +613,15 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > sup {
+.footer-left > p > a {
+  text-decoration: none;
+}
+
+.footer-left > p > a > i > sup {
   color: red;
 }
 
-.footer-left > p > span {
+.footer-left > p > a > i > span {
   color: black;
 }
 

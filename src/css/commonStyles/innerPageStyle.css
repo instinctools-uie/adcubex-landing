@@ -1,4 +1,5 @@
-@import 'headerAndFooterInnerPages.css';
+@import './headerAndFooterInnerPages.css';
+@import './mailIcon.css';
 
 html {
   scroll-behavior: smooth;
@@ -170,4 +171,30 @@ h4 + p {
 
 .custom-button:hover #but_arrow {
   fill: #353535;
+}
+
+.cube {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cube-position {
+  transform: translate(2400px, 0);
+}
+
+.cube-animation {
+  transform-origin: 17% 50%;
+  transform: scale(8);
+  animation: cube-animation 1.4s ease-out alternate;
+}
+
+@keyframes cube-animation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(8);
+  }
 }

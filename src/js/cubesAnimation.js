@@ -1,9 +1,25 @@
 import { RATE_CHANGE_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
 
-const mainCube = document.querySelector('#main-cube');
-const mainCubeAnimationElement = document.querySelector('#main-cube-scale-animation');
-const cubes = document.querySelectorAll('#cubes > g');
-const cubesTranslateElements = document.querySelectorAll('.cube-translate-animation');
+const mainCubeScaleAnimationElement = document.querySelector('#main-cube-scale-animation');
+const cubesTranslateElements = document.querySelectorAll('.cube-translate');
+const mainCubeForTranslateAnimation = window.document.querySelector('#main-cube-translate-animation');
+
+export function cubesRandomLevitation() {
+  const cubesForTranslateAnimation = window.document.querySelectorAll('.cube-translate-animation');
+  const minDurationValue = 4;
+  const durationRange = 10;
+  const delayRange = 2;
+
+  cubesForTranslateAnimation.forEach(cube => {
+    const { translateAnimationId, animationDuration, animationDelay } = MAIN_CUBE_OPTIONS;
+    const isMainCube = cube.id === translateAnimationId;
+    const durationValue = Math.floor(Math.random() * durationRange + minDurationValue);
+    const delayValue = Math.floor(Math.random() * delayRange);
+
+    cube.style.animationDuration = isMainCube ? `${animationDuration}s` : `${durationValue}s`;
+    cube.style.animationDelay = isMainCube ? `${animationDelay}s` : `${delayValue}s`;
+  });
+}
 
 export function makeMainCubeBigger(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
@@ -14,79 +30,67 @@ export function makeMainCubeBigger(sectionScrollPosition) {
 
 export function transformMainCubeToDefaultSize(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const highRatio = 1;
+  const highRatio = 0.8;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
   mainCubeAnimation(perChange);
 }
 
 export function mainCubeToDefaultSize() {
-  mainCubeAnimationElement.style.transform = `translate(0px, 0px) scale(1)`;
-  mainCube.style.animation = 'main-cube 1.6s infinite alternate';
+  mainCubeScaleAnimationElement.style.transform = `translate(0px, 0px) scale(1)`;
+  mainCubeForTranslateAnimation.style.animationDuration = `${MAIN_CUBE_OPTIONS.animationDuration}s`;
 }
 
 function mainCubeAnimation(perChange) {
-  const cubeScale = getValueBetweenRange(perChange, MAIN_CUBE_OPTIONS.minScaleValue, MAIN_CUBE_OPTIONS.maxScaleValue);
+  const { maxScaleValue, minScaleValue, animationDuration } = MAIN_CUBE_OPTIONS;
+  const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
 
-  const translateXPosition = getValueBetweenRange(
-    perChange,
-    MAIN_CUBE_OPTIONS.minTranslateXPosition,
-    MAIN_CUBE_OPTIONS.maxTranslateXPosition
-  );
-  const translateYPosition = getValueBetweenRange(
-    perChange,
-    MAIN_CUBE_OPTIONS.minTranslateYPosition,
-    MAIN_CUBE_OPTIONS.maxTranslateYPosition
-  );
-  const isCubeScaled = cubeScale > MAIN_CUBE_OPTIONS.minScaleValue;
-  const translateXPositionAfterScale = isCubeScaled ? translateXPosition : MAIN_CUBE_OPTIONS.minTranslateXPosition;
+  const isCubeScaled = cubeScale > minScaleValue;
 
   if (isCubeScaled) {
-    mainCube.style.animation = 'none';
+    mainCubeForTranslateAnimation.style.animationDuration = '0s';
   } else {
-    mainCube.style.animation = 'main-cube 1.6s infinite alternate';
+    mainCubeForTranslateAnimation.style.animationDuration = `${animationDuration}s`;
   }
 
-  mainCubeAnimationElement.style.transform = `translate(-${translateXPositionAfterScale}px, -${translateYPosition}px) scale(${cubeScale})`;
+  mainCubeScaleAnimationElement.style.transform = `scale(${cubeScale})`;
 }
 
-export function moveCubesToTop(sectionScrollPosition) {
+export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChangeScroll) {
   const scrolled = window.pageYOffset;
+  const { minTranslateYWhenScrollOnWhiteSections, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
+  const perChange = (scrolled - sectionScrollPosition) / rateChangeScroll;
+  const translateYPosition = getValueBetweenRange(
+    perChange,
+    minTranslateYWhenScrollOnWhiteSections,
+    maxTranslateYWhenScrollOnWhiteSections
+  );
+
+  translateCubesAnimation(translateYPosition);
+}
+
+export function moveCubesToTopForColorSections(sectionScrollPosition) {
+  const scrolled = window.pageYOffset;
+  const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
+  const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const perChange = (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
-  cubesAnimation(perChange);
+  cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
 
 export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const highRatio = 1;
+  const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
+  const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
+  const highRatio = 0.8;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
 
-  cubesAnimation(perChange);
+  cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
 
-export function cubesToDefaultPosition() {
-  const cubesDefaultPosition = 0;
-  translateCubesAnimation(cubesDefaultPosition);
-}
-
-function cubesAnimation(perChange) {
-  const translateYPosition = getValueBetweenRange(
-    perChange,
-    CUBES_OPTIONS.minTranslateYPosition,
-    CUBES_OPTIONS.maxTranslateYPosition
-  );
-  const isCubesYPositionMoreThanMaxValue = translateYPosition >= CUBES_OPTIONS.maxTranslateYPosition;
-
-  cubes.forEach(cube => {
-    const isMainCube = cube.id === 'main-cube';
-
-    if (isCubesYPositionMoreThanMaxValue && !isMainCube) {
-      cube.style.display = 'none';
-    } else {
-      cube.style.display = 'block';
-    }
-  });
+function cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition) {
+  const translateYPosition = getValueBetweenRange(perChange, minTranslateYPosition, maxTranslateYPosition);
+  const isCubesYPositionMoreThanMaxValue = translateYPosition >= maxTranslateYPosition;
 
   if (!isCubesYPositionMoreThanMaxValue) {
     translateCubesAnimation(translateYPosition);
