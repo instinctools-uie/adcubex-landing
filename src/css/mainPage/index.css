@@ -323,12 +323,52 @@ h2 {
 .budget-section > h2,
 .control-section > h2,
 .power-section > h2 {
-  margin-bottom: 0;
+  height: 2.5em;
+}
+
+.supervise-section .inner-section-text p:nth-child(1) {
+  height: 6.35em;
+}
+
+.expertise-section .inner-section-text p:nth-child(1),
+.power-section .inner-section-text p:nth-child(1),
+.improvement-section .inner-section-text p:nth-child(1) {
+  height: 3.15em;
+}
+.expertise-section .inner-section-text p:nth-child(2),
+.power-section .inner-section-text p:nth-child(2) {
+  height: 1.75em;
+}
+
+.expertise-section .inner-section-text p:nth-child(3),
+.toolset-section .inner-section-text p:nth-child(1),
+.toolset-section .inner-section-text p:nth-child(2),
+.advantage-section .inner-section-text p:nth-child(1),
+.budget-section .inner-section-text p:nth-child(1) {
+  height: 4.75em;
+}
+
+.power-section .inner-section-text p:nth-child(3) {
+  height: 6.5em;
+}
+
+.control-section .inner-section-text p:nth-child(1) {
+  height: 8em;
 }
 
 .section-container--active > h1,
 .section-container--active > h2 {
   line-height: 1.12em;
+}
+
+.section-container .inner-section-text p {
+  overflow: hidden;
+  line-height: 20em;
+  transition: line-height 1.3s ease-in-out;
+}
+
+.section-container--active .inner-section-text p {
+  line-height: inherit;
 }
 
 .text-container {
@@ -447,13 +487,16 @@ h2 {
 }
 
 .budget-text-container,
-.control-text-container,
 .power-text-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  color: #ffffff;
+  color: white;
+}
+
+.control-section .inner-section-text {
+  color: white;
 }
 
 .budget-section > .budget-text-container {
@@ -463,18 +506,6 @@ h2 {
 .budget-section > .budget-text-container > .inner-section-text > a {
   right: -2.6em;
   top: 3.6em;
-}
-
-.control-section > .control-text-container > .control-text > p {
-  width: 18.375em;
-  font-size: 1.75em;
-  font-weight: 600;
-  line-height: 1.6em;
-}
-
-.control-text {
-  font-family: 'montserrat_extralightregular', sans-serif;
-  width: 100%;
 }
 
 .power-image-container {
@@ -505,7 +536,7 @@ h2 {
 
 .power-image-container > .custom-button:hover {
   color: #353535;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .budget-image,
