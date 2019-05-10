@@ -45,8 +45,8 @@ input,
 textarea {
   margin-bottom: 1.8em;
   padding: 0 1.25em 0 1.25em;
-  border: 1px solid #b6b6b6;
-  color: #353535;
+  border: 1px solid var(--nobel-color);
+  color: var(--mine-shaft-lighter-color);
   font-family: 'montserrat_lightregular', sans-serif;
   font-weight: 600;
   font-size: 1.35em;
@@ -65,16 +65,16 @@ textarea:focus {
 }
 
 ::-webkit-input-placeholder {
-  color: #b6b6b6;
+  color: var(--nobel-color);
 }
 ::-moz-placeholder {
-  color: #b6b6b6;
+  color: var(--nobel-color);
 }
 :-ms-input-placeholder {
-  color: #b6b6b6;
+  color: var(--nobel-color);
 }
 :-moz-placeholder {
-  color: #b6b6b6;
+  color: var(--nobel-color);
 }
 
 .contact-checkbox {
@@ -95,15 +95,15 @@ input[type='checkbox']:checked {
 .fake-checkbox {
   width: 1em;
   height: 1em;
-  border: 0.125em solid #353535;
+  border: 0.125em solid var(--mine-shaft-lighter-color);
 }
 
 .fake-checkbox_unchecked {
-  background: #ffffff;
+  background: white;
 }
 
 .fake-checkbox_checked {
-  background: #353535;
+  background: var(--mine-shaft-lighter-color);
 }
 
 .contact-checkbox > div > img {
@@ -123,7 +123,7 @@ input[type='checkbox']:checked {
 
 label {
   margin-left: 1em;
-  color: #ababab;
+  color: var(--silver-chalice-color);
   font-size: 0.75em;
   line-height: 1.5em;
 }
@@ -139,7 +139,7 @@ label {
   margin-left: 0;
   padding: 0 0.8em 0 1.42em;
   border: none;
-  background-color: #ef3e3e;
+  background-color: var(--flamingo-color);
   font-weight: 500;
   font-size: 1.5em;
   transition: background-color 0.3s ease-in;
@@ -151,7 +151,7 @@ label {
 
 .custom-button:hover {
   color: white;
-  background-color: #fd311e;
+  background-color: var(--red-orange-color);
 }
 
 .custom-button:hover .button-image {

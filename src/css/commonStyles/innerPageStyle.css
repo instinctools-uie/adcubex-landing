@@ -1,4 +1,4 @@
-@import './headerAndFooterInnerPages.css';
+@import 'headerAndFooter.css';
 @import './mailIcon.css';
 
 html {
@@ -16,7 +16,7 @@ body {
   align-items: center;
   max-width: 80em;
   margin: 0 auto -14em auto;
-  color: #353535;
+  color: var(--mine-shaft-lighter-color);
 }
 
 .title-section {
@@ -24,13 +24,13 @@ body {
   justify-content: flex-start;
   width: auto;
   margin: 17em auto 0 4em;
-  color: #ffffff;
+  color: white;
 }
 
 .content-section {
   width: 100%;
   margin-top: -16.063em;
-  background-color: #ffffff;
+  background-color: white;
 }
 
 .title-section > .section-content {
@@ -109,7 +109,7 @@ h2 + p {
 .vertical-inscription > span {
   display: flex;
   align-items: center;
-  color: #353535;
+  color: var(--mine-shaft-lighter-color);
   font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2rem;
   font-weight: 600;
@@ -118,8 +118,8 @@ h2 + p {
 .contact-section {
   width: 100%;
   margin-top: 2.5em;
-  color: #ffffff;
-  background-color: #353535;
+  color: white;
+  background-color: var(--mine-shaft-lighter-color);
 }
 
 .contact-section > h4 {
@@ -140,10 +140,10 @@ h4 + p {
   width: 23.625rem;
   height: 5rem;
   padding: 0 1em 0 1em;
-  border: #ffffff solid 0.01em;
+  border: white solid 0.01em;
   margin: 2.4em 0 3.3em 1.7em;
   background-color: transparent;
-  color: #fff;
+  color: white;
   font-family: montserrat_mediumregular, sans-serif;
   font-size: 2.25em;
   font-weight: 600;
@@ -152,7 +152,7 @@ h4 + p {
 }
 
 .custom-button:hover {
-  color: #353535;
+  color: var(--mine-shaft-lighter-color);
   background-color: white;
 }
 
@@ -170,7 +170,7 @@ h4 + p {
 }
 
 .custom-button:hover #but_arrow {
-  fill: #353535;
+  fill: var(--mine-shaft-lighter-color);
 }
 
 .cube {
