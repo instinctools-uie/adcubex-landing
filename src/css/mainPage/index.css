@@ -173,34 +173,9 @@ h2 {
   height: 2.5em;
 }
 
-.supervise-section .inner-section-text p:nth-child(1) {
-  height: 6.35em;
-}
-
-.expertise-section .inner-section-text p:nth-child(1),
-.power-section .inner-section-text p:nth-child(1),
-.improvement-section .inner-section-text p:nth-child(1) {
-  height: 3.15em;
-}
-.expertise-section .inner-section-text p:nth-child(2),
-.power-section .inner-section-text p:nth-child(2) {
-  height: 1.75em;
-}
-
-.expertise-section .inner-section-text p:nth-child(3),
-.toolset-section .inner-section-text p:nth-child(1),
-.toolset-section .inner-section-text p:nth-child(2),
-.advantage-section .inner-section-text p:nth-child(1),
-.budget-section .inner-section-text p:nth-child(1) {
-  height: 4.75em;
-}
-
-.power-section .inner-section-text p:nth-child(3) {
-  height: 6.5em;
-}
-
-.control-section .inner-section-text p:nth-child(1) {
-  height: 8em;
+.section-container .inner-section-text {
+  opacity: 0;
+  transition: opacity 1.3s ease-in-out;
 }
 
 .section-container--active > h1,
@@ -208,14 +183,8 @@ h2 {
   line-height: 1.12em;
 }
 
-.section-container .inner-section-text p {
-  overflow: hidden;
-  line-height: 20em;
-  transition: line-height 1.3s ease-in-out;
-}
-
-.section-container--active .inner-section-text p {
-  line-height: inherit;
+.section-container--active .inner-section-text {
+  opacity: 1;
 }
 
 .text-container {
