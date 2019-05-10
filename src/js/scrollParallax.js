@@ -14,13 +14,12 @@ export function scrollParallaxBgLetters(element, section, prevSection) {
   element.style.transform = `translate(0px, ${translateYValue}px)`;
 }
 
-export function scrollParallaxPattern(element, section) {
+export function sectionImageParallax(element, startPosition) {
   const start = 500;
   const finish = -800;
 
   const scrolled = window.pageYOffset;
-  const perChange = (scrolled - section) / RATE_CHANGE_SCROLL;
-  console.log(section);
+  const perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
   const translateYValue = start - (start - finish) * perChange;
 
   element.style.display = 'block';

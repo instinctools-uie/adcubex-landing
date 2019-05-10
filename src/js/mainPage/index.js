@@ -23,7 +23,7 @@ import { RATE_CHANGE_SCROLL } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
+import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -116,37 +116,37 @@ function initProject() {
   }
 
   // For Parallax Scroll of patterns/squares
-  if (scrolled < expertiseSectionScrollPosition - RATE_CHANGE_SCROLL / 2) {
+  const middleOfScreenHeight = RATE_CHANGE_SCROLL / 2;
+  const middleOfScreenBeforeSuperviseSection = superviseSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenBeforeExpertiseSection = expertiseSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenAfterExpertiseSection = expertiseSectionScrollPosition + middleOfScreenHeight;
+  const middleOfScreenBeforeToolsetSection = toolsetSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenAfterToolsetSection = toolsetSectionScrollPosition + middleOfScreenHeight;
+  const middleOfScreenBeforeAdvantageSection = advantageSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenAfterAdvantageSection = advantageSectionScrollPosition + middleOfScreenHeight;
+  const middleOfScreenBeforeImprovementSection = improvementSectionScrollPosition - middleOfScreenHeight;
+  if (scrolled < middleOfScreenBeforeExpertiseSection) {
     const superviseElement = window.document.querySelector('#supervise .inner-section-image');
-    scrollParallaxPattern(superviseElement, superviseSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
+    sectionImageParallax(superviseElement, middleOfScreenBeforeSuperviseSection);
   }
 
-  if (
-    scrolled > expertiseSectionScrollPosition - RATE_CHANGE_SCROLL / 2 &&
-    scrolled < expertiseSectionScrollPosition + RATE_CHANGE_SCROLL / 2
-  ) {
+  if (scrolled > middleOfScreenBeforeExpertiseSection && scrolled < middleOfScreenAfterExpertiseSection) {
     const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
-    scrollParallaxPattern(expertiseElement, expertiseSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
+    sectionImageParallax(expertiseElement, middleOfScreenBeforeExpertiseSection);
   }
 
-  if (
-    scrolled > toolsetSectionScrollPosition - RATE_CHANGE_SCROLL / 2 &&
-    scrolled < toolsetSectionScrollPosition + RATE_CHANGE_SCROLL / 2
-  ) {
+  if (scrolled > middleOfScreenBeforeToolsetSection && scrolled < middleOfScreenAfterToolsetSection) {
     const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
-    scrollParallaxPattern(toolsetPattern, toolsetSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
+    sectionImageParallax(toolsetPattern, middleOfScreenBeforeToolsetSection);
   }
 
-  if (
-    scrolled > advantageSectionScrollPosition - RATE_CHANGE_SCROLL / 2 &&
-    scrolled < advantageSectionScrollPosition + RATE_CHANGE_SCROLL / 2
-  ) {
+  if (scrolled > middleOfScreenBeforeAdvantageSection && scrolled < middleOfScreenAfterAdvantageSection) {
     const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
-    scrollParallaxPattern(advantagePattern, advantageSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
+    sectionImageParallax(advantagePattern, middleOfScreenBeforeAdvantageSection);
   }
 
-  if (scrolled > improvementSectionScrollPosition - RATE_CHANGE_SCROLL / 2) {
+  if (scrolled > middleOfScreenBeforeImprovementSection) {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
-    scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
+    sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
 }
