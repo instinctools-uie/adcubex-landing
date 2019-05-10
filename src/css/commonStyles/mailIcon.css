@@ -10,7 +10,7 @@
 }
 
 .mailIcon-container:focus {
-  outline: 1px dotted rgb(197, 197, 197);
+  outline: 1px dotted var(--silver-color);
 }
 
 .mailIcon-background {
@@ -33,7 +33,7 @@
 .mailIcon-background:hover .start-el,
 .mailIcon-background:hover .mid-el,
 .mailIcon-background:hover .mail-el {
-  background-color: #fd311e;
+  background-color: var(--red-orange-color);
 }
 
 .mailIcon-background:hover .mid-el {
@@ -54,7 +54,7 @@
   align-items: center;
   overflow: hidden;
   width: 0;
-  color: #ffffff;
+  color: white;
   background-color: #353535;
   transition-property: background-color, width;
   transition-duration: 0.3s;

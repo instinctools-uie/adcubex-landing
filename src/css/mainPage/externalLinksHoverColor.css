@@ -1,70 +1,70 @@
 .external-links > .google-icon:hover #google-path-1 {
-  fill: #4286f5;
+  fill: var(--google-fourth-letter-hover-color);
 }
 
 .external-links > .google-icon:hover #google-path-3,
 .external-links > .google-icon:hover #google-path-5 {
-  fill: #ea4235;
+  fill: var(--google-second-and-sixth-letter-hover-color);
 }
 
 .external-links > .google-icon:hover #google-path-7 {
-  fill: #4185f4;
+  fill: var(--google-first-letter-hover-color);
 }
 
 .external-links > .google-icon:hover #google-path-10 {
-  fill: #fabc05;
+  fill: var(--google-third-letter-hover-color);
 }
 
 .external-links > .google-icon:hover #google-path-12 {
-  fill: #34a853;
+  fill: var(--google-fifth-letter-hover-color);
 }
 
 .external-links > .twitter-icon:hover #twitter {
-  fill: #1da1f2;
+  fill: var(--twitter-hover-color);
 }
 
 .external-links > .bing-icon:hover #Bing {
-  fill: #00877d;
+  fill: var(--bing-ads-hover-color);
 }
 
 .external-links > .facebook-icon:hover #facebook_1 {
-  fill: #3b5998;
+  fill: var(--facebook-hover-color);
 }
 
 .external-links > .baidu-icon:hover path {
-  fill: #ec1c24;
+  fill: var(--baidu-hover-color);
 }
 
 .external-links > .baidu-icon:hover #Baidu-2,
 .external-links > .baidu-icon:hover #Baidu-3 {
-  fill: white;
+  fill: var(--baidu-text-in-paw-hover-color);
 }
 
 .external-links > .baidu-icon:hover #Baidu-1 {
-  fill: #2932e1;
+  fill: var(--baidu-paw-hover-color);
 }
 
 .external-links > .yahoo-icon:hover path {
-  fill: #410093;
+  fill: var(--yahoo-hover-color);
 }
 
 .external-links > .daimler-icon:hover path {
-  fill: #003461;
+  fill: var(--daimler-hover-color);
 }
 
 .external-links > .huberd-burda-icon:hover path,
 .external-links > .huberd-burda-icon:hover polygon {
-  fill: #4e3b43;
+  fill: var(--huberd-hover-color);
 }
 
 .external-links > .fujitsu-icon:hover #Fujitsu {
-  fill: #ee3e33;
+  fill: var(--fujitsu-hover-color);
 }
 
 .external-links > .thyssenkrupp-icon:hover #thyssenkrupp {
-  fill: #039ef2;
+  fill: var(--thyssenkrupp-hover-color);
 }
 
 .external-links > .evonik-icon:hover #evonik {
-  fill: #991a81;
+  fill: var(--evonik-hover-color);
 }
