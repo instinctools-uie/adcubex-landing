@@ -328,7 +328,7 @@ h2 {
 .inner-section-image {
   position: absolute;
   z-index: -1;
-  top: 30em;
+  top: 10em;
   display: none;
   width: 20em;
   height: 20em;
