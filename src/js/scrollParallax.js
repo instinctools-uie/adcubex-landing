@@ -15,13 +15,14 @@ export function scrollParallaxBgLetters(element, section, prevSection) {
 }
 
 export function scrollParallaxPattern(element, section) {
-  const start = 0;
-  const finish = -1000;
+  const start = 500;
+  const finish = -800;
 
   const scrolled = window.pageYOffset;
   const perChange = (scrolled - section) / RATE_CHANGE_SCROLL;
+  console.log(section);
   const translateYValue = start - (start - finish) * perChange;
 
-  // element.style.display = 'block';
+  element.style.display = 'block';
   element.style.transform = `translate(0px, ${translateYValue}px)`;
 }

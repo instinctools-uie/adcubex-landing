@@ -18,6 +18,8 @@ import {
   moveCubesToDefaultPosition,
   cubesToDefaultPosition
 } from '../cubesAnimation';
+import { RATE_CHANGE_SCROLL } from '../constants';
+
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
@@ -110,28 +112,37 @@ function initProject() {
   }
 
   // For Parallax Scroll of patterns/squares
-  if (scrolled < expertiseSectionScrollPosition) {
+  if (scrolled < expertiseSectionScrollPosition - RATE_CHANGE_SCROLL / 2) {
     const superviseElement = window.document.querySelector('#supervise .inner-section-image');
-    scrollParallaxPattern(superviseElement, superviseSectionScrollPosition);
+    scrollParallaxPattern(superviseElement, superviseSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
   }
 
-  if (scrolled > expertiseSectionScrollPosition - 960 / 2 && scrolled < toolsetSectionScrollPosition - 960 / 2) {
+  if (
+    scrolled > expertiseSectionScrollPosition - RATE_CHANGE_SCROLL / 2 &&
+    scrolled < expertiseSectionScrollPosition + RATE_CHANGE_SCROLL / 2
+  ) {
     const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
-    scrollParallaxPattern(expertiseElement, expertiseSectionScrollPosition);
+    scrollParallaxPattern(expertiseElement, expertiseSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
   }
 
-  if (scrolled > toolsetSectionScrollPosition - 960 / 2 && scrolled < advantageSectionScrollPosition - 960 / 2) {
+  if (
+    scrolled > toolsetSectionScrollPosition - RATE_CHANGE_SCROLL / 2 &&
+    scrolled < toolsetSectionScrollPosition + RATE_CHANGE_SCROLL / 2
+  ) {
     const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
-    scrollParallaxPattern(toolsetPattern, toolsetSectionScrollPosition);
+    scrollParallaxPattern(toolsetPattern, toolsetSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
   }
 
-  if (scrolled > advantageSectionScrollPosition - 960 / 2 && scrolled < budgetSectionScrollPosition - 960 / 2) {
+  if (
+    scrolled > advantageSectionScrollPosition - RATE_CHANGE_SCROLL / 2 &&
+    scrolled < advantageSectionScrollPosition + RATE_CHANGE_SCROLL / 2
+  ) {
     const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
-    scrollParallaxPattern(advantagePattern, advantageSectionScrollPosition);
+    scrollParallaxPattern(advantagePattern, advantageSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
   }
 
-  if (scrolled > improvementSectionScrollPosition) {
+  if (scrolled > improvementSectionScrollPosition - RATE_CHANGE_SCROLL / 2) {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
-    scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
+    scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition - RATE_CHANGE_SCROLL / 2);
   }
 }
