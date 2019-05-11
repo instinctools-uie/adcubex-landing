@@ -39,7 +39,20 @@ const headerNavigation = {
 
 describe('toggle menu', () => {
   beforeAll(() => {
-    mockQuerySelector();
+    jest.spyOn(document, 'querySelector').mockImplementation(selector => {
+      switch (selector) {
+        case '.toggle-menu-button':
+          return toggleMenuButton;
+        case '.logo':
+          return logoElement;
+        case '.header-open-menu-icon':
+          return openMenuIcon;
+        case '.header-close-menu-icon':
+          return closeMenuIcon;
+        case '.header-navigation':
+          return headerNavigation;
+      }
+    });
   });
 
   afterEach(() => {
@@ -102,20 +115,3 @@ describe('toggle menu', () => {
     expect(headerNavigation.removeAttribute).toHaveBeenCalledTimes(0);
   });
 });
-
-function mockQuerySelector() {
-  jest.spyOn(document, 'querySelector').mockImplementation(selector => {
-    switch (selector) {
-      case '.toggle-menu-button':
-        return toggleMenuButton;
-      case '.logo':
-        return logoElement;
-      case '.header-open-menu-icon':
-        return openMenuIcon;
-      case '.header-close-menu-icon':
-        return closeMenuIcon;
-      case '.header-navigation':
-        return headerNavigation;
-    }
-  });
-}
