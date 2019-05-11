@@ -137,8 +137,12 @@ h2 {
 .power-section > svg {
   position: absolute;
   z-index: -1;
-  left: 0;
+  left: -14.25em;
   display: none;
+}
+
+.power-section > svg {
+  left: -12.25em;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -271,6 +275,8 @@ h2 {
 }
 
 .button-image {
+  display: flex;
+  align-items: center;
   transition: transform 0.3s ease-in;
 }
 

@@ -8,7 +8,7 @@
     "start": "gulp",
     "format": "prettier --single-quote --write 'src/**/*.{js,css}'",
     "lint": "eslint src",
-    "test": "jest --coverage"
+    "test": "jest --coverage --no-cache --env=jsdom"
   },
   "pre-commit": [
     "test",

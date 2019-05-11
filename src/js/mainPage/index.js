@@ -1,5 +1,3 @@
-/*  eslint no-unused-vars: "off"  */
-
 import {
   changeColorForImprovementSection,
   changeColorForBudgetSection,
@@ -44,6 +42,8 @@ const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
 initProject();
+toggleMenu();
+hoverLinkInMenu();
 cubesRandomLevitation();
 
 window.addEventListener('scroll', initProject);
