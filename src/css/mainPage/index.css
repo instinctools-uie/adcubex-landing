@@ -154,7 +154,7 @@ h2 {
 
 .section-container > * {
   opacity: 0;
-  transition: opacity 1.3s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .section-container--active > * {
@@ -173,7 +173,7 @@ h2 {
   letter-spacing: 0.02em;
   line-height: 10em;
   overflow: hidden;
-  transition: line-height 1s ease-in-out;
+  transition: line-height 1.5s ease-in-out;
   text-align: left;
   text-decoration: none;
   text-transform: none;
