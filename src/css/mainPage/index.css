@@ -152,18 +152,44 @@ h2 {
   font-weight: 600;
 }
 
+.section-container > * {
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.section-container--active > * {
+  opacity: 1;
+}
+
 .section-container > h1,
 .section-container > h2 {
+  opacity: 1;
+  height: 3.5em;
   margin-top: 1em;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 5.3em;
   letter-spacing: 0.02em;
-  line-height: 1.12em;
+  line-height: 10em;
+  overflow: hidden;
+  transition: line-height 1.5s ease-in-out;
   text-align: left;
   text-decoration: none;
   text-transform: none;
+}
+
+.expertise-section > h2,
+.toolset-section > h2,
+.budget-section > h2,
+.control-section > h2,
+.power-section > h2 {
+  height: 2.5em;
+}
+
+.section-container--active > h1,
+.section-container--active > h2 {
+  line-height: 1.12em;
 }
 
 .text-container {
@@ -284,12 +310,15 @@ h2 {
 }
 
 .budget-text-container,
-.control-text-container,
 .power-text-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  color: white;
+}
+
+.control-section .inner-section-text {
   color: white;
 }
 
@@ -300,18 +329,6 @@ h2 {
 .budget-section > .budget-text-container > .inner-section-text > a {
   right: -2.6em;
   top: 3.6em;
-}
-
-.control-section > .control-text-container > .control-text > p {
-  width: 18.375em;
-  font-size: 1.75em;
-  font-weight: 600;
-  line-height: 1.6em;
-}
-
-.control-text {
-  font-family: 'montserrat_extralightregular', sans-serif;
-  width: 100%;
 }
 
 .power-image-container {

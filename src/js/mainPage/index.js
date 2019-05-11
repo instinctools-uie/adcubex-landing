@@ -21,6 +21,7 @@ import { RATE_CHANGE_SCROLL } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
+import toggleTextOfSection from '../toggleTextOfSection';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
@@ -149,4 +150,6 @@ function initProject() {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
     sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
+
+  toggleTextOfSection();
 }
