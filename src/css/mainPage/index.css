@@ -246,6 +246,8 @@ h2 {
 }
 
 .button-image {
+  display: flex;
+  align-items: center;
   transition: transform 0.3s ease-in;
 }
 
