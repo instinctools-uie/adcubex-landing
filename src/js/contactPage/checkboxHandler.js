@@ -4,6 +4,11 @@ const trueCheckbox = document.querySelector('input[type="checkbox"]');
 const checkboxLabel = document.querySelector('label');
 const checkboxImg = document.querySelector('.contact-checkbox > div > img');
 
+export default function checkboxListener() {
+  checkboxWrapper.addEventListener('click', checkboxHandler);
+  checkboxLabel.addEventListener('click', checkboxHandler);
+}
+
 function checkboxHandler() {
   if (checkbox.classList.contains('fake-checkbox_unchecked') && checkboxImg.classList.contains('img_hide')) {
     checkbox.classList.remove('fake-checkbox_unchecked');
@@ -23,7 +28,3 @@ function checkboxHandler() {
     trueCheckbox.removeAttribute('checked');
   }
 }
-
-checkboxWrapper.addEventListener('click', checkboxHandler);
-
-checkboxLabel.addEventListener('click', checkboxHandler);
