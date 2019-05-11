@@ -1,8 +1,10 @@
 const headerNavigation = document.querySelector('.header-navigation');
 const linksContainerInOpenedMenu = document.querySelector('.header-links-container');
 
-linksContainerInOpenedMenu.addEventListener('mouseover', mouseOnNavigationContainer);
-linksContainerInOpenedMenu.addEventListener('mouseout', mouseOutNavigationContainer);
+export default function hoverLinkInMenu() {
+  linksContainerInOpenedMenu.addEventListener('mouseover', mouseOnNavigationContainer);
+  linksContainerInOpenedMenu.addEventListener('mouseout', mouseOutNavigationContainer);
+}
 
 function mouseOnNavigationContainer(e) {
   const { target } = e;

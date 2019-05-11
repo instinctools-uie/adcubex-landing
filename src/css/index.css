@@ -1,0 +1,71 @@
+@import './normalize.css';
+
+:root {
+  /* Color Schema */
+  /* Use Zeplin color names or this service for naming - http://chir.ag/projects/name-that-color */
+  --white-with-opacity-color: rgba(255, 255, 255, 0.7);
+  --silver-color: #c5c5c5;
+  --silver-chalice-color: #ababab;
+  --nobel-color: #b6b6b6;
+  --amaranth-color: #ec3865;
+  --flamingo-color: #ef3e3e;
+  --sunset-orange-color: #fc4848;
+  --cinnabar-color: #ea4235;
+  --red-orange-color: #fd311e;
+  --pomegranate-color: #ee3e33;
+  --alizarin-crimson-color: #ec1c24;
+  --selective-yellow-color: #fabc05;
+  --chateau-green-color: #34a853;
+  --teal-color: #00877d;
+  --azure-radiance-color: #039ef2;
+  --dodger-light-blue-color: #1da1f2;
+  --dodger-blue-color: #4286f5;
+  --cornflower-blue-color: #4185f4;
+  --royal-blue-color: #3655f4;
+  --royal-dark-blue-color: #6c3ce6;
+  --chambray-color: #3b5998;
+  --persian-blue-color: #2932e1;
+  --pigment-indigo-color: #410093;
+  --midnight-blue-color: #003461;
+  --purple-heart-color: #9b2edf;
+  --violet-eggplant-color: #991a81;
+  --matterhorn-color: #4e3b43;
+  --tundora-color: #484848;
+  --mine-shaft-lighter-color: #353535;
+  --mine-shaft-light-color: #303030;
+  --mine-shaft-color: #252525;
+
+  --header-navigation-bg-color: var(--amaranth-color);
+
+  --google-first-letter-hover-color: var(--cornflower-blue-color);
+  --google-second-and-sixth-letter-hover-color: var(--cinnabar-color);
+  --google-third-letter-hover-color: var(--selective-yellow-color);
+  --google-fourth-letter-hover-color: var(--dodger-blue-color);
+  --google-fifth-letter-hover-color: var(--chateau-green-color);
+  --twitter-hover-color: var(--dodger-light-blue-color);
+  --bing-ads-hover-color: var(--teal-color);
+  --facebook-hover-color: var(--chambray-color);
+  --baidu-hover-color: var(--alizarin-crimson-color);
+  --baidu-paw-hover-color: var(--persian-blue-color);
+  --baidu-text-in-paw-hover-color: white;
+  --yahoo-hover-color: var(--pigment-indigo-color);
+  --daimler-hover-color: var(--midnight-blue-color);
+  --huberd-hover-color: var(--matterhorn-color);
+  --fujitsu-hover-color: var(--pomegranate-color);
+  --thyssenkrupp-hover-color: var(--azure-radiance-color);
+  --evonik-hover-color: var(--violet-eggplant-color);
+
+  /* Background color for inner pages */
+  --cube-left-side-red-color: rgba(240, 62, 62);
+  --cube-right-side-red-color: rgba(191, 49, 48);
+  --cube-bottom-side-red-color: rgba(219, 56, 57);
+  --cube-left-side-blue-color: rgba(75, 84, 242);
+  --cube-right-side-blue-color: rgba(67, 74, 190);
+  --cube-bottom-side-blue-color: rgba(72, 80, 223);
+  --cube-left-side-dark-blue-color: rgba(108, 60, 230);
+  --cube-right-side-dark-blue-color: rgba(97, 49, 219);
+  --cube-bottom-side-dark-blue-color: rgba(102, 55, 223);
+  --cube-left-side-purple-color: rgba(157, 55, 227);
+  --cube-right-side-purple-color: rgba(147, 45, 191);
+  --cube-bottom-side-purple-color: rgba(150, 49, 213);
+}

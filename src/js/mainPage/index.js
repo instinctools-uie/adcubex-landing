@@ -1,5 +1,3 @@
-/*  eslint no-unused-vars: "off"  */
-
 import {
   changeColorForImprovementSection,
   changeColorForBudgetSection,
@@ -19,9 +17,12 @@ import {
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
+import { RATE_CHANGE_SCROLL } from '../constants';
+
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import { scrollParallaxBgLetters, scrollParallaxPattern } from '../scrollParallax';
+import toggleTextOfSection from '../toggleTextOfSection';
+import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -41,6 +42,8 @@ const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
 initProject();
+toggleMenu();
+hoverLinkInMenu();
 cubesRandomLevitation();
 
 window.addEventListener('scroll', initProject);
@@ -114,28 +117,39 @@ function initProject() {
   }
 
   // For Parallax Scroll of patterns/squares
-  if (scrolled < expertiseSectionScrollPosition) {
+  const middleOfScreenHeight = RATE_CHANGE_SCROLL / 2;
+  const middleOfScreenBeforeSuperviseSection = superviseSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenBeforeExpertiseSection = expertiseSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenAfterExpertiseSection = expertiseSectionScrollPosition + middleOfScreenHeight;
+  const middleOfScreenBeforeToolsetSection = toolsetSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenAfterToolsetSection = toolsetSectionScrollPosition + middleOfScreenHeight;
+  const middleOfScreenBeforeAdvantageSection = advantageSectionScrollPosition - middleOfScreenHeight;
+  const middleOfScreenAfterAdvantageSection = advantageSectionScrollPosition + middleOfScreenHeight;
+  const middleOfScreenBeforeImprovementSection = improvementSectionScrollPosition - middleOfScreenHeight;
+  if (scrolled < middleOfScreenBeforeExpertiseSection) {
     const superviseElement = window.document.querySelector('#supervise .inner-section-image');
-    scrollParallaxPattern(superviseElement, superviseSectionScrollPosition);
+    sectionImageParallax(superviseElement, middleOfScreenBeforeSuperviseSection);
   }
 
-  if (scrolled > expertiseSectionScrollPosition && scrolled < toolsetSectionScrollPosition) {
+  if (scrolled > middleOfScreenBeforeExpertiseSection && scrolled < middleOfScreenAfterExpertiseSection) {
     const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
-    scrollParallaxPattern(expertiseElement, expertiseSectionScrollPosition);
+    sectionImageParallax(expertiseElement, middleOfScreenBeforeExpertiseSection);
   }
 
-  if (scrolled > toolsetSectionScrollPosition && scrolled < advantageSectionScrollPosition) {
+  if (scrolled > middleOfScreenBeforeToolsetSection && scrolled < middleOfScreenAfterToolsetSection) {
     const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
-    scrollParallaxPattern(toolsetPattern, toolsetSectionScrollPosition);
+    sectionImageParallax(toolsetPattern, middleOfScreenBeforeToolsetSection);
   }
 
-  if (scrolled > advantageSectionScrollPosition && scrolled < budgetSectionScrollPosition) {
+  if (scrolled > middleOfScreenBeforeAdvantageSection && scrolled < middleOfScreenAfterAdvantageSection) {
     const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
-    scrollParallaxPattern(advantagePattern, advantageSectionScrollPosition);
+    sectionImageParallax(advantagePattern, middleOfScreenBeforeAdvantageSection);
   }
 
-  if (scrolled > improvementSectionScrollPosition) {
+  if (scrolled > middleOfScreenBeforeImprovementSection) {
     const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
-    scrollParallaxPattern(improvementPattern, improvementSectionScrollPosition);
+    sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
+
+  toggleTextOfSection();
 }

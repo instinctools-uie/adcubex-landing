@@ -1,8 +1,16 @@
-@import '../normalize.css';
+@import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
 
-body {
-  background-color: #9b2edf;
+.cube-animation :nth-child(1) {
+  fill: var(--cube-left-side-purple-color);
+}
+
+.cube-animation :nth-child(2) {
+  fill: var(--cube-right-side-purple-color);
+}
+
+.cube-animation :nth-child(3) {
+  fill: var(--cube-bottom-side-purple-color);
 }
 
 .expertise-article > .vertical-inscription {

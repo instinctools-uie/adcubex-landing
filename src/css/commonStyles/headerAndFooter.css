@@ -1,18 +1,17 @@
-.header-container {
+.logo {
   position: fixed;
-  z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  padding: 0 4em 0 4em;
-  height: 10.125em;
-  width: 100%;
-  background-color: transparent;
+  top: 4.4em;
+  left: 3.3em;
 }
 
-.header-container .logo,
-.header-container .toggle-menu-button {
+.toggle-menu-button {
+  position: fixed;
+  top: 4.4em;
+  right: 3.3em;
+}
+
+.logo,
+.toggle-menu-button {
   z-index: 3;
 }
 
@@ -25,7 +24,7 @@
   overflow: hidden;
   width: 100vw;
   height: 0;
-  background-color: #ec3865;
+  background-color: var(--header-navigation-bg-color);
   transition-property: background-color, height, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
@@ -35,6 +34,7 @@
 .header-navigation--active {
   opacity: 1;
   height: 100vh;
+  z-index: 2;
 }
 
 .header-navigation-bg-image {
@@ -51,19 +51,19 @@
 }
 
 .header-navigation--blue {
-  background-color: #3655f4;
+  background-color: var(--royal-blue-color);
 }
 
 .header-navigation--red {
-  background-color: #fc4848;
+  background-color: var(--sunset-orange-color);
 }
 
 .header-navigation--purple {
-  background-color: #9b2edf;
+  background-color: var(--purple-heart-color);
 }
 
 .header-navigation--dark-purple {
-  background-color: #6c3ce6;
+  background-color: var(--royal-dark-blue-color);
 }
 
 .header-navigation-container {
@@ -102,7 +102,7 @@
 }
 
 .header-links-container a:hover {
-  color: #252525;
+  color: var(--mine-shaft-color);
 }
 
 .header-links-container a + a {
@@ -111,7 +111,7 @@
 
 .header-navigation-footer-text {
   margin-bottom: 3em;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--white-with-opacity-color);
   font-size: 1em;
   line-height: 1.5;
 }
@@ -139,7 +139,7 @@
 }
 
 .toggle-menu-button:focus {
-  outline: 1px dotted rgb(197, 197, 197);
+  outline: 0.01em dotted var(--silver-color);
 }
 
 .header-open-menu-icon,
@@ -156,7 +156,7 @@ footer {
   display: flex;
   justify-content: center;
   margin: 16.25rem 0 2.5rem 0;
-  color: #ffffff;
+  color: white;
   font-size: 0.875rem;
 }
 
@@ -185,9 +185,21 @@ footer {
   font-style: italic;
 }
 
+.footer-left > p > a {
+  text-decoration: none;
+}
+
+.footer-left > p > a > i > sup {
+  color: red;
+}
+
+.footer-left > p > a > i > span {
+  color: black;
+}
+
 .footer-left > a,
 .footer-right > a {
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 

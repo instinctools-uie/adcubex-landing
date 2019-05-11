@@ -1,8 +1,16 @@
-@import '../normalize.css';
+@import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
 
-body {
-  background-color: #3655f4;
+.cube-animation :nth-child(1) {
+  fill: var(--cube-left-side-blue-color);
+}
+
+.cube-animation :nth-child(2) {
+  fill: var(--cube-right-side-blue-color);
+}
+
+.cube-animation :nth-child(3) {
+  fill: var(--cube-bottom-side-blue-color);
 }
 
 .title-section > h1 {

@@ -4,7 +4,9 @@ const openMenuIcon = document.querySelector('.header-open-menu-icon');
 const closeMenuIcon = document.querySelector('.header-close-menu-icon');
 const headerNavigation = document.querySelector('.header-navigation');
 
-toggleMenuButton.addEventListener('click', toggleMenu);
+export default function toggleMenuListener() {
+  toggleMenuButton.addEventListener('click', toggleMenu);
+}
 
 function toggleMenu() {
   const isMenuOpened = Boolean(toggleMenuButton.querySelector('.header-close-menu-icon--active'));
