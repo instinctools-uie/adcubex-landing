@@ -1,0 +1,6 @@
+**/*{.,-}min.js
+**/*.json
+**/__tests__/*.js
+node_modules
+build
+coverage
