@@ -1,6 +1,5 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
-@import '../headerAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-dark-blue-color);
