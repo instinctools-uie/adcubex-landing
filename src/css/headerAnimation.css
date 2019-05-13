@@ -1,13 +1,63 @@
 #logo {
-  animation: header_animation 0.8s ease-out alternate;
+  animation: logo_animation 0.8s ease-out alternate;
 }
 
 .toggle-menu-button {
-  animation: header_animation 0.9s ease-out alternate;
+  animation: menu_animation 0.9s ease-out alternate;
 }
 
-@keyframes header_animation {
-  0% {
+h1,
+h2 {
+  animation: title_animation 1s ease-out alternate;
+}
+
+.text-container,
+.external-links,
+.budget-text-container,
+.inner-section-text,
+.power-text-container {
+  animation: content_animation 1s ease-out alternate;
+}
+
+@keyframes logo_animation {
+  0%,
+  20% {
+    transform: translate(0px, 2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes menu_animation {
+  0%,
+  40% {
+    transform: translate(0px, 2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes title_animation {
+  0%,
+  60% {
+    transform: translate(0px, 2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes content_animation {
+  0%,
+  80% {
     transform: translate(0px, 2rem);
     opacity: 0;
   }
