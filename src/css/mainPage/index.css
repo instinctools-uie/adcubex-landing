@@ -155,7 +155,7 @@ h2 {
 
 .section-container > * {
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 1s ease-in-out 1.5s;
 }
 
 .section-container--active > * {
