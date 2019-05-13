@@ -7,13 +7,11 @@
 }
 
 h1,
-h2,
-h3 {
+h2 {
   animation: title1_animation 1s ease-out alternate;
 }
 
-.section-content > p,
-article > p {
+.section-content > p {
   animation: title_content_animation 1.2s ease-out alternate;
 }
 
