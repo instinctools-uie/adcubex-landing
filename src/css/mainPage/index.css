@@ -3,7 +3,7 @@
 @import './externalLinksHoverColor.css';
 @import '../commonStyles/mailIcon.css';
 @import '../commonStyles/headerAndFooter.css';
-@import '../headerAnimation.css';
+@import './onLoadContentAnimation.css';
 
 html {
   scroll-behavior: smooth;
