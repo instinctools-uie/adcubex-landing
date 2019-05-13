@@ -1,0 +1,14 @@
+#logo {
+  animation: logo_animation 0.8s ease-out alternate;
+}
+
+@keyframes logo_animation {
+  0% {
+    transform: translate(0px, 2rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
