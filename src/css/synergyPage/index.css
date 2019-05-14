@@ -37,9 +37,14 @@ article.we-article {
 
 article.together {
   margin-top: 9.3em;
-  margin-bottom: 15.8em;
+  margin-bottom: 4.8em;
+}
+
+article.together > .section-content {
+  margin-right: -18em;
+  z-index: 2;
 }
 
 article.together > .vertical-inscription {
-  margin: 17em -6.5em 0 0;
+  margin: 17em -6.5em 0 -19em;
 }
