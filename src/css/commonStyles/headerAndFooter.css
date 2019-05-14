@@ -25,6 +25,9 @@
   width: 100vw;
   height: 0;
   background-color: var(--header-navigation-bg-color);
+  background-image: url('../../assets/images/cubes.svg');
+  background-size: cover;
+  background-blend-mode: multiply;
   transition-property: background-color, height, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
