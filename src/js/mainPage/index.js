@@ -17,7 +17,7 @@ import {
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
-import { RATE_CHANGE_SCROLL } from '../constants';
+import { RATE_CHANGE_SCROLL, MAIN_PAGE_DELAY_BETWEEN_SECTION } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
@@ -151,5 +151,5 @@ function initProject() {
     sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
 
-  toggleTextOfSection();
+  toggleTextOfSection(MAIN_PAGE_DELAY_BETWEEN_SECTION);
 }

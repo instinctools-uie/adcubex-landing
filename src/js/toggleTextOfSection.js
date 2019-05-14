@@ -1,4 +1,4 @@
-export default function toggleTextOfSection() {
+export default function toggleTextOfSection(delay) {
   const scrolled = window.pageYOffset;
   const sections = window.document.querySelectorAll('.section-container');
   const indexOfLastSection = sections.length - 1;
@@ -8,7 +8,7 @@ export default function toggleTextOfSection() {
     const scrollPositionOfCurrentSection = section.offsetTop;
     const scrollPositionOfNextSection = nextSection ? nextSection.offsetTop : document.documentElement.scrollHeight;
     const scrollDifferenceBetweenSections = scrollPositionOfNextSection - scrollPositionOfCurrentSection;
-    const scrollHalfOfDifferenceBetweenSections = scrollDifferenceBetweenSections / 2;
+    const scrollHalfOfDifferenceBetweenSections = scrollDifferenceBetweenSections / delay;
     const scrollPositionWhenShouldToggleText = scrollHalfOfDifferenceBetweenSections + scrollPositionOfCurrentSection;
     const isLastSection = index === indexOfLastSection;
 
