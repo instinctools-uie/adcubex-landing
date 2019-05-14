@@ -78,7 +78,7 @@ h2 + p {
   flex-direction: row;
   justify-content: flex-start;
   height: 9.5em;
-  margin: 14.5em -9em 0 0;
+  margin: 14.5em -9em 0 -6em;
   transform: rotate(90deg);
   cursor: pointer;
   text-decoration: none;

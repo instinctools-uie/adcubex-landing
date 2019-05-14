@@ -1,6 +1,7 @@
 @import '../index.css';
 @import './externalLinksHoverColor.css';
 @import '../commonStyles/innerPageStyle.css';
+@import './synergyCubesAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-blue-color);
@@ -14,12 +15,24 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
+article.you-article > svg {
+  margin-top: 9em;
+}
+
+article.we-article > svg {
+  margin: 11.7em 0 0 7.4em;
+}
+
 .external-links {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   margin: 8.625em 0 0 4em;
+}
+
+article.we-article {
+  justify-content: space-between;
 }
 
 article.together {
