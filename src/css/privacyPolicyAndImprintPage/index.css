@@ -36,6 +36,10 @@ article {
   margin-bottom: 1em;
 }
 
+.dataCollection-article > h2 {
+  animation: none;
+}
+
 h3,
 .section-container > article > h2 {
   font-size: 2.25em;
