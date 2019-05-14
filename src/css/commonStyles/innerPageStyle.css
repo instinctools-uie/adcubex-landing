@@ -60,6 +60,15 @@ h1,
   line-height: 1.12em;
 }
 
+article > div > p {
+  opacity: 0;
+  transition: opacity 1s ease-in-out 0.8s;
+}
+
+.article--active > div > p {
+  opacity: 1;
+}
+
 .section-container > .section-content > p {
   font-size: 1.9em;
   font-weight: 600;
