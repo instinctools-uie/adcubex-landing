@@ -1,4 +1,4 @@
-export default function toggleTextOfSection(selector, delay) {
+export default function toggleContentByScroll(selector, delay) {
   const scrolled = window.pageYOffset;
   const sections = window.document.querySelectorAll(`.${selector}`);
   const indexOfLastSection = sections.length - 1;
