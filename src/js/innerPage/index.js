@@ -1,13 +1,13 @@
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeMenuColor from './changeColorInnerMenu';
-import toggleSections from '../toggleContentByScroll';
-import { INNER_PAGE_DELAY_BETWEEN_SECTION } from '../constants';
+import toggleContentByScroll from '../toggleContentByScroll';
+import { INNER_PAGES_TOGGLE_CONTENT } from '../constants';
 
 toggleMenu();
 hoverLinkInMenu();
 changeMenuColor();
 
 window.addEventListener('scroll', () => {
-  toggleSections('article', INNER_PAGE_DELAY_BETWEEN_SECTION);
+  toggleContentByScroll(INNER_PAGES_TOGGLE_CONTENT.sectionContainer, INNER_PAGES_TOGGLE_CONTENT.delayBetweenSection);
 });

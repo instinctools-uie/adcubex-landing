@@ -4,8 +4,16 @@ export const RED_COLOR = { red: 240, green: 62, blue: 62 };
 export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
 export const RATE_CHANGE_SCROLL = 960;
-export const MAIN_PAGE_DELAY_BETWEEN_SECTION = 2;
-export const INNER_PAGE_DELAY_BETWEEN_SECTION = 20;
+
+export const MAIN_PAGE_TOGGLE_CONTENT = {
+  sectionContainer: 'section-container',
+  delayBetweenSection: 2
+};
+
+export const INNER_PAGES_TOGGLE_CONTENT = {
+  sectionContainer: 'article',
+  delayBetweenSection: 20
+};
 
 export const BODY_ELEMENT_OPTIONS = {
   selector: 'body',
