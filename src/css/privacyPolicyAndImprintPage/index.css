@@ -1,5 +1,6 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-blue-color);
@@ -33,6 +34,10 @@ article {
   display: flex;
   flex-direction: column;
   margin-bottom: 1em;
+}
+
+.dataCollection-article > h2 {
+  animation: none;
 }
 
 h3,

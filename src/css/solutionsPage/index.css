@@ -1,6 +1,7 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
 @import '../commonStyles/сubesAnimation.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-purple-color);
@@ -44,6 +45,18 @@
 
 .security-article > svg {
   margin-top: 2.3em;
+}
+
+.section-content > h2 {
+  height: 2.5em;
+  margin-bottom: 0;
+  line-height: 6.5em;
+  overflow: hidden;
+  transition: line-height 1s ease-in-out;
+}
+
+.article--active > div > h2 {
+  line-height: 1.12em;
 }
 
 .investments-article,

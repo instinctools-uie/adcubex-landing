@@ -1,5 +1,6 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
 @import '../commonStyles/сubesAnimation.css';
 
 .cube-animation :nth-child(1) {

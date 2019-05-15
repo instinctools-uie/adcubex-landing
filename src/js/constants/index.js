@@ -5,6 +5,16 @@ export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
 export const RATE_CHANGE_SCROLL = 960;
 
+export const MAIN_PAGE_TOGGLE_CONTENT = {
+  sectionContainer: 'section-container',
+  delayBetweenSection: 2
+};
+
+export const INNER_PAGES_TOGGLE_CONTENT = {
+  sectionContainer: 'article',
+  delayBetweenSection: 20
+};
+
 export const BODY_ELEMENT_OPTIONS = {
   selector: 'body',
   property: 'backgroundColor',
