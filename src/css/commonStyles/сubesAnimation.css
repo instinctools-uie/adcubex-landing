@@ -5,26 +5,32 @@
 #expertise-article_cube1,
 #investments-article_cube3,
 #control-article_cube2,
-#scaling-article_cube1 {
+#scaling-article_cube1,
+#contact_cube3,
+#contact_cube10 {
   animation: cubes-animation 2s infinite alternate;
 }
 
 #investments-article_cube5,
 #customization-article_cube3,
-#security-article_cube5 {
+#security-article_cube5,
+#contact_cube5,
+#contact_cube1 {
   animation: cubes-animation 2s infinite alternate 0.3s;
 }
 
 #investments-article_cube6,
 #increase-article_cube2,
 #customization-article_cube2,
-#security-article_cube6 {
+#security-article_cube6,
+#contact_cube6 {
   animation: cubes-animation 2s infinite alternate 0.6s;
 }
 
 #investments-article_cube2,
 #control-article_cube1,
-#security-article_cube7 {
+#security-article_cube7,
+#contact_cube4 {
   animation: cubes-animation 2s infinite alternate 0.9s;
 }
 
@@ -34,22 +40,26 @@
 #expertise-article_cube2,
 #investments-article_cube4,
 #customization-article_cube1,
-#security-article_cube4 {
+#security-article_cube4,
+#contact_cube2 {
   animation: cubes-animation 2s infinite alternate 1s;
 }
 
-#security-article_cube2 {
+#security-article_cube2,
+#contact_cube7 {
   animation: cubes-animation 2s infinite alternate 1.3s;
 }
 
 #consulting-article_cube,
 #investments-article_cube1,
 #increase-article_cube1,
-#security-article_cube3 {
+#security-article_cube3,
+#contact_cube8 {
   animation: cubes-animation 2s infinite alternate 1.5s;
 }
 
-#security-article_cube1 {
+#security-article_cube1,
+#contact_cube9 {
   animation: cubes-animation 2s infinite alternate 1.7s;
 }
 

@@ -1,5 +1,6 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-dark-blue-color);
@@ -13,9 +14,13 @@
   fill: var(--cube-bottom-side-dark-blue-color);
 }
 
+.content-section {
+  display: flex;
+}
+
 .contact-us-container {
   width: 47.875em;
-  margin: 4.75em 4em 0 4em;
+  margin: 4.75em 0 0 4em;
 }
 
 .contact-us-container > p {
