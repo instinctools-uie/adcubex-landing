@@ -3,20 +3,28 @@
 #analysis-article_cube,
 #implementation-article_cube,
 #expertise-article_cube1,
-#investments-article_cube3 {
+#investments-article_cube3,
+#control-article_cube2,
+#scaling-article_cube1 {
   animation: cubes-animation 2s infinite alternate;
 }
 
-#investments-article_cube5 {
+#investments-article_cube5,
+#customization-article_cube3,
+#security-article_cube5 {
   animation: cubes-animation 2s infinite alternate 0.3s;
 }
 
 #investments-article_cube6,
-#increase-article_cube2 {
+#increase-article_cube2,
+#customization-article_cube2,
+#security-article_cube6 {
   animation: cubes-animation 2s infinite alternate 0.6s;
 }
 
-#investments-article_cube2 {
+#investments-article_cube2,
+#control-article_cube1,
+#security-article_cube7 {
   animation: cubes-animation 2s infinite alternate 0.9s;
 }
 
@@ -24,14 +32,25 @@
 #together_article_cube2,
 #clear-article_cube,
 #expertise-article_cube2,
-#investments-article_cube4 {
+#investments-article_cube4,
+#customization-article_cube1,
+#security-article_cube4 {
   animation: cubes-animation 2s infinite alternate 1s;
+}
+
+#security-article_cube2 {
+  animation: cubes-animation 2s infinite alternate 1.3s;
 }
 
 #consulting-article_cube,
 #investments-article_cube1,
-#increase-article_cube1 {
+#increase-article_cube1,
+#security-article_cube3 {
   animation: cubes-animation 2s infinite alternate 1.5s;
+}
+
+#security-article_cube1 {
+  animation: cubes-animation 2s infinite alternate 1.7s;
 }
 
 @keyframes cubes-animation {

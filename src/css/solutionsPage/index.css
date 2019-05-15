@@ -35,15 +35,15 @@
 }
 
 .control-article > svg {
-  margin: 10em 0 0 4.2em;
+  margin: 7em 0 0 4.2em;
 }
 
 .customization-article > svg {
-  margin-top: 7.6em;
+  margin-top: 3.6em;
 }
 
 .security-article > svg {
-  margin-top: 5.3em;
+  margin-top: 2.3em;
 }
 
 .investments-article,
@@ -60,7 +60,7 @@
 }
 
 .scaling-article > svg {
-  margin: 2.7em 0 0 1.3em;
+  margin: 0.7em 0 0 1.3em;
 }
 
 .increase-article > .vertical-inscription,
