@@ -1,17 +1,36 @@
 #you_article_cube,
 #together_article_cube1,
 #analysis-article_cube,
-#implementation-article_cube {
+#implementation-article_cube,
+#expertise-article_cube1,
+#investments-article_cube3 {
   animation: cubes-animation 2s infinite alternate;
+}
+
+#investments-article_cube5 {
+  animation: cubes-animation 2s infinite alternate 0.3s;
+}
+
+#investments-article_cube6,
+#increase-article_cube2 {
+  animation: cubes-animation 2s infinite alternate 0.6s;
+}
+
+#investments-article_cube2 {
+  animation: cubes-animation 2s infinite alternate 0.9s;
 }
 
 #we_article_cube,
 #together_article_cube2,
-#clear-article_cube {
+#clear-article_cube,
+#expertise-article_cube2,
+#investments-article_cube4 {
   animation: cubes-animation 2s infinite alternate 1s;
 }
 
-#consulting-article_cube {
+#consulting-article_cube,
+#investments-article_cube1,
+#increase-article_cube1 {
   animation: cubes-animation 2s infinite alternate 1.5s;
 }
 
