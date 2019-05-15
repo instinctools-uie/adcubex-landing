@@ -1,6 +1,6 @@
-export default function toggleTextOfSection(delay) {
+export default function toggleTextOfSection(selector, delay) {
   const scrolled = window.pageYOffset;
-  const sections = window.document.querySelectorAll('.section-container');
+  const sections = window.document.querySelectorAll('.' + selector.toString());
   const indexOfLastSection = sections.length - 1;
 
   sections.forEach((section, index) => {
@@ -13,11 +13,11 @@ export default function toggleTextOfSection(delay) {
     const isLastSection = index === indexOfLastSection;
 
     if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
-      nextSection && nextSection.classList.add('section-container--active');
-      !isLastSection && section.classList.remove('section-container--active');
+      nextSection && nextSection.classList.add(selector.toString() + '--active');
+      !isLastSection && section.classList.remove(selector.toString() + '--active');
     } else if (scrolled < scrollPositionWhenShouldToggleText && scrolled > scrollPositionOfCurrentSection) {
-      section.classList.add('section-container--active');
-      nextSection && nextSection.classList.remove('section-container--active');
+      section.classList.add(selector.toString() + '--active');
+      nextSection && nextSection.classList.remove(selector.toString() + '--active');
     }
   });
 }

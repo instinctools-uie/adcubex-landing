@@ -21,7 +21,7 @@ import { RATE_CHANGE_SCROLL, MAIN_PAGE_DELAY_BETWEEN_SECTION } from '../constant
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import toggleTextOfSection from '../toggleTextOfSection';
+import toggleTextOfSection from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
@@ -151,5 +151,5 @@ function initProject() {
     sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
 
-  toggleTextOfSection(MAIN_PAGE_DELAY_BETWEEN_SECTION);
+  toggleTextOfSection('section-container', MAIN_PAGE_DELAY_BETWEEN_SECTION);
 }
