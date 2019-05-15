@@ -1,5 +1,6 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-red-color);
@@ -15,10 +16,6 @@
 
 a.strategy-inscription {
   margin: 11em -7em 0 0;
-}
-
-article.analysis-article {
-  margin-top: 2.8em;
 }
 
 article.clear-article {

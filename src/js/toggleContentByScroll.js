@@ -1,6 +1,6 @@
-export default function toggleTextOfSection() {
+export default function toggleContentByScroll(selector, delay) {
   const scrolled = window.pageYOffset;
-  const sections = window.document.querySelectorAll('.section-container');
+  const sections = window.document.querySelectorAll(`.${selector}`);
   const indexOfLastSection = sections.length - 1;
 
   sections.forEach((section, index) => {
@@ -8,16 +8,16 @@ export default function toggleTextOfSection() {
     const scrollPositionOfCurrentSection = section.offsetTop;
     const scrollPositionOfNextSection = nextSection ? nextSection.offsetTop : document.documentElement.scrollHeight;
     const scrollDifferenceBetweenSections = scrollPositionOfNextSection - scrollPositionOfCurrentSection;
-    const scrollHalfOfDifferenceBetweenSections = scrollDifferenceBetweenSections / 2;
-    const scrollPositionWhenShouldToggleText = scrollHalfOfDifferenceBetweenSections + scrollPositionOfCurrentSection;
+    const scrollDelay = scrollDifferenceBetweenSections / delay;
+    const scrollPositionWhenShouldToggleText = scrollDelay + scrollPositionOfCurrentSection;
     const isLastSection = index === indexOfLastSection;
 
     if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
-      nextSection && nextSection.classList.add('section-container--active');
-      !isLastSection && section.classList.remove('section-container--active');
+      nextSection && nextSection.classList.add(`${selector}--active`);
+      !isLastSection && section.classList.remove(`${selector}--active`);
     } else if (scrolled < scrollPositionWhenShouldToggleText && scrolled > scrollPositionOfCurrentSection) {
-      section.classList.add('section-container--active');
-      nextSection && nextSection.classList.remove('section-container--active');
+      section.classList.add(`${selector}--active`);
+      nextSection && nextSection.classList.remove(`${selector}--active`);
     }
   });
 }
