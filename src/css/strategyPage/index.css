@@ -1,5 +1,6 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-red-color);
@@ -57,6 +58,7 @@ article.implementation-article {
 
 article.implementation-article > .section-content {
   margin-left: -19em;
+  z-index: 2;
 }
 
 article.implementation-article > svg {

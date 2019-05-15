@@ -1,0 +1,22 @@
+#you_article_cube,
+#together_article_cube1,
+#analysis-article_cube,
+#implementation-article_cube {
+  animation: cubes-animation 2s infinite alternate;
+}
+
+#we_article_cube,
+#together_article_cube2,
+#clear-article_cube {
+  animation: cubes-animation 2s infinite alternate 1s;
+}
+
+#consulting-article_cube {
+  animation: cubes-animation 2s infinite alternate 1.5s;
+}
+
+@keyframes cubes-animation {
+  100% {
+    transform: translateY(40px);
+  }
+}
