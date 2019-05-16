@@ -49,7 +49,9 @@
   height: 100%;
 }
 
-.logo--active tspan {
+.logo--active #logo_ad,
+.logo--active #logo_cubex,
+.logo--active #logo_when-ad-go-huge {
   fill: white !important;
 }
 
