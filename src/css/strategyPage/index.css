@@ -1,5 +1,6 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
 @import '../commonStyles/onLoadInnerAnimation.css';
 
 .cube-animation :nth-child(1) {
@@ -14,23 +15,49 @@
   fill: var(--cube-bottom-side-red-color);
 }
 
+.analysis-article > svg {
+  margin-top: 1.8em;
+}
+
 a.strategy-inscription {
-  margin: 11em -7em 0 0;
+  margin: 11em -7em 0 -11em;
 }
 
 article.clear-article {
   margin-top: 8.2em;
 }
 
+.clear-article > .section-content {
+  margin-left: 10.2em;
+}
+
 article.consulting {
   margin-top: 15.5em;
 }
 
+article.consulting > .section-content {
+  margin-right: -9em;
+  z-index: 2;
+}
+
+article.consulting > svg {
+  margin-top: -12em;
+}
+
 article.consulting-article > a.consulting-inscription {
-  margin-top: 11.5em;
+  margin: 11.5em -7.5em 0 -15em;
 }
 
 article.implementation-article {
-  margin-top: 26.5em;
-  margin-bottom: 22em;
+  margin-top: 16.5em;
+  margin-bottom: 4.5em;
+}
+
+article.implementation-article > .section-content {
+  margin-left: -19em;
+  z-index: 2;
+}
+
+article.implementation-article > svg {
+  margin-top: -13.5em;
 }

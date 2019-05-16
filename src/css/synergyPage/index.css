@@ -1,6 +1,7 @@
 @import '../index.css';
 @import './externalLinksHoverColor.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
 @import '../commonStyles/onLoadInnerAnimation.css';
 
 .cube-animation :nth-child(1) {
@@ -15,6 +16,14 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
+article.you-article > svg {
+  margin-top: 9em;
+}
+
+article.we-article > svg {
+  margin: 11.7em 0 0 7.4em;
+}
+
 .external-links {
   display: flex;
   align-items: center;
@@ -23,11 +32,20 @@
   margin: 8.625em 0 0 4em;
 }
 
+article.we-article {
+  justify-content: space-between;
+}
+
 article.together {
   margin-top: 9.3em;
-  margin-bottom: 15.8em;
+  margin-bottom: 4.8em;
+}
+
+article.together > .section-content {
+  margin-right: -18em;
+  z-index: 2;
 }
 
 article.together > .vertical-inscription {
-  margin: 17em -6.5em 0 0;
+  margin: 17em -6.5em 0 -19em;
 }
