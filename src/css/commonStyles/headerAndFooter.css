@@ -49,7 +49,7 @@
   height: 100%;
 }
 
-.logo--active tspan {
+.logo--active {
   fill: white !important;
 }
 
