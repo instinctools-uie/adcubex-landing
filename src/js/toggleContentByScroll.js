@@ -1,10 +1,13 @@
+let isSelectoorsActive = false;
+
 export default function toggleContentByScroll(selector, delay) {
   const sections = window.document.querySelectorAll(`.${selector}`);
 
-  if (window.screen.width < 1024) {
+  if (window.screen.width < 1024 && !isSelectoorsActive) {
     sections.forEach(item => {
       item.classList.add(`${selector}--active`);
     });
+    isSelectoorsActive = true;
   } else {
     const scrolled = window.pageYOffset;
     const indexOfLastSection = sections.length - 1;
