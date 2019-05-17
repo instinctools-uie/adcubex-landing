@@ -23,7 +23,7 @@ h2 {
 .control-section > .inner-section-text,
 .power-text-container,
 .improvement-section > .text-container {
-  animation: content_animation 1.8s ease-out alternate;
+  animation: content_animation 1.2s ease-out alternate;
 }
 
 @keyframes logo_animation {
