@@ -53,7 +53,7 @@ h1,
   margin-bottom: 0;
   line-height: 5em;
   overflow: hidden;
-  transition: line-height 1s ease-in-out;
+  transition: line-height 0.5s ease-in-out;
 }
 
 .article--active > div > h2 {
@@ -62,7 +62,7 @@ h1,
 
 article > div > p {
   opacity: 0;
-  transition: opacity 1s ease-in-out 0.8s;
+  transition: opacity 0.6s ease-in-out 0.4s;
 }
 
 .article--active > div > p {
