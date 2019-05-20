@@ -118,10 +118,6 @@ h2 {
   width: 100%;
 }
 
-.budget-text-container > .inner-section-text > .vertical-inscription {
-  top: 4.5em;
-}
-
 .budget-text-container > .inner-section-text > .vertical-inscription > span,
 .power-text-container > .inner-section-text > .vertical-inscription > span {
   color: white;
@@ -298,7 +294,7 @@ h2 {
   margin-top: -1.4em;
 }
 
-.advantage-section > .text-container > .inner-section-text > .vertical-inscription {
+.advantage-section .vertical-inscription {
   top: 8.2em;
   right: -6.5em;
 }
@@ -327,7 +323,7 @@ h2 {
   margin-top: -0.3em;
 }
 
-.budget-section > .budget-text-container > .inner-section-text > a {
+.budget-section .vertical-inscription {
   right: -2.6em;
   top: 3.6em;
 }
@@ -411,6 +407,7 @@ h2 {
 .image-content_small {
   margin-top: 0.938rem;
   line-height: 1.1875rem;
+  font-size: 1rem;
 }
 
 .image-content_large {
@@ -473,4 +470,90 @@ footer {
 .advantage-section h2 > span,
 .expertise-section h2 > span {
   color: var(--flamingo-color);
+}
+
+@media all and (max-width: 1366px) {
+  .content-container {
+    width: 52.188em;
+  }
+
+  .section-container,
+  .supervise-section.section-container {
+    margin-top: 0;
+  }
+
+  .section-container.toolset-section {
+    margin-top: 5em;
+  }
+
+  .budget-section {
+    margin-bottom: 0;
+  }
+
+  .vertical-inscription > span {
+    font-size: 1.7rem;
+  }
+
+  .vertical-inscription,
+  .advantage-section .vertical-inscription {
+    top: 0;
+  }
+
+  .budget-section .vertical-inscription {
+    top: -2em;
+  }
+
+  .external-links,
+  .toolset-section > .external-links {
+    font-size: 14px;
+    margin-top: 9em;
+  }
+
+  .inner-section-text > button {
+    margin-top: 0.4em;
+  }
+
+  .inner-section-text > p + p {
+    margin-top: 1.1em;
+  }
+
+  .custom-button {
+    height: 4rem;
+  }
+
+  .section-container > h1,
+  .section-container > h2 {
+    font-size: 3.5em;
+  }
+
+  .budget-image,
+  .power-image {
+    height: auto;
+    font-size: 0.7em;
+    padding: 4em 2em;
+  }
+
+  .power-image {
+    min-width: 56.3125em;
+    margin-left: 0;
+  }
+
+  .budget-image,
+  .power-image-container {
+    margin: 0 0 0 10.3rem;
+  }
+
+  .power-image-container > button {
+    margin-top: 1.4em;
+  }
+
+  .image-content_large {
+    margin: 2rem 0;
+    font-size: 3.5rem;
+  }
+
+  .inner-section-text {
+    font-size: 1.55em;
+    line-height: 1.4em;
+  }
 }
