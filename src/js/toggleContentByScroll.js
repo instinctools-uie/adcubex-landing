@@ -12,6 +12,8 @@ export default function toggleContentByScroll(selector, delay) {
 
     if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
       nextSection && nextSection.classList.add(`${selector}--active`);
+    } else if (scrolled > scrollPositionOfCurrentSection) {
+      section.classList.add(`${selector}--active`);
     }
   });
 }

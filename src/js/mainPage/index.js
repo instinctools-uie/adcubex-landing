@@ -22,7 +22,6 @@ import { RATE_CHANGE_SCROLL, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
-import addActiveClassesOnLoad from '../addActiveClassesOnload';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
@@ -46,12 +45,6 @@ initProject();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
-
-window.addEventListener('load', addClasses);
-
-function addClasses() {
-  addActiveClassesOnLoad(MAIN_PAGE_TOGGLE_CONTENT.sectionContainer);
-}
 
 window.addEventListener('scroll', initProject);
 
