@@ -15,11 +15,13 @@ function toggleMenu() {
 }
 
 function openMenu() {
+  const body = document.querySelector('body');
   const logoElement = document.querySelector('.logo');
   const openMenuIcon = document.querySelector('.header-open-menu-icon');
   const closeMenuIcon = document.querySelector('.header-close-menu-icon');
   const headerNavigation = document.querySelector('.header-navigation');
 
+  body.classList.add('hidden-scroll');
   closeMenuIcon.classList.add('header-close-menu-icon--active');
   headerNavigation.classList.add('header-navigation--active');
   logoElement.classList.add('logo--active');
@@ -28,12 +30,14 @@ function openMenu() {
 }
 
 function closeMenu() {
+  const body = document.querySelector('body');
   const logoElement = document.querySelector('.logo');
   const openMenuIcon = document.querySelector('.header-open-menu-icon');
   const closeMenuIcon = document.querySelector('.header-close-menu-icon');
   const headerNavigation = document.querySelector('.header-navigation');
 
   openMenuIcon.classList.add('header-open-menu-icon--active');
+  body.classList.remove('hidden-scroll');
   headerNavigation.classList.remove('header-navigation--active');
   logoElement.classList.remove('logo--active');
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
