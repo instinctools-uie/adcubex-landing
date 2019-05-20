@@ -215,3 +215,7 @@ footer {
 .footer-right > a {
   padding: 0 0.8em;
 }
+
+.footer-right > a:hover {
+  color: var(--mine-shaft-lighter-color);
+}
