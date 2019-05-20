@@ -155,7 +155,7 @@ h2 {
 
 .section-container > * {
   opacity: 0;
-  transition: opacity 1s ease-in-out 1.5s;
+  transition: opacity 0.8s ease-in-out 0.2s;
 }
 
 .section-container--active > * {
@@ -174,7 +174,7 @@ h2 {
   letter-spacing: 0.02em;
   line-height: 10em;
   overflow: hidden;
-  transition: line-height 1.5s ease-in-out;
+  transition: line-height 0.5s ease-in-out;
   text-align: left;
   text-decoration: none;
   text-transform: none;
@@ -330,6 +330,10 @@ h2 {
 .budget-section > .budget-text-container > .inner-section-text > a {
   right: -2.6em;
   top: 3.6em;
+}
+
+.b-parallax {
+  max-width: 94em;
 }
 
 .power-image-container {
