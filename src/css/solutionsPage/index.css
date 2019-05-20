@@ -1,5 +1,7 @@
 @import '../index.css';
 @import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
 
 .cube-animation :nth-child(1) {
   fill: var(--cube-left-side-purple-color);
@@ -17,6 +19,46 @@
   margin-top: 12.5em;
 }
 
+.expertise-article > .section-content {
+  margin-right: 2.4em;
+}
+
+.expertise-article > svg {
+  margin-top: 13.5em;
+}
+
+.investments-article > svg {
+  margin: 0 0 0 3.8em;
+}
+
+.increase-article > svg {
+  margin-top: 1.2em;
+}
+
+.control-article > svg {
+  margin: 7em 0 0 4.2em;
+}
+
+.customization-article > svg {
+  margin-top: 3.6em;
+}
+
+.security-article > svg {
+  margin-top: 2.3em;
+}
+
+.section-content > h2 {
+  height: 2.5em;
+  margin-bottom: 0;
+  line-height: 6.5em;
+  overflow: hidden;
+  transition: line-height 0.5s ease-in-out;
+}
+
+.article--active > div > h2 {
+  line-height: 1.12em;
+}
+
 .investments-article,
 .increase-article,
 .control-article,
@@ -28,6 +70,10 @@
 
 .security-article {
   margin-bottom: 7.5em;
+}
+
+.scaling-article > svg {
+  margin: 0.7em 0 0 1.3em;
 }
 
 .increase-article > .vertical-inscription,

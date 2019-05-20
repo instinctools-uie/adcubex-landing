@@ -17,11 +17,11 @@ import {
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
-import { RATE_CHANGE_SCROLL } from '../constants';
+import { RATE_CHANGE_SCROLL, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import toggleTextOfSection from '../toggleTextOfSection';
+import toggleContentByScroll from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 const superviseSection = window.document.querySelector('.supervise-section');
@@ -151,5 +151,5 @@ function initProject() {
     sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
 
-  toggleTextOfSection();
+  toggleContentByScroll(MAIN_PAGE_TOGGLE_CONTENT.sectionContainer, MAIN_PAGE_TOGGLE_CONTENT.delayBetweenSection);
 }

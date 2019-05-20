@@ -5,6 +5,16 @@ export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
 export const RATE_CHANGE_SCROLL = 960;
 
+export const MAIN_PAGE_TOGGLE_CONTENT = {
+  sectionContainer: 'section-container',
+  delayBetweenSection: 2
+};
+
+export const INNER_PAGES_TOGGLE_CONTENT = {
+  sectionContainer: 'article',
+  delayBetweenSection: 20
+};
+
 export const BODY_ELEMENT_OPTIONS = {
   selector: 'body',
   property: 'backgroundColor',
@@ -47,21 +57,21 @@ export const MENU_BUTTON_ELEMENT_OPTIONS = {
 };
 
 export const LOGO_AD_WORD_OPTIONS = {
-  selector: '#logo-AdCubex :nth-child(1)',
+  selector: '#logo_ad',
   property: 'fill',
   defaultColor: { red: 48, green: 48, blue: 48 },
   whiteColor: WHITE_COLOR
 };
 
 export const LOGO_CUBEX_WORD_OPTIONS = {
-  selector: '#logo-AdCubex :nth-child(2)',
+  selector: '#logo_cubex',
   property: 'fill',
   defaultColor: { red: 239, green: 62, blue: 62 },
   whiteColor: WHITE_COLOR
 };
 
 export const LOGO_GO_HUGE_WORD_OPTIONS = {
-  selector: '#when-ad-go-huge',
+  selector: '#logo_when-ad-go-huge',
   property: 'fill',
   defaultColor: { red: 48, green: 48, blue: 48 },
   whiteColor: WHITE_COLOR

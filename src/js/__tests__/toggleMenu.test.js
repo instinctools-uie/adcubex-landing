@@ -10,6 +10,12 @@ const toggleMenuButton = {
     return false;
   })
 };
+const body = {
+  classList: {
+    add: jest.fn(),
+    remove: jest.fn()
+  }
+};
 const closeMenuIcon = {
   classList: {
     add: jest.fn(),
@@ -41,6 +47,8 @@ describe('toggle menu', () => {
   beforeAll(() => {
     jest.spyOn(document, 'querySelector').mockImplementation(selector => {
       switch (selector) {
+        case 'body':
+          return body;
         case '.toggle-menu-button':
           return toggleMenuButton;
         case '.logo':
@@ -56,6 +64,8 @@ describe('toggle menu', () => {
   });
 
   afterEach(() => {
+    body.classList.add.mockRestore();
+    body.classList.remove.mockRestore();
     closeMenuIcon.classList.add.mockRestore();
     closeMenuIcon.classList.remove.mockRestore();
     logoElement.classList.add.mockRestore();
@@ -74,6 +84,9 @@ describe('toggle menu', () => {
 
   it('should open menu', () => {
     toggleMenu();
+
+    expect(body.classList.add).toHaveBeenCalledWith('hidden-scroll');
+    expect(body.classList.remove).toHaveBeenCalledTimes(0);
 
     expect(closeMenuIcon.classList.add).toHaveBeenCalledWith('header-close-menu-icon--active');
     expect(closeMenuIcon.classList.remove).toHaveBeenCalledTimes(0);
@@ -101,6 +114,9 @@ describe('toggle menu', () => {
 
     expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
     expect(openMenuIcon.classList.remove).toHaveBeenCalledTimes(0);
+
+    expect(body.classList.remove).toHaveBeenCalledWith('hidden-scroll');
+    expect(body.classList.add).toHaveBeenCalledTimes(0);
 
     expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
     expect(headerNavigation.classList.add).toHaveBeenCalledTimes(0);

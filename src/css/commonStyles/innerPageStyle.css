@@ -37,6 +37,10 @@ body {
   margin: -2.7em 0 0 -18.5em;
 }
 
+h1 {
+  height: 1.5em;
+}
+
 h1,
 .section-content > h2 {
   font-family: montserrat_mediumregular, sans-serif;
@@ -45,7 +49,24 @@ h1,
 }
 
 .section-content > h2 {
+  height: 1.5em;
   margin-bottom: 0;
+  line-height: 5em;
+  overflow: hidden;
+  transition: line-height 0.5s ease-in-out;
+}
+
+.article--active > div > h2 {
+  line-height: 1.12em;
+}
+
+article > div > p {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out 0.4s;
+}
+
+.article--active > div > p {
+  opacity: 1;
 }
 
 .section-container > .section-content > p {
@@ -78,7 +99,7 @@ h2 + p {
   flex-direction: row;
   justify-content: flex-start;
   height: 9.5em;
-  margin: 14.5em -9em 0 0;
+  margin: 14.5em -9em 0 -6em;
   transform: rotate(90deg);
   cursor: pointer;
   text-decoration: none;

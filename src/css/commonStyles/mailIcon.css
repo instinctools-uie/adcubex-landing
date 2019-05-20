@@ -14,9 +14,6 @@
 }
 
 .mailIcon-background {
-  display: flex;
-  justify-content: space-between;
-  overflow: hidden;
   width: 3.25em;
   background-color: transparent;
   transition-property: width;
@@ -26,10 +23,29 @@
   cursor: pointer;
 }
 
+.icon-wrapper {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 black;
+  transition-property: border-radius, box-shadow;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+}
+
 .mailIcon-background:hover {
   width: 11em;
+  border-radius: 0;
   overflow: visible;
+  box-shadow: none;
 }
+
+.mailIcon-background:hover .icon-wrapper {
+  border-radius: 0;
+  box-shadow: none;
+}
+
 .mailIcon-background:hover .start-el,
 .mailIcon-background:hover .mid-el,
 .mailIcon-background:hover .mail-el {

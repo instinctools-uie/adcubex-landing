@@ -3,6 +3,7 @@
 @import './externalLinksHoverColor.css';
 @import '../commonStyles/mailIcon.css';
 @import '../commonStyles/headerAndFooter.css';
+@import './onLoadContentAnimation.css';
 
 html {
   scroll-behavior: smooth;
@@ -154,7 +155,7 @@ h2 {
 
 .section-container > * {
   opacity: 0;
-  transition: opacity 1.5s ease-in-out;
+  transition: opacity 0.8s ease-in-out 0.2s;
 }
 
 .section-container--active > * {
@@ -173,7 +174,7 @@ h2 {
   letter-spacing: 0.02em;
   line-height: 10em;
   overflow: hidden;
-  transition: line-height 1.5s ease-in-out;
+  transition: line-height 0.5s ease-in-out;
   text-align: left;
   text-decoration: none;
   text-transform: none;
@@ -251,7 +252,7 @@ h2 {
   align-items: center;
   width: 23.625rem;
   height: 5rem;
-  padding: 0 1em 0 1.5em;
+  padding: 0 2em 0 1.5em;
   border: none;
   margin-top: 7em;
   background-color: var(--flamingo-color);
@@ -331,6 +332,10 @@ h2 {
   top: 3.6em;
 }
 
+.letter-parallax {
+  max-width: 94em;
+}
+
 .power-image-container {
   margin: 6.2em 0 0 16.25em;
 }
@@ -346,7 +351,7 @@ h2 {
 }
 
 .power-image-container > .custom-button > .button-image {
-  margin-right: 1.2em;
+  margin-right: 0.2em;
 }
 
 #but_arrow {

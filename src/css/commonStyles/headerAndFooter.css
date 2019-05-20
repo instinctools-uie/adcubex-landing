@@ -1,3 +1,7 @@
+.hidden-scroll {
+  overflow: hidden;
+}
+
 .logo {
   position: fixed;
   top: 4.4em;
@@ -25,6 +29,9 @@
   width: 100vw;
   height: 0;
   background-color: var(--header-navigation-bg-color);
+  background-image: url('../../assets/images/cubes.svg');
+  background-size: cover;
+  background-blend-mode: multiply;
   transition-property: background-color, height, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
@@ -46,7 +53,9 @@
   height: 100%;
 }
 
-.logo--active tspan {
+.logo--active #logo_ad,
+.logo--active #logo_cubex,
+.logo--active #logo_when-ad-go-huge {
   fill: white !important;
 }
 
@@ -205,4 +214,8 @@ footer {
 
 .footer-right > a {
   padding: 0 0.8em;
+}
+
+.footer-right > a:hover {
+  color: var(--mine-shaft-lighter-color);
 }
