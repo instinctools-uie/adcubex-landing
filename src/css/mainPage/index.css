@@ -332,6 +332,10 @@ h2 {
   top: 3.6em;
 }
 
+.b-parallax {
+  max-width: 94em;
+}
+
 .power-image-container {
   margin: 6.2em 0 0 16.25em;
 }
