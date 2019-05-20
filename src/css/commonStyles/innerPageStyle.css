@@ -5,6 +5,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html a {
+  text-decoration: none;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: 'montserrat_lightregular', sans-serif;

@@ -9,6 +9,16 @@ html {
   scroll-behavior: smooth;
 }
 
+html a {
+  text-decoration: none;
+}
+
+button,
+button:active,
+button:focus {
+  outline: none;
+}
+
 body {
   margin: 0;
   font-family: 'montserrat_extralightregular', sans-serif;
@@ -340,7 +350,7 @@ h2 {
   margin: 6.2em 0 0 16.25em;
 }
 
-.power-image-container > button {
+.power-image-container > a > button {
   margin-top: 7.4em;
   border: 0.01em solid white;
   background-color: transparent;
@@ -350,7 +360,7 @@ h2 {
   transition-timing-function: ease-in;
 }
 
-.power-image-container > .custom-button > .button-image {
+.power-image-container .custom-button > .button-image {
   margin-right: 0.2em;
 }
 
@@ -358,11 +368,11 @@ h2 {
   transition: fill 0.4s ease-in;
 }
 
-.power-image-container > .custom-button:hover #but_arrow {
+.power-image-container .custom-button:hover #but_arrow {
   fill: #353535;
 }
 
-.power-image-container > .custom-button:hover {
+.power-image-container .custom-button:hover {
   color: #353535;
   background-color: white;
 }
@@ -385,7 +395,7 @@ h2 {
   margin-bottom: -9em;
 }
 
-.improvement-section > .text-container > .inner-section-text > .custom-button {
+.improvement-section > .text-container > .inner-section-text .custom-button {
   display: flex;
   justify-content: space-between;
   margin-top: 3.1em;
