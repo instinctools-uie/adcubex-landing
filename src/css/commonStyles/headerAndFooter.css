@@ -215,3 +215,18 @@ footer {
 .footer-right > a {
   padding: 0 0.8em;
 }
+
+@media all and (max-width: 1366px) {
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .header-navigation-container {
+    margin-top: 10em;
+  }
+
+  .header-links-container a {
+    font-size: 3.75em;
+  }
+}
