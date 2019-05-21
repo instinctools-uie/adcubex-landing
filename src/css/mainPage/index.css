@@ -69,13 +69,29 @@ h2 {
   margin-bottom: 5em;
 }
 
+.vertical-inscription-container {
+  position: relative;
+}
+
 .vertical-inscription {
   position: absolute;
-  top: 7em;
-  right: -6em;
+  top: 0;
+  right: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   cursor: pointer;
   text-decoration: none;
@@ -294,11 +310,6 @@ h2 {
   margin-top: -1.4em;
 }
 
-.advantage-section .vertical-inscription {
-  top: 8.2em;
-  right: -6.5em;
-}
-
 .supervise-section > .text-container > .inner-section-text,
 .advantage-section > .text-container > .inner-section-text {
   position: relative;
@@ -324,7 +335,6 @@ h2 {
 }
 
 .budget-section .vertical-inscription {
-  right: -2.6em;
   top: 3.6em;
 }
 
@@ -381,7 +391,7 @@ h2 {
   margin-bottom: -9em;
 }
 
-.improvement-section > .text-container > .inner-section-text > .custom-button {
+.improvement-section .inner-section-text .custom-button {
   display: flex;
   justify-content: space-between;
   margin-top: 3.1em;
@@ -486,7 +496,8 @@ footer {
     margin-top: 5em;
   }
 
-  .budget-section {
+  .budget-section,
+  .improvement-section {
     margin-bottom: 0;
   }
 
@@ -494,13 +505,28 @@ footer {
     font-size: 1.7rem;
   }
 
-  .vertical-inscription,
-  .advantage-section .vertical-inscription {
-    top: 0;
+  .budget-section .vertical-inscription {
+    top: -20em;
   }
 
-  .budget-section .vertical-inscription {
-    top: -2em;
+  .power-section .vertical-inscription {
+    top: -25rem;
+  }
+
+  .section-container > svg {
+    max-height: 150vh;
+  }
+
+  .budget-section > svg {
+    left: -20em;
+  }
+
+  .control-section > svg {
+    left: -29em;
+  }
+
+  .power-section > svg {
+    left: -25em;
   }
 
   .external-links,
@@ -509,16 +535,21 @@ footer {
     margin-top: 9em;
   }
 
-  .inner-section-text > button {
+  .custom-button {
+    width: 20rem;
+    height: 4rem;
+  }
+
+  .expertise-section .inner-section-text .custom-button {
     margin-top: 0.4em;
+  }
+
+  .improvement-section .inner-section-text .custom-button {
+    margin-top: 2em;
   }
 
   .inner-section-text > p + p {
     margin-top: 1.1em;
-  }
-
-  .custom-button {
-    height: 4rem;
   }
 
   .section-container > h1,
@@ -555,5 +586,9 @@ footer {
   .inner-section-text {
     font-size: 1.55em;
     line-height: 1.4em;
+  }
+
+  footer {
+    margin: 1rem 0 2.5rem 0;
   }
 }
