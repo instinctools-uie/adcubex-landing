@@ -3,9 +3,7 @@ import {
   changeColorForBudgetSection,
   changeColorForControlSection,
   changeColorForPowerSection,
-  changeMenuItemsColorToWhite,
   changeBackgroundColorToDefault,
-  changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
 import {
@@ -23,6 +21,8 @@ import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
+
+import { hideHeader, showHeader } from '../menuAnimation';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -46,6 +46,26 @@ toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
 
+let lastPosition = 0;
+const headerContainer = document.querySelector('.header-container');
+window.addEventListener('scroll', () => {
+  const currentPosition = window.pageYOffset;
+  if (currentPosition > lastPosition) {
+    if (headerContainer.classList.contains('header-container_white')) {
+      headerContainer.classList.remove('header-container_white');
+      headerContainer.classList.add('header-container_hide');
+    }
+    hideHeader();
+  } else {
+    headerContainer.classList.add('header-container_white');
+    if (headerContainer.classList.contains('header-container_hide')) {
+      headerContainer.classList.remove('header-container_hide');
+    }
+    showHeader();
+  }
+  lastPosition = currentPosition;
+});
+
 window.addEventListener('scroll', initProject);
 
 function initProject() {
@@ -56,14 +76,6 @@ function initProject() {
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
     moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
-  }
-
-  if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
-    changeMenuItemsColorToWhite();
-  }
-
-  if (scrolled < budgetSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
-    changeMenuItemsColorToDefault();
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {

@@ -44,6 +44,7 @@ export const CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS = {
   blueColor: { red: 72, green: 80, blue: 223 },
   purpleColor: { red: 150, green: 49, blue: 213 }
 };
+
 export const MENU_ELEMENT_OPTIONS = {
   selector: '.menu-container',
   property: 'color',
