@@ -264,7 +264,7 @@ h2 {
   align-items: center;
   width: 23.625rem;
   height: 5rem;
-  padding: 0 1em 0 1.5em;
+  padding: 0 2em 0 1.5em;
   border: none;
   margin-top: 7em;
   background-color: var(--flamingo-color);
@@ -338,7 +338,7 @@ h2 {
   top: 3.6em;
 }
 
-.b-parallax {
+.letter-parallax {
   max-width: 94em;
 }
 
@@ -357,7 +357,7 @@ h2 {
 }
 
 .power-image-container > .custom-button > .button-image {
-  margin-right: 1.2em;
+  margin-right: 0.2em;
 }
 
 #but_arrow {
