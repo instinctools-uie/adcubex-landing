@@ -9,13 +9,13 @@
 }
 
 .header-container.header-container_white {
-  z-index: 3;
+  z-index: 4;
   background-color: white;
   animation: white-animation 0.3s ease-out;
 }
 
 .header-container.header-container_hide {
-  z-index: 3;
+  z-index: 4;
   background-color: transparent;
   animation: white-animation-hide 0.3s ease-out;
 }
@@ -81,7 +81,7 @@ button.header-element_show {
 
 .logo,
 .toggle-menu-button {
-  z-index: 3;
+  z-index: 4;
 }
 
 .header-navigation {
@@ -106,7 +106,7 @@ button.header-element_show {
 .header-navigation--active {
   opacity: 1;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header-navigation-bg-image {

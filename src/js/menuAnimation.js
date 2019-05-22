@@ -3,6 +3,11 @@ const logo = document.querySelector('.logo');
 const headerContainer = document.querySelector('.header-container');
 
 function hideHeader() {
+  if (headerContainer.classList.contains('header-container_white')) {
+    headerContainer.classList.remove('header-container_white');
+    headerContainer.classList.add('header-container_hide');
+  }
+
   logo.classList.add('header-element_hide');
   menu.classList.add('header-element_hide');
 
@@ -16,6 +21,10 @@ function hideHeader() {
 }
 
 function showHeader() {
+  headerContainer.classList.add('header-container_white');
+  if (headerContainer.classList.contains('header-container_hide')) {
+    headerContainer.classList.remove('header-container_hide');
+  }
   logo.classList.add('header-element_show');
   menu.classList.add('header-element_show');
 
@@ -28,19 +37,11 @@ function showHeader() {
   }
 }
 
-export default function changeHeaderVisibility(lastPosition) {
+export default function changeHeaderVisibility(scrollPosition) {
   const currentPosition = window.pageYOffset;
-  if (currentPosition > lastPosition) {
-    if (headerContainer.classList.contains('header-container_white')) {
-      headerContainer.classList.remove('header-container_white');
-      headerContainer.classList.add('header-container_hide');
-    }
+  if (currentPosition > scrollPosition) {
     hideHeader();
   } else {
-    headerContainer.classList.add('header-container_white');
-    if (headerContainer.classList.contains('header-container_hide')) {
-      headerContainer.classList.remove('header-container_hide');
-    }
     showHeader();
   }
 
