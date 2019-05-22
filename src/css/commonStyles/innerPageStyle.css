@@ -40,6 +40,8 @@ body {
 
 .title-section p {
   font-size: 2em;
+  font-weight: 600;
+  line-height: 1.5em;
 }
 
 .content-section {
@@ -85,15 +87,10 @@ article > div > p {
   opacity: 1;
 }
 
-.section-container > .section-content > p {
-  font-size: 1.9em;
-  font-weight: 600;
-  line-height: 1.5em;
-}
-
 article {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2.5em;
 }
 
 article.article-right {
