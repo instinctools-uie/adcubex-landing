@@ -41,17 +41,12 @@ const controlSectionScrollPosition = controlSection.offsetTop;
 const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
+let scrollPreviousPosition = 0;
+
 initProject();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
-
-let scrollPreviousPosition = 0;
-window.addEventListener('scroll', () => {
-  const scrollCurrentPosition = window.pageYOffset;
-  changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition);
-  scrollPreviousPosition = scrollCurrentPosition;
-});
 
 window.addEventListener('scroll', initProject);
 
@@ -151,4 +146,7 @@ function initProject() {
   }
 
   toggleContentByScroll(MAIN_PAGE_TOGGLE_CONTENT.sectionContainer, MAIN_PAGE_TOGGLE_CONTENT.delayBetweenSection);
+
+  changeHeaderVisibility(scrollPreviousPosition, scrolled);
+  scrollPreviousPosition = scrolled;
 }
