@@ -22,7 +22,7 @@ import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
-import { hideHeader, showHeader } from '../menuAnimation';
+import changeHeaderVisibility from '../menuAnimation';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -47,23 +47,8 @@ hoverLinkInMenu();
 cubesRandomLevitation();
 
 let lastPosition = 0;
-const headerContainer = document.querySelector('.header-container');
 window.addEventListener('scroll', () => {
-  const currentPosition = window.pageYOffset;
-  if (currentPosition > lastPosition) {
-    if (headerContainer.classList.contains('header-container_white')) {
-      headerContainer.classList.remove('header-container_white');
-      headerContainer.classList.add('header-container_hide');
-    }
-    hideHeader();
-  } else {
-    headerContainer.classList.add('header-container_white');
-    if (headerContainer.classList.contains('header-container_hide')) {
-      headerContainer.classList.remove('header-container_hide');
-    }
-    showHeader();
-  }
-  lastPosition = currentPosition;
+  lastPosition = changeHeaderVisibility(lastPosition);
 });
 
 window.addEventListener('scroll', initProject);

@@ -1,14 +1,8 @@
-// const logo = {
-//   ad: document.querySelector('#logo_ad'),
-//   cubex: document.querySelector('#logo_cubex'),
-//   text: document.querySelector('#logo_when-ad-go-huge')
-// };
-
 const menu = document.querySelector('.toggle-menu-button');
-
 const logo = document.querySelector('.logo');
+const headerContainer = document.querySelector('.header-container');
 
-export function hideHeader() {
+function hideHeader() {
   logo.classList.add('header-element_hide');
   menu.classList.add('header-element_hide');
 
@@ -21,7 +15,7 @@ export function hideHeader() {
   }
 }
 
-export function showHeader() {
+function showHeader() {
   logo.classList.add('header-element_show');
   menu.classList.add('header-element_show');
 
@@ -32,4 +26,23 @@ export function showHeader() {
   if (menu.classList.contains('header-element_hide')) {
     menu.classList.remove('header-element_hide');
   }
+}
+
+export default function changeHeaderVisibility(lastPosition) {
+  const currentPosition = window.pageYOffset;
+  if (currentPosition > lastPosition) {
+    if (headerContainer.classList.contains('header-container_white')) {
+      headerContainer.classList.remove('header-container_white');
+      headerContainer.classList.add('header-container_hide');
+    }
+    hideHeader();
+  } else {
+    headerContainer.classList.add('header-container_white');
+    if (headerContainer.classList.contains('header-container_hide')) {
+      headerContainer.classList.remove('header-container_hide');
+    }
+    showHeader();
+  }
+
+  return currentPosition;
 }

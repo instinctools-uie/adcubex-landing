@@ -15,6 +15,7 @@
 }
 
 .header-container.header-container_hide {
+  z-index: 3;
   background-color: transparent;
   animation: white-animation-hide 0.3s ease-out;
 }

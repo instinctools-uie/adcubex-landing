@@ -164,3 +164,16 @@ label {
 .custom-button:hover .button-image {
   transform: translateX(0.3em);
 }
+
+.header-container.header-container_white {
+  background-color: var(--cube-left-side-dark-blue-color);
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: var(--cube-left-side-dark-blue-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

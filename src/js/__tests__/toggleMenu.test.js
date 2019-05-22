@@ -10,30 +10,13 @@ const toggleMenuButton = {
     return false;
   })
 };
-const body = {
-  classList: {
-    add: jest.fn(),
-    remove: jest.fn()
-  }
-};
-const closeMenuIcon = {
-  classList: {
-    add: jest.fn(),
-    remove: jest.fn()
-  }
-};
-const logoElement = {
-  classList: {
-    add: jest.fn(),
-    remove: jest.fn()
-  }
-};
-const openMenuIcon = {
-  classList: {
-    add: jest.fn(),
-    remove: jest.fn()
-  }
-};
+
+const body = mockQuerySelector();
+const headerElement = mockQuerySelector();
+const closeMenuIcon = mockQuerySelector();
+const logoElement = mockQuerySelector();
+const openMenuIcon = mockQuerySelector();
+
 const headerNavigation = {
   setAttribute: jest.fn(),
   removeAttribute: jest.fn(),
@@ -49,6 +32,8 @@ describe('toggle menu', () => {
       switch (selector) {
         case 'body':
           return body;
+        case '.header-container':
+          return headerElement;
         case '.toggle-menu-button':
           return toggleMenuButton;
         case '.logo':
@@ -64,16 +49,7 @@ describe('toggle menu', () => {
   });
 
   afterEach(() => {
-    body.classList.add.mockRestore();
-    body.classList.remove.mockRestore();
-    closeMenuIcon.classList.add.mockRestore();
-    closeMenuIcon.classList.remove.mockRestore();
-    logoElement.classList.add.mockRestore();
-    logoElement.classList.remove.mockRestore();
-    openMenuIcon.classList.add.mockRestore();
-    openMenuIcon.classList.remove.mockRestore();
-    headerNavigation.classList.add.mockRestore();
-    headerNavigation.classList.remove.mockRestore();
+    restoreClassListForElements(body, headerElement, closeMenuIcon, logoElement, openMenuIcon, headerNavigation);
     headerNavigation.setAttribute.mockRestore();
     headerNavigation.removeAttribute.mockRestore();
   });
@@ -87,6 +63,9 @@ describe('toggle menu', () => {
 
     expect(body.classList.add).toHaveBeenCalledWith('hidden-scroll');
     expect(body.classList.remove).toHaveBeenCalledTimes(0);
+
+    expect(headerElement.classList.add).toHaveBeenCalledWith('header-container_hide');
+    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container_white');
 
     expect(closeMenuIcon.classList.add).toHaveBeenCalledWith('header-close-menu-icon--active');
     expect(closeMenuIcon.classList.remove).toHaveBeenCalledTimes(0);
@@ -118,6 +97,9 @@ describe('toggle menu', () => {
     expect(body.classList.remove).toHaveBeenCalledWith('hidden-scroll');
     expect(body.classList.add).toHaveBeenCalledTimes(0);
 
+    expect(headerElement.classList.add).toHaveBeenCalledWith('header-container_white');
+    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container_hide');
+
     expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
     expect(headerNavigation.classList.add).toHaveBeenCalledTimes(0);
 
@@ -131,3 +113,19 @@ describe('toggle menu', () => {
     expect(headerNavigation.removeAttribute).toHaveBeenCalledTimes(0);
   });
 });
+
+function mockQuerySelector() {
+  return {
+    classList: {
+      add: jest.fn(),
+      remove: jest.fn()
+    }
+  };
+}
+
+function restoreClassListForElements(...elements) {
+  elements.forEach(element => {
+    element.classList.add.mockRestore();
+    element.classList.remove.mockRestore();
+  });
+}

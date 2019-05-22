@@ -1,9 +1,13 @@
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleCheckbox from './checkboxHandler';
-import changeMenuColor from '../innerPage/changeColorInnerMenu';
+import changeHeaderVisibility from '../menuAnimation';
 
 toggleMenu();
 toggleCheckbox();
 hoverLinkInMenu();
-changeMenuColor();
+
+let lastPosition = 0;
+window.addEventListener('scroll', () => {
+  lastPosition = changeHeaderVisibility(lastPosition);
+});
