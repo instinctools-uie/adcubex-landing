@@ -350,7 +350,7 @@ h2 {
   margin: 6.2em 0 0 16.25em;
 }
 
-.power-image-container > a > button {
+.power-image-container a {
   margin-top: 7.4em;
   border: 0.01em solid white;
   background-color: transparent;
