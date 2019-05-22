@@ -20,18 +20,26 @@
 }
 
 .contact-us-container {
-  width: 47.875em;
-  margin: 4.75em 0 0 4em;
+  display: flex;
 }
 
-.contact-us-container > p {
+.contact-us-form {
+  max-width: 47.875em;
+  width: 100%;
+}
+
+.contact-us-form * {
+  box-sizing: border-box;
+}
+
+.contact-us-form > p {
   font-size: 1.625em;
   line-height: 1.5em;
 }
 
-.contact-us-container > input,
-.contact-us-container > textarea {
-  width: 93%;
+.contact-us-form > input,
+.contact-us-form > textarea {
+  width: 100%;
 }
 
 .contacts-inputs {
@@ -40,7 +48,7 @@
 }
 
 .contacts-inputs > input {
-  width: 14.25em;
+  width: calc(50% - 1.25em);
 }
 
 input {
@@ -163,4 +171,16 @@ label {
 
 .custom-button:hover .button-image {
   transform: translateX(0.3em);
+}
+
+@media all and (max-width: 1366px) {
+  input,
+  textarea {
+    font-size: 1em;
+  }
+
+  .contact-us-container svg {
+    width: auto;
+    max-height: 42em;
+  }
 }
