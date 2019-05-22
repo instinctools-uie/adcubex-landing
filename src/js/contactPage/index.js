@@ -7,7 +7,7 @@ toggleMenu();
 toggleCheckbox();
 hoverLinkInMenu();
 
-let lastPosition = 0;
+let scrollPreviousPosition = 0;
 window.addEventListener('scroll', () => {
-  lastPosition = changeHeaderVisibility(lastPosition);
+    scrollPreviousPosition = changeHeaderVisibility(scrollPreviousPosition);
 });
