@@ -67,6 +67,7 @@ h1,
 .section-content > h2 {
   margin-top: 0;
   margin-bottom: 0;
+  height: 1.5em;
   line-height: 5em;
   overflow: hidden;
   transition: line-height 0.5s ease-in-out;
