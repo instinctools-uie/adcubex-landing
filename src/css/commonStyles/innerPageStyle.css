@@ -100,7 +100,7 @@ article.article-right {
   justify-content: flex-end;
 }
 
-.section-container > article > .section-content > p {
+.section-container article > .section-content > p {
   font-size: 1.625em;
   line-height: 1.5em;
 }
@@ -236,7 +236,7 @@ h4 + p {
 
 @media all and (max-width: 1366px) {
   .custom-button {
-    height: 4em;
-    font-size: 1em;
+    height: 3em;
+    font-size: 1.75em;
   }
 }
