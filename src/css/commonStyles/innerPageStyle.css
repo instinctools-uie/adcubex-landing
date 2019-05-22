@@ -234,7 +234,7 @@ h4 + p {
   }
 }
 
-@media all and (max-width: 1366px){
+@media all and (max-width: 1366px) {
   .custom-button {
     height: 4em;
     font-size: 1em;
