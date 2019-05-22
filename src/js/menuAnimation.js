@@ -37,13 +37,10 @@ function showHeader() {
   }
 }
 
-export default function changeHeaderVisibility(scrollPreviousPosition) {
-  const currentPosition = window.pageYOffset;
+export default function changeHeaderVisibility(scrollPreviousPosition, currentPosition) {
   if (currentPosition > scrollPreviousPosition) {
     hideHeader();
   } else {
     showHeader();
   }
-
-  return currentPosition;
 }

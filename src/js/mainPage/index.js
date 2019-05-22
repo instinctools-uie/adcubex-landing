@@ -48,7 +48,9 @@ cubesRandomLevitation();
 
 let scrollPreviousPosition = 0;
 window.addEventListener('scroll', () => {
-  scrollPreviousPosition = changeHeaderVisibility(scrollPreviousPosition);
+    const currentPosition = window.pageYOffset;
+    changeHeaderVisibility(scrollPreviousPosition, currentPosition);
+    scrollPreviousPosition = currentPosition;
 });
 
 window.addEventListener('scroll', initProject);
