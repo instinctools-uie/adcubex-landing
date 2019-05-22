@@ -11,7 +11,7 @@ window.addEventListener('scroll', () => {
   toggleContentByScroll(INNER_PAGES_TOGGLE_CONTENT.sectionContainer, INNER_PAGES_TOGGLE_CONTENT.delayBetweenSection);
 });
 
-let lastPosition = 0;
+let scrollPreviousPosition = 0;
 window.addEventListener('scroll', () => {
-  lastPosition = changeHeaderVisibility(lastPosition);
+  scrollPreviousPosition = changeHeaderVisibility(scrollPreviousPosition);
 });
