@@ -134,8 +134,8 @@ h2 {
   width: 100%;
 }
 
-.budget-text-container > .inner-section-text > .vertical-inscription > span,
-.power-text-container > .inner-section-text > .vertical-inscription > span {
+.budget-section .vertical-inscription span,
+.power-section .vertical-inscription span {
   color: white;
 }
 
@@ -335,7 +335,11 @@ h2 {
 }
 
 .budget-section .vertical-inscription {
-  top: 3.6em;
+  top: -30.5em;
+}
+
+.power-section .vertical-inscription {
+  top: -46.2em;
 }
 
 .letter-parallax {
