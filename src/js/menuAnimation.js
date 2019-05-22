@@ -8,9 +8,6 @@ function hideHeader() {
     headerContainer.classList.add('header-container_hide');
   }
 
-  logo.classList.add('header-element_hide');
-  menu.classList.add('header-element_hide');
-
   if (logo.classList.contains('header-element_show')) {
     logo.classList.remove('header-element_show');
   }
@@ -18,15 +15,15 @@ function hideHeader() {
   if (menu.classList.contains('header-element_show')) {
     menu.classList.remove('header-element_show');
   }
+
+  logo.classList.add('header-element_hide');
+  menu.classList.add('header-element_hide');
 }
 
 function showHeader() {
-  headerContainer.classList.add('header-container_white');
   if (headerContainer.classList.contains('header-container_hide')) {
     headerContainer.classList.remove('header-container_hide');
   }
-  logo.classList.add('header-element_show');
-  menu.classList.add('header-element_show');
 
   if (logo.classList.contains('header-element_hide')) {
     logo.classList.remove('header-element_hide');
@@ -35,10 +32,15 @@ function showHeader() {
   if (menu.classList.contains('header-element_hide')) {
     menu.classList.remove('header-element_hide');
   }
+
+  headerContainer.classList.add('header-container_white');
+
+  logo.classList.add('header-element_show');
+  menu.classList.add('header-element_show');
 }
 
-export default function changeHeaderVisibility(scrollPreviousPosition, currentPosition) {
-  if (currentPosition > scrollPreviousPosition) {
+export default function changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition) {
+  if (scrollCurrentPosition > scrollPreviousPosition) {
     hideHeader();
   } else {
     showHeader();
