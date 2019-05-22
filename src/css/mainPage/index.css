@@ -468,6 +468,7 @@ div.power-image > .image-content-section > p.image-content_large {
 }
 
 footer {
+  margin-top: 19em;
   color: var(--silver-chalice-color);
 }
 
@@ -586,5 +587,9 @@ footer {
   .inner-section-text {
     font-size: 1.55em;
     line-height: 1.4em;
+  }
+
+  footer{
+    margin-top: 1em;
   }
 }
