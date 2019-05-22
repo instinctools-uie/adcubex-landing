@@ -487,9 +487,6 @@ footer {
 }
 
 @media all and (max-width: 1366px) {
-  .content-container {
-    width: 52.188em;
-  }
 
   .section-container,
   .supervise-section.section-container {
