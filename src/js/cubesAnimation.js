@@ -1,4 +1,4 @@
-import { RATE_CHANGE_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
+import { RATE_CHANGE_SCROLL, RATE_CHANGE_SMALL_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
 
 const mainCubeScaleAnimationElement = document.querySelector('#main-cube-scale-animation');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate');
@@ -21,9 +21,13 @@ export function cubesRandomLevitation() {
   });
 }
 
+function isSmallScreen() {
+  return document.documentElement.clientWidth > 1366 ? RATE_CHANGE_SCROLL : RATE_CHANGE_SMALL_SCROLL;
+}
+
 export function makeMainCubeBigger(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const perChange = (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
+  const perChange = (scrolled - sectionScrollPosition) / isSmallScreen();
 
   mainCubeAnimation(perChange);
 }
@@ -31,7 +35,7 @@ export function makeMainCubeBigger(sectionScrollPosition) {
 export function transformMainCubeToDefaultSize(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const highRatio = 0.8;
-  const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
+  const perChange = highRatio - (scrolled - sectionScrollPosition) / isSmallScreen();
 
   mainCubeAnimation(perChange);
 }
@@ -73,7 +77,7 @@ export function moveCubesToTopForColorSections(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
-  const perChange = (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
+  const perChange = (scrolled - sectionScrollPosition) / isSmallScreen();
 
   cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
@@ -83,7 +87,7 @@ export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const highRatio = 0.8;
-  const perChange = highRatio - (scrolled - sectionScrollPosition) / RATE_CHANGE_SCROLL;
+  const perChange = highRatio - (scrolled - sectionScrollPosition) / isSmallScreen();
 
   cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }

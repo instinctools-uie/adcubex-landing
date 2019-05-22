@@ -84,7 +84,10 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    const scrollDelayForAnimation = 800;
+    let scrollDelayForAnimation = 800;
+    if (document.documentElement.clientWidth < 1366) {
+      scrollDelayForAnimation = 200;
+    }
     const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
     changeColorForImprovementSection(sectionScrollPosition);
     transformMainCubeToDefaultSize(sectionScrollPosition);
