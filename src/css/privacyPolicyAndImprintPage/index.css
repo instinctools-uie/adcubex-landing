@@ -67,3 +67,16 @@ article.youtube-article > h2 {
 .forensics-article {
   margin-bottom: 6.5em;
 }
+
+.header-container.header-container_white {
+  background-color: var(--cube-left-side-blue-color);
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: var(--cube-left-side-blue-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

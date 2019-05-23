@@ -61,3 +61,16 @@ article.implementation-article > .section-content {
 article.implementation-article > svg {
   margin-top: -13.5em;
 }
+
+.header-container.header-container_white {
+  background-color: var(--cube-left-side-red-color);
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: var(--cube-left-side-red-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
