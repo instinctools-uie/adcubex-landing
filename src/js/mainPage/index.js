@@ -3,9 +3,7 @@ import {
   changeColorForBudgetSection,
   changeColorForControlSection,
   changeColorForPowerSection,
-  changeMenuItemsColorToWhite,
   changeBackgroundColorToDefault,
-  changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
 import {
@@ -24,6 +22,8 @@ import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
+import changeHeaderVisibility from '../menuAnimation';
+
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
 const toolsetSection = window.document.querySelector('.toolset-section');
@@ -41,6 +41,8 @@ const controlSectionScrollPosition = controlSection.offsetTop;
 const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
+let scrollPreviousPosition = 0;
+
 initProject();
 toggleMenu();
 hoverLinkInMenu();
@@ -56,14 +58,6 @@ function initProject() {
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
     moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
-  }
-
-  if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
-    changeMenuItemsColorToWhite();
-  }
-
-  if (scrolled < budgetSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
-    changeMenuItemsColorToDefault();
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
@@ -152,4 +146,7 @@ function initProject() {
   }
 
   toggleContentByScroll(MAIN_PAGE_TOGGLE_CONTENT.sectionContainer, MAIN_PAGE_TOGGLE_CONTENT.delayBetweenSection);
+
+  changeHeaderVisibility(scrollPreviousPosition, scrolled);
+  scrollPreviousPosition = scrolled;
 }
