@@ -226,6 +226,11 @@ button.header-element_show {
   display: block;
 }
 
+.header-container,
+.content-container .section-container {
+  font-size: 1rem;
+}
+
 footer {
   display: flex;
   justify-content: center;
