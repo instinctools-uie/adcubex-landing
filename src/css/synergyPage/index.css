@@ -37,3 +37,11 @@ article.together .section-content {
   margin-right: -18em;
   z-index: 2;
 }
+
+.you-article .vertical-inscription {
+  top: -12em;
+}
+
+.together .vertical-inscription {
+  top: -15em;
+}

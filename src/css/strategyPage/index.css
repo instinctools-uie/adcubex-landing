@@ -44,3 +44,11 @@ article.implementation-article > .section-content {
   margin-left: -19em;
   z-index: 2;
 }
+
+.analysis-article .vertical-inscription {
+  top: -3.4em;
+}
+
+.consulting-article .vertical-inscription {
+  top: -12.3em;
+}
