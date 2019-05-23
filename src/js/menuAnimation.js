@@ -23,17 +23,17 @@ function hideHeader() {
 function showHeader() {
   if (headerContainer.classList.contains('header-container_hide')) {
     headerContainer.classList.remove('header-container_hide');
+
   }
 
   if (logo.classList.contains('header-element_hide')) {
     logo.classList.remove('header-element_hide');
+    headerContainer.classList.add('header-container_white');
   }
 
   if (menu.classList.contains('header-element_hide')) {
     menu.classList.remove('header-element_hide');
   }
-
-  headerContainer.classList.add('header-container_white');
 
   logo.classList.add('header-element_show');
   menu.classList.add('header-element_show');
