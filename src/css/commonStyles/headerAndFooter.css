@@ -158,7 +158,34 @@
 
 .header-open-menu-icon--active,
 .header-close-menu-icon--active {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.563em;
+  height: 1.25em;
+}
+
+.menu-button-element {
+  height: 0.15em;
+  background-color: black;
+  transition: width 0.3s ease-out;
+}
+
+.menu-button-element_top {
+  width: 100%;
+}
+
+.menu-button-element_center {
+  width: 80%;
+}
+
+.menu-button-element_bottom {
+  width: 60%;
+}
+
+.header-open-menu-icon:hover .menu-button-element_center,
+.header-open-menu-icon:hover .menu-button-element_bottom {
+  width: 100%;
 }
 
 footer {
