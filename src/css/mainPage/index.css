@@ -540,8 +540,8 @@ footer {
   }
 
   .custom-button {
-    width: 20em;
-    height: 4em;
+    width: 15em;
+    height: 3em;
   }
 
   .expertise-section .inner-section-text .custom-button {
@@ -550,6 +550,7 @@ footer {
 
   .improvement-section .inner-section-text .custom-button {
     margin-top: 2em;
+    font-size: 1em;
   }
 
   .inner-section-text > p + p {
