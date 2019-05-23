@@ -290,7 +290,7 @@ footer {
   color: var(--mine-shaft-lighter-color);
 }
 
-@media all and (max-width: 1366px) {
+@media all and (max-width: 1400px) {
   .logo {
     font-size: 0.875rem;
   }
