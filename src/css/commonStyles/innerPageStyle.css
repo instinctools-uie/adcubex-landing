@@ -75,22 +75,22 @@ h1,
   transition: line-height 0.5s ease-in-out;
 }
 
-.article--active > div > h2 {
+.article--active div > h2 {
   line-height: 1.12em;
 }
 
-article > div > p {
+article div > p {
   opacity: 0;
   transition: opacity 0.6s ease-in-out 0.4s;
 }
 
-.article--active > div > p {
+.article--active div > p {
   opacity: 1;
 }
 
 article {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   margin-bottom: 2.5em;
 }
 
@@ -98,9 +98,30 @@ article.article-right {
   justify-content: flex-end;
 }
 
-.section-container article > .section-content > p {
+article.content-column,
+.content-column {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section-container article .section-content > p {
   font-size: 1.625em;
   line-height: 1.5em;
+}
+
+.content-column .svg-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  padding: 0 1em;
+}
+
+.svg-container svg {
+  max-width: 100%;
+  height: auto;
 }
 
 h2 + p {
@@ -108,11 +129,10 @@ h2 + p {
 }
 
 .vertical-inscription {
+  top: -8em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  height: 9.5em;
-  margin: 14.5em -9em 0 -6em;
   transform: rotate(90deg);
   cursor: pointer;
   text-decoration: none;

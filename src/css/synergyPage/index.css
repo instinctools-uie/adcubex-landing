@@ -16,14 +16,6 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
-article.you-article > svg {
-  margin-top: 9em;
-}
-
-article.we-article > svg {
-  margin: 11.7em 0 0 7.4em;
-}
-
 .external-links {
   display: flex;
   align-items: center;
@@ -41,11 +33,7 @@ article.together {
   margin-bottom: 4.8em;
 }
 
-article.together > .section-content {
+article.together .section-content {
   margin-right: -18em;
   z-index: 2;
-}
-
-article.together > .vertical-inscription {
-  margin: 17em -6.5em 0 -19em;
 }
