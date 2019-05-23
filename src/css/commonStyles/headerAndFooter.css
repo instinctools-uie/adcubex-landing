@@ -259,7 +259,7 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > span {
+.footer-left p span {
   font-weight: 600;
   font-style: italic;
 }

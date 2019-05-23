@@ -1,8 +1,11 @@
 import { RATE_CHANGE_SCROLL, RATE_CHANGE_SMALL_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
+import isDesktopBreakpoint from './isDesktopBreakpoint';
 
 const mainCubeScaleAnimationElement = document.querySelector('#main-cube-scale-animation');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate');
 const mainCubeForTranslateAnimation = window.document.querySelector('#main-cube-translate-animation');
+
+const changeScroll = isDesktopBreakpoint(1366) ? RATE_CHANGE_SCROLL : RATE_CHANGE_SMALL_SCROLL;
 
 export function cubesRandomLevitation() {
   const cubesForTranslateAnimation = window.document.querySelectorAll('.cube-translate-animation');
@@ -21,13 +24,9 @@ export function cubesRandomLevitation() {
   });
 }
 
-function isSmallScreen() {
-  return document.documentElement.clientWidth > 1366 ? RATE_CHANGE_SCROLL : RATE_CHANGE_SMALL_SCROLL;
-}
-
 export function makeMainCubeBigger(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
-  const perChange = (scrolled - sectionScrollPosition) / isSmallScreen();
+  const perChange = (scrolled - sectionScrollPosition) / changeScroll;
 
   mainCubeAnimation(perChange);
 }
@@ -35,7 +34,7 @@ export function makeMainCubeBigger(sectionScrollPosition) {
 export function transformMainCubeToDefaultSize(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const highRatio = 0.8;
-  const perChange = highRatio - (scrolled - sectionScrollPosition) / isSmallScreen();
+  const perChange = highRatio - (scrolled - sectionScrollPosition) / changeScroll;
 
   mainCubeAnimation(perChange);
 }
@@ -77,7 +76,7 @@ export function moveCubesToTopForColorSections(sectionScrollPosition) {
   const scrolled = window.pageYOffset;
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
-  const perChange = (scrolled - sectionScrollPosition) / isSmallScreen();
+  const perChange = (scrolled - sectionScrollPosition) / changeScroll;
 
   cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
@@ -87,7 +86,7 @@ export function moveCubesToDefaultPosition(sectionScrollPosition) {
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const highRatio = 0.8;
-  const perChange = highRatio - (scrolled - sectionScrollPosition) / isSmallScreen();
+  const perChange = highRatio - (scrolled - sectionScrollPosition) / changeScroll;
 
   cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition);
 }
