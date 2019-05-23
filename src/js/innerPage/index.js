@@ -10,9 +10,10 @@ toggleMenu();
 hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
+  const scrolled = window.pageYOffset;
+
   toggleContentByScroll(INNER_PAGES_TOGGLE_CONTENT.sectionContainer, INNER_PAGES_TOGGLE_CONTENT.delayBetweenSection);
 
-  const scrollCurrentPosition = window.pageYOffset;
-  changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition);
-  scrollPreviousPosition = scrollCurrentPosition;
+  changeHeaderVisibility(scrollPreviousPosition, scrolled);
+  scrollPreviousPosition = scrolled;
 });

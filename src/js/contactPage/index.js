@@ -10,7 +10,8 @@ toggleCheckbox();
 hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
-  const scrollCurrentPosition = window.pageYOffset;
-  changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition);
-  scrollPreviousPosition = scrollCurrentPosition;
+  const scrolled = window.pageYOffset;
+
+  changeHeaderVisibility(scrollPreviousPosition, scrolled);
+  scrollPreviousPosition = scrolled;
 });
