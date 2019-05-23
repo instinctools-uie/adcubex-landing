@@ -1,4 +1,4 @@
-import { RATE_CHANGE_SCROLL } from './constants';
+import { RATE_WSXGA_SCROLL } from './constants';
 
 export function scrollParallaxBgLetters(element, section, prevSection) {
   const start = 1000;
@@ -6,7 +6,7 @@ export function scrollParallaxBgLetters(element, section, prevSection) {
 
   const scrolled = window.pageYOffset;
   const startScrolling = prevSection + (section - prevSection) / 2;
-  const perChange = (scrolled - startScrolling) / RATE_CHANGE_SCROLL;
+  const perChange = (scrolled - startScrolling) / RATE_WSXGA_SCROLL;
 
   const translateYValue = start - (start - finish) * perChange;
 
@@ -19,7 +19,7 @@ export function sectionImageParallax(element, startPosition) {
   const finish = -800;
 
   const scrolled = window.pageYOffset;
-  const perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
+  const perChange = (scrolled - startPosition) / RATE_WSXGA_SCROLL;
   const translateYValue = start - (start - finish) * perChange;
 
   element.style.display = 'block';

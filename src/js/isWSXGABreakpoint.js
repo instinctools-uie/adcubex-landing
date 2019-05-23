@@ -1,3 +1,3 @@
-export default function isDesktopBreakpoint(currentBreakpoint) {
+export default function isWSXGABreakpoint(currentBreakpoint) {
   return document.documentElement.clientWidth > currentBreakpoint;
 }

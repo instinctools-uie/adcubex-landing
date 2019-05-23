@@ -1,11 +1,11 @@
-import { RATE_CHANGE_SCROLL, RATE_CHANGE_SMALL_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
-import isDesktopBreakpoint from './isDesktopBreakpoint';
+import { RATE_WSXGA_SCROLL, RATE_WSGA_SCROLL, WSGA_BREAKPOINT, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
+import isWSXGABreakpoint from './isWSXGABreakpoint';
 
 const mainCubeScaleAnimationElement = document.querySelector('#main-cube-scale-animation');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate');
 const mainCubeForTranslateAnimation = window.document.querySelector('#main-cube-translate-animation');
 
-const changeScroll = isDesktopBreakpoint(1366) ? RATE_CHANGE_SCROLL : RATE_CHANGE_SMALL_SCROLL;
+const changeScroll = isWSXGABreakpoint(WSGA_BREAKPOINT) ? RATE_WSXGA_SCROLL : RATE_WSGA_SCROLL;
 
 export function cubesRandomLevitation() {
   const cubesForTranslateAnimation = window.document.querySelectorAll('.cube-translate-animation');
