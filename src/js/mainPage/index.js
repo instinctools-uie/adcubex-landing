@@ -15,12 +15,7 @@ import {
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
-import {
-  RATE_WSXGA_SCROLL,
-  WSXGA_ANIMATION_DELAY,
-  WSGA_ANIMATION_DELAY,
-  MAIN_PAGE_TOGGLE_CONTENT
-} from '../constants';
+import { RATE_WSXGA_SCROLL, WSXGA_ANIMATION_DELAY, WSGA_ANIMATION_DELAY, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
