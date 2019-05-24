@@ -52,3 +52,16 @@ article.implementation-article > .section-content {
 .consulting-article .vertical-inscription {
   top: -12.3em;
 }
+
+.header-container.header-container_white {
+  background-color: var(--cube-left-side-red-color);
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: var(--cube-left-side-red-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

@@ -3,9 +3,7 @@ import {
   changeColorForBudgetSection,
   changeColorForControlSection,
   changeColorForPowerSection,
-  changeMenuItemsColorToWhite,
   changeBackgroundColorToDefault,
-  changeMenuItemsColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
 import {
@@ -17,12 +15,15 @@ import {
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
-import { RATE_CHANGE_SCROLL, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
+import { RATE_WSXGA_SCROLL, WSXGA_ANIMATION_DELAY, WSGA_ANIMATION_DELAY, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
+
+import changeHeaderVisibility from '../menuAnimation';
+import isWSXGABreakpoint from '../isWSXGABreakpoint';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -41,6 +42,8 @@ const controlSectionScrollPosition = controlSection.offsetTop;
 const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
+let scrollPreviousPosition = 0;
+
 initProject();
 toggleMenu();
 hoverLinkInMenu();
@@ -56,14 +59,6 @@ function initProject() {
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
     moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
-  }
-
-  if (scrolled > budgetSectionScrollPosition && scrolled < powerSectionScrollPosition) {
-    changeMenuItemsColorToWhite();
-  }
-
-  if (scrolled < budgetSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
-    changeMenuItemsColorToDefault();
   }
 
   if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
@@ -84,7 +79,8 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    const scrollDelayForAnimation = 800;
+    const scrollDelayForAnimation = isWSXGABreakpoint() ? WSXGA_ANIMATION_DELAY : WSGA_ANIMATION_DELAY;
+
     const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
     changeColorForImprovementSection(sectionScrollPosition);
     transformMainCubeToDefaultSize(sectionScrollPosition);
@@ -117,7 +113,7 @@ function initProject() {
   }
 
   // For Parallax Scroll of patterns/squares
-  const middleOfScreenHeight = RATE_CHANGE_SCROLL / 2;
+  const middleOfScreenHeight = RATE_WSXGA_SCROLL / 2;
   const middleOfScreenBeforeSuperviseSection = superviseSectionScrollPosition - middleOfScreenHeight;
   const middleOfScreenBeforeExpertiseSection = expertiseSectionScrollPosition - middleOfScreenHeight;
   const middleOfScreenAfterExpertiseSection = expertiseSectionScrollPosition + middleOfScreenHeight;
@@ -152,4 +148,7 @@ function initProject() {
   }
 
   toggleContentByScroll(MAIN_PAGE_TOGGLE_CONTENT.sectionContainer, MAIN_PAGE_TOGGLE_CONTENT.delayBetweenSection);
+
+  changeHeaderVisibility(scrollPreviousPosition, scrolled);
+  scrollPreviousPosition = scrolled;
 }

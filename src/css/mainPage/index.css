@@ -75,8 +75,8 @@ h2 {
   width: 100%;
 }
 
-.budget-text-container > .inner-section-text > .vertical-inscription > span,
-.power-text-container > .inner-section-text > .vertical-inscription > span {
+.budget-section .vertical-inscription span,
+.power-section .vertical-inscription span {
   color: white;
 }
 
@@ -276,7 +276,11 @@ h2 {
 }
 
 .budget-section .vertical-inscription {
-  top: 3.6em;
+  top: -30.5em;
+}
+
+.power-section .vertical-inscription {
+  top: -46.2em;
 }
 
 .letter-parallax {
@@ -355,13 +359,13 @@ h2 {
   line-height: 2.625rem;
 }
 
-.image-content_small {
+.image-content--small {
   margin-top: 0.938rem;
   line-height: 1.1875rem;
   font-size: 1rem;
 }
 
-.image-content_large {
+.image-content--large {
   margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
@@ -384,7 +388,7 @@ h2 {
   right: -4.5em;
 }
 
-.power-image > .image-content-section > .image-content_large {
+.power-image > .image-content-section > .image-content--large {
   margin: 3rem 0;
   font-family: montserratbold, sans-serif;
   font-size: 6.5rem;
@@ -392,7 +396,7 @@ h2 {
   line-height: 0;
 }
 
-div.power-image > .image-content-section > p.image-content_large {
+div.power-image > .image-content-section > p.image-content--large {
   margin-top: 2rem;
   font-family: 'montserrat_extraboldregular', sans-serif;
   font-size: 8rem;
@@ -424,9 +428,9 @@ footer {
   color: var(--flamingo-color);
 }
 
-@media all and (max-width: 1366px) {
+@media all and (max-width: 1400px) {
   .content-container {
-    width: 52.188em;
+    width: 52.2em;
   }
 
   .section-container,
@@ -448,7 +452,7 @@ footer {
   }
 
   .power-section .vertical-inscription {
-    top: -25rem;
+    top: -25em;
   }
 
   .section-container > svg {
@@ -469,13 +473,13 @@ footer {
 
   .external-links,
   .toolset-section > .external-links {
-    font-size: 14px;
+    font-size: 0.875em;
     margin-top: 9em;
   }
 
   .custom-button {
-    width: 20rem;
-    height: 4rem;
+    width: 15em;
+    height: 3em;
   }
 
   .expertise-section .inner-section-text .custom-button {
@@ -484,6 +488,7 @@ footer {
 
   .improvement-section .inner-section-text .custom-button {
     margin-top: 2em;
+    font-size: 1em;
   }
 
   .inner-section-text > p + p {
@@ -509,16 +514,16 @@ footer {
 
   .budget-image,
   .power-image-container {
-    margin: 0 0 0 10.3rem;
+    margin: 0 0 0 10.3em;
   }
 
   .power-image-container > button {
     margin-top: 1.4em;
   }
 
-  .image-content_large {
-    margin: 2rem 0;
-    font-size: 3.5rem;
+  .image-content--large {
+    margin: 2em 0;
+    font-size: 3.5em;
   }
 
   .inner-section-text {
@@ -527,6 +532,6 @@ footer {
   }
 
   footer {
-    margin-top: 1em;
+    margin: 1em 0 2.5em 0;
   }
 }
