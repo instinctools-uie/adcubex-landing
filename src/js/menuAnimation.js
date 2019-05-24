@@ -23,7 +23,6 @@ function hideHeader() {
 function showHeader() {
   if (headerContainer.classList.contains('header-container_hide')) {
     headerContainer.classList.remove('header-container_hide');
-
   }
 
   if (logo.classList.contains('header-element_hide')) {

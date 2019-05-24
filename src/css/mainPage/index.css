@@ -472,6 +472,7 @@ div.power-image > .image-content-section > p.image-content--large {
 }
 
 footer {
+  margin-top: 19em;
   color: var(--silver-chalice-color);
 }
 
