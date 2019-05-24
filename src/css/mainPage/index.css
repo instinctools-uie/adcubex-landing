@@ -428,7 +428,7 @@ footer {
   color: var(--flamingo-color);
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: var(--WXGA-device)) {
   .content-container {
     width: 52.2em;
   }

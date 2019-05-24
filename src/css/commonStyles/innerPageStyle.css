@@ -256,7 +256,7 @@ h4 + p {
   }
 }
 
-@media all and (max-width: 1366px) {
+@media all and (max-width: var(--WXGA-device)) {
   .custom-button {
     height: 3em;
     font-size: 1.75em;

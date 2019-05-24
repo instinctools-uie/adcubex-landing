@@ -298,21 +298,10 @@ footer {
   position: absolute;
   top: 0;
   right: -1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-transform-origin: right top;
-  -ms-transform-origin: right top;
   transform-origin: right top;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
   transform: rotate(90deg);
   cursor: pointer;
   text-decoration: none;
@@ -349,7 +338,7 @@ footer {
   font-weight: 600;
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: var(--WXGA-device)) {
   .vertical-inscription > span {
     font-size: 1.7rem;
   }
