@@ -234,7 +234,7 @@ button.header-element_show {
 footer {
   display: flex;
   justify-content: center;
-  margin: 2.25rem 0 2.5rem 0;
+  margin: 2.55em 0 2.85em 0;
   color: white;
   font-size: 0.875rem;
 }
@@ -242,7 +242,7 @@ footer {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  max-width: 68.625rem;
+  max-width: 68.625em;
 }
 
 .footer-container:first-child {
@@ -292,7 +292,7 @@ footer {
 
 @media all and (max-width: 1400px) {
   .logo {
-    font-size: 0.875rem;
+    font-size: 0.875em;
   }
 
   .header-navigation-container {
@@ -304,6 +304,6 @@ footer {
   }
 
   footer {
-    margin: 1rem 0 2.5rem 0;
+    margin: 1em 0 2.5em 0;
   }
 }
