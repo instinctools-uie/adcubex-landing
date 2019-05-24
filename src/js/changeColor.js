@@ -2,7 +2,7 @@ import {
   CUBE_LEFT_SIDE_ELEMENT_OPTIONS,
   CUBE_RIGHT_SIDE_ELEMENT_OPTIONS,
   CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS,
-  RATE_CHANGE_SCROLL
+  RATE_WSXGA_SCROLL
 } from './constants';
 
 export function changeColorForBudgetSection(sectionScrollPosition) {
@@ -111,7 +111,7 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   const minPerChangeValue = 0;
   const currentColor = { red: 0, green: 0, blue: 0 };
   const scrolled = window.pageYOffset;
-  let perChange = (scrolled - startPosition) / RATE_CHANGE_SCROLL;
+  let perChange = (scrolled - startPosition) / RATE_WSXGA_SCROLL;
 
   if (perChange < minPerChangeValue) {
     perChange = minPerChangeValue;
