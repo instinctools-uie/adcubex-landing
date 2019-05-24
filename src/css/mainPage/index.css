@@ -69,65 +69,6 @@ h2 {
   margin-bottom: 5em;
 }
 
-.vertical-inscription-container {
-  position: relative;
-}
-
-.vertical-inscription {
-  position: absolute;
-  top: 0;
-  right: -1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-transform-origin: right top;
-  -ms-transform-origin: right top;
-  transform-origin: right top;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.vertical-inscription-img-container {
-  margin-right: 3.25em;
-  transform: rotate(-90deg);
-}
-
-.vertical-inscription img {
-  -o-transition: transform 0.5s ease-in-out;
-  -moz-transition: transform 0.5s ease-in-out;
-  -webkit-transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-  cursor: pointer;
-}
-
-.vertical-inscription:hover img {
-  -o-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -moz-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
-  transform: translateY(20px);
-}
-
-.vertical-inscription > span {
-  display: flex;
-  align-items: center;
-  color: var(--mine-shaft-lighter-color);
-  font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 2rem;
-  font-weight: 600;
-}
-
 .budget-text-container > .inner-section-text,
 .power-text-container > .inner-section-text {
   position: relative;
@@ -487,7 +428,7 @@ footer {
   color: var(--flamingo-color);
 }
 
-@media all and (max-width: 1400px) {
+@media all and (max-width: var(--WXGA-device)) {
   .content-container {
     width: 52.2em;
   }
@@ -504,10 +445,6 @@ footer {
   .budget-section,
   .improvement-section {
     margin-bottom: 0;
-  }
-
-  .vertical-inscription > span {
-    font-size: 1.7em;
   }
 
   .budget-section .vertical-inscription {

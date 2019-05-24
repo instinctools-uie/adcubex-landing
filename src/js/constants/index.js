@@ -4,7 +4,7 @@ export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
 export const RATE_WSXGA_SCROLL = 960;
 export const RATE_WSGA_SCROLL = 800;
-export const WSGA_BREAKPOINT = 1366;
+export const WXGA_BREAKPOINT = 1400;
 export const WSXGA_ANIMATION_DELAY = 800;
 export const WSGA_ANIMATION_DELAY = 200;
 
