@@ -1,8 +1,8 @@
 import { RATE_CHANGE_SCROLL } from './constants';
 
 export function scrollParallaxBgLetters(element, section, prevSection) {
-  const start = 1000;
-  const finish = -1000;
+  const start = 200;
+  const finish = -200;
 
   const scrolled = window.pageYOffset;
   const startScrolling = prevSection + (section - prevSection) / 2;

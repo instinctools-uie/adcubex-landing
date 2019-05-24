@@ -48,6 +48,7 @@
     "babel-eslint": "10.0.1",
     "babel-jest": "24.7.1",
     "babelify": "6.4.0",
+    "browser-sync": "2.26.5",
     "browserify": "11.2.0",
     "eslint": "5.9.0",
     "eslint-config-airbnb": "17.1.0",

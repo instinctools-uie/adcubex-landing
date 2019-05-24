@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+var browserSync = require('browser-sync').create();
 const connect = require('gulp-connect');
 const browserify = require('browserify');
 const babelify = require('babelify');
@@ -74,6 +75,15 @@ gulp.task('listen', function() {
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen']);
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: "./build"
+        }
+    });
+});
+
+gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen', 'browser-sync']);
 
 gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);
+

@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: 'montserrat_extralightregular', sans-serif;
-  background-color: rgba(245, 245, 245, 1);
+  background-color: rgba(236, 234, 234, 1);
 }
 
 h1,
@@ -50,7 +50,7 @@ h2 {
 }
 
 .section-container {
-  position: static;
+  position: relative;
   z-index: 1;
   margin-top: 8em;
   width: 100%;
@@ -139,12 +139,12 @@ h2 {
 .power-section > svg {
   position: absolute;
   z-index: -1;
-  left: -14.25em;
-  display: none;
+  left: -8.75em;
+  top: 0em;
 }
 
-.power-section > svg {
-  left: -12.25em;
+.control-section > svg {
+  top: 15em;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -333,8 +333,11 @@ h2 {
   top: 3.6em;
 }
 
-.letter-parallax {
-  max-width: 94em;
+/*.letter-parallax {*/
+/*max-width: 94em;*/
+/*}*/
+
+.big-letter {
 }
 
 .power-image-container {
