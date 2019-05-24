@@ -18,7 +18,7 @@
   margin: 0.45em 0 0 -3.68em;
 }
 
-.dataCollection-article {
+.data-collection-article {
   margin-top: 5em;
 }
 
@@ -27,7 +27,7 @@ article {
   flex-direction: column;
 }
 
-.dataCollection-article > h2 {
+.data-collection-article > h2 {
   animation: none;
 }
 
