@@ -15,7 +15,7 @@ import {
   moveCubesToDefaultPosition,
   moveCubesToTopForWhiteSections
 } from '../cubesAnimation';
-import { RATE_CHANGE_SCROLL, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
+import { RATE_WSXGA_SCROLL, WSXGA_ANIMATION_DELAY, WSGA_ANIMATION_DELAY, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
@@ -23,6 +23,7 @@ import toggleContentByScroll from '../toggleContentByScroll';
 import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
 
 import changeHeaderVisibility from '../menuAnimation';
+import isWSXGABreakpoint from '../isWSXGABreakpoint';
 
 const superviseSection = window.document.querySelector('.supervise-section');
 const expertiseSection = window.document.querySelector('.expertise-section');
@@ -78,7 +79,8 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    const scrollDelayForAnimation = 800;
+    const scrollDelayForAnimation = isWSXGABreakpoint() ? WSXGA_ANIMATION_DELAY : WSGA_ANIMATION_DELAY;
+
     const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
     changeColorForImprovementSection(sectionScrollPosition);
     transformMainCubeToDefaultSize(sectionScrollPosition);
@@ -111,7 +113,7 @@ function initProject() {
   }
 
   // For Parallax Scroll of patterns/squares
-  const middleOfScreenHeight = RATE_CHANGE_SCROLL / 2;
+  const middleOfScreenHeight = RATE_WSXGA_SCROLL / 2;
   const middleOfScreenBeforeSuperviseSection = superviseSectionScrollPosition - middleOfScreenHeight;
   const middleOfScreenBeforeExpertiseSection = expertiseSectionScrollPosition - middleOfScreenHeight;
   const middleOfScreenAfterExpertiseSection = expertiseSectionScrollPosition + middleOfScreenHeight;

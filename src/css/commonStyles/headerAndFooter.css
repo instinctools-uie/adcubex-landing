@@ -226,6 +226,11 @@ button.header-element_show {
   display: block;
 }
 
+.header-container,
+.content-container .section-container {
+  font-size: 1rem;
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -254,7 +259,7 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > span {
+.footer-left p span {
   font-weight: 600;
   font-style: italic;
 }
@@ -283,4 +288,18 @@ footer {
 
 .footer-right > a:hover {
   color: var(--mine-shaft-lighter-color);
+}
+
+@media all and (max-width: 1400px) {
+  .logo {
+    font-size: 0.875rem;
+  }
+
+  .header-navigation-container {
+    margin-top: 10em;
+  }
+
+  .header-links-container a {
+    font-size: 3.75em;
+  }
 }

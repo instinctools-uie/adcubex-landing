@@ -2,7 +2,11 @@ export const WHITE_COLOR = { red: 255, green: 255, blue: 255 };
 export const RED_COLOR = { red: 240, green: 62, blue: 62 };
 export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
-export const RATE_CHANGE_SCROLL = 960;
+export const RATE_WSXGA_SCROLL = 960;
+export const RATE_WSGA_SCROLL = 800;
+export const WSGA_BREAKPOINT = 1366;
+export const WSXGA_ANIMATION_DELAY = 800;
+export const WSGA_ANIMATION_DELAY = 200;
 
 export const MAIN_PAGE_TOGGLE_CONTENT = {
   sectionContainer: 'section-container',
