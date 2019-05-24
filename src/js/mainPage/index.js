@@ -19,7 +19,6 @@ import {
   RATE_WSXGA_SCROLL,
   WSXGA_ANIMATION_DELAY,
   WSGA_ANIMATION_DELAY,
-  WSGA_BREAKPOINT,
   MAIN_PAGE_TOGGLE_CONTENT
 } from '../constants';
 
@@ -85,7 +84,7 @@ function initProject() {
   }
 
   if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
-    const scrollDelayForAnimation = isWSXGABreakpoint(WSGA_BREAKPOINT) ? WSXGA_ANIMATION_DELAY : WSGA_ANIMATION_DELAY;
+    const scrollDelayForAnimation = isWSXGABreakpoint() ? WSXGA_ANIMATION_DELAY : WSGA_ANIMATION_DELAY;
 
     const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
     changeColorForImprovementSection(sectionScrollPosition);

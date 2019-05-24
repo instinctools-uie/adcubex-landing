@@ -1,3 +1,5 @@
-export default function isWSXGABreakpoint(currentBreakpoint) {
-  return document.documentElement.clientWidth > currentBreakpoint;
+import { WSGA_BREAKPOINT } from './constants';
+
+export default function isWSXGABreakpoint() {
+  return document.documentElement.clientWidth > WSGA_BREAKPOINT;
 }
