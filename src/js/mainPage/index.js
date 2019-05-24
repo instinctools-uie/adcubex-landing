@@ -3,7 +3,6 @@ import {
   changeColorForBudgetSection,
   changeColorForControlSection,
   changeColorForPowerSection,
-  changeBackgroundColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
 import {
@@ -54,7 +53,6 @@ function initProject() {
   const scrolled = window.pageYOffset;
 
   if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
-    changeBackgroundColorToDefault();
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
     moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);

@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   font-family: 'montserrat_extralightregular', sans-serif;
+  background-color: rgba(245, 245, 245, 1);
 }
 
 h1,
