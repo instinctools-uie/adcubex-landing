@@ -93,11 +93,15 @@ h2 {
   position: absolute;
   z-index: -1;
   left: -8.75em;
-  top: 0em;
+  top: 104em;
 }
 
 .control-section > svg {
-  top: 15em;
+  top: 134em;
+}
+
+.power-section > svg {
+  top: 131em;
 }
 
 .expertise-section .inner-section-text > p > span,

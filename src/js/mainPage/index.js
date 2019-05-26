@@ -1,3 +1,5 @@
+import Rellax from 'rellax';
+
 import {
   changeColorForImprovementSection,
   changeColorForBudgetSection,
@@ -47,6 +49,7 @@ initProject();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
+let rellax = new Rellax('.letter-parallax');
 
 window.addEventListener('scroll', initProject);
 
@@ -97,17 +100,17 @@ function initProject() {
 
   if (scrolled >= middlePositionOfAdvancedSection && scrolled <= middlePositionOfBudgetSection) {
     const budgetBgLetter = window.document.querySelector('#budget > svg');
-    scrollParallaxBgLetters(budgetBgLetter, budgetSectionScrollPosition, advantageSectionScrollPosition);
+    // scrollParallaxBgLetters(budgetBgLetter, budgetSectionScrollPosition, advantageSectionScrollPosition);
   }
 
   if (scrolled >= middlePositionOfBudgetSection && scrolled <= middlePositionOfControlSection) {
     const controlBgLetter = window.document.querySelector('#control > svg');
-    scrollParallaxBgLetters(controlBgLetter, controlSectionScrollPosition, budgetSectionScrollPosition);
+    // scrollParallaxBgLetters(controlBgLetter, controlSectionScrollPosition, budgetSectionScrollPosition);
   }
 
   if (scrolled >= middlePositionOfControlSection && scrolled <= middlePositionOfPowerSection) {
     const powerBgLetter = window.document.querySelector('#power > svg');
-    scrollParallaxBgLetters(powerBgLetter, powerSectionScrollPosition, controlSectionScrollPosition);
+    // scrollParallaxBgLetters(powerBgLetter, powerSectionScrollPosition, controlSectionScrollPosition);
   }
 
   // For Parallax Scroll of patterns/squares
