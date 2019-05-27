@@ -1,9 +1,10 @@
+import Rellax from 'rellax';
+
 import {
   changeColorForImprovementSection,
   changeColorForBudgetSection,
   changeColorForControlSection,
   changeColorForPowerSection,
-  changeBackgroundColorToDefault,
   changeCubeColorToDefault
 } from '../changeColor';
 import {
@@ -20,7 +21,7 @@ import { RATE_WSXGA_SCROLL, WSXGA_ANIMATION_DELAY, WSGA_ANIMATION_DELAY, MAIN_PA
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
-import { scrollParallaxBgLetters, sectionImageParallax } from '../scrollParallax';
+import { sectionImageParallax } from '../scrollParallax';
 
 import changeHeaderVisibility from '../menuAnimation';
 import isWSXGABreakpoint from '../isWSXGABreakpoint';
@@ -48,6 +49,7 @@ initProject();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
+const rellax = new Rellax('.letter-parallax');
 
 window.addEventListener('scroll', initProject);
 
@@ -55,7 +57,6 @@ function initProject() {
   const scrolled = window.pageYOffset;
 
   if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
-    changeBackgroundColorToDefault();
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
     moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
@@ -85,31 +86,6 @@ function initProject() {
     changeColorForImprovementSection(sectionScrollPosition);
     transformMainCubeToDefaultSize(sectionScrollPosition);
     moveCubesToDefaultPosition(sectionScrollPosition);
-  }
-
-  // For Parallax Scroll of Big Background letters
-  const middlePositionOfAdvancedSection =
-    advantageSectionScrollPosition + (budgetSectionScrollPosition - advantageSectionScrollPosition) / 2;
-  const middlePositionOfBudgetSection =
-    budgetSectionScrollPosition + (controlSectionScrollPosition - budgetSectionScrollPosition) / 2;
-  const middlePositionOfControlSection =
-    controlSectionScrollPosition + (powerSectionScrollPosition - controlSectionScrollPosition) / 2;
-  const middlePositionOfPowerSection =
-    powerSectionScrollPosition + (improvementSectionScrollPosition - powerSectionScrollPosition) / 2;
-
-  if (scrolled >= middlePositionOfAdvancedSection && scrolled <= middlePositionOfBudgetSection) {
-    const budgetBgLetter = window.document.querySelector('#budget > svg');
-    scrollParallaxBgLetters(budgetBgLetter, budgetSectionScrollPosition, advantageSectionScrollPosition);
-  }
-
-  if (scrolled >= middlePositionOfBudgetSection && scrolled <= middlePositionOfControlSection) {
-    const controlBgLetter = window.document.querySelector('#control > svg');
-    scrollParallaxBgLetters(controlBgLetter, controlSectionScrollPosition, budgetSectionScrollPosition);
-  }
-
-  if (scrolled >= middlePositionOfControlSection && scrolled <= middlePositionOfPowerSection) {
-    const powerBgLetter = window.document.querySelector('#power > svg');
-    scrollParallaxBgLetters(powerBgLetter, powerSectionScrollPosition, controlSectionScrollPosition);
   }
 
   // For Parallax Scroll of patterns/squares
