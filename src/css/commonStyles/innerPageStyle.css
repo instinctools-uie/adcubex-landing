@@ -252,7 +252,8 @@ h4 + p {
   color: white;
 }
 
-.footer-left span {
+.footer-left p span {
+  color: white;
   font-style: italic;
 }
 

@@ -260,11 +260,8 @@ footer {
 }
 
 .footer-left p span {
-  font-weight: 600;
-}
-
-.footer-left i {
   color: var(--silver-chalice-color);
+  font-weight: 600;
   font-style: italic;
 }
 
