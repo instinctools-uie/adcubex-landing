@@ -30,4 +30,4 @@ install_dependecies:
     - npm run lint
     - npm run test
     - npm run build
-    - ssh adcubex@95.216.89.197
+    - ssh adcubex@95.216.89.197 -p 5022
