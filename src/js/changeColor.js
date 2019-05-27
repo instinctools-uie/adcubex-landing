@@ -1,5 +1,4 @@
 import {
-  BODY_ELEMENT_OPTIONS,
   CUBE_LEFT_SIDE_ELEMENT_OPTIONS,
   CUBE_RIGHT_SIDE_ELEMENT_OPTIONS,
   CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS,
@@ -99,10 +98,6 @@ export function changeColorForImprovementSection(sectionScrollPosition) {
     [CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS],
     sectionScrollPosition
   );
-}
-
-export function changeBackgroundColorToDefault() {
-  changeSelectorElementsProperty(BODY_ELEMENT_OPTIONS, BODY_ELEMENT_OPTIONS.defaultColor);
 }
 
 export function changeCubeColorToDefault() {
