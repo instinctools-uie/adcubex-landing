@@ -155,6 +155,14 @@ h2 {
   top: 0em;
 }
 
+.control-section {
+  margin-top: 0;
+}
+
+.power-section {
+  margin-top: 3em;
+}
+
 .control-section > svg {
   top: 15em;
 }
@@ -519,22 +527,6 @@ footer {
 
   .power-section .vertical-inscription {
     top: -25em;
-  }
-
-  .section-container > svg {
-    max-height: 150vh;
-  }
-
-  .budget-section > svg {
-    left: -20em;
-  }
-
-  .control-section > svg {
-    left: -29em;
-  }
-
-  .power-section > svg {
-    left: -25em;
   }
 
   .external-links,
