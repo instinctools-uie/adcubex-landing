@@ -49,7 +49,7 @@ article.consulting-article > a.consulting-inscription {
   }
 }
 
-@media all and (max-width: 768px){
+@media all and (max-width: 768px) {
   article.clear-article,
   article.consulting {
     margin-top: 0;

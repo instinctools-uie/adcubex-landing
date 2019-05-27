@@ -325,7 +325,6 @@ h4 + p {
 }
 
 @media all and (max-width: 768px) {
-
   .vertical-inscription-container,
   .content-column .svg-container {
     display: none;
@@ -345,7 +344,8 @@ h4 + p {
     padding: 8em 2.75em 0;
   }
 
-  .content-column, article.content-column {
+  .content-column,
+  article.content-column {
     flex-direction: column;
   }
 
