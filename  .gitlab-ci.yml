@@ -1,6 +1,29 @@
-production:
+stages:
+  - build
+  - test
+  - deploy
+
+install_dependecies:
   only:
     - master
+  stage: build
+  script:
+    - npm -v
+    - node -v
+    - npm install
+
+run_tests:
+  only:
+    - master
+  stage: test
+  script:
+    - npm run lint
+    - npm run test
+
+deploy_bundle:
+  only:
+    - master
+  stage: deploy
   before_script:
     - npm -v
     - node -v
@@ -14,5 +37,3 @@ production:
     - chmod 700 ~/.ssh
   script:
     - npm run build
-
-
