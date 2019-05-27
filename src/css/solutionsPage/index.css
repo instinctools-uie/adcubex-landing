@@ -15,10 +15,6 @@
   fill: var(--cube-bottom-side-purple-color);
 }
 
-.expertise-article .section-content {
-  margin-right: 2.4em;
-}
-
 .section-content > h2 {
   height: 2.5em;
   margin-bottom: 0;

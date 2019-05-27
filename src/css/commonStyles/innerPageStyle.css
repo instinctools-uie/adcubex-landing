@@ -75,6 +75,17 @@ h1,
   transition: line-height 0.5s ease-in-out;
 }
 
+.content-wrapper article:nth-of-type(1) {
+  padding-top: 0;
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5em;
+}
+
 .article--active div > h2 {
   line-height: 1.12em;
 }
@@ -86,12 +97,6 @@ article div > p {
 
 .article--active div > p {
   opacity: 1;
-}
-
-article {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2.5em;
 }
 
 article.article-right {
@@ -106,7 +111,27 @@ article.content-column,
   justify-content: space-between;
 }
 
+article.content-column--start,
+.content-column--start {
+  justify-content: flex-start;
+}
+
+article.content-column--end,
+.content-column--end {
+  justify-content: flex-end;
+}
+
+article.content-column--start,
+article.content-column--end,
+.content-column--start,
+.content-column--end {
+  padding-top: 8em;
+  padding-bottom: 8em;
+}
+
 .content-column .section-content {
+  position: relative;
+  z-index: 2;
   width: 60%;
 }
 
@@ -120,11 +145,27 @@ article.content-column,
   align-items: center;
   justify-content: center;
   width: 50%;
+  max-height: 100%;
   padding: 0 1em;
+}
+
+.content-column .svg-bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.content-column .svg-bg--right {
+  right: 0;
+}
+
+.content-column .svg-bg--left {
+  left: 0;
 }
 
 .svg-container svg {
   max-width: 100%;
+  max-height: 100%;
   height: auto;
 }
 
@@ -148,6 +189,8 @@ h2 + p {
 }
 
 .vertical-inscription img {
+  max-width: 100%;
+  max-height: 100%;
   -o-transition: transform 0.5s ease-in-out;
   -moz-transition: transform 0.5s ease-in-out;
   -webkit-transition: transform 0.5s ease-in-out;
@@ -169,7 +212,7 @@ h2 + p {
   align-items: center;
   color: var(--mine-shaft-lighter-color);
   font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 600;
 }
 
@@ -194,8 +237,9 @@ h4 + p {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 23.625rem;
-  height: 5rem;
+  width: 10.5em;
+  max-width: 100%;
+  height: 2.25em;
   padding: 0 1em 0 1em;
   border: white solid 0.01em;
   margin: 2.4em 0 1.7em;
@@ -260,5 +304,86 @@ h4 + p {
   .custom-button {
     height: 3em;
     font-size: 1.75em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1400px) {
+  .content-wrapper .vertical-inscription {
+    top: -2em;
+    right: -3em;
+  }
+
+  .vertical-inscription-img-container {
+    width: 3em;
+    height: 3em;
+    margin-right: 2.25em;
+  }
+
+  .vertical-inscription > span {
+    font-size: 1.75em;
+  }
+}
+
+@media all and (max-width: 768px) {
+
+  .vertical-inscription-container,
+  .content-column .svg-container {
+    display: none;
+  }
+
+  footer,
+  .content-section .content-wrapper {
+    padding-top: 2.5em;
+  }
+
+  footer,
+  .content-wrapper {
+    padding: 1.75em;
+  }
+
+  .title-section .content-wrapper {
+    padding: 8em 2.75em 0;
+  }
+
+  .content-column, article.content-column {
+    flex-direction: column;
+  }
+
+  .content-column--end,
+  .content-column--start,
+  article.content-column--end,
+  article.content-column--start {
+    padding-top: 2.5em;
+    padding-bottom: 0;
+  }
+
+  .content-column .section-content {
+    width: 100%;
+  }
+
+  h1,
+  .section-content > h2 {
+    font-size: 4em;
+  }
+
+  h2 + p {
+    margin-top: 1.4em;
+  }
+
+  .title-section p {
+    font-size: 1.7em;
+  }
+
+  .section-container article .section-content > p {
+    font-size: 1.4em;
+  }
+
+  .contact-section h4 {
+    margin-top: 0;
+  }
+
+  .custom-button {
+    margin-bottom: 0;
+    font-size: 2em;
   }
 }

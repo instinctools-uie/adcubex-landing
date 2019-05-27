@@ -9,7 +9,7 @@
 }
 
 .header-container.header-container_white {
-  z-index: 4;
+  z-index: 9;
   background-color: white;
   animation: white-animation 0.3s ease-out;
 }
@@ -232,17 +232,22 @@ button.header-element_show {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  margin: 2.55em 0 2.85em 0;
+  max-width: 80em;
+  width: 100%;
+  padding: 2.25em 3.8125em;
+  margin: 0 auto;
+  box-sizing: border-box;
   color: white;
   font-size: 0.875rem;
+}
+
+footer * {
+  box-sizing: border-box;
 }
 
 .footer-container {
   display: flex;
   justify-content: space-between;
-  max-width: 68.625em;
 }
 
 .footer-container:first-child {
@@ -292,6 +297,7 @@ footer {
 
 .vertical-inscription-container {
   position: relative;
+  z-index: 8;
 }
 
 .vertical-inscription {
@@ -355,7 +361,18 @@ footer {
     font-size: 3.75em;
   }
 
-  footer {
-    margin: 1em 0 2.5em 0;
+    footer {
+      margin: 1em 0 2.5em 0;
+    }
+}
+
+@media all and (max-width: 768px) {
+  .header-container,
+  .content-container .section-container {
+    font-size: 0.8rem;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
   }
 }

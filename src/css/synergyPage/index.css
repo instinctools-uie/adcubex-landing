@@ -33,11 +33,6 @@ article.together {
   margin-bottom: 4.8em;
 }
 
-article.together .section-content {
-  margin-right: -18em;
-  z-index: 2;
-}
-
 .you-article .vertical-inscription {
   top: -12em;
 }
@@ -56,5 +51,16 @@ article.together .section-content {
   }
   100% {
     background-color: transparent;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .external-links {
+    flex-wrap: wrap;
+    margin: 0 0 2.5em;
+  }
+
+  article.together {
+    margin: 0 0 2.5em;
   }
 }
