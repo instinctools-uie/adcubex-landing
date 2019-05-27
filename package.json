@@ -48,7 +48,7 @@
     "babel-eslint": "10.0.1",
     "babel-jest": "24.7.1",
     "babelify": "6.4.0",
-    "browser-sync": "2.26.5",
+    "browser-sync": "^2.26.5",
     "browserify": "11.2.0",
     "eslint": "5.9.0",
     "eslint-config-airbnb": "17.1.0",
@@ -71,5 +71,8 @@
     "prettier": "1.7.4",
     "vinyl-buffer": "1.0.1",
     "vinyl-source-stream": "1.1.0"
+  },
+  "dependencies": {
+    "rellax": "1.9.1"
   }
 }

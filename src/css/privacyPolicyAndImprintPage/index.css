@@ -18,25 +18,16 @@
   margin: 0.45em 0 0 -3.68em;
 }
 
-.content-section {
-  margin-top: -26.8em;
-}
-
-.dataProtection-article {
-  margin-top: 2.5em;
-}
-
-.dataCollection-article {
+.data-collection-article {
   margin-top: 5em;
 }
 
 article {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
 }
 
-.dataCollection-article > h2 {
+.data-collection-article > h2 {
   animation: none;
 }
 
@@ -49,7 +40,7 @@ h3 {
   margin-bottom: 0.2em;
 }
 
-.section-container > article > p {
+.section-container article > p {
   font-size: 1em;
   line-height: 1.75em;
 }

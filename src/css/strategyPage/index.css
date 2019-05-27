@@ -15,14 +15,6 @@
   fill: var(--cube-bottom-side-red-color);
 }
 
-.analysis-article > svg {
-  margin-top: 1.8em;
-}
-
-a.strategy-inscription {
-  margin: 11em -7em 0 -11em;
-}
-
 article.clear-article {
   margin-top: 8.2em;
 }
@@ -35,13 +27,9 @@ article.consulting {
   margin-top: 15.5em;
 }
 
-article.consulting > .section-content {
+article.consulting .section-content {
   margin-right: -9em;
   z-index: 2;
-}
-
-article.consulting > svg {
-  margin-top: -12em;
 }
 
 article.consulting-article > a.consulting-inscription {
@@ -49,7 +37,6 @@ article.consulting-article > a.consulting-inscription {
 }
 
 article.implementation-article {
-  margin-top: 16.5em;
   margin-bottom: 4.5em;
 }
 
@@ -58,8 +45,12 @@ article.implementation-article > .section-content {
   z-index: 2;
 }
 
-article.implementation-article > svg {
-  margin-top: -13.5em;
+.analysis-article .vertical-inscription {
+  top: -3.4em;
+}
+
+.consulting-article .vertical-inscription {
+  top: -12.3em;
 }
 
 .header-container.header-container_white {
