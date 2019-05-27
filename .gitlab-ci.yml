@@ -11,6 +11,7 @@ install_dependecies:
     - master
   stage: deploy
   before_script:
+    - echo "$TEST_KEY"
     - npm -v
     - node -v
     - npm install
@@ -18,7 +19,7 @@ install_dependecies:
     - npm run test
     - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
     - eval $(ssh-agent -s)
-    - echo "$TEST_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
     - ssh-keyscan 95.216.89.197 >> ~/.ssh/known_hosts
