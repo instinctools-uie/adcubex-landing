@@ -260,25 +260,13 @@ footer {
 }
 
 .footer-left p span {
+  color: var(--silver-chalice-color);
   font-weight: 600;
   font-style: italic;
 }
 
-.footer-left > p > a {
-  text-decoration: none;
-}
-
-.footer-left > p > a > i > sup {
-  color: red;
-}
-
-.footer-left > p > a > i > span {
-  color: black;
-}
-
-.footer-left > a,
-.footer-right > a {
-  color: white;
+.footer-left a,
+.footer-right a {
   text-decoration: none;
 }
 
