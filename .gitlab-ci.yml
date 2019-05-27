@@ -4,6 +4,9 @@ stages:
   - deploy
 
 install_dependecies:
+  tags:
+    - devops
+    - docker
   only:
     - master
   stage: build
