@@ -1,5 +1,4 @@
-services:
-  - node:11.2.0
+image: node:11.2.0
 
 stages:
   - build
