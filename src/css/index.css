@@ -68,4 +68,7 @@
   --cube-left-side-purple-color: rgba(157, 55, 227);
   --cube-right-side-purple-color: rgba(147, 45, 191);
   --cube-bottom-side-purple-color: rgba(150, 49, 213);
+
+  /* Breakpoints */
+  --WXGA-device: 1400px;
 }

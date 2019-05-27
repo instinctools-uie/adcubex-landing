@@ -16,20 +16,12 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
-article.you-article > svg {
-  margin-top: 9em;
-}
-
-article.we-article > svg {
-  margin: 11.7em 0 0 7.4em;
-}
-
 .external-links {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  margin: 8.625em 0 0 4em;
+  margin-top: 8.625em;
 }
 
 article.we-article {
@@ -41,11 +33,28 @@ article.together {
   margin-bottom: 4.8em;
 }
 
-article.together > .section-content {
+article.together .section-content {
   margin-right: -18em;
   z-index: 2;
 }
 
-article.together > .vertical-inscription {
-  margin: 17em -6.5em 0 -19em;
+.you-article .vertical-inscription {
+  top: -12em;
+}
+
+.together .vertical-inscription {
+  top: -15em;
+}
+
+.header-container.header-container_white {
+  background-color: var(--cube-left-side-blue-color);
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: var(--cube-left-side-blue-color);
+  }
+  100% {
+    background-color: transparent;
+  }
 }

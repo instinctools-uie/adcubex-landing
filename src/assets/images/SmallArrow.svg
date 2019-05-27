@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="7.875 0 7.875 13.7249559 1.57504412 7.425 0 8.99995588 9.00004412 18 18 8.99995588 16.4250441 7.425 10.125 13.7249559 10.125 0"></polygon>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Main-page_1920-90_Final-(I-hope)" transform="translate(-950.000000, -2097.000000)">
+            <g id="Proven-expertise" transform="translate(367.000000, 1325.000000)">
+                <g id="Components-/-Button" transform="translate(265.000000, 741.000000)">
+                    <g id="Icons-/-Arrow" transform="translate(327.000000, 40.000000) rotate(-90.000000) translate(-327.000000, -40.000000) translate(318.000000, 31.000000)">
+                        <g id="Arrow">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use fill="#000000" xlink:href="#path-1"></use>
+                            <g id="Color" mask="url(#mask-2)" fill="#FFFFFF">
+                                <rect id="Rectangle" x="0" y="0" width="18" height="18"></rect>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
