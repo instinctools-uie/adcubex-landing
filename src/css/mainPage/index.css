@@ -9,16 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-html a {
-  text-decoration: none;
-}
-
-button,
-button:active,
-button:focus {
-  outline: none;
-}
-
 body {
   margin: 0;
   font-family: 'montserrat_extralightregular', sans-serif;
@@ -68,6 +58,10 @@ h2 {
   color: var(--mine-shaft-light-color);
 }
 
+.section-container a {
+  text-decoration: none;
+}
+
 .supervise-section.section-container {
   margin-top: 8em;
 }
@@ -98,19 +92,12 @@ h2 {
 }
 
 .vertical-inscription img {
-  -o-transition: transform 0.5s ease-in-out;
-  -moz-transition: transform 0.5s ease-in-out;
-  -webkit-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
   cursor: pointer;
 }
 
 .vertical-inscription:hover img {
-  -o-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -moz-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
   transform: translateY(20px);
 }
 
@@ -249,9 +236,6 @@ h2 {
   width: 20em;
   height: 20em;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
