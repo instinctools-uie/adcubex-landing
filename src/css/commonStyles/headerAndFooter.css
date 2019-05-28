@@ -2,21 +2,86 @@
   overflow: hidden;
 }
 
+.header-container {
+  position: fixed;
+  width: 100%;
+  height: 6.25em;
+}
+
+.header-container.header-container_white {
+  z-index: 4;
+  background-color: white;
+  animation: white-animation 0.3s ease-out;
+}
+
+.header-container.header-container_hide {
+  z-index: 4;
+  background-color: transparent;
+  animation: white-animation-hide 0.3s ease-out;
+}
+
+@keyframes white-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+svg.header-element_hide {
+  opacity: 0;
+  animation: hide-animation 0.3s ease-out;
+}
+
+button.header-element_hide {
+  opacity: 0;
+  animation: hide-animation 0.3s ease-out;
+}
+
+@keyframes hide-animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+svg.header-element_show {
+  opacity: 1;
+  animation: none;
+}
+
+button.header-element_show {
+  opacity: 1;
+  animation: none;
+}
+
 .logo {
   position: fixed;
-  top: 4.4em;
+  top: 2em;
   left: 3.3em;
 }
 
 .toggle-menu-button {
   position: fixed;
-  top: 4.4em;
+  top: 2.4em;
   right: 3.3em;
 }
 
 .logo,
 .toggle-menu-button {
-  z-index: 3;
+  z-index: 4;
 }
 
 .header-navigation {
@@ -41,7 +106,7 @@
 .header-navigation--active {
   opacity: 1;
   height: 100vh;
-  z-index: 2;
+  z-index: 3;
 }
 
 .header-navigation-bg-image {
@@ -161,10 +226,15 @@
   display: block;
 }
 
+.header-container,
+.content-container .section-container {
+  font-size: 1rem;
+}
+
 footer {
   display: flex;
   justify-content: center;
-  margin: 16.25rem 0 2.5rem 0;
+  margin: 2.55em 0 2.85em 0;
   color: white;
   font-size: 0.875rem;
 }
@@ -172,7 +242,7 @@ footer {
 .footer-container {
   display: flex;
   justify-content: space-between;
-  max-width: 68.625rem;
+  max-width: 68.625em;
 }
 
 .footer-container:first-child {
@@ -189,26 +259,14 @@ footer {
   font-style: normal;
 }
 
-.footer-left > p > span {
+.footer-left p span {
+  color: var(--silver-chalice-color);
   font-weight: 600;
   font-style: italic;
 }
 
-.footer-left > p > a {
-  text-decoration: none;
-}
-
-.footer-left > p > a > i > sup {
-  color: red;
-}
-
-.footer-left > p > a > i > span {
-  color: black;
-}
-
-.footer-left > a,
-.footer-right > a {
-  color: white;
+.footer-left a,
+.footer-right a {
   text-decoration: none;
 }
 
@@ -218,4 +276,74 @@ footer {
 
 .footer-right > a:hover {
   color: var(--mine-shaft-lighter-color);
+}
+
+.vertical-inscription-container {
+  position: relative;
+}
+
+.vertical-inscription {
+  position: absolute;
+  top: 0;
+  right: -1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transform-origin: right top;
+  transform: rotate(90deg);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.vertical-inscription-img-container {
+  margin-right: 3.25em;
+  transform: rotate(-90deg);
+}
+
+.vertical-inscription img {
+  -o-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.vertical-inscription:hover img {
+  -o-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  transform: translateY(20px);
+}
+
+.vertical-inscription > span {
+  display: flex;
+  align-items: center;
+  color: var(--mine-shaft-lighter-color);
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+@media all and (max-width: 1400px) {
+  .vertical-inscription > span {
+    font-size: 1.7rem;
+  }
+
+  .logo {
+    font-size: 0.875em;
+  }
+
+  .header-navigation-container {
+    margin-top: 10em;
+  }
+
+  .header-links-container a {
+    font-size: 3.75em;
+  }
+
+  footer {
+    margin: 1em 0 2.5em 0;
+  }
 }

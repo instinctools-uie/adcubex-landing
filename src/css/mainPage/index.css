@@ -22,6 +22,7 @@ button:focus {
 body {
   margin: 0;
   font-family: 'montserrat_extralightregular', sans-serif;
+  background-color: rgba(236, 234, 234, 1);
 }
 
 h1,
@@ -59,7 +60,7 @@ h2 {
 }
 
 .section-container {
-  position: static;
+  position: relative;
   z-index: 1;
   margin-top: 8em;
   width: 100%;
@@ -128,12 +129,8 @@ h2 {
   width: 100%;
 }
 
-.budget-text-container > .inner-section-text > .vertical-inscription {
-  top: 4.5em;
-}
-
-.budget-text-container > .inner-section-text > .vertical-inscription > span,
-.power-text-container > .inner-section-text > .vertical-inscription > span {
+.budget-section .vertical-inscription span,
+.power-section .vertical-inscription span {
   color: white;
 }
 
@@ -143,17 +140,48 @@ h2 {
   color: white;
 }
 
-.budget-section > svg,
-.control-section > svg,
-.power-section > svg {
+.letter-parallax {
   position: absolute;
   z-index: -1;
-  left: -14.25em;
-  display: none;
+  left: -8.75em;
 }
 
-.power-section > svg {
-  left: -12.25em;
+@-moz-document url-prefix() {
+  .letter-parallax {
+    z-index: -2;
+  }
+
+  .budget-section .letter-parallax {
+    top: 152em !important;
+  }
+
+  .control-section .letter-parallax {
+    top: 199em !important;
+  }
+
+  .power-section .letter-parallax {
+    top: 221em !important;
+  }
+}
+
+.control-section {
+  margin-top: 0;
+}
+
+.power-section {
+  margin-top: 3em;
+}
+
+.budget-section .letter-parallax {
+  top: 96em;
+}
+
+.control-section .letter-parallax {
+  top: 116em;
+}
+
+.power-section .letter-parallax {
+  top: 122em;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -308,11 +336,6 @@ h2 {
   margin-top: -1.4em;
 }
 
-.advantage-section > .text-container > .inner-section-text > .vertical-inscription {
-  top: 8.2em;
-  right: -6.5em;
-}
-
 .supervise-section > .text-container > .inner-section-text,
 .advantage-section > .text-container > .inner-section-text {
   position: relative;
@@ -337,13 +360,12 @@ h2 {
   margin-top: -0.3em;
 }
 
-.budget-section > .budget-text-container > .inner-section-text > a {
-  right: -2.6em;
-  top: 3.6em;
+.budget-section .vertical-inscription {
+  top: -30.5em;
 }
 
-.letter-parallax {
-  max-width: 94em;
+.power-section .vertical-inscription {
+  top: -46.2em;
 }
 
 .power-image-container {
@@ -395,7 +417,7 @@ h2 {
   margin-bottom: -9em;
 }
 
-.improvement-section > .text-container > .inner-section-text .custom-button {
+.improvement-section .inner-section-text .custom-button {
   display: flex;
   justify-content: space-between;
   margin-top: 3.1em;
@@ -418,12 +440,13 @@ h2 {
   line-height: 2.625rem;
 }
 
-.image-content_small {
+.image-content--small {
   margin-top: 0.938rem;
   line-height: 1.1875rem;
+  font-size: 1rem;
 }
 
-.image-content_large {
+.image-content--large {
   margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
   font-size: 4.5rem;
@@ -446,7 +469,7 @@ h2 {
   right: -4.5em;
 }
 
-.power-image > .image-content-section > .image-content_large {
+.power-image > .image-content-section > .image-content--large {
   margin: 3rem 0;
   font-family: montserratbold, sans-serif;
   font-size: 6.5rem;
@@ -454,7 +477,7 @@ h2 {
   line-height: 0;
 }
 
-div.power-image > .image-content-section > p.image-content_large {
+div.power-image > .image-content-section > p.image-content--large {
   margin-top: 2rem;
   font-family: 'montserrat_extraboldregular', sans-serif;
   font-size: 8rem;
@@ -471,6 +494,7 @@ div.power-image > .image-content-section > p.image-content_large {
 }
 
 footer {
+  margin-top: 19em;
   color: var(--silver-chalice-color);
 }
 
@@ -483,4 +507,96 @@ footer {
 .advantage-section h2 > span,
 .expertise-section h2 > span {
   color: var(--flamingo-color);
+}
+
+@media all and (max-width: 1400px) {
+  .content-container {
+    width: 52.2em;
+  }
+
+  .section-container,
+  .supervise-section.section-container {
+    margin-top: 0;
+  }
+
+  .section-container.toolset-section {
+    margin-top: 5em;
+  }
+
+  .budget-section,
+  .improvement-section {
+    margin-bottom: 0;
+  }
+
+  .budget-section .vertical-inscription {
+    top: -20em;
+  }
+
+  .power-section .vertical-inscription {
+    top: -25em;
+  }
+
+  .external-links,
+  .toolset-section > .external-links {
+    font-size: 0.875em;
+    margin-top: 9em;
+  }
+
+  .custom-button {
+    width: 15em;
+    height: 3em;
+  }
+
+  .expertise-section .inner-section-text .custom-button {
+    margin-top: 0.4em;
+  }
+
+  .improvement-section .inner-section-text .custom-button {
+    margin-top: 2em;
+    font-size: 1em;
+  }
+
+  .inner-section-text > p + p {
+    margin-top: 1.1em;
+  }
+
+  .section-container > h1,
+  .section-container > h2 {
+    font-size: 3.5em;
+  }
+
+  .budget-image,
+  .power-image {
+    height: auto;
+    font-size: 0.7em;
+    padding: 4em 2em;
+  }
+
+  .power-image {
+    min-width: 56.3125em;
+    margin-left: 0;
+  }
+
+  .budget-image,
+  .power-image-container {
+    margin: 0 0 0 10.3em;
+  }
+
+  .power-image-container > button {
+    margin-top: 1.4em;
+  }
+
+  .image-content--large {
+    margin: 2em 0;
+    font-size: 3.5em;
+  }
+
+  .inner-section-text {
+    font-size: 1.55em;
+    line-height: 1.4em;
+  }
+
+  footer {
+    margin: 1em 0 2.5em 0;
+  }
 }

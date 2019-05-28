@@ -15,36 +15,8 @@
   fill: var(--cube-bottom-side-purple-color);
 }
 
-.expertise-article > .vertical-inscription {
-  margin-top: 12.5em;
-}
-
-.expertise-article > .section-content {
+.expertise-article .section-content {
   margin-right: 2.4em;
-}
-
-.expertise-article > svg {
-  margin-top: 13.5em;
-}
-
-.investments-article > svg {
-  margin: 0 0 0 3.8em;
-}
-
-.increase-article > svg {
-  margin-top: 1.2em;
-}
-
-.control-article > svg {
-  margin: 7em 0 0 4.2em;
-}
-
-.customization-article > svg {
-  margin-top: 3.6em;
-}
-
-.security-article > svg {
-  margin-top: 2.3em;
 }
 
 .section-content > h2 {
@@ -55,7 +27,7 @@
   transition: line-height 0.5s ease-in-out;
 }
 
-.article--active > div > h2 {
+.article--active div > h2 {
   line-height: 1.12em;
 }
 
@@ -72,13 +44,38 @@
   margin-bottom: 7.5em;
 }
 
-.scaling-article > svg {
-  margin: 0.7em 0 0 1.3em;
-}
-
 .increase-article > .vertical-inscription,
 .customization-article > .vertical-inscription,
 .security-article > .vertical-inscription {
   margin-top: 10em;
   margin-right: -6em;
+}
+
+.header-container.header-container_white {
+  background-color: var(--cube-left-side-purple-color);
+}
+
+@keyframes white-animation-hide {
+  0% {
+    background-color: var(--cube-left-side-purple-color);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.expertise-article .vertical-inscription {
+  top: -14.5em;
+}
+
+.increase-article .vertical-inscription {
+  top: -25.5em;
+}
+
+.customization-article .vertical-inscription {
+  top: -22.3em;
+}
+
+.security-article .vertical-inscription {
+  top: -20.8em;
 }
