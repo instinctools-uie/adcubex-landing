@@ -64,7 +64,6 @@ textarea {
   font-family: 'montserrat_lightregular', sans-serif;
   font-weight: 600;
   font-size: 1.35em;
-  outline: none;
 }
 
 textarea {
@@ -186,7 +185,7 @@ label {
   }
 }
 
-@media all and (max-width: var(--WXGA-device)) {
+@media all and (max-width: 1400px) {
   input,
   textarea {
     font-size: 1em;

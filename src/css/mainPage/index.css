@@ -58,6 +58,10 @@ h2 {
   color: var(--mine-shaft-light-color);
 }
 
+.section-container a {
+  text-decoration: none;
+}
+
 .supervise-section.section-container {
   margin-top: 8em;
 }
@@ -68,6 +72,42 @@ h2 {
 
 .budget-section {
   margin-bottom: 5em;
+}
+
+.vertical-inscription {
+  position: absolute;
+  top: 7em;
+  right: -6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transform: rotate(90deg);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.vertical-inscription-img-container {
+  margin-right: 3.25em;
+  transform: rotate(-90deg);
+}
+
+.vertical-inscription img {
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.vertical-inscription:hover img {
+  transform: translateY(20px);
+}
+
+.vertical-inscription > span {
+  display: flex;
+  align-items: center;
+  color: var(--mine-shaft-lighter-color);
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .budget-text-container > .inner-section-text,
@@ -196,9 +236,6 @@ h2 {
   width: 20em;
   height: 20em;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
@@ -315,14 +352,11 @@ h2 {
   top: -46.2em;
 }
 
-.big-letter {
-}
-
 .power-image-container {
   margin: 6.2em 0 0 16.25em;
 }
 
-.power-image-container > button {
+.power-image-container a {
   margin-top: 7.4em;
   border: 0.01em solid white;
   background-color: transparent;
@@ -332,7 +366,7 @@ h2 {
   transition-timing-function: ease-in;
 }
 
-.power-image-container > .custom-button > .button-image {
+.power-image-container .custom-button > .button-image {
   margin-right: 0.2em;
 }
 
@@ -340,11 +374,11 @@ h2 {
   transition: fill 0.4s ease-in;
 }
 
-.power-image-container > .custom-button:hover #but_arrow {
+.power-image-container .custom-button:hover #but_arrow {
   fill: #353535;
 }
 
-.power-image-container > .custom-button:hover {
+.power-image-container .custom-button:hover {
   color: #353535;
   background-color: white;
 }
@@ -459,7 +493,7 @@ footer {
   color: var(--flamingo-color);
 }
 
-@media all and (max-width: var(--WXGA-device)) {
+@media all and (max-width: 1400px) {
   .content-container {
     width: 52.2em;
   }

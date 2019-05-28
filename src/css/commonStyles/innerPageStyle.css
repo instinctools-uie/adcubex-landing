@@ -148,19 +148,12 @@ h2 + p {
 }
 
 .vertical-inscription img {
-  -o-transition: transform 0.5s ease-in-out;
-  -moz-transition: transform 0.5s ease-in-out;
-  -webkit-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
   cursor: pointer;
 }
 
 .vertical-inscription:hover img {
-  -o-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -moz-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
   transform: translateY(20px);
 }
 
@@ -184,6 +177,10 @@ h2 + p {
 .contact-section h4 {
   font-family: montserrat_mediumregular, sans-serif;
   font-size: 2.25em;
+}
+
+.contact-section a {
+  text-decoration: none;
 }
 
 h4 + p {
@@ -266,7 +263,7 @@ h4 + p {
   }
 }
 
-@media all and (max-width: var(--WXGA-device)) {
+@media all and (max-width: 1400px) {
   .custom-button {
     height: 3em;
     font-size: 1.75em;
