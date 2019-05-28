@@ -49,7 +49,7 @@ initProject();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
-const rellax = new Rellax('.letter-parallax');
+(() => new Rellax('.letter-parallax'))();
 
 window.addEventListener('scroll', initProject);
 
