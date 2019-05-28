@@ -4,6 +4,7 @@
 @import '../commonStyles/mailIcon.css';
 @import '../commonStyles/headerAndFooter.css';
 @import './onLoadContentAnimation.css';
+@import '../swiper.min.css';
 
 html {
   scroll-behavior: smooth;
@@ -593,9 +594,40 @@ footer {
 }
 
 @media all and (max-width: 768px) {
+  .content-container {
+    box-sizing: border-box;
+    width: 46.2em;
+    padding: 0 4em 0 2em;
+  }
+
+  .letter-parallax {
+    left: -3.75em;
+  }
+
+  .budget-section .letter-parallax {
+    top: 126%;
+  }
+
+  .control-section .letter-parallax {
+    top: 140%;
+  }
+
+  .power-section .letter-parallax {
+    top: 163%;
+  }
+
+  .improvement-section .inner-section-image {
+    top: -27em;
+  }
+
+  .budget-image,
+  .power-image-container {
+    margin-left: 5.3em;
+  }
+
   .cubes-container {
-    width: 80em;
-    height: 84em;
+    width: 155%;
+    height: 114%;
     top: -1.75em;
     right: -11.1875em;
   }
