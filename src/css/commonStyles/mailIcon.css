@@ -1,7 +1,7 @@
 .mailIcon-container {
   position: fixed;
   right: 0;
-  bottom: 1.25em;
+  bottom: 4.5em;
   z-index: 2;
   margin-right: 4em;
   border: none;
@@ -42,7 +42,7 @@
 }
 
 .mailIcon-background:hover .icon-wrapper {
-  border-radius: 0;
+  border-radius: 15% 15% 15% 15% / 45% 45% 45% 45%;
   box-shadow: none;
 }
 
