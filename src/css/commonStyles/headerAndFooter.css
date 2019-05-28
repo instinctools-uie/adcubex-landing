@@ -4,8 +4,13 @@
 
 .header-container {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
   width: 100%;
   height: 6.25em;
+  padding: 0 3.8125em;
 }
 
 .header-container.header-container_white {
@@ -65,18 +70,6 @@ svg.header-element_show {
 button.header-element_show {
   opacity: 1;
   animation: none;
-}
-
-.logo {
-  position: fixed;
-  top: 2em;
-  left: 3.3em;
-}
-
-.toggle-menu-button {
-  position: fixed;
-  top: 2.4em;
-  right: 3.3em;
 }
 
 .logo,
@@ -367,6 +360,11 @@ footer * {
 }
 
 @media all and (max-width: 768px) {
+
+  .header-container {
+    padding: 0 1.75em;
+  }
+
   .header-container,
   .content-container .section-container {
     font-size: 0.8rem;
