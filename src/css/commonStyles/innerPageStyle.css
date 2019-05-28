@@ -247,6 +247,16 @@ h4 + p {
   animation: cube-animation 1.4s ease-out alternate;
 }
 
+.footer-left a,
+.footer-right a {
+  color: white;
+}
+
+.footer-left p span {
+  color: white;
+  font-style: italic;
+}
+
 @keyframes cube-animation {
   0% {
     transform: scale(0);
