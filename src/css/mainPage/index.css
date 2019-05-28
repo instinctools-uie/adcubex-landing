@@ -584,3 +584,19 @@ footer {
     margin: 1em 0 2.5em 0;
   }
 }
+
+@media all and (max-width: 1024px) {
+  .cubes-container {
+    width: 64.125em;
+    height: 64.125em;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .cubes-container {
+    width: 80em;
+    height: 84em;
+    top: -1.75em;
+    right: -11.1875em;
+  }
+}
