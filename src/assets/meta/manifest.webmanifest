@@ -1,7 +1,7 @@
 {
     "short_name": "AdCubex",
     "name": "AdCubex Website",
-    "start_url": "adcubex.com",
+    "start_url": "https://adcubex.com",
     "icons": [
         {
             "src": "https://adcubex.com/assets/meta/android-chrome-192x192.png",
