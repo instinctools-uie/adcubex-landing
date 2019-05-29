@@ -707,3 +707,82 @@ footer {
     top: -27em;
   }
 }
+
+@media (max-width: 414px) {
+  .content-container {
+    padding: 0;
+  }
+
+  .content-container .section-container,
+  .header-container {
+    font-size: 0.5rem;
+  }
+
+  .budget-image,
+  .power-image-container {
+    box-sizing: border-box;
+    margin-left: 0;
+  }
+
+  .image-content_middle {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  .budget-section .letter-parallax {
+    top: 186%;
+  }
+
+  .control-section .letter-parallax {
+    top: 212%;
+  }
+
+  .power-section .letter-parallax {
+    top: 254%;
+  }
+
+  .power-section div > p > span {
+    font-size: 1.5em;
+  }
+
+  div.power-image .image-content-section p.image-content--large {
+    font-size: 15em;
+  }
+
+  footer {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 375px) {
+  footer {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-navigation--active {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-navigation-container {
+    padding-left: 2em;
+  }
+
+  .cubes-container {
+    right: -5.5em;
+  }
+
+  .budget-section .letter-parallax {
+    top: 216%;
+  }
+
+  .control-section .letter-parallax {
+    top: 245%;
+  }
+
+  .power-section .letter-parallax {
+    top: 276%;
+  }
+}
