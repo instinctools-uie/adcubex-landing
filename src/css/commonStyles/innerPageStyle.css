@@ -21,6 +21,7 @@ body {
 
 .title-section {
   width: 100%;
+  min-height: 100vh;
   color: white;
 }
 
@@ -348,7 +349,12 @@ h4 + p {
 
   .footer-container,
   .content-section .content-wrapper {
+    width: 100%;
     padding: 2.5em 1.75em;
+  }
+
+  .title-section {
+    min-height: auto;
   }
 
   .title-section .content-wrapper {
