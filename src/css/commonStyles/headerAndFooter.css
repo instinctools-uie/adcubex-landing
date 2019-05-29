@@ -154,9 +154,11 @@ button.header-element_show {
 }
 
 .header-links-container a {
+  position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  padding-right: 1.2em;
   color: white;
   font-size: 5.75em;
   font-weight: 500;
@@ -165,7 +167,11 @@ button.header-element_show {
 }
 
 .header-links-container a > img {
-  margin-left: 0.7em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
 }
 
 .header-links-container a:hover {

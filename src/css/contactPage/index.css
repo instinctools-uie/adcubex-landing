@@ -202,6 +202,11 @@
   body {
     background-color: var(--cube-left-side-dark-blue-color);
   }
+
+  .contact-us-form {
+    max-width: 100%;
+  }
+
   .contact-us-form input,
   .contact-us-form textarea {
     margin-bottom: 1em;
