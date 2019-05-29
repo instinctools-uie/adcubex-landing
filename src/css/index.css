@@ -72,4 +72,5 @@
 
   /* Breakpoints */
   --WXGA-device: 1400px;
+  --PAL-device: 768px;
 }
