@@ -15,34 +15,17 @@
   fill: var(--cube-bottom-side-red-color);
 }
 
-article.clear-article {
-  margin-top: 8.2em;
+.strategy-content article.clear-article,
+.strategy-content article.consulting {
+  margin-top: 3em;
 }
 
-.clear-article > .section-content {
-  margin-left: 10.2em;
-}
-
-article.consulting {
-  margin-top: 15.5em;
-}
-
-article.consulting .section-content {
-  margin-right: -9em;
+.strategy-content article.consulting .section-content {
   z-index: 2;
 }
 
-article.consulting-article > a.consulting-inscription {
+.strategy-content article.consulting-article > a.consulting-inscription {
   margin: 11.5em -7.5em 0 -15em;
-}
-
-article.implementation-article {
-  margin-bottom: 4.5em;
-}
-
-article.implementation-article > .section-content {
-  margin-left: -19em;
-  z-index: 2;
 }
 
 .analysis-article .vertical-inscription {
@@ -63,5 +46,16 @@ article.implementation-article > .section-content {
   }
   100% {
     background-color: transparent;
+  }
+}
+
+@media all and (max-width: 768px) {
+  body {
+    background-color: var(--cube-left-side-red-color);
+  }
+
+  .strategy-content article.clear-article,
+  .strategy-content article.consulting {
+    margin-top: 0;
   }
 }
