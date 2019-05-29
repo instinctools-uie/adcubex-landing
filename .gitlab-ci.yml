@@ -1,0 +1,35 @@
+image: node:11.2.0
+
+stages:
+  - deploy
+
+install_dependecies:
+  tags:
+    - devops
+    - docker
+  only:
+    - master
+  stage: deploy
+  before_script:
+    - echo "$TEST_KEY"
+    - npm -v
+    - node -v
+    - npm install
+    - npm run lint
+    - npm run test
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client git -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add - > /dev/null
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan -p 5022 95.216.89.197 >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - npm -v
+    - node -v
+    - npm install
+    - npm run lint
+    - npm run test
+    - npm run build
+    - ls /builds/instinctools-websites/adcubex/build
+    - scp -P 5022 -rp /builds/instinctools-websites/adcubex/build/* adcubex@95.216.89.197:/var/www/vhosts/adcubex.com/
