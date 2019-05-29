@@ -36,6 +36,7 @@
   --mine-shaft-color: #252525;
 
   --header-navigation-bg-color: var(--amaranth-color);
+  --progressbar-bg-color: #00000073;
 
   --google-first-letter-hover-color: var(--cornflower-blue-color);
   --google-second-and-sixth-letter-hover-color: var(--cinnabar-color);
@@ -71,4 +72,5 @@
 
   /* Breakpoints */
   --WXGA-device: 1400px;
+  --PAL-device: 768px;
 }

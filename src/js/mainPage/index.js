@@ -1,4 +1,5 @@
 import Rellax from 'rellax';
+import Swiper from 'swiper';
 
 import {
   changeColorForImprovementSection,
@@ -50,6 +51,18 @@ toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
 (() => new Rellax('.letter-parallax'))();
+
+window.addEventListener('resize', () => {
+  if (document.documentElement.clientWidth <= 1024) {
+    (() =>
+      new Swiper('.swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }))();
+  }
+});
 
 window.addEventListener('scroll', initProject);
 

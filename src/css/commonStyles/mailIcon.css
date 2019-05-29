@@ -1,12 +1,12 @@
 .mailIcon-container {
   position: fixed;
-  right: 0;
+  right: 2.5em;
   bottom: 4.5em;
-  z-index: 2;
-  margin-right: 4em;
+  z-index: 7;
   border: none;
   background: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mailIcon-container:focus {
@@ -92,4 +92,10 @@
   border-radius: 50%;
   background-color: #353535;
   transition: background-color 0.3s ease-in;
+}
+
+@media all and (max-width: 768px) {
+  .mailIcon-container {
+    right: 1em;
+  }
 }

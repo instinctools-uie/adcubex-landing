@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="1763px" height="1080px" viewBox="0 0 1763 1080" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
-    <title>095E5A1C-EFB0-4886-9112-DBB3C43F0015</title>
-    <desc>Created with sketchtool.</desc>
     <defs>
         <polygon id="path-1" points="0.3078 0.617 93.7771282 0.617 93.7771282 158.140902 0.3078 158.140902"></polygon>
         <polygon id="path-3" points="0 93.1991378 281.260177 196.364312 511.201416 115.164409 239.080354 0.968095329"></polygon>
@@ -13,7 +10,7 @@
         <polygon id="path-6" points="0.37766442 0.558851392 274.753505 0.558851392 274.753505 461.327653 0.37766442 461.327653"></polygon>
         <polygon id="path-8" points="0.000464303099 0.0244057772 515.571447 0.0244057772 515.571447 196.319935 0.000464303099 196.319935"></polygon>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="cubes-for-menu-" transform="translate(-157.000000, 0.000000)">
             <g id="Cubes" transform="translate(157.000000, -1082.000000)">
                 <g id="1" transform="translate(102.000000, 1741.000000)">

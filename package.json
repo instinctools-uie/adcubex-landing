@@ -17,7 +17,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitlab.instinctools.com/oxy/adcubex.git"
+    "url": "https://github.com/instinctools-uie/adcubex-landing"
   },
   "jest": {
     "verbose": true,
@@ -48,8 +48,8 @@
     "google adwords",
     "yahoo"
   ],
-  "author": "Archik team",
-  "license": "ISC",
+  "author": "*instinctools EE",
+  "license": "CC-BY-NC-ND-4.0",
   "devDependencies": {
     "@babel/core": "7.4.3",
     "@babel/preset-env": "7.4.3",
@@ -81,6 +81,7 @@
     "vinyl-source-stream": "1.1.0"
   },
   "dependencies": {
-    "rellax": "1.9.1"
+    "rellax": "1.9.1",
+    "swiper": "4.5.0"
   }
 }
