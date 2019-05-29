@@ -24,7 +24,7 @@
   display: flex;
 }
 
-.contact-us-container div[role="progressbar"] {
+.contact-us-container div[role='progressbar'] {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,8 +38,6 @@
   color: white;
   font-size: 2em;
 }
-
-
 
 .contact-us-form {
   max-width: 47.875em;

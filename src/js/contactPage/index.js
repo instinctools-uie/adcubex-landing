@@ -17,7 +17,6 @@ window.addEventListener('scroll', () => {
   scrollPreviousPosition = scrolled;
 });
 
-
 window.onload = () => {
   function showProgress(flag) {
     const progress = document.querySelector('div[role="progressbar"]');
@@ -27,14 +26,8 @@ window.onload = () => {
     }
   }
 
-  function fallback(subject, body, error) {
-    console.log('Request was failed. Will run fallback');
-    console.error(error);
-    window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
-  }
-
   const form = document.querySelector('#contact-form');
-  form.onsubmit = (event) => {
+  form.onsubmit = event => {
     event.preventDefault();
 
     if (window.Email /* instance of smtpjs */) {
@@ -43,26 +36,26 @@ window.onload = () => {
       const phone = form.querySelector('input[name="phone"]').value;
       const body = form.querySelector('textarea[name="body"]').value;
       const subject = `Adcubex request from ${name} (email:${email}${phone ? `, tel:${phone}` : ''})`;
-      const fb = fallback.bind(null, subject, body);
 
       showProgress(true);
-      window.Email.send({
-        SecureToken: EMAIL.TOKEN,
-        To : EMAIL.ADDRESS,
-        From : email,
-        Subject : subject,
-        Body : body
-      }).then(
-        (msg) => {
+      window.Email
+        .send({
+          SecureToken: EMAIL.TOKEN,
+          To: EMAIL.ADDRESS,
+          From: email,
+          Subject: subject,
+          Body: body
+        })
+        .then(msg => {
           showProgress(false);
           if (msg && msg.toLowerCase().includes('fail')) {
-            fb(msg);
+            window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
           }
-        }
-      ).catch(error => {
-        showProgress(true);
-        fb(error);
-      });
+        })
+        .catch(() => {
+          showProgress(true);
+          window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
+        });
     }
   };
 };
