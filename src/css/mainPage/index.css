@@ -12,6 +12,7 @@ html {
 body {
   margin: 0;
   font-family: 'montserrat_extralightregular', sans-serif;
+  background-color: rgba(236, 234, 234, 1);
 }
 
 h1,
@@ -49,12 +50,16 @@ h2 {
 }
 
 .section-container {
-  position: static;
+  position: relative;
   z-index: 1;
   margin-top: 8em;
   width: 100%;
   min-height: 100vh;
   color: var(--mine-shaft-light-color);
+}
+
+.section-container a {
+  text-decoration: none;
 }
 
 .supervise-section.section-container {
@@ -67,6 +72,42 @@ h2 {
 
 .budget-section {
   margin-bottom: 5em;
+}
+
+.vertical-inscription {
+  position: absolute;
+  top: 7em;
+  right: -6em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transform: rotate(90deg);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.vertical-inscription-img-container {
+  margin-right: 3.25em;
+  transform: rotate(-90deg);
+}
+
+.vertical-inscription img {
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.vertical-inscription:hover img {
+  transform: translateY(20px);
+}
+
+.vertical-inscription > span {
+  display: flex;
+  align-items: center;
+  color: var(--mine-shaft-lighter-color);
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .budget-text-container > .inner-section-text,
@@ -86,17 +127,48 @@ h2 {
   color: white;
 }
 
-.budget-section > svg,
-.control-section > svg,
-.power-section > svg {
+.letter-parallax {
   position: absolute;
   z-index: -1;
-  left: -14.25em;
-  display: none;
+  left: -8.75em;
 }
 
-.power-section > svg {
-  left: -12.25em;
+@-moz-document url-prefix() {
+  .letter-parallax {
+    z-index: -2;
+  }
+
+  .budget-section .letter-parallax {
+    top: 152em !important;
+  }
+
+  .control-section .letter-parallax {
+    top: 199em !important;
+  }
+
+  .power-section .letter-parallax {
+    top: 221em !important;
+  }
+}
+
+.control-section {
+  margin-top: 0;
+}
+
+.power-section {
+  margin-top: 3em;
+}
+
+.budget-section .letter-parallax {
+  top: 96em;
+}
+
+.control-section .letter-parallax {
+  top: 116em;
+}
+
+.power-section .letter-parallax {
+  top: 122em;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -164,9 +236,6 @@ h2 {
   width: 20em;
   height: 20em;
 
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
@@ -283,15 +352,11 @@ h2 {
   top: -46.2em;
 }
 
-.letter-parallax {
-  max-width: 94em;
-}
-
 .power-image-container {
   margin: 6.2em 0 0 16.25em;
 }
 
-.power-image-container > button {
+.power-image-container a {
   margin-top: 7.4em;
   border: 0.01em solid white;
   background-color: transparent;
@@ -301,7 +366,7 @@ h2 {
   transition-timing-function: ease-in;
 }
 
-.power-image-container > .custom-button > .button-image {
+.power-image-container .custom-button > .button-image {
   margin-right: 0.2em;
 }
 
@@ -309,11 +374,11 @@ h2 {
   transition: fill 0.4s ease-in;
 }
 
-.power-image-container > .custom-button:hover #but_arrow {
+.power-image-container .custom-button:hover #but_arrow {
   fill: #353535;
 }
 
-.power-image-container > .custom-button:hover {
+.power-image-container .custom-button:hover {
   color: #353535;
   background-color: white;
 }
@@ -453,22 +518,6 @@ footer {
 
   .power-section .vertical-inscription {
     top: -25em;
-  }
-
-  .section-container > svg {
-    max-height: 150vh;
-  }
-
-  .budget-section > svg {
-    left: -20em;
-  }
-
-  .control-section > svg {
-    left: -29em;
-  }
-
-  .power-section > svg {
-    left: -25em;
   }
 
   .external-links,

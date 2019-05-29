@@ -1,4 +1,3 @@
-export const WHITE_COLOR = { red: 255, green: 255, blue: 255 };
 export const RED_COLOR = { red: 240, green: 62, blue: 62 };
 export const BLUE_COLOR = { red: 75, green: 84, blue: 242 };
 export const PURPLE_COLOR = { red: 157, green: 55, blue: 227 };
@@ -18,11 +17,6 @@ export const INNER_PAGES_TOGGLE_CONTENT = {
   delayBetweenSection: 20
 };
 
-export const BODY_ELEMENT_OPTIONS = {
-  selector: 'body',
-  property: 'backgroundColor',
-  defaultColor: WHITE_COLOR
-};
 export const CUBE_LEFT_SIDE_ELEMENT_OPTIONS = {
   selector: '#main-cube-scale-animation :nth-child(1)',
   property: 'fill',

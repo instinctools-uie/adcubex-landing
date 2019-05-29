@@ -267,25 +267,13 @@ footer * {
 }
 
 .footer-left p span {
+  color: var(--silver-chalice-color);
   font-weight: 600;
   font-style: italic;
 }
 
-.footer-left > p > a {
-  text-decoration: none;
-}
-
-.footer-left > p > a > i > sup {
-  color: red;
-}
-
-.footer-left > p > a > i > span {
-  color: black;
-}
-
-.footer-left > a,
-.footer-right > a {
-  color: white;
+.footer-left a,
+.footer-right a {
   text-decoration: none;
 }
 
@@ -321,19 +309,12 @@ footer * {
 }
 
 .vertical-inscription img {
-  -o-transition: transform 0.5s ease-in-out;
-  -moz-transition: transform 0.5s ease-in-out;
-  -webkit-transition: transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
   cursor: pointer;
 }
 
 .vertical-inscription:hover img {
-  -o-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  -moz-transform: translateY(20px);
-  -webkit-transform: translateY(20px);
   transform: translateY(20px);
 }
 
