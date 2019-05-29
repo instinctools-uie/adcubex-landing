@@ -160,15 +160,15 @@ h2 {
 }
 
 .budget-section .letter-parallax {
-  top: 96em;
+  top: 153%;
 }
 
 .control-section .letter-parallax {
-  top: 116em;
+  top: 187%;
 }
 
 .power-section .letter-parallax {
-  top: 122em;
+  top: 142%;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -524,6 +524,18 @@ footer {
   .toolset-section > .external-links {
     font-size: 0.875em;
     margin-top: 9em;
+  }
+
+  .budget-section .letter-parallax {
+    top: 181%;
+  }
+
+  .control-section .letter-parallax {
+    top: 214%;
+  }
+
+  .power-section .letter-parallax {
+    top: 176%;
   }
 
   .custom-button {
