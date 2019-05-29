@@ -15,10 +15,6 @@
   fill: var(--cube-bottom-side-purple-color);
 }
 
-.expertise-article .section-content {
-  margin-right: 2.4em;
-}
-
 .section-content > h2 {
   height: 2.5em;
   margin-bottom: 0;
@@ -78,4 +74,19 @@
 
 .security-article .vertical-inscription {
   top: -20.8em;
+}
+
+@media all and (max-width: 768px) {
+  body {
+    background-color: var(--cube-left-side-purple-color);
+  }
+
+  .control-article,
+  .customization-article,
+  .increase-article,
+  .investments-article,
+  .scaling-article,
+  .security-article {
+    margin: 0;
+  }
 }
