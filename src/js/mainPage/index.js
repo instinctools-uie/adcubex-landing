@@ -52,8 +52,16 @@ hoverLinkInMenu();
 cubesRandomLevitation();
 (() => new Rellax('.letter-parallax'))();
 
-var mySwiper = new Swiper('.swiper-container', {
-  /* ... */
+window.addEventListener('resize', () => {
+  if (document.documentElement.clientWidth <= 1024) {
+    (() =>
+      new Swiper('.swiper-container', {
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }))();
+  }
 });
 
 window.addEventListener('scroll', initProject);

@@ -75,6 +75,27 @@ h2 {
   margin-bottom: 5em;
 }
 
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-scrollbar {
+  display: none;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
 .vertical-inscription {
   position: absolute;
   top: 7em;
@@ -587,17 +608,77 @@ footer {
 }
 
 @media all and (max-width: 1024px) {
+  .content-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 3em 0 3em;
+  }
+
+  .vertical-inscription {
+    right: -2em;
+  }
+
+  .swiper-container {
+    width: auto;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 5em;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    -o-transition-property: transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    filter: grayscale(100%);
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  .swiper-slide svg {
+    width: auto;
+    height: 100%;
+  }
+
+  .swiper-slide svg.daimler-icon,
+  .swiper-slide svg.huberd-burda-icon {
+    height: 60%;
+  }
+
+  .control-section .letter-parallax {
+    top: 103em;
+  }
+
   .cubes-container {
-    width: 64.125em;
-    height: 64.125em;
+    width: 155%;
+    height: 114%;
+    top: -1.75em;
+    right: -11.5em;
   }
 }
 
 @media all and (max-width: 768px) {
-  .content-container {
-    box-sizing: border-box;
-    width: 46.2em;
-    padding: 0 4em 0 2em;
+  .vertical-inscription-container {
+    display: none;
   }
 
   .letter-parallax {
@@ -616,19 +697,13 @@ footer {
     top: 163%;
   }
 
-  .improvement-section .inner-section-image {
-    top: -27em;
-  }
-
   .budget-image,
   .power-image-container {
-    margin-left: 5.3em;
+    width: 100%;
+    margin-left: -2em;
   }
 
-  .cubes-container {
-    width: 155%;
-    height: 114%;
-    top: -1.75em;
-    right: -11.1875em;
+  .improvement-section .inner-section-image {
+    top: -27em;
   }
 }
