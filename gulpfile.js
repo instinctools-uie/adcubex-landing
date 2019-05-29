@@ -1,5 +1,5 @@
 const gulp = require('gulp');
-var browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const connect = require('gulp-connect');
 const browserify = require('browserify');
 const babelify = require('babelify');
@@ -14,7 +14,7 @@ const image = require('gulp-image');
 const jsFolders = ['mainPage', 'innerPage', 'contactPage'];
 const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
 
-gulp.task('connect', function() {
+gulp.task('connect', () => {
   connect.server({
     base: 'http://localhost',
     port: 3000,
@@ -23,7 +23,7 @@ gulp.task('connect', function() {
   });
 });
 
-gulp.task('js', function() {
+gulp.task('js', () => {
   jsFolders.forEach(folderName => {
     browserify(`./src/js/${folderName}/index.js`)
       .transform(babelify)
@@ -36,7 +36,7 @@ gulp.task('js', function() {
   });
 });
 
-gulp.task('css', function() {
+gulp.task('css', () => {
   cssFolders.forEach(folderName => {
     gulp.src(`./src/css/${folderName}/index.css`)
       .pipe(cleanCSS({compatibility: 'ie10'}))
@@ -45,37 +45,43 @@ gulp.task('css', function() {
   });
 });
 
-gulp.task('html', function() {
+gulp.task('html', () => {
   gulp.src('./src/*.html')
     .pipe(gulp.dest('./build'))
     .pipe(connect.reload());
 });
 
+gulp.task('txt', () => {
+  gulp.src('./src/*.txt')
+    .pipe(gulp.dest('./build'))
+    .pipe(connect.reload());
+});
+
 gulp.task('fonts', () => {
-  return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
+  return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', () => {})
     .concat('./src/assets/fonts/**/*'))
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
-gulp.task('image', function () {
+gulp.task('image', () => {
   gulp.src('./src/assets/images/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/images'));
 });
 
-gulp.task('meta', function () {
+gulp.task('meta', () => {
   gulp.src('./src/assets/meta/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/meta'));
 });
 
-gulp.task('listen', function() {
+gulp.task('listen', () => {
   gulp.watch('./src/**/**/*.js', ['js']);
   gulp.watch('./src/**/**/*.css', ['css']);
   gulp.watch('./src/*.html', ['html']);
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', () => {
     browserSync.init({
         server: {
             baseDir: "./build"
@@ -83,7 +89,7 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['js', 'css', 'html', 'fonts', 'image', 'meta', 'connect', 'listen', 'browser-sync']);
+gulp.task('default', ['js', 'css', 'html', 'txt', 'fonts', 'image', 'meta', 'connect', 'listen', 'browser-sync']);
 
-gulp.task('build', ['js', 'css', 'html', 'fonts', 'image', 'meta']);
+gulp.task('build', ['js', 'css', 'html', 'txt', 'fonts', 'image', 'meta']);
 
