@@ -15,16 +15,16 @@
   fill: var(--cube-bottom-side-red-color);
 }
 
-article.clear-article,
-article.consulting {
+.strategy-content article.clear-article,
+.strategy-content article.consulting {
   margin-top: 3em;
 }
 
-article.consulting .section-content {
+.strategy-content article.consulting .section-content {
   z-index: 2;
 }
 
-article.consulting-article > a.consulting-inscription {
+.strategy-content article.consulting-article > a.consulting-inscription {
   margin: 11.5em -7.5em 0 -15em;
 }
 
@@ -50,8 +50,12 @@ article.consulting-article > a.consulting-inscription {
 }
 
 @media all and (max-width: 768px) {
-  article.clear-article,
-  article.consulting {
+  body {
+    background-color: var(--cube-left-side-red-color);
+  }
+
+  .strategy-content article.clear-article,
+  .strategy-content article.consulting {
     margin-top: 0;
   }
 }

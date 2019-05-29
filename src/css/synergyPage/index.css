@@ -55,12 +55,16 @@ article.together {
 }
 
 @media all and (max-width: 768px) {
-  .external-links {
-    flex-wrap: wrap;
-    margin: 0 0 2.5em;
+  body {
+    background-color: var(--cube-left-side-blue-color);
   }
 
+  .external-links,
   article.together {
-    margin: 0 0 2.5em;
+    margin: 0;
+  }
+
+  .external-links img {
+    max-width: 100%;
   }
 }

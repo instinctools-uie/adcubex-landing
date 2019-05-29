@@ -25,7 +25,9 @@ body {
 }
 
 .title-section .content-wrapper {
-  padding-top: 17em;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 17em 3.8125em 0;
 }
 
 .title-section .section-content {
@@ -50,13 +52,7 @@ body {
 }
 
 .content-section .content-wrapper {
-  padding-top: 3.8125em;
-}
-
-.content-wrapper {
-  box-sizing: border-box;
-  width: 100%;
-  padding: 0 3.8125em;
+  padding: 2.8125em 3.8125em;
 }
 
 h1,
@@ -67,7 +63,6 @@ h1,
 }
 
 .section-content > h2 {
-  margin-top: 0;
   margin-bottom: 0;
   height: 1.5em;
   line-height: 5em;
@@ -83,7 +78,6 @@ article {
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 2.5em;
 }
 
 .article--active div > h2 {
@@ -225,8 +219,13 @@ h2 + p {
 }
 
 .contact-section h4 {
+  margin-top: 0;
   font-family: montserrat_mediumregular, sans-serif;
   font-size: 2.25em;
+}
+
+.contact-section .custom-button {
+  margin-bottom: 0;
 }
 
 h4 + p {
@@ -300,10 +299,17 @@ h4 + p {
   }
 }
 
-@media all and (max-width: var(--WXGA-device)) {
+@media all and (max-width: 1400px) {
   .custom-button {
     height: 3em;
     font-size: 1.75em;
+  }
+  article.content-column--start,
+  article.content-column--end,
+  .content-column--start,
+  .content-column--end {
+    padding-top: 6em;
+    padding-bottom: 2em;
   }
 }
 
@@ -325,23 +331,32 @@ h4 + p {
 }
 
 @media all and (max-width: 768px) {
+  body > svg.cube,
   .vertical-inscription-container,
-  .content-column .svg-container {
+  .content-column .svg-container,
+  .contact-us-container .svg-container {
     display: none;
   }
 
-  footer,
   .content-section .content-wrapper {
-    padding-top: 2.5em;
+    position: relative;
   }
 
-  footer,
-  .content-wrapper {
-    padding: 1.75em;
+  footer {
+    margin: 0 auto;
+  }
+
+  .footer-container,
+  .content-section .content-wrapper {
+    padding: 2.5em 1.75em;
   }
 
   .title-section .content-wrapper {
-    padding: 8em 1.75em 0;
+    padding: 7em 1.75em 0;
+  }
+
+  .title-section .section-content {
+    padding-bottom: 1em;
   }
 
   .content-column,
@@ -363,27 +378,42 @@ h4 + p {
 
   h1,
   .section-content > h2 {
-    font-size: 4em;
+    font-size: 2.5em;
   }
 
   h2 + p {
     margin-top: 1.4em;
   }
 
-  .title-section p {
-    font-size: 1.7em;
+  h4 + p {
+    font-size: 1.25em;
+  }
+
+  .section-container article .section-content > h2 {
+    height: auto;
+    line-height: 1.12em;
+  }
+
+  .title-section p,
+  .section-container article .section-content > p {
+    font-size: 1.2em;
   }
 
   .section-container article .section-content > p {
-    font-size: 1.4em;
+    margin-top: 0.8em;
+  }
+
+  article div > p {
+    opacity: 1;
   }
 
   .contact-section h4 {
     margin-top: 0;
+    font-size: 2em;
   }
 
   .custom-button {
-    margin-bottom: 0;
-    font-size: 2em;
+    margin: 1em 0 0;
+    font-size: 1.5em;
   }
 }
