@@ -21,7 +21,6 @@ body {
 
 .title-section {
   width: 100%;
-  min-height: 100vh;
   color: white;
 }
 
@@ -53,6 +52,7 @@ body {
 }
 
 .content-section .content-wrapper {
+  box-sizing: border-box;
   padding: 2.8125em 3.8125em;
 }
 
@@ -321,6 +321,12 @@ h4 + p {
   }
 }
 
+@media (min-width: 767px) and (max-height: 720px) {
+  .title-section {
+    min-height: 100vh;
+  }
+}
+
 @media (min-width: 769px) and (max-width: 1400px) {
   .content-wrapper .vertical-inscription {
     top: -2em;
@@ -358,10 +364,6 @@ h4 + p {
   .content-section .content-wrapper {
     width: 100%;
     padding: 2.5em 1.75em;
-  }
-
-  .title-section {
-    min-height: auto;
   }
 
   .title-section .content-wrapper {
