@@ -1,6 +1,7 @@
 {
     "short_name": "AdCubex",
-    "name": "AdCubex Website",
+    "name": "AdCubex",
+    "description": "Achieve more with a customized approach to search engine marketing based on unique expertise, time-approved toolset and reliable partnership.",
     "start_url": "https://adcubex.com",
     "icons": [
         {
@@ -14,7 +15,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#eceaea",
+    "background_color": "#eceaea",
     "display": "standalone"
 }
