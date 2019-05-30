@@ -1,10 +1,3 @@
-const links = document.querySelector('.vertical-inscription');
-
-links.forEach(link => {
-  let sectionSelector = link.getAttribute('href');
-  link.addEventListener('click', () => {});
-});
-
 export default function toggleContentByScroll(selector, delay) {
   const scrolled = window.pageYOffset;
   const sections = window.document.querySelectorAll(`.${selector}`);
