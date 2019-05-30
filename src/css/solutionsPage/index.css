@@ -47,17 +47,18 @@
   margin-right: -6em;
 }
 
-.header-container.header-container_white {
+.header-container.header-container--visible,
+.header-container.header-container--hide {
   background-color: var(--cube-left-side-purple-color);
 }
 
-@keyframes white-animation-hide {
-  0% {
-    background-color: var(--cube-left-side-purple-color);
-  }
-  100% {
-    background-color: transparent;
-  }
+.header-container.header-container--top-position {
+  animation: show-header-background 0.6s ease-out, show-header-animation 0.5s ease-out;
+}
+
+.header-container.header-container--hide {
+  background-color: var(--cube-left-side-purple-color);
+  animation: hide-header-animation 0.5s ease-out;
 }
 
 .expertise-article .vertical-inscription {
@@ -74,6 +75,33 @@
 
 .security-article .vertical-inscription {
   top: -20.8em;
+}
+
+@keyframes show-header-animation {
+  0% {
+    top: -9em;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes hide-header-animation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -9em;
+  }
+}
+
+@keyframes show-header-background {
+  0% {
+    background-color: var(--cube-left-side-purple-color);
+  }
+  100% {
+    background-color: transparent;
+  }
 }
 
 @media all and (max-width: 768px) {
