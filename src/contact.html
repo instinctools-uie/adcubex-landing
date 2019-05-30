@@ -44,7 +44,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
 <body>
 <div class="header-container">
     <a href="index.html" aria-label="Navigate to home page">
-<svg class="logo" width="8.625em" height="2.565em" viewBox="0 0 138 41" aria-hidden="true">
+<svg class="logo" width="8.625em" height="2.565em" viewBox="0 0 138 41" focusable="false" aria-hidden="true">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g fill="#ffffff">
             <path d="M9.6,1.7 L0.9,22 L6.3,22 L7.7,18.4 L16.5,18.4 L17.9,22 L23.5,22 L15,1.7 L9.6,1.7 Z M9.3,14.4 L12.1,7.2 L14.9,14.4 L9.3,14.4 Z" fill-rule="nonzero"></path>
@@ -72,7 +72,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
 </svg>
     </a>
         <button class="toggle-menu-button" aria-label="toggle menu">
-    <svg class="header-open-menu-icon header-open-menu-icon--active" aria-hidden="true" fill="#ffffff" width="26px" height="19px" viewBox="0 0 26 19">
+    <svg class="header-open-menu-icon header-open-menu-icon--active" focusable="false" aria-hidden="true" fill="#ffffff" width="26px" height="19px" viewBox="0 0 26 19">
         <defs>
             <path d="M0,0 L26,0 L26,3 L0,3 L0,0 Z M0,8 L20,8 L20,11 L0,11 L0,8 Z M0,16 L14,16 L14,19 L0,19 L0,16 Z" id="path-1"></path>
         </defs>
@@ -143,6 +143,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
     </div>
 </nav>
 <svg
+        focusable="false"
         class="cube"
         aria-hidden="true"
         width="3198px"
@@ -169,7 +170,10 @@ based on unique expertise, time-approved toolset and reliable partnership.">
     </section>
     <div class="contact-us-section content-section section-container">
         <div class="content-wrapper contact-us-container">
-            <div role="progressbar" aria-live="assertive" aria-hidden="true">Loading...</div>
+            <div role="progressbar" aria-live="assertive" aria-hidden="true">
+                <div class="spinner"></div>
+                <p>Loading...</p>
+            </div>
             <form id="contact-form" class="contact-us-form">
                 <p>Leave us a note that you are interested and our cooperation<br>will start!</p>
                 <input name="name" type="text" placeholder="Name*" required />
@@ -178,13 +182,18 @@ based on unique expertise, time-approved toolset and reliable partnership.">
                     <input name="phone" type="tel" placeholder="Phone (optional)"/>
                 </div>
                 <textarea name="body" required placeholder="Describe your request"></textarea>
+                <div class="form-submit-status" role="status" aria-live="assertive" style="display: none" aria-hidden="true">
+                    <p>Thank you for contacting!
+                        <br>We have received your message. Our dedicated team will contact you within 24-48 hours.
+                    </p>
+                </div>
                 <div class="contact-checkbox">
-                    <input type="checkbox" id="checkbox-id" required>
+                    <input name="collecting-data" type="checkbox" id="checkbox-id" required>
                     <div class="checkbox-wrapper">
-                        <div class="fake-checkbox fake-checkbox_unchecked"></div>
-                        <img class="img_hide" src="assets/images/Check.png" alt="Check mark for checkbox"/>
+                        <div class="fake-checkbox"></div>
+                        <img src="assets/images/Check.png" aria-describedby="checkbox-id" />
                     </div>
-                    <label for="checkbox-id">I consent to the   collection, storage and processing of the data which I provided in the contact form.<br>
+                    <label for="checkbox-id">I consent to the collection, storage and processing of the data which I provided in the contact form.<br>
                         This data should be deleted after processing of my request is complete.</label>
                 </div>
                 <button class="custom-button">
@@ -193,7 +202,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
                 </button>
             </form>
             <div class="svg-container">
-                <svg width="427px" height="900px" viewBox="0 0 427 808" version="1.1" aria-hidden="true">
+                <svg focusable="false" width="427px" height="900px" viewBox="0 0 427 808" version="1.1" aria-hidden="true">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-906.000000, -749.000000)">
                             <g transform="translate(906.000000, 749.000000)">

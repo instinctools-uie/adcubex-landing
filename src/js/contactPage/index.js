@@ -1,13 +1,11 @@
 import { EMAIL } from '../constants';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import toggleCheckbox from './checkboxHandler';
 import changeHeaderVisibility from '../menuAnimation';
 
 let scrollPreviousPosition = 0;
 
 toggleMenu();
-toggleCheckbox();
 hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
@@ -21,7 +19,7 @@ window.onload = () => {
   function showProgress(flag) {
     const progress = document.querySelector('div[role="progressbar"]');
     if (progress) {
-      progress.setAttribute('aria-hidden', flag);
+      progress.setAttribute('aria-hidden', `${!flag}`);
       progress.style.display = flag ? 'flex' : 'none';
     }
   }
@@ -31,6 +29,7 @@ window.onload = () => {
     event.preventDefault();
 
     if (window.Email /* instance of smtpjs */) {
+      const status = document.querySelector('.form-submit-status');
       const email = form.querySelector('input[name="email"]').value;
       const name = form.querySelector('input[name="name"]').value;
       const phone = form.querySelector('input[name="phone"]').value;
@@ -51,9 +50,13 @@ window.onload = () => {
           if (msg && msg.toLowerCase().includes('fail')) {
             window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
           }
+
+          form.reset();
+          status.style.display = 'block';
+          status.setAttribute('aria-hidden', 'false');
         })
         .catch(() => {
-          showProgress(true);
+          showProgress(false);
           window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
         });
     }
