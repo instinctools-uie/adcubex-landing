@@ -4,6 +4,7 @@
 @import '../commonStyles/mailIcon.css';
 @import '../commonStyles/headerAndFooter.css';
 @import './onLoadContentAnimation.css';
+@import '../swiper.min.css';
 
 html {
   scroll-behavior: smooth;
@@ -72,6 +73,27 @@ h2 {
 
 .budget-section {
   margin-bottom: 5em;
+}
+
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-scrollbar {
+  display: none;
+}
+
+.swiper-slide {
+  width: auto !important;
 }
 
 .vertical-inscription {
@@ -503,7 +525,12 @@ footer {
 
 @media all and (max-width: 1400px) {
   .content-container {
-    width: 52.2em;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .section-container {
+    width: 80%;
   }
 
   .section-container,
@@ -614,5 +641,192 @@ footer {
 
   footer {
     margin: 1em auto 0;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  .content-container {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 2em 0 2em;
+  }
+
+  .swiper-container {
+    width: auto;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 5em;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    box-sizing: content-box;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    filter: grayscale(100%);
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  .swiper-slide svg {
+    width: auto;
+    height: 100%;
+  }
+
+  .swiper-slide svg.daimler-icon,
+  .swiper-slide svg.huberd-burda-icon {
+    height: 60%;
+  }
+
+  .control-section .letter-parallax {
+    top: 115%;
+  }
+
+  .budget-image,
+  .power-image-container {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+
+  .power-image {
+    min-width: 0;
+  }
+
+  .cubes-container {
+    width: 155%;
+    height: 114%;
+    top: -1.75em;
+    right: -11.5em;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .vertical-inscription-container {
+    display: none;
+  }
+
+  .letter-parallax {
+    left: -3.75em;
+  }
+
+  .budget-section .letter-parallax {
+    top: 126%;
+  }
+
+  .control-section .letter-parallax {
+    top: 140%;
+  }
+
+  .power-section .letter-parallax {
+    top: 163%;
+  }
+
+  .budget-image,
+  .power-image-container {
+    width: 100%;
+    margin-left: -2em;
+  }
+
+  .improvement-section .inner-section-image {
+    top: -27em;
+  }
+
+  .advantage-section .inner-section-text,
+  .expertise-section .inner-section-text,
+  .improvement-section .inner-section-text,
+  .supervise-section .inner-section-text,
+  .toolset-section .inner-section-text {
+    margin: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .content-container {
+    padding: 0;
+  }
+
+  .content-container .section-container,
+  .header-container {
+    font-size: 0.5rem;
+  }
+
+  .budget-image,
+  .power-image-container {
+    box-sizing: border-box;
+    margin-left: 0;
+  }
+
+  .image-content_middle {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+
+  .budget-section .letter-parallax {
+    top: 186%;
+  }
+
+  .control-section .letter-parallax {
+    top: 212%;
+  }
+
+  .power-section .letter-parallax {
+    top: 254%;
+  }
+
+  .power-section div > p > span {
+    font-size: 1.5em;
+  }
+
+  div.power-image .image-content-section p.image-content--large {
+    font-size: 15em;
+  }
+
+  footer {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 375px) {
+  footer {
+    font-size: 0.6em;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-navigation--active {
+    width: 100%;
+    height: 100%;
+  }
+
+  .header-navigation-container {
+    padding-left: 2em;
+  }
+
+  .cubes-container {
+    right: -5.5em;
+  }
+
+  .budget-section .letter-parallax {
+    top: 216%;
+  }
+
+  .control-section .letter-parallax {
+    top: 245%;
+  }
+
+  .power-section .letter-parallax {
+    top: 276%;
   }
 }

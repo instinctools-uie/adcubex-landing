@@ -1,70 +1,70 @@
-.external-links > .google-icon:hover #google-path-1 {
+.external-links .google-icon:hover #google-path-1 {
   fill: var(--google-fourth-letter-hover-color);
 }
 
-.external-links > .google-icon:hover #google-path-3,
-.external-links > .google-icon:hover #google-path-5 {
+.external-links .google-icon:hover #google-path-3,
+.external-links .google-icon:hover #google-path-5 {
   fill: var(--google-second-and-sixth-letter-hover-color);
 }
 
-.external-links > .google-icon:hover #google-path-7 {
+.external-links .google-icon:hover #google-path-7 {
   fill: var(--google-first-letter-hover-color);
 }
 
-.external-links > .google-icon:hover #google-path-10 {
+.external-links .google-icon:hover #google-path-10 {
   fill: var(--google-third-letter-hover-color);
 }
 
-.external-links > .google-icon:hover #google-path-12 {
+.external-links .google-icon:hover #google-path-12 {
   fill: var(--google-fifth-letter-hover-color);
 }
 
-.external-links > .twitter-icon:hover #twitter {
+.external-links .twitter-icon:hover #twitter {
   fill: var(--twitter-hover-color);
 }
 
-.external-links > .bing-icon:hover #Bing {
+.external-links .bing-icon:hover #Bing {
   fill: var(--bing-ads-hover-color);
 }
 
-.external-links > .facebook-icon:hover #facebook_1 {
+.external-links .facebook-icon:hover #facebook_1 {
   fill: var(--facebook-hover-color);
 }
 
-.external-links > .baidu-icon:hover path {
+.external-links .baidu-icon:hover path {
   fill: var(--baidu-hover-color);
 }
 
-.external-links > .baidu-icon:hover #Baidu-2,
-.external-links > .baidu-icon:hover #Baidu-3 {
+.external-links .baidu-icon:hover #Baidu-2,
+.external-links .baidu-icon:hover #Baidu-3 {
   fill: var(--baidu-text-in-paw-hover-color);
 }
 
-.external-links > .baidu-icon:hover #Baidu-1 {
+.external-links .baidu-icon:hover #Baidu-1 {
   fill: var(--baidu-paw-hover-color);
 }
 
-.external-links > .yahoo-icon:hover path {
+.external-links .yahoo-icon:hover path {
   fill: var(--yahoo-hover-color);
 }
 
-.external-links > .daimler-icon:hover path {
+.external-links .daimler-icon:hover path {
   fill: var(--daimler-hover-color);
 }
 
-.external-links > .huberd-burda-icon:hover path,
-.external-links > .huberd-burda-icon:hover polygon {
+.external-links .huberd-burda-icon:hover path,
+.external-links .huberd-burda-icon:hover polygon {
   fill: var(--huberd-hover-color);
 }
 
-.external-links > .fujitsu-icon:hover #Fujitsu {
+.external-links .fujitsu-icon:hover #Fujitsu {
   fill: var(--fujitsu-hover-color);
 }
 
-.external-links > .thyssenkrupp-icon:hover #thyssenkrupp {
+.external-links .thyssenkrupp-icon:hover #thyssenkrupp {
   fill: var(--thyssenkrupp-hover-color);
 }
 
-.external-links > .evonik-icon:hover #evonik {
+.external-links .evonik-icon:hover #evonik {
   fill: var(--evonik-hover-color);
 }
