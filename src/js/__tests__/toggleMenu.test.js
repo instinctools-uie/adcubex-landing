@@ -64,8 +64,7 @@ describe('toggle menu', () => {
     expect(body.classList.add).toHaveBeenCalledWith('hidden-scroll');
     expect(body.classList.remove).toHaveBeenCalledTimes(0);
 
-    expect(headerElement.classList.add).toHaveBeenCalledWith('header-container_hide');
-    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container_white');
+    expect(headerElement.classList.add).toHaveBeenCalledWith('header-container--nav-active');
 
     expect(closeMenuIcon.classList.add).toHaveBeenCalledWith('header-close-menu-icon--active');
     expect(closeMenuIcon.classList.remove).toHaveBeenCalledTimes(0);
@@ -97,8 +96,7 @@ describe('toggle menu', () => {
     expect(body.classList.remove).toHaveBeenCalledWith('hidden-scroll');
     expect(body.classList.add).toHaveBeenCalledTimes(0);
 
-    expect(headerElement.classList.add).toHaveBeenCalledWith('header-container_white');
-    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container_hide');
+    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container--nav-active');
 
     expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
     expect(headerNavigation.classList.add).toHaveBeenCalledTimes(0);
