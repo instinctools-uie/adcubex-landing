@@ -316,7 +316,7 @@ h4 + p {
   article.content-column--end,
   .content-column--start,
   .content-column--end {
-    padding-top: 6em;
+    padding-top: 14em;
     padding-bottom: 2em;
   }
 }
