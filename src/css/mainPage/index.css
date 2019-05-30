@@ -53,7 +53,7 @@ h2 {
 .section-container {
   position: relative;
   z-index: 1;
-  margin-top: 8em;
+  margin-top: 6em;
   width: 100%;
   min-height: 100vh;
   color: var(--mine-shaft-light-color);
