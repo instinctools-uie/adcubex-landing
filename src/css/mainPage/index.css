@@ -680,6 +680,10 @@ footer {
     box-sizing: content-box;
   }
 
+  .toolset-section .swiper-wrapper {
+    height: 6em;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     display: block;
@@ -714,6 +718,14 @@ footer {
 
   svg.yahoo-icon {
     margin: 3em 0 0 12em;
+  }
+
+  .toolset-section svg {
+    transform: scale(0.8);
+  }
+
+  svg.thyssenkrupp-icon {
+    transform: scale(1);
   }
 
   .control-section .letter-parallax {
