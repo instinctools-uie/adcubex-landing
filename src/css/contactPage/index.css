@@ -40,12 +40,12 @@
   font-size: 2em;
 }
 
-.contact-us-container  .spinner {
+.contact-us-container .spinner {
   width: 1em;
   height: 1em;
   border: 0.5em solid var(--cube-right-side-blue-color);
   border-radius: 50%;
-  border-top: 0.5em solid var(--cube-right-side-dark-blue-color);;
+  border-top: 0.5em solid var(--cube-right-side-dark-blue-color);
   border-right: 0.5em solid var(--cube-left-side-red-color);
   border-bottom: 0.5em solid var(--cube-right-side-purple-color);
   opacity: 0.7;
@@ -53,10 +53,13 @@
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
-
 
 .contact-us-container .form-submit-status {
   color: var(--chateau-green-color);
