@@ -503,12 +503,11 @@ div.power-image > .image-content-section > p.image-content--large {
 
 footer {
   margin-top: 19em;
-  color: var(--silver-chalice-color);
 }
 
 .footer-left > a,
 .footer-right > a {
-  color: var(--silver-chalice-color);
+  color: var(--coal-grey-color);
 }
 
 .supervise-section h1 > span,
