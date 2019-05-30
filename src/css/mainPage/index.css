@@ -521,6 +521,14 @@ footer {
   .vertical-inscription {
     right: 0;
   }
+
+  .advantage-section .inner-section-text,
+  .expertise-section .inner-section-text,
+  .improvement-section .inner-section-text,
+  .supervise-section .inner-section-text,
+  .toolset-section .inner-section-text {
+    margin-right: 3em;
+  }
 }
 
 @media all and (max-width: 1400px) {
