@@ -159,7 +159,6 @@ button.header-element_show {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1.2em;
   color: white;
   font-size: 5.75em;
   font-weight: 500;
@@ -167,12 +166,14 @@ button.header-element_show {
   text-decoration: none;
 }
 
-.header-links-container a > img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: auto;
-  height: 100%;
+.header-links-container a:hover::after {
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.35em;
+  background: url('../../assets/images/ArrowBlack.svg') center bottom no-repeat;
+  background-size: contain;
+  transform: rotate(-90deg);
 }
 
 .header-links-container a:hover {
@@ -194,14 +195,6 @@ button.header-element_show {
   color: white;
   font-style: italic;
   text-decoration: none;
-}
-
-.header-link-arrow-icon {
-  display: none;
-}
-
-.header-link-arrow-icon--active {
-  display: block;
 }
 
 .toggle-menu-button {
