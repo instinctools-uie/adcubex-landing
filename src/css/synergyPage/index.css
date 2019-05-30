@@ -16,6 +16,10 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
+.title-section .content-wrapper {
+  width: 45%;
+}
+
 .external-links {
   display: flex;
   align-items: center;
