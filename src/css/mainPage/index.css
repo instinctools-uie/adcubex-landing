@@ -652,6 +652,12 @@ footer {
   }
 }
 
+@media all and (max-width: 1230px) {
+  .external-links svg {
+    transform: scale(0.85);
+  }
+}
+
 @media all and (max-width: 1024px) {
   .content-container {
     box-sizing: border-box;
@@ -695,6 +701,19 @@ footer {
   .swiper-slide svg.daimler-icon,
   .swiper-slide svg.huberd-burda-icon {
     height: 60%;
+  }
+
+  .external-links svg {
+    transform: scale(1);
+  }
+
+  svg.baidu-icon {
+    margin: 2em 0 0 9em;
+    transform: scale(1.3);
+  }
+
+  svg.yahoo-icon {
+    margin: 3em 0 0 12em;
   }
 
   .control-section .letter-parallax {
