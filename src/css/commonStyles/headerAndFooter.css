@@ -190,6 +190,27 @@
   font-size: 1rem;
 }
 
+.content-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80em;
+  margin: 0 auto;
+  color: var(--mine-shaft-lighter-color);
+}
+
+h1,
+.section-container > h2,
+.section-content > h2 {
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5.3em;
+  overflow: hidden;
+  transition: line-height 0.5s ease-in-out;
+}
+
 footer {
   max-width: 80em;
   width: 100%;
@@ -315,6 +336,12 @@ footer * {
 }
 
 @media all and (max-width: 1400px) {
+  h1,
+  .section-container > h2,
+  .section-content > h2 {
+    font-size: 3.5em;
+  }
+
   .vertical-inscription > span {
     font-size: 1.7rem;
   }
@@ -333,6 +360,12 @@ footer * {
 }
 
 @media all and (max-width: 768px) {
+  h1,
+  .section-container > h2,
+  .section-content > h2 {
+    font-size: 2.5em;
+  }
+
   .footer-right {
     display: none;
   }
