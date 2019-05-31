@@ -33,7 +33,7 @@
   --tundora-color: #484848;
   --mine-shaft-lighter-color: #353535;
   --mine-shaft-light-color: #303030;
-  --coal-grey-color:#404040;
+  --coal-grey-color: #404040;
   --mine-shaft-color: #252525;
 
   --header-navigation-bg-color: var(--amaranth-color);
@@ -58,18 +58,18 @@
   --evonik-hover-color: var(--violet-eggplant-color);
 
   /* Background color for inner pages */
-  --cube-left-side-red-color: rgba(240, 62, 62);
-  --cube-right-side-red-color: rgba(191, 49, 48);
-  --cube-bottom-side-red-color: rgba(219, 56, 57);
-  --cube-left-side-blue-color: rgba(75, 84, 242);
-  --cube-right-side-blue-color: rgba(67, 74, 190);
-  --cube-bottom-side-blue-color: rgba(72, 80, 223);
-  --cube-left-side-dark-blue-color: rgba(108, 60, 230);
-  --cube-right-side-dark-blue-color: rgba(97, 49, 219);
-  --cube-bottom-side-dark-blue-color: rgba(102, 55, 223);
-  --cube-left-side-purple-color: rgba(157, 55, 227);
-  --cube-right-side-purple-color: rgba(147, 45, 191);
-  --cube-bottom-side-purple-color: rgba(150, 49, 213);
+  --cube-left-side-red-color: rgb(240, 62, 62);
+  --cube-right-side-red-color: rgb(191, 49, 48);
+  --cube-bottom-side-red-color: rgb(219, 56, 57);
+  --cube-left-side-blue-color: rgb(75, 84, 242);
+  --cube-right-side-blue-color: rgb(67, 74, 190);
+  --cube-bottom-side-blue-color: rgb(72, 80, 223);
+  --cube-left-side-dark-blue-color: rgb(108, 60, 230);
+  --cube-right-side-dark-blue-color: rgb(97, 49, 219);
+  --cube-bottom-side-dark-blue-color: rgb(102, 55, 223);
+  --cube-left-side-purple-color: rgb(157, 55, 227);
+  --cube-right-side-purple-color: rgb(147, 45, 191);
+  --cube-bottom-side-purple-color: rgb(150, 49, 213);
 
   /* Breakpoints */
   --WXGA-device: 1400px;
