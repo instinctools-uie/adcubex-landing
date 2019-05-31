@@ -39,7 +39,7 @@ window.onload = () => {
         submitProgress.style.display = flag ? 'flex' : 'none';
 
         submitBtnText.setAttribute('aria-hidden', `${flag}`);
-        submitBtnText.style.display = flag ? 'none' : 'block';
+        submitBtnText.style.display = flag ? 'none' : 'flex';
 
         [name, email, phone, body, submitBtn, agreeToCollectData].forEach(field => {
           field.disabled = flag;
