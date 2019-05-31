@@ -98,7 +98,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
             </g>
         </g>
     </svg>
-    <svg class="header-close-menu-icon" aria-hidden="true" width="24px" height="24px" viewBox="0 0 24 24" >
+    <svg class="header-close-menu-icon" aria-hidden="true" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" >
         <defs>
             <polygon id="path-2" points="25 3.41714286 22.5828571 1 13 10.5828571 3.41714286 1 1 3.41714286 10.5828571 13 1 22.5828571 3.41714286 25 13 15.4171429 22.5828571 25 25 22.5828571 15.4171429 13"></polygon>
         </defs>
@@ -143,8 +143,9 @@ based on unique expertise, time-approved toolset and reliable partnership.">
     </div>
 </nav>
 <svg
-        focusable="false"
         class="cube"
+        focusable="false"
+
         aria-hidden="true"
         width="3198px"
         height="1665px"
@@ -170,10 +171,6 @@ based on unique expertise, time-approved toolset and reliable partnership.">
     </section>
     <div class="contact-us-section content-section section-container">
         <div class="content-wrapper contact-us-container">
-            <div role="progressbar" aria-live="assertive" aria-hidden="true">
-                <div class="spinner"></div>
-                <p>Loading...</p>
-            </div>
             <form id="contact-form" class="contact-us-form">
                 <p>Leave us a note that you are interested and our cooperation<br>will start!</p>
                 <input name="name" type="text" placeholder="Name*" required />
@@ -197,12 +194,18 @@ based on unique expertise, time-approved toolset and reliable partnership.">
                         This data should be deleted after processing of my request is complete.</label>
                 </div>
                 <button class="custom-button">
-                    <span>Send</span>
-                    <img class="button-image" src="./assets/images/SmallArrow.svg" aria-hidden="true">
+                    <div role="status" aria-live="polite" aria-hidden="true">
+                        <div class="spinner"></div>
+                        <p>Sending...</p>
+                    </div>
+                    <div class="custom-button-inner">
+                        <span>Send</span>
+                        <img class="button-image" src="./assets/images/SmallArrow.svg" aria-hidden="true">
+                    </div>
                 </button>
             </form>
             <div class="svg-container">
-                <svg focusable="false" width="427px" height="900px" viewBox="0 0 427 808" version="1.1" aria-hidden="true">
+                <svg width="427px" height="900px" viewBox="0 0 427 808" aria-hidden="true" focusable="false">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-906.000000, -749.000000)">
                             <g transform="translate(906.000000, 749.000000)">
