@@ -24,6 +24,12 @@
   display: flex;
 }
 
+.contact-us-container .custom-button-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-us-container .custom-button div[role='status'] {
   display: none;
   align-items: center;
@@ -210,7 +216,7 @@
 }
 
 .contact-us-form .button-image {
-  margin-right: 1em;
+  margin: 0 1em 0 0.5em;
   transition: transform 0.3s ease-in;
 }
 
