@@ -8,16 +8,10 @@ export default function hoverLinkInMenu() {
 
 function mouseOnNavigationContainer(e) {
   const { target } = e;
-  const isHeaderLink = target.classList.contains('header-link');
   const isSynergyLink = target.classList.contains('link-synergy');
   const isStrategyLink = target.classList.contains('link-strategy');
   const isSolutionsLink = target.classList.contains('link-solutions');
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
-
-  if (isHeaderLink) {
-    const linkArrowIcon = target.querySelector('.header-link-arrow-icon');
-    linkArrowIcon.classList.add('header-link-arrow-icon--active');
-  }
 
   if (isSynergyLink) {
     headerNavigation.classList.add('header-navigation--blue');
@@ -38,16 +32,10 @@ function mouseOnNavigationContainer(e) {
 
 function mouseOutNavigationContainer(e) {
   const { target } = e;
-  const isHeaderLink = target.classList.contains('header-link');
   const isSynergyLink = target.classList.contains('link-synergy');
   const isStrategyLink = target.classList.contains('link-strategy');
   const isSolutionsLink = target.classList.contains('link-solutions');
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
-
-  if (isHeaderLink) {
-    const linkArrowIcon = target.querySelector('.header-link-arrow-icon');
-    linkArrowIcon.classList.remove('header-link-arrow-icon--active');
-  }
 
   if (isSynergyLink) {
     headerNavigation.classList.remove('header-navigation--blue');

@@ -28,23 +28,12 @@ h2 {
 }
 
 .content-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 72.188em;
-  margin: 0 auto;
-  color: #353535;
+  padding: 0 3.8125em;
 }
 
-.supervise-section,
-.expertise-section,
-.toolset-section,
-.advantage-section,
-.budget-section,
-.control-section,
-.power-section,
-.improvement-section {
+.section-container {
   position: relative;
+  z-index: 1;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -53,7 +42,7 @@ h2 {
 .section-container {
   position: relative;
   z-index: 1;
-  margin-top: 8em;
+  margin-top: 6em;
   width: 100%;
   min-height: 100vh;
   color: var(--mine-shaft-light-color);
@@ -99,7 +88,7 @@ h2 {
 .vertical-inscription {
   position: absolute;
   top: 7em;
-  right: -6em;
+  right: -3.5em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -182,15 +171,15 @@ h2 {
 }
 
 .budget-section .letter-parallax {
-  top: 96em;
+  top: 153%;
 }
 
 .control-section .letter-parallax {
-  top: 116em;
+  top: 187%;
 }
 
 .power-section .letter-parallax {
-  top: 122em;
+  top: 142%;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -214,17 +203,8 @@ h2 {
   opacity: 1;
   height: 3.5em;
   margin-top: 1em;
-  font-family: 'montserrat_mediumregular', sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 5.3em;
   letter-spacing: 0.02em;
-  line-height: 10em;
-  overflow: hidden;
-  transition: line-height 0.5s ease-in-out;
-  text-align: left;
-  text-decoration: none;
-  text-transform: none;
+  line-height: 10;
 }
 
 .expertise-section > h2,
@@ -237,7 +217,7 @@ h2 {
 
 .section-container--active > h1,
 .section-container--active > h2 {
-  line-height: 1.12em;
+  line-height: 1.12;
 }
 
 .text-container {
@@ -271,7 +251,7 @@ h2 {
   font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 1.75em;
   font-weight: 600;
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 
 .inner-section-text > p + p {
@@ -439,24 +419,26 @@ h2 {
   margin-left: 3.75em;
 }
 
+.image-content-section p {
+  margin-top: 0;
+}
+
 .image-content_middle {
   height: 100%;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2.25rem;
-  line-height: 2.625rem;
+  line-height: 1;
 }
 
 .image-content--small {
-  margin-top: 0.938rem;
-  line-height: 1.1875rem;
-  font-size: 1rem;
+  font-size: 1em;
+  line-height: 1.9;
 }
 
 .image-content--large {
-  margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
-  font-size: 4.5rem;
-  line-height: 0;
+  font-size: 4.5em;
+  line-height: 0.9;
 }
 
 .power-image {
@@ -501,12 +483,11 @@ div.power-image > .image-content-section > p.image-content--large {
 
 footer {
   margin-top: 19em;
-  color: var(--silver-chalice-color);
 }
 
 .footer-left > a,
 .footer-right > a {
-  color: var(--silver-chalice-color);
+  color: var(--coal-grey-color);
 }
 
 .supervise-section h1 > span,
@@ -515,14 +496,19 @@ footer {
   color: var(--flamingo-color);
 }
 
-@media all and (max-width: 1400px) {
-  .content-container {
-    box-sizing: border-box;
-    width: 100%;
+@media all and (max-width: 1550px) {
+  .advantage-section .inner-section-text,
+  .expertise-section .inner-section-text,
+  .improvement-section .inner-section-text,
+  .supervise-section .inner-section-text,
+  .toolset-section .inner-section-text {
+    margin-right: 3em;
   }
+}
 
+@media all and (max-width: 1400px) {
   .section-container {
-    width: 80%;
+    width: 100%;
   }
 
   .section-container,
@@ -553,6 +539,18 @@ footer {
     margin-top: 9em;
   }
 
+  .budget-section .letter-parallax {
+    top: 181%;
+  }
+
+  .control-section .letter-parallax {
+    top: 214%;
+  }
+
+  .power-section .letter-parallax {
+    top: 176%;
+  }
+
   .custom-button {
     width: 15em;
     height: 3em;
@@ -571,16 +569,11 @@ footer {
     margin-top: 1.1em;
   }
 
-  .section-container > h1,
-  .section-container > h2 {
-    font-size: 3.5em;
-  }
-
   .budget-image,
   .power-image {
-    height: auto;
-    font-size: 0.7em;
+    height: 10em;
     padding: 4em 2em;
+    font-size: 0.7em;
   }
 
   .power-image {
@@ -597,14 +590,26 @@ footer {
     margin-top: 1.4em;
   }
 
+  .image-content_middle {
+    font-size: 3.25em;
+  }
+
+  .image-content--small {
+    height: 100%;
+    font-size: 2em;
+    line-height: 1.4;
+  }
+
   .image-content--large {
+    height: 100%;
     margin: 2em 0;
-    font-size: 3.5em;
+    font-size: 5.5em;
+    line-height: 0.9;
   }
 
   .inner-section-text {
     font-size: 1.55em;
-    line-height: 1.4em;
+    line-height: 1.4;
   }
 
   footer {
@@ -612,13 +617,13 @@ footer {
   }
 }
 
-@media all and (max-width: 1024px) {
-  .content-container {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 2em 0 2em;
+@media all and (max-width: 1230px) {
+  .external-links svg {
+    transform: scale(0.85);
   }
+}
 
+@media all and (max-width: 1024px) {
   .swiper-container {
     width: auto;
   }
@@ -632,6 +637,10 @@ footer {
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
+  }
+
+  .toolset-section .swiper-wrapper {
+    height: 6em;
   }
 
   .swiper-button-prev,
@@ -655,6 +664,27 @@ footer {
   .swiper-slide svg.daimler-icon,
   .swiper-slide svg.huberd-burda-icon {
     height: 60%;
+  }
+
+  .external-links svg {
+    transform: scale(1);
+  }
+
+  svg.baidu-icon {
+    margin: 2em 0 0 9em;
+    transform: scale(1.3);
+  }
+
+  svg.yahoo-icon {
+    margin: 3em 0 0 12em;
+  }
+
+  .toolset-section svg {
+    transform: scale(0.8);
+  }
+
+  svg.thyssenkrupp-icon {
+    transform: scale(1);
   }
 
   .control-section .letter-parallax {
@@ -681,6 +711,9 @@ footer {
 }
 
 @media all and (max-width: 768px) {
+  .content-container {
+    padding: 0 1.75em;
+  }
   .vertical-inscription-container {
     display: none;
   }
@@ -721,10 +754,6 @@ footer {
 }
 
 @media (max-width: 414px) {
-  .content-container {
-    padding: 0;
-  }
-
   .content-container .section-container,
   .header-container {
     font-size: 0.5rem;

@@ -14,63 +14,28 @@
   padding: 0 3.8125em;
 }
 
-.header-container.header-container_white {
-  z-index: 9;
-  background-color: white;
-  animation: white-animation 0.3s ease-out;
+.header-container.header-container--top-position {
+  animation: show-header-background 0.6s ease-out, show-header-animation 0.5s ease-out;
 }
 
-.header-container.header-container_hide {
-  z-index: 9;
+.header-container.header-container--visible.header-container--nav-active,
+.header-container.header-container--visible.header-container--top-position,
+.header-container.header-container--hide.header-container--top-position,
+.header-container.header-container--hide.header-container--indicator {
   background-color: transparent;
-  animation: white-animation-hide 0.3s ease-out;
 }
 
-@keyframes white-animation {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+.header-container.header-container--visible {
+  z-index: 9;
+  top: 0;
+  background-color: white;
+  animation: show-header-animation 0.5s ease-out;
 }
 
-@keyframes white-animation-hide {
-  0% {
-    background-color: white;
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-svg.header-element_hide {
-  opacity: 0;
-  animation: hide-animation 0.3s ease-out;
-}
-
-button.header-element_hide {
-  opacity: 0;
-  animation: hide-animation 0.3s ease-out;
-}
-
-@keyframes hide-animation {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-svg.header-element_show {
-  opacity: 1;
-  animation: none;
-}
-
-button.header-element_show {
-  opacity: 1;
-  animation: none;
+.header-container.header-container--hide {
+  top: -9em;
+  background-color: white;
+  animation: hide-header-animation 0.5s ease-out;
 }
 
 .logo,
@@ -159,7 +124,6 @@ button.header-element_show {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 1.2em;
   color: white;
   font-size: 5.75em;
   font-weight: 500;
@@ -167,12 +131,14 @@ button.header-element_show {
   text-decoration: none;
 }
 
-.header-links-container a > img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: auto;
-  height: 100%;
+.header-links-container a:hover::after {
+  content: '';
+  width: 0.75em;
+  height: 0.75em;
+  margin-left: 0.35em;
+  background: url('../../assets/images/ArrowBlack.svg') center bottom no-repeat;
+  background-size: contain;
+  transform: rotate(-90deg);
 }
 
 .header-links-container a:hover {
@@ -187,6 +153,7 @@ button.header-element_show {
   margin-bottom: 3em;
   color: var(--white-with-opacity-color);
   font-size: 1em;
+  font-weight: 600;
   line-height: 1.5;
 }
 
@@ -194,14 +161,6 @@ button.header-element_show {
   color: white;
   font-style: italic;
   text-decoration: none;
-}
-
-.header-link-arrow-icon {
-  display: none;
-}
-
-.header-link-arrow-icon--active {
-  display: block;
 }
 
 .toggle-menu-button {
@@ -231,11 +190,33 @@ button.header-element_show {
   font-size: 1rem;
 }
 
+.content-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80em;
+  margin: 0 auto;
+  color: var(--mine-shaft-lighter-color);
+}
+
+h1,
+.section-container > h2,
+.section-content > h2 {
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 5.3em;
+  overflow: hidden;
+  transition: line-height 0.5s ease-in-out;
+}
+
 footer {
   max-width: 80em;
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color: var(--coal-grey-color);
+  font-family: montserrat_lightregular, sans-serif;
 }
 
 .footer-container {
@@ -268,7 +249,7 @@ footer * {
 }
 
 .footer-left p span {
-  color: var(--silver-chalice-color);
+  color: var(--coal-grey-color);
   font-weight: 600;
   font-style: italic;
 }
@@ -283,7 +264,7 @@ footer * {
 }
 
 .footer-right > a:hover {
-  color: var(--mine-shaft-lighter-color);
+  color: black;
 }
 
 .vertical-inscription-container {
@@ -328,7 +309,40 @@ footer * {
   font-weight: 600;
 }
 
+@keyframes show-header-animation {
+  0% {
+    top: -9em;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+@keyframes hide-header-animation {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -9em;
+  }
+}
+
+@keyframes show-header-background {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
 @media all and (max-width: 1400px) {
+  h1,
+  .section-container > h2,
+  .section-content > h2 {
+    font-size: 3.5em;
+  }
+
   .vertical-inscription > span {
     font-size: 1.7rem;
   }
@@ -347,6 +361,12 @@ footer * {
 }
 
 @media all and (max-width: 768px) {
+  h1,
+  .section-container > h2,
+  .section-content > h2 {
+    font-size: 2.5em;
+  }
+
   .footer-right {
     display: none;
   }
