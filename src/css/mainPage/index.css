@@ -182,15 +182,15 @@ h2 {
 }
 
 .budget-section .letter-parallax {
-  top: 96em;
+  top: 153%;
 }
 
 .control-section .letter-parallax {
-  top: 116em;
+  top: 187%;
 }
 
 .power-section .letter-parallax {
-  top: 122em;
+  top: 142%;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -219,7 +219,7 @@ h2 {
   font-weight: 600;
   font-size: 5.3em;
   letter-spacing: 0.02em;
-  line-height: 10em;
+  line-height: 10;
   overflow: hidden;
   transition: line-height 0.5s ease-in-out;
   text-align: left;
@@ -237,7 +237,7 @@ h2 {
 
 .section-container--active > h1,
 .section-container--active > h2 {
-  line-height: 1.12em;
+  line-height: 1.12;
 }
 
 .text-container {
@@ -271,7 +271,7 @@ h2 {
   font-family: 'montserrat_extralightregular', sans-serif;
   font-size: 1.75em;
   font-weight: 600;
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 
 .inner-section-text > p + p {
@@ -439,24 +439,26 @@ h2 {
   margin-left: 3.75em;
 }
 
+.image-content-section p {
+  margin-top: 0;
+}
+
 .image-content_middle {
   height: 100%;
   font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 2.25rem;
-  line-height: 2.625rem;
+  line-height: 1;
 }
 
 .image-content--small {
-  margin-top: 0.938rem;
-  line-height: 1.1875rem;
-  font-size: 1rem;
+  font-size: 1em;
+  line-height: 1.9;
 }
 
 .image-content--large {
-  margin: 3rem 0;
   font-family: 'montserratbold', sans-serif;
-  font-size: 4.5rem;
-  line-height: 0;
+  font-size: 4.5em;
+  line-height: 0.9;
 }
 
 .power-image {
@@ -515,6 +517,20 @@ footer {
   color: var(--flamingo-color);
 }
 
+@media all and (max-width: 1550px) {
+  .vertical-inscription {
+    right: 0;
+  }
+
+  .advantage-section .inner-section-text,
+  .expertise-section .inner-section-text,
+  .improvement-section .inner-section-text,
+  .supervise-section .inner-section-text,
+  .toolset-section .inner-section-text {
+    margin-right: 3em;
+  }
+}
+
 @media all and (max-width: 1400px) {
   .content-container {
     box-sizing: border-box;
@@ -553,6 +569,18 @@ footer {
     margin-top: 9em;
   }
 
+  .budget-section .letter-parallax {
+    top: 181%;
+  }
+
+  .control-section .letter-parallax {
+    top: 214%;
+  }
+
+  .power-section .letter-parallax {
+    top: 176%;
+  }
+
   .custom-button {
     width: 15em;
     height: 3em;
@@ -578,9 +606,9 @@ footer {
 
   .budget-image,
   .power-image {
-    height: auto;
-    font-size: 0.7em;
+    height: 10em;
     padding: 4em 2em;
+    font-size: 0.7em;
   }
 
   .power-image {
@@ -597,18 +625,36 @@ footer {
     margin-top: 1.4em;
   }
 
+  .image-content_middle {
+    font-size: 3.25em;
+  }
+
+  .image-content--small {
+    height: 100%;
+    font-size: 2em;
+    line-height: 1.4;
+  }
+
   .image-content--large {
+    height: 100%;
     margin: 2em 0;
-    font-size: 3.5em;
+    font-size: 5.5em;
+    line-height: 0.9;
   }
 
   .inner-section-text {
     font-size: 1.55em;
-    line-height: 1.4em;
+    line-height: 1.4;
   }
 
   footer {
     margin: 1em auto 0;
+  }
+}
+
+@media all and (max-width: 1230px) {
+  .external-links svg {
+    transform: scale(0.85);
   }
 }
 
@@ -634,6 +680,10 @@ footer {
     box-sizing: content-box;
   }
 
+  .toolset-section .swiper-wrapper {
+    height: 6em;
+  }
+
   .swiper-button-prev,
   .swiper-button-next {
     display: block;
@@ -655,6 +705,27 @@ footer {
   .swiper-slide svg.daimler-icon,
   .swiper-slide svg.huberd-burda-icon {
     height: 60%;
+  }
+
+  .external-links svg {
+    transform: scale(1);
+  }
+
+  svg.baidu-icon {
+    margin: 2em 0 0 9em;
+    transform: scale(1.3);
+  }
+
+  svg.yahoo-icon {
+    margin: 3em 0 0 12em;
+  }
+
+  .toolset-section svg {
+    transform: scale(0.8);
+  }
+
+  svg.thyssenkrupp-icon {
+    transform: scale(1);
   }
 
   .control-section .letter-parallax {

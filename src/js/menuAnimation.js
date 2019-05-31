@@ -1,46 +1,44 @@
-const menu = document.querySelector('.toggle-menu-button');
-const logo = document.querySelector('.logo');
 const headerContainer = document.querySelector('.header-container');
+const defaultPositionHeader = 100;
+const visibleClass = 'header-container--visible';
+const hideClass = 'header-container--hide';
+const topPositionClass = 'header-container--top-position';
 
 function hideHeader() {
-  if (headerContainer.classList.contains('header-container_white')) {
-    headerContainer.classList.remove('header-container_white');
-    headerContainer.classList.add('header-container_hide');
+  const isHasVisibleClass = headerContainer.classList.contains(visibleClass);
+  const isHasHiddenClass = headerContainer.classList.contains(hideClass);
+
+  if (!isHasVisibleClass && !isHasHiddenClass) {
+    headerContainer.classList.add(hideClass);
   }
 
-  if (logo.classList.contains('header-element_show')) {
-    logo.classList.remove('header-element_show');
+  if (isHasVisibleClass) {
+    headerContainer.classList.remove(visibleClass);
+    headerContainer.classList.add(hideClass);
   }
-
-  if (menu.classList.contains('header-element_show')) {
-    menu.classList.remove('header-element_show');
-  }
-
-  logo.classList.add('header-element_hide');
-  menu.classList.add('header-element_hide');
 }
 
 function showHeader() {
-  if (headerContainer.classList.contains('header-container_hide')) {
-    headerContainer.classList.remove('header-container_hide');
+  headerContainer.classList.remove('header-container--indicator');
+  if (headerContainer.classList.contains(hideClass)) {
+    headerContainer.classList.remove(hideClass);
+    headerContainer.classList.add(visibleClass);
+    headerContainer.classList.remove(topPositionClass);
   }
+}
 
-  if (logo.classList.contains('header-element_hide')) {
-    logo.classList.remove('header-element_hide');
-    headerContainer.classList.add('header-container_white');
+function removeHeaderBackground() {
+  if (headerContainer.classList.contains(visibleClass)) {
+    headerContainer.classList.remove(visibleClass);
+    headerContainer.classList.add(topPositionClass);
   }
-
-  if (menu.classList.contains('header-element_hide')) {
-    menu.classList.remove('header-element_hide');
-  }
-
-  logo.classList.add('header-element_show');
-  menu.classList.add('header-element_show');
 }
 
 export default function changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition) {
-  if (scrollCurrentPosition > scrollPreviousPosition) {
+  if (scrollCurrentPosition > scrollPreviousPosition && scrollCurrentPosition > defaultPositionHeader) {
     hideHeader();
+  } else if (scrollCurrentPosition <= defaultPositionHeader) {
+    removeHeaderBackground();
   } else {
     showHeader();
   }
