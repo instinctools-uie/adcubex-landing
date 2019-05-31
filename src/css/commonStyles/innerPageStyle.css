@@ -361,6 +361,7 @@ footer {
   }
 
   .title-section .content-wrapper {
+    width: 100%;
     padding: 7em 1.75em 0;
   }
 
