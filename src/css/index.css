@@ -37,7 +37,8 @@
   --mine-shaft-color: #252525;
 
   --header-navigation-bg-color: var(--amaranth-color);
-  --progressbar-bg-color: #00000073;
+  --input-active-border-color: var(--mine-shaft-lighter-color);
+  --form-success-status-color: var(--chateau-green-color);
 
   --google-first-letter-hover-color: var(--cornflower-blue-color);
   --google-second-and-sixth-letter-hover-color: var(--cinnabar-color);
