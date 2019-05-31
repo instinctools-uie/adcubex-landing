@@ -22,7 +22,6 @@ window.onload = () => {
     event.preventDefault();
 
     if (window.Email /* instance of smtpjs */) {
-
       const submitStatus = form.querySelector('.form-submit-status');
       const submitProgress = form.querySelector('.custom-button div[role="status"]');
       const submitBtnText = form.querySelector('.custom-button .custom-button-inner');
@@ -32,15 +31,17 @@ window.onload = () => {
       const phone = form.querySelector('input[name="phone"]');
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
       const body = form.querySelector('textarea[name="body"]');
-      const subject = `Adcubex request from ${name.value} (email:${email.value}${phone.value ? `, tel:${phone.value}` : ''})`;
-      const showProgress = (flag) => {
+      const subject = `Adcubex request from ${name.value} (email:${email.value}${phone.value
+        ? `, tel:${phone.value}`
+        : ''})`;
+      const showProgress = flag => {
         submitProgress.setAttribute('aria-hidden', `${!flag}`);
         submitProgress.style.display = flag ? 'flex' : 'none';
 
         submitBtnText.setAttribute('aria-hidden', `${flag}`);
         submitBtnText.style.display = flag ? 'none' : 'block';
 
-        [name, email, phone, body, submitBtn, agreeToCollectData].forEach((field) => {
+        [name, email, phone, body, submitBtn, agreeToCollectData].forEach(field => {
           field.disabled = flag;
         });
       };

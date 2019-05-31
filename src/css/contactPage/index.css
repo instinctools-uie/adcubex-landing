@@ -37,12 +37,12 @@
 .contact-us-container .custom-button .spinner {
   width: 1em;
   height: 1em;
-  border: .25em solid var(--flamingo-color);
+  border: 0.25em solid var(--flamingo-color);
   border-radius: 50%;
-  border-top: .15em solid var(--cube-right-side-dark-blue-color);
-  border-right: .25em solid var(--flamingo-color);
-  border-bottom: .15em solid var(--cube-right-side-purple-color);
-  animation: spin .4s linear infinite;
+  border-top: 0.15em solid var(--cube-right-side-dark-blue-color);
+  border-right: 0.25em solid var(--flamingo-color);
+  border-bottom: 0.15em solid var(--cube-right-side-purple-color);
+  animation: spin 0.4s linear infinite;
 }
 
 @keyframes spin {
