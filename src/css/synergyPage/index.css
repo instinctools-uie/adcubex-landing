@@ -16,8 +16,8 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
-.title-section .content-wrapper {
-  width: 45%;
+.title-section p {
+  max-width: 44%;
 }
 
 .external-links {
@@ -82,6 +82,12 @@ article.together {
   }
   100% {
     background-color: transparent;
+  }
+}
+
+@media all and (max-width: 1400px) {
+  .title-section p {
+    max-width: 34%;
   }
 }
 
