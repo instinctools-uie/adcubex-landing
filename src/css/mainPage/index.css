@@ -37,7 +37,12 @@ h2 {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin-top: 8em;
+}
+
+.section-container {
+  position: relative;
+  z-index: 1;
+  margin-top: 6em;
   width: 100%;
   min-height: 100vh;
   color: var(--mine-shaft-light-color);
@@ -478,12 +483,11 @@ div.power-image > .image-content-section > p.image-content--large {
 
 footer {
   margin-top: 19em;
-  color: var(--silver-chalice-color);
 }
 
 .footer-left > a,
 .footer-right > a {
-  color: var(--silver-chalice-color);
+  color: var(--coal-grey-color);
 }
 
 .supervise-section h1 > span,

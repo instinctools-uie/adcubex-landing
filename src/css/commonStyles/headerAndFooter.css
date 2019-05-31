@@ -215,7 +215,8 @@ footer {
   max-width: 80em;
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color: var(--coal-grey-color);
+  font-family: montserrat_lightregular, sans-serif;
 }
 
 .footer-container {
@@ -248,7 +249,7 @@ footer * {
 }
 
 .footer-left p span {
-  color: var(--silver-chalice-color);
+  color: var(--coal-grey-color);
   font-weight: 600;
   font-style: italic;
 }
@@ -263,7 +264,7 @@ footer * {
 }
 
 .footer-right > a:hover {
-  color: var(--mine-shaft-lighter-color);
+  color: black;
 }
 
 .vertical-inscription-container {
