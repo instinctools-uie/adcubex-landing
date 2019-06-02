@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp",
-    "format": "prettier --single-quote --write 'src/**/*.{js,css}'",
+    "format": "prettier --single-quote --write \"src/**/*.{js,css}\"",
     "lint": "eslint src",
     "test": "jest --coverage --no-cache --env=jsdom"
   },
