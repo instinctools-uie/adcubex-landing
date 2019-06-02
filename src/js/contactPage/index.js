@@ -1,13 +1,11 @@
 import { EMAIL } from '../constants';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
-import toggleCheckbox from './checkboxHandler';
 import changeHeaderVisibility from '../menuAnimation';
 
 let scrollPreviousPosition = 0;
 
 toggleMenu();
-toggleCheckbox();
 hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
@@ -18,43 +16,59 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
-  function showProgress(flag) {
-    const progress = document.querySelector('div[role="progressbar"]');
-    if (progress) {
-      progress.setAttribute('aria-hidden', flag);
-      progress.style.display = flag ? 'flex' : 'none';
-    }
-  }
-
   const form = document.querySelector('#contact-form');
+
   form.onsubmit = event => {
     event.preventDefault();
 
     if (window.Email /* instance of smtpjs */) {
-      const email = form.querySelector('input[name="email"]').value;
-      const name = form.querySelector('input[name="name"]').value;
-      const phone = form.querySelector('input[name="phone"]').value;
-      const body = form.querySelector('textarea[name="body"]').value;
-      const subject = `Adcubex request from ${name} (email:${email}${phone ? `, tel:${phone}` : ''})`;
+      const submitStatus = form.querySelector('.form-submit-status');
+      const submitProgress = form.querySelector('.custom-button div[role="status"]');
+      const submitBtnText = form.querySelector('.custom-button .custom-button-inner');
+      const submitBtn = form.querySelector('.custom-button');
+      const email = form.querySelector('input[name="email"]');
+      const name = form.querySelector('input[name="name"]');
+      const phone = form.querySelector('input[name="phone"]');
+      const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
+      const body = form.querySelector('textarea[name="body"]');
+      const subject = `Adcubex request from ${name.value} (email:${email.value}${phone.value
+        ? `, tel:${phone.value}`
+        : ''})`;
+      const showProgress = flag => {
+        submitProgress.setAttribute('aria-hidden', `${!flag}`);
+        submitProgress.style.display = flag ? 'flex' : 'none';
+
+        submitBtnText.setAttribute('aria-hidden', `${flag}`);
+        submitBtnText.style.display = flag ? 'none' : 'flex';
+
+        [name, email, phone, body, submitBtn, agreeToCollectData].forEach(field => {
+          field.disabled = flag;
+        });
+      };
 
       showProgress(true);
       window.Email
         .send({
           SecureToken: EMAIL.TOKEN,
           To: EMAIL.ADDRESS,
-          From: email,
+          From: email.value,
           Subject: subject,
-          Body: body
+          Body: body.value
         })
         .then(msg => {
           showProgress(false);
+
           if (msg && msg.toLowerCase().includes('fail')) {
-            window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
+            window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body.value}`, '_blank');
           }
+
+          form.reset();
+          submitStatus.style.display = 'block';
+          submitStatus.setAttribute('aria-hidden', 'false');
         })
         .catch(() => {
-          showProgress(true);
-          window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
+          showProgress(false);
+          window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body.value}`, '_blank');
         });
     }
   };
