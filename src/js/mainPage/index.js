@@ -57,7 +57,6 @@ recalculateScrollDependencies();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
-// (() => new Rellax('.letter-parallax'))();
 
 (() =>
   new Swiper('.swiper-container', {
