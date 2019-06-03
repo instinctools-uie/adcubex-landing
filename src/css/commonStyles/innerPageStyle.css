@@ -302,7 +302,7 @@ footer {
   article.content-column--end,
   .content-column--start,
   .content-column--end {
-    padding-top: 14em;
+    padding-top: 0em;
     padding-bottom: 2em;
   }
 

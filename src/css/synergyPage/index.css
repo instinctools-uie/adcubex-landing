@@ -16,10 +16,6 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
-.title-section p {
-  max-width: 44%;
-}
-
 .external-links {
   display: flex;
   align-items: center;
@@ -82,12 +78,6 @@ article.together {
   }
   100% {
     background-color: transparent;
-  }
-}
-
-@media all and (max-width: 1400px) {
-  .title-section p {
-    max-width: 34%;
   }
 }
 
