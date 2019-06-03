@@ -12,7 +12,7 @@ export default function toggleContentByScroll(selector, delay) {
     const scrollDelay = scrollDifferenceBetweenSections / delay;
     const scrollPositionWhenShouldToggleText = scrollDelay + scrollPositionOfCurrentSection;
 
-    if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
+    if (scrolled > scrollPositionWhenShouldToggleText) {
       nextSection && nextSection.classList.add(`${selector}--active`);
     } else if (scrolled > scrollPositionOfCurrentSection) {
       sections[i].classList.add(`${selector}--active`);
