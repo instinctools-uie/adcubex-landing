@@ -16,11 +16,6 @@ body {
   background-color: rgba(236, 234, 234, 1);
 }
 
-h1,
-h2 {
-  font-family: 'montserrat_extraboldregular', sans-serif;
-}
-
 .arrow {
   width: 1.4em;
   margin-left: 1.5em;
