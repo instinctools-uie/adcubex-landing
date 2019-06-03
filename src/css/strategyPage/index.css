@@ -77,6 +77,26 @@
   }
 }
 
+@media all and (max-width: 1400px) {
+  article.content-column--start,
+  article.content-column--end,
+  .content-column--start,
+  .content-column--end {
+    padding-top: 8em;
+    padding-bottom: 14em;
+  }
+}
+
+@media all and (max-width: 1130px) {
+  article.content-column--start,
+  article.content-column--end,
+  .content-column--start,
+  .content-column--end {
+    padding-top: 4em;
+    padding-bottom: 12em;
+  }
+}
+
 @media all and (max-width: 768px) {
   body {
     background-color: var(--cube-left-side-red-color);
