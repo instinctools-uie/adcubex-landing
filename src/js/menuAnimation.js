@@ -1,5 +1,5 @@
 const headerContainer = document.querySelector('.header-container');
-const defaultPositionHeader = 100;
+const defaultPositionHeader = 0;
 const visibleClass = 'header-container--visible';
 const hideClass = 'header-container--hide';
 const topPositionClass = 'header-container--top-position';
