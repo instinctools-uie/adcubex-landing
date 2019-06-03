@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140685409-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140685409-1');
+    </script>
+
     <meta charset="UTF-8">
     <title>Adcubex - Streamline ad management. Supervise with ease.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -44,7 +54,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
 <body>
 <div class="header-container header-container--indicator">
     <a href="index.html" aria-label="Navigate to home page">
-<svg class="logo" width="8.625em" height="2.565em" viewBox="0 0 138 41" aria-hidden="true">
+<svg class="logo" width="8.625em" height="2.565em" viewBox="0 0 138 41" focusable="false" aria-hidden="true">
     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g fill="#ffffff">
             <path d="M9.6,1.7 L0.9,22 L6.3,22 L7.7,18.4 L16.5,18.4 L17.9,22 L23.5,22 L15,1.7 L9.6,1.7 Z M9.3,14.4 L12.1,7.2 L14.9,14.4 L9.3,14.4 Z" fill-rule="nonzero"></path>
@@ -72,7 +82,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
 </svg>
     </a>
         <button class="toggle-menu-button" aria-label="toggle menu">
-    <svg class="header-open-menu-icon header-open-menu-icon--active" aria-hidden="true" fill="#ffffff" width="26px" height="19px" viewBox="0 0 26 19">
+    <svg class="header-open-menu-icon header-open-menu-icon--active" focusable="false" aria-hidden="true" fill="#ffffff" width="26px" height="19px" viewBox="0 0 26 19">
         <defs>
             <path d="M0,0 L26,0 L26,3 L0,3 L0,0 Z M0,8 L20,8 L20,11 L0,11 L0,8 Z M0,16 L14,16 L14,19 L0,19 L0,16 Z" id="path-1"></path>
         </defs>
@@ -98,7 +108,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
             </g>
         </g>
     </svg>
-    <svg class="header-close-menu-icon" aria-hidden="true" width="24px" height="24px" viewBox="0 0 24 24" >
+    <svg class="header-close-menu-icon" aria-hidden="true" focusable="false" width="24px" height="24px" viewBox="0 0 24 24" >
         <defs>
             <polygon id="path-2" points="25 3.41714286 22.5828571 1 13 10.5828571 3.41714286 1 1 3.41714286 10.5828571 13 1 22.5828571 3.41714286 25 13 15.4171429 22.5828571 25 25 22.5828571 15.4171429 13"></polygon>
         </defs>
@@ -138,12 +148,14 @@ based on unique expertise, time-approved toolset and reliable partnership.">
             </a>
         </ul>
         <p class="header-navigation-footer-text">
-            AdCubex is devision of <a href="https://www.instinctools.com" rel="noreferrer noopener external" target="_blank">*instinctools</a>
+            AdCubex is a devision of <a href="https://www.instinctools.com" rel="noreferrer noopener external" target="_blank">*instinctools</a>
         </p>
     </div>
 </nav>
 <svg
         class="cube"
+        focusable="false"
+
         aria-hidden="true"
         width="3198px"
         height="1665px"
@@ -169,7 +181,6 @@ based on unique expertise, time-approved toolset and reliable partnership.">
     </section>
     <div class="contact-us-section content-section section-container">
         <div class="content-wrapper contact-us-container">
-            <div role="progressbar" aria-live="assertive" aria-hidden="true">Loading...</div>
             <form id="contact-form" class="contact-us-form">
                 <p>Leave us a note that you are interested and our cooperation<br>will start!</p>
                 <input name="name" type="text" placeholder="Name*" required />
@@ -179,21 +190,32 @@ based on unique expertise, time-approved toolset and reliable partnership.">
                 </div>
                 <textarea name="body" required placeholder="Describe your request"></textarea>
                 <div class="contact-checkbox">
-                    <input type="checkbox" id="checkbox-id" required>
+                    <input name="collecting-data" type="checkbox" id="checkbox-id" required>
                     <div class="checkbox-wrapper">
-                        <div class="fake-checkbox fake-checkbox_unchecked"></div>
-                        <img class="img_hide" src="assets/images/Check.png" alt="Check mark for checkbox"/>
+                        <div class="fake-checkbox"></div>
+                        <img src="assets/images/Check.png" aria-describedby="checkbox-id" />
                     </div>
-                    <label for="checkbox-id">I consent to the   collection, storage and processing of the data which I provided in the contact form.<br>
+                    <label for="checkbox-id">I consent to the collection, storage and processing of the data which I provided in the contact form.<br>
                         This data should be deleted after processing of my request is complete.</label>
                 </div>
+                <div class="form-submit-status" role="status" aria-live="assertive" style="display: none" aria-hidden="true">
+                    <p>Thank you for contacting!
+                        <br>We have received your message. Our dedicated team will contact you within 24-48 hours.
+                    </p>
+                </div>
                 <button class="custom-button">
-                    <span>Send</span>
-                    <img class="button-image" src="./assets/images/SmallArrow.svg" aria-hidden="true">
+                    <div role="status" aria-live="polite" style="display: none" aria-hidden="true">
+                        <div class="spinner"></div>
+                        <p>Sending...</p>
+                    </div>
+                    <div class="custom-button-inner">
+                        <span>Send</span>
+                        <img class="button-image" src="./assets/images/SmallArrow.svg" aria-hidden="true">
+                    </div>
                 </button>
             </form>
             <div class="svg-container">
-                <svg width="427px" height="900px" viewBox="0 0 427 808" version="1.1" aria-hidden="true">
+                <svg width="427px" height="900px" viewBox="0 0 427 808" aria-hidden="true" focusable="false">
                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                         <g transform="translate(-906.000000, -749.000000)">
                             <g transform="translate(906.000000, 749.000000)">
