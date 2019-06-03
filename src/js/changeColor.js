@@ -4,6 +4,7 @@ import {
   CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS,
   RATE_WSXGA_SCROLL
 } from './constants';
+import getScrollPosition from './getScrollPosition';
 
 export function changeColorForBudgetSection(sectionScrollPosition) {
   const rateForMakeChangeCubeColorFaster = 800;
@@ -110,7 +111,7 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
   const maxPerChangeValue = 1;
   const minPerChangeValue = 0;
   const currentColor = { red: 0, green: 0, blue: 0 };
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   let perChange = (scrolled - startPosition) / RATE_WSXGA_SCROLL;
 
   if (perChange < minPerChangeValue) {
@@ -128,9 +129,9 @@ function changeColor(fromColor, toColor, selectorsArr, startPosition) {
         : Math.round(fromColor[key] + (toColor[key] - fromColor[key]) * perChange);
   });
 
-  selectorsArr.forEach(selectorOptions => {
-    changeSelectorElementsProperty(selectorOptions, currentColor);
-  });
+  for (let i = 0; i < selectorsArr.length; i++) {
+    changeSelectorElementsProperty(selectorsArr[i], currentColor);
+  }
 }
 
 function changeSelectorElementsProperty(selectorOptions, currentColor) {
@@ -138,7 +139,10 @@ function changeSelectorElementsProperty(selectorOptions, currentColor) {
   const { property } = selectorOptions;
   const { red, green, blue } = currentColor;
 
-  selectorElements.forEach(selectorElement => {
-    selectorElement.style[property] = `rgb(${red}, ${green}, ${blue})`;
-  });
+  for (let i = 0; i < selectorElements.length; i++) {
+    const color = `rgb(${red}, ${green}, ${blue})`;
+    if (selectorElements[i].style[property] !== color) {
+      selectorElements[i].style[property] = `rgb(${red}, ${green}, ${blue})`;
+    }
+  }
 }

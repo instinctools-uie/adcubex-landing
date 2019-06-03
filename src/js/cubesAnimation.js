@@ -1,5 +1,6 @@
 import { RATE_WSXGA_SCROLL, RATE_WSGA_SCROLL, MAIN_CUBE_OPTIONS, CUBES_OPTIONS } from './constants';
 import isWSXGABreakpoint from './isWSXGABreakpoint';
+import getScrollPosition from './getScrollPosition';
 
 const mainCubeScaleAnimationElement = document.querySelector('#main-cube-scale-animation');
 const cubesTranslateElements = document.querySelectorAll('.cube-translate');
@@ -25,14 +26,14 @@ export function cubesRandomLevitation() {
 }
 
 export function makeMainCubeBigger(sectionScrollPosition) {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   const perChange = (scrolled - sectionScrollPosition) / changeScroll;
 
   mainCubeAnimation(perChange);
 }
 
 export function transformMainCubeToDefaultSize(sectionScrollPosition) {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   const highRatio = 0.8;
   const perChange = highRatio - (scrolled - sectionScrollPosition) / changeScroll;
 
@@ -40,8 +41,12 @@ export function transformMainCubeToDefaultSize(sectionScrollPosition) {
 }
 
 export function mainCubeToDefaultSize() {
-  mainCubeScaleAnimationElement.style.transform = `translate(0px, 0px) scale(1)`;
-  mainCubeForTranslateAnimation.style.animationDuration = `${MAIN_CUBE_OPTIONS.animationDuration}s`;
+  const transform = 'translate(0px, 0px) scale(1)';
+
+  if (mainCubeScaleAnimationElement.style.transform !== transform) {
+    mainCubeScaleAnimationElement.style.transform = transform;
+    mainCubeForTranslateAnimation.style.animationDuration = `${MAIN_CUBE_OPTIONS.animationDuration}s`;
+  }
 }
 
 function mainCubeAnimation(perChange) {
@@ -49,18 +54,20 @@ function mainCubeAnimation(perChange) {
   const cubeScale = getValueBetweenRange(perChange, minScaleValue, maxScaleValue);
 
   const isCubeScaled = cubeScale > minScaleValue;
+  const duration = isCubeScaled ? '0s' : `${animationDuration}s`;
+  const scale = `scale(${cubeScale})`;
 
-  if (isCubeScaled) {
-    mainCubeForTranslateAnimation.style.animationDuration = '0s';
-  } else {
-    mainCubeForTranslateAnimation.style.animationDuration = `${animationDuration}s`;
+  if (mainCubeForTranslateAnimation.style.animationDuration !== duration) {
+    mainCubeForTranslateAnimation.style.animationDuration = duration;
   }
 
-  mainCubeScaleAnimationElement.style.transform = `scale(${cubeScale})`;
+  if (mainCubeScaleAnimationElement.style.transform !== scale) {
+    mainCubeScaleAnimationElement.style.transform = scale;
+  }
 }
 
 export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChangeScroll) {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   const { minTranslateYWhenScrollOnWhiteSections, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const perChange = (scrolled - sectionScrollPosition) / rateChangeScroll;
   const translateYPosition = getValueBetweenRange(
@@ -73,7 +80,7 @@ export function moveCubesToTopForWhiteSections(sectionScrollPosition, rateChange
 }
 
 export function moveCubesToTopForColorSections(sectionScrollPosition) {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const perChange = (scrolled - sectionScrollPosition) / changeScroll;
@@ -82,7 +89,7 @@ export function moveCubesToTopForColorSections(sectionScrollPosition) {
 }
 
 export function moveCubesToDefaultPosition(sectionScrollPosition) {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   const { maxTranslateYPosition, maxTranslateYWhenScrollOnWhiteSections } = CUBES_OPTIONS;
   const minTranslateYPosition = maxTranslateYWhenScrollOnWhiteSections;
   const highRatio = 0.8;
@@ -101,9 +108,12 @@ function cubesAnimation(perChange, minTranslateYPosition, maxTranslateYPosition)
 }
 
 function translateCubesAnimation(translateYPosition) {
-  cubesTranslateElements.forEach(cubeTranslateElement => {
-    cubeTranslateElement.style.transform = `translate(0px, -${translateYPosition}px)`;
-  });
+  for (let i = 0; i < cubesTranslateElements.length; i++) {
+    const translate = `translate(0px, -${translateYPosition}px)`;
+    if (cubesTranslateElements[i].style.transform !== translate) {
+      cubesTranslateElements[i].style.transform = translate;
+    }
+  }
 }
 
 function getValueBetweenRange(perChange, minValue, maxValue) {

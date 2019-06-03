@@ -2,6 +2,7 @@ import { EMAIL } from '../constants';
 import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
+import getScrollPosition from '../getScrollPosition';
 
 let scrollPreviousPosition = 0;
 
@@ -9,7 +10,7 @@ toggleMenu();
 hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
 
   changeHeaderVisibility(scrollPreviousPosition, scrolled);
   scrollPreviousPosition = scrolled;

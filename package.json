@@ -81,7 +81,6 @@
     "vinyl-source-stream": "1.1.0"
   },
   "dependencies": {
-    "rellax": "1.9.1",
     "swiper": "4.5.0"
   }
 }
