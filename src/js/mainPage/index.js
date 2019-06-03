@@ -1,4 +1,3 @@
-import Rellax from 'rellax';
 import Swiper from 'swiper';
 
 import {
@@ -23,6 +22,7 @@ import toggleMenu from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { sectionImageParallax } from '../scrollParallax';
+import getScrollPosition from '../getScrollPosition';
 
 import changeHeaderVisibility from '../menuAnimation';
 import isWSXGABreakpoint from '../isWSXGABreakpoint';
@@ -35,6 +35,13 @@ const budgetSection = window.document.querySelector('.budget-section');
 const controlSection = window.document.querySelector('.control-section');
 const powerSection = window.document.querySelector('.power-section');
 const improvementSection = window.document.querySelector('.improvement-section');
+
+const superviseElement = window.document.querySelector('#supervise .inner-section-image');
+const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
+const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
+const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
+const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
+
 const superviseSectionScrollPosition = superviseSection.offsetTop;
 const expertiseSectionScrollPosition = expertiseSection.offsetTop;
 const toolsetSectionScrollPosition = toolsetSection.offsetTop;
@@ -44,13 +51,13 @@ const controlSectionScrollPosition = controlSection.offsetTop;
 const powerSectionScrollPosition = powerSection.offsetTop;
 const improvementSectionScrollPosition = improvementSection.offsetTop;
 
-let scrollPreviousPosition = 0;
+const state = { prevScrollPosition: 0, isDefaultParams: false };
 
-initProject();
+recalculateScrollDependencies();
 toggleMenu();
 hoverLinkInMenu();
 cubesRandomLevitation();
-(() => new Rellax('.letter-parallax'))();
+// (() => new Rellax('.letter-parallax'))();
 
 (() =>
   new Swiper('.swiper-container', {
@@ -60,35 +67,58 @@ cubesRandomLevitation();
     }
   }))();
 
-window.addEventListener('scroll', initProject);
+window.requestAnimationFrame(handleScrollChange);
 
-function initProject() {
-  const scrolled = window.pageYOffset;
+function handleScrollChange() {
+  const scrollPosition = getScrollPosition();
 
-  if (scrolled < advantageSectionScrollPosition || scrolled > improvementSectionScrollPosition) {
+  if (state.prevScrollPosition !== scrollPosition) {
+    recalculateScrollDependencies();
+  }
+
+  state.prevScrollPosition = scrollPosition;
+  window.requestAnimationFrame(handleScrollChange);
+}
+
+function recalculateScrollDependencies() {
+  const scrollPosition = getScrollPosition();
+
+  if (
+    !state.isDefaultParams &&
+    (scrollPosition < advantageSectionScrollPosition || scrollPosition > improvementSectionScrollPosition)
+  ) {
+    state.isDefaultParams = true;
     changeCubeColorToDefault();
     mainCubeToDefaultSize();
     moveCubesToTopForWhiteSections(superviseSectionScrollPosition, advantageSectionScrollPosition);
   }
 
-  if (scrolled >= advantageSectionScrollPosition && scrolled <= budgetSectionScrollPosition) {
+  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= budgetSectionScrollPosition) {
+    state.isDefaultParams = false;
     changeColorForBudgetSection(advantageSectionScrollPosition);
+    moveFirstLetter('.budget-section');
   }
 
-  if (scrolled >= advantageSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
+  if (scrollPosition >= advantageSectionScrollPosition && scrollPosition <= powerSectionScrollPosition) {
+    state.isDefaultParams = false;
     makeMainCubeBigger(advantageSectionScrollPosition);
     moveCubesToTopForColorSections(advantageSectionScrollPosition);
   }
 
-  if (scrolled > budgetSectionScrollPosition && scrolled <= controlSectionScrollPosition) {
+  if (scrollPosition > budgetSectionScrollPosition && scrollPosition <= controlSectionScrollPosition) {
+    state.isDefaultParams = false;
     changeColorForControlSection(budgetSectionScrollPosition);
+    moveFirstLetter('.control-section');
   }
 
-  if (scrolled > controlSectionScrollPosition && scrolled <= powerSectionScrollPosition) {
+  if (scrollPosition > controlSectionScrollPosition && scrollPosition <= powerSectionScrollPosition) {
+    state.isDefaultParams = false;
     changeColorForPowerSection(controlSectionScrollPosition);
+    moveFirstLetter('.power-section');
   }
 
-  if (scrolled > powerSectionScrollPosition && scrolled <= improvementSectionScrollPosition) {
+  if (scrollPosition > powerSectionScrollPosition && scrollPosition <= improvementSectionScrollPosition) {
+    state.isDefaultParams = false;
     const scrollDelayForAnimation = isWSXGABreakpoint() ? WSXGA_ANIMATION_DELAY : WSGA_ANIMATION_DELAY;
 
     const sectionScrollPosition = powerSectionScrollPosition + scrollDelayForAnimation;
@@ -107,33 +137,36 @@ function initProject() {
   const middleOfScreenBeforeAdvantageSection = advantageSectionScrollPosition - middleOfScreenHeight;
   const middleOfScreenAfterAdvantageSection = advantageSectionScrollPosition + middleOfScreenHeight;
   const middleOfScreenBeforeImprovementSection = improvementSectionScrollPosition - middleOfScreenHeight;
-  if (scrolled < middleOfScreenBeforeExpertiseSection) {
-    const superviseElement = window.document.querySelector('#supervise .inner-section-image');
+
+  if (scrollPosition < middleOfScreenBeforeExpertiseSection) {
     sectionImageParallax(superviseElement, middleOfScreenBeforeSuperviseSection);
   }
 
-  if (scrolled > middleOfScreenBeforeExpertiseSection && scrolled < middleOfScreenAfterExpertiseSection) {
-    const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
+  if (scrollPosition > middleOfScreenBeforeExpertiseSection && scrollPosition < middleOfScreenAfterExpertiseSection) {
     sectionImageParallax(expertiseElement, middleOfScreenBeforeExpertiseSection);
   }
 
-  if (scrolled > middleOfScreenBeforeToolsetSection && scrolled < middleOfScreenAfterToolsetSection) {
-    const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
+  if (scrollPosition > middleOfScreenBeforeToolsetSection && scrollPosition < middleOfScreenAfterToolsetSection) {
     sectionImageParallax(toolsetPattern, middleOfScreenBeforeToolsetSection);
   }
 
-  if (scrolled > middleOfScreenBeforeAdvantageSection && scrolled < middleOfScreenAfterAdvantageSection) {
-    const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
+  if (scrollPosition > middleOfScreenBeforeAdvantageSection && scrollPosition < middleOfScreenAfterAdvantageSection) {
     sectionImageParallax(advantagePattern, middleOfScreenBeforeAdvantageSection);
   }
 
-  if (scrolled > middleOfScreenBeforeImprovementSection) {
-    const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
+  if (scrollPosition > middleOfScreenBeforeImprovementSection) {
     sectionImageParallax(improvementPattern, middleOfScreenBeforeImprovementSection);
   }
 
   toggleContentByScroll(MAIN_PAGE_TOGGLE_CONTENT.sectionContainer, MAIN_PAGE_TOGGLE_CONTENT.delayBetweenSection);
+  changeHeaderVisibility(state.prevScrollPosition, scrollPosition);
+}
 
-  changeHeaderVisibility(scrollPreviousPosition, scrolled);
-  scrollPreviousPosition = scrolled;
+function moveFirstLetter(parentSelector) {
+  const sectionElement = document.querySelector(parentSelector);
+  const firstLetterElement = document.querySelector(`${parentSelector} .letter-parallax`);
+  const scrollPosition = getScrollPosition();
+
+  const value = sectionElement.offsetTop - scrollPosition;
+  firstLetterElement.style.transform = `translateY(${value}px)`;
 }

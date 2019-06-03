@@ -1,10 +1,12 @@
+import getScrollPosition from './getScrollPosition';
+
 export default function toggleContentByScroll(selector, delay) {
-  const scrolled = window.pageYOffset;
+  const scrolled = getScrollPosition();
   const sections = window.document.querySelectorAll(`.${selector}`);
 
-  sections.forEach((section, index) => {
-    const nextSection = sections[index + 1];
-    const scrollPositionOfCurrentSection = section.offsetTop;
+  for (let i = 0; i < sections.length; i++) {
+    const nextSection = sections[i + 1];
+    const scrollPositionOfCurrentSection = sections[i].offsetTop;
     const scrollPositionOfNextSection = nextSection ? nextSection.offsetTop : document.documentElement.scrollHeight;
     const scrollDifferenceBetweenSections = scrollPositionOfNextSection - scrollPositionOfCurrentSection;
     const scrollDelay = scrollDifferenceBetweenSections / delay;
@@ -13,7 +15,7 @@ export default function toggleContentByScroll(selector, delay) {
     if (scrolled > scrollPositionWhenShouldToggleText && scrolled < scrollPositionOfNextSection) {
       nextSection && nextSection.classList.add(`${selector}--active`);
     } else if (scrolled > scrollPositionOfCurrentSection) {
-      section.classList.add(`${selector}--active`);
+      sections[i].classList.add(`${selector}--active`);
     }
-  });
+  }
 }

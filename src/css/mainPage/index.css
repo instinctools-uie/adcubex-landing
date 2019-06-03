@@ -133,28 +133,13 @@ body {
   color: white;
 }
 
-.letter-parallax {
+.section-container .letter-parallax {
   position: absolute;
-  z-index: -1;
+  top: 0;
   left: -8.75em;
-}
-
-@-moz-document url-prefix() {
-  .letter-parallax {
-    z-index: -2;
-  }
-
-  .budget-section .letter-parallax {
-    top: 152em !important;
-  }
-
-  .control-section .letter-parallax {
-    top: 199em !important;
-  }
-
-  .power-section .letter-parallax {
-    top: 221em !important;
-  }
+  z-index: -1;
+  will-change: transform;
+  transition: 0.2s transform;
 }
 
 .control-section {
@@ -163,18 +148,6 @@ body {
 
 .power-section {
   margin-top: 3em;
-}
-
-.budget-section .letter-parallax {
-  top: 153%;
-}
-
-.control-section .letter-parallax {
-  top: 187%;
-}
-
-.power-section .letter-parallax {
-  top: 142%;
 }
 
 .expertise-section .inner-section-text > p > span,
@@ -534,18 +507,6 @@ footer {
     margin-top: 9em;
   }
 
-  .budget-section .letter-parallax {
-    top: 181%;
-  }
-
-  .control-section .letter-parallax {
-    top: 214%;
-  }
-
-  .power-section .letter-parallax {
-    top: 176%;
-  }
-
   .custom-button {
     width: 15em;
     height: 3em;
@@ -682,10 +643,6 @@ footer {
     transform: scale(1);
   }
 
-  .control-section .letter-parallax {
-    top: 115%;
-  }
-
   .budget-image,
   .power-image-container {
     width: 100%;
@@ -711,22 +668,6 @@ footer {
   }
   .vertical-inscription-container {
     display: none;
-  }
-
-  .letter-parallax {
-    left: -3.75em;
-  }
-
-  .budget-section .letter-parallax {
-    top: 126%;
-  }
-
-  .control-section .letter-parallax {
-    top: 140%;
-  }
-
-  .power-section .letter-parallax {
-    top: 163%;
   }
 
   .budget-image,
@@ -765,18 +706,6 @@ footer {
     line-height: 1.625rem;
   }
 
-  .budget-section .letter-parallax {
-    top: 186%;
-  }
-
-  .control-section .letter-parallax {
-    top: 212%;
-  }
-
-  .power-section .letter-parallax {
-    top: 254%;
-  }
-
   .power-section div > p > span {
     font-size: 1.5em;
   }
@@ -808,17 +737,5 @@ footer {
 
   .cubes-container {
     right: -5.5em;
-  }
-
-  .budget-section .letter-parallax {
-    top: 216%;
-  }
-
-  .control-section .letter-parallax {
-    top: 245%;
-  }
-
-  .power-section .letter-parallax {
-    top: 276%;
   }
 }

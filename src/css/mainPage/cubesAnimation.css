@@ -19,8 +19,11 @@
   transform: translate(2000px, 0px);
 }
 
-#cubes .cube-translate-animation {
-  will-change: transform, animation;
+#main-cube,
+#main-cube-translate-animation,
+#main-cube-scale-animation,
+.cube-translate-animation {
+  will-change: transform, fill, color;
 }
 
 .cube-translate-animation {
