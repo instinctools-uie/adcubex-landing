@@ -59,7 +59,13 @@ export function navItemHandler() {
 function hideMenu() {
   const headerContainer = document.querySelector('.header-container');
   const headerNavigation = document.querySelector('.header-navigation');
+  const logo = document.querySelector('.logo');
+  const menuButton = document.querySelector('.header-open-menu-icon');
 
-  headerContainer.classList.remove('header-container--nav-active');
-  headerNavigation.classList.remove('header-navigation--active');
+  setTimeout(5000, function() {
+    headerContainer.classList.remove('header-container--nav-active');
+    headerNavigation.classList.remove('header-navigation--active');
+    logo.classList.remove('logo--active');
+    menuButton.classList.add('header-open-menu-icon--active');
+  });
 }
