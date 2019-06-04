@@ -18,7 +18,7 @@ import {
 } from '../cubesAnimation';
 import { RATE_WSXGA_SCROLL, WSXGA_ANIMATION_DELAY, WSGA_ANIMATION_DELAY, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 
-import toggleMenu from '../toggleMenu';
+import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { sectionImageParallax } from '../scrollParallax';
@@ -34,7 +34,8 @@ if ('scrollRestoration' in window.history) {
 }
 
 recalculateScrollDependencies();
-toggleMenu();
+toggleMenuListener();
+navItemHandler();
 hoverLinkInMenu();
 cubesRandomLevitation();
 
