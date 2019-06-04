@@ -31,7 +31,6 @@ body {
 }
 
 .title-section p {
-  max-width: 50%;
   font-size: 2.25em;
   font-weight: 600;
   line-height: 1.5em;
@@ -307,7 +306,6 @@ footer {
   }
 
   .title-section p {
-    /*max-width: 40%;*/
     font-size: 1.75em;
   }
 
