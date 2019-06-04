@@ -336,6 +336,13 @@ footer * {
   }
 }
 
+/* for touch devices */
+@media (pointer:coarse) {
+  .header-links-container a::after {
+    display: none;
+  }
+}
+
 @media all and (max-width: 1400px) {
   h1,
   .section-container > h2,

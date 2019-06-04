@@ -27,31 +27,11 @@ import getScrollPosition from '../getScrollPosition';
 import changeHeaderVisibility from '../menuAnimation';
 import isWSXGABreakpoint from '../isWSXGABreakpoint';
 
-const superviseSection = window.document.querySelector('.supervise-section');
-const expertiseSection = window.document.querySelector('.expertise-section');
-const toolsetSection = window.document.querySelector('.toolset-section');
-const advantageSection = window.document.querySelector('.advantage-section');
-const budgetSection = window.document.querySelector('.budget-section');
-const controlSection = window.document.querySelector('.control-section');
-const powerSection = window.document.querySelector('.power-section');
-const improvementSection = window.document.querySelector('.improvement-section');
-
-const superviseElement = window.document.querySelector('#supervise .inner-section-image');
-const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
-const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
-const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
-const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
-
-const superviseSectionScrollPosition = superviseSection.offsetTop;
-const expertiseSectionScrollPosition = expertiseSection.offsetTop;
-const toolsetSectionScrollPosition = toolsetSection.offsetTop;
-const advantageSectionScrollPosition = advantageSection.offsetTop;
-const budgetSectionScrollPosition = budgetSection.offsetTop;
-const controlSectionScrollPosition = controlSection.offsetTop;
-const powerSectionScrollPosition = powerSection.offsetTop;
-const improvementSectionScrollPosition = improvementSection.offsetTop;
-
 const state = { prevScrollPosition: 0, isDefaultParams: false };
+
+if ('scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
 
 recalculateScrollDependencies();
 toggleMenu();
@@ -80,6 +60,30 @@ function handleScrollChange() {
 }
 
 function recalculateScrollDependencies() {
+  const superviseSection = window.document.querySelector('.supervise-section');
+  const expertiseSection = window.document.querySelector('.expertise-section');
+  const toolsetSection = window.document.querySelector('.toolset-section');
+  const advantageSection = window.document.querySelector('.advantage-section');
+  const budgetSection = window.document.querySelector('.budget-section');
+  const controlSection = window.document.querySelector('.control-section');
+  const powerSection = window.document.querySelector('.power-section');
+  const improvementSection = window.document.querySelector('.improvement-section');
+
+  const superviseElement = window.document.querySelector('#supervise .inner-section-image');
+  const advantagePattern = window.document.querySelector('#advantage .inner-section-image');
+  const toolsetPattern = window.document.querySelector('#toolset .inner-section-image');
+  const improvementPattern = window.document.querySelector('#improvement .inner-section-image');
+  const expertiseElement = window.document.querySelector('#expertise .inner-section-image');
+
+  const superviseSectionScrollPosition = superviseSection.offsetTop;
+  const expertiseSectionScrollPosition = expertiseSection.offsetTop;
+  const toolsetSectionScrollPosition = toolsetSection.offsetTop;
+  const advantageSectionScrollPosition = advantageSection.offsetTop;
+  const budgetSectionScrollPosition = budgetSection.offsetTop;
+  const controlSectionScrollPosition = controlSection.offsetTop;
+  const powerSectionScrollPosition = powerSection.offsetTop;
+  const improvementSectionScrollPosition = improvementSection.offsetTop;
+
   const scrollPosition = getScrollPosition();
 
   if (
@@ -167,5 +171,9 @@ function moveFirstLetter(parentSelector) {
   const scrollPosition = getScrollPosition();
 
   const value = sectionElement.offsetTop - scrollPosition;
-  firstLetterElement.style.transform = `translateY(${value}px)`;
+  const translate = `translateY(${value}px)`;
+
+  if (firstLetterElement.style.transform !== translate) {
+    firstLetterElement.style.transform = translate;
+  }
 }

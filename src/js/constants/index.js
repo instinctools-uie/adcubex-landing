@@ -44,7 +44,7 @@ export const CUBE_BOTTOM_SIDE_ELEMENT_OPTIONS = {
 
 export const MAIN_CUBE_OPTIONS = {
   minScaleValue: 1,
-  maxScaleValue: 7,
+  maxScaleValue: 8,
   animationDuration: 6,
   animationDelay: 1,
   translateAnimationId: 'main-cube-translate-animation'
