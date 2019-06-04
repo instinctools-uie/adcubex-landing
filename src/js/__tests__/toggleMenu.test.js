@@ -1,4 +1,4 @@
-import toggleMenu from '../toggleMenu';
+import {toggleMenuListener, navItemHandler} from '../toggleMenu';
 
 const toggleMenuButton = {
   addEventListener: jest.fn().mockImplementation((event, cb) => {
@@ -59,7 +59,7 @@ describe('toggle menu', () => {
   });
 
   it('should open menu', () => {
-    toggleMenu();
+    toggleMenuListener();
 
     expect(body.classList.add).toHaveBeenCalledWith('hidden-scroll');
     expect(body.classList.remove).toHaveBeenCalledTimes(0);
@@ -88,7 +88,7 @@ describe('toggle menu', () => {
       return true;
     });
 
-    toggleMenu();
+    toggleMenuListener();
 
     expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
     expect(openMenuIcon.classList.remove).toHaveBeenCalledTimes(0);

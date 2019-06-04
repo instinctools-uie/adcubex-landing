@@ -62,7 +62,7 @@ function hideMenu() {
   const logo = document.querySelector('.logo');
   const menuButton = document.querySelector('.header-open-menu-icon');
 
-  setTimeout(5000, function() {
+  setTimeout(5000, () => {
     headerContainer.classList.remove('header-container--nav-active');
     headerNavigation.classList.remove('header-navigation--active');
     logo.classList.remove('logo--active');
