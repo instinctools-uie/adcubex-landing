@@ -275,12 +275,20 @@
 @media all and (max-width: 1400px) {
   .contact-us-form input,
   .contact-us-form textarea {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 
   .contact-us-container svg {
     width: auto;
     max-height: 42em;
+  }
+
+  .contact-us-form > p {
+    font-size: 2em;
+  }
+
+  .contact-us-form label {
+    font-size: 1.1em;
   }
 }
 
@@ -314,5 +322,13 @@
 
   .contact-us-form .custom-button {
     font-size: 1.25em;
+  }
+
+  .contact-us-form > p {
+    font-size: 1.5em;
+  }
+
+  .contact-us-form label {
+    font-size: 0.9em;
   }
 }

@@ -306,11 +306,11 @@ footer {
   }
 
   .title-section p {
-    font-size: 1.75em;
+    font-size: 2.125em;
   }
 
   .section-container article .section-content > p {
-    font-size: 1.45em;
+    font-size: 2em;
   }
 }
 
@@ -400,7 +400,7 @@ footer {
 
   .title-section p,
   .section-container article .section-content > p {
-    font-size: 1.2em;
+    font-size: 2em;
   }
 
   .section-container article .section-content > p {
@@ -418,6 +418,13 @@ footer {
 
   .custom-button {
     margin: 1em 0 0;
+    font-size: 1.5em;
+  }
+}
+
+@media all and (max-width: 415px) {
+  .title-section p,
+  .section-container article .section-content > p {
     font-size: 1.5em;
   }
 }

@@ -340,7 +340,7 @@ footer * {
   h1,
   .section-container > h2,
   .section-content > h2 {
-    font-size: 3.5em;
+    font-size: 4.5em;
   }
 
   .vertical-inscription > span {
@@ -364,7 +364,7 @@ footer * {
   h1,
   .section-container > h2,
   .section-content > h2 {
-    font-size: 2.5em;
+    font-size: 4.5em;
   }
 
   .footer-right {
@@ -382,10 +382,22 @@ footer * {
   }
 
   .header-links-container a {
-    font-size: 2.75em;
+    font-size: 4.75em;
   }
 
   .footer-container {
     flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 415px) {
+  .header-links-container a {
+    font-size: 3.75em;
+  }
+
+  h1,
+  .section-container > h2,
+  .section-content > h2 {
+    font-size: 3.5em;
   }
 }

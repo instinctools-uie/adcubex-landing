@@ -553,7 +553,7 @@ footer {
 
   .image-content--small {
     height: 100%;
-    font-size: 1.5em;
+    font-size: 1.9em;
     line-height: 1.6;
   }
 
@@ -561,11 +561,11 @@ footer {
     height: 100%;
     margin: 2em 0;
     font-size: 5.5em;
-    line-height: 1.3;
+    line-height: 1.05;
   }
 
   .inner-section-text {
-    font-size: 1.55em;
+    font-size: 2em;
     line-height: 1.4;
   }
 
@@ -693,7 +693,16 @@ footer {
 @media (max-width: 414px) {
   .content-container .section-container,
   .header-container {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+  }
+
+  h1,
+  .section-container > h2,
+  .section-content > h2 {
+    font-size: 4.11em;
+  }
+
+  .budget-image, .power-image {
   }
 
   .budget-image,
