@@ -427,6 +427,7 @@ body {
 
 .image-content--small {
   font-size: 1em;
+  font-weight: 600;
   line-height: 1.9;
 }
 
@@ -591,15 +592,15 @@ footer {
 
   .image-content--small {
     height: 100%;
-    font-size: 2em;
-    line-height: 1.4;
+    font-size: 1.5em;
+    line-height: 1.6;
   }
 
   .image-content--large {
     height: 100%;
     margin: 2em 0;
     font-size: 5.5em;
-    line-height: 0.9;
+    line-height: 1.3;
   }
 
   .inner-section-text {
