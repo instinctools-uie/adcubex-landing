@@ -150,7 +150,7 @@ h2 + p {
 }
 
 .vertical-inscription {
-  top: -8em;
+  top: -7em;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -322,7 +322,6 @@ footer {
 
 @media (min-width: 769px) and (max-width: 1400px) {
   .content-wrapper .vertical-inscription {
-    top: -2em;
     right: -3em;
   }
 
