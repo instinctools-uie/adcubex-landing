@@ -661,6 +661,13 @@ footer {
   }
 }
 
+@media (min-width: 1414px) {
+  .letter-parallax {
+    width: 50em;
+    height: 70em;
+  }
+}
+
 @media (max-width: 414px) {
   .content-container .section-container,
   .header-container {
