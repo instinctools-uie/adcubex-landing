@@ -576,6 +576,13 @@ footer {
   }
 }
 
+@media (min-width: 1365px) {
+  .letter-parallax {
+    width: 50em;
+    height: 70em;
+  }
+}
+
 @media all and (max-width: 1024px) {
   .swiper-container {
     width: auto;

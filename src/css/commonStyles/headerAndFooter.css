@@ -374,10 +374,6 @@ footer * {
     font-size: 2.5em;
   }
 
-  .footer-right {
-    display: none;
-  }
-
   .header-container {
     padding: 0 1.75em;
   }
@@ -393,6 +389,14 @@ footer * {
   }
 
   .footer-container {
-    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .footer-right {
+    padding-top: 1em;
+  }
+
+  .footer-right a {
+    padding: 0 0.8em 0 0;
   }
 }
