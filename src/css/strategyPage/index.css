@@ -74,20 +74,16 @@
 }
 
 @media all and (max-width: 1400px) {
-  article.content-column--start,
   article.content-column--end,
-  .content-column--start,
-  .content-column--end {
+  .content-column--start {
     padding-top: 8em;
     padding-bottom: 14em;
   }
 }
 
 @media all and (max-width: 1130px) {
-  article.content-column--start,
   article.content-column--end,
-  .content-column--start,
-  .content-column--end {
+  .content-column--start {
     padding-top: 4em;
     padding-bottom: 12em;
   }
@@ -103,10 +99,8 @@
     margin-top: 0;
   }
 
-  article.content-column--start,
   article.content-column--end,
-  .content-column--start,
-  .content-column--end {
+  .content-column--start {
     padding-top: 0;
     padding-bottom: 0;
   }
