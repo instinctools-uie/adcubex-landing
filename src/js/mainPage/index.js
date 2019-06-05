@@ -29,25 +29,27 @@ import isWSXGABreakpoint from '../isWSXGABreakpoint';
 
 const state = { prevScrollPosition: 0, isDefaultParams: false };
 
-if ('scrollRestoration' in window.history) {
-  window.history.scrollRestoration = 'manual';
-}
+window.onload = () => {
+  if ('scrollRestoration' in window.history) {
+    window.history.scrollRestoration = 'manual';
+  }
 
-recalculateScrollDependencies();
-toggleMenuListener();
-navItemHandler();
-hoverLinkInMenu();
-cubesRandomLevitation();
+  recalculateScrollDependencies();
+  toggleMenuListener();
+  navItemHandler();
+  hoverLinkInMenu();
+  cubesRandomLevitation();
 
-(() =>
-  new Swiper('.swiper-container', {
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    }
-  }))();
+  (() =>
+    new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    }))();
 
-window.requestAnimationFrame(handleScrollChange);
+  window.requestAnimationFrame(handleScrollChange);
+};
 
 function handleScrollChange() {
   const scrollPosition = getScrollPosition();

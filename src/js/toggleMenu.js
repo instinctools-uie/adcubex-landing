@@ -60,12 +60,12 @@ function hideMenu() {
   const headerContainer = document.querySelector('.header-container');
   const headerNavigation = document.querySelector('.header-navigation');
   const logo = document.querySelector('.logo');
-  const menuButton = document.querySelector('.header-open-menu-icon');
+  const openMenuButton = document.querySelector('.header-open-menu-icon');
+  const closeMenuButton = document.querySelector('.header-close-menu-icon');
 
-  setTimeout(5000, () => {
-    headerContainer.classList.remove('header-container--nav-active');
-    headerNavigation.classList.remove('header-navigation--active');
-    logo.classList.remove('logo--active');
-    menuButton.classList.add('header-open-menu-icon--active');
-  });
+  headerContainer.classList.remove('header-container--nav-active');
+  headerNavigation.classList.remove('header-navigation--active');
+  logo.classList.remove('logo--active');
+  openMenuButton.classList.add('header-open-menu-icon--active');
+  closeMenuButton.classList.remove('header-close-menu-icon--active');
 }

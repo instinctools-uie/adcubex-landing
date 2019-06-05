@@ -7,9 +7,11 @@ import getScrollPosition from '../getScrollPosition';
 
 let scrollPreviousPosition = 0;
 
-toggleMenuListener();
-navItemHandler();
-hoverLinkInMenu();
+window.onload = () => {
+  toggleMenuListener();
+  navItemHandler();
+  hoverLinkInMenu();
+};
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();

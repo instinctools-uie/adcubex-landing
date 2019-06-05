@@ -1,4 +1,4 @@
-import {toggleMenuListener, navItemHandler} from '../toggleMenu';
+import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 
 const toggleMenuButton = {
   addEventListener: jest.fn().mockImplementation((event, cb) => {
@@ -8,6 +8,13 @@ const toggleMenuButton = {
   querySelector: jest.fn().mockImplementation(selector => {
     expect(selector).toBe('.header-close-menu-icon--active');
     return false;
+  })
+};
+
+const navItems = {
+  addEventListener: jest.fn().mockImplementation((event, cb) => {
+    expect(event).toBe('click');
+    cb();
   })
 };
 
@@ -44,6 +51,8 @@ describe('toggle menu', () => {
           return closeMenuIcon;
         case '.header-navigation':
           return headerNavigation;
+        case 'header-link':
+          return navItems;
       }
     });
   });
@@ -110,6 +119,16 @@ describe('toggle menu', () => {
     expect(headerNavigation.setAttribute).toHaveBeenCalledWith('aria-hidden', 'true');
     expect(headerNavigation.removeAttribute).toHaveBeenCalledTimes(0);
   });
+});
+
+it('hide menu', () => {
+  navItemHandler();
+
+  expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container--nav-active');
+  expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
+  expect(logoElement.classList.remove).toHaveBeenCalledWith('logo--active');
+  expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
+  expect(closeMenuIcon.classList.remove).toHaveBeenCalledWith('header-close-menu-icon--active');
 });
 
 function mockQuerySelector() {
