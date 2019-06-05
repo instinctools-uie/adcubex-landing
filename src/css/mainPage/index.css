@@ -477,13 +477,6 @@ footer {
   }
 }
 
-@media (min-width: 1465px) {
-  .letter-parallax {
-    width: 50em;
-    height: 70em;
-  }
-}
-
 @media all and (max-width: 1400px) {
   .section-container {
     width: 100%;
@@ -580,6 +573,13 @@ footer {
 
   footer {
     margin: 1em auto 0;
+  }
+}
+
+@media (min-width: 1365px) {
+  .letter-parallax {
+    width: 50em;
+    height: 70em;
   }
 }
 

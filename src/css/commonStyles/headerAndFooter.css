@@ -389,13 +389,7 @@ footer * {
   }
 
   .footer-container {
-    flex-wrap: wrap;
-  }
-}
-
-@media all and (max-width: 630px) {
-  .footer-container {
-    display: block;
+    flex-direction: column;
   }
 
   .footer-right {
