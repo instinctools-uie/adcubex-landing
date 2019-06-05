@@ -102,4 +102,12 @@
   .strategy-content article.consulting {
     margin-top: 0;
   }
+
+  article.content-column--start,
+  article.content-column--end,
+  .content-column--start,
+  .content-column--end {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
