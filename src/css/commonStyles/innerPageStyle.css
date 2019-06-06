@@ -283,6 +283,14 @@ footer {
   .analysis-article .section-content h2 {
     height: 2.5em;
   }
+
+  .cube-position {
+    transform: translate(130em, 0);
+  }
+
+  .cube-animation {
+    transform: scale(8.5);
+  }
 }
 
 @media all and (max-width: 768px) {
