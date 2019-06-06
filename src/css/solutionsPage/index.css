@@ -57,22 +57,6 @@
   animation: hide-header-animation 0.5s ease-out;
 }
 
-.expertise-article .vertical-inscription {
-  top: -14.5em;
-}
-
-.increase-article .vertical-inscription {
-  top: -25.5em;
-}
-
-.customization-article .vertical-inscription {
-  top: -22.3em;
-}
-
-.security-article .vertical-inscription {
-  top: -20.8em;
-}
-
 @keyframes show-header-animation {
   0% {
     top: -9em;
