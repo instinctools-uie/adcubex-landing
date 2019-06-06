@@ -29,11 +29,7 @@
 }
 
 .analysis-article .vertical-inscription {
-  top: -3.4em;
-}
-
-.consulting-article .vertical-inscription {
-  top: -12.3em;
+  top: -2.4em;
 }
 
 .header-container.header-container--visible,
@@ -77,6 +73,22 @@
   }
 }
 
+@media all and (max-width: 1400px) {
+  article.content-column--end,
+  .content-column--start {
+    padding-top: 8em;
+    padding-bottom: 14em;
+  }
+}
+
+@media all and (max-width: 1130px) {
+  article.content-column--end,
+  .content-column--start {
+    padding-top: 4em;
+    padding-bottom: 12em;
+  }
+}
+
 @media all and (max-width: 768px) {
   body {
     background-color: var(--cube-left-side-red-color);
@@ -85,5 +97,11 @@
   .strategy-content article.clear-article,
   .strategy-content article.consulting {
     margin-top: 0;
+  }
+
+  article.content-column--end,
+  .content-column--start {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }

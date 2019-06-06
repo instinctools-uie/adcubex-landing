@@ -1,4 +1,4 @@
-import toggleMenu from '../toggleMenu';
+import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 
 const toggleMenuButton = {
   addEventListener: jest.fn().mockImplementation((event, cb) => {
@@ -10,6 +10,18 @@ const toggleMenuButton = {
     return false;
   })
 };
+
+const navItem = {
+  addEventListener: jest.fn().mockImplementation((event, cb) => {
+    expect(event).toBe('click');
+    cb();
+  })
+};
+
+const navItems = [];
+for (let i = 0; i < 4; i++) {
+  navItems[i] = navItem;
+}
 
 const body = mockQuerySelector();
 const headerElement = mockQuerySelector();
@@ -25,7 +37,6 @@ const headerNavigation = {
     remove: jest.fn()
   }
 };
-
 describe('toggle menu', () => {
   beforeAll(() => {
     jest.spyOn(document, 'querySelector').mockImplementation(selector => {
@@ -47,19 +58,16 @@ describe('toggle menu', () => {
       }
     });
   });
-
   afterEach(() => {
     restoreClassListForElements(body, headerElement, closeMenuIcon, logoElement, openMenuIcon, headerNavigation);
     headerNavigation.setAttribute.mockRestore();
     headerNavigation.removeAttribute.mockRestore();
   });
-
   afterAll(() => {
     document.querySelector.mockRestore();
   });
-
   it('should open menu', () => {
-    toggleMenu();
+    toggleMenuListener();
 
     expect(body.classList.add).toHaveBeenCalledWith('hidden-scroll');
     expect(body.classList.remove).toHaveBeenCalledTimes(0);
@@ -88,7 +96,7 @@ describe('toggle menu', () => {
       return true;
     });
 
-    toggleMenu();
+    toggleMenuListener();
 
     expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
     expect(openMenuIcon.classList.remove).toHaveBeenCalledTimes(0);
@@ -109,6 +117,19 @@ describe('toggle menu', () => {
 
     expect(headerNavigation.setAttribute).toHaveBeenCalledWith('aria-hidden', 'true');
     expect(headerNavigation.removeAttribute).toHaveBeenCalledTimes(0);
+  });
+
+  it('hide menu', () => {
+    jest.spyOn(document, 'querySelectorAll').mockImplementation(() => {
+      return navItems;
+    });
+    navItemHandler();
+
+    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container--nav-active');
+    expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
+    expect(logoElement.classList.remove).toHaveBeenCalledWith('logo--active');
+    expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
+    expect(closeMenuIcon.classList.remove).toHaveBeenCalledWith('header-close-menu-icon--active');
   });
 });
 

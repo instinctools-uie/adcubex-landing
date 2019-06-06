@@ -16,10 +16,6 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
-.title-section .content-wrapper {
-  width: 45%;
-}
-
 .external-links {
   display: flex;
   align-items: center;
@@ -37,12 +33,8 @@ article.together {
   margin-bottom: 4.8em;
 }
 
-.you-article .vertical-inscription {
-  top: -12em;
-}
-
 .together .vertical-inscription {
-  top: -15em;
+  top: -10em;
 }
 
 .header-container.header-container--visible,

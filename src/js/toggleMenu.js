@@ -1,4 +1,4 @@
-export default function toggleMenuListener() {
+export function toggleMenuListener() {
   const toggleMenuButton = document.querySelector('.toggle-menu-button');
   toggleMenuButton.addEventListener('click', toggleMenu);
 }
@@ -46,4 +46,26 @@ function closeMenu() {
   logoElement.classList.remove('logo--active');
   closeMenuIcon.classList.remove('header-close-menu-icon--active');
   headerNavigation.setAttribute('aria-hidden', 'true');
+}
+
+export function navItemHandler() {
+  const navItems = document.querySelectorAll('.header-link');
+
+  for (let i = 0; i < navItems.length; i++) {
+    navItems[i].addEventListener('click', hideMenu);
+  }
+}
+
+function hideMenu() {
+  const headerContainer = document.querySelector('.header-container');
+  const headerNavigation = document.querySelector('.header-navigation');
+  const logo = document.querySelector('.logo');
+  const openMenuButton = document.querySelector('.header-open-menu-icon');
+  const closeMenuButton = document.querySelector('.header-close-menu-icon');
+
+  headerContainer.classList.remove('header-container--nav-active');
+  headerNavigation.classList.remove('header-navigation--active');
+  logo.classList.remove('logo--active');
+  openMenuButton.classList.add('header-open-menu-icon--active');
+  closeMenuButton.classList.remove('header-close-menu-icon--active');
 }
