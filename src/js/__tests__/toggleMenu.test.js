@@ -37,7 +37,6 @@ const headerNavigation = {
     remove: jest.fn()
   }
 };
-
 describe('toggle menu', () => {
   beforeAll(() => {
     jest.spyOn(document, 'querySelector').mockImplementation(selector => {
@@ -59,17 +58,14 @@ describe('toggle menu', () => {
       }
     });
   });
-
   afterEach(() => {
     restoreClassListForElements(body, headerElement, closeMenuIcon, logoElement, openMenuIcon, headerNavigation);
     headerNavigation.setAttribute.mockRestore();
     headerNavigation.removeAttribute.mockRestore();
   });
-
   afterAll(() => {
     document.querySelector.mockRestore();
   });
-
   it('should open menu', () => {
     toggleMenuListener();
 
