@@ -451,7 +451,6 @@ footer {
   }
 }
 
-
 @media all and (max-width: 1024px) {
   .swiper-container {
     width: auto;
@@ -545,7 +544,7 @@ footer {
     flex-direction: column;
   }
 
-  .image-content--middle br{
+  .image-content--middle br {
     display: none;
   }
 
