@@ -491,6 +491,11 @@ footer {
     margin-top: 5em;
   }
 
+  .letter-parallax {
+    width: 50em;
+    height: 45em;
+  }
+
   .budget-section,
   .improvement-section {
     margin-bottom: 0;
@@ -579,7 +584,7 @@ footer {
 @media (min-width: 1365px) {
   .letter-parallax {
     width: 50em;
-    height: 70em;
+    height: 45em;
   }
 }
 
