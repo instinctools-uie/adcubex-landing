@@ -1,0 +1,52 @@
+/* Customization of swiper slider */
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+
+@media (max-width: 1024px) {
+  .swiper-container {
+    width: auto;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+    z-index: 1;
+    box-sizing: content-box;
+    transition-property: transform;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block;
+    filter: grayscale(100%);
+  }
+
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+
+  .swiper-slide svg {
+    max-width: 40%;
+    width: auto;
+    height: 100%;
+  }
+}
