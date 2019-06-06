@@ -18,16 +18,16 @@ const navItem = {
   })
 };
 
+const navItems = [];
+for (let i = 0; i < 4; i++) {
+  navItems[i] = navItem;
+}
+
 const body = mockQuerySelector();
 const headerElement = mockQuerySelector();
 const closeMenuIcon = mockQuerySelector();
 const logoElement = mockQuerySelector();
 const openMenuIcon = mockQuerySelector();
-
-const navItems = [];
-for (let i = 0; i <= 4; i++) {
-  navItems[i] = navItem;
-}
 
 const headerNavigation = {
   setAttribute: jest.fn(),
@@ -56,15 +56,12 @@ describe('toggle menu', () => {
           return closeMenuIcon;
         case '.header-navigation':
           return headerNavigation;
-        case '.header-link':
-          return navItem;
       }
     });
   });
 
   afterEach(() => {
     restoreClassListForElements(body, headerElement, closeMenuIcon, logoElement, openMenuIcon, headerNavigation);
-    s;
     headerNavigation.setAttribute.mockRestore();
     headerNavigation.removeAttribute.mockRestore();
   });
@@ -127,6 +124,9 @@ describe('toggle menu', () => {
   });
 
   it('hide menu', () => {
+    jest.spyOn(document, 'querySelectorAll').mockImplementation(() => {
+      return navItems;
+    });
     navItemHandler();
 
     expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container--nav-active');
