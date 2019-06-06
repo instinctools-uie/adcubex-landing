@@ -1,14 +1,10 @@
-.clutch-color,
-.tm-color,
-.goodFirms-color,
-.topDevs-color {
-  filter: grayscale(100%);
-  transition: filter 0.2s linear;
-}
+@media (min-width: 1025px) {
+  .garay-filter {
+    filter: grayscale(100%);
+    transition: filter 0.2s linear;
+  }
 
-.clutch-icon:hover .clutch-color,
-.tm-icon:hover .tm-color,
-.goodFirms-icon:hover .goodFirms-color,
-.topDevs-icon:hover .topDevs-color {
-  filter: grayscale(0%);
+  .garay-filter:hover {
+    filter: grayscale(0%);
+  }
 }
