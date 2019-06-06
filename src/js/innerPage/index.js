@@ -1,3 +1,4 @@
+import Swiper from 'swiper';
 import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
@@ -11,6 +12,14 @@ window.onload = () => {
   toggleMenuListener();
   navItemHandler();
   hoverLinkInMenu();
+
+  (() =>
+    new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    }))();
 };
 
 window.addEventListener('scroll', () => {

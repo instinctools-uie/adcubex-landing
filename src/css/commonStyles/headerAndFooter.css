@@ -335,29 +335,6 @@ footer * {
   word-break: break-all;
 }
 
-/* Customization of swiper slider */
-.swiper-container {
-  width: 100%;
-}
-
-.swiper-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-scrollbar {
-  display: none;
-}
-
-.swiper-slide {
-  width: auto !important;
-}
-/* End of customization slider */
-
 @keyframes show-header-animation {
   0% {
     top: -9em;
