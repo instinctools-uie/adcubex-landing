@@ -11,7 +11,7 @@ const toggleMenuButton = {
   })
 };
 
-const navItems = {
+const navItem = {
   addEventListener: jest.fn().mockImplementation((event, cb) => {
     expect(event).toBe('click');
     cb();
@@ -23,6 +23,11 @@ const headerElement = mockQuerySelector();
 const closeMenuIcon = mockQuerySelector();
 const logoElement = mockQuerySelector();
 const openMenuIcon = mockQuerySelector();
+
+const navItems = [];
+for (let i = 0; i <= 4; i++) {
+  navItems[i] = navItem;
+}
 
 const headerNavigation = {
   setAttribute: jest.fn(),
@@ -51,14 +56,15 @@ describe('toggle menu', () => {
           return closeMenuIcon;
         case '.header-navigation':
           return headerNavigation;
-        case 'header-link':
-          return navItems;
+        case '.header-link':
+          return navItem;
       }
     });
   });
 
   afterEach(() => {
     restoreClassListForElements(body, headerElement, closeMenuIcon, logoElement, openMenuIcon, headerNavigation);
+    s;
     headerNavigation.setAttribute.mockRestore();
     headerNavigation.removeAttribute.mockRestore();
   });
@@ -119,16 +125,16 @@ describe('toggle menu', () => {
     expect(headerNavigation.setAttribute).toHaveBeenCalledWith('aria-hidden', 'true');
     expect(headerNavigation.removeAttribute).toHaveBeenCalledTimes(0);
   });
-});
 
-it('hide menu', () => {
-  navItemHandler();
+  it('hide menu', () => {
+    navItemHandler();
 
-  expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container--nav-active');
-  expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
-  expect(logoElement.classList.remove).toHaveBeenCalledWith('logo--active');
-  expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
-  expect(closeMenuIcon.classList.remove).toHaveBeenCalledWith('header-close-menu-icon--active');
+    expect(headerElement.classList.remove).toHaveBeenCalledWith('header-container--nav-active');
+    expect(headerNavigation.classList.remove).toHaveBeenCalledWith('header-navigation--active');
+    expect(logoElement.classList.remove).toHaveBeenCalledWith('logo--active');
+    expect(openMenuIcon.classList.add).toHaveBeenCalledWith('header-open-menu-icon--active');
+    expect(closeMenuIcon.classList.remove).toHaveBeenCalledWith('header-close-menu-icon--active');
+  });
 });
 
 function mockQuerySelector() {
