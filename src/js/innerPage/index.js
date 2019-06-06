@@ -1,4 +1,4 @@
-import toggleMenu from '../toggleMenu';
+import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { INNER_PAGES_TOGGLE_CONTENT } from '../constants';
@@ -7,8 +7,11 @@ import getScrollPosition from '../getScrollPosition';
 
 let scrollPreviousPosition = 0;
 
-toggleMenu();
-hoverLinkInMenu();
+window.onload = () => {
+  toggleMenuListener();
+  navItemHandler();
+  hoverLinkInMenu();
+};
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();

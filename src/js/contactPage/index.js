@@ -1,13 +1,10 @@
 import { EMAIL } from '../constants';
-import toggleMenu from '../toggleMenu';
+import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
 
 let scrollPreviousPosition = 0;
-
-toggleMenu();
-hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();
@@ -17,6 +14,10 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
+  toggleMenuListener();
+  navItemHandler();
+  hoverLinkInMenu();
+
   const form = document.querySelector('#contact-form');
 
   form.onsubmit = event => {
