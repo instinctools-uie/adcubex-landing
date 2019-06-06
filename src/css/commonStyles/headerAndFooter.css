@@ -1,5 +1,5 @@
 h1, h2 {
-  font-family: 'montserrat_extralightregular', sans-serif;
+  font-family: 'montserrat_mediumregular', sans-serif;
   font-size: 5.625em;
   font-weight: 600;
   font-style: normal;
@@ -330,6 +330,10 @@ footer * {
   font-weight: 600;
 }
 
+.text-link {
+  word-break: break-all;
+}
+
 /* Customization of swiper slider */
 .swiper-container {
   width: 100%;
@@ -429,6 +433,10 @@ footer * {
     font-size: 0.695rem;
   }
 
+  h1, h2 {
+    font-size: 4.5em;
+  }
+
   .footer-container a,
   .footer-container p,
   .footer-container span {
@@ -450,5 +458,12 @@ footer * {
   .footer-container {
     padding: 0 1.75em;
     flex-wrap: wrap;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .content-section h1,
+  .content-section h2 {
+    font-size: 3em;
   }
 }

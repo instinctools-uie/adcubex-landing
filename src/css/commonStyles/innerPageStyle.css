@@ -71,7 +71,7 @@ article div > p {
   opacity: 1;
 }
 
-.article--active h2 {
+.article--active .section-content h2 {
   line-height: 1.12;
 }
 
@@ -277,6 +277,12 @@ footer {
     width: 3em;
     height: 3em;
     margin-right: 2.25em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .analysis-article .section-content h2 {
+    height: 2.5em;
   }
 }
 
