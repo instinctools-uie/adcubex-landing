@@ -273,11 +273,6 @@
 }
 
 @media all and (max-width: 1400px) {
-  .contact-us-form input,
-  .contact-us-form textarea {
-    font-size: 1em;
-  }
-
   .contact-us-container svg {
     width: auto;
     max-height: 42em;

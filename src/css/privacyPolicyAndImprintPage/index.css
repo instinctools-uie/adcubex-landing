@@ -40,28 +40,15 @@
   animation: none;
 }
 
-h3,
-.section-container article > h2 {
-  font-size: 2.25em;
-}
-
 h3 {
   margin-bottom: 0.2em;
-}
-
-.section-container article p {
-  font-size: 1em;
-  line-height: 1.75em;
+  font-size: 2.25em;
 }
 
 .section-container > article > h2 {
   margin-bottom: 1em;
   font-family: montserrat_mediumregular, sans-serif;
   font-weight: 600;
-}
-
-article.youtube-article > h2 {
-  margin-top: 2.6em;
 }
 
 .header-container.header-container--visible,
@@ -119,15 +106,5 @@ article.youtube-article > h2 {
 
   .imprint-content article {
     padding-top: 1.5em;
-  }
-
-  h3,
-  .section-container article > h2 {
-    font-size: 2em;
-  }
-
-  .section-container article p {
-    font-size: 1.2em;
-    line-height: 1.55em;
   }
 }
