@@ -111,7 +111,6 @@ body {
 .section-container > h2 {
   opacity: 1;
   height: 3.5em;
-  margin-top: 1em;
   letter-spacing: 0.02em;
   line-height: 10;
 }
@@ -499,6 +498,10 @@ footer {
 }
 
 @media all and (max-width: 768px) {
+  .section-container h1,
+  .section-container h2 {
+    font-size: 4em;
+  }
   .content-container {
     padding: 0 1.75em;
   }
@@ -523,11 +526,6 @@ footer {
 }
 
 @media (max-width: 576px) {
-/*  .section-container h1,
-  .section-container h2 {
-    font-size: 3.95em;
-  }*/
-
   .budget-image,
   .power-image {
     padding: 2em;
@@ -540,6 +538,10 @@ footer {
 
   .image-content--middle br{
     display: none;
+  }
+
+  .image-content--middle {
+    font-size: 2em;
   }
 
   .image-content-description {
@@ -563,6 +565,13 @@ footer {
   .supervise-section .text-container,
   .toolset-section .text-container {
     padding: 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .section-container h1,
+  .section-container h2 {
+    font-size: 2.75em;
   }
 }
 

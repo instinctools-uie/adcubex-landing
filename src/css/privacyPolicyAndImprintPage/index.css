@@ -52,10 +52,6 @@ h3 {
   font-weight: 600;
 }
 
-article.youtube-article > h2 {
-  margin-top: 2.6em;
-}
-
 .header-container.header-container--visible,
 .header-container.header-container--hide {
   background-color: var(--cube-left-side-blue-color);
