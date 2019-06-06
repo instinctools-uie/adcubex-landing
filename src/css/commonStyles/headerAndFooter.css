@@ -1,3 +1,19 @@
+h1,
+h2 {
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-size: 5.625em;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.4em;
+}
+
+p {
+  font-family: 'montserrat_extralightregular', sans-serif;
+  font-size: 1.625em;
+  font-weight: 300;
+  line-height: 1.55em;
+}
+
 .hidden-scroll {
   overflow: hidden;
 }
@@ -185,8 +201,10 @@
   display: block;
 }
 
+nav,
+footer,
 .header-container,
-.content-container .section-container {
+.content-container {
   font-size: 1rem;
 }
 
@@ -196,6 +214,7 @@
   flex-direction: column;
   align-items: center;
   max-width: 80.6em;
+  width: 100%;
   margin: 0 auto;
   color: var(--mine-shaft-lighter-color);
 }
@@ -205,8 +224,6 @@ h1,
 .section-content > h2 {
   font-family: 'montserrat_mediumregular', sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 5.3em;
   overflow: hidden;
   transition: line-height 0.5s ease-in-out;
 }
@@ -221,7 +238,12 @@ footer {
 
 .footer-container {
   padding: 2.25em 3.8125em;
-  font-size: 0.875rem;
+}
+
+.footer-container a,
+.footer-container p,
+.footer-container span {
+  font-size: 0.875em;
 }
 
 footer * {
@@ -305,9 +327,36 @@ footer * {
   align-items: center;
   color: var(--mine-shaft-lighter-color);
   font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 2rem;
+  font-size: 2em;
   font-weight: 600;
 }
+
+.text-link {
+  word-break: break-all;
+}
+
+/* Customization of swiper slider */
+.swiper-container {
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next,
+.swiper-scrollbar {
+  display: none;
+}
+
+.swiper-slide {
+  width: auto !important;
+}
+/* End of customization slider */
 
 @keyframes show-header-animation {
   0% {
@@ -344,51 +393,68 @@ footer * {
 }
 
 @media all and (max-width: 1400px) {
-  h1,
-  .section-container > h2,
-  .section-content > h2 {
-    font-size: 3.5em;
+  nav,
+  footer,
+  .header-container,
+  .content-container {
+    font-size: 0.9rem;
   }
-
-  .vertical-inscription > span {
-    font-size: 1.7rem;
-  }
-
-  .logo {
-    font-size: 0.875em;
-  }
-
   .header-navigation-container {
     margin-top: 10em;
   }
+}
 
-  .header-links-container a {
-    font-size: 3.75em;
+@media all and (max-width: 1024px) {
+  nav,
+  footer,
+  .header-container,
+  .content-container {
+    font-size: 0.8rem;
+  }
+
+  .content-container {
+    max-width: 100%;
+  }
+}
+
+@media all and (max-width: 960px) {
+  nav,
+  footer,
+  .header-container,
+  .content-container {
+    font-size: 0.8rem;
   }
 }
 
 @media all and (max-width: 768px) {
+  nav,
+  footer,
+  .header-container,
+  .content-container {
+    font-size: 0.695rem;
+  }
+
   h1,
-  .section-container > h2,
-  .section-content > h2 {
-    font-size: 2.5em;
+  h2 {
+    font-size: 4.5em;
+  }
+
+  .footer-container a,
+  .footer-container p,
+  .footer-container span {
+    font-size: 1em;
+  }
+
+  .header-links-container a {
+    font-size: 4.7em;
   }
 
   .header-container {
     padding: 0 1.75em;
   }
 
-  .header-container,
-  .header-navigation,
-  .content-container .section-container {
-    font-size: 0.8rem;
-  }
-
-  .header-links-container a {
-    font-size: 2.75em;
-  }
-
   .footer-container {
+    padding: 0 1.75em;
     flex-direction: column;
   }
 
@@ -398,5 +464,12 @@ footer * {
 
   .footer-right a {
     padding: 0 0.8em 0 0;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .content-section h1,
+  .content-section h2 {
+    font-size: 3em;
   }
 }

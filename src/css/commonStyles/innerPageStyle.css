@@ -62,10 +62,6 @@ article {
   flex-direction: column;
 }
 
-.article--active div > h2 {
-  line-height: 1.12em;
-}
-
 article div > p {
   opacity: 0;
   transition: opacity 0.6s ease-in-out 0.4s;
@@ -73,6 +69,10 @@ article div > p {
 
 .article--active div > p {
   opacity: 1;
+}
+
+.article--active .section-content h2 {
+  line-height: 1.12;
 }
 
 article.article-right {
@@ -111,11 +111,6 @@ article.content-column--end,
   width: 60%;
 }
 
-.section-container article .section-content > p {
-  font-size: 1.625em;
-  line-height: 1.5em;
-}
-
 .content-column .svg-container {
   display: flex;
   align-items: center;
@@ -151,38 +146,6 @@ h2 + p {
 
 .vertical-inscription {
   top: -7em;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  transform: rotate(90deg);
-  cursor: pointer;
-  text-decoration: none;
-}
-
-.vertical-inscription-img-container {
-  margin-right: 3.25em;
-  transform: rotate(-90deg);
-}
-
-.vertical-inscription img {
-  max-width: 100%;
-  max-height: 100%;
-  transition: transform 0.5s ease-in-out;
-  will-change: transform;
-  cursor: pointer;
-}
-
-.vertical-inscription:hover img {
-  transform: translateY(20px);
-}
-
-.vertical-inscription > span {
-  display: flex;
-  align-items: center;
-  color: var(--mine-shaft-lighter-color);
-  font-family: 'montserrat_mediumregular', sans-serif;
-  font-size: 2em;
-  font-weight: 600;
 }
 
 .contact-section {
@@ -205,10 +168,6 @@ h2 + p {
 
 .contact-section a {
   text-decoration: none;
-}
-
-h4 + p {
-  font-size: 1.75em;
 }
 
 .custom-button {
@@ -293,24 +252,12 @@ footer {
 }
 
 @media all and (max-width: 1400px) {
-  .custom-button {
-    height: 3em;
-    font-size: 1.75em;
-  }
   article.content-column--start,
   article.content-column--end,
   .content-column--start,
   .content-column--end {
     padding-top: 0;
     padding-bottom: 2em;
-  }
-
-  .title-section p {
-    font-size: 1.75em;
-  }
-
-  .section-container article .section-content > p {
-    font-size: 1.45em;
   }
 }
 
@@ -330,9 +277,11 @@ footer {
     height: 3em;
     margin-right: 2.25em;
   }
+}
 
-  .vertical-inscription > span {
-    font-size: 1.75em;
+@media (min-width: 769px) and (max-width: 1200px) {
+  .analysis-article .section-content h2 {
+    height: 2.5em;
   }
 }
 
@@ -384,26 +333,8 @@ footer {
     width: 100%;
   }
 
-  h2 + p {
-    margin-top: 1.4em;
-  }
-
-  h4 + p {
-    font-size: 1.25em;
-  }
-
   .section-container article .section-content > h2 {
     height: auto;
-    line-height: 1.12em;
-  }
-
-  .title-section p,
-  .section-container article .section-content > p {
-    font-size: 1.2em;
-  }
-
-  .section-container article .section-content > p {
-    margin-top: 0.8em;
   }
 
   article div > p {
@@ -412,11 +343,5 @@ footer {
 
   .contact-section h4 {
     margin-top: 0;
-    font-size: 2em;
-  }
-
-  .custom-button {
-    margin: 1em 0 0;
-    font-size: 1.5em;
   }
 }
