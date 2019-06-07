@@ -24,10 +24,16 @@
   display: flex;
 }
 
+.custom-button {
+  width: 15.8em;
+  height: 3.3em;
+}
+
 .contact-us-container .custom-button-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .contact-us-container .custom-button div[role='status'] {
