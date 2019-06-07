@@ -415,11 +415,11 @@ footer {
 @media all and (max-width: 1400px) {
   .section-container {
     width: 100%;
+    margin-top: 0;
   }
 
-  .section-container,
   .supervise-section.section-container {
-    margin-top: 0;
+    margin-top: 4em;
   }
 
   .section-container.toolset-section {
