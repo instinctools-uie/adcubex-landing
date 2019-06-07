@@ -454,7 +454,7 @@ footer * {
   }
 
   .footer-container {
-    padding: 0 1.75em;
+    padding: 0 1.75em 1.5em;
     flex-direction: column;
   }
 
