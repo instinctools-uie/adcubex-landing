@@ -1,3 +1,23 @@
+*:focus {
+  outline: 0.15rem dotted var(--nobel-color);
+}
+
+.red-outline:focus {
+  outline: 0.1rem solid var(--flamingo-color);
+}
+
+.black-outline:focus {
+  outline: 0.1rem solid var(--mine-shaft-light-color);
+  border: 0.1rem solid #fff;
+  box-shadow: 0 0 0 0.05em var(--mine-shaft-light-color) inset;
+}
+
+.white-outline:focus {
+  outline: 0.1rem solid #fff;
+  border: 0.1rem solid var(--mine-shaft-light-color);
+  box-shadow: 0 0 0 0.05em #fff inset;
+}
+
 h1,
 h2 {
   font-family: 'montserrat_mediumregular', sans-serif;
@@ -333,6 +353,10 @@ footer * {
 
 .text-link {
   word-break: break-all;
+}
+
+.custom-button:focus {
+  border: 0.1em solid #fff;
 }
 
 /* Customization of swiper slider */
