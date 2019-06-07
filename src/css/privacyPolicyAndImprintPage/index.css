@@ -22,8 +22,8 @@
   margin: 0.45em 0 0 -3.68em;
 }
 
-.data-collection-article {
-  margin-top: 5em;
+h2 {
+  margin-top: 3em;
 }
 
 .imprint-content article {
@@ -106,5 +106,15 @@ h3 {
 
   .imprint-content article {
     padding-top: 1.5em;
+  }
+}
+
+@media (min-width: 769px) {
+  p {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2.25em;
   }
 }
