@@ -26,7 +26,7 @@
   font-size: 1rem;
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets {
+.swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: 0;
 }
 

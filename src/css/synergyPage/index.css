@@ -19,7 +19,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background: var(--cube-left-side-blue-color)
+  background: var(--cube-left-side-blue-color);
 }
 
 .external-links {
