@@ -28,7 +28,7 @@ h2 {
 }
 
 p {
-  font-family: 'montserrat_extralightregular', sans-serif;
+  font-family: 'montserrat_lightregular', sans-serif;
   font-size: 1.625em;
   font-weight: 300;
   line-height: 1.55em;
@@ -359,28 +359,12 @@ footer * {
   border: 0.1em solid #fff;
 }
 
-/* Customization of swiper slider */
-.swiper-container {
-  width: 100%;
-}
-
-.swiper-wrapper {
+.img-list-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-scrollbar {
-  display: none;
-}
-
-.swiper-slide {
-  width: auto !important;
-}
-/* End of customization slider */
 
 @keyframes show-header-animation {
   0% {
@@ -439,6 +423,10 @@ footer * {
   .content-container {
     max-width: 100%;
   }
+
+  .hidden-lg {
+    display: none;
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -478,7 +466,7 @@ footer * {
   }
 
   .footer-container {
-    padding: 0 1.75em;
+    padding: 0 1.75em 1.75em;
     flex-direction: column;
   }
 
