@@ -1,6 +1,9 @@
 /* Customization of swiper slider */
 .swiper-container {
+  display: none;
   width: 100%;
+  font-size: 1rem;
+  padding: 0 0 2em;
 }
 
 .swiper-wrapper {
@@ -19,8 +22,27 @@
   width: auto !important;
 }
 
+.swiper-pagination {
+  font-size: 1rem;
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+  bottom: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 1em;
+  height: 1em;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--flamingo-color);
+}
+
 @media (max-width: 1024px) {
   .swiper-container {
+    display: block;
     width: auto;
   }
 
@@ -42,10 +64,20 @@
     justify-content: center;
     align-items: center;
     width: 100% !important;
+    height: 100% !important;
   }
 
   .swiper-slide svg {
     max-width: 40%;
+    width: auto;
+    min-height: 4em;
+    height: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide svg {
+    max-width: 80%;
     width: auto;
     height: 100%;
   }

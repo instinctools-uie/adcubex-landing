@@ -335,6 +335,13 @@ footer * {
   word-break: break-all;
 }
 
+.img-list-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
 @keyframes show-header-animation {
   0% {
     top: -9em;
@@ -391,6 +398,10 @@ footer * {
 
   .content-container {
     max-width: 100%;
+  }
+
+  .hidden-lg {
+    display: none;
   }
 }
 

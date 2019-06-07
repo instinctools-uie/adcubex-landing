@@ -18,6 +18,10 @@
   fill: var(--cube-bottom-side-blue-color);
 }
 
+.swiper-pagination-bullet-active {
+  background: var(--cube-left-side-blue-color)
+}
+
 .external-links {
   display: flex;
   align-items: center;
