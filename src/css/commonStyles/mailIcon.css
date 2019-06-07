@@ -97,5 +97,6 @@
 @media all and (max-width: 768px) {
   .mailIcon-container {
     right: 1em;
+    bottom: 1.5em;
   }
 }
