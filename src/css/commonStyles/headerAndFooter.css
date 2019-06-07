@@ -395,6 +395,10 @@ footer * {
 
 /* for touch devices */
 @media (pointer: coarse) {
+  *, *:focus {
+    outline: none;
+  }
+
   .header-links-container a::after {
     display: none;
   }
