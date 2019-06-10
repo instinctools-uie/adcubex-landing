@@ -551,6 +551,11 @@ footer {
   .section-container h2 {
     font-size: 2.75em;
   }
+
+  .budget-section br,
+  .control-section br {
+    display: none;
+  }
 }
 
 @media (max-width: 320px) {

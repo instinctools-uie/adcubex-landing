@@ -352,3 +352,9 @@ footer {
     margin-top: 0;
   }
 }
+
+@media (max-width: 414px) {
+  .title-section br {
+    display: none;
+  }
+}
