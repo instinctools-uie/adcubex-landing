@@ -36,7 +36,10 @@ function removeHeaderBackground() {
 
 export default function changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition) {
   const headerActiveSelector = document.getElementsByClassName('header-container--nav-active');
-  const isHiderHeader = scrollCurrentPosition > scrollPreviousPosition && scrollCurrentPosition > defaultPositionHeader && !headerActiveSelector.length;
+  const isHiderHeader =
+    scrollCurrentPosition > scrollPreviousPosition &&
+    scrollCurrentPosition > defaultPositionHeader &&
+    !headerActiveSelector.length;
 
   if (isHiderHeader) {
     hideHeader();
