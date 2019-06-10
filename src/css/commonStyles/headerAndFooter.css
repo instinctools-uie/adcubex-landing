@@ -395,7 +395,8 @@ footer * {
 
 /* for touch devices */
 @media (pointer: coarse) {
-  *, *:focus {
+  *,
+  *:focus {
     outline: none;
   }
 
@@ -484,7 +485,7 @@ footer * {
   }
 }
 
-@media (max-height: 400px) and (orientation: landscape){
+@media (max-height: 400px) and (orientation: landscape) {
   .header-navigation-container {
     margin-top: 6.5em;
   }
