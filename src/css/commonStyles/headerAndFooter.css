@@ -437,7 +437,8 @@ footer * {
     font-size: 4.7em;
   }
 
-  .header-container {
+  .header-container,
+  .header-navigation-container {
     padding: 0 1.75em;
   }
 
@@ -452,6 +453,16 @@ footer * {
 
   .footer-right a {
     padding: 0 0.8em 0 0;
+  }
+}
+
+@media (max-height: 400px) and (orientation: landscape){
+  .header-navigation-container {
+    margin-top: 6.5em;
+  }
+
+  .header-links-container a {
+    font-size: 3.8em;
   }
 }
 
