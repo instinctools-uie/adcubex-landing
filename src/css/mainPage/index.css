@@ -50,7 +50,7 @@ body {
 
 .supervise-section.section-container {
   min-height: calc(100vh - 6.25em);
-  margin-top: 6.25em;
+  padding-top: 6.25em;
 }
 
 .toolset-section.section-container {
