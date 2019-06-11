@@ -2,17 +2,20 @@
   outline: 0.15rem dotted var(--nobel-color);
 }
 
-.red-outline:focus {
+.red-outline:focus,
+.custom-button:focus {
   outline: 0.1rem solid var(--flamingo-color);
 }
 
-.black-outline:focus {
+.black-outline:focus,
+.custom-button.black-outline:focus {
   outline: 0.1rem solid var(--mine-shaft-light-color);
   border: 0.1rem solid #fff;
   box-shadow: 0 0 0 0.05em var(--mine-shaft-light-color) inset;
 }
 
-.white-outline:focus {
+.white-outline:focus,
+.custom-button.white-outline:focus {
   outline: 0.1rem solid #fff;
   border: 0.1rem solid var(--mine-shaft-light-color);
   box-shadow: 0 0 0 0.05em #fff inset;
@@ -395,7 +398,8 @@ footer * {
 
 /* for touch devices */
 @media (pointer: coarse) {
-  *, *:focus {
+  *,
+  *:focus {
     outline: none;
   }
 
@@ -484,7 +488,7 @@ footer * {
   }
 }
 
-@media (max-height: 400px) and (orientation: landscape){
+@media (max-height: 400px) and (orientation: landscape) {
   .header-navigation-container {
     margin-top: 6.5em;
   }

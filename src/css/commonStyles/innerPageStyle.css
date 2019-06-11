@@ -108,7 +108,7 @@ article.content-column--end,
 .content-column .section-content {
   position: relative;
   z-index: 2;
-  width: 47em;
+  width: 54em;
 }
 
 .content-column .svg-container {
@@ -350,5 +350,11 @@ footer {
 
   .contact-section h4 {
     margin-top: 0;
+  }
+}
+
+@media (max-width: 414px) {
+  .title-section br {
+    display: none;
   }
 }
