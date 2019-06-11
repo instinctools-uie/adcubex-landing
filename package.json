@@ -21,15 +21,7 @@
   },
   "jest": {
     "verbose": true,
-    "coverageDirectory": "./__coverage__",
-    "coverageThreshold": {
-      "global": {
-        "branches": 85,
-        "functions": 85,
-        "lines": 85,
-        "statements": 85
-      }
-    }
+    "coverageDirectory": "./__coverage__"
   },
   "keywords": [
     "SEM",
