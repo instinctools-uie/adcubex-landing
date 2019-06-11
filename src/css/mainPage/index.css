@@ -479,13 +479,23 @@ footer {
 }
 
 @media all and (max-width: 768px) {
+  .content-container {
+    padding: 0 1.75em;
+  }
+
+  .section-container {
+    min-height: 80vh;
+  }
+
+  footer {
+    margin-top: 0;
+  }
+
   .section-container h1,
   .section-container h2 {
     font-size: 4em;
   }
-  .content-container {
-    padding: 0 1.75em;
-  }
+
   .vertical-inscription-container {
     display: none;
   }
