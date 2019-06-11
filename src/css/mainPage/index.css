@@ -464,6 +464,11 @@ footer {
     top: -1.75em;
     right: -11.5em;
   }
+
+  .external-links,
+  .toolset-section > .external-links {
+    margin-top: 6em;
+  }
 }
 
 @media all and (max-width: 960px) {
