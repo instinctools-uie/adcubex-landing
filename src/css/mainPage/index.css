@@ -469,6 +469,10 @@ footer {
   .toolset-section > .external-links {
     margin-top: 6em;
   }
+
+  .section-container .letter-parallax {
+    left: -3.8em;
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -567,8 +571,8 @@ footer {
     font-size: 2.75em;
   }
 
-  .budget-section br,
-  .control-section br {
+  .budget-section div br,
+  .control-section div br {
     display: none;
   }
 }
