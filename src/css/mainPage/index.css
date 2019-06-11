@@ -49,7 +49,8 @@ body {
 }
 
 .supervise-section.section-container {
-  margin-top: 8em;
+  min-height: calc(100vh - 6.25em);
+  padding-top: 6.25em;
 }
 
 .toolset-section.section-container {
@@ -419,8 +420,7 @@ footer {
     width: 100%;
   }
 
-  .section-container,
-  .supervise-section.section-container {
+  .section-container {
     margin-top: 0;
   }
 
