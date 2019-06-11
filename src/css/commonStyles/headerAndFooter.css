@@ -116,9 +116,7 @@ p {
   height: 100%;
 }
 
-.logo--active #logo_ad,
-.logo--active #logo_cubex,
-.logo--active #logo_when-ad-go-huge {
+.logo--active #logo_dark_curves-2 * {
   fill: white !important;
 }
 
