@@ -172,10 +172,19 @@ p {
   content: '';
   width: 0.555em;
   height: 0.555em;
+  margin-top: 0.25em;
   margin-left: 0.665em;
   background: url('../../assets/images/ArrowBlack.svg') center bottom no-repeat;
   background-size: contain;
   transform: rotate(-90deg);
+}
+
+.header-links-container a.link-solutions:hover::after {
+  margin-top: 0.2em;
+}
+
+.header-links-container a.link-lets-talk:hover::after {
+  margin-top: 0.1em;
 }
 
 .header-links-container a:hover {
