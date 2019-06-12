@@ -454,10 +454,6 @@ footer {
 }
 
 @media all and (max-width: 1024px) {
-  .toolset-section .swiper-wrapper {
-    height: 6em;
-  }
-
   .cubes-container {
     width: 155%;
     height: 114%;
