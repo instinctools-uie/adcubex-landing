@@ -1,24 +1,6 @@
+*,
 *:focus {
-  outline: 0.15rem dotted var(--nobel-color);
-}
-
-.red-outline:focus,
-.custom-button:focus {
-  outline: 0.1rem solid var(--flamingo-color);
-}
-
-.black-outline:focus,
-.custom-button.black-outline:focus {
-  outline: 0.1rem solid var(--mine-shaft-light-color);
-  border: 0.1rem solid #fff;
-  box-shadow: 0 0 0 0.05em var(--mine-shaft-light-color) inset;
-}
-
-.white-outline:focus,
-.custom-button.white-outline:focus {
-  outline: 0.1rem solid #fff;
-  border: 0.1rem solid var(--mine-shaft-light-color);
-  box-shadow: 0 0 0 0.05em #fff inset;
+  outline: none;
 }
 
 h1,
@@ -208,10 +190,6 @@ p {
   background: none;
 }
 
-.toggle-menu-button:focus {
-  outline: 0.01em dotted var(--silver-color);
-}
-
 .header-open-menu-icon,
 .header-close-menu-icon {
   display: none;
@@ -355,10 +333,6 @@ footer * {
   word-break: break-all;
 }
 
-.custom-button:focus {
-  border: 0.1em solid #fff;
-}
-
 .img-list-container {
   display: flex;
   align-items: center;
@@ -395,11 +369,6 @@ footer * {
 
 /* for touch devices */
 @media (pointer: coarse) {
-  *,
-  *:focus {
-    outline: none;
-  }
-
   .header-links-container a::after {
     display: none;
   }
