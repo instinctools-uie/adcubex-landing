@@ -183,10 +183,6 @@
   color: var(--mine-shaft-lighter-color);
 }
 
-.contact-us-form input[type='checkbox']:focus + .checkbox-wrapper {
-  outline: 0.04em dotted var(--mine-shaft-lighter-color);
-}
-
 .contact-us-form input[type='checkbox']:disabled + .checkbox-wrapper {
   opacity: 0.6;
   outline: none;
@@ -220,11 +216,6 @@
   font-weight: 500;
   font-size: 1.5em;
   transition: background-color, border 0.3s ease-in;
-}
-
-.contact-us-form .custom-button:focus {
-  outline: 0.05em solid var(--red-orange-color);
-  border: 0.1em solid white;
 }
 
 .contact-us-form .button-image {
