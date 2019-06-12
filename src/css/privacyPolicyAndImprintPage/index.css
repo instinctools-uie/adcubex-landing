@@ -31,11 +31,6 @@ h2 {
   flex-direction: column;
 }
 
-.imprint-content article p,
-.privacy-policy-content article p {
-  max-width: 70%;
-}
-
 .data-collection-article > h2 {
   animation: none;
 }
