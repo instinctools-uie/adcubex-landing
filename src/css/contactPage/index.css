@@ -162,11 +162,13 @@
 
 .contact-us-form input[type='checkbox'] {
   height: 100%;
+  width: 1em;
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
   z-index: 2;
+  font-size: inherit;
   cursor: pointer;
 }
 
