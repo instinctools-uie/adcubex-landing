@@ -263,10 +263,10 @@ footer {
   padding: 2.25em 3.8125em;
 }
 
-.footer-container a,
-.footer-container p,
-.footer-container span {
-  font-size: 0.875em;
+.footer-left > a,
+.footer-right > a,
+.footer-container p {
+  font-size: 0.972em;
 }
 
 footer * {
@@ -295,7 +295,6 @@ footer * {
 
 .footer-left p span {
   color: var(--coal-grey-color);
-  font-weight: 600;
   font-style: italic;
 }
 
