@@ -33,7 +33,7 @@ h2 {
 
 .imprint-content article p,
 .privacy-policy-content article p {
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .data-collection-article > h2 {
