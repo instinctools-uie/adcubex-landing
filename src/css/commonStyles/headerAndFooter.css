@@ -27,14 +27,14 @@ h2 {
   font-size: 5.625em;
   font-weight: 600;
   font-style: normal;
-  line-height: 1.4em;
+  line-height: 1.4;
 }
 
 p {
   font-family: 'montserrat_lightregular', sans-serif;
   font-size: 1.625em;
   font-weight: 300;
-  line-height: 1.55em;
+  line-height: 1.55;
 }
 
 .hidden-scroll {
@@ -116,9 +116,7 @@ p {
   height: 100%;
 }
 
-.logo--active #logo_ad,
-.logo--active #logo_cubex,
-.logo--active #logo_when-ad-go-huge {
+.logo--active #logo_dark_curves-2 * {
   fill: white !important;
 }
 
@@ -263,10 +261,10 @@ footer {
   padding: 2.25em 3.8125em;
 }
 
-.footer-container a,
-.footer-container p,
-.footer-container span {
-  font-size: 0.875em;
+.footer-left > a,
+.footer-right > a,
+.footer-container p {
+  font-size: 0.972em;
 }
 
 footer * {
@@ -295,7 +293,6 @@ footer * {
 
 .footer-left p span {
   color: var(--coal-grey-color);
-  font-weight: 600;
   font-style: italic;
 }
 

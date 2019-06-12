@@ -46,6 +46,10 @@
   font-size: 1em;
 }
 
+.contact-us-container .custom-button div[role='status'] p {
+  line-height: 0.2em;
+}
+
 .contact-us-container .custom-button .spinner {
   width: 1em;
   height: 1em;
@@ -83,7 +87,7 @@
 
 .contact-us-form > p {
   font-size: 1.625em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 .contact-us-form > input,
@@ -207,7 +211,7 @@
   margin-left: 1em;
   color: var(--coal-grey-color);
   font-size: 0.75em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 .contact-us-form .custom-button {
