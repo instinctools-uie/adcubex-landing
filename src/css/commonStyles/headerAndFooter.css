@@ -369,7 +369,7 @@ footer * {
 
 /* for touch devices */
 @media (pointer: coarse) {
- .header-links-container a::after {
+  .header-links-container a::after {
     display: none;
   }
 }
