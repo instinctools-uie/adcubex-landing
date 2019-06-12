@@ -16,7 +16,10 @@ window.onload = () => {
   (() =>
     new Swiper('.swiper-container', {
       loop: true,
-      autoplay: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+      },
       pagination: {
         el: '.swiper-pagination',
         type: 'bullets',
