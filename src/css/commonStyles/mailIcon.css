@@ -102,3 +102,13 @@
     bottom: 1.5em;
   }
 }
+
+@media (hover: none) {
+  .mailIcon-background:hover {
+    width: 3.25em;
+  }
+
+  .mailIcon-background:hover .mid-el {
+    width: 0;
+  }
+}
