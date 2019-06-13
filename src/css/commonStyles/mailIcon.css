@@ -103,7 +103,7 @@
   }
 }
 
-@media (hover: none) {
+@media (pointer: coarse) {
   .mailIcon-background:hover {
     width: 3.25em;
   }
