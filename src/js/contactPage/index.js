@@ -36,7 +36,7 @@ window.onload = () => {
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
       const description = form.querySelector('textarea[name="body"]');
       const subject = `Adcubex request from ${name.value}`;
-      const body = `Email: ${email.value}\n${phone.value ? `Phone: ${phone.value}\n` : ''}${description.value}`;
+      const body = `Email: ${email.value}%0D%0A${phone.value ? `Phone: ${phone.value}%0D%0A` : ''}${description.value}`;
       const showProgress = flag => {
         submitProgress.setAttribute('aria-hidden', `${!flag}`);
         submitProgress.style.display = flag ? 'flex' : 'none';

@@ -249,6 +249,10 @@ footer {
   opacity: 1;
 }
 
+.header-open-menu-icon span {
+  background: #fff;
+}
+
 @keyframes cube-animation {
   0% {
     transform: scale(0);
