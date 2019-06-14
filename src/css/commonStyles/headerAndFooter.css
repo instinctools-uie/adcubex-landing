@@ -219,7 +219,7 @@ p {
   display: block;
   height: 3px;
   opacity: 1;
-  background: #333;
+  background: var(--mine-shaft-light-color);
   transition: all 0.25s ease-in-out;
 }
 
