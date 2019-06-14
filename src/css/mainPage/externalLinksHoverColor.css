@@ -69,7 +69,7 @@
   fill: var(--evonik-hover-color);
 }
 
-@media (max-width: 1024px) {
+@media (pointer: coarse) {
   .external-links .google-icon #google-path-1 {
     fill: var(--google-fourth-letter-hover-color);
   }
