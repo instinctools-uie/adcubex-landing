@@ -1,5 +1,5 @@
 import { EMAIL } from '../constants';
-import { toggleMenuListener, navItemHandler } from '../toggleMenu';
+import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
@@ -15,7 +15,6 @@ window.addEventListener('scroll', () => {
 
 window.onload = () => {
   toggleMenuListener();
-  navItemHandler();
   hoverLinkInMenu();
 
   const form = document.querySelector('#contact-form');

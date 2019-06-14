@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { toggleMenuListener, navItemHandler } from '../toggleMenu';
+import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { INNER_PAGES_TOGGLE_CONTENT } from '../constants';
@@ -10,7 +10,6 @@ let scrollPreviousPosition = 0;
 
 window.onload = () => {
   toggleMenuListener();
-  navItemHandler();
   hoverLinkInMenu();
 
   (() =>
