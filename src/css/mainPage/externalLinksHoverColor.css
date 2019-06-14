@@ -69,6 +69,79 @@
   fill: var(--evonik-hover-color);
 }
 
+@media (max-width: 1024px) {
+  .external-links .google-icon #google-path-1 {
+    fill: var(--google-fourth-letter-hover-color);
+  }
+
+  .external-links .google-icon #google-path-3,
+  .external-links .google-icon #google-path-5 {
+    fill: var(--google-second-and-sixth-letter-hover-color);
+  }
+
+  .external-links .google-icon #google-path-7 {
+    fill: var(--google-first-letter-hover-color);
+  }
+
+  .external-links .google-icon #google-path-10 {
+    fill: var(--google-third-letter-hover-color);
+  }
+
+  .external-links .google-icon #google-path-12 {
+    fill: var(--google-fifth-letter-hover-color);
+  }
+
+  .external-links .twitter-icon #twitter {
+    fill: var(--twitter-hover-color);
+  }
+
+  .external-links .bing-icon #Bing {
+    fill: var(--bing-ads-hover-color);
+  }
+
+  .external-links .facebook-icon #facebook_1 {
+    fill: var(--facebook-hover-color);
+  }
+
+  .external-links .baidu-icon path {
+    fill: var(--baidu-hover-color);
+  }
+
+  .external-links .baidu-icon #Baidu-2,
+  .external-links .baidu-icon #Baidu-3 {
+    fill: var(--baidu-text-in-paw-hover-color);
+  }
+
+  .external-links .baidu-icon #Baidu-1 {
+    fill: var(--baidu-paw-hover-color);
+  }
+
+  .external-links .yahoo-icon path {
+    fill: var(--yahoo-hover-color);
+  }
+
+  .external-links .daimler-icon path {
+    fill: var(--daimler-hover-color);
+  }
+
+  .external-links .huberd-burda-icon path,
+  .external-links .huberd-burda-icon polygon {
+    fill: var(--huberd-hover-color);
+  }
+
+  .external-links .fujitsu-icon #Fujitsu {
+    fill: var(--fujitsu-hover-color);
+  }
+
+  .external-links .thyssenkrupp-icon #thyssenkrupp {
+    fill: var(--thyssenkrupp-hover-color);
+  }
+
+  .external-links .evonik-icon #evonik {
+    fill: var(--evonik-hover-color);
+  }
+}
+
 @media (pointer: coarse) {
   .external-links .google-icon #google-path-1 {
     fill: var(--google-fourth-letter-hover-color);
