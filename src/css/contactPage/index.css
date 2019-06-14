@@ -39,21 +39,23 @@
 .contact-us-container .custom-button div[role='status'] {
   display: none;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
   color: white;
   font-size: 1em;
 }
 
+.contact-us-container .custom-button div[role='status'] p {
+  line-height: 0.2em;
+}
+
 .contact-us-container .custom-button .spinner {
   width: 1em;
   height: 1em;
-  border: 0.25em solid var(--flamingo-color);
+  border: 0.15em solid #fff;
+  border-left: 0.25em solid transparent;
   border-radius: 50%;
-  border-top: 0.15em solid var(--cube-right-side-dark-blue-color);
-  border-right: 0.25em solid var(--flamingo-color);
-  border-bottom: 0.15em solid var(--cube-right-side-purple-color);
   animation: spin 0.4s linear infinite;
 }
 
@@ -83,7 +85,7 @@
 
 .contact-us-form > p {
   font-size: 1.625em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 .contact-us-form > input,
@@ -179,10 +181,6 @@
   color: var(--mine-shaft-lighter-color);
 }
 
-.contact-us-form input[type='checkbox']:focus + .checkbox-wrapper {
-  outline: 0.04em dotted var(--mine-shaft-lighter-color);
-}
-
 .contact-us-form input[type='checkbox']:disabled + .checkbox-wrapper {
   opacity: 0.6;
   outline: none;
@@ -207,7 +205,7 @@
   margin-left: 1em;
   color: var(--coal-grey-color);
   font-size: 0.75em;
-  line-height: 1.5em;
+  line-height: 1.5;
 }
 
 .contact-us-form .custom-button {
@@ -216,11 +214,6 @@
   font-weight: 500;
   font-size: 1.5em;
   transition: background-color, border 0.3s ease-in;
-}
-
-.contact-us-form .custom-button:focus {
-  outline: 0.05em solid var(--red-orange-color);
-  border: 0.1em solid white;
 }
 
 .contact-us-form .button-image {

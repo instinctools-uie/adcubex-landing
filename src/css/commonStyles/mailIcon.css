@@ -9,10 +9,6 @@
   text-decoration: none;
 }
 
-.mailIcon-container:focus {
-  outline: 1px dotted var(--silver-color);
-}
-
 .mailIcon-background {
   width: 3.25em;
   background-color: transparent;

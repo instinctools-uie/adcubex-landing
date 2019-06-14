@@ -77,7 +77,6 @@
 
 @media (max-width: 768px) {
   .swiper-slide svg {
-    max-width: 80%;
     width: auto;
     height: 100%;
   }
