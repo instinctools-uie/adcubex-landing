@@ -11,6 +11,7 @@
     "import/no-unresolved": "off",
     "no-unused-expressions": "off",
     "no-param-reassign": "off",
-    "no-use-before-define": ["error", { "functions": false }]
+    "no-use-before-define": ["error", { "functions": false }],
+    "no-useless-escape": "off"
   }
 }
