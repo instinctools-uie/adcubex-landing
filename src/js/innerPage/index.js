@@ -1,17 +1,18 @@
 import Swiper from 'swiper';
-import { toggleMenuListener, navItemHandler } from '../toggleMenu';
+import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { INNER_PAGES_TOGGLE_CONTENT } from '../constants';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
 
 window.onload = () => {
   toggleMenuListener();
-  navItemHandler();
   hoverLinkInMenu();
+  setFooterYear();
 
   (() =>
     new Swiper('.swiper-container', {

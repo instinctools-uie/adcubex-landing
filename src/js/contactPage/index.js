@@ -1,8 +1,9 @@
 import { EMAIL } from '../constants';
-import { toggleMenuListener, navItemHandler } from '../toggleMenu';
+import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
 
@@ -15,8 +16,8 @@ window.addEventListener('scroll', () => {
 
 window.onload = () => {
   toggleMenuListener();
-  navItemHandler();
   hoverLinkInMenu();
+  setFooterYear();
 
   const form = document.querySelector('#contact-form');
 
@@ -34,7 +35,9 @@ window.onload = () => {
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
       const description = form.querySelector('textarea[name="body"]');
       const subject = `Adcubex request from ${name.value}`;
-      const body = `Email: ${email.value}%0D%0A${phone.value ? `Phone: ${phone.value}%0D%0A` : ''}${description.value}`;
+      const body = `Email: ${email.value}\%0D%0A${phone.value
+        ? `Phone: ${phone.value}\%0D%0A`
+        : ''}${description.value}`;
       const showProgress = flag => {
         submitProgress.setAttribute('aria-hidden', `${!flag}`);
         submitProgress.style.display = flag ? 'flex' : 'none';
