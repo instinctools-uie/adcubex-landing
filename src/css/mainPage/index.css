@@ -576,7 +576,7 @@ footer {
   }
 }
 
-@media (min-width: 1365px) {
+@media (min-width: 768px) {
   .letter-parallax {
     width: 50em;
     height: 45em;
