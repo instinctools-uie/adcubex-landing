@@ -1,8 +1,4 @@
 const headerNavigation = document.querySelector('.header-navigation');
-const backgroundSynergy = document.querySelector('.bg-synergy');
-const backgroundStrategy = document.querySelector('.bg-strategy');
-const backgroundSolutions = document.querySelector('.bg-solutions');
-const backgroundLetsTalk = document.querySelector('.bg-lets-talk');
 const linksContainerInOpenedMenu = document.querySelector('.header-links-container');
 
 export default function hoverLinkInMenu() {
@@ -18,19 +14,19 @@ function mouseOnNavigationContainer(e) {
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
   if (isSynergyLink) {
-    backgroundSynergy.style.opacity = 1;
+    headerNavigation.classList.add('header-navigation--blue');
   }
 
   if (isStrategyLink) {
-    backgroundStrategy.style.opacity = 1;
+    headerNavigation.classList.add('header-navigation--red');
   }
 
   if (isSolutionsLink) {
-    backgroundSolutions.style.opacity = 1;
+    headerNavigation.classList.add('header-navigation--purple');
   }
 
   if (isLetsTalkLink) {
-    backgroundLetsTalk.style.opacity = 1;
+    headerNavigation.classList.add('header-navigation--dark-purple');
   }
 }
 
@@ -41,21 +37,19 @@ function mouseOutNavigationContainer(e) {
   const isSolutionsLink = target.classList.contains('link-solutions');
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
-  headerNavigation.style.opacity = 1;
-
   if (isSynergyLink) {
-    backgroundSynergy.style.opacity = 0;
+    headerNavigation.classList.remove('header-navigation--blue');
   }
 
   if (isStrategyLink) {
-    backgroundStrategy.style.opacity = 0;
+    headerNavigation.classList.remove('header-navigation--red');
   }
 
   if (isSolutionsLink) {
-    backgroundSolutions.style.opacity = 0;
+    headerNavigation.classList.remove('header-navigation--purple');
   }
 
   if (isLetsTalkLink) {
-    backgroundLetsTalk.style.opacity = 0;
+    headerNavigation.classList.remove('header-navigation--dark-purple');
   }
 }
