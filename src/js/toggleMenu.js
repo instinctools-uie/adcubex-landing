@@ -55,20 +55,3 @@ function closeMenu() {
   openMenuIcon.classList.remove('header-open-menu-icon--active');
   headerNavigation.setAttribute('aria-hidden', 'true');
 }
-
-export function navItemHandler() {
-  const navItems = document.querySelectorAll('.header-link');
-
-  for (let i = 0; i < navItems.length; i++) {
-    navItems[i].addEventListener('click', hideMenu);
-  }
-}
-
-function hideMenu() {
-  const { header, headerNavigation, logoElement, openMenuIcon } = getTargetSelectors();
-
-  header.classList.remove('header-container--nav-active');
-  headerNavigation.classList.remove('header-navigation--active');
-  logoElement.classList.remove('logo--active');
-  openMenuIcon.classList.remove('header-open-menu-icon--active');
-}

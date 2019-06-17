@@ -324,9 +324,8 @@ footer * {
   font-style: normal;
 }
 
-.footer-left p span {
+.footer-left p i {
   color: var(--coal-grey-color);
-  font-style: italic;
 }
 
 .footer-left a,
