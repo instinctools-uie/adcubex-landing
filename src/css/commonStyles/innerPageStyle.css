@@ -43,7 +43,7 @@ body {
 
 .content-section .content-wrapper {
   box-sizing: border-box;
-  padding: 2.8125em 3.8125em;
+  padding: 2.8125em 3.8125em 6em 3.8125em;
 }
 
 .section-content > h2 {
