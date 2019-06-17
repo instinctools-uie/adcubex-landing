@@ -5,6 +5,7 @@ import toggleContentByScroll from '../toggleContentByScroll';
 import { INNER_PAGES_TOGGLE_CONTENT } from '../constants';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
 
@@ -12,6 +13,7 @@ window.onload = () => {
   toggleMenuListener();
   navItemHandler();
   hoverLinkInMenu();
+  setFooterYear();
 
   (() =>
     new Swiper('.swiper-container', {

@@ -23,6 +23,7 @@ import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { sectionImageParallax } from '../scrollParallax';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 import changeHeaderVisibility from '../menuAnimation';
 import isWSXGABreakpoint from '../isWSXGABreakpoint';
@@ -39,6 +40,7 @@ window.onload = () => {
   navItemHandler();
   hoverLinkInMenu();
   cubesRandomLevitation();
+  setFooterYear();
 
   (() =>
     new Swiper('.swiper-container', {

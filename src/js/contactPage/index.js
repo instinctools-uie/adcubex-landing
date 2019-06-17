@@ -3,6 +3,7 @@ import { toggleMenuListener, navItemHandler } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
 
@@ -17,6 +18,7 @@ window.onload = () => {
   toggleMenuListener();
   navItemHandler();
   hoverLinkInMenu();
+  setFooterYear();
 
   const form = document.querySelector('#contact-form');
 

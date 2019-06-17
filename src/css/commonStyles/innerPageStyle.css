@@ -236,9 +236,8 @@ footer {
   color: white;
 }
 
-.footer-left p span {
+.footer-left p i {
   color: white;
-  font-style: italic;
 }
 
 .footer-right a {
