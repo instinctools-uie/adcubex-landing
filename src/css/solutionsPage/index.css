@@ -18,13 +18,9 @@
 .section-content > h2 {
   height: 2.5em;
   margin-bottom: 0;
-  line-height: 6.5em;
+  line-height: 6.5;
   overflow: hidden;
   transition: line-height 0.5s ease-in-out;
-}
-
-.article--active div > h2 {
-  line-height: 1.12em;
 }
 
 .investments-article,

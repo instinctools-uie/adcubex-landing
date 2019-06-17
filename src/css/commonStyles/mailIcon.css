@@ -9,10 +9,6 @@
   text-decoration: none;
 }
 
-.mailIcon-container:focus {
-  outline: 1px dotted var(--silver-color);
-}
-
 .mailIcon-background {
   width: 3.25em;
   background-color: transparent;
@@ -28,7 +24,7 @@
   justify-content: space-between;
   overflow: hidden;
   border-radius: 50%;
-  box-shadow: 0 0 8px 0 black;
+  box-shadow: 0 0 8px 0 var(--mine-shaft-color);
   transition-property: border-radius, box-shadow;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
@@ -61,7 +57,7 @@
   height: 3.25em;
   margin-right: -1.8em;
   border-radius: 50%;
-  background-color: #353535;
+  background-color: var(--mine-shaft-lighter-color);
   transition: background-color 0.3s ease-in;
 }
 
@@ -71,7 +67,7 @@
   overflow: hidden;
   width: 0;
   color: white;
-  background-color: #353535;
+  background-color: var(--mine-shaft-lighter-color);
   transition-property: background-color, width;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
@@ -90,12 +86,40 @@
   height: 3.25em;
   margin-left: -1.5em;
   border-radius: 50%;
-  background-color: #353535;
+  background-color: var(--mine-shaft-lighter-color);
   transition: background-color 0.3s ease-in;
 }
 
-@media all and (max-width: 768px) {
+@media (max-width: 1024px) and (orientation: landscape) {
+  .mailIcon-container {
+    bottom: 1.5em;
+  }
+}
+
+@media (max-width: 768px) {
   .mailIcon-container {
     right: 1em;
+    bottom: 1.5em;
+  }
+}
+
+@media (pointer: coarse) {
+  .mailIcon-background:hover {
+    width: 3.25em;
+  }
+
+  .mailIcon-background:hover .mid-el {
+    width: 0;
+  }
+
+  .mailIcon-background:hover .icon-wrapper {
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 var(--mine-shaft-color);
+  }
+
+  .mailIcon-background:hover .mail-el,
+  .mailIcon-background:hover .mid-el,
+  .mailIcon-background:hover .start-el {
+    background-color: var(--mine-shaft-lighter-color);
   }
 }

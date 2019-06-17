@@ -1,13 +1,11 @@
 import { EMAIL } from '../constants';
-import toggleMenu from '../toggleMenu';
+import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
-
-toggleMenu();
-hoverLinkInMenu();
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();
@@ -17,6 +15,10 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
+  toggleMenuListener();
+  hoverLinkInMenu();
+  setFooterYear();
+
   const form = document.querySelector('#contact-form');
 
   form.onsubmit = event => {
@@ -31,10 +33,11 @@ window.onload = () => {
       const name = form.querySelector('input[name="name"]');
       const phone = form.querySelector('input[name="phone"]');
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
-      const body = form.querySelector('textarea[name="body"]');
-      const subject = `Adcubex request from ${name.value} (email:${email.value}${phone.value
-        ? `, tel:${phone.value}`
-        : ''})`;
+      const description = form.querySelector('textarea[name="body"]');
+      const subject = `Adcubex request from ${name.value}`;
+      const body = `Email: ${email.value}\%0D%0A${phone.value
+        ? `Phone: ${phone.value}\%0D%0A`
+        : ''}${description.value}`;
       const showProgress = flag => {
         submitProgress.setAttribute('aria-hidden', `${!flag}`);
         submitProgress.style.display = flag ? 'flex' : 'none';
@@ -42,7 +45,7 @@ window.onload = () => {
         submitBtnText.setAttribute('aria-hidden', `${flag}`);
         submitBtnText.style.display = flag ? 'none' : 'flex';
 
-        [name, email, phone, body, submitBtn, agreeToCollectData].forEach(field => {
+        [name, email, phone, description, submitBtn, agreeToCollectData].forEach(field => {
           field.disabled = flag;
         });
       };
@@ -54,13 +57,13 @@ window.onload = () => {
           To: EMAIL.ADDRESS,
           From: email.value,
           Subject: subject,
-          Body: body.value
+          Body: body
         })
         .then(msg => {
           showProgress(false);
 
           if (msg && msg.toLowerCase().includes('fail')) {
-            window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body.value}`, '_blank');
+            window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
           }
 
           form.reset();
@@ -69,7 +72,7 @@ window.onload = () => {
         })
         .catch(() => {
           showProgress(false);
-          window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body.value}`, '_blank');
+          window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
         });
     }
   };

@@ -35,7 +35,13 @@ function removeHeaderBackground() {
 }
 
 export default function changeHeaderVisibility(scrollPreviousPosition, scrollCurrentPosition) {
-  if (scrollCurrentPosition > scrollPreviousPosition && scrollCurrentPosition > defaultPositionHeader) {
+  const headerActiveSelector = document.getElementsByClassName('header-container--nav-active');
+  const isHiderHeader =
+    scrollCurrentPosition > scrollPreviousPosition &&
+    scrollCurrentPosition > defaultPositionHeader &&
+    !headerActiveSelector.length;
+
+  if (isHiderHeader) {
     hideHeader();
   } else if (scrollCurrentPosition <= defaultPositionHeader) {
     removeHeaderBackground();
