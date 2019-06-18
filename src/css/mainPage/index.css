@@ -397,6 +397,12 @@ footer {
   color: var(--flamingo-color);
 }
 
+@media (max-width: 1440px) {
+  .vertical-inscription {
+    right: -2.5em;
+  }
+}
+
 @media all and (max-width: 1400px) {
   .section-container {
     width: 100%;
@@ -435,6 +441,12 @@ footer {
   }
 }
 
+@media (max-width: 1280px) {
+  .vertical-inscription {
+    right: -1.5em;
+  }
+}
+
 @media (max-width: 1200px) {
   .budget-image,
   .power-image {
@@ -457,6 +469,10 @@ footer {
 
   .section-container .letter-parallax {
     left: -3.8em;
+  }
+
+  .vertical-inscription {
+    right: -3.5em;
   }
 }
 
