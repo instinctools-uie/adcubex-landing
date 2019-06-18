@@ -35,9 +35,9 @@ window.onload = () => {
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
       const description = form.querySelector('textarea[name="body"]');
       const subject = `Adcubex request from ${name.value}`;
-      const body = `Email: ${email.value}<br>${phone.value
-        ? `Phone: ${phone.value}`
-        : ''}<br><pre>${description.value}</pre>`;
+      const body = `Email: ${email.value}\n${phone.value
+        ? `Phone: ${phone.value}\n`
+        : ''}\n${description.value}`;
 
       const showProgress = flag => {
         submitProgress.setAttribute('aria-hidden', `${!flag}`);
@@ -52,20 +52,17 @@ window.onload = () => {
       };
 
       showProgress(true);
-      window.Email
-        .send({
-          SecureToken: EMAIL.TOKEN,
-          To: EMAIL.ADDRESS,
-          From: email.value,
-          Subject: subject,
-          Body: body
-        })
-        .then(msg => {
+      window.axios({
+        method: 'post',
+        url: `${EMAIL.SERVER_URL}/sendMail`,
+        data: {
+          from: email.value,
+          subject,
+          body
+        }
+      })
+        .then(() => {
           showProgress(false);
-
-          if (msg && msg.toLowerCase().includes('fail')) {
-            window.open(`mailto:${EMAIL.ADDRESS}?subject=${subject}&body=${body}`, '_blank');
-          }
 
           form.reset();
           submitStatus.style.display = 'block';
