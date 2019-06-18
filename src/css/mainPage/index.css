@@ -467,6 +467,10 @@ footer {
     margin-top: 6em;
   }
 
+  .section-container {
+    min-height: 71.5vh;
+  }
+
   .section-container .letter-parallax {
     left: -3.8em;
   }
