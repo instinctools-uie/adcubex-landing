@@ -445,7 +445,7 @@ footer {
 @media all and (max-width: 1024px) {
   .cubes-container {
     width: 155%;
-    height: 114%;
+    height: 114vh;
     top: -1.75em;
     right: -11.5em;
   }
