@@ -561,6 +561,16 @@ footer {
   }
 }
 
+@media (max-height: 500px) and (orientation: landscape) {
+  .section-container {
+    min-height: 100vh;
+  }
+
+  .control-section {
+    margin: 20vh 0;
+  }
+}
+
 @media (max-width: 540px) {
   .advantage-section .text-container,
   .expertise-section .text-container,
