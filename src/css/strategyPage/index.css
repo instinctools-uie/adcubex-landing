@@ -36,6 +36,10 @@
   width: 60%;
 }
 
+.strategy-content article.implementation-article > .section-content {
+  margin-left: 10em;
+}
+
 .analysis-article .vertical-inscription {
   top: -2.4em;
 }
@@ -111,5 +115,9 @@
   .content-column--start {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .strategy-content article.implementation-article > .section-content {
+    margin-left: 0;
   }
 }
