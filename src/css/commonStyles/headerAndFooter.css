@@ -310,10 +310,6 @@ footer * {
   margin-bottom: 0.972em;
 }
 
-.footer-left p i {
-  color: var(--coal-grey-color);
-}
-
 .footer-container a {
   text-decoration: none;
 }
