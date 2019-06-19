@@ -252,6 +252,7 @@ body {
 .expertise-section .text-container,
 .toolset-section .text-container,
 .advantage-section .text-container,
+.power-section .text-container,
 .improvement-section .text-container {
   width: 100%;
   padding-left: 16.56em;
@@ -282,14 +283,8 @@ body {
   top: -46.2em;
 }
 
-.power-image-container {
-  margin-top: 6.2em;
-}
-
 .power-image-container a {
   margin-top: 7.4em;
-  border: 0.01em solid white;
-  background-color: transparent;
 }
 
 .power-image-container .custom-button > .button-image {
@@ -300,34 +295,20 @@ body {
   transition: fill 0.4s ease-in;
 }
 
-.power-image-container .custom-button:hover .custom-button-arrow {
-  fill: #353535;
-}
-
-.power-image-container .custom-button:hover {
-  color: #353535;
-  background-color: white;
-}
-
 .budget-image,
 .power-image {
   display: flex;
   justify-content: flex-start;
   padding: 5em;
   margin: 0 0 0 auto;
+  max-width: calc(100% - 16.56em);
   width: 100%;
-  background-image: url('../../assets/images/pattern.svg');
+  background-image: url('../../assets/images/sloping_stripes.svg');
   background-size: cover;
 }
 
 .budget-image {
-  max-width: 56.56em;
   margin-top: 12.8em;
-}
-
-.power-image {
-  max-width: 51.25em;
-  margin-top: 6.2em;
 }
 
 .image-content-description {
@@ -341,7 +322,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  margin-left: 3.75em;
+  margin-left: 2.75em;
 }
 
 .image-content-section p {
@@ -381,8 +362,8 @@ body {
 }
 
 .power-image-container {
-  max-width: 51.25em;
   width: 100%;
+  padding-top: 6.2em;
   margin: 0 0 0 auto;
 }
 
@@ -402,7 +383,7 @@ body {
 }
 
 footer {
-  margin-top: 19em;
+  margin-top: 3em;
 }
 
 .footer-left > a,
@@ -414,6 +395,12 @@ footer {
 .advantage-section h2 > span,
 .expertise-section h2 > span {
   color: var(--flamingo-color);
+}
+
+@media (max-width: 1440px) {
+  .vertical-inscription {
+    right: -2.5em;
+  }
 }
 
 @media all and (max-width: 1400px) {
@@ -447,10 +434,23 @@ footer {
   }
 }
 
-@media (min-width: 1365px) {
+@media (min-width: 768px) {
   .letter-parallax {
     width: 50em;
     height: 45em;
+  }
+}
+
+@media (max-width: 1280px) {
+  .vertical-inscription {
+    right: -1.5em;
+  }
+}
+
+@media (max-width: 1200px) {
+  .budget-image,
+  .power-image {
+    max-width: 56.56em;
   }
 }
 
@@ -469,6 +469,16 @@ footer {
 
   .section-container .letter-parallax {
     left: -3.8em;
+  }
+
+  .vertical-inscription {
+    right: -3.5em;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .section-container {
+    min-height: 71.5vh;
   }
 }
 
@@ -489,7 +499,7 @@ footer {
   }
 
   footer {
-    margin-top: 0;
+    margin-top: 3em;
   }
 
   .section-container h1,
@@ -540,6 +550,7 @@ footer {
   .image-content-description {
     align-items: flex-end;
     justify-content: space-around;
+    width: 100%;
   }
 
   .image-content-description .image-content-section {
@@ -552,11 +563,22 @@ footer {
   }
 }
 
+@media (max-height: 500px) and (orientation: landscape) {
+  .section-container {
+    min-height: 100vh;
+  }
+
+  .control-section {
+    margin: 20vh 0;
+  }
+}
+
 @media (max-width: 540px) {
   .advantage-section .text-container,
   .expertise-section .text-container,
   .improvement-section .text-container,
   .supervise-section .text-container,
+  .power-section .text-container,
   .toolset-section .text-container {
     padding: 0;
   }
