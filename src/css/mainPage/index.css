@@ -467,16 +467,18 @@ footer {
     margin-top: 6em;
   }
 
-  .section-container {
-    min-height: 71.5vh;
-  }
-
   .section-container .letter-parallax {
     left: -3.8em;
   }
 
   .vertical-inscription {
     right: -3.5em;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: portrait) {
+  .section-container {
+    min-height: 71.5vh;
   }
 }
 
