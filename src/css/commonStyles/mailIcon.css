@@ -92,13 +92,13 @@
 
 @media (max-width: 1024px) {
   /*.mailIcon-container {*/
-    /*right: 3.5em;*/
+  /*right: 3.5em;*/
   /*}*/
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
   /*.mailIcon-container {*/
-    /*bottom: 1.5em;*/
+  /*bottom: 1.5em;*/
   /*}*/
 }
 
