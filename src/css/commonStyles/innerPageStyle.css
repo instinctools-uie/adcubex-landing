@@ -316,6 +316,12 @@ footer {
   }
 }
 
+@media (max-width: 896px) and (pointer: coarse) {
+  .vertical-inscription-container {
+    display: none;
+  }
+}
+
 @media all and (max-width: 768px) {
   body > svg.cube,
   .vertical-inscription-container,
