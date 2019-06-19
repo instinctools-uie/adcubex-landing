@@ -434,13 +434,6 @@ footer {
   }
 }
 
-@media (min-width: 768px) {
-  .letter-parallax {
-    width: 50em;
-    height: 45em;
-  }
-}
-
 @media (max-width: 1280px) {
   .vertical-inscription {
     right: -1.5em;
@@ -484,6 +477,14 @@ footer {
   .supervise-section h1,
   .supervise-section h2 {
     height: 4.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container .letter-parallax {
+    left: -8.75em;
+    width: 50em;
+    height: 45em;
   }
 }
 
