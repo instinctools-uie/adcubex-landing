@@ -1,7 +1,7 @@
 .mailIcon-container {
   position: fixed;
   right: 2.5em;
-  bottom: 4.5em;
+  bottom: 2.25em;
   z-index: 7;
   border: none;
   background: none;
@@ -91,21 +91,21 @@
 }
 
 @media (max-width: 1024px) {
-  .mailIcon-container {
-    right: 3.5em;
-  }
+  /*.mailIcon-container {*/
+    /*right: 3.5em;*/
+  /*}*/
 }
 
 @media (max-width: 1024px) and (orientation: landscape) {
-  .mailIcon-container {
-    bottom: 1.5em;
-  }
+  /*.mailIcon-container {*/
+    /*bottom: 1.5em;*/
+  /*}*/
 }
 
 @media (max-width: 768px) {
   .mailIcon-container {
     right: 1em;
-    bottom: 1.5em;
+    bottom: 1.75em;
   }
 }
 

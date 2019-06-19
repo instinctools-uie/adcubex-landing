@@ -231,20 +231,16 @@ footer {
   color: white;
 }
 
-.footer-left a,
-.footer-right a {
+.footer-container a,
+.footer-container p i {
   color: white;
 }
 
-.footer-left p i {
-  color: white;
-}
-
-.footer-right a {
+.footer-container > a {
   opacity: 0.7;
 }
 
-.footer-right a:hover {
+.footer-container > a:hover {
   color: white;
   opacity: 1;
 }
