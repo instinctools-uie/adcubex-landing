@@ -18,11 +18,12 @@ import {
 } from '../cubesAnimation';
 import { RATE_WSXGA_SCROLL, WSXGA_ANIMATION_DELAY, WSGA_ANIMATION_DELAY, MAIN_PAGE_TOGGLE_CONTENT } from '../constants';
 
-import { toggleMenuListener, navItemHandler } from '../toggleMenu';
+import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
 import toggleContentByScroll from '../toggleContentByScroll';
 import { sectionImageParallax } from '../scrollParallax';
 import getScrollPosition from '../getScrollPosition';
+import setFooterYear from '../year';
 
 import changeHeaderVisibility from '../menuAnimation';
 import isWSXGABreakpoint from '../isWSXGABreakpoint';
@@ -36,9 +37,9 @@ window.onload = () => {
 
   recalculateScrollDependencies();
   toggleMenuListener();
-  navItemHandler();
   hoverLinkInMenu();
   cubesRandomLevitation();
+  setFooterYear();
 
   (() =>
     new Swiper('.swiper-container', {

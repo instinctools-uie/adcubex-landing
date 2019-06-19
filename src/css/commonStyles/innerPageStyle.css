@@ -43,7 +43,7 @@ body {
 
 .content-section .content-wrapper {
   box-sizing: border-box;
-  padding: 2.8125em 3.8125em;
+  padding: 2.8125em 3.8125em 6em 3.8125em;
 }
 
 .section-content > h2 {
@@ -108,7 +108,7 @@ article.content-column--end,
 .content-column .section-content {
   position: relative;
   z-index: 2;
-  width: 60em;
+  width: 63em;
 }
 
 .content-column .svg-container {
@@ -236,9 +236,8 @@ footer {
   color: white;
 }
 
-.footer-left p span {
+.footer-left p i {
   color: white;
-  font-style: italic;
 }
 
 .footer-right a {
@@ -280,7 +279,7 @@ footer {
 }
 
 @media (min-width: 769px) and (max-width: 1400px) {
-  .content-wrapper .vertical-inscription {
+  .vertical-inscription {
     right: -3em;
   }
 
@@ -302,6 +301,18 @@ footer {
 
   .cube-animation {
     transform: scale(8.5);
+  }
+}
+
+@media (max-width: 1280px) {
+  .vertical-inscription {
+    right: -1em;
+  }
+}
+
+@media (max-width: 1024px) {
+  .vertical-inscription {
+    right: -3em;
   }
 }
 

@@ -209,6 +209,7 @@ p {
 .toggle-menu-button:active .header-open-menu-icon span,
 .toggle-menu-button .header-open-menu-icon.header-open-menu-icon--active > span,
 .toggle-menu-button .header-open-menu-icon.header-open-menu-icon--active > span {
+  left: 0.3em;
   width: 100% !important;
 }
 
@@ -317,9 +318,8 @@ footer * {
   font-style: normal;
 }
 
-.footer-left p span {
+.footer-left p i {
   color: var(--coal-grey-color);
-  font-style: italic;
 }
 
 .footer-left a,
@@ -438,6 +438,14 @@ footer * {
   .toggle-menu-button:hover .header-open-menu-icon:nth-child(3),
   .toggle-menu-button:active .header-open-menu-icon:nth-child(3) {
     width: 50%;
+  }
+
+  .header-links-container a:hover {
+    color: #fff;
+  }
+
+  .header-links-container a:active {
+    color: var(--mine-shaft-color);
   }
 }
 
