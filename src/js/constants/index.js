@@ -9,7 +9,7 @@ export const WSGA_ANIMATION_DELAY = 200;
 
 export const MAIN_PAGE_TOGGLE_CONTENT = {
   sectionContainer: 'section-container',
-  delayBetweenSection: 2
+  delayBetweenSection: 4
 };
 
 export const INNER_PAGES_TOGGLE_CONTENT = {
