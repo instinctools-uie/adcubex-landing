@@ -386,8 +386,7 @@ footer {
   margin-top: 3em;
 }
 
-.footer-left > a,
-.footer-right > a {
+.footer-container a {
   color: var(--coal-grey-color);
 }
 
@@ -431,13 +430,6 @@ footer {
 
   .inner-section-text > p + p {
     margin-top: 1.1em;
-  }
-}
-
-@media (min-width: 768px) {
-  .letter-parallax {
-    width: 50em;
-    height: 45em;
   }
 }
 
@@ -486,6 +478,14 @@ footer {
   .supervise-section h1,
   .supervise-section h2 {
     height: 4.2em;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-container .letter-parallax {
+    left: -8.75em;
+    width: 50em;
+    height: 45em;
   }
 }
 
