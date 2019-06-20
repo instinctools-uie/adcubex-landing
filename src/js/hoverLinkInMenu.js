@@ -1,5 +1,8 @@
-const headerNavigation = document.querySelector('.header-navigation');
 const linksContainerInOpenedMenu = document.querySelector('.header-links-container');
+const bgSynergy = document.querySelector('.bg-synergy');
+const bgStrategy = document.querySelector('.bg-strategy');
+const bgSolutions = document.querySelector('.bg-solutions');
+const bgLetsTalk = document.querySelector('.bg-lets-talk');
 
 export default function hoverLinkInMenu() {
   linksContainerInOpenedMenu.addEventListener('mouseover', mouseOnNavigationContainer);
@@ -14,19 +17,19 @@ function mouseOnNavigationContainer(e) {
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
   if (isSynergyLink) {
-    headerNavigation.classList.add('header-navigation--blue');
+    bgSynergy.style.opacity = 1;
   }
 
   if (isStrategyLink) {
-    headerNavigation.classList.add('header-navigation--red');
+    bgStrategy.style.opacity = 1;
   }
 
   if (isSolutionsLink) {
-    headerNavigation.classList.add('header-navigation--purple');
+    bgSolutions.style.opacity = 1;
   }
 
   if (isLetsTalkLink) {
-    headerNavigation.classList.add('header-navigation--dark-purple');
+    bgLetsTalk.style.opacity = 1;
   }
 }
 
@@ -38,18 +41,18 @@ function mouseOutNavigationContainer(e) {
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
   if (isSynergyLink) {
-    headerNavigation.classList.remove('header-navigation--blue');
+    bgSynergy.style.opacity = 0;
   }
 
   if (isStrategyLink) {
-    headerNavigation.classList.remove('header-navigation--red');
+    bgStrategy.style.opacity = 0;
   }
 
   if (isSolutionsLink) {
-    headerNavigation.classList.remove('header-navigation--purple');
+    bgSolutions.style.opacity = 0;
   }
 
   if (isLetsTalkLink) {
-    headerNavigation.classList.remove('header-navigation--dark-purple');
+    bgLetsTalk.style.opacity = 0;
   }
 }

@@ -15,25 +15,39 @@ function toggleMenu() {
 }
 
 function getTargetSelectors() {
+  const mainBackground = document.querySelector('.bg-main');
   const htmlDocument = document.querySelector('html');
   const body = document.querySelector('body');
   const logoElement = document.querySelector('.logo');
   const openMenuIcon = document.querySelector('.header-open-menu-icon');
   const headerNavigation = document.querySelector('.header-navigation');
   const header = document.querySelector('.header-container');
+  const headerContainer = document.querySelector('.header-navigation-container');
 
   return {
+    mainBackground,
     htmlDocument,
     body,
     logoElement,
     openMenuIcon,
     headerNavigation,
-    header
+    header,
+    headerContainer
   };
 }
 
 function openMenu() {
-  const { htmlDocument, body, logoElement, openMenuIcon, headerNavigation, header } = getTargetSelectors();
+  const {
+    mainBackground,
+    htmlDocument,
+    body,
+    logoElement,
+    openMenuIcon,
+    headerNavigation,
+    header,
+    headerContainer
+  } = getTargetSelectors();
+  mainBackground.style.opacity = 1;
 
   header.classList.add('header-container--nav-active');
   htmlDocument.classList.add('hidden-scroll');
@@ -42,10 +56,22 @@ function openMenu() {
   logoElement.classList.add('logo--active');
   openMenuIcon.classList.add('header-open-menu-icon--active');
   headerNavigation.removeAttribute('aria-hidden');
+
+  headerContainer.style.display = 'flex';
 }
 
 function closeMenu() {
-  const { htmlDocument, body, logoElement, openMenuIcon, headerNavigation, header } = getTargetSelectors();
+  const {
+    mainBackground,
+    htmlDocument,
+    body,
+    logoElement,
+    openMenuIcon,
+    headerNavigation,
+    header,
+    headerContainer
+  } = getTargetSelectors();
+  mainBackground.style.opacity = 0;
 
   header.classList.remove('header-container--nav-active');
   htmlDocument.classList.remove('hidden-scroll');
@@ -54,4 +80,6 @@ function closeMenu() {
   logoElement.classList.remove('logo--active');
   openMenuIcon.classList.remove('header-open-menu-icon--active');
   headerNavigation.setAttribute('aria-hidden', 'true');
+
+  headerContainer.style.display = 'none';
 }
