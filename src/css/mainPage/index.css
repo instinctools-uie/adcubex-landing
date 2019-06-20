@@ -386,8 +386,7 @@ footer {
   margin-top: 3em;
 }
 
-.footer-left > a,
-.footer-right > a {
+.footer-container a {
   color: var(--coal-grey-color);
 }
 
