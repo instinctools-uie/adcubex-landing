@@ -72,7 +72,6 @@ article div > p {
 }
 
 .article--active .section-content h2 {
-  overflow: visible;
   line-height: 1.12;
 }
 
