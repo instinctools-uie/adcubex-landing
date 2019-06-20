@@ -57,5 +57,5 @@ export const CUBES_OPTIONS = {
 };
 
 export const EMAIL = {
-  SERVER_URL: 'https://mean-puma-50.localtunnel.me' // TODO: Change to Heroku server
+  SERVER_URL: 'https://adcubex.herokuapp.com'
 };

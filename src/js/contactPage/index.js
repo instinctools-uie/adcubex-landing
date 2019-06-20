@@ -58,7 +58,8 @@ window.onload = () => {
             from: email.value,
             subject,
             body
-          }
+          },
+          withCredentials: true
         })
         .then(() => {
           showProgress(false);
