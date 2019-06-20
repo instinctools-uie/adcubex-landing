@@ -70,18 +70,26 @@ p {
   top: 0;
   left: 0;
   display: flex;
-  opacity: 0;
+  opacity: 1;
   overflow: hidden;
   width: 100vw;
   height: 0;
-  background-color: var(--header-navigation-bg-color);
-  background-image: url('../../assets/images/cubes.svg');
-  background-size: cover;
-  background-blend-mode: multiply;
-  transition-property: background-color, height, opacity;
+  transition-property: height, opacity;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
-  will-change: opacity, background-color, height;
+  will-change: opacity, height;
+}
+
+.bg-header {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in;
 }
 
 .header-navigation--active {
@@ -103,24 +111,8 @@ p {
   fill: white !important;
 }
 
-.header-navigation--blue {
-  background-color: var(--royal-blue-color);
-}
-
-.header-navigation--red {
-  background-color: var(--sunset-orange-color);
-}
-
-.header-navigation--purple {
-  background-color: var(--purple-heart-color);
-}
-
-.header-navigation--dark-purple {
-  background-color: var(--royal-dark-blue-color);
-}
-
 .header-navigation-container {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   padding: 0 4em 0 4em;
