@@ -17,11 +17,12 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
-  window.axios(`${EMAIL.SERVER_URL}/hash`)
+  window
+    .axios(`${EMAIL.SERVER_URL}/hash`)
     .then(({ data = {} } = {}) => {
       hash = data.hash;
     })
-    .catch((error) => {
+    .catch(error => {
       console.error(error);
     });
 
