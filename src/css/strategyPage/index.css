@@ -23,8 +23,16 @@
   margin: 11.5em -7.5em 0 -15em;
 }
 
+.strategy-content article.consulting-article .svg-container {
+  width: 50%;
+}
+
 .strategy-content article.implementation-article > .svg-container {
   width: 60%;
+}
+
+.strategy-content article.implementation-article > .section-content {
+  margin-left: 10em;
 }
 
 .analysis-article .vertical-inscription {
@@ -108,5 +116,9 @@ article.implementation-article {
   .content-column--start {
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .strategy-content article.implementation-article > .section-content {
+    margin-left: 0;
   }
 }
