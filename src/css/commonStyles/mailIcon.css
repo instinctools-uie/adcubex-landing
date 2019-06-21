@@ -79,6 +79,18 @@
   }
 }
 
+@media (max-width: 736px) and (min-width: 736px) and (orientation: landscape) {
+  .mailIcon-container {
+    bottom: 3.75em;
+  }
+}
+
+@media (max-width: 568px) and (min-width: 568px) and (orientation: landscape) {
+  .mailIcon-container {
+    bottom: 6em;
+  }
+}
+
 @media (pointer: coarse) {
   .mailIcon-container:hover {
     width: 3.25em;
