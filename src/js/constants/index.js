@@ -9,7 +9,7 @@ export const WSGA_ANIMATION_DELAY = 200;
 
 export const MAIN_PAGE_TOGGLE_CONTENT = {
   sectionContainer: 'section-container',
-  delayBetweenSection: 2
+  delayBetweenSection: 4
 };
 
 export const INNER_PAGES_TOGGLE_CONTENT = {
@@ -57,6 +57,5 @@ export const CUBES_OPTIONS = {
 };
 
 export const EMAIL = {
-  ADDRESS: 'contact@adcubex.com',
-  TOKEN: 'd12916a3-3f25-4740-939d-ae3d4e7d3f58'
+  SERVER_URL: 'https://adcubex.herokuapp.com'
 };
