@@ -21,9 +21,6 @@ window.onload = () => {
     .axios(`${EMAIL.SERVER_URL}/hash`)
     .then(({ data = {} } = {}) => {
       hash = data.hash;
-    })
-    .catch(error => {
-      console.error(error);
     });
 
   toggleMenuListener();
