@@ -32,10 +32,7 @@ window.onload = () => {
 
   form.onsubmit = event => {
     event.preventDefault();
-
     const errorItemsList = form.querySelectorAll('.error-message');
-    const email = form.querySelector('input[name="email"]');
-    const name = form.querySelector('input[name="name"]');
 
     errorItemsList.forEach(item => {
       removeError(item.previousElementSibling);
@@ -51,6 +48,8 @@ window.onload = () => {
       const submitProgress = form.querySelector('.custom-button div[role="status"]');
       const submitBtnText = form.querySelector('.custom-button .custom-button-inner');
       const submitBtn = form.querySelector('.custom-button');
+      const email = form.querySelector('input[name="email"]');
+      const name = form.querySelector('input[name="name"]');
       const phone = form.querySelector('input[name="phone"]');
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
       const description = form.querySelector('textarea[name="body"]');
