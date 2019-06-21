@@ -39,6 +39,10 @@ article.together {
   margin-bottom: 4.8em;
 }
 
+.together .section-content {
+  width: 38em;
+}
+
 .together .vertical-inscription {
   top: -10em;
 }
@@ -100,5 +104,9 @@ article.together {
 
   .external-links img {
     max-width: 100%;
+  }
+
+  .together .section-content {
+    width: 100%;
   }
 }
