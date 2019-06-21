@@ -21,23 +21,25 @@ window.onload = () => {
   setFooterYear();
 
   const form = document.querySelector('#contact-form');
-  const inputFields = form.querySelectorAll('.field');
-  let isValidForm = true;
+  const inputFields = form.querySelectorAll('.field-validation');
+
 
   inputFields.forEach(field => {
     field.addEventListener('change', () => {
-      isValidForm = validateInput(field);
+      validateInput(field);
     });
   });
 
   form.onsubmit = event => {
     event.preventDefault();
+
     const errorItemsList = form.querySelectorAll('.error-message');
 
     errorItemsList.forEach(item => {
       removeError(item.previousElementSibling);
     });
-    isValidForm = validateFormFields(inputFields) && isValidForm;
+
+    const isValidForm = validateFormFields(inputFields);
 
     if (!isValidForm) {
       return;
