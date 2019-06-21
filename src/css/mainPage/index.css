@@ -396,7 +396,7 @@ footer {
   color: var(--flamingo-color);
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 1441px) {
   .vertical-inscription {
     right: -2.5em;
   }
@@ -433,13 +433,13 @@ footer {
   }
 }
 
-@media (pointer: coarse) {
-  .vertical-inscription-container {
-    display: none;
+@media (max-width: 1367px) and (min-width: 1024px) {
+  .control-section {
+    min-height: 115vh;
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1281px) {
   .vertical-inscription {
     right: -1.5em;
   }
@@ -452,7 +452,7 @@ footer {
   }
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1025px) {
   .cubes-container {
     width: 155%;
     height: 114%;
@@ -474,7 +474,7 @@ footer {
   }
 }
 
-@media (max-width: 1024px) and (orientation: portrait) {
+@media (max-width: 1025px) and (orientation: portrait) {
   .section-container {
     min-height: 71.5vh;
   }
@@ -492,6 +492,12 @@ footer {
     left: -8.75em;
     width: 50em;
     height: 45em;
+  }
+}
+
+@media (pointer: coarse) {
+  .vertical-inscription-container {
+    display: none;
   }
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 import { EMAIL } from '../constants';
 import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
@@ -6,6 +7,7 @@ import getScrollPosition from '../getScrollPosition';
 import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
+let hash;
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();
@@ -15,6 +17,15 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
+  window
+    .axios(`${EMAIL.SERVER_URL}/hash`)
+    .then(({ data = {} } = {}) => {
+      hash = data.hash;
+    })
+    .catch(error => {
+      console.error(error);
+    });
+
   toggleMenuListener();
   hoverLinkInMenu();
   setFooterYear();
@@ -54,12 +65,14 @@ window.onload = () => {
         .axios({
           method: 'post',
           url: `${EMAIL.SERVER_URL}/sendMail`,
+          headers: {
+            Authorization: hash
+          },
           data: {
             from: email.value,
             subject,
             body
-          },
-          withCredentials: true
+          }
         })
         .then(() => {
           showProgress(false);
