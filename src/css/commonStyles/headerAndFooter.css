@@ -147,6 +147,9 @@ p {
   color: var(--mine-shaft-color);
 }
 
+.header-links-container a::selection {
+  background: none;
+}
 .header-links-container a + a {
   margin-top: 0.2em;
 }
