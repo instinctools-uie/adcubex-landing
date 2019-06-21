@@ -1,3 +1,4 @@
+/* eslint-disable prefer-destructuring */
 import { EMAIL } from '../constants';
 import { toggleMenuListener } from '../toggleMenu';
 import hoverLinkInMenu from '../hoverLinkInMenu';
