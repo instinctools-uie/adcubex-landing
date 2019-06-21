@@ -489,6 +489,12 @@ footer {
   }
 }
 
+@media (max-width: 896px) and (pointer: coarse) {
+  .vertical-inscription-container {
+    display: none;
+  }
+}
+
 @media all and (max-width: 768px) {
   .content-container {
     padding: 0 1.75em;
