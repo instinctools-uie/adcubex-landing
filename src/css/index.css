@@ -72,7 +72,5 @@
   --cube-right-side-purple-color: rgb(147, 45, 191);
   --cube-bottom-side-purple-color: rgb(150, 49, 213);
 
-  /* Breakpoints */
-  --WXGA-device: 1400px;
-  --PAL-device: 768px;
+  --checkbox-error-background:  #ef3e3e1f;
 }
