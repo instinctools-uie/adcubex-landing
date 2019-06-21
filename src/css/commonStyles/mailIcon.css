@@ -12,7 +12,7 @@
   transition-property: width, border-radius, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: ease-in;
-  will-change: width, overflow;
+  will-change: width, border-radius, box-shadow;
   cursor: pointer;
   text-decoration: none;
 }
@@ -76,6 +76,18 @@
   .mailIcon-container {
     right: 1em;
     bottom: 1.75em;
+  }
+}
+
+@media (max-width: 736px) and (min-width: 736px) and (orientation: landscape) {
+  .mailIcon-container {
+    bottom: 3.75em;
+  }
+}
+
+@media (max-width: 568px) and (min-width: 568px) and (orientation: landscape) {
+  .mailIcon-container {
+    bottom: 6em;
   }
 }
 

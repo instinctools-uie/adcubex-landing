@@ -108,14 +108,13 @@ article.content-column--end,
 .content-column .section-content {
   position: relative;
   z-index: 2;
-  width: 63em;
 }
 
 .content-column .svg-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 100%;
   max-height: 100%;
   padding: 0 1em;
 }
@@ -137,6 +136,7 @@ article.content-column--end,
 .svg-container svg {
   max-width: 100%;
   max-height: 100%;
+  width: auto;
   height: auto;
 }
 
@@ -308,6 +308,12 @@ footer {
 @media (max-width: 1024px) {
   .vertical-inscription {
     right: -3em;
+  }
+}
+
+@media (pointer: coarse) {
+  .vertical-inscription-container {
+    display: none;
   }
 }
 

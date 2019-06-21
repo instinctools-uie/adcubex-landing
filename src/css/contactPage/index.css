@@ -118,7 +118,7 @@
 .contact-us-form textarea {
   margin-bottom: 1.8em;
   padding: 0 1.25em 0 1.25em;
-  border: 0.045em solid var(--nobel-color);
+  border: 0.09em solid var(--nobel-color);
   color: var(--mine-shaft-lighter-color);
   font-family: 'montserrat_lightregular', sans-serif;
   font-weight: 600;
