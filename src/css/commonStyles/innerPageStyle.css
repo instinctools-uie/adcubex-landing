@@ -311,7 +311,7 @@ footer {
   }
 }
 
-@media (max-width: 896px) and (pointer: coarse) {
+@media (pointer: coarse) {
   .vertical-inscription-container {
     display: none;
   }

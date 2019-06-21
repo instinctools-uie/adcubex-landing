@@ -495,7 +495,7 @@ footer {
   }
 }
 
-@media (max-width: 896px) and (pointer: coarse) {
+@media (pointer: coarse) {
   .vertical-inscription-container {
     display: none;
   }
@@ -517,10 +517,6 @@ footer {
   .section-container h1,
   .section-container h2 {
     font-size: 4em;
-  }
-
-  .vertical-inscription-container {
-    display: none;
   }
 
   .improvement-section .inner-section-image {
