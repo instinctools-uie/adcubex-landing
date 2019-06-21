@@ -4,6 +4,7 @@ import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
 import setFooterYear from '../year';
+import { validateInput, validateFormFields, removeError } from '../inputValidator';
 
 let scrollPreviousPosition = 0;
 
@@ -20,17 +21,36 @@ window.onload = () => {
   setFooterYear();
 
   const form = document.querySelector('#contact-form');
+  const inputFields = form.querySelectorAll('.field');
+  let isValidForm = true;
+
+  inputFields.forEach(field => {
+    field.addEventListener('change', () => {
+      isValidForm = validateInput(field);
+    });
+  });
 
   form.onsubmit = event => {
     event.preventDefault();
+
+    const errorItemsList = form.querySelectorAll('.error-message');
+    const email = form.querySelector('input[name="email"]');
+    const name = form.querySelector('input[name="name"]');
+
+    errorItemsList.forEach(item => {
+      removeError(item.previousElementSibling);
+    });
+    isValidForm = validateFormFields(inputFields) && isValidForm;
+
+    if (!isValidForm) {
+      return;
+    }
 
     if (window.Email /* instance of smtpjs */) {
       const submitStatus = form.querySelector('.form-submit-status');
       const submitProgress = form.querySelector('.custom-button div[role="status"]');
       const submitBtnText = form.querySelector('.custom-button .custom-button-inner');
       const submitBtn = form.querySelector('.custom-button');
-      const email = form.querySelector('input[name="email"]');
-      const name = form.querySelector('input[name="name"]');
       const phone = form.querySelector('input[name="phone"]');
       const agreeToCollectData = form.querySelector('input[name="collecting-data"]');
       const description = form.querySelector('textarea[name="body"]');
