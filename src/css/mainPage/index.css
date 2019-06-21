@@ -433,6 +433,12 @@ footer {
   }
 }
 
+@media (pointer: coarse) {
+  .vertical-inscription-container {
+    display: none;
+  }
+}
+
 @media (max-width: 1280px) {
   .vertical-inscription {
     right: -1.5em;
@@ -505,10 +511,6 @@ footer {
   .section-container h1,
   .section-container h2 {
     font-size: 4em;
-  }
-
-  .vertical-inscription-container {
-    display: none;
   }
 
   .improvement-section .inner-section-image {
