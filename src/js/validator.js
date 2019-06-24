@@ -2,8 +2,7 @@
  * Form field validator
  */
 export default class Validator {
-  constructor(formSelector, fieldsSelector, validationScheme) {
-    this.formSelector = formSelector;
+  constructor(fieldsSelector, validationScheme) {
     this.fieldsSelector = fieldsSelector;
     this.validationScheme = validationScheme;
     this.errorMessageClass = 'error-message';
@@ -14,7 +13,7 @@ export default class Validator {
   }
 
   validateInputChange() {
-    const inputFields = document.querySelectorAll(`${this.formSelector} ${this.fieldsSelector}`);
+    const inputFields = document.querySelectorAll(this.fieldsSelector);
     inputFields.forEach(field =>
       field.addEventListener('change', () => {
         const result = this.validateField(field);
@@ -84,7 +83,7 @@ export default class Validator {
   }
 
   validateFormFields() {
-    const inputFields = document.querySelectorAll(`${this.formSelector} ${this.fieldsSelector}`);
+    const inputFields = document.querySelectorAll(this.fieldsSelector);
     let isValidForm = true;
 
     for (let i = 0; i < inputFields.length; i++) {

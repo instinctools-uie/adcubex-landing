@@ -48,7 +48,7 @@ window.onload = () => {
 
   const form = document.querySelector('#contact-form');
 
-  const validator = new Validator('#contact-form', '.validation-field', validationScheme);
+  const validator = new Validator('#contact-form .validation-field', validationScheme);
   validator.validateInputChange();
 
   form.onsubmit = event => {
