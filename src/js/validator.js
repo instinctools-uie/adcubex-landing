@@ -85,12 +85,14 @@ export default class Validator {
   validateFormFields() {
     const inputFields = document.querySelectorAll(this.fieldsSelector);
     let isValidForm = true;
+    let isFocused = false;
 
     for (let i = 0; i < inputFields.length; i++) {
       const input = inputFields[i];
       const result = this.validateField(input);
       isValidForm && result.error && (isValidForm = false);
       result.error && this.handleValidationResult(result);
+      result.error && !isFocused && (isFocused = true) && result.input.focus();
     }
 
     return isValidForm;
