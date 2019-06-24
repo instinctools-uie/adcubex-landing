@@ -15,10 +15,12 @@ export default class Validator {
 
   validateInputChange() {
     const inputFields = document.querySelectorAll(`${this.formSelector} ${this.fieldsSelector}`);
-    inputFields.forEach(field => field.addEventListener('change', () => {
-      const result = this.validateField(field);
-      this.handleValidationResult(result);
-    }));
+    inputFields.forEach(field =>
+      field.addEventListener('change', () => {
+        const result = this.validateField(field);
+        this.handleValidationResult(result);
+      })
+    );
   }
 
   handleValidationResult(result) {
@@ -49,7 +51,6 @@ export default class Validator {
         result.error = message || true;
         break;
       }
-
     }
 
     return result;
@@ -68,7 +69,8 @@ export default class Validator {
 
   removeErrorMessage({ input, error }) {
     const { nextSibling } = input;
-    if (nextSibling &&
+    if (
+      nextSibling &&
       nextSibling.tagName === this.errorMessageTag &&
       nextSibling.className &&
       nextSibling.className.includes(this.errorMessageClass)

@@ -17,18 +17,17 @@ const validationScheme = {
   ],
   email: [
     { required: true, message: 'The field is required.' },
-    { pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/, message: 'The field must contain a valid email.' }
+    {
+      pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+      message: 'The field must contain a valid email.'
+    }
   ],
-  phone: [
-    { pattern: /^\d+[\d- ]*$/, message: 'The field must contain a valid phone.' }
-  ],
+  phone: [{ pattern: /^\d+[\d- ]*$/, message: 'The field must contain a valid phone.' }],
   body: [
     { required: true, message: 'The field is required.' },
     { pattern: /[\W\w]{10,}\s*/, message: 'The field must at least 10 characters.' }
   ],
-  'collecting-data': [
-    { type: 'checkbox', required: true }
-  ]
+  'collecting-data': [{ type: 'checkbox', required: true }]
 };
 
 window.addEventListener('scroll', () => {
@@ -39,11 +38,9 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
-  window
-    .axios(`${EMAIL.SERVER_URL}/hash`)
-    .then(({ data = {} } = {}) => {
-      hash = data.hash;
-    });
+  window.axios(`${EMAIL.SERVER_URL}/hash`).then(({ data = {} } = {}) => {
+    hash = data.hash;
+  });
 
   toggleMenuListener();
   hoverLinkInMenu();
