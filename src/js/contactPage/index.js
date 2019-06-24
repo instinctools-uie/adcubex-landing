@@ -17,11 +17,9 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
-  window
-    .axios(`${EMAIL.SERVER_URL}/hash`)
-    .then(({ data = {} } = {}) => {
-      hash = data.hash;
-    });
+  window.axios(`${EMAIL.SERVER_URL}/hash`).then(({ data = {} } = {}) => {
+    hash = data.hash;
+  });
 
   toggleMenuListener();
   hoverLinkInMenu();
