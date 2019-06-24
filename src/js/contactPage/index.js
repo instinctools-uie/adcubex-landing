@@ -5,10 +5,31 @@ import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
 import setFooterYear from '../year';
-import { validateInput, validateFormFields, removeError } from '../inputValidator';
+import Validator from '../validator';
 
 let scrollPreviousPosition = 0;
 let hash;
+
+const validationScheme = {
+  name: [
+    { required: true, message: 'The field is required.' },
+    { pattern: /[\W\w]{2,}\s*/, message: 'The field must at least 2 characters.' }
+  ],
+  email: [
+    { required: true, message: 'The field is required.' },
+    { pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/, message: 'The field must contain a valid email.' }
+  ],
+  phone: [
+    { pattern: /^\d+[\d- ]*$/, message: 'The field must contain a valid phone.' }
+  ],
+  body: [
+    { required: true, message: 'The field is required.' },
+    { pattern: /[\W\w]{10,}\s*/, message: 'The field must at least 10 characters.' }
+  ],
+  'collecting-data': [
+    { type: 'checkbox', required: true }
+  ]
+};
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();
@@ -29,31 +50,16 @@ window.onload = () => {
   setFooterYear();
 
   const form = document.querySelector('#contact-form');
-  const inputFields = form.querySelectorAll('.field-validation');
 
-
-  inputFields.forEach(field => {
-    field.addEventListener('change', () => {
-      validateInput(field);
-    });
-  });
+  const validator = new Validator('#contact-form', '.validation-field', validationScheme);
+  validator.validateInputChange();
 
   form.onsubmit = event => {
     event.preventDefault();
 
-    const errorItemsList = form.querySelectorAll('.error-message');
+    const isValidForm = validator.validateFormFields();
 
-    errorItemsList.forEach(item => {
-      removeError(item.previousElementSibling);
-    });
-
-    const isValidForm = validateFormFields(inputFields);
-
-    if (!isValidForm) {
-      return;
-    }
-
-    if (window.Email /* instance of smtpjs */) {
+    if (isValidForm) {
       const submitStatus = form.querySelector('.form-submit-status');
       const submitProgress = form.querySelector('.custom-button div[role="status"]');
       const submitBtnText = form.querySelector('.custom-button .custom-button-inner');

@@ -260,10 +260,15 @@
 .error-message {
   position: absolute;
   bottom: 1em;
-  display: none;
+  display: block;
   font-size: 1em;
   font-weight: 800;
   color: var(--flamingo-color);
+}
+
+.not-valid-input {
+  outline: 0.09em solid var(--flamingo-color) !important;
+  border-color: transparent !important;
 }
 
 .contact-checkbox .error-message {
