@@ -68,6 +68,10 @@
   }
 }
 
+.contact-us-container .form-submit-status {
+  display: none;
+}
+
 .contact-us-container .form-submit-status p {
   color: var(--chateau-green-color);
   font-weight: bold;
