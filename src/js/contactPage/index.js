@@ -5,9 +5,30 @@ import hoverLinkInMenu from '../hoverLinkInMenu';
 import changeHeaderVisibility from '../menuAnimation';
 import getScrollPosition from '../getScrollPosition';
 import setFooterYear from '../year';
+import Validator from '../validator';
 
 let scrollPreviousPosition = 0;
 let hash;
+
+const validationScheme = {
+  name: [
+    { required: true, message: 'The field is required.' },
+    { pattern: /[\W\w]{2,}\s*/, message: 'The field must at least 2 characters.' }
+  ],
+  email: [
+    { required: true, message: 'The field is required.' },
+    {
+      pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
+      message: 'The field must be a valid email.'
+    }
+  ],
+  phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'The field must be a valid phone.' }],
+  body: [
+    { required: true, message: 'The field is required.' },
+    { pattern: /[\W\w]{10,}\s*/, message: 'The field must at least 10 characters.' }
+  ],
+  'collecting-data': [{ type: 'checkbox', required: true }]
+};
 
 window.addEventListener('scroll', () => {
   const scrolled = getScrollPosition();
@@ -17,11 +38,9 @@ window.addEventListener('scroll', () => {
 });
 
 window.onload = () => {
-  window
-    .axios(`${EMAIL.SERVER_URL}/hash`)
-    .then(({ data = {} } = {}) => {
-      hash = data.hash;
-    });
+  window.axios(`${EMAIL.SERVER_URL}/hash`).then(({ data = {} } = {}) => {
+    hash = data.hash;
+  });
 
   toggleMenuListener();
   hoverLinkInMenu();
@@ -29,10 +48,15 @@ window.onload = () => {
 
   const form = document.querySelector('#contact-form');
 
+  const validator = new Validator('#contact-form .validation-field', validationScheme);
+  validator.validateInputChange();
+
   form.onsubmit = event => {
     event.preventDefault();
 
-    if (window.Email /* instance of smtpjs */) {
+    const isValidForm = validator.validateFormFields();
+
+    if (isValidForm) {
       const submitStatus = form.querySelector('.form-submit-status');
       const submitProgress = form.querySelector('.custom-button div[role="status"]');
       const submitBtnText = form.querySelector('.custom-button .custom-button-inner');

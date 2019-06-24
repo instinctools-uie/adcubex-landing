@@ -168,14 +168,22 @@ based on unique expertise, time-approved toolset and reliable partnership.">
         <div class="content-wrapper contact-us-container">
             <form id="contact-form" class="contact-us-form">
                 <p>Leave us a note that you are interested and our cooperation will start!</p>
-                <input name="name" type="text" placeholder="Name*" aria-label="Name" required />
-                <div class="contacts-inputs">
-                    <input name="email" type="email" placeholder="Email*" aria-label="Email" required />
-                    <input name="phone" type="tel" placeholder="Phone (optional)" aria-label="Phone" />
+                <div class="input-container">
+                    <input class="validation-field" name="name" type="text" placeholder="Name*" aria-label="Name" />
                 </div>
-                <textarea name="body" required placeholder="Describe your request*" aria-label="Describe your request"></textarea>
+                <div class="multiply-inputs">
+                    <div class="input-container">
+                        <input class="validation-field" name="email" placeholder="Email*" aria-label="Email" />
+                    </div>
+                    <div class="input-container">
+                        <input class="validation-field" name="phone" type="tel" placeholder="Phone (optional)" aria-label="Phone" />
+                    </div>
+                </div>
+                <div class="input-container">
+                    <textarea class="validation-field" name="body"  placeholder="Describe your request*" aria-label="Describe your request"></textarea>
+                </div>
                 <div class="contact-checkbox">
-                    <input name="collecting-data" type="checkbox" id="checkbox-id" required>
+                    <input class="validation-field" name="collecting-data" type="checkbox" id="checkbox-id">
                     <div class="checkbox-wrapper">
                         <div class="fake-checkbox"></div>
                         <img src="assets/images/Check.png" aria-describedby="checkbox-id" />
