@@ -22,7 +22,7 @@ const validationScheme = {
       message: 'The field must contain a valid email.'
     }
   ],
-  phone: [{ pattern: /^\d+[\d- ]*$/, message: 'The field must contain a valid phone.' }],
+  phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'The field must contain a valid phone.' }],
   body: [
     { required: true, message: 'The field is required.' },
     { pattern: /[\W\w]{10,}\s*/, message: 'The field must at least 10 characters.' }
