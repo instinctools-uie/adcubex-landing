@@ -9,6 +9,7 @@
   --nobel-color: #b6b6b6;
   --amaranth-color: #ec3865;
   --flamingo-color: #ef3e3e;
+  --flamingo-light-color: #ef3e3e1f;
   --sunset-orange-color: #fc4848;
   --cinnabar-color: #ea4235;
   --red-orange-color: #fd311e;
@@ -72,5 +73,5 @@
   --cube-right-side-purple-color: rgb(147, 45, 191);
   --cube-bottom-side-purple-color: rgb(150, 49, 213);
 
-  --checkbox-error-background: #ef3e3e1f;
+  --checkbox-error-background: var(--flamingo-light-color);
 }

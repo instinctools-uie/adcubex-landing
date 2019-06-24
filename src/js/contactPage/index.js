@@ -19,10 +19,10 @@ const validationScheme = {
     { required: true, message: 'The field is required.' },
     {
       pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-      message: 'The field must contain a valid email.'
+      message: 'The field must be a valid email.'
     }
   ],
-  phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'The field must contain a valid phone.' }],
+  phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'The field must be a valid phone.' }],
   body: [
     { required: true, message: 'The field is required.' },
     { pattern: /[\W\w]{10,}\s*/, message: 'The field must at least 10 characters.' }

@@ -330,8 +330,7 @@
     padding-top: 1.5em;
   }
   .error-message {
-    top: 0;
-    bottom: auto;
+    bottom: -0.75em;
     font-size: 1.2em;
   }
 
