@@ -110,7 +110,7 @@
 .contact-us-form textarea {
   margin-bottom: 1.8em;
   padding: 0 1.25em 0 1.25em;
-  border: 0.045em solid var(--nobel-color);
+  border: 0.09em solid var(--nobel-color);
   color: var(--mine-shaft-lighter-color);
   font-family: 'montserrat_lightregular', sans-serif;
   font-weight: 600;
@@ -127,7 +127,6 @@
 
 .contact-us-form input:focus,
 .contact-us-form textarea:focus {
-  border-width: 0.09em;
   border-color: var(--input-active-border-color);
 }
 
