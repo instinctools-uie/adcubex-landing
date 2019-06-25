@@ -55,7 +55,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
     <meta name="robots" content="index, follow">
 
     <meta property="og:title" content="Streamline ad management.
-Supervise with ease.">
+Supervise with ease">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adcubex.com">
     <meta property="og:image" content="https://adcubex.com/assets/meta/Open_graph_300x300-01.jpg">
@@ -168,14 +168,22 @@ based on unique expertise, time-approved toolset and reliable partnership.">
         <div class="content-wrapper contact-us-container">
             <form id="contact-form" class="contact-us-form">
                 <p>Leave us a note that you are interested and our cooperation will start!</p>
-                <input name="name" type="text" placeholder="Name*" aria-label="Name" required />
-                <div class="contacts-inputs">
-                    <input name="email" type="email" placeholder="Email*" aria-label="Email" required />
-                    <input name="phone" type="tel" placeholder="Phone (optional)" aria-label="Phone" />
+                <div class="input-container">
+                    <input class="validation-field" name="name" type="text" placeholder="Name*" aria-label="Name" />
                 </div>
-                <textarea name="body" required placeholder="Describe your request*" aria-label="Describe your request"></textarea>
+                <div class="multiply-inputs">
+                    <div class="input-container">
+                        <input class="validation-field" name="email" placeholder="Email*" aria-label="Email" />
+                    </div>
+                    <div class="input-container">
+                        <input class="validation-field" name="phone" type="tel" placeholder="Phone (optional)" aria-label="Phone" />
+                    </div>
+                </div>
+                <div class="input-container">
+                    <textarea class="validation-field" name="body"  placeholder="Describe your request*" aria-label="Describe your request"></textarea>
+                </div>
                 <div class="contact-checkbox">
-                    <input name="collecting-data" type="checkbox" id="checkbox-id" required>
+                    <input class="validation-field" name="collecting-data" type="checkbox" id="checkbox-id">
                     <div class="checkbox-wrapper">
                         <div class="fake-checkbox"></div>
                         <img src="assets/images/Check.png" aria-describedby="checkbox-id" />
@@ -183,7 +191,7 @@ based on unique expertise, time-approved toolset and reliable partnership.">
                     <label for="checkbox-id">I consent to the collection, storage and processing of the data which I provided in the contact form.<br>
                         This data should be deleted after processing of my request is complete.</label>
                 </div>
-                <div class="form-submit-status" role="status" aria-live="assertive" style="display: none" aria-hidden="true">
+                <div class="form-submit-status" role="status" aria-live="assertive">
                     <p>Thank you for contacting!
                         <br>We have received your message. Our dedicated team will contact you within 24-48 hours.
                     </p>

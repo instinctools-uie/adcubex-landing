@@ -4,6 +4,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+.header-link:active {
+  outline: none;
+}
+
 h1,
 h2 {
   font-family: 'montserrat_mediumregular', sans-serif;
