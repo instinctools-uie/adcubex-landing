@@ -280,7 +280,7 @@
 }
 
 .contact-checkbox .not-valid-input ~ .checkbox-wrapper .fake-checkbox {
-  border: .125em solid red;
+  border: 0.125em solid red;
 }
 
 @keyframes show-header-animation {
