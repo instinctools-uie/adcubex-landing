@@ -53,11 +53,13 @@ window.onload = () => {
 
   form.onsubmit = event => {
     event.preventDefault();
+    const submitStatus = form.querySelector('.form-submit-status');
+    submitStatus.removeAttribute('style');
+    submitStatus.setAttribute('aria-hidden', 'true');
 
     const isValidForm = validator.validateFormFields();
 
     if (isValidForm) {
-      const submitStatus = form.querySelector('.form-submit-status');
       const submitProgress = form.querySelector('.custom-button div[role="status"]');
       const submitBtnText = form.querySelector('.custom-button .custom-button-inner');
       const submitBtn = form.querySelector('.custom-button');
