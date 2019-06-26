@@ -276,10 +276,11 @@
 }
 
 .contact-checkbox .error-message {
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--checkbox-error-background);
+  bottom: -1.375em;
+}
+
+.contact-checkbox .not-valid-input ~ .checkbox-wrapper .fake-checkbox {
+  border: 0.125em solid red;
 }
 
 @keyframes show-header-animation {

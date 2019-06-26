@@ -27,7 +27,9 @@ const validationScheme = {
     { required: true, message: 'The field is required.' },
     { pattern: /[\W\w]{10,}\s*/, message: 'Please, provide us with more information.' }
   ],
-  'collecting-data': [{ type: 'checkbox', required: true }]
+  'collecting-data': [
+    { type: 'checkbox', required: true, message: "Please, check in the box if you'd like to proceed." }
+  ]
 };
 
 window.addEventListener('scroll', () => {
