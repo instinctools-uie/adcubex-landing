@@ -396,6 +396,22 @@ footer {
   color: var(--flamingo-color);
 }
 
+@media (max-width: 1600px) {
+  h1,
+  h2 {
+    font-size: 5.06em;
+  }
+
+  .section-container--active h1,
+  .section-container--active h2 {
+    line-height: 1.05;
+  }
+
+  .inner-section-text p {
+    line-height: 1.57;
+  }
+}
+
 @media (max-width: 1441px) {
   .vertical-inscription {
     right: -2.5em;
@@ -601,6 +617,22 @@ footer {
   .budget-section div br,
   .control-section div br {
     display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .section-container h1,
+  .section-container h2 {
+    font-size: 3.237em;
+  }
+
+  .supervise-section h1 {
+    height: 5.2em;
+  }
+
+  .section-container--active h1,
+  .section-container--active h2 {
+    line-height: 1.111;
   }
 }
 

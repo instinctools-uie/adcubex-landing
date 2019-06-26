@@ -367,6 +367,7 @@ footer {
 
   .section-container article .section-content > h2 {
     height: auto;
+    overflow: auto;
   }
 
   article div > p {

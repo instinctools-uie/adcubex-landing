@@ -16,6 +16,7 @@
 }
 
 .section-content > h2 {
+  width: 101%;
   height: 2.5em;
   margin-bottom: 0;
   line-height: 6.5;
