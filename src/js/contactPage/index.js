@@ -12,23 +12,23 @@ let hash;
 
 const validationScheme = {
   name: [
-    { required: true, message: 'The field is required.' },
-    { pattern: /[\W\w]{2,}\s*/, message: 'Please, enter your full name.' }
+    { required: true, message: 'The field is required' },
+    { pattern: /[\W\w]{2,}\s*/, message: 'Please, enter your full name' }
   ],
   email: [
-    { required: true, message: 'The field is required.' },
+    { required: true, message: 'The field is required' },
     {
       pattern: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-      message: 'Please, enter a valid e-mail address.'
+      message: 'Please, enter a valid e-mail address'
     }
   ],
-  phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'Please, enter a valid phone number.' }],
+  phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'Please, enter a valid phone number' }],
   body: [
-    { required: true, message: 'The field is required.' },
-    { pattern: /[\W\w]{10,}\s*/, message: 'Please, provide us with more information.' }
+    { required: true, message: 'The field is required' },
+    { pattern: /[\W\w]{10,}\s*/, message: 'Please, provide us with more information' }
   ],
   'collecting-data': [
-    { type: 'checkbox', required: true, message: "Please, check in the box if you'd like to proceed." }
+    { type: 'checkbox', required: true, message: "Please, check in the box if you'd like to proceed" }
   ]
 };
 
