@@ -317,7 +317,7 @@ footer {
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 846px) {
   body > svg.cube,
   .vertical-inscription-container,
   .content-column .svg-container,
