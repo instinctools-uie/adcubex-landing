@@ -28,10 +28,6 @@ p {
   overflow: hidden;
 }
 
-.hidden-content {
-  opacity: 0;
-}
-
 .header-container {
   position: fixed;
   z-index: 9;
