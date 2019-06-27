@@ -72,7 +72,7 @@ article div > p {
 }
 
 .article--active .section-content h2 {
-  line-height: 1.12;
+  line-height: 1.14;
 }
 
 article.article-right {
@@ -366,7 +366,7 @@ footer {
   }
 
   .section-container article .section-content > h2 {
-    overflow: auto;
+    height: auto;
   }
 
   article div > p {
