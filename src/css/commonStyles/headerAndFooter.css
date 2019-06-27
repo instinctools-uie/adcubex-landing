@@ -28,6 +28,10 @@ p {
   overflow: hidden;
 }
 
+.hidden-content {
+  opacity: 0;
+}
+
 .header-container {
   position: fixed;
   z-index: 9;
@@ -514,5 +518,11 @@ footer * {
   .content-section h1,
   .content-section h2 {
     font-size: 3em;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .header-links-container {
+    margin-top: -1em;
   }
 }

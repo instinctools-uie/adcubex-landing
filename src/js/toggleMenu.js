@@ -23,6 +23,7 @@ function getTargetSelectors() {
   const headerNavigation = document.querySelector('.header-navigation');
   const header = document.querySelector('.header-container');
   const headerContainer = document.querySelector('.header-navigation-container');
+  const contentContainer = document.querySelector('.content-container');
 
   return {
     mainBackground,
@@ -32,15 +33,16 @@ function getTargetSelectors() {
     openMenuIcon,
     headerNavigation,
     header,
-    headerContainer
+    headerContainer,
+    contentContainer
   };
 }
 
-function preventDefault(e) {
-  e = e || window.event;
-  if (e.preventDefault) e.preventDefault();
-  e.returnValue = false;
-}
+// function preventDefault(e) {
+//   e = e || window.event;
+//   if (e.preventDefault) e.preventDefault();
+//   e.returnValue = false;
+// }
 
 function openMenu() {
   const {
@@ -51,15 +53,17 @@ function openMenu() {
     openMenuIcon,
     headerNavigation,
     header,
-    headerContainer
+    headerContainer,
+    contentContainer
   } = getTargetSelectors();
   mainBackground.style.opacity = 1;
 
   header.classList.add('header-container--nav-active');
   htmlDocument.classList.add('hidden-scroll');
   body.classList.add('hidden-scroll');
-  window.addEventListener('wheel', preventDefault);
-  window.addEventListener('touchmove', preventDefault);
+  contentContainer.classList.add('hidden-content');
+  // window.addEventListener('wheel', preventDefault);
+  // window.addEventListener('touchmove', preventDefault);
   headerNavigation.classList.add('header-navigation--active');
   logoElement.classList.add('logo--active');
   openMenuIcon.classList.add('header-open-menu-icon--active');
@@ -77,14 +81,16 @@ function closeMenu() {
     openMenuIcon,
     headerNavigation,
     header,
-    headerContainer
+    headerContainer,
+    contentContainer
   } = getTargetSelectors();
   mainBackground.style.opacity = 0;
 
   htmlDocument.classList.remove('hidden-scroll');
   body.classList.remove('hidden-scroll');
-  window.removeEventListener('wheel', preventDefault);
-  window.removeEventListener('touchmove', preventDefault);
+  contentContainer.classList.remove('hidden-content');
+  // window.removeEventListener('wheel', preventDefault);
+  // window.removeEventListener('touchmove', preventDefault);
   header.classList.remove('header-container--nav-active');
   headerNavigation.classList.remove('header-navigation--active');
   logoElement.classList.remove('logo--active');
