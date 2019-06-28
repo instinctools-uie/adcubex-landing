@@ -306,6 +306,9 @@ footer * {
   margin-bottom: 0.972em;
 }
 
+.footer-left p {
+  line-height: 1;
+}
 .footer-container a {
   text-decoration: none;
 }
