@@ -124,8 +124,8 @@
   padding: 0 1.25em 0 1.25em;
   border: 0.09em solid var(--nobel-color);
   color: var(--mine-shaft-lighter-color);
-  font-family: 'montserrat_lightregular', sans-serif;
-  font-weight: 600;
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-weight: 500;
   font-size: 1.375em;
 
   outline: none;
