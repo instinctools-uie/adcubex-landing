@@ -520,7 +520,7 @@ footer * {
   }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+@media (max-height: 414px) and (orientation: landscape) {
   .header-links-container {
     margin-top: -1em;
   }
