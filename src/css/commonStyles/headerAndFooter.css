@@ -306,6 +306,9 @@ footer * {
   margin-bottom: 0.972em;
 }
 
+.footer-left p {
+  line-height: 1;
+}
 .footer-container a {
   text-decoration: none;
 }
@@ -517,7 +520,7 @@ footer * {
   }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+@media (max-height: 414px) and (orientation: landscape) {
   .header-links-container {
     margin-top: -1em;
   }
