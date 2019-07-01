@@ -30,6 +30,12 @@ import isWSXGABreakpoint from '../isWSXGABreakpoint';
 
 const state = { prevScrollPosition: 0, isDefaultParams: false };
 
+window.onpageshow = event => {
+  if (event.persisted) {
+    window.location.reload();
+  }
+};
+
 window.onload = () => {
   if ('scrollRestoration' in window.history) {
     window.history.scrollRestoration = 'manual';
