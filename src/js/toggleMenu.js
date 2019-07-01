@@ -42,6 +42,8 @@ function preventDefault(e) {
   e.returnValue = false;
 }
 
+let currentBodyColor;
+
 function openMenu() {
   const {
     mainBackground,
@@ -66,6 +68,8 @@ function openMenu() {
   headerNavigation.removeAttribute('aria-hidden');
 
   headerContainer.style.display = 'flex';
+  currentBodyColor = body.style.backgroundColor;
+  body.style.backgroundColor = '#ec3865';
 }
 
 function closeMenu() {
@@ -91,4 +95,6 @@ function closeMenu() {
   openMenuIcon.classList.remove('header-open-menu-icon--active');
   headerNavigation.setAttribute('aria-hidden', 'true');
   headerContainer.style.display = 'none';
+
+  body.style.backgroundColor = currentBodyColor;
 }
