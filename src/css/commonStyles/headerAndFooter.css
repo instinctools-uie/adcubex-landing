@@ -428,6 +428,12 @@ footer * {
   }
 }
 
+@media (max-width: 1600px) and (min-width: 1600px) {
+  .header-links-container {
+    margin-top: -5em;
+  }
+}
+
 @media all and (max-width: 1400px) {
   nav,
   footer,
