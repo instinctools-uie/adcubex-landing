@@ -317,7 +317,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media (max-width: 846px) {
   body {
     background-color: var(--cube-left-side-dark-blue-color);
   }
