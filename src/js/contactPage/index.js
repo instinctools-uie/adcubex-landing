@@ -39,6 +39,12 @@ window.addEventListener('scroll', () => {
   scrollPreviousPosition = scrolled;
 });
 
+window.onpageshow = event => {
+  if (event.persisted) {
+    window.location.reload();
+  }
+};
+
 window.onload = () => {
   window.axios(`${EMAIL.SERVER_URL}/hash`).then(({ data = {} } = {}) => {
     hash = data.hash;

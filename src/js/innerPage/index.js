@@ -9,6 +9,12 @@ import setFooterYear from '../year';
 
 let scrollPreviousPosition = 0;
 
+window.onpageshow = event => {
+  if (event.persisted) {
+    window.location.reload();
+  }
+};
+
 window.onload = () => {
   toggleMenuListener();
   hoverLinkInMenu();
