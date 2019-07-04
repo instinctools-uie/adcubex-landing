@@ -17,7 +17,7 @@ const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage', 
 gulp.task('connect', () => {
   connect.server({
     base: 'http://localhost',
-    port: 3000,
+    port: 3002,
     root: './build',
     livereload: true
   });
