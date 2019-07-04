@@ -356,4 +356,9 @@
   .contact-us-form .custom-button {
     font-size: 1.25em;
   }
+
+  .contact-us-form input,
+  .contact-us-form textarea {
+    font-size: 1.44em;
+  }
 }
