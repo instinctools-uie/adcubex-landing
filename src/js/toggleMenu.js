@@ -68,6 +68,14 @@ function openMenu() {
   headerContainer.style.display = 'flex';
 }
 
+function clearSelection() {
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges();
+  } else if (document.selection) {
+    document.selection.empty();
+  }
+}
+
 function closeMenu() {
   const {
     mainBackground,
@@ -91,4 +99,6 @@ function closeMenu() {
   openMenuIcon.classList.remove('header-open-menu-icon--active');
   headerNavigation.setAttribute('aria-hidden', 'true');
   headerContainer.style.display = 'none';
+
+  clearSelection();
 }
