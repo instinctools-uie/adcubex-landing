@@ -357,3 +357,9 @@
     font-size: 1.25em;
   }
 }
+
+@media (max-width: 375px) and (min-width: 375px) {
+  .contact-checkbox .error-message {
+    bottom: -2em;
+  }
+}
