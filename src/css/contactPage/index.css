@@ -317,7 +317,7 @@
   }
 }
 
-@media all and (max-width: 768px) {
+@media (max-width: 846px) {
   body {
     background-color: var(--cube-left-side-dark-blue-color);
   }
@@ -355,5 +355,16 @@
 
   .contact-us-form .custom-button {
     font-size: 1.25em;
+  }
+
+  .contact-us-form input,
+  .contact-us-form textarea {
+    font-size: 1.44em;
+  }
+}
+
+@media (max-width: 375px) and (min-width: 375px) {
+  .contact-checkbox .error-message {
+    bottom: -2em;
   }
 }

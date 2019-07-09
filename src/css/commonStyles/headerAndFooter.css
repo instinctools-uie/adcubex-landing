@@ -306,6 +306,9 @@ footer * {
   margin-bottom: 0.972em;
 }
 
+.footer-left p {
+  line-height: 1;
+}
 .footer-container a {
   text-decoration: none;
 }
@@ -428,6 +431,12 @@ footer * {
   }
 }
 
+@media (max-width: 1600px) and (min-width: 1600px) {
+  .header-links-container {
+    margin-top: -5em;
+  }
+}
+
 @media all and (max-width: 1400px) {
   nav,
   footer,
@@ -517,7 +526,13 @@ footer * {
   }
 }
 
-@media (max-width: 640px) and (orientation: landscape) {
+@media (max-height: 414px) and (orientation: landscape) {
+  .header-links-container {
+    margin-top: -3em;
+  }
+}
+
+@media (max-height: 375px) and (orientation: landscape) {
   .header-links-container {
     margin-top: -1em;
   }
