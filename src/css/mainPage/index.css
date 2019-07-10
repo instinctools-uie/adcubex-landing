@@ -636,6 +636,12 @@ footer {
   }
 }
 
+@media (max-width: 375px) {
+  .supervise-section h1 {
+    height: 5.3em;
+  }
+}
+
 @media (max-width: 320px) {
   .cubes-container {
     right: -5.5em;
