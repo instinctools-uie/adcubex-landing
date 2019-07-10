@@ -581,10 +581,6 @@ footer {
     margin-left: 0;
     margin-right: 4em;
   }
-
-  .power-image .image-content--large {
-    text-align: center;
-  }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
