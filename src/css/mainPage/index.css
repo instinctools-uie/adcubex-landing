@@ -581,10 +581,6 @@ footer {
     margin-left: 0;
     margin-right: 4em;
   }
-
-  .power-image .image-content--large {
-    text-align: center;
-  }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
@@ -633,6 +629,12 @@ footer {
   .section-container--active h1,
   .section-container--active h2 {
     line-height: 1.111;
+  }
+}
+
+@media (max-width: 375px) {
+  .supervise-section h1 {
+    height: 5.3em;
   }
 }
 
