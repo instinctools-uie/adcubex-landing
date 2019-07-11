@@ -244,8 +244,9 @@ body {
   align-items: baseline;
 }
 
-.advantage-section {
-  margin-top: -1.4em;
+.advantage-section.section-container {
+  margin-top: 11.5em;
+  justify-content: flex-start;
 }
 
 .supervise-section .text-container,
@@ -425,10 +426,6 @@ footer {
 
   .section-container {
     margin-top: 0;
-  }
-
-  .section-container.toolset-section {
-    margin-top: 18em;
   }
 
   .budget-section,
