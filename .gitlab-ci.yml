@@ -32,4 +32,5 @@ install_dependecies:
     - npm run test
     - npm run build
     - ls /builds/instinctools-websites/adcubex/build
+    - ssh adcubex@95.216.89.197 "rm -rf ./var/www/vhosts/adcubex.com/*"
     - scp -P 5022 -rp /builds/instinctools-websites/adcubex/build/* adcubex@95.216.89.197:/var/www/vhosts/adcubex.com/
