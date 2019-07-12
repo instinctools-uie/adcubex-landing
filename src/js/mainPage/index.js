@@ -41,7 +41,7 @@ window.onload = () => {
     window.history.scrollRestoration = 'manual';
   }
 
-  recalculateScrollDependencies();
+  // recalculateScrollDependencies();
   toggleMenuListener();
   hoverLinkInMenu();
   cubesRandomLevitation();
