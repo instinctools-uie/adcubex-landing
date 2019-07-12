@@ -1,6 +1,9 @@
 /**
  * Form field validator
  */
+
+import getScrollPosition from './getScrollPosition';
+
 export default class Validator {
   constructor(fieldsSelector, validationScheme) {
     this.fieldsSelector = fieldsSelector;
@@ -92,7 +95,21 @@ export default class Validator {
       const result = this.validateField(input);
       isValidForm && result.error && (isValidForm = false);
       result.error && this.handleValidationResult(result);
-      result.error && !isFocused && (isFocused = true) && result.input.focus();
+
+      if (result.error && !isFocused) {
+        const inputPadding = 20;
+        let headerHeight = 100;
+        const deviceWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+        if (deviceWidth <= 768) {
+          headerHeight = 69.5;
+        }
+        const currentScrollPosition = getScrollPosition();
+        const { top: inputYPosition } = result.input.getBoundingClientRect();
+        const newScrollYPosition = currentScrollPosition + inputYPosition - headerHeight - inputPadding;
+        window.scrollTo(0, newScrollYPosition);
+        isFocused = true;
+        result.input.focus();
+      }
     }
 
     return isValidForm;
