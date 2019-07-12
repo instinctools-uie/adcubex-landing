@@ -108,7 +108,6 @@ export default class Validator {
         const currentScrollPosition = getScrollPosition();
         const { top: inputYPosition } = result.input.getBoundingClientRect();
         const newScrollYPosition = currentScrollPosition + inputYPosition - headerHeight - inputPadding;
-        console.log(currentScrollPosition, inputYPosition, newScrollYPosition);
         window.scrollTo(0, newScrollYPosition);
         isFocused = true;
         result.input.focus();
