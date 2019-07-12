@@ -96,8 +96,6 @@ export default class Validator {
       isValidForm && result.error && (isValidForm = false);
       result.error && this.handleValidationResult(result);
 
-      // result.error && !isFocused && (isFocused = true) && result.input.focus();
-
       if (result.error && !isFocused) {
         const inputPadding = 20;
         let headerHeight = 100;
