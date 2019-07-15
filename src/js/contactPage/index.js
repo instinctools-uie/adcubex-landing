@@ -13,7 +13,7 @@ let hash;
 const validationScheme = {
   name: [
     { required: true, message: 'The field is required' },
-    { pattern: /[\W\w]{2,}\s*/, message: 'Please, enter your full name' }
+    { pattern: /^[\S][\W\w]{2,}\s*/, message: 'Please, enter your full name' }
   ],
   email: [
     { required: true, message: 'The field is required' },
@@ -25,7 +25,7 @@ const validationScheme = {
   phone: [{ pattern: /^(\(?\+?[0-9]*\)?)?[0-9_\- \(\)]*$/, message: 'Please, enter a valid phone number' }],
   body: [
     { required: true, message: 'The field is required' },
-    { pattern: /[\W\w]{10,}\s*/, message: 'Please, provide us with more information' }
+    { pattern: /^[\S][\W\w]{10,}\s*/, message: 'Please, provide us with more information' }
   ],
   'collecting-data': [
     { type: 'checkbox', required: true, message: "Please, check in the box if you'd like to proceed" }
