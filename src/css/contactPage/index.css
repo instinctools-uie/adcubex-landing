@@ -184,15 +184,11 @@
 }
 
 .checkbox-wrapper {
-  --checkbox-image-visibility: hidden;
-
   position: relative;
   color: white;
 }
 
 .contact-us-form input[type='checkbox']:checked + .checkbox-wrapper {
-  --checkbox-image-visibility: initial;
-
   color: var(--mine-shaft-lighter-color);
 }
 
@@ -208,12 +204,16 @@
   background: currentColor;
 }
 
+.contact-us-form input[type='checkbox']:checked + .checkbox-wrapper img {
+  visibility: visible;
+}
+
 .contact-checkbox img {
   position: absolute;
   top: 0;
   left: 0;
   width: 1em;
-  visibility: var(--checkbox-image-visibility);
+  visibility: hidden;
 }
 
 .contact-us-form label {
