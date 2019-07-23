@@ -3,6 +3,7 @@ const bgSynergy = document.querySelector('.bg-synergy');
 const bgStrategy = document.querySelector('.bg-strategy');
 const bgSolutions = document.querySelector('.bg-solutions');
 const bgLetsTalk = document.querySelector('.bg-lets-talk');
+const bgInsights = document.querySelector('.bg-insights');
 
 export default function hoverLinkInMenu() {
   linksContainerInOpenedMenu.addEventListener('mouseover', mouseOnNavigationContainer);
@@ -15,6 +16,7 @@ function mouseOnNavigationContainer(e) {
   const isStrategyLink = target.classList.contains('link-strategy');
   const isSolutionsLink = target.classList.contains('link-solutions');
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
+  const isInsightsLink = target.classList.contains('link-insights');
 
   if (isSynergyLink) {
     bgSynergy.style.opacity = 1;
@@ -31,6 +33,10 @@ function mouseOnNavigationContainer(e) {
   if (isLetsTalkLink) {
     bgLetsTalk.style.opacity = 1;
   }
+
+  if (isInsightsLink) {
+    bgInsights.style.opacity = 1;
+  }
 }
 
 function mouseOutNavigationContainer(e) {
@@ -38,6 +44,7 @@ function mouseOutNavigationContainer(e) {
   const isSynergyLink = target.classList.contains('link-synergy');
   const isStrategyLink = target.classList.contains('link-strategy');
   const isSolutionsLink = target.classList.contains('link-solutions');
+  const isInsightsLink = target.classList.contains('link-insights');
   const isLetsTalkLink = target.classList.contains('link-lets-talk');
 
   if (isSynergyLink) {
@@ -54,5 +61,9 @@ function mouseOutNavigationContainer(e) {
 
   if (isLetsTalkLink) {
     bgLetsTalk.style.opacity = 0;
+  }
+
+  if (isInsightsLink) {
+    bgInsights.style.opacity = 0;
   }
 }

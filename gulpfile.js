@@ -12,7 +12,7 @@ const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
 const jsFolders = ['mainPage', 'innerPage', 'contactPage'];
-const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
+const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'insightsPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
 
 gulp.task('connect', () => {
   connect.server({
