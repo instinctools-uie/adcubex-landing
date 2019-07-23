@@ -57,5 +57,6 @@ export const CUBES_OPTIONS = {
 };
 
 export const EMAIL = {
-  SERVER_URL: 'https://adcubex.herokuapp.com'
+  SERVER_URL: 'https://adcubex.herokuapp.com',
+  ADDRESS: 'contact@adcubex.com'
 };
