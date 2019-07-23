@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1253px" height="3564px" viewBox="0 0 1253 3564" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1253px" height="3564px" viewBox="0 0 1253 3564" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
     <defs>
-        <polygon id="path-1" points="0.518216949 0.0382849462 157.884657 0.0382849462 157.884657 265.11883 0.518216949 265.11883"></polygon>
-        <polygon id="path-3" points="0 155.712624 472.97854 329.182955 859.657069 192.646821 402.047236 0.627834368"></polygon>
+        <polygon id="path-1"
+                 points="0.518216949 0.0382849462 157.884657 0.0382849462 157.884657 265.11883 0.518216949 265.11883"></polygon>
+        <polygon id="path-3"
+                 points="0 155.712624 472.97854 329.182955 859.657069 192.646821 402.047236 0.627834368"></polygon>
         <linearGradient x1="0%" y1="50.0001175%" x2="99.9999153%" y2="50.0001175%" id="linearGradient-5">
             <stop stop-color="#D3D4D6" offset="0%"></stop>
             <stop stop-color="#E6E6E8" offset="100%"></stop>
         </linearGradient>
-        <polygon id="path-6" points="0.000781036996 0.0410501583 867.279101 0.0410501583 867.279101 330.207244 0.000781036996 330.207244"></polygon>
+        <polygon id="path-6"
+                 points="0.000781036996 0.0410501583 867.279101 0.0410501583 867.279101 330.207244 0.000781036996 330.207244"></polygon>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Main-page_1920-90_Final-(I-hope)" transform="translate(-647.000000, -5633.000000)">
             <g id="Cubes-2" transform="translate(647.000000, 5633.000000)">
-                <g id="Cubes-1-Copy" transform="translate(1599.000000, 1782.000000) scale(1, -1) translate(-1599.000000, -1782.000000) ">
+                <g id="Cubes-1-Copy"
+                   transform="translate(1599.000000, 1782.000000) scale(1, -1) translate(-1599.000000, -1782.000000) ">
                     <g id="1" transform="translate(760.000000, 3252.000000)">
-                        <polygon id="Fill-1" fill="#F7F8FA" points="140.087852 0.0279186622 0 60.1878769 0 253.102151 139.740113 199.565498 140.18383 199.018305"></polygon>
+                        <polygon fill="#F7F8FA"
+                                 points="140.087852 0.0279186622 0 60.1878769 0 253.102151 139.740113 199.565498 140.18383 199.018305"></polygon>
                         <g id="Group-7">
                             <g id="Group-4" transform="translate(139.567435, 0.000000)">
                                 <g id="Fill-2-Clipped">
@@ -22,63 +28,88 @@
                                         <use xlink:href="#path-1"></use>
                                     </mask>
                                     <g id="path-2"></g>
-                                    <path d="M0.518216949,0.0382849462 C0.59635399,0.116268161 0.526030654,186.839278 0.518216949,198.513367 L0.518216949,199.082643 L157.886219,265.11883 L157.886219,65.9107068 L0.518216949,0.0382849462 Z" id="Fill-2" fill="#EDEDED" mask="url(#mask-2)"></path>
+                                    <path d="M0.518216949,0.0382849462 C0.59635399,0.116268161 0.526030654,186.839278 0.518216949,198.513367 L0.518216949,199.082643 L157.886219,265.11883 L157.886219,65.9107068 L0.518216949,0.0382849462 Z"
+                                          fill="#EDEDED" mask="url(#mask-2)"></path>
                                 </g>
                             </g>
-                            <polygon id="Fill-5" fill="#EEEFEF" points="0 252.667251 164.07216 311.99688 297.452091 265.12117 140.084089 199.084982"></polygon>
+                            <polygon id="Fill-5" fill="#EEEFEF"
+                                     points="0 252.667251 164.07216 311.99688 297.452091 265.12117 140.084089 199.084982"></polygon>
                         </g>
                     </g>
                     <g class="cube-animation-1" transform="translate(425.000000, 2165.000000)">
-                        <polygon id="Fill-1" fill="#FAFAFB" points="271.6 0 0 117.391947 0 497.60989 271.6 392.243843"></polygon>
-                        <polygon id="Fill-2" fill="#EAEAEA" points="271.6 0 271.6 391.644427 582 521.225275 581.756525 129.635748"></polygon>
-                        <polygon id="Fill-3" fill="#F3F5F5" points="0 496.991611 320.208178 614 582 521.470748 272.194197 391.340659"></polygon>
+                        <polygon fill="#FAFAFB" points="271.6 0 0 117.391947 0 497.60989 271.6 392.243843"></polygon>
+                        <polygon fill="#EAEAEA"
+                                 points="271.6 0 271.6 391.644427 582 521.225275 581.756525 129.635748"></polygon>
+                        <polygon fill="#F3F5F5"
+                                 points="0 496.991611 320.208178 614 582 521.470748 272.194197 391.340659"></polygon>
                     </g>
                     <g id="4" transform="translate(1127.000000, 2444.000000)">
-                        <polygon id="Fill-1" fill="#F7F7F7" points="266.302671 0 1.44964391 114.178545 0 484.008475 266.302671 381.654872"></polygon>
-                        <polygon id="Fill-3" fill="#E8E8E9" points="0 483.426309 313.235921 597 568 507.069412 267.432591 381.135593"></polygon>
+                        <polygon fill="#F7F7F7"
+                                 points="266.302671 0 1.44964391 114.178545 0 484.008475 266.302671 381.654872"></polygon>
+                        <polygon fill="#E8E8E9"
+                                 points="0 483.426309 313.235921 597 568 507.069412 267.432591 381.135593"></polygon>
                     </g>
                     <g id="5" transform="translate(908.000000, 1839.000000)">
-                        <polygon id="Fill-2" fill="#F4F5F6" points="355.712389 0 1.95395245 153.411064 0 650.361345 355.712389 512.722895"></polygon>
-                        <polygon id="Fill-3" fill="#EFEFF0" points="0 649.675599 420.303142 802 762 681.546958 356.443791 512.201681"></polygon>
+                        <polygon fill="#F4F5F6"
+                                 points="355.712389 0 1.95395245 153.411064 0 650.361345 355.712389 512.722895"></polygon>
+                        <polygon fill="#EFEFF0"
+                                 points="0 649.675599 420.303142 802 762 681.546958 356.443791 512.201681"></polygon>
                     </g>
                     <g id="18" transform="translate(908.000000, 244.000000)">
-                        <polygon id="Fill-1" fill="#EEEEEE" points="401.013699 0 0 173.030479 0 732.804007 401.013699 578.272425"></polygon>
+                        <polygon fill="#EEEEEE"
+                                 points="401.013699 0 0 173.030479 0 732.804007 401.013699 578.272425"></polygon>
                         <g id="Group-5" transform="translate(0.000000, 577.135564)">
                             <g id="Fill-3-Clipped">
                                 <mask id="mask-4" fill="white">
                                     <use xlink:href="#path-3"></use>
                                 </mask>
                                 <g id="path-8"></g>
-                                <polygon id="Fill-3" fill="url(#linearGradient-5)" mask="url(#mask-4)" points="0 155.712624 472.97854 329.182955 859.657069 192.646821 402.047236 0.627834368"></polygon>
+                                <polygon fill="url(#linearGradient-5)" mask="url(#mask-4)"
+                                         points="0 155.712624 472.97854 329.182955 859.657069 192.646821 402.047236 0.627834368"></polygon>
                             </g>
                         </g>
                     </g>
                     <g id="19" transform="translate(470.000000, 0.000000)">
-                        <polygon id="Fill-1" fill="#F6F6F7" points="409.189655 0 0 176.496216 0 747.219183 409.189655 589.907844"></polygon>
-                        <polygon id="Fill-2" fill="#E7E7E7" points="409.189655 0 409.189655 590.692631 879 786.013858 878.627055 195.468522"></polygon>
-                        <polygon id="Fill-3" fill="#DADADC" points="0 747.724133 483.606748 924.32531 879 785.480941 409.787695 590.353756"></polygon>
+                        <polygon fill="#F6F6F7"
+                                 points="409.189655 0 0 176.496216 0 747.219183 409.189655 589.907844"></polygon>
+                        <polygon fill="#E7E7E7"
+                                 points="409.189655 0 409.189655 590.692631 879 786.013858 878.627055 195.468522"></polygon>
+                        <polygon fill="#DADADC"
+                                 points="0 747.724133 483.606748 924.32531 879 785.480941 409.787695 590.353756"></polygon>
                     </g>
                     <g id="12" transform="translate(361.000000, 789.000000)">
-                        <polygon id="Fill-1" fill="#F7F7F8" points="335.403756 0 0 144.330109 0 611.752232 335.403756 482.387728"></polygon>
-                        <polygon id="Fill-2" fill="#E8E8E8" points="335.403756 0 335.403756 482.533052 718 642.087054 718 159.686412"></polygon>
-                        <polygon id="Fill-3" fill="#E5E5E6" points="0 611.356691 395.206891 755 718 641.499438 334.873771 481.986607"></polygon>
+                        <polygon fill="#F7F7F8"
+                                 points="335.403756 0 0 144.330109 0 611.752232 335.403756 482.387728"></polygon>
+                        <polygon fill="#E8E8E8"
+                                 points="335.403756 0 335.403756 482.533052 718 642.087054 718 159.686412"></polygon>
+                        <polygon fill="#E5E5E6"
+                                 points="0 611.356691 395.206891 755 718 641.499438 334.873771 481.986607"></polygon>
                     </g>
                     <g id="7" transform="translate(350.000000, 1478.000000)">
-                        <polygon id="Fill-3" fill="#EAEAEA" points="0 626.910136 405.874407 774 736 657.541635 345.263158 492.392157"></polygon>
-                        <polygon id="Fill-1" fill="#F8F8F9" points="345.263158 0 1.89806777 148.011482 0 627.294118 345.263158 494.053859"></polygon>
-                        <polygon id="Fill-2" fill="#EFEFEF" points="345.355786 0 345.263158 494.046537 736 657.647059 735.8379 163.623701"></polygon>
+                        <polygon fill="#EAEAEA"
+                                 points="0 626.910136 405.874407 774 736 657.541635 345.263158 492.392157"></polygon>
+                        <polygon fill="#F8F8F9"
+                                 points="345.263158 0 1.89806777 148.011482 0 627.294118 345.263158 494.053859"></polygon>
+                        <polygon fill="#EFEFEF"
+                                 points="345.355786 0 345.263158 494.046537 736 657.647059 735.8379 163.623701"></polygon>
                     </g>
                     <g id="2" transform="translate(0.000000, 1933.000000)">
-                        <polygon id="Fill-1" fill="#F9F9FA" points="219.492754 0 0 93.4873306 0 396.258621 219.492754 312.471325"></polygon>
-                        <polygon id="Fill-2" fill="#EEEEEE" points="219.492754 0 219.492754 313.116315 466 416.493103 466 103.612521"></polygon>
-                        <polygon id="Fill-3" fill="#F4F4F5" points="0 395.842153 257.0347 489 466 415.241533 219.459877 311.948276"></polygon>
+                        <polygon fill="#F9F9FA"
+                                 points="219.492754 0 0 93.4873306 0 396.258621 219.492754 312.471325"></polygon>
+                        <polygon fill="#EEEEEE"
+                                 points="219.492754 0 219.492754 313.116315 466 416.493103 466 103.612521"></polygon>
+                        <polygon fill="#F4F4F5"
+                                 points="0 395.842153 257.0347 489 466 415.241533 219.459877 311.948276"></polygon>
                     </g>
                     <g id="13" transform="translate(879.000000, 528.000000)">
-                        <polygon id="Fill-1" fill="#F6F6F7" points="402.69863 0 0 172.96705 0 733.100559 402.69863 578.073068"></polygon>
-                        <polygon id="Fill-3" fill="#DADCDC" points="0 732.093427 473.815513 905 861 768.089079 401.487328 576.368715"></polygon>
+                        <polygon fill="#F6F6F7"
+                                 points="402.69863 0 0 172.96705 0 733.100559 402.69863 578.073068"></polygon>
+                        <polygon fill="#DADCDC"
+                                 points="0 732.093427 473.815513 905 861 768.089079 401.487328 576.368715"></polygon>
                     </g>
                     <g id="8" transform="translate(872.000000, 1188.000000)">
-                        <polygon id="Fill-1" fill="#F7F7F8" points="405.790296 0.948836184 0 176.197462 0 741.436464 406.188766 583.038674"></polygon>
+                        <polygon fill="#F7F7F8"
+                                 points="405.790296 0.948836184 0 176.197462 0 741.436464 406.188766 583.038674"></polygon>
                         <g id="Group-8">
                             <g id="Group-7" transform="translate(0.000000, 583.101445)">
                                 <g id="Fill-5-Clipped">
@@ -86,7 +117,8 @@
                                         <use xlink:href="#path-6"></use>
                                     </mask>
                                     <g id="path-24"></g>
-                                    <polygon id="Fill-5" fill="#E7E8E8" mask="url(#mask-7)" points="477.370593 330.207244 0.000781036996 156.718725 405.780741 0.0410501583 867.279881 192.843324"></polygon>
+                                    <polygon id="Fill-5" fill="#E7E8E8" mask="url(#mask-7)"
+                                             points="477.370593 330.207244 0.000781036996 156.718725 405.780741 0.0410501583 867.279881 192.843324"></polygon>
                                 </g>
                             </g>
                         </g>
