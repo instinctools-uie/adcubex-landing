@@ -72,6 +72,9 @@
   --cube-left-side-purple-color: rgb(157, 55, 227);
   --cube-right-side-purple-color: rgb(147, 45, 191);
   --cube-bottom-side-purple-color: rgb(150, 49, 213);
+  --cube-left-side-purple1-color: rgb(188, 45, 241);
+  --cube-right-side-purple1-color: rgb(167, 34, 216);
+  --cube-bottom-side-purple1-color: rgb(180, 41, 231);
 
   --checkbox-error-background: var(--flamingo-light-color);
 }
