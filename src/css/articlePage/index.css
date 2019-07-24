@@ -1,0 +1,140 @@
+@import '../index.css';
+@import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
+@import '../insightsPage/index.css';
+
+h2.two-lines {
+  height: 2.3em;
+}
+
+.content-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-background {
+  position: absolute;
+  top: -21em;
+  right: -6em;
+  max-width: 30em;
+  height: auto;
+}
+
+.bottom-background {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 30em;
+  height: auto;
+}
+
+.article .insights-mistakes h1 {
+  font-size: 4.375em;
+}
+
+.article h2 {
+  line-height: 1.14;
+}
+
+.advantage-table-row {
+  display: flex;
+}
+
+.advantage-table-row:not(:first-child) {
+  margin-top: 1em;
+}
+
+.advantage-table-column.advantage-table-header {
+  width: 25%;
+}
+
+.advantage-table-column {
+  width: 75%;
+}
+
+.advantage-table-header > * {
+  margin-top: 0.65em;
+  font-size: 2.25em;
+  font-family: 'montserrat_mediumregular', sans-serif;
+  font-weight: bold;
+  line-height: 1.16;
+}
+
+.content-img {
+  margin-top: 1em;
+}
+
+.article-link {
+  color: var(--mine-shaft-lighter-color);
+  text-decoration: underline var(--cube-bottom-side-purple1-color);
+}
+
+.article-link:hover {
+  color: var(--cube-bottom-side-purple1-color);
+  text-decoration: none;
+}
+
+.article-note {
+  position: relative;
+  padding: 3em 15em;
+}
+
+.article-note svg {
+  position: absolute;
+  max-height: 100%;
+  width: auto;
+}
+
+.article-note svg:first-child {
+  top: 0;
+  left: 2em;
+}
+
+.article-note svg:last-child {
+  top: 0;
+  right: 2em;
+}
+
+.article-note p {
+  position: relative;
+  z-index: 1;
+  font-size: 1.875em;
+  line-height: 1.48;
+}
+
+@media (max-width: 1024px) {
+  .article-note {
+    padding: 5em 7.5em;
+  }
+}
+
+@media (max-width: 846px) {
+  .article h2 {
+    height: auto !important;
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .article-note {
+    padding: 1.5em 2.5em;
+  }
+
+  .article-note svg {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .advantage-table-row {
+    flex-direction: column;
+    border-bottom: 0.2em solid var(--mine-shaft-lighter-color);
+  }
+
+  .advantage-table-row > *,
+  .advantage-table-column.advantage-table-header {
+    width: 100%;
+  }
+}

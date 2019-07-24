@@ -24,6 +24,10 @@ p {
   line-height: 1.55;
 }
 
+p b {
+  font-weight: bold;
+}
+
 .hidden-scroll {
   overflow: hidden;
 }

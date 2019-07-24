@@ -12,7 +12,7 @@ const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
 const jsFolders = ['mainPage', 'innerPage', 'contactPage'];
-const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'insightsPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
+const cssFolders = ['articlePage', 'mainPage', 'synergyPage', 'strategyPage', 'insightsPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
 
 gulp.task('connect', () => {
   connect.server({
@@ -46,7 +46,7 @@ gulp.task('css', () => {
 });
 
 gulp.task('html', () => {
-  gulp.src('./src/*.html')
+  gulp.src('./src/**/*.html')
     .pipe(gulp.dest('./build'))
     .pipe(connect.reload());
 });
@@ -58,13 +58,13 @@ gulp.task('txt', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', () => {})
+  gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', () => {})
     .concat('./src/assets/fonts/**/*'))
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
 gulp.task('image', () => {
-  gulp.src('./src/assets/images/*')
+  gulp.src('./src/assets/images/**/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/images'));
 });
@@ -78,7 +78,7 @@ gulp.task('meta', () => {
 gulp.task('listen', () => {
   gulp.watch('./src/**/**/*.js', ['js']);
   gulp.watch('./src/**/**/*.css', ['css']);
-  gulp.watch('./src/*.html', ['html']);
+  gulp.watch('./src/**/*.html', ['html']);
 });
 
 gulp.task('browser-sync', () => {
