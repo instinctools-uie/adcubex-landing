@@ -27,8 +27,6 @@ body {
 }
 
 .title-section .back-link {
-  position: absolute;
-  top: -1em;
   display: flex;
   align-items: center;
   font-family: 'montserrat_mediumregular', sans-serif;
@@ -40,8 +38,8 @@ body {
 
 .title-section .back-link img {
   transform: rotate(180deg);
-  width: 1.25em;
-  height: 1.25em;
+  width: 1em;
+  height: 1em;
   margin-right: 0.83em;
 }
 
