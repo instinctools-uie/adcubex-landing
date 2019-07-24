@@ -29,34 +29,7 @@
   animation: hide-header-animation 0.5s ease-out;
 }
 
-.content-section {
-  position: relative;
-  overflow: hidden;
-}
-
-.top-background {
-  position: absolute;
-  top: -21em;
-  right: -6em;
-  max-width: 30em;
-  height: auto;
-}
-
-.bottom-background {
-  z-index: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 30em;
-  height: auto;
-}
-
-.wrapper-link {
-  text-decoration: none;
-  color: var(--mine-shaft-lighter-color);
-}
-
-.wrapper-link .custom-button{
+.article-has-description .custom-button {
   width: 23.625em;
   height: 5em;
   padding: 0 2em 0 1.5em;
@@ -67,39 +40,25 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  transition: all .4s ease-in;
+  transition: all 0.4s ease-in;
 }
 
-.wrapper-link .custom-button span {
+.article-has-description .custom-button span {
   font-size: 1.5em;
   font-weight: 600;
 }
 
-.wrapper-link .custom-button img {
-  transition: all .4s ease-in;
+.article-has-description .custom-button img {
+  transition: all 0.4s ease-in;
 }
 
-.wrapper-link:hover .custom-button img {
-  transform: translateX(.25em);
-}
-
-.article h2 {
-  line-height: 5em;
-}
-
-.article .insights-mistakes h1 {
-  font-size: 4.375em;
-  line-height: 1.23;
-}
-
-.wrapper-link:hover h2 {
-  opacity: 0.9;
+.article-has-description .custom-button:hover img {
+  transform: translateX(0.25em);
 }
 
 .content-wrapper h2,
 .article-has-description .section-content h2 {
   font-size: 3.375em;
-  line-height: 1.18;
 }
 
 .content-wrapper h2 {
@@ -167,7 +126,7 @@ article p {
   position: relative;
 }
 
-.scale-bg {
+.wrapper-link {
   position: absolute;
 }
 
@@ -179,28 +138,6 @@ article p {
 
 .wrapper-link:hover .svg-image {
   transform: scale(1.35);
-}
-
-.advantage-table-row {
-  display: flex;
-}
-
-.advantage-table-column.advantage-table-header {
-  width: 25%;
-}
-
-.advantage-table-column {
-  width: 75%;
-}
-
-.advantage-table-header * {
-  font-size: 2.25em;
-  font-family: 'montserrat_mediumregular', sans-serif;
-  line-height: 1.16;
-}
-
-.content-img {
-  margin-top: 1em;
 }
 
 @keyframes show-header-animation {
@@ -263,15 +200,5 @@ article p {
 @media (max-width: 768px) {
   .insights-mistakes h1 {
     font-size: 3.75em;
-  }
-}
-
-@media (max-width: 576px) {
-  .advantage-table-row {
-    flex-direction: column;
-  }
-
-  .advantage-table-row > * {
-    width: 100%;
   }
 }
