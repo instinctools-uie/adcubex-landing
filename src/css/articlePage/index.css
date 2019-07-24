@@ -1,0 +1,80 @@
+@import '../index.css';
+@import '../commonStyles/innerPageStyle.css';
+@import '../commonStyles/сubesAnimation.css';
+@import '../commonStyles/onLoadInnerAnimation.css';
+@import '../insightsPage/index.css';
+
+.content-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.top-background {
+  position: absolute;
+  top: -21em;
+  right: -6em;
+  max-width: 30em;
+  height: auto;
+}
+
+.bottom-background {
+  z-index: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-width: 30em;
+  height: auto;
+}
+
+.article .insights-mistakes h1 {
+  font-size: 4.375em;
+  line-height: 1.23;
+}
+
+
+.advantage-table-row {
+  display: flex;
+}
+
+.advantage-table-row:not(:first-child) {
+  margin-top: 1em;
+}
+
+.advantage-table-column.advantage-table-header {
+  width: 25%;
+}
+
+.advantage-table-column {
+  width: 75%;
+}
+
+.advantage-table-header > * {
+  margin-top: 0.65em;
+  font-size: 2.25em;
+  font-family: 'montserrat_mediumregular', sans-serif;
+  line-height: 1.16;
+}
+
+.content-img {
+  margin-top: 1em;
+}
+
+.article-link {
+  color: var(--mine-shaft-lighter-color);
+  text-decoration: underline var(--cube-bottom-side-purple1-color);
+}
+
+.article-link:hover {
+  color: var(--cube-bottom-side-purple1-color);
+  text-decoration: none;
+}
+
+@media (max-width: 576px) {
+  .advantage-table-row {
+    flex-direction: column;
+  }
+
+  .advantage-table-row > * {
+    width: 100%;
+  }
+}
