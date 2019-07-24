@@ -29,13 +29,12 @@
   animation: hide-header-animation 0.5s ease-out;
 }
 
-
 .wrapper-link {
   text-decoration: none;
   color: var(--mine-shaft-lighter-color);
 }
 
-.wrapper-link .custom-button{
+.wrapper-link .custom-button {
   width: 23.625em;
   height: 5em;
   padding: 0 2em 0 1.5em;
@@ -46,7 +45,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  transition: all .4s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .wrapper-link .custom-button span {
@@ -55,11 +54,11 @@
 }
 
 .wrapper-link .custom-button img {
-  transition: all .4s ease-in;
+  transition: all 0.4s ease-in;
 }
 
 .wrapper-link:hover .custom-button img {
-  transform: translateX(.25em);
+  transform: translateX(0.25em);
 }
 
 .wrapper-link:hover h2 {
