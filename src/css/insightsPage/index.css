@@ -29,12 +29,7 @@
   animation: hide-header-animation 0.5s ease-out;
 }
 
-.wrapper-link {
-  text-decoration: none;
-  color: var(--mine-shaft-lighter-color);
-}
-
-.wrapper-link .custom-button {
+.article-has-description .custom-button {
   width: 23.625em;
   height: 5em;
   padding: 0 2em 0 1.5em;
@@ -48,31 +43,22 @@
   transition: all 0.4s ease-in;
 }
 
-.wrapper-link .custom-button span {
+.article-has-description .custom-button span {
   font-size: 1.5em;
   font-weight: 600;
 }
 
-.wrapper-link .custom-button img {
+.article-has-description .custom-button img {
   transition: all 0.4s ease-in;
 }
 
-.wrapper-link:hover .custom-button img {
+.article-has-description .custom-button:hover img {
   transform: translateX(0.25em);
-}
-
-.wrapper-link:hover h2 {
-  opacity: 0.9;
-}
-
-.article h2 {
-  line-height: 5em;
 }
 
 .content-wrapper h2,
 .article-has-description .section-content h2 {
   font-size: 3.375em;
-  line-height: 1.18;
 }
 
 .content-wrapper h2 {
@@ -140,7 +126,7 @@ article p {
   position: relative;
 }
 
-.scale-bg {
+.wrapper-link {
   position: absolute;
 }
 
