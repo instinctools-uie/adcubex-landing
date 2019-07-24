@@ -12,7 +12,7 @@ const mainBowerFiles = require('main-bower-files');
 const image = require('gulp-image');
 
 const jsFolders = ['mainPage', 'innerPage', 'contactPage'];
-const cssFolders = ['mainPage', 'synergyPage', 'strategyPage', 'insightsPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
+const cssFolders = ['articlePage', 'mainPage', 'synergyPage', 'strategyPage', 'insightsPage', 'solutionsPage', 'contactPage', 'privacyPolicyAndImprintPage'];
 
 gulp.task('connect', () => {
   connect.server({
@@ -58,13 +58,13 @@ gulp.task('txt', () => {
 });
 
 gulp.task('fonts', () => {
-  return gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', () => {})
+  gulp.src(mainBowerFiles('**/*.{eot,svg,ttf,woff,woff2}', () => {})
     .concat('./src/assets/fonts/**/*'))
     .pipe(gulp.dest('build/assets/fonts'));
 });
 
 gulp.task('image', () => {
-  gulp.src('./src/assets/images/*')
+  gulp.src('./src/assets/images/**/*')
     .pipe(image())
     .pipe(gulp.dest('./build/assets/images'));
 });
