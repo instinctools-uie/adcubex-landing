@@ -1,6 +1,5 @@
 const gulp = require('gulp');
 const templateRender = require('gulp-nunjucks-render');
-const flatten = require('gulp-flatten');
 const browserSync = require('browser-sync').create();
 const connect = require('gulp-connect');
 const browserify = require('browserify');
