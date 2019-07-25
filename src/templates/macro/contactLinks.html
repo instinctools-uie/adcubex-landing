@@ -1,0 +1,6 @@
+{% macro contactLinks(isShow=true) %}
+    {% if isShow %}
+        {% include "parts/contact-us-inner.html" %}
+        {% include "parts/envelope.html" %}
+    {% endif %}
+{% endmacro %}

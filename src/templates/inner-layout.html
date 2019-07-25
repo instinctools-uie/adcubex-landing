@@ -1,0 +1,15 @@
+<!--layout of inner page -->
+<!DOCTYPE html>
+<html lang="en">
+    {% block head %} {% endblock %}
+    <body>
+        {% include "parts/header-inner.html" %}
+        {% include "parts/navigation.html" %}
+        {% include "parts/cube_bkgr-inner.html" %}
+        <div class="content-container" role="main">
+            {% block content %} {% endblock %}
+            {% block contactItems %} {% endblock %}
+        </div>
+        {% include "parts/footer.html" %}
+    </body>
+</html>

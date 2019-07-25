@@ -1,0 +1,91 @@
+{# takes the path parameter to css #}
+{% macro headArticle(pageCssPath) %}
+<head>
+    <meta charset="UTF-8">
+    <title>Adcubex - Streamline ad management. Supervise with ease.</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140685409-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'UA-140685409-1');
+    </script>
+
+    <!-- Yandex.Metrika counter -->
+    <script>
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function () {
+          try {
+            w.yaCounter53906200 = new Ya.Metrika({
+              id: 53906200,
+              clickmap: true,
+              trackLinks: true,
+              accurateTrackBounce: true
+            });
+          } catch (e) {
+          }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+          s = d.createElement("script"),
+          f = function () {
+            n.parentNode.insertBefore(s, n);
+          };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else {
+          f();
+        }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <!-- /Yandex.Metrika counter -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <meta name="application-name" content="AdCubex">
+    <meta name="apple-mobile-web-app-title" content="AdCubex">
+    <meta name="msapplication-config" content="./assets/meta/browserconfig.xml">
+
+    <meta name="description" content="Achieve more with a customized approach to search engine marketing
+based on unique expertise, time-approved toolset and reliable partnership.">
+    <meta name="keywords"
+          content="SEM, search engine marketing, advertising, digital advertising, digital marketing, adwords, google adwords, google ads, advertising in social networks, worldwide advertising, massive ads, big budget advertising, bing, google adwords, yahoo">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Streamline ad management.
+Supervise with ease">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adcubex.com">
+    <meta property="og:image" content="https://adcubex.com/assets/meta/Open_graph_300x300-01.jpg">
+    <meta property="og:description" content="Achieve more with a customized approach to search engine marketing
+based on unique expertise, time-approved toolset and reliable partnership.">
+    <meta property="og:locale" content="en_US">
+
+    <link rel="preload" href="../assets/fonts/montserrat/fonts.css" as="style">
+    <link rel="preload" href="{{ pageCssPath }}" as="style">
+    <link rel="preload" href="../js/innerPage/index.js" as="script">
+
+    <link rel="manifest" href="../assets/meta/manifest.webmanifest">
+    <link rel="shortcut icon" href="../assets/meta/favicon.ico">
+    <link rel="icon" sizes="16x16" href="../assets/meta/favicon-16x16.png">
+    <link rel="icon" sizes="32x32" href="../assets/meta/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="../assets/meta/apple-touch-icon.png">
+    <link rel="mask-icon" href="../assets/meta/safari-pinned-tab.svg" color="#ef3e3e">
+
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/montserrat/fonts.css">
+    <link rel="stylesheet" type="text/css" href="{{ pageCssPath }}">
+
+    <script src="../js/innerPage/index.js" defer></script>
+</head>
+
+{% endmacro %}
