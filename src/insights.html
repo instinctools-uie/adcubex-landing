@@ -1,5 +1,4 @@
 {% from "macro/head.html" import head %}
-{% from "macro/contactLinks.html" import contactLinks %}
 
 {% extends "inner-layout.html" %}
 
@@ -179,5 +178,5 @@
 {% endblock %}
 
 {% block contactItems %}
-    {{ contactLinks() }}
+    {% include "parts/contact-us-inner.html" %}
 {% endblock %}
