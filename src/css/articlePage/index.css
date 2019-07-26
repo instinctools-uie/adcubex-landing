@@ -64,12 +64,13 @@ h2.two-lines {
 
 .article-link {
   color: var(--mine-shaft-lighter-color);
-  text-decoration: underline var(--cube-bottom-side-purple1-color);
+  text-decoration: none;
+  border-bottom: 0.1em solid var(--cube-bottom-side-purple1-color);
 }
 
 .article-link:hover {
   color: var(--cube-bottom-side-purple1-color);
-  text-decoration: none;
+  border: none;
 }
 
 .article-note {
