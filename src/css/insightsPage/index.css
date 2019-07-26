@@ -40,16 +40,20 @@
   border: none;
   color: #fff;
   cursor: pointer;
+  opacity: .85;
   transition: all 0.4s ease-in;
 }
 
+.article-has-description .custom-button:hover {
+  opacity: 1;
+}
 .article-has-description .custom-button span {
   font-size: 1.5em;
   font-weight: 600;
 }
 
 .article-has-description .custom-button img {
-  transition: all 0.4s ease-in;
+  transition: all 0.3s ease-in;
 }
 
 .article-has-description .custom-button:hover img {
@@ -84,7 +88,7 @@ article.content-column--end,
 }
 
 article {
-  margin-bottom: 3.5em;
+  margin-bottom: 4em;
 }
 
 article:last-child {
