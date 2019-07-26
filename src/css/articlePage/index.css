@@ -30,10 +30,6 @@ h2.two-lines {
   height: auto;
 }
 
-.article .insights-mistakes h1 {
-  font-size: 4.375em;
-}
-
 .article h2 {
   line-height: 1.14;
 }
@@ -111,6 +107,10 @@ h2.two-lines {
 }
 
 @media (max-width: 846px) {
+  h1 {
+    font-size: 3.5em;
+  }
+
   .article h2 {
     height: auto !important;
     font-size: 3em;
@@ -130,7 +130,6 @@ h2.two-lines {
 @media (max-width: 576px) {
   .advantage-table-row {
     flex-direction: column;
-    border-bottom: 0.2em solid var(--mine-shaft-lighter-color);
   }
 
   .advantage-table-row > *,

@@ -395,6 +395,12 @@ footer {
   }
 }
 
+@media (max-height: 400px) and (orientation: landscape) {
+  .title-section h1 {
+    padding-top: 1rem;
+  }
+}
+
 @media (max-width: 414px) {
   .title-section br {
     display: none;
