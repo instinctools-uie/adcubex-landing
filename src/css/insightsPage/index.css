@@ -167,6 +167,13 @@ article p {
   }
 }
 
+
+@media (pointer: coarse) {
+  .content-container .article-has-description .section-content h2 {
+    line-height: 1.14;
+  }
+}
+
 @media (max-width: 1024px) and (min-width: 847px) {
   .content-column .svg-container {
     min-width: 30%;
