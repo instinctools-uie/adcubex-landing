@@ -47,3 +47,7 @@ Format code via prettier and check statics via eslint
 $ npm run format
 $ npm run lint
 ```
+## Note
+
+The project has template engine. Use absolute path for correct work of static files and link.
+

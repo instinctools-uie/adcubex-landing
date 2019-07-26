@@ -167,7 +167,6 @@ h2 + p {
 }
 
 .contact-section {
-  max-width: 80em;
   width: 100%;
   margin-top: 2.5em;
   color: white;
@@ -393,6 +392,12 @@ footer {
 
   .contact-section h4 {
     margin-top: 0;
+  }
+}
+
+@media (max-height: 400px) and (orientation: landscape) {
+  .title-section h1 {
+    padding-top: 1rem;
   }
 }
 
