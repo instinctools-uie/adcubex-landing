@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const templateRender = require('gulp-nunjucks-render');
 const browserSync = require('browser-sync').create();
 const connect = require('gulp-connect');
 const browserify = require('browserify');
@@ -45,8 +46,11 @@ gulp.task('css', () => {
   });
 });
 
-gulp.task('html', () => {
+gulp.task('generateHTML', () => {
   gulp.src('./src/**/*.html')
+    .pipe(templateRender({
+      path: ['./src/templates']
+    }))
     .pipe(gulp.dest('./build'))
     .pipe(connect.reload());
 });
@@ -78,7 +82,7 @@ gulp.task('meta', () => {
 gulp.task('listen', () => {
   gulp.watch('./src/**/**/*.js', ['js']);
   gulp.watch('./src/**/**/*.css', ['css']);
-  gulp.watch('./src/**/*.html', ['html']);
+  gulp.watch('./src/**/*.html', ['generateHTML']);
 });
 
 gulp.task('browser-sync', () => {
@@ -89,7 +93,7 @@ gulp.task('browser-sync', () => {
     });
 });
 
-gulp.task('default', ['js', 'css', 'html', 'txt', 'fonts', 'image', 'meta', 'connect', 'listen', 'browser-sync']);
+gulp.task('default', ['js', 'css', 'generateHTML', 'txt', 'fonts', 'image', 'meta', 'connect', 'listen', 'browser-sync']);
 
-gulp.task('build', ['js', 'css', 'html', 'txt', 'fonts', 'image', 'meta']);
+gulp.task('build', ['js', 'css', 'generateHTML', 'txt', 'fonts', 'image', 'meta']);
 
