@@ -1,5 +1,5 @@
 {# takes the path parameter to css #}
-{% macro head(pageCssPath, isContactPage=false) %}
+{% macro head(pageCssPath, ogImagePath="https://adcubex.com/assets/meta/Open_graph_300x300-01.jpg", isContactPage=false) %}
 <head>
     <title>Adcubex - Streamline ad management. Supervise with ease.</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -64,7 +64,7 @@
     Supervise with ease">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adcubex.com">
-    <meta property="og:image" content="https://adcubex.com/assets/meta/Open_graph_300x300-01.jpg">
+    <meta property="og:image" content="{{ogImagePath}}">
     <meta property="og:description" content="Achieve more with a customized approach to search engine marketing
     based on unique expertise, time-approved toolset and reliable partnership.">
     <meta property="og:locale" content="en_US">
