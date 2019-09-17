@@ -40,7 +40,7 @@
   border: none;
   color: #fff;
   cursor: pointer;
-  opacity: .85;
+  opacity: 0.85;
   transition: all 0.4s ease-in;
 }
 
@@ -119,7 +119,6 @@ article p {
   width: calc(100% - 2.625em);
 }
 
-
 .content-column .svg-container img {
   position: absolute;
   z-index: 1;
@@ -166,7 +165,6 @@ article p {
     background-color: transparent;
   }
 }
-
 
 @media (pointer: coarse) {
   .content-container .article-has-description .section-content h2 {
