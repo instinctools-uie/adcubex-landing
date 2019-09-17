@@ -3,7 +3,16 @@
 {% extends "inner-layout.html" %}
 
 {% block head %}
-    {{ head(pageCssPath="../css/articlePage/index.css", ogImagePath="https://adcubex.com/assets/images/insights-image1.jpg") }}
+  {{
+    head(
+      pageCssPath="../css/articlePage/index.css",
+      ogImagePath="https://adcubex.com/assets/images/obvious-benefits-of-integration-2.jpg",
+      title="Obvious benefits of social media & ad platforms integration",
+      description="Each platform or social media site has its own process of creating and running an advertising campaign, its own unique interface, and its own ins and outs.
+        In this regard, your employee would have to learn and understand the processes of creating and managing advertising on new sites, their features, and interface capabilities.
+        It can take a lot of time to study all these features because an employee must not only understand how new systems work, but also repeat the process of creating and placing ads."
+    )
+  }}
 {% endblock%}
 
 {% block content %}

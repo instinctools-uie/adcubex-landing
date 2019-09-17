@@ -1,5 +1,13 @@
 {# takes the path parameter to css #}
-{% macro head(pageCssPath, ogImagePath="https://adcubex.com/assets/meta/Open_graph_300x300-01.jpg", isContactPage=false) %}
+{% macro
+   head(pageCssPath,
+        ogImagePath="https://adcubex.com/assets/meta/Open_graph_300x300-01.jpg",
+        isContactPage=false,
+        title="Streamline ad management.
+Supervise with ease",
+        description="Achieve more with a customized approach to search engine marketing
+based on unique expertise, time-approved toolset and reliable partnership.")
+%}
 <head>
     <title>Adcubex - Streamline ad management. Supervise with ease.</title>
     <!-- Google Tag Manager -->
@@ -67,13 +75,11 @@
           content="SEM, search engine marketing, advertising, digital advertising, digital marketing, adwords, google adwords, google ads, advertising in social networks, worldwide advertising, massive ads, big budget advertising, bing, google adwords, yahoo">
     <meta name="robots" content="index, follow">
 
-    <meta property="og:title" content="Streamline ad management.
-    Supervise with ease">
+    <meta property="og:title" content={{title}}>
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adcubex.com">
     <meta property="og:image" content="{{ogImagePath}}">
-    <meta property="og:description" content="Achieve more with a customized approach to search engine marketing
-    based on unique expertise, time-approved toolset and reliable partnership.">
+    <meta property="og:description" content={{description}}>
     <meta property="og:locale" content="en_US">
 
     <link rel="preload" href="/assets/fonts/montserrat/fonts.css" as="style">
