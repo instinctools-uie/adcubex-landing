@@ -76,6 +76,6 @@
   },
   "dependencies": {
     "body-scroll-lock": "2.6.3",
-    "swiper": "4.5.0"
+    "swiper": "6.5.1"
   }
 }
